@@ -21,6 +21,11 @@
    ssrf
    logic
    waf
+   php
+   python
+   config
+   other
+   tip
 
 
 目录

