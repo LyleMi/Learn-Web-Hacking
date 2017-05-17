@@ -29,6 +29,27 @@ SQL注入的目的
 3. 判断数据库表
     and exsits (select * from admin)
 
+宽字节注入
+--------------------------------
+一般程序员用gbk编码做开发的时候
+会用set names 'gbk'来设定
+然后这句话等同于
+set
+character_set_connection = 'gbk',
+character_set_result = 'gbk',
+character_set_client = 'gbk';
+
+漏洞发生的主要原因是因为set character_set_client = 'gbk';
+因为执行了这句话之后，mysql就会认为客户端传过来的数据是gbk的，就会用gbk去解码
+然后mysql_real_escape是在解码前执行的
+但是直接用set names 'gbk'的话 real_escape是不知道设置的数据的编码的，就会直接加个%5c
+那server拿到数据一解码  就认为提交的字符+%5c是gbk的一个字符，这样就产生漏洞了
+
+那解决的办法就有三种
+第一种是把client的charset设置为binary，就不会做一次解码的操作
+第二种是是mysql_set_charset('gbk'),这里就会把编码的信息保存在和数据库的连接里面，就不会出现这个问题了
+第三种就是用pdo
+
 
 
 审计时看什么
@@ -37,6 +58,23 @@ SQL注入的目的
 2. 看是否有直接执行sql的地方
 3. 看是用的什么驱动，mysql/mysqli/pdo
     1. 如果使用PDO，看是否是直接执行的地方
+
+
+Fuzz
+--------------------------------
+注入常用函数与字符
+测试注入
+注释符
+版本、主机名、用户名、库名
+表和字段
+    确定字段数
+        Order By
+        Select Into
+    表名、列名
+字符串连接
+条件语句、时间函数
+文件操作
+带外通道
 
 
 常用Bypass
