@@ -3,11 +3,9 @@ SQL注入
 
 SQL注入的目的
 --------------------------------
-
 1. 有账号体系的
     1. 无密码登录
     2. 获取密码
-
 2. 获取数据库结构
 3. 获取数据库，系统版本
 4. 读写文件
@@ -25,31 +23,11 @@ SQL注入的目的
 
 2. 若存在注入点,判断数据库类型
     and exists (select * from msysobjects ) > 0 //access数据库
+
     and exists (select * from sysobjects ) > 0 //SQLServer数据库
+
 3. 判断数据库表
     and exsits (select * from admin)
-
-宽字节注入
---------------------------------
-一般程序员用gbk编码做开发的时候
-会用set names 'gbk'来设定
-然后这句话等同于
-set
-character_set_connection = 'gbk',
-character_set_result = 'gbk',
-character_set_client = 'gbk';
-
-漏洞发生的主要原因是因为set character_set_client = 'gbk';
-因为执行了这句话之后，mysql就会认为客户端传过来的数据是gbk的，就会用gbk去解码
-然后mysql_real_escape是在解码前执行的
-但是直接用set names 'gbk'的话 real_escape是不知道设置的数据的编码的，就会直接加个%5c
-那server拿到数据一解码  就认为提交的字符+%5c是gbk的一个字符，这样就产生漏洞了
-
-那解决的办法就有三种
-第一种是把client的charset设置为binary，就不会做一次解码的操作
-第二种是是mysql_set_charset('gbk'),这里就会把编码的信息保存在和数据库的连接里面，就不会出现这个问题了
-第三种就是用pdo
-
 
 
 审计时看什么
@@ -62,19 +40,24 @@ character_set_client = 'gbk';
 
 Fuzz
 --------------------------------
-注入常用函数与字符
-测试注入
-注释符
-版本、主机名、用户名、库名
-表和字段
-    确定字段数
-        Order By
-        Select Into
-    表名、列名
-字符串连接
-条件语句、时间函数
-文件操作
-带外通道
+- 注入常用函数与字符
+- 测试注入
+- 注释符
+- 版本、主机名、用户名、库名
+- 表和字段
+    - 确定字段数
+        - Order By
+        - Select Into
+    - 表名、列名
+- 字符串连接
+- 条件语句、时间函数
+- 文件操作
+- 带外通道
+- fuzz出可能的过滤模式
+    - 比如是否有trunc
+    - 是否过滤某个字符
+    - 是否过滤关键字
+    - slash和编码
 
 
 常用Bypass
@@ -89,6 +72,7 @@ Fuzz
     - ++
     - \/\*\*\/
     - 内联注释用的更多，它有一个特性/!**/只有MySQL能识别
+    - 代替空格
 3. 只过滤了一次
 4. 相同功能替换
     4.1 函数替换
@@ -107,6 +91,67 @@ Fuzz
     - 利用一些C语言的WAF，没有缓冲区保护
 7. 利用本身参数
 
+
+获取哪些信息
+--------------------------------
+表名
+
+::
+
+    union select table_name,2,3,4 from information_schema.tables where table_schema = database()
+
+写文件
+
+::
+
+    union select 1,1,1 into outfile '/asddasdasdxzvt.txt'
+
+读文件
+
+::
+
+    select @@datadir
+    select load_file('databasename/tablename.MYD')
+
+
+常用Payload
+--------------------------------
+::
+
+    ascii(subtring(str,pos,length)) & 32 == 1
+
+
 SQL注入小技巧
 --------------------------------
+
 双查询注入
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+宽字节注入
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+一般程序员用gbk编码做开发的时候
+会用
+::
+
+    set names 'gbk'
+
+来设定
+然后这句话等同于
+
+::
+
+    set
+    character_set_connection = 'gbk',
+    character_set_result = 'gbk',
+    character_set_client = 'gbk';
+
+漏洞发生的主要原因是因为set character_set_client = 'gbk';
+因为执行了这句话之后，mysql就会认为客户端传过来的数据是gbk的，就会用gbk去解码
+然后mysql_real_escape是在解码前执行的
+但是直接用set names 'gbk'的话 real_escape是不知道设置的数据的编码的，就会直接加个%5c
+那server拿到数据一解码  就认为提交的字符+%5c是gbk的一个字符，这样就产生漏洞了
+
+那解决的办法就有三种
+第一种是把client的charset设置为binary，就不会做一次解码的操作
+第二种是是mysql_set_charset('gbk'),这里就会把编码的信息保存在和数据库的连接里面，就不会出现这个问题了
+第三种就是用pdo

