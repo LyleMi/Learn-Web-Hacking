@@ -43,6 +43,10 @@ CSP
 --------------------------------
 Content Security Policy，简称 CSP。顾名思义，这个规范与内容安全有关，主要是用来定义页面可以加载哪些资源，减少 XSS 的发生。
 
+Bypass
+
+如果网站设置了CDN为secure,那么可用CDN bypass
+
 
 payload
 --------------------------------
