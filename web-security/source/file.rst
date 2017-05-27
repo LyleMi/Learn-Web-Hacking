@@ -10,6 +10,8 @@
     4. fopen/fgets
 2. 包含
     1. LFI
+        1. 包含Web日志
+        2. 包含SSH日志
     2. RFI
     3. 全局找include, require
 3. 正常上传

@@ -6,6 +6,7 @@ flask
 
 - 自己解析静态文件=>任意文件读取 ../ * n + /etc/passwd
 - 模版注入rce
+
 ::
     
     PoC: {{ 7*7 }}
@@ -14,6 +15,7 @@ flask
 - 获取app.secret_key
     - 可以RCE
 - 格式化字符串
+
 ::
 
     "welcome {user}".format(user=user)
