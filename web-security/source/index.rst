@@ -12,6 +12,7 @@
    :caption: Contents:
 
    aduit
+   info
    sql
    xss
    file
