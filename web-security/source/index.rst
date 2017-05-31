@@ -24,6 +24,7 @@
    waf
    php
    python
+   pentest
    config
    other
    tip

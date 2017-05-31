@@ -1,4 +1,4 @@
-审计流程
+审计流程大纲
 ================================
 
 
@@ -52,6 +52,83 @@
 
     3. 重点找没有帐号的情况下可以访问的页面
     4. 是不是OAuth
+
+6. 攻击
+    1. SQLi
+        1. 看全局过滤能否bypass
+        2. 看是否有直接执行sql的地方
+        3. 看是用的什么驱动，mysql/mysqli/pdo
+            1. 如果使用PDO，看是否是直接执行的地方
+
+
+    2. XSS
+        1. 全局bypass
+        2. 直接echo
+        3. 看视图是怎么加载的
+
+    3. FILE
+        1. 上传下载覆盖删除
+            1. move_uploaded_file
+            2. file_put_contents/file_get_contents
+            3. unlink
+            4. fopen/fgets
+
+        2. 包含
+            1. LFI
+            2. RFI
+            3. 全局找include, require
+
+        3. 正常上传
+            1. 看上传是如何确定能否上传文件的
+
+
+    4. RCE
+        1. call_user_func
+        2. eval
+        3. assert
+        4. preg_replace /e
+
+    5. XXE
+    6. CSRF
+    7. SSRF
+    8. 反序列化
+    9. 变量覆盖
+        1. extract
+        2. parse_str
+        3. array_map
+
+    10. LDAP
+    11. XPath
+    12. Cookie伪造
+
+7. 逻辑
+    1. 支付逻辑
+        1. 直接发含金额的数据包
+        2. 没有限制数量
+        3. 异常处理
+        4. 负数
+
+    2. 账户确认逻辑
+        1. 改密码
+        2. 密码重置
+
+    3. ID生成有规律
+    4. 接口无限制
+    5. 加密算法
+    6. 越权
+        1. 水平越权
+        2. 垂直越权
+
+    7. 执行顺序
+    8. 敏感信息
+
+8. 过滤
+    1. 找WAF
+        1. 看waf怎么过滤的，相应的如何绕过
+
+
+
+
 
 
 

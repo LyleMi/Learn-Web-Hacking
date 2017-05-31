@@ -120,6 +120,10 @@ Fuzz
 
     ascii(subtring(str,pos,length)) & 32 == 1
 
+::
+
+    报错注入
+    select count(*),(floor(rand(0)*2))x from information_schema.tables group by x;
 
 NoSQL注入
 --------------------------------
