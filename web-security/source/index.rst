@@ -26,6 +26,7 @@
    python
    pentest
    config
+   tools
    other
    tip
 
