@@ -18,6 +18,34 @@
     1. 看上传是如何确定能否上传文件的
 
 
+
+文件读取
+--------------------------------
+考虑读取可能有信息的文件
+
+- 用户目录
+    - .bash_history
+    - .zsh_history
+    - .profile
+    - .bashrc
+    - .gitconfig
+    - .viminfo
+
+- 站点目录
+    - .svn/entries
+    - .git/HEAD
+    - WEB-INF/web.xml
+    - .htaccess
+
+- 特殊文件
+    - .swp
+    - .swo
+    - .bak
+    - index.php~
+    - ...
+
+
+
 文件上传
 --------------------------------
 像apache这种可以考虑上传.htacess

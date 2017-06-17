@@ -20,6 +20,7 @@
    xxe
    csrf
    ssrf
+   cmdinjection
    logic
    waf
    php
