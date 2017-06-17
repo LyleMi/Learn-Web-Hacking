@@ -30,6 +30,15 @@
     - .bashrc
     - .gitconfig
     - .viminfo
+    - passwd
+
+- 配置文件
+    - /etc/apache2/apache2.conf
+    - /etc/nginx/nginx.conf
+
+- 日志文件
+    - /var/log/apache2/access.log
+    - /var/log/nginx/access.log
 
 - 站点目录
     - .svn/entries
@@ -44,6 +53,8 @@
     - index.php~
     - ...
 
+- Python
+    - ``__pycache__\__init__.cpython-35.pyc``
 
 
 文件上传
