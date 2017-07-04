@@ -10,6 +10,28 @@ SQL注入的目的
 3. 获取数据库，系统版本
 4. 读写文件
 
+注入分类
+--------------------------------
+
+SQL注入类型分为
+1. 布尔盲注
+2. 报错注入
+3. union注入
+4. 堆叠注入
+5. 时间盲注
+
+共计3类
+1. inband
+     a) 利用web应用来直接获取数据 
+     b) 如Error-based SQL injection和Error-based SQL injection
+     c) 都是通过web的响应或者错误反馈来提取数据
+d. inference
+     0) 通过web的一些反映来推断数据 
+     1) 如Boolean-based blind SQL injection和Stacked queries SQL injection 
+     2) 也就是我们通俗的盲注，
+     3) 通过web应用的其他改变来推断数据
+4. out of band(OOB)
+     a) 通过其他传输方式来获得数据，比如DNS解析协议和电子邮件 
 
 注入过程
 --------------------------------
