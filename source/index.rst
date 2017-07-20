@@ -1,8 +1,3 @@
-.. Web-Sec documentation master file, created by
-   sphinx-quickstart on Mon May 08 07:34:20 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 代码审计知识梳理
 ================================
 
@@ -11,25 +6,10 @@
    :maxdepth: 2
    :caption: Contents:
 
-   aduit
-   info
-   sql
-   xss
-   file
-   rce
-   xxe
-   csrf
-   ssrf
-   cmdinjection
-   logic
-   waf
-   php
-   python
-   pentest
-   config
-   tools
-   other
-   tip
+   vuln/index
+   basic/index
+   language/index
+   misc/index
 
 
 目录

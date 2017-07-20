@@ -291,4 +291,4 @@ String alphabet
 --------------------------------
 
 - `w3c <https://w3c.github.io/webappsec-csp/>`_
-- `https://content-security-policy.com <https://content-security-policy.com/>`_
+- `content-security-policy.com <https://content-security-policy.com/>`_

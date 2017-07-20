@@ -28,7 +28,7 @@
 
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
-    - `DirBrute <https://github.com/Xyntax/DirBrute >`_
+    - `DirBrute <https://github.com/Xyntax/DirBrute>`_
 
 - 指纹识别
     - `whatweb <https://github.com/urbanadventurer/whatweb>`_
