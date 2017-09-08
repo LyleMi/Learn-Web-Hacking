@@ -35,11 +35,14 @@
 
 - webShell连接工具
     - 菜刀
-    - 蚁剑
+    - `antSword <https://github.com/antoor/antSword>`_
 
 - 端口扫描
     - `nmap <https://github.com/nmap/nmap>`_
     - `zmap <https://github.com/zmap/zmap>`_
+
+- 模版注入
+    - `tplmap <https://github.com/epinna/tplmap>`_
 
 - 其他
     - BrupSuite
