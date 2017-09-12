@@ -6,8 +6,8 @@
    :maxdepth: 2
    :caption: Contents:
 
-   vuln/index
    basic/index
+   vuln/index
    language/index
    misc/index
 
