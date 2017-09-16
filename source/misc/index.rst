@@ -6,5 +6,6 @@
    :caption: Contents:
 
    webcache
+   forensic
    xpath
    tip
