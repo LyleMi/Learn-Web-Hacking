@@ -44,6 +44,10 @@
 - 模版注入
     - `tplmap <https://github.com/epinna/tplmap>`_
 
+- Unicode Fuzz
+
+    - `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
+
 - 其他
     - BrupSuite
     - curl
