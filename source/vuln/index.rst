@@ -6,7 +6,7 @@
    :caption: Contents:
 
    sql
-   xss
+   xss/index
    file
    rce
    xxe

