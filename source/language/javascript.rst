@@ -24,3 +24,9 @@ exp
       {console:{log(){console.log.apply(console,arguments);}}},
       {timeout:5}
     );
+
+
+命令执行
+-------------------------------
+
+Node.js中child_process.exec命令调用的是/bin/sh，故可以直接使用该命令执行shell

@@ -29,3 +29,10 @@ Web相关的知识很杂、很多，很多时候想查但是很不方便，所�
     - Python
 - 其他
     - 缓存欺骗
+
+### Generate HTML
+
+```shell
+pip install sphinx
+make html
+```

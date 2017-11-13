@@ -135,3 +135,8 @@ DNS Rebinding
 - zentoPMS远程命令执行 
 - HFS远程命令执行 
 - glassfish任意文件读取和war文件部署间接命令执行
+
+
+ref
+--------------------------------
+http://www.91ri.org/17111.html
