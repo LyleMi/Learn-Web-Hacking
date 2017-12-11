@@ -70,5 +70,5 @@ PyYAML反序列化
 
 参考链接
 --------------------------------
-https://zhuanlan.zhihu.com/p/28823933
-http://www.91ri.org/9576.html
+- `服务端模版注入 <https://zhuanlan.zhihu.com/p/28823933>`_
+- `Python pickle反序列化 <http://www.91ri.org/9576.html>`_
