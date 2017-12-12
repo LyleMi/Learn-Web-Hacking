@@ -6,6 +6,7 @@
    :caption: Contents:
 
    challs
+   parse
    webcache
    forensic
    xpath
