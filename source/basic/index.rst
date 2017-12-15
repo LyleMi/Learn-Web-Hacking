@@ -6,8 +6,8 @@
    :caption: Contents:
 
    aduit
-   info
-   pentest
+   penetration
+   intranetpenetration
    tools
    waf
    conception

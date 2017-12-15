@@ -8,7 +8,6 @@
    sql
    xss/index
    file
-   rce
    xxe
    csrf
    ssrf
