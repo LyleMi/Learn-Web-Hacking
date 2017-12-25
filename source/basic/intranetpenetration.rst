@@ -16,7 +16,7 @@
 - socket代理
     - Win: xsocks
     - Linux: proxychains
-- 神器推荐
+- 工具推荐
     - http://rootkiter.com/EarthWorm/
 - 基于http的转发与socket代理(低权限下的渗透)
     - 端口转发: tunna
@@ -103,7 +103,7 @@ hash抓取
 - ntdsdump
 - 利用powershell(DSInternals)分析hash
 
-远程连接&&执行程序
+远程连接 && 执行程序
 --------------------------------
 
 - at&schtasks
@@ -115,4 +115,4 @@ hash抓取
 - SC创建服务执行
 - schtasks
 - SMB+MOF || DLL Hijacks
-- PTH + compmgmt.msc 
+- PTH + compmgmt.msc

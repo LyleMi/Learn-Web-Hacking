@@ -3,45 +3,41 @@ SQL注入
 
 SQL注入的目的
 --------------------------------
-1. 有账号体系的
-    1. 无密码登录
-    2. 获取密码
-2. 获取数据库结构
-3. 获取数据库，系统版本
-4. 读写文件
+- 有账号体系的
+    - 无密码登录
+    - 获取密码
+- 获取数据库结构
+- 获取数据库，系统版本
+- 读写文件
 
 注入分类
 --------------------------------
 
 SQL注入类型分为
 
-1. 布尔盲注
-2. 报错注入
-3. union注入
-4. 堆叠注入
-5. 时间盲注
+- 布尔盲注
+- 报错注入
+- union注入
+- 堆叠注入
+- 时间盲注
 
-共计3类
+另外也可以根据获取数据的方式分为3类
 
-1. inband
-
-    a) 利用web应用来直接获取数据 
-    b) 如Error-based SQL injection和Error-based SQL injection
-    c) 都是通过web的响应或者错误反馈来提取数据
-
-2. inference
-
-    0) 通过web的一些反映来推断数据 
-    1) 如Boolean-based blind SQL injection和Stacked queries SQL injection 
-    2) 也就是我们通俗的盲注，
-    3) 通过web应用的其他改变来推断数据
-3. out of band(OOB)
-
-    a) 通过其他传输方式来获得数据，比如DNS解析协议和电子邮件 
+- inband
+    - 利用web应用来直接获取数据 
+    - 如Error-based SQL injection和Error-based SQL injection
+    - 都是通过web的响应或者错误反馈来提取数据
+- inference
+    - 通过web的一些反映来推断数据 
+    - 如Boolean-based blind SQL injection和Stacked queries SQL injection 
+    - 也就是我们通俗的盲注，
+    - 通过web应用的其他改变来推断数据
+- out of band(OOB)
+    - 通过其他传输方式来获得数据，比如DNS解析协议和电子邮件 
 
 注入过程
 --------------------------------
-1. 判断注入点
+- 判断注入点
     '
     and 1=1
     and 1=2
@@ -49,21 +45,21 @@ SQL注入类型分为
     or 1=2
     and 1=23
 
-2. 若存在注入点,判断数据库类型
+- 若存在注入点,判断数据库类型
     and exists (select * from msysobjects ) > 0 //access数据库
 
     and exists (select * from sysobjects ) > 0 //SQLServer数据库
 
-3. 判断数据库表
+- 判断数据库表
     and exsits (select * from admin)
 
 
 审计时看什么
 --------------------------------
-1. 看全局过滤能否bypass
-2. 看是否有直接执行sql的地方
-3. 看是用的什么驱动，mysql/mysqli/pdo
-    1. 如果使用PDO，看是否是直接执行的地方
+- 看全局过滤能否bypass
+- 看是否有直接执行sql的地方
+- 看是用的什么驱动，mysql/mysqli/pdo
+    - 如果使用PDO，看是否是直接执行的地方
 
 
 Fuzz
@@ -90,34 +86,34 @@ Fuzz
 
 常用Bypass
 --------------------------------
-1. 编码绕过
+- 编码绕过
     - 大小写
     - url编码
     - html编码
     - 十六进制编码
     - unicode编码
-2. 注释
+- 注释
     - ++
     - \/\*\*\/
     - 内联注释用的更多，它有一个特性/!**/只有MySQL能识别
     - 代替空格
-3. 只过滤了一次
-4. 相同功能替换
-    4.1 函数替换
+- 只过滤了一次
+- 相同功能替换
+    - 函数替换
         - substring 用mid sub
         - ascii 用hex bin
         - benchmark用 sleep
-    4.2 变量替换
+    - 变量替换
         - user() @@user
-    4.3 符号和关键字
+    - 符号和关键字
         - and &
         - or |
-5. HTTP参数
+- HTTP参数
     - HTTP参数污染
     - HTTP分割注入
-6. 缓冲区溢出
+- 缓冲区溢出
     - 利用一些C语言的WAF，没有缓冲区保护
-7. 利用本身参数
+- 利用本身参数
 
 
 获取哪些信息

@@ -6,6 +6,7 @@
    :caption: Contents:
 
    challs
+   docker
    parse
    webcache
    forensic

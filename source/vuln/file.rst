@@ -3,19 +3,19 @@
 
 总体思路
 --------------------------------
-1. 上传下载覆盖删除
-    1. move_uploaded_file
-    2. file_put_contents/file_get_contents
-    3. unlink
-    4. fopen/fgets
-2. 包含
-    1. LFI
-        1. 包含Web日志
-        2. 包含SSH日志
-    2. RFI
-    3. 全局找include, require
-3. 正常上传
-    1. 看上传是如何确定能否上传文件的
+- 上传下载覆盖删除
+    - move_uploaded_file
+    - file_put_contents/file_get_contents
+    - unlink
+    - fopen/fgets
+- 包含
+    - LFI
+        - 包含Web日志
+        - 包含SSH日志
+    - RFI
+    - 全局找include, require
+- 正常上传
+    - 看上传是如何确定能否上传文件的
 
 
 
