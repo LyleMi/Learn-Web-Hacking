@@ -8,6 +8,7 @@ XSS
    classify
    wafbypass
    csp
+   xssprotect
    payload
    jsfuck
    ref

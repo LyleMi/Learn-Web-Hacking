@@ -59,7 +59,7 @@
 
 文件上传
 --------------------------------
-像apache这种可以考虑上传.htacess
+apache可根据是否允许重定向考虑上传.htacess
 内容为
 
 ::
@@ -67,7 +67,9 @@
     AddType application/x-httpd-php .png
     php_flag engine 1
 
-就可以用png做php脚本了
+就可以用png或者其他后缀的文件做php脚本了
+
+另外会解压上传的压缩包文件时，可以考虑上传含符号链接的文件
 
 
 文件包含
