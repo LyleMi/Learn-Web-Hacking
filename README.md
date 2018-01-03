@@ -36,6 +36,6 @@ Web安全相关的知识比较杂，在这里完成了一个简单的整理，�
 ### Generate HTML
 
 ```shell
-pip install sphinx
-make html
+$ sudo pip install sphinx sphinx-rtd-theme
+$ make html
 ```

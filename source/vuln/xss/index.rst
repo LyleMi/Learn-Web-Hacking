@@ -9,6 +9,7 @@ XSS
    wafbypass
    csp
    xssprotect
+   rpo
    payload
    jsfuck
    ref

