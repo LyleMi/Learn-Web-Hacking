@@ -1,12 +1,10 @@
-语言特有漏洞
+PHP相关漏洞
 ================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   php/index
-   python
-   java
-   javascript
+   unserialize
+   misc
    
