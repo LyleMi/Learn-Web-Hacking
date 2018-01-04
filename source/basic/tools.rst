@@ -14,7 +14,7 @@
     - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
     - `htpwdScan <https://github.com/lijiejie/htpwdScan>`_
 
-- 信息泄漏
+- Git信息泄漏
     - `GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_
     - `GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_
 
@@ -40,6 +40,8 @@
 - 端口扫描
     - `nmap <https://github.com/nmap/nmap>`_
     - `zmap <https://github.com/zmap/zmap>`_
+    - DNS ``dnsenum nslookup dig fierce``
+    - SNMP ``snmpwalk``
 
 - 模版注入
     - `tplmap <https://github.com/epinna/tplmap>`_
@@ -47,8 +49,16 @@
 - Unicode Fuzz
     - `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
 
+- 漏洞扫描
+    - `Nikto <https://cirt.net/nikto2>`_
+    - `w3af <http://w3af.org/>`_
+    - `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
+    - `Arachni <http://www.arachni-scanner.com/>`_
+    - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
+
 - 其他
+    - wget ``wget -rck www.target.com``
+    - httrack
     - BrupSuite
     - curl
     - nc
-    

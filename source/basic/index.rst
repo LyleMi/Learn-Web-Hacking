@@ -6,7 +6,7 @@
    :caption: Contents:
 
    aduit
-   penetration
+   info/index
    intranetpenetration
    tools
    waf
