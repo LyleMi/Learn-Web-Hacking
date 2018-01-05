@@ -1,4 +1,4 @@
-常用工具
+工具列表
 ================================
 
 - 子域爆破
@@ -31,6 +31,7 @@
     - `DirBrute <https://github.com/Xyntax/DirBrute>`_
 
 - 指纹识别
+    - `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
     - `whatweb <https://github.com/urbanadventurer/whatweb>`_
 
 - webShell连接工具
@@ -57,7 +58,7 @@
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
 
 - 其他
-    - wget ``wget -rck www.target.com``
+    - wget
     - httrack
     - BrupSuite
     - curl
