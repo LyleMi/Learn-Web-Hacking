@@ -33,6 +33,7 @@
 - 指纹识别
     - `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
     - `whatweb <https://github.com/urbanadventurer/whatweb>`_
+    - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 
 - webShell连接工具
     - 菜刀
@@ -56,6 +57,13 @@
     - `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
     - `Arachni <http://www.arachni-scanner.com/>`_
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
+
+- 流量分析
+    - Bro
+    - TCPflow
+    - TCPDump
+    - TShark
+    - WireShark
 
 - 其他
     - wget
