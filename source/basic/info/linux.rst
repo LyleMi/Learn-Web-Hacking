@@ -13,7 +13,7 @@ uname -n                    系统主机名字
 uname -m                    Linux内核架构
 cat /proc/version           内核信息
 cat /proc/cpuinfo           CPU信息
-cat /etc/*-release          发布信息
+cat /etc/\*-release          发布信息
 cat /etc/issue              发布信息
 hostname                    主机名
 df -a                       文件系统信息
@@ -90,15 +90,15 @@ ls -la /etc/cron*           计划任务
 网络、路由和通信
 --------------------------------
 
-=====================       =====================
-命令                        作用
-=====================       =====================
-/sbin/ifconfig -a           列出网络接口信息
-cat /etc/network/interfaces 列出网络接口信息
-arp -a                      查看系统arp表
-route                       打印路由信息
-cat /etc/resolv.conf        查看dns配置信息
-netstat -an                 打印本地端口开放信息
-iptables -L                 列出iptable的配置规则
-cat /etc/services           查看端口服务映射
-=====================       =====================
+=============================       =====================
+命令                                作用
+=============================       =====================
+/sbin/ifconfig -a                   列出网络接口信息
+cat /etc/network/interfaces         列出网络接口信息
+arp -a                              查看系统arp表
+route                               打印路由信息
+cat /etc/resolv.conf                查看dns配置信息
+netstat -an                         打印本地端口开放信息
+iptables -L                         列出iptable的配置规则
+cat /etc/services                   查看端口服务映射
+=============================       =====================

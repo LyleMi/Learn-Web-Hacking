@@ -36,17 +36,16 @@ XMLHttpRequest
 
 防御
 --------------------------------
-- 通过referer、token或者验证码来检测用户提交
-- 尽量不要在页面的链接中暴露用户隐私信息
-- 对于用户修改删除等操作最好都使用post操作
+- 通过CSRF-token或者验证码来检测用户提交
+- 验证Referer/Content-Type
+- 对于用户修改删除等操作最好都使用POST操作
 - 避免全站通用的cookie，严格设置cookie的域
 
 
-ref
-
+参考链接
 --------------------------------
 
 - `demo <https://www.github.com/jrozner/csrf-demo>`_
-- `Wiping Out CSRF <https://zhuanlan.zhihu.com/p/30401930>`_
-
+- `Wiping Out CSRF <https://medium.com/@jrozner/wiping-out-csrf-ded97ae7e83f>`_
+- `Neat tricks to bypass CSRF protection <https://www.slideshare.net/0ang3el/neat-tricks-to-bypass-csrfprotection>`_
 

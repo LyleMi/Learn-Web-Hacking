@@ -22,6 +22,7 @@
     - `BeEF <https://github.com/beefproject/beef>`_
     - `XSS Reciver <https://github.com/firesunCN/BlueLotus_XSSReceiver>`_
     - `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
+    - `DSXS <https://github.com/stamparm/DSXS>`_
 
 - 社工
     - `theHarvester <https://github.com/laramies/theHarvester>`_
