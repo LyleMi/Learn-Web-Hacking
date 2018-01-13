@@ -158,3 +158,7 @@ apache可根据是否允许重定向考虑上传.htacess
 3. url绕过
 4. 特殊字符绕过
 
+
+参考链接
+--------------------------------
+- `Exploit with PHP Protocols <https://www.cdxy.me/?p=752>`_

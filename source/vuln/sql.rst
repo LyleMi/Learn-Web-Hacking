@@ -38,20 +38,18 @@ SQL注入类型分为
 注入过程
 --------------------------------
 - 判断注入点
-    '
-    and 1=1
-    and 1=2
-    or 1=1
-    or 1=2
-    and 1=23
+    - ``' / "``
+    - ``and 1=1``
+    - ``and 1=2``
+    - ``or 1=1``
+    - ``or 1=``
 
 - 若存在注入点,判断数据库类型
-    and exists (select * from msysobjects ) > 0 //access数据库
-
-    and exists (select * from sysobjects ) > 0 //SQLServer数据库
+    - ``and exists (select * from msysobjects ) > 0`` access数据库
+    - ``and exists (select * from sysobjects ) > 0`` SQLServer数据库
 
 - 判断数据库表
-    and exsits (select * from admin)
+    - ``and exsits (select * from admin)``
 
 
 审计时看什么
@@ -93,18 +91,17 @@ Fuzz
     - 十六进制编码
     - unicode编码
 - 注释
-    - ++
-    - \/\*\*\/
-    - 内联注释用的更多，它有一个特性/!**/只有MySQL能识别
+    - ``//`` ``--`` ``-- +`` ``-- -`` ``#`` ``/**/`` ``;%00``
+    - 内联注释用的更多，它有一个特性 ``/!**/`` 只有MySQL能识别
     - 代替空格
 - 只过滤了一次
 - 相同功能替换
     - 函数替换
-        - substring 用mid sub
-        - ascii 用hex bin
-        - benchmark用 sleep
+        - ``substring`` => ``mid`` ``sub``
+        - ``ascii`` => ``hex`` ``bin``
+        - ``benchmark`` => ``sleep``
     - 变量替换
-        - user() @@user
+        - ``user()`` ``@@user``
     - 符号和关键字
         - and &
         - or |
@@ -163,14 +160,7 @@ TODO
 
 宽字节注入
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-一般程序员用gbk编码做开发的时候
-会用
-::
-
-    set names 'gbk'
-
-来设定
-然后这句话等同于
+一般程序员用gbk编码做开发的时候，会用 ``set names 'gbk'`` 来设定，这句话等同于
 
 ::
 
@@ -179,15 +169,9 @@ TODO
     character_set_result = 'gbk',
     character_set_client = 'gbk';
 
-漏洞发生的主要原因是因为set character_set_client = 'gbk';
-因为执行了这句话之后，mysql就会认为客户端传过来的数据是gbk的，就会用gbk去解码
-然后mysql_real_escape是在解码前执行的
-但是直接用set names 'gbk'的话 real_escape是不知道设置的数据的编码的，就会直接加个%5c
-那server拿到数据一解码  就认为提交的字符+%5c是gbk的一个字符，这样就产生漏洞了
+漏洞发生的原因是执行了 ``set character_set_client = 'gbk';`` 之后，mysql就会认为客户端传过来的数据是gbk编码的，从而使用gbk去解码，而mysql_real_escape是在解码前执行的。但是直接用 ``set names 'gbk'`` 的话real_escape是不知道设置的数据的编码的，就会加 ``%5c`` 。此时server拿到数据解码  就认为提交的字符+%5c是gbk的一个字符，这样就产生漏洞了。
 
-那解决的办法就有三种
-第一种是把client的charset设置为binary，就不会做一次解码的操作
-第二种是是mysql_set_charset('gbk'),这里就会把编码的信息保存在和数据库的连接里面，就不会出现这个问题了
-第三种就是用pdo
+解决的办法有三种，第一种是把client的charset设置为binary，就不会做一次解码的操作。第二种是是 ``mysql_set_charset('gbk')`` ，这里就会把编码的信息保存在和数据库的连接里面，就不会出现这个问题了
+第三种就是用pdo。
 
-还有一些其他的编码技巧，比如latin会弃掉无效的unicode，那么admin%32在代码里面不等于admin，在数据库比较会等于admin
+还有一些其他的编码技巧，比如latin会弃掉无效的unicode，那么admin%32在代码里面不等于admin，在数据库比较会等于admin。
