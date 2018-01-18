@@ -12,7 +12,9 @@
 
 - 弱密码爆破
     - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
+    - `medusa <https://github.com/jmk-foofus/medusa>`_
     - `htpwdScan <https://github.com/lijiejie/htpwdScan>`_
+    - `patator <https://github.com/lanjelot/patator>`_
 
 - Git信息泄漏
     - `GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_

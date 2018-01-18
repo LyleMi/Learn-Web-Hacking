@@ -6,10 +6,9 @@
    :caption: Contents:
 
    auth
-   challs
    docker
    parse
    webcache
    forensic
-   xpath
+   challs
    tip

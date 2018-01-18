@@ -11,6 +11,7 @@
    xxe
    csrf
    ssrf
+   xpath
    cmdinjection
    logic
    config
