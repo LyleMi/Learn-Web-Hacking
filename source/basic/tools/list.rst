@@ -73,7 +73,9 @@
     - `WireShark <https://www.wireshark.org>`_
 
 - 审计工具
-    - `cobra <https://github.com/FeeiCN/cobra>`_
+    - `Cobra <https://github.com/FeeiCN/cobra>`_
+    - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
+    - `RIPS <http://rips-scanner.sourceforge.net/>`_
 
 - 其他
     - `BrupSuite <https://portswigger.net/burp/>`_
