@@ -43,3 +43,9 @@ $ sudo pip install sphinx
 $ sudo pip install sphinx-rtd-theme
 $ make html
 ```
+
+### 反馈
+
+欢迎大家提出各种意见和建议，不胜感激。
+
+反馈邮箱 ``lilyui@126.com``

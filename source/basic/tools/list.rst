@@ -8,7 +8,10 @@
 
 - 数据库注入
     - `SQLMap <https://github.com/sqlmapproject/sqlmap>`_
+    - `bbqsql <https://github.com/Neohapsis/bbqsql>`_
     - `NoSQLAttack <https://github.com/youngyangyang04/NoSQLAttack>`_
+    - `NoSQLMap <https://github.com/codingo/NoSQLMap>`_
+    - `Nosql Exploitation Framework <https://github.com/torque59/Nosql-Exploitation-Framework>`_
 
 - 弱密码爆破
     - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
@@ -32,6 +35,7 @@
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
     - `DirBrute <https://github.com/Xyntax/DirBrute>`_
+    - `dirsearch <https://github.com/maurosoria/dirsearch>`_
 
 - 指纹识别
     - `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
@@ -39,12 +43,13 @@
     - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 
 - webShell连接工具
-    - 菜刀
+    - `菜刀 <https://github.com/Chora10/Cknife>`_
     - `antSword <https://github.com/antoor/antSword>`_
 
 - 端口扫描
     - `nmap <https://github.com/nmap/nmap>`_
     - `zmap <https://github.com/zmap/zmap>`_
+    - `masscan <https://github.com/robertdavidgraham/masscan>`_
     - DNS ``dnsenum nslookup dig fierce``
     - SNMP ``snmpwalk``
 
@@ -62,15 +67,17 @@
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
 
 - 流量分析
-    - Bro
-    - TCPflow
-    - TCPDump
-    - TShark
-    - WireShark
+    - `Bro <https://www.bro.org/>`_
+    - `TCPflow <https://github.com/simsong/tcpflow>`_
+    - `TCPDump <http://www.tcpdump.org/>`_
+    - `WireShark <https://www.wireshark.org>`_
+
+- 审计工具
+    - `cobra <https://github.com/FeeiCN/cobra>`_
 
 - 其他
+    - `BrupSuite <https://portswigger.net/burp/>`_
+    - `httrack <http://www.httrack.com/>`_
+    - `curl <https://curl.haxx.se/>`_
     - wget
-    - httrack
-    - BrupSuite
-    - curl
     - nc
