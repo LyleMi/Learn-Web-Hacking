@@ -5,7 +5,7 @@
    :maxdepth: 2
    :caption: Contents:
 
-   sql
+   sql/index
    xss/index
    file
    xxe

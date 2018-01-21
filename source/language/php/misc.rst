@@ -33,7 +33,8 @@ PHP字符存在截断行为，可以使用 ``ereg`` / ``%00`` / ``iconv`` 等实
 - passthru
 - popen
 - shell_exec
-- system,proc_open
+- system
+- proc_open
 
 
 php特性
