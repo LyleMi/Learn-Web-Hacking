@@ -1,6 +1,30 @@
 反序列化
 ================================
 
+PHP序列化格式
+--------------------------------
+
+- boolean
+    - ``b:<value>;``
+    - ``b:1;`` // true
+    - ``b:0;`` // false
+- integer
+    - ``i:<value>;``
+- double
+    - ``d:<value>;``
+- NULL
+    - ``N;``
+- string
+    - ``s:<length>:"<value>";``
+    - ``s:1:"s";``
+- array
+    - ``a:<length>:{key, value};``
+    - ``a:1:{s:4:"key1";s:6:"value1";}`` // ``array("key1" => "value1");``
+- object
+    - ``O:<class_name_length>:"<class_name>":<number_of_properties>:{<properties>};``
+
+PHP反序列化漏洞
+--------------------------------
 php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可能会造成代码执行等问题。若没有相关函数，在析构时也会调用相关的析构函数，同样会造成代码执行。
 
 另外 ``__toString`` / ``call`` 两个函数也有利用的可能。
