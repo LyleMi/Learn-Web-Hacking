@@ -2,14 +2,14 @@
 ================================
 
 - 域名
-    - whoisc
+    - `Whois <https://www.whois.com/>`_
     - 子域名收集
         - 利用第三方查询
-            - DNSDumpster
-            - Virustotal
+            - `DNSDumpster <https://dnsdumpster.com/>`_
+            - `Virustotal <https://www.virustotal.com/>`_
             - CrtSearch
             - threatminer
-        - 爆破
+        - 子域爆破
         - PassiveDNS
         - 利用兄弟域名查询流程
             - 查询域名注册邮箱

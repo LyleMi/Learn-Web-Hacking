@@ -5,12 +5,15 @@
     - robots.txt
     - crossdomain.xml
     - sitemap.xml
+    - xx.tar.gz
+    - xx.bak
     - 等
 
 - 确定网站采用的语言、框架、中间件服务器、第三方库
     - 查看源代码
     - 找后缀，比如php/asp/jsp
     - 看header里面有没有信息
+    - 根据Cookie判断
     - 根据报错信息判断
     - 根据默认页面判断
     - 根据css 图片等资源的hash值判断
