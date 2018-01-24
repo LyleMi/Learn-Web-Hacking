@@ -66,11 +66,12 @@
     - `Arachni <http://www.arachni-scanner.com/>`_
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
 
-- 流量分析
+- 流量
     - `Bro <https://www.bro.org/>`_
-    - `TCPflow <https://github.com/simsong/tcpflow>`_
+    - `TCPFlow <https://github.com/simsong/tcpflow>`_
     - `TCPDump <http://www.tcpdump.org/>`_
     - `WireShark <https://www.wireshark.org>`_
+    - `Argus <https://github.com/salesforce/Argus>`_
 
 - 审计工具
     - `Cobra <https://github.com/FeeiCN/cobra>`_
