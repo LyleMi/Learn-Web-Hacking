@@ -42,9 +42,14 @@
     - `whatweb <https://github.com/urbanadventurer/whatweb>`_
     - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 
-- webShell连接工具
+- WebShell连接工具
     - `菜刀 <https://github.com/Chora10/Cknife>`_
     - `antSword <https://github.com/antoor/antSword>`_
+
+- WebShell
+    - `webshell <https://github.com/tennc/webshell>`_
+    - `PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_
+    - `weevely3 <https://github.com/epinna/weevely3>`_
 
 - 端口扫描
     - `nmap <https://github.com/nmap/nmap>`_
