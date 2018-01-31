@@ -8,5 +8,6 @@
    download
    traffic
    sniffing
+   sqlmap
    list
    ref
