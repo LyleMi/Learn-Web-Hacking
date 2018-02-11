@@ -1,14 +1,10 @@
-XSS
+技巧
 ================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   classify
-   csp
-   xssprotect
-   wafbypass
-   trick/index
-   payload
-   ref
+   rpo
+   cssi
+   jsfuck
