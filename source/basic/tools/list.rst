@@ -25,6 +25,7 @@
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
     - `DirBrute <https://github.com/Xyntax/DirBrute>`_
     - `dirsearch <https://github.com/maurosoria/dirsearch>`_
+    - `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
 
 - 指纹识别
     - `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
@@ -53,6 +54,8 @@
     - `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
     - `DSXS <https://github.com/stamparm/DSXS>`_
 
+- 模版注入
+    - `tplmap <https://github.com/epinna/tplmap>`_
 
 持久化
 --------------------------------
@@ -65,15 +68,10 @@
     - `PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_
     - `weevely3 <https://github.com/epinna/weevely3>`_
     - `php bash <https://github.com/Arrexel/phpbash>`_
+    - `Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_
 
-- 模版注入
-    - `tplmap <https://github.com/epinna/tplmap>`_
-
-- 中间人攻击
-    - `mitmproxy <https://github.com/mitmproxy/mitmproxy>`_
-    - `MITMf <https://github.com/byt3bl33d3r/MITMf>`_
-    - `ssh mitm <https://github.com/jtesta/ssh-mitm>`_
-    - `injectify <https://github.com/samdenty99/injectify>`_
+- 密码提取
+    - `sshLooter <https://github.com/mthbernardes/sshLooter>`_
 
 Fuzz
 --------------------------------
@@ -100,6 +98,12 @@ Fuzz
     - `Cobra <https://github.com/FeeiCN/cobra>`_
     - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
     - `RIPS <http://rips-scanner.sourceforge.net/>`_
+
+- 中间人攻击
+    - `mitmproxy <https://github.com/mitmproxy/mitmproxy>`_
+    - `MITMf <https://github.com/byt3bl33d3r/MITMf>`_
+    - `ssh mitm <https://github.com/jtesta/ssh-mitm>`_
+    - `injectify <https://github.com/samdenty99/injectify>`_
 
 - 其他
     - `BrupSuite <https://portswigger.net/burp/>`_

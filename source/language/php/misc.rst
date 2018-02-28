@@ -58,6 +58,13 @@ Magic函数
 - ``__clone()``
 - ``__debugInfo()``
 
+文件相关敏感函数
+---------------------------------
+- ``move_uploaded_file``
+- ``file_put_contents`` / ``file_get_contents``
+- ``unlink``
+- ``fopen`` / ``fgets``
+
 php特性
 ---------------------------------
 

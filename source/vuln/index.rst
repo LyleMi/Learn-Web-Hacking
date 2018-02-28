@@ -7,7 +7,7 @@
 
    sql/index
    xss/index
-   file
+   file/index
    xxe
    csrf
    ssrf
