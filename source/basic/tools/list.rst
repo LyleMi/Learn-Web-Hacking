@@ -7,6 +7,7 @@
     - `subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_
     - `wydomain <https://github.com/ring04h/wydomain>`_
     - `broDomain <https://github.com/code-scan/BroDomain>`_
+    - `ESD <https://github.com/FeeiCN/ESD>`_
 
 - 弱密码爆破
     - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
