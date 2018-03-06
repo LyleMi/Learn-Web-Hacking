@@ -134,6 +134,8 @@ DNS Rebinding
 - glassfish任意文件读取和war文件部署间接命令执行
 
 
-ref
+参考链接
 --------------------------------
-http://www.91ri.org/17111.html
+- `SSRF漏洞分析与利用 <http://www.91ri.org/17111.html>`_
+- `A New Era Of SSRF <https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf>`_
+- `php ssrf technique <https://medium.com/secjuice/php-ssrf-techniques-9d422cb28d51>`_
