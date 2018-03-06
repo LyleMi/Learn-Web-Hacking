@@ -58,6 +58,9 @@
 - 模版注入
     - `tplmap <https://github.com/epinna/tplmap>`_
 
+- CMS
+    - `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
+
 持久化
 --------------------------------
 - WebShell连接工具
