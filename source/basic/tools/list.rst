@@ -75,6 +75,7 @@
     - `Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_
 
 - 密码提取
+    - `mimikatz <https://github.com/gentilkiwi/mimikatz>`_
     - `sshLooter <https://github.com/mthbernardes/sshLooter>`_
 
 Fuzz
@@ -82,11 +83,14 @@ Fuzz
 - Unicode Fuzz
     - `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
 
-综合工具
+其他
 --------------------------------
-- 漏洞扫描
-    - `Nikto <https://cirt.net/nikto2>`_
+- 综合框架
+    - `metasploit <https://www.metasploit.com/>`_
     - `w3af <http://w3af.org/>`_
+    - `cobalt strike <https://www.cobaltstrike.com>`_
+    - `AutoSploit <https://github.com/NullArray/AutoSploit/>`_
+    - `Nikto <https://cirt.net/nikto2>`_
     - `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
     - `Arachni <http://www.arachni-scanner.com/>`_
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
@@ -108,6 +112,9 @@ Fuzz
     - `MITMf <https://github.com/byt3bl33d3r/MITMf>`_
     - `ssh mitm <https://github.com/jtesta/ssh-mitm>`_
     - `injectify <https://github.com/samdenty99/injectify>`_
+
+- DDoS
+    - `Saddam <https://github.com/OffensivePython/Saddam>`_
 
 - 其他
     - `BrupSuite <https://portswigger.net/burp/>`_
