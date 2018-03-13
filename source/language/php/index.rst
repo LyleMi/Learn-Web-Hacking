@@ -6,5 +6,6 @@ PHP相关漏洞
    :caption: Contents:
 
    unserialize
+   phpinfo
    misc
    ref
