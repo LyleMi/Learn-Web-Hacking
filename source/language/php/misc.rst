@@ -31,7 +31,7 @@ PHP字符存在截断行为，可以使用 ``ereg`` / ``%00`` / ``iconv`` 等实
 执行系统命令
 ---------------------------------
 
-禁用的函数可以在phpinfo中的``disable_functions``中查看
+禁用的函数可以在phpinfo中的 ``disable_functions`` 中查看
 
 - pcntl_exec
 - exec
