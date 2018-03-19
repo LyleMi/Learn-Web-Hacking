@@ -40,6 +40,19 @@
     - DNS ``dnsenum nslookup dig fierce``
     - SNMP ``snmpwalk``
 
+- DNS数据
+    - `VirusTotal <https://www.virustotal.com/>`_
+    - `PassiveTotal <https://passivetotal.org>`_
+    - `DNSDB <https://www.dnsdb.info/>`_
+    - `sitedossier <http://www.sitedossier.com/>`_
+
+- 数据查询
+    - `Censys <https://censys.io>`_
+    - `Shodan <https://www.shodan.io/>`_
+    - `Zoomeye <https://www.zoomeye.org/>`_
+    - `fofa <https://fofa.so/>`_
+    - `scans <https://scans.io/>`_
+
 漏洞利用
 --------------------------------
 - 数据库注入
