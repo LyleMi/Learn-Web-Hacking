@@ -52,6 +52,7 @@
     - `Zoomeye <https://www.zoomeye.org/>`_
     - `fofa <https://fofa.so/>`_
     - `scans <https://scans.io/>`_
+    - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
 漏洞利用
 --------------------------------
@@ -84,8 +85,9 @@
     - `webshell <https://github.com/tennc/webshell>`_
     - `PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_
     - `weevely3 <https://github.com/epinna/weevely3>`_
-    - `php bash <https://github.com/Arrexel/phpbash>`_
+    - `php bash - semi-interactive web shell <https://github.com/Arrexel/phpbash>`_
     - `Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_
+    - `b374k - PHP WebShell Custom Tool <https://github.com/b374k/b374k>`_
 
 - 密码提取
     - `mimikatz <https://github.com/gentilkiwi/mimikatz>`_
@@ -114,11 +116,12 @@ Fuzz
     - `TCPDump <http://www.tcpdump.org/>`_
     - `WireShark <https://www.wireshark.org>`_
     - `Argus <https://github.com/salesforce/Argus>`_
+    - `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
 
 - 审计工具
     - `Cobra <https://github.com/FeeiCN/cobra>`_
     - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
-    - `RIPS <http://rips-scanner.sourceforge.net/>`_
+    - `RIPS - PHP 代码审计 <http://rips-scanner.sourceforge.net/>`_
 
 - 中间人攻击
     - `mitmproxy <https://github.com/mitmproxy/mitmproxy>`_

@@ -20,6 +20,9 @@ WAF Bypass
     - URL
     - hex
     - unicode
+    - utf7
+        - ``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``
+    - utf16
 
 - 大小写混淆
 - 对标签属性值转码

@@ -1,4 +1,4 @@
-# Web安全知识Wiki
+# Web安全学习笔记
 
 该仓库旨在完成Web安全相关知识的整理，尚有缺漏或未完成的部分，持续更新中。在线版本可点击[此处](http://websec.readthedocs.io)查看。
 

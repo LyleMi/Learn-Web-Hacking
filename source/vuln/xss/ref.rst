@@ -1,6 +1,7 @@
 参考链接
 ================================
 
+- `AwesomeXSS <https://github.com/UltimateHackers/AwesomeXSS>`_
 - `w3c <https://w3c.github.io/webappsec-csp/>`_
 - `dom xss wiki <https://github.com/wisec/domxsswiki/wiki>`_
 - `content-security-policy.com <https://content-security-policy.com/>`_
