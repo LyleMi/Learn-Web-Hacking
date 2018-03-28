@@ -109,6 +109,7 @@ Fuzz
     - `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
     - `Arachni <http://www.arachni-scanner.com/>`_
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
+    - `BrupSuite <https://portswigger.net/burp/>`_
 
 - 流量
     - `Bro <https://www.bro.org/>`_
@@ -133,8 +134,6 @@ Fuzz
     - `Saddam <https://github.com/OffensivePython/Saddam>`_
 
 - 其他
-    - `BrupSuite <https://portswigger.net/burp/>`_
+    - `基于hook的php解密 <https://github.com/CaledoniaProject/php-decoder>`_
     - `httrack <http://www.httrack.com/>`_
     - `curl <https://curl.haxx.se/>`_
-    - wget
-    - nc
