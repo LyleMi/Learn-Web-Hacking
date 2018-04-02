@@ -25,7 +25,10 @@
 
 ::
 
-    union select 1,1,1 into outfile '/demo.txt'
+    union select 1,1,1 into outfile '/tmp/demo.txt'
+    union select 1,1,1 into dumpfile '/tmp/demo.txt'
+
+dumpfile和outfile不同在于，outfile会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏
 
 读文件
 

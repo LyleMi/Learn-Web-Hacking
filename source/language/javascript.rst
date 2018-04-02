@@ -30,3 +30,15 @@ exp
 -------------------------------
 
 Node.js中child_process.exec命令调用的是/bin/sh，故可以直接使用该命令执行shell
+
+
+反调试技巧
+-------------------------------
+
+- 函数重定义 ``console.log = function(a){}``
+- 定时断点 ``setInterval(function(){debugger}, 1000);``
+
+
+参考链接
+-------------------------------
+- `JavaScript反调试技巧 <http://www.freebuf.com/articles/system/163579.html>`_

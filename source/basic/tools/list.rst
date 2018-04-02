@@ -8,6 +8,7 @@
     - `wydomain <https://github.com/ring04h/wydomain>`_
     - `broDomain <https://github.com/code-scan/BroDomain>`_
     - `ESD <https://github.com/FeeiCN/ESD>`_
+    - `aiodnsbrute <https://github.com/blark/aiodnsbrute>`_
 
 - 弱密码爆破
     - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
@@ -21,6 +22,13 @@
 
 - 社工
     - `theHarvester <https://github.com/laramies/theHarvester>`_
+    - `osint <http://osintframework.com/>`_
+    - `LinkedInt <https://github.com/mdsecactivebreach/LinkedInt>`_
+    - `hunter <https://hunter.io>`_
+    - `pipl <https://pipl.com/>`_
+    - `GHDB <https://www.exploit-db.com/google-hacking-database/>`_
+    - `dig github history <https://github.com/dxa4481/truffleHog>`_
+    - `have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_
 
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
@@ -37,6 +45,7 @@
     - `nmap <https://github.com/nmap/nmap>`_
     - `zmap <https://github.com/zmap/zmap>`_
     - `masscan <https://github.com/robertdavidgraham/masscan>`_
+    - `ShodanHat <https://github.com/HatBashBR/ShodanHat>`_
     - DNS ``dnsenum nslookup dig fierce``
     - SNMP ``snmpwalk``
 
@@ -53,6 +62,9 @@
     - `fofa <https://fofa.so/>`_
     - `scans <https://scans.io/>`_
     - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
+
+- 其他
+    - `archive <https://archive.org/web/>`_
 
 漏洞利用
 --------------------------------
@@ -110,6 +122,7 @@ Fuzz
     - `Arachni <http://www.arachni-scanner.com/>`_
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
     - `BrupSuite <https://portswigger.net/burp/>`_
+    - `Spiderfoot <https://github.com/smicallef/spiderfoot>`_
 
 - 流量
     - `Bro <https://www.bro.org/>`_

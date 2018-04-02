@@ -15,4 +15,4 @@ awvs/appscan/netsparker/burpsuite/webcuriser/vega/owasp zap/nikto/w3af/nessus/op
 
 参考链接
 ---------------------------------------------
-1. http://www.freebuf.com/column/147929.html
+- `取证入门 web篇 <http://www.freebuf.com/column/147929.html>`_
