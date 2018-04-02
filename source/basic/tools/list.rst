@@ -84,6 +84,9 @@
 - 模版注入
     - `tplmap <https://github.com/epinna/tplmap>`_
 
+- 命令注入
+    - `commix <https://github.com/commixproject/commix>`_
+
 - CMS
     - `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
 

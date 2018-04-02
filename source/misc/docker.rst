@@ -59,6 +59,12 @@ Linux内核功能
 默认情况下，Docker使用白名单而不是黑名单，去除了所有非必要的功能。
 
 
+其他攻击面
+--------------------------------
+在构建Docker的过程中，即使是使用排名靠前的来源，也可能因为未修补的1day造成问题。
+
+
 参考链接
 --------------------------------
 - `Docker security <https://docs.docker.com/engine/security/security/>`_
+- `容器安全 <http://blog.nsfocus.net/docker-mirror-security/>`_
