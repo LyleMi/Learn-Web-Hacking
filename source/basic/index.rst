@@ -7,6 +7,7 @@
 
    conception
    aduit
+   ids
    info/index
    intranetpenetration
    tools/index
