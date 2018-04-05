@@ -6,3 +6,4 @@
 - `反序列化之PHP原生类的利用 <http://www.cnblogs.com/iamstudy/articles/unserialize_in_php_inner_class.html>`_
 - `php解密的数种方法 <https://www.leavesongs.com/PENETRATION/unobfuscated-phpjiami.html>`_
 - `open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-disable_functions-and-open_basedir/>`_
+- `PHP htaccess inject <https://github.com/sektioneins/pcc/wiki/PHP-htaccess-injection-cheat-sheet>`_
