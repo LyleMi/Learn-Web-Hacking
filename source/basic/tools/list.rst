@@ -104,6 +104,9 @@
     - `Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_
     - `b374k - PHP WebShell Custom Tool <https://github.com/b374k/b374k>`_
 
+- 后门
+    - `pwnginx <https://github.com/t57root/pwnginx>`_
+
 - 密码提取
     - `mimikatz <https://github.com/gentilkiwi/mimikatz>`_
     - `sshLooter <https://github.com/mthbernardes/sshLooter>`_
