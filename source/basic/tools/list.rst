@@ -152,6 +152,12 @@ Fuzz
 - DDoS
     - `Saddam <https://github.com/OffensivePython/Saddam>`_
 
+- Waf
+    - `naxsi <https://github.com/nbs-system/naxsi>`_
+    - `ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_
+    - `ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_
+    - `OpenWAF <https://github.com/titansec/OpenWAF>`_
+
 - 其他
     - `基于hook的php解密 <https://github.com/CaledoniaProject/php-decoder>`_
     - `httrack <http://www.httrack.com/>`_
