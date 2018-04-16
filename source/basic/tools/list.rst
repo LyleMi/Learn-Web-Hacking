@@ -90,6 +90,10 @@
 - CMS
     - `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
 
+- DNS
+    - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
+    - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
+
 持久化
 --------------------------------
 - WebShell连接工具
@@ -111,10 +115,27 @@
     - `mimikatz <https://github.com/gentilkiwi/mimikatz>`_
     - `sshLooter <https://github.com/mthbernardes/sshLooter>`_
 
+- 提权
+    - `linux exploit suggester <https://github.com/mzet-/linux-exploit-suggester>`_
+    - `LinEnum <https://github.com/rebootuser/LinEnum>`_
+    - `AutoLocalPrivilegeEscalation <https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_
+    - `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
+
+- RAT
+    - `QuasarRAT <https://github.com/quasar/QuasarRAT>`_
+
 Fuzz
 --------------------------------
 - Unicode Fuzz
     - `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
+
+防御
+--------------------------------
+- XSS
+    - `js xss <https://github.com/leizongmin/js-xss>`_
+
+- 配置检查
+    - `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
 
 其他
 --------------------------------
@@ -129,6 +150,7 @@ Fuzz
     - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
     - `BrupSuite <https://portswigger.net/burp/>`_
     - `Spiderfoot <https://github.com/smicallef/spiderfoot>`_
+    - `AZScanner <https://github.com/az0ne/AZScanner>`_
 
 - 流量
     - `Bro <https://www.bro.org/>`_
@@ -151,6 +173,11 @@ Fuzz
 
 - DDoS
     - `Saddam <https://github.com/OffensivePython/Saddam>`_
+
+- VPN Install
+    - `pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_
+    - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
+    - `openvpn <https://github.com/Nyr/openvpn-install>`_
 
 - Waf
     - `naxsi <https://github.com/nbs-system/naxsi>`_
