@@ -23,6 +23,7 @@
 - 社工
     - `theHarvester <https://github.com/laramies/theHarvester>`_
     - `osint <http://osintframework.com/>`_
+    - `osint git <https://github.com/lockfale/OSINT-Framework>`_
     - `LinkedInt <https://github.com/mdsecactivebreach/LinkedInt>`_
     - `hunter <https://hunter.io>`_
     - `pipl <https://pipl.com/>`_
@@ -34,11 +35,13 @@
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
     - `DirBrute <https://github.com/Xyntax/DirBrute>`_
     - `dirsearch <https://github.com/maurosoria/dirsearch>`_
-    - `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
+    - `bfac <https://github.com/mazen160/bfac>`_
+    - `ds_store_exp <https://github.com/lijiejie/ds_store_exp>`_
 
 - 指纹识别
     - `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
     - `whatweb <https://github.com/urbanadventurer/whatweb>`_
+    - `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
     - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 
 - 端口扫描
@@ -65,6 +68,7 @@
 
 - 其他
     - `archive <https://archive.org/web/>`_
+    - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
 
 漏洞利用
 --------------------------------
@@ -126,6 +130,9 @@
 
 Fuzz
 --------------------------------
+- Web Fuzz
+    - `wfuzz <https://github.com/xmendez/wfuzz>`_
+
 - Unicode Fuzz
     - `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
 
@@ -133,6 +140,7 @@ Fuzz
 --------------------------------
 - XSS
     - `js xss <https://github.com/leizongmin/js-xss>`_
+    - `DOMPurify <https://github.com/cure53/DOMPurify>`_
 
 - 配置检查
     - `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
@@ -164,6 +172,7 @@ Fuzz
     - `Cobra <https://github.com/FeeiCN/cobra>`_
     - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
     - `RIPS - PHP 代码审计 <http://rips-scanner.sourceforge.net/>`_
+    - `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
 
 - 中间人攻击
     - `mitmproxy <https://github.com/mitmproxy/mitmproxy>`_
@@ -185,7 +194,12 @@ Fuzz
     - `ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_
     - `OpenWAF <https://github.com/titansec/OpenWAF>`_
 
+- 混淆
+    - `JStillery <https://github.com/mindedsecurity/JStillery>`_
+    - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
+
 - 其他
+    - `SecLists <https://github.com/danielmiessler/SecLists>`_
     - `基于hook的php解密 <https://github.com/CaledoniaProject/php-decoder>`_
     - `httrack <http://www.httrack.com/>`_
     - `curl <https://curl.haxx.se/>`_
