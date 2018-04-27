@@ -174,6 +174,11 @@ Fuzz
     - `RIPS - PHP 代码审计 <http://rips-scanner.sourceforge.net/>`_
     - `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
 
+- WebAssembly
+    - `wabt <https://github.com/WebAssembly/wabt>`_
+    - `binaryen <https://github.com/WebAssembly/binaryen>`_
+    - `wasmdec <https://github.com/wwwg/wasmdec>`_
+
 - 中间人攻击
     - `mitmproxy <https://github.com/mitmproxy/mitmproxy>`_
     - `MITMf <https://github.com/byt3bl33d3r/MITMf>`_
