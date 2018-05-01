@@ -3,7 +3,6 @@
 
 IIS 6.0
 -----------------------------------
-
 - 后缀解析 ``/xx.asp;.jpg``
 - 目录解析 ``/xx.asp/xx.jpg`` (xx.asp目录下任意解析)
 - 默认解析 ``xx.asa`` ``xx.cer`` ``xx.cdx``
@@ -15,7 +14,6 @@ IIS 7.0 / IIS 7.5 / Nginx <= 0.8.37
 
 Nginx <= 0.8.37
 -----------------------------------
-
 在 Fast-CGI 关闭的情况下， Nginx 仍然存在解析漏洞：
 在文件路径(xx.jpg)后面加上 ``%00.php`` ， 即 ``xx.jpg%00.php`` 会被当做 php 文件来解析
 
@@ -24,7 +22,6 @@ Apache
 
 后缀解析
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ``test.php.x1.x2.x3`` （ x1,x2,x3 为没有在 mime.types 文件中定义的文件类型）。Apache 将从右往左开始判断后缀， 若x3为非可识别后缀，则判断x2，直到找到可识别后缀为止，然后对可识别后缀进行解析
 
 .htaccess
@@ -43,3 +40,4 @@ Windows不允许空格和点作为结尾，创建这样的文件会自动取出�
 参考链接
 -----------------------------------
 - `Apache 上传绕过 <https://www.leavesongs.com/PENETRATION/apache-cve-2017-15715-vulnerability.html>`_
+- `利用Windows特性高效猜测目录 <https://xz.aliyun.com/t/2318>`_
