@@ -7,3 +7,4 @@ Web安全相关CTF题目
 - https://github.com/CHYbeta/Code-Audit-Challenges
 - https://github.com/l4wio/CTF-challenges-by-me
 - https://github.com/tsug0d/MyAwesomeWebChallenge
+- https://github.com/a0xnirudh/kurukshetra

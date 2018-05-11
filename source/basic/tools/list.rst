@@ -67,6 +67,7 @@
     - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
 - 其他
+    - `watchdog <https://github.com/flipkart-incubator/watchdog>`_
     - `archive <https://archive.org/web/>`_
     - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
 
@@ -93,6 +94,7 @@
 
 - CMS
     - `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
+    - `Drupal enumeration & exploitation tool <https://github.com/immunIT/drupwn>`_
 
 - DNS
     - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
