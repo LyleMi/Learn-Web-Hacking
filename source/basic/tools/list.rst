@@ -95,6 +95,7 @@
 - CMS
     - `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
     - `Drupal enumeration & exploitation tool <https://github.com/immunIT/drupwn>`_
+    - `Wordpress Vulnerability Scanner <https://github.com/UltimateLabs/Zoom>`_
 
 - DNS
     - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
@@ -175,6 +176,7 @@ Fuzz
     - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
     - `RIPS - PHP 代码审计 <http://rips-scanner.sourceforge.net/>`_
     - `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
+    - `pyt <https://github.com/python-security/pyt>`_
 
 - WebAssembly
     - `wabt <https://github.com/WebAssembly/wabt>`_
@@ -194,6 +196,10 @@ Fuzz
     - `pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_
     - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
     - `openvpn <https://github.com/Nyr/openvpn-install>`_
+
+- 转发
+    - `ngrok <https://github.com/inconshreveable/ngrok>`_
+    - `rtcp <https://github.com/knownsec/rtcp>`_
 
 - Waf
     - `naxsi <https://github.com/nbs-system/naxsi>`_
