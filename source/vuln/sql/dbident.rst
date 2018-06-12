@@ -5,15 +5,34 @@ MySQL
 --------------------------------
 - sleep ``sleep(1)``
 - benchmark ``BENCHMARK(5000000, MD5('test'))``
-- 字符串连接 ``select 'a' 'b'``
-- version ``SELECT @@version``
+- 字符串连接
+    - ``SELECT 'a' 'b'``
+    - ``SELECT 'some'+'string'``
+    - ``SELECT CONCTA('some','string')``
+- version 
+    - ``SELECT @@version``
+    - ``SELECT version()``
+- 识别用函数
+    - ``connection_id()``
+    - ``last_insert_id()``
+    - ``row_count()``
 
 Oracle
 --------------------------------
-- 字符串连接 ``'a'||'oracle' --``
-- version ``SELECT banner FROM v$version``
+- 字符串连接 
+    - ``'a'||'oracle' --``
+    - ``SELECT CONCTA('some','string')``
+- version 
+    - ``SELECT banner FROM v$version``
+    - ``SELECT banner FROM v$version WHERE rownum=1``
 
 SQLServer
 --------------------------------
 - WAITFOR ``WAITFOR DELAY '00:00:10';``
 - SERVERNAME ``SELECT @@SERVERNAME``
+- version ``SELECT @@version``
+- 字符串连接
+    - ``SELECT 'some'+'string'``
+- 常量
+    - ``@@pack_received``
+    - ``@@rowcount``
