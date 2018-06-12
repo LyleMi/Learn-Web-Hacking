@@ -11,3 +11,4 @@
    info/index
    intranetpenetration
    tools/index
+   resource
