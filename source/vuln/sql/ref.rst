@@ -6,3 +6,4 @@
 - `SQL注入ByPass的一些小技巧 <https://mp.weixin.qq.com/s/fSBZPkO0-HNYfLgmYWJKCg>`_
 - `sqlmap time based inject 分析 <http://blog.wils0n.cn/archives/178/>`_
 - `SQLInjectionWiki <https://github.com/NetSPI/SQLInjectionWiki>`_
+- `Waf Bypass之道 <https://xz.aliyun.com/t/368>`_

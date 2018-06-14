@@ -13,3 +13,7 @@ Blog
 - https://www.leavesongs.com/
 - https://paper.seebug.org/
 - https://portswigger.net/blog
+
+网站推荐
+--------------------------------
+- http://www.xssed.com/
