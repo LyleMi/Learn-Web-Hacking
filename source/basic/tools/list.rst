@@ -101,6 +101,9 @@
     - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
     - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
 
+- 反序列化
+    - `ysoserial <https://github.com/frohoff/ysoserial>`_
+
 持久化
 --------------------------------
 - WebShell连接工具
