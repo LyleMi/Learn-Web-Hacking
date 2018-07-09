@@ -8,5 +8,6 @@ PHP相关漏洞
    backdoor
    unserialize
    phpinfo
+   htaccess
    misc
    ref
