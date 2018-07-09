@@ -10,5 +10,5 @@ SQL注入
    dbident
    bypass
    tricks
-   payload
+   cheatsheet/index
    ref

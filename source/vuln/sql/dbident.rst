@@ -36,3 +36,7 @@ SQLServer
 - 常量
     - ``@@pack_received``
     - ``@@rowcount``
+
+PostgreSQL
+--------------------------------
+- sleep ``pg_sleep(1)``
