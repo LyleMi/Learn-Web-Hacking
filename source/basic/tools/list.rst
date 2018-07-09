@@ -214,8 +214,12 @@ Fuzz
     - `JStillery <https://github.com/mindedsecurity/JStillery>`_
     - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
 
+- Nmap脚本
+    - `nmap-vulners <https://github.com/vulnersCom/nmap-vulners>`_
+
 - 其他
     - `SecLists <https://github.com/danielmiessler/SecLists>`_
+    - `Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_
     - `基于hook的php解密 <https://github.com/CaledoniaProject/php-decoder>`_
     - `httrack <http://www.httrack.com/>`_
     - `curl <https://curl.haxx.se/>`_
