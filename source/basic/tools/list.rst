@@ -223,3 +223,5 @@ Fuzz
     - `基于hook的php解密 <https://github.com/CaledoniaProject/php-decoder>`_
     - `httrack <http://www.httrack.com/>`_
     - `curl <https://curl.haxx.se/>`_
+    - `Java Serialization Dumper <https://github.com/NickstaDB/SerializationDumper>`_
+    - `JRE8u20 RCE Gadget <https://github.com/pwntester/JRE8u20_RCE_Gadget>`_
