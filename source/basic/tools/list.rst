@@ -101,6 +101,9 @@
     - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
     - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
 
+- XXE
+    - `XXEinjector <https://github.com/enjoiz/XXEinjector>`_
+
 - 反序列化
     - `ysoserial <https://github.com/frohoff/ysoserial>`_
 
@@ -151,6 +154,12 @@ Fuzz
 - 配置检查
     - `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
 
+- 系统加固
+    - `lynis <https://github.com/CISOfy/lynis>`_
+
+- IDS
+    - `ossec <https://github.com/ossec/ossec-hids>`_
+
 其他
 --------------------------------
 - 综合框架
@@ -168,6 +177,7 @@ Fuzz
 
 - 流量
     - `Bro <https://www.bro.org/>`_
+    - `Moloch <https://github.com/aol/moloch>`_
     - `TCPFlow <https://github.com/simsong/tcpflow>`_
     - `TCPDump <http://www.tcpdump.org/>`_
     - `WireShark <https://www.wireshark.org>`_
