@@ -100,6 +100,7 @@
 - DNS
     - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
     - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
+    - `Subdomain TakeOver <https://github.com/m4ll0k/takeover>`_
 
 - XXE
     - `XXEinjector <https://github.com/enjoiz/XXEinjector>`_
