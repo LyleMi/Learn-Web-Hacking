@@ -41,6 +41,14 @@ PHP字符存在截断行为，可以使用 ``ereg`` / ``%00`` / ``iconv`` 等实
 - system
 - proc_open
 
+
+Disable Functions Bypass
+---------------------------------
+- LD_PRELOAD绕过
+- PHP OPcache
+- Mail函数
+
+
 Magic函数
 ---------------------------------
 - ``__construct()`` ``__destruct()``
