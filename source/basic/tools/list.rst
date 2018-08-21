@@ -175,6 +175,7 @@ Fuzz
     - `BrupSuite <https://portswigger.net/burp/>`_
     - `Spiderfoot <https://github.com/smicallef/spiderfoot>`_
     - `AZScanner <https://github.com/az0ne/AZScanner>`_
+    - `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
 
 - 流量
     - `Bro <https://www.bro.org/>`_
