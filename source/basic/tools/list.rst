@@ -70,6 +70,7 @@
     - `watchdog <https://github.com/flipkart-incubator/watchdog>`_
     - `archive <https://archive.org/web/>`_
     - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
+    - `htrace <https://github.com/trimstray/htrace.sh>`_
 
 漏洞利用
 --------------------------------
@@ -107,6 +108,12 @@
 
 - 反序列化
     - `ysoserial <https://github.com/frohoff/ysoserial>`_
+
+- 端口Hack
+    - `Oracle Database Attacking Tool <https://github.com/quentinhardy/odat>`_
+
+- JWT
+    - `jwtcrack <https://github.com/brendan-rius/c-jwt-cracker>`_
 
 持久化
 --------------------------------
@@ -160,6 +167,9 @@ Fuzz
 
 - IDS
     - `ossec <https://github.com/ossec/ossec-hids>`_
+
+- threat intelligence
+    - `threatfeeds <https://threatfeeds.io/>`_
 
 其他
 --------------------------------
