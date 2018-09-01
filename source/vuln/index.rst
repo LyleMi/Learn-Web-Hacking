@@ -11,6 +11,7 @@
    xxe
    csrf
    ssrf
+   tpl
    xpath
    cmdinjection
    logic

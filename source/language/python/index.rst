@@ -5,7 +5,6 @@ Python相关漏洞
    :maxdepth: 2
    :caption: Contents:
 
-   tpl
    fmtstr
    unserialize
    sandbox

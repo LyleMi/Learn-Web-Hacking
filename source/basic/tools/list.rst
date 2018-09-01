@@ -19,6 +19,7 @@
 - Git信息泄漏
     - `GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_
     - `GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_
+    - `GitTools <https://github.com/internetwache/GitTools>`_
 
 - 社工
     - `theHarvester <https://github.com/laramies/theHarvester>`_
@@ -80,6 +81,9 @@
     - `NoSQLAttack <https://github.com/youngyangyang04/NoSQLAttack>`_
     - `NoSQLMap <https://github.com/codingo/NoSQLMap>`_
     - `Nosql Exploitation Framework <https://github.com/torque59/Nosql-Exploitation-Framework>`_
+
+- 数据库
+    - `mysql unsha1 <https://github.com/cyrus-and/mysql-unsha1>`_
 
 - XSS
     - `BeEF <https://github.com/beefproject/beef>`_
