@@ -10,6 +10,10 @@
     - `ESD <https://github.com/FeeiCN/ESD>`_
     - `aiodnsbrute <https://github.com/blark/aiodnsbrute>`_
 
+- 域名获取
+    - `the art of subdomain enumeration <https://github.com/appsecco/the-art-of-subdomain-enumeration>`_
+    - `sslScrape <https://github.com/cheetz/sslScrape/blob/master/sslScrape.py>`_
+
 - 弱密码爆破
     - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
     - `medusa <https://github.com/jmk-foofus/medusa>`_

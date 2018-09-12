@@ -9,6 +9,10 @@
             - `Virustotal <https://www.virustotal.com/>`_
             - CrtSearch
             - threatminer
+        - ASN
+            - ``whois -h whois.radb.net -- '-i origin AS111111' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq``
+            - ``nmap --script targets-asn --script-args targets-asn.asn=15169``
+        - CSP规则中获取
         - 子域爆破
         - PassiveDNS
         - 利用兄弟域名查询流程
