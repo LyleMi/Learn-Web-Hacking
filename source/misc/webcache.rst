@@ -48,3 +48,8 @@ Paypal在未修复之前，通过该攻击，可以获取的信息包括：用�
 - ``https://www.paypal.com/myaccount/home/attack.css``
 - ``https://www.paypal.com/myaccount/settings/notifications/attack.css``
 - ``https://history.paypal.com/cgi-bin/webscr/attack.css?cmd=_history-details`` 。
+
+参考链接
+--------------------------------
+- `practical web cache poisoning <https://portswigger.net/blog/practical-web-cache-poisoning>`_
+- `End-Users Get Maneuvered: Empirical Analysis of Redirection Hijacking in Content Delivery Networks <https://www.usenix.org/conference/usenixsecurity18/presentation/hao>`_
