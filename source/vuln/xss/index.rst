@@ -6,6 +6,7 @@ XSS
    :caption: Contents:
 
    classify
+   sop
    csp
    xssprotect
    wafbypass
