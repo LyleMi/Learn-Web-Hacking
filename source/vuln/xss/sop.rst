@@ -93,8 +93,8 @@ CORS
 ----------------------------------------
 CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。通过这个标准，可以允许浏览器读取跨域的资源。
 
-常见的返回头有
-
+常见返回头
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Access-Control-Allow-Origin
     - 声明允许的源
     - ``Access-Control-Allow-Origin: <origin> | *``
@@ -114,8 +114,8 @@ CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource s
     - 声明允许的头
     - ``Access-Control-Allow-Headers: <field-name>[, <field-name>]*``
 
-常见的请求头有
-
+常见请求头
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Origin
     - 指定请求的源
     - ``Origin: <origin>``
@@ -125,6 +125,14 @@ CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource s
 - Access-Control-Request-Headers
     - 声明请求使用的header
     - ``Access-Control-Request-Headers: <field-name>[, <field-name>]*``
+
+防御建议
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 如非必要不开启CORS
+- 定义详细的白名单，不使用通配符，仅配置所需要的头
+- 配置 ``Vary: Origin`` 头部
+- 如非必要不使用 ``Access-Control-Allow-Credentials``
+- 限制缓存的时间
 
 阻止跨源访问
 ----------------------------------------

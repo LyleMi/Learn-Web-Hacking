@@ -14,6 +14,7 @@
 - `css based attack abusing unicode range <http://mksben.l0.cm/2015/10/css-based-attack-abusing-unicode-range.html>`_
 - `css injection <https://speakerdeck.com/lmt_swallow/css-injection-plus-plus-ji-cun-shou-fa-falsegai-guan-todui-ce>`_
 - `Same origin policy <https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy>`_
+- `cors security guide <https://www.bedefended.com/papers/cors-security-guide>`_
 
 bypass
 -----------------------------------
