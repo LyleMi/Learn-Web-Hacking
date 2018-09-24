@@ -6,6 +6,7 @@
    :caption: Contents:
 
    auth
+   dos
    docker
    parse
    webcache
