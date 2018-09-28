@@ -101,6 +101,9 @@
 - 命令注入
     - `commix <https://github.com/commixproject/commix>`_
 
+- struts
+    - `struts scan <https://github.com/Lucifer1993/struts-scan>`_
+
 - CMS
     - `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
     - `Drupal enumeration & exploitation tool <https://github.com/immunIT/drupwn>`_
@@ -122,6 +125,9 @@
 
 - JWT
     - `jwtcrack <https://github.com/brendan-rius/c-jwt-cracker>`_
+
+- 无线
+    - `infernal twin <https://github.com/entropy1337/infernal-twin>`_
 
 持久化
 --------------------------------
