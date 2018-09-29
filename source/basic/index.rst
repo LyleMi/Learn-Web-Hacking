@@ -9,6 +9,7 @@
    domain
    aduit
    ids
+   standards/index
    info/index
    intranetpenetration
    tools/index
