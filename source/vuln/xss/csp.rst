@@ -1,13 +1,13 @@
 CSP
-================================
+========================================
 
 CSP是什么？
---------------------------------
+----------------------------------------
 Content Security Policy，简称 CSP。顾名思义，这个规范与内容安全有关，主要是用来定义页面可以加载哪些资源，减少 XSS 的发生。
 
 
 配置
---------------------------------
+----------------------------------------
 
 CSP策略可以通过 HTTP 头信息或者 meta 元素定义。
 
@@ -94,7 +94,7 @@ report-uri      值为 /report-uri，提交日志
 
 
 Bypass
---------------------------------
+---------------------------------------
 
 预加载
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -146,7 +146,6 @@ iframe
 
 其他
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 - CND Bypass,如果网站信任了某个CDN, 那么可利用相应的CDN bypass
 - Angular versions <1.5.9 >=1.5.0，存在漏洞 `Git pr <https://github.com/angular/angular.js/pull/15346>`_
 - jQuery sourcemap 
@@ -158,3 +157,4 @@ iframe
 - For FireFox ``<META HTTP-EQUIV="refresh" CONTENT="0; url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnSWhhdmVZb3VOb3cnKTs8L3NjcmlwdD4=">``
 - ``<link rel="import" />``
 - ``<meta http-equiv="refresh" content="0; url=http://...." />``
+- 策略配置为 ``self`` 时，可通过 ``base`` 标签修改源来bypass
