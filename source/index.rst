@@ -9,6 +9,7 @@ Web安全学习笔记
    basic/index
    vuln/index
    language/index
+   tools/index
    misc/index
 
 

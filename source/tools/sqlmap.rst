@@ -1,7 +1,7 @@
 SQLMap使用
 ================================
 
-安装 ``git clone https://github.com/sqlmapproject/sqlmap.git sqlmap-dev``
+安装 ``git clone https://github.com/sqlmapproject/sqlmap.git sqlmap``
 
 常用参数
 --------------------------------

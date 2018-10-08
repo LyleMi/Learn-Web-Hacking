@@ -11,4 +11,3 @@
    parse
    webcache
    forensic
-   challs
