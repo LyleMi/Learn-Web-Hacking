@@ -185,6 +185,11 @@ Fuzz
 - threat intelligence
     - `threatfeeds <https://threatfeeds.io/>`_
 
+- 入侵检查
+    - `check rootkit <http://www.chkrootkit.org>`_
+    - `rootkit hunter <http://rkhunter.sourceforge.net/>`_
+    - `PC Hunter <http://www.xuetr.com/>`_
+
 其他
 --------------------------------
 - 综合框架
