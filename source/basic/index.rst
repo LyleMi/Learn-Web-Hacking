@@ -5,8 +5,7 @@
    :maxdepth: 2
    :caption: Contents:
 
-   conception
+   standards/index
    domain
    aduit
-   standards/index
    intranetpenetration

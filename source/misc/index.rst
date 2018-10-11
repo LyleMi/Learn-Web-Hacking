@@ -8,6 +8,4 @@
    auth
    dos
    docker
-   parse
-   webcache
    forensic
