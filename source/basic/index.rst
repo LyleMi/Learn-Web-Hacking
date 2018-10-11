@@ -10,4 +10,3 @@
    aduit
    standards/index
    intranetpenetration
-   resource
