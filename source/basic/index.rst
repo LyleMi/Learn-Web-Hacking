@@ -9,6 +9,5 @@
    domain
    aduit
    standards/index
-   info/index
    intranetpenetration
    resource

@@ -7,6 +7,7 @@ Web安全学习笔记
    :caption: Contents:
 
    basic/index
+   info/index
    vuln/index
    language/index
    tools/index
