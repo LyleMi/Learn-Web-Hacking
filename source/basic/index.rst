@@ -7,6 +7,7 @@
 
    history
    standards/index
+   network
    domain
    aduit
    intranetpenetration
