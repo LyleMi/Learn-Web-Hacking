@@ -18,7 +18,7 @@
     - 检查源码改动
     - 查杀WebShell等后门
 - 系统日志分析
-    - Windows: 事件查看器（eventvwr）
+    - Windows: 事件查看器（ ``eventvwr.msc`` ）
     - Linux: /var/log/
 - 应用日志分析
     - 分析User-Agent，e.g. ``awvs / burpsuite / w3af / nessus / openvas``
@@ -39,12 +39,25 @@
     - ``/tmp`` 临时目录
     - ``~/.ssh``
 
+用户分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Linux
+    - ``/etc/shadow`` 密码登陆相关信息
+    - ``uptime`` 查看用户登陆时间
+    - ``/etc/sudoers`` sudo用户列表
+- Windows
+    - 查看管理员对应键值
+    - ``lusrmgr.msc`` 查看账户变化
+
 进程分析
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``w`` 命令，查看用户及其进程
 - 分析开机自启程序
     - ``/etc/init.d``
     - ``~/.bashrc``
+    - ``HKEY_CURRENT_USER\software\micorsoft\windows\currentversion\run``
+    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run``
+    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce``
 - 查看计划或定时任务
 - ``netstat –an`` / ``lsof`` 查看进程端口占用
 
