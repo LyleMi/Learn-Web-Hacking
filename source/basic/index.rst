@@ -6,8 +6,8 @@
    :caption: Contents:
 
    history
-   standards/index
    network
    domain
+   http
    aduit
    intranetpenetration
