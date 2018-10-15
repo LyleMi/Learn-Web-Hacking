@@ -9,3 +9,4 @@
    dos
    docker
    emergency
+   forensic
