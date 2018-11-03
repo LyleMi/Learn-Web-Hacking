@@ -95,6 +95,9 @@
     - `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
     - `DSXS <https://github.com/stamparm/DSXS>`_
 
+- SSRF
+    - `SSRFmap <https://github.com/swisskyrepo/SSRFmap>`_
+
 - 模版注入
     - `tplmap <https://github.com/epinna/tplmap>`_
 
