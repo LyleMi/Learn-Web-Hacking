@@ -7,6 +7,6 @@
 
    php/index
    python/index
-   java
+   java/index
    javascript
    
