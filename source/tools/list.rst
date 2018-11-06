@@ -116,15 +116,19 @@
     - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
     - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
     - `Subdomain TakeOver <https://github.com/m4ll0k/takeover>`_
+    - `mpDNS <https://github.com/nopernik/mpDNS>`_
 
 - XXE
     - `XXEinjector <https://github.com/enjoiz/XXEinjector>`_
 
 - 反序列化
     - `ysoserial <https://github.com/frohoff/ysoserial>`_
+    - `JRE8u20 RCE Gadget <https://github.com/pwntester/JRE8u20_RCE_Gadget>`_
+    - `Java Serialization Dumper <https://github.com/NickstaDB/SerializationDumper>`_
 
 - 端口Hack
     - `Oracle Database Attacking Tool <https://github.com/quentinhardy/odat>`_
+    - `nmap vulners <https://github.com/vulnersCom/nmap-vulners>`_
 
 - JWT
     - `jwtcrack <https://github.com/brendan-rius/c-jwt-cracker>`_
@@ -193,6 +197,36 @@ Fuzz
     - `rootkit hunter <http://rkhunter.sourceforge.net/>`_
     - `PC Hunter <http://www.xuetr.com/>`_
 
+- Waf
+    - `naxsi <https://github.com/nbs-system/naxsi>`_
+    - `ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_
+    - `ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_
+    - `OpenWAF <https://github.com/titansec/OpenWAF>`_
+
+运维
+--------------------------------
+- 流量
+    - `Bro <https://www.bro.org/>`_
+    - `Moloch <https://github.com/aol/moloch>`_
+    - `TCPFlow <https://github.com/simsong/tcpflow>`_
+    - `TCPDump <http://www.tcpdump.org/>`_
+    - `WireShark <https://www.wireshark.org>`_
+    - `Argus <https://github.com/salesforce/Argus>`_
+    - `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
+
+- 蜜罐
+    - `dionaea <https://github.com/DinoTools/dionaea>`_
+    - `Modern Honey Network  <https://github.com/threatstream/mhn>`_
+
+- VPN Install
+    - `pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_
+    - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
+    - `openvpn <https://github.com/Nyr/openvpn-install>`_
+
+- 转发
+    - `ngrok <https://github.com/inconshreveable/ngrok>`_
+    - `rtcp <https://github.com/knownsec/rtcp>`_
+
 其他
 --------------------------------
 - 综合框架
@@ -209,21 +243,13 @@ Fuzz
     - `AZScanner <https://github.com/az0ne/AZScanner>`_
     - `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
 
-- 流量
-    - `Bro <https://www.bro.org/>`_
-    - `Moloch <https://github.com/aol/moloch>`_
-    - `TCPFlow <https://github.com/simsong/tcpflow>`_
-    - `TCPDump <http://www.tcpdump.org/>`_
-    - `WireShark <https://www.wireshark.org>`_
-    - `Argus <https://github.com/salesforce/Argus>`_
-    - `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
-
 - 审计工具
     - `Cobra <https://github.com/FeeiCN/cobra>`_
     - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
-    - `RIPS - PHP 代码审计 <http://rips-scanner.sourceforge.net/>`_
+    - `RIPS <http://rips-scanner.sourceforge.net/>`_
     - `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
     - `pyt <https://github.com/python-security/pyt>`_
+    - `Semmle QL <https://github.com/Semmle/ql>`_
 
 - WebAssembly
     - `wabt <https://github.com/WebAssembly/wabt>`_
@@ -239,31 +265,9 @@ Fuzz
 - DDoS
     - `Saddam <https://github.com/OffensivePython/Saddam>`_
 
-- 蜜罐
-    - `dionaea <https://github.com/DinoTools/dionaea>`_
-    - `Modern Honey Network  <https://github.com/threatstream/mhn>`_
-
-- VPN Install
-    - `pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_
-    - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
-    - `openvpn <https://github.com/Nyr/openvpn-install>`_
-
-- 转发
-    - `ngrok <https://github.com/inconshreveable/ngrok>`_
-    - `rtcp <https://github.com/knownsec/rtcp>`_
-
-- Waf
-    - `naxsi <https://github.com/nbs-system/naxsi>`_
-    - `ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_
-    - `ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_
-    - `OpenWAF <https://github.com/titansec/OpenWAF>`_
-
 - 混淆
     - `JStillery <https://github.com/mindedsecurity/JStillery>`_
     - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
-
-- Nmap脚本
-    - `nmap-vulners <https://github.com/vulnersCom/nmap-vulners>`_
 
 - 其他
     - `SecLists <https://github.com/danielmiessler/SecLists>`_
@@ -271,5 +275,3 @@ Fuzz
     - `基于hook的php解密 <https://github.com/CaledoniaProject/php-decoder>`_
     - `httrack <http://www.httrack.com/>`_
     - `curl <https://curl.haxx.se/>`_
-    - `Java Serialization Dumper <https://github.com/NickstaDB/SerializationDumper>`_
-    - `JRE8u20 RCE Gadget <https://github.com/pwntester/JRE8u20_RCE_Gadget>`_
