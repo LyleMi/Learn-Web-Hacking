@@ -10,3 +10,4 @@
    docker
    emergency
    forensic
+   honeypot

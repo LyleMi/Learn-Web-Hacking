@@ -239,6 +239,10 @@ Fuzz
 - DDoS
     - `Saddam <https://github.com/OffensivePython/Saddam>`_
 
+- 蜜罐
+    - `dionaea <https://github.com/DinoTools/dionaea>`_
+    - `Modern Honey Network  <https://github.com/threatstream/mhn>`_
+
 - VPN Install
     - `pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_
     - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
