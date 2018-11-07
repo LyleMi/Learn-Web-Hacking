@@ -7,6 +7,7 @@
 - `Java反序列化漏洞通用利用分析 <https://blog.chaitin.cn/2015-11-11_java_unserialize_rce/>`_
 - `JRE8u20反序列化漏洞分析 <http://www.freebuf.com/vuls/176672.html>`_
 - `WebLogic反序列化漏洞漫谈 <https://www.freebuf.com/articles/web/169770.html>`_
+- `JSON反序列化之殇 <https://github.com/shengqi158/fastjson-remote-code-execute-poc/blob/master/Java_JSON%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B9%8B%E6%AE%87_%E7%9C%8B%E9%9B%AA%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B3%B0%E4%BC%9A.pdf>`_
 
 沙箱
 ----------------------------------------
@@ -16,3 +17,8 @@
 ----------------------------------------
 - `Struts <https://github.com/apache/struts>`_
 - `Struts Examples <https://github.com/apache/struts-examples>`_
+
+其他
+----------------------------------------
+- `关于 JNDI 注入 <https://paper.seebug.org/417/>`_
+- `Java RMI与RPC的区别 <https://www.cnblogs.com/ygj0930/p/6542811.html>`_
