@@ -1,9 +1,10 @@
 参考链接
 ========================================
 
-官方链接
+官方文档
 ----------------------------------------
 - `ognl <http://commons.apache.org/proper/commons-ognl/>`_
+- `Java SE Security Guide <https://docs.oracle.com/javase/9/security/toc.htm>`_
 
 反序列化
 ----------------------------------------

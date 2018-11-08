@@ -8,6 +8,7 @@ Java相关漏洞
    basic
    framework
    container
+   sandbox
    unserialize
    ref
    
