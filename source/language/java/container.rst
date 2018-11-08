@@ -29,9 +29,19 @@ WebLogic是美国Oracle公司出品的一个application server，是一个基于
 相关CVE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `CVE-2015-4852 <https://github.com/roo7break/serialator>`_
+- CVE-2016-3510
+- CVE-2017-3248
 - `CVE-2017-10271 <http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html>`_
 - `CVE-2018-2628 <https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA?>`_
 - `CVE-2018-2894 <https://xz.aliyun.com/t/2458>`_
+- CVE-2018-3191
+    - https://github.com/voidfyoo/CVE-2018-3191
+    - https://github.com/Libraggbond/CVE-2018-3191
+- CVE-2018-3197
+- CVE-2018-3201
+- CVE-2018-3245
+- CVE-2018-3248
+- CVE-2018-3252
 
 JBoss
 ----------------------------------------

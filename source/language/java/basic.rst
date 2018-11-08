@@ -5,9 +5,15 @@ JNDI
 ----------------------------------------
 JNDI（Java Naming and Directory Interface，JAVA命名和目录接口）是为JAVA应用程序提供命名和目录访问服务的API（Application Programing Interface，应用程序编程接口）。
 
+OGNL
+----------------------------------------
+OGNL（Object-Graph Navigation Language，对象导航语言）是一种功能强大的表达式语言，通过简单一致的表达式语法，可以存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。
+
+Struts2中使用了OGNL，提供了一个ValueStack类。ValueStack分为root和context两部分。root中是当前的action对象，context中是ActionContext里面所有的内容。
+
 RMI
 ----------------------------------------
-RMI（Remote Method Invocation，远程方法调用）。能够让在客户端Java虚拟机上的对象像调用本地对象一样调用服务端java 虚拟机中的对象上的方法。
+RMI（Remote Method Invocation，远程方法调用）能够让在客户端Java虚拟机上的对象像调用本地对象一样调用服务端java虚拟机中的对象上的方法。
 
 RMI远程调用步骤：
 

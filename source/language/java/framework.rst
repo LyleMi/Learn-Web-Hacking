@@ -30,8 +30,23 @@ service() 方法是 Servlet 的核心。每当一个客户请求一个HttpServle
 
 Struts 2
 ----------------------------------------
+
+简介
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。
 
+相关CVE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- CVE-2016-3081 (S2-032)
+- CVE-2016-3687 (S2-033) 
+- CVE-2016-4438 (S2-037)
 - `CVE-2017-5638 <https://github.com/immunio/apache-struts2-CVE-2017-5638>`_
+- CVE-2017-7672
+- CVE-2017-9787
+- CVE-2017-9793
+- CVE-2017-9804
 - `CVE-2017-9805 <https://github.com/mazen160/struts-pwn_CVE-2017-9805>`_
 - `CVE-2017-12611 <https://github.com/brianwrf/S2-053-CVE-2017-12611>`_
+- CVE-2017-15707
+- CVE-2018-1327
+- CVE-2018-11776
