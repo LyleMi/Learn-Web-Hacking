@@ -94,6 +94,7 @@
     - `XSS Reciver <https://github.com/firesunCN/BlueLotus_XSSReceiver>`_
     - `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
     - `DSXS <https://github.com/stamparm/DSXS>`_
+    - `XSStrike <https://github.com/s0md3v/XSStrike>`_
 
 - SSRF
     - `SSRFmap <https://github.com/swisskyrepo/SSRFmap>`_
@@ -268,10 +269,11 @@ Fuzz
 - 混淆
     - `JStillery <https://github.com/mindedsecurity/JStillery>`_
     - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
+    - `基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_
 
 - 其他
+    - `Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_
     - `SecLists <https://github.com/danielmiessler/SecLists>`_
     - `Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_
-    - `基于hook的php解密 <https://github.com/CaledoniaProject/php-decoder>`_
     - `httrack <http://www.httrack.com/>`_
     - `curl <https://curl.haxx.se/>`_

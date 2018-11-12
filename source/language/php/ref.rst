@@ -7,3 +7,4 @@
 - `php解密的数种方法 <https://www.leavesongs.com/PENETRATION/unobfuscated-phpjiami.html>`_
 - `open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-disable_functions-and-open_basedir/>`_
 - `PHP htaccess inject <https://github.com/sektioneins/pcc/wiki/PHP-htaccess-injection-cheat-sheet>`_
+- `php木马加密 <https://blog.manchestergreyhats.co.uk/2018/11/07/php-malware-examination/>`_
