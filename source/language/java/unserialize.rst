@@ -56,5 +56,40 @@ Fastjson
 
 漏洞修复和防护
 ----------------------------------------
-- 通过Hook resolveClass来校验反序列化的类
-- 使用ValidatingObjectInputStream来校验反序列化的类
+
+Hook resolveClass
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+在使用 ``readObject()`` 反序列化时会调用 ``resolveClass`` 方法读取反序列化的类名，可以通过hook该方法来校验反序列化的类，一个Demo如下
+
+::
+
+    @Override
+    protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
+        if (!desc.getName().equals(SerialObject.class.getName())) {
+            throw new InvalidClassException(
+                    "Unauthorized deserialization attempt",
+                    desc.getName());
+        }
+        return super.resolveClass(desc);
+    }
+
+以上的Demo就只允许序列化 ``SerialObject`` ，通过这种方式，就可以设置允许序列化的白名单
+
+ValidatingObjectInputStream
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apache Commons IO Serialization包中的 ``ValidatingObjectInputStream`` 类提供了 ``accept`` 方法，可以通过该方法来实现反序列化类白/黑名单控制，一个demo如下
+
+::
+
+    private static Object deserialize(byte[] buffer) throws IOException, ClassNotFoundException , ConfigurationException {
+        Object obj;
+        ByteArrayInputStream bais = new ByteArrayInputStream(buffer);
+        ValidatingObjectInputStream ois = new ValidatingObjectInputStream(bais); 
+        ois.accept(SerialObject.class);
+        obj = ois.readObject();
+        return obj;
+    }
+
+ObjectInputFilter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Java 9提供了支持序列化数据过滤的新特性，可以继承 ``java.io.ObjectInputFilter`` 类重写 ``checkInput`` 方法来实现自定义的过滤器，并使用 ``ObjectInputStream`` 对象的 ``setObjectInputFilter`` 设置过滤器来实现反序列化类白/黑名单控制。
