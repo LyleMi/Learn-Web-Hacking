@@ -35,6 +35,17 @@ Struts 2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。
 
+请求流程
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 客户端发送请求的tomcat服务器
+- 请求经过一系列过滤器
+- FilterDispatcher调用ActionMapper来决定这个请求是否要调用某个Action
+- ActionMppaer决定调用某个ActionFilterDispatcher把请求给ActionProxy
+- ActionProxy通过Configuration Manager查看structs.xml，找到对应的Action类
+- ActionProxy创建一个ActionInvocation对象
+- ActionInvocation对象回调Action的execute方法
+- Action执行完毕后，ActionInvocation根据返回的字符串，找到相应的result，通过HttpServletResponse返回给服务器
+
 相关CVE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2016-3081 (S2-032)
@@ -50,3 +61,15 @@ Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于�
 - CVE-2017-15707
 - CVE-2018-1327
 - CVE-2018-11776
+
+Spring MVC
+----------------------------------------
+
+请求流程
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 用户发送请求给服务器
+- 服务器收到请求，使用DispatchServlet处理
+- Dispatch使用HandleMapping检查url是否有对应的Controller，如果有，执行
+- 如果Controller返回字符串，ViewResolver将字符串转换成相应的视图对象
+- DispatchServlet将视图对象中的数据，输出给服务器
+- 服务器将数据输出给客户端

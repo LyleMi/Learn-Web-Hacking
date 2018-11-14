@@ -13,7 +13,7 @@ JNDI（Java Naming and Directory Interface，JAVA命名和目录接口）是为J
 
 OGNL
 ----------------------------------------
-OGNL（Object-Graph Navigation Language，对象导航语言）是一种功能强大的表达式语言，通过简单一致的表达式语法，可以存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。
+OGNL（Object-Graph Navigation Language，对象导航语言）是一种功能强大的表达式语言，通过简单一致的表达式语法，提供了存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。
 
 Struts2中使用了OGNL，提供了一个ValueStack类。ValueStack分为root和context两部分。root中是当前的action对象，context中是ActionContext里面所有的内容。
 

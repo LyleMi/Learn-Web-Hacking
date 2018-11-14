@@ -8,3 +8,4 @@ CheatSheet
    mssql
    mysql
    psql
+   oracle
