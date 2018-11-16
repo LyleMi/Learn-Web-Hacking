@@ -7,6 +7,7 @@ SQL注入
 
    classify
    fuzz
+   privilege
    dbident
    bypass
    tricks
