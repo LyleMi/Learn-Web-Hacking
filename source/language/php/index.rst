@@ -9,5 +9,6 @@ PHP相关漏洞
    unserialize
    phpinfo
    htaccess
+   webshell
    misc
    ref

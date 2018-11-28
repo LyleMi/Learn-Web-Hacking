@@ -8,3 +8,5 @@
 - `open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-disable_functions-and-open_basedir/>`_
 - `PHP htaccess inject <https://github.com/sektioneins/pcc/wiki/PHP-htaccess-injection-cheat-sheet>`_
 - `php木马加密 <https://blog.manchestergreyhats.co.uk/2018/11/07/php-malware-examination/>`_
+- `PHP WebShell变形技术总结  <https://www.freebuf.com/articles/web/155891.html>`_
+- `一些不包含数字和字母的webshell <https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html>`_
