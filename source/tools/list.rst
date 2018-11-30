@@ -35,6 +35,7 @@
     - `GHDB <https://www.exploit-db.com/google-hacking-database/>`_
     - `dig github history <https://github.com/dxa4481/truffleHog>`_
     - `have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_
+    - `trape <https://github.com/jofpin/trape>`_
 
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
