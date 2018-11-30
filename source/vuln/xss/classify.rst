@@ -5,7 +5,6 @@ XSS全称为Cross Site Scripting，为了和CSS分开简写为XSS，中文名为
 
 反射型XSS
 --------------------------------
-
 一次浏览，最常见，最广泛，举例来说，当一个网站的代码中包含类似下面的语句：``<?php echo "<p>hello, $_GET['user']</p>";?>`` ，那么在访问时设置``/?user=</p><script>alert("hack")</script><p>``，则实现了任意执行代码的目的。
 
 
@@ -18,6 +17,29 @@ DOM XSS
 --------------------------------
 DOM型XSS和储存型类似，不同之处在于DOM XSS代码和服务器的解析响应没有直接关系，而是因为浏览器端的DOM解析出现漏洞而产生的。
 
+例如
+
+::
+
+    <html>
+    <head>
+    <title>DOM Based XSS Demo</title>
+    <script>
+    function xsstest()
+    {
+        var str = document.getElementById("input").value;
+        document.getElementById("output").innerHTML = "<img src='"+str+"'></img>";
+    }
+    </script>
+    </head>
+    <body>
+    <div id="output"></div>
+    <input type="text" id="input" size=50 value="" />
+    <input type="button" value="submit" onclick="xsstest()" />
+    </body>
+    </html>
+
+输入 ``x' onerror='javascript:alert(/xss/)`` 即可触发。
 
 Blind XSS
 --------------------------------
