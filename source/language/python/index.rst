@@ -9,6 +9,6 @@ Python相关漏洞
    unserialize
    sandbox
    framework
-   cmdi
+   dangerous
    ref
    

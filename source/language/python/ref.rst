@@ -8,3 +8,4 @@
 - `Python 沙箱通用绕过 <https://www.anquanke.com/post/id/86366>`_
 - `Python 沙箱 官方wiki <https://wiki.python.org/moin/SandboxedPython>`_
 - `Python eval的常见错误封装及利用原理 <http://xxlegend.com/2015/07/31/Python%20eval的常见错误封装及利用原理/>`_
+- `Python安全和代码审计相关资料收集 <https://github.com/bit4woo/python_sec>`_
