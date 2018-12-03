@@ -7,6 +7,7 @@
 
    domain
    site
+   cdn
    port
    linux
    misc
