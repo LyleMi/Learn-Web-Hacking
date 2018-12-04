@@ -10,4 +10,5 @@
    domain
    http
    aduit
+   waf
    intranetpenetration
