@@ -28,3 +28,9 @@ WAF Bypass
 - 对标签属性值转码
 - 产生事件
 - css跨站解析
+- 长度限制bypass
+    - ``eval(name)``
+    - ``eval(hash)``
+    - ``import``
+    - ``$.getScript``
+    - ``$.get``
