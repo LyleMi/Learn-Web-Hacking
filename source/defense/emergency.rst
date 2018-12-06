@@ -42,12 +42,17 @@
     - ``/etc/shadow`` 密码登陆相关信息
     - ``uptime`` 查看用户登陆时间
     - ``/etc/sudoers`` sudo用户列表
+    - 查看是否有新增用户
 - Windows
+    - 查看是否有新增用户
+    - 查看服务器是否有弱口令
     - 查看管理员对应键值
     - ``lusrmgr.msc`` 查看账户变化
 
 进程分析
 ----------------------------------------
+- ``netstat -ano`` 查看是否打开了可疑端口
+- ``tasklist`` 查看是否有可疑进程
 - ``w`` 命令，查看用户及其进程
 - 分析开机自启程序
     - ``/etc/init.d``
@@ -57,6 +62,7 @@
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce``
 - 查看计划或定时任务
 - ``netstat –an`` / ``lsof`` 查看进程端口占用
+- 查看是否有CPU或内存资源占用长时间过高的进程
 
 配置分析
 ----------------------------------------

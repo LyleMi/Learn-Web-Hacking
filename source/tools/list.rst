@@ -195,15 +195,29 @@ Fuzz
     - `threatfeeds <https://threatfeeds.io/>`_
 
 - 入侵检查
+    - `huorong <https://www.huorong.cn/>`_
     - `check rootkit <http://www.chkrootkit.org>`_
     - `rootkit hunter <http://rkhunter.sourceforge.net/>`_
     - `PC Hunter <http://www.xuetr.com/>`_
+    - `autoruns <https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns>`_
+
+- 进程查看
+    - `Process Explorer <https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer>`_
 
 - Waf
     - `naxsi <https://github.com/nbs-system/naxsi>`_
     - `ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_
     - `ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_
     - `OpenWAF <https://github.com/titansec/OpenWAF>`_
+
+- 病毒在线查杀
+    - `virustotal <https://www.virustotal.com/>`_
+    - `virscan <http://www.virscan.org>`_
+    - `habo <https://habo.qq.com>`_
+
+- WebShell查杀
+    - `D盾 <http://www.d99net.net/index.asp>`_
+    - `深信服WebShell查杀 <http://edr.sangfor.com.cn/backdoor_detection.html>`_
 
 运维
 --------------------------------
