@@ -61,7 +61,7 @@
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run``
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce``
 - 查看计划或定时任务
-- ``netstat –an`` / ``lsof`` 查看进程端口占用
+- ``netstat -an`` / ``lsof`` 查看进程端口占用
 - 查看是否有CPU或内存资源占用长时间过高的进程
 
 配置分析

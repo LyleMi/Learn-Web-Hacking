@@ -36,7 +36,7 @@ Tamper 概览
 ================================            ========================
 apostrophemask.py                           用utf8代替引号
 equaltolike.py                              like 代替等号
-space2dash.py                               绕过过滤'=' 替换空格字符(")，('' – ')后跟一个破折号注释，一个随机字符串和一个新行('\n')
+space2dash.py                               绕过过滤'=' 替换空格字符(")，('' - ')后跟一个破折号注释，一个随机字符串和一个新行('\n')
 greatest.py                                 绕过过滤'>' ,用GREATEST替换大于号。
 space2hash.py                               空格替换为#号 随机字符串 以及换行符
 apostrophenullencode.py                     绕过过滤双引号，替换字符和双引号。
@@ -50,7 +50,7 @@ space2mssqlhash.py                          替换空格
 modsecurityversioned.py                     过滤空格，包含完整的查询版本注释
 space2mysqlblank.py                         空格替换其它空白符号(mysql)
 between.py                                  用between替换大于号(>)
-space2mysqldash.py                          替换空格字符(")(' – ')后跟一个破折号注释一个新行(' n')
+space2mysqldash.py                          替换空格字符(")(' - ')后跟一个破折号注释一个新行(' n')
 multiplespaces.py                           围绕SQL关键字添加多个空格
 space2plus.py                               用+替换空格
 bluecoat.py                                 代替空格字符后与一个有效的随机空白字符的SQL语句。 然后替换=为like
