@@ -24,6 +24,7 @@ CSS
 ---------------------------------------
 - `Same origin policy <https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy>`_
 - `cors security guide <https://www.bedefended.com/papers/cors-security-guide>`_
+- `logically bypassing browser security boundaries <https://speakerdeck.com/shhnjk/logically-bypassing-browser-security-boundaries>`_
 
 bypass
 ---------------------------------------
