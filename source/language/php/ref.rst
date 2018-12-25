@@ -10,3 +10,4 @@
 - `php木马加密 <https://blog.manchestergreyhats.co.uk/2018/11/07/php-malware-examination/>`_
 - `PHP WebShell变形技术总结  <https://www.freebuf.com/articles/web/155891.html>`_
 - `一些不包含数字和字母的webshell <https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html>`_
+- `Bypass Disable functions Shell <https://github.com/l3m0n/Bypass_Disable_functions_Shell>`_

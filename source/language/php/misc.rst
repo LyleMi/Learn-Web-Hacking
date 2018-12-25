@@ -45,8 +45,11 @@ PHP字符存在截断行为，可以使用 ``ereg`` / ``%00`` / ``iconv`` 等实
 Disable Functions Bypass
 ---------------------------------
 - LD_PRELOAD绕过
+    - https://github.com/yangyangwithgnu/bypass_disablefunc_via_LD_PRELOAD
 - PHP OPcache
 - Mail函数
+- imap_open
+    - https://www.cvedetails.com/cve/cve-2018-19518
 
 
 Magic函数
