@@ -53,7 +53,7 @@ WAF绕过
 
 Apache重写GetShell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache可根据是否允许重定向考虑上传.htacess
+Apache可根据是否允许重定向考虑上传.htaccess
 
 内容为
 
