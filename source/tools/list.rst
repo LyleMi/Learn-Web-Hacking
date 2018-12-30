@@ -37,6 +37,9 @@
     - `dig github history <https://github.com/dxa4481/truffleHog>`_
     - `have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_
     - `trape <https://github.com/jofpin/trape>`_
+    - `EagleEye <https://github.com/ThoughtfulDev/EagleEye>`_
+    - `Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_
+    - `Photon <https://github.com/s0md3v/Photon>`_
 
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
@@ -100,6 +103,7 @@
 
 - SSRF
     - `SSRFmap <https://github.com/swisskyrepo/SSRFmap>`_
+    - `SSRF Proxy <https://github.com/bcoles/ssrf_proxy>`_
 
 - 模版注入
     - `tplmap <https://github.com/epinna/tplmap>`_
@@ -270,6 +274,8 @@ Fuzz
     - `Spiderfoot <https://github.com/smicallef/spiderfoot>`_
     - `AZScanner <https://github.com/az0ne/AZScanner>`_
     - `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
+    - `vooki <https://www.vegabird.com/vooki/>`_
+    - `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
 
 - 审计工具
     - `Cobra <https://github.com/FeeiCN/cobra>`_
