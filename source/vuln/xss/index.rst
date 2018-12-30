@@ -8,7 +8,7 @@ XSS
    classify
    sop
    csp
-   xssprotect
+   mitigation
    wafbypass
    trick/index
    payload

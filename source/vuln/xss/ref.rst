@@ -10,6 +10,7 @@ wiki
 - `markdwon xss <https://shubs.io/exploiting-markdown-syntax-and-telescope-persistent-xss-through-markdown-cve-2014-5144/>`_
 - `xss cheat sheet <https://brutelogic.com.br/blog/cheat-sheet/>`_
 - `html5 security cheatsheet <https://html5sec.org/>`_
+- `http security headers <https://www.netsparker.com/whitepaper-http-security-headers/>`_
 
 CSS
 ---------------------------------------
