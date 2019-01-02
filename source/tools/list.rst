@@ -104,6 +104,8 @@
 - SSRF
     - `SSRFmap <https://github.com/swisskyrepo/SSRFmap>`_
     - `SSRF Proxy <https://github.com/bcoles/ssrf_proxy>`_
+    - `Gopherus <https://github.com/tarunkant/Gopherus>`_
+    - `SSRF Testing <https://github.com/cujanovic/SSRF-Testing>`_
 
 - 模版注入
     - `tplmap <https://github.com/epinna/tplmap>`_
