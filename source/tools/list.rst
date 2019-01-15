@@ -40,6 +40,7 @@
     - `EagleEye <https://github.com/ThoughtfulDev/EagleEye>`_
     - `Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_
     - `Photon <https://github.com/s0md3v/Photon>`_
+    - `Sreg <https://github.com/n0tr00t/Sreg>`_
 
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
@@ -203,8 +204,9 @@ Fuzz
 - 配置检查
     - `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
 
-- 系统加固
+- 安全检查
     - `lynis <https://github.com/CISOfy/lynis>`_
+    - `linux malware detect <https://github.com/rfxn/linux-malware-detect>`_
 
 - IDS
     - `ossec <https://github.com/ossec/ossec-hids>`_
