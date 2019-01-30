@@ -11,6 +11,12 @@ wiki
 - `xss cheat sheet <https://brutelogic.com.br/blog/cheat-sheet/>`_
 - `html5 security cheatsheet <https://html5sec.org/>`_
 - `http security headers <https://www.netsparker.com/whitepaper-http-security-headers/>`_
+- `XSSChallengeWiki <https://github.com/cure53/XSSChallengeWiki/wiki>`_
+
+Challenges
+---------------------------------------
+- `XSS Challenge By Google <https://xss-game.appspot.com>`_
+- `prompt to win <http://prompt.ml/0>`_
 
 CSS
 ---------------------------------------
