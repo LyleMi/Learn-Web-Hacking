@@ -18,19 +18,27 @@
         - DNS Query Flood
         - DNS 反弹
 - SMB 137/139/445 TCP
+- SNMP 161
+    - Public 弱口令
 - LDAP 389 TCP
     - 匿名访问
-- Rsync 783 TCP
+- Rsync 873 TCP
     - 任意文件读写
+- RPC 1025
+    - NFS匿名访问
 - MSSQL 1433 TCP
     - 弱密码
+- Java RMI 1099
+    - RCE
 - Oracle 1521 TCP
     - 弱密码
 - MySQL 3306 TCP
     - 弱密码
+- RDP 3389
+    - 弱密码
+- postgres 5432
+    - 弱密码
 - Redis 6379 TCP
-    - 无密码或弱密码
-- Redis 9200 TCP
     - 无密码或弱密码
 - Elasticsearch 9200 TCP
     - 代码执行
