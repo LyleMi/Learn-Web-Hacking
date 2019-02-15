@@ -34,3 +34,7 @@ WAF Bypass
     - ``import``
     - ``$.getScript``
     - ``$.get``
+- ``.``
+    - 使用 ``。`` 绕过IP/域名
+    - ``document['cookie']`` 绕过属性取值
+- 过滤引号用 `` ` `` 绕过
