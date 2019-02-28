@@ -8,6 +8,7 @@ Web安全学习笔记
 
    basic/index
    info/index
+   intranet/index
    vuln/index
    language/index
    defense/index

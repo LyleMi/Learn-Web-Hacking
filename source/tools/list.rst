@@ -280,6 +280,8 @@ Fuzz
     - `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
     - `vooki <https://www.vegabird.com/vooki/>`_
     - `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
+    - `pupy <https://github.com/n1nj4sec/pupy>`_
+    - `Empire <https://github.com/EmpireProject/Empire>`_
 
 - 审计工具
     - `Cobra <https://github.com/FeeiCN/cobra>`_
