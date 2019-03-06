@@ -8,5 +8,5 @@
    php/index
    python/index
    java/index
-   javascript
+   javascript/index
    ruby

