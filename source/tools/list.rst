@@ -41,6 +41,7 @@
     - `Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_
     - `Photon <https://github.com/s0md3v/Photon>`_
     - `Sreg <https://github.com/n0tr00t/Sreg>`_
+    - `spoofcheck <https://github.com/BishopFox/spoofcheck>`_
 
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
@@ -78,10 +79,12 @@
     - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
 - 其他
+    - `datasploit <https://github.com/DataSploit/datasploit>`_
     - `watchdog <https://github.com/flipkart-incubator/watchdog>`_
     - `archive <https://archive.org/web/>`_
     - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
     - `htrace <https://github.com/trimstray/htrace.sh>`_
+    - `AWSBucketDump <https://github.com/jordanpotti/AWSBucketDump>`_
 
 漏洞利用
 ----------------------------------------
@@ -187,6 +190,11 @@
 - RAT
     - `QuasarRAT <https://github.com/quasar/QuasarRAT>`_
 
+- C2
+    - `cobalt strike <https://www.cobaltstrike.com>`_
+    - `Empire <https://github.com/EmpireProject/Empire>`_
+    - `pupy <https://github.com/n1nj4sec/pupy>`_
+
 Fuzz
 ----------------------------------------
 - Web Fuzz
@@ -259,16 +267,24 @@ Fuzz
     - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
     - `openvpn <https://github.com/Nyr/openvpn-install>`_
 
-- 转发
+- 隧道
     - `ngrok <https://github.com/inconshreveable/ngrok>`_
     - `rtcp <https://github.com/knownsec/rtcp>`_
+    - `Tunna <https://github.com/SECFORCE/Tunna>`_
+    - `reGeorg <https://github.com/sensepost/reGeorg>`_
+
+钓鱼
+----------------------------------------
+- wifi
+    - `wifiphisher <https://github.com/wifiphisher/wifiphisher>`_
+    - `evilginx <https://github.com/kgretzky/evilginx>`_
+    - `mana <https://github.com/sensepost/mana>`_
 
 其他
 ----------------------------------------
 - 综合框架
     - `metasploit <https://www.metasploit.com/>`_
     - `w3af <http://w3af.org/>`_
-    - `cobalt strike <https://www.cobaltstrike.com>`_
     - `AutoSploit <https://github.com/NullArray/AutoSploit/>`_
     - `Nikto <https://cirt.net/nikto2>`_
     - `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
@@ -280,8 +296,6 @@ Fuzz
     - `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
     - `vooki <https://www.vegabird.com/vooki/>`_
     - `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
-    - `pupy <https://github.com/n1nj4sec/pupy>`_
-    - `Empire <https://github.com/EmpireProject/Empire>`_
 
 - 审计工具
     - `Cobra <https://github.com/FeeiCN/cobra>`_

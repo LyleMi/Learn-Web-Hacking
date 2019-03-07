@@ -9,5 +9,4 @@
    site
    cdn
    port
-   linux
    misc

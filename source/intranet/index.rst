@@ -5,7 +5,8 @@
    :maxdepth: 2
    :caption: Contents:
 
-   info
+   windows
+   linux
    persistence
    misc
    ref

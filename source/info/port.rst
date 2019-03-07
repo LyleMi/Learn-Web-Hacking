@@ -14,6 +14,7 @@
     - 无认证时可伪造发件人
 - DNS 53 UDP 
     - 测试域传送漏洞
+    - SPF / DMARC Check
     - DDoS
         - DNS Query Flood
         - DNS 反弹

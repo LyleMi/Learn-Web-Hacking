@@ -3,7 +3,7 @@
 
 搜索引擎利用
 ----------------------------------------
-利用公共信息，如搜索引擎（Google/Bing/Yahoo/Baidu等）/站点快照（Wayback Machine），以及其网站所使用的程序开发商公布的一些使用文档等信息可以获取目标站点的较多信息
+利用公共信息，如搜索引擎（Google/Bing/Yahoo/Baidu等）/站点快照（Wayback Machine / `Archive.org <https://archive.org/>`_ ），以及其网站所使用的程序开发商公布的一些使用文档等信息可以获取目标站点的较多信息
 
 常见的搜索技巧有
 

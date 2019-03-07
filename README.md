@@ -1,14 +1,16 @@
 # Web安全学习笔记
 
-一些常见的Web安全相关知识，来自于本人学习过程中做的总结，尚有缺漏或未完成的部分，持续更新中，如有错误请不吝指出。在线版本可点击[此处](https://websec.readthedocs.io)查看。
+![](https://img.shields.io/github/stars/lylemi/learn-web-hacking.svg)
+![](https://img.shields.io/github/forks/lylemi/learn-web-hacking.svg)
+![](https://img.shields.io/github/issues/lylemi/learn-web-hacking.svg)
 
-在完成的过程中参考了一些blog，皆在文末给出相应链接，感谢blog作者的分享。
+在学习Web安全的过程中，深感相关知识浩如烟海，而且很多知识点是零散的，于是尝试把一些知识和想法总结下来。
 
-该仓库仅供学习和交流使用，请勿使用相关内容进行非法行为。
+自己所学浅薄、精力有限，因此这份笔记有一些缺漏或是未完成的部分，在持续更新中，如果有错误希望读者不吝指出。在线版本可点击[这里](https://websec.readthedocs.io)查看。
 
-本笔记内容可以任意转载，但请需要注明来源并提供链接。
+在完成的过程中参考了很多资料，都在文末记录了相应的链接，感谢作者的分享。
 
-### 目录结构
+### 笔记大纲
 
 1. 基础知识
     - Web发展简史
@@ -21,9 +23,9 @@
     - 域名信息收集
     - 站点信息收集
     - 端口信息
-    - Linux本地信息收集
 3. 内网渗透
-    - 信息收集
+    - Windows信息收集
+    - Linux信息收集
     - 持久化
 4. 常见漏洞
     - SQL注入
@@ -65,16 +67,15 @@
     - 拒绝服务攻击
     - Docker
 
-### 生成 HTML 格式的文档
+### 本地生成 HTML 格式的文档
 
 ```shell
-$ sudo pip install sphinx
-$ sudo pip install sphinx-rtd-theme
+$ sudo pip install sphinx sphinx-rtd-theme
 $ make html
 ```
 
-### 反馈
+### 注
 
-欢迎提出各种意见和建议，不胜感激。
+该仓库仅供学习和交流使用，请勿使用相关内容进行非法行为。
 
-反馈邮箱 ``lylemi@126.com``
+本笔记内容可以任意转载，但请注明来源并提供链接。
