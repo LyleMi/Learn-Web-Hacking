@@ -8,5 +8,6 @@
    windows
    linux
    persistence
+   traceremove
    misc
    ref
