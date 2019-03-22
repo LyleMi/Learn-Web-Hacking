@@ -42,6 +42,8 @@
     - `Photon <https://github.com/s0md3v/Photon>`_
     - `Sreg <https://github.com/n0tr00t/Sreg>`_
     - `spoofcheck <https://github.com/BishopFox/spoofcheck>`_
+    - `sherlock <https://github.com/sherlock-project/sherlock>`_
+    - `email enum <https://github.com/Frint0/email-enum>`_
 
 - 路径及文件扫描
     - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
@@ -208,6 +210,7 @@ Fuzz
 - XSS
     - `js xss <https://github.com/leizongmin/js-xss>`_
     - `DOMPurify <https://github.com/cure53/DOMPurify>`_
+    - `google csp evaluator <https://csp-evaluator.withgoogle.com/>`_
 
 - 配置检查
     - `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
