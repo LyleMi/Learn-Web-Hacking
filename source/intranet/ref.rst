@@ -8,3 +8,4 @@
 - `从零开始内网渗透学习 <https://github.com/l3m0n/pentest_study>`_
 - `Windows内网渗透提权 <https://www.freebuf.com/articles/system/114731.html>`_
 - `渗透技巧 从Github下载安装文件 <https://xz.aliyun.com/t/1649/>`_
+- `An introduction to privileged file operation abuse on Windows <https://offsec.provadys.com/intro-to-file-operation-abuse-on-Windows.html>`_

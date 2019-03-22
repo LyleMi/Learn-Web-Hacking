@@ -6,8 +6,8 @@
    :caption: Contents:
 
    windows
+   winpersistence
    linux
-   persistence
    traceremove
    misc
    ref
