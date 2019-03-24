@@ -34,7 +34,6 @@
     - `hunter <https://hunter.io>`_
     - `pipl <https://pipl.com/>`_
     - `GHDB <https://www.exploit-db.com/google-hacking-database/>`_
-    - `dig github history <https://github.com/dxa4481/truffleHog>`_
     - `have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_
     - `trape <https://github.com/jofpin/trape>`_
     - `EagleEye <https://github.com/ThoughtfulDev/EagleEye>`_
@@ -72,6 +71,15 @@
     - `DNSDB <https://www.dnsdb.info/>`_
     - `sitedossier <http://www.sitedossier.com/>`_
 
+- DNS关联
+    - `Cloudflare Enumeration Tool <https://github.com/mandatoryprogrammer/cloudflare_enum>`_
+    - `amass <https://github.com/caffix/amass>`_
+    - `Certificate Search <https://crt.sh/>`_
+
+- 云服务
+    - `Find aws s3 buckets <https://github.com/gwen001/s3-buckets-finder>`_
+    - `CloudScraper <https://github.com/jordanpotti/CloudScraper>`_
+
 - 数据查询
     - `Censys <https://censys.io>`_
     - `Shodan <https://www.shodan.io/>`_
@@ -80,6 +88,11 @@
     - `scans <https://scans.io/>`_
     - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
+- Github
+    - `Github Dorks <https://github.com/techgaun/github-dorks>`_
+    - `Zen <https://github.com/s0md3v/Zen>`_
+    - `dig github history <https://github.com/dxa4481/truffleHog>`_
+
 - 其他
     - `datasploit <https://github.com/DataSploit/datasploit>`_
     - `watchdog <https://github.com/flipkart-incubator/watchdog>`_
@@ -87,6 +100,7 @@
     - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
     - `htrace <https://github.com/trimstray/htrace.sh>`_
     - `AWSBucketDump <https://github.com/jordanpotti/AWSBucketDump>`_
+
 
 漏洞利用
 ----------------------------------------
@@ -106,6 +120,8 @@
     - `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
     - `DSXS <https://github.com/stamparm/DSXS>`_
     - `XSStrike <https://github.com/s0md3v/XSStrike>`_
+    - `xsssniper <https://github.com/gbrindisi/xsssniper>`_
+    - `tracy <https://github.com/nccgroup/tracy>`_
 
 - SSRF
     - `SSRFmap <https://github.com/swisskyrepo/SSRFmap>`_
@@ -132,6 +148,7 @@
     - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
     - `Subdomain TakeOver <https://github.com/m4ll0k/takeover>`_
     - `mpDNS <https://github.com/nopernik/mpDNS>`_
+    - `JudasDNS Nameserver DNS poisoning <https://github.com/mandatoryprogrammer/JudasDNS>`_
 
 - XXE
     - `XXEinjector <https://github.com/enjoiz/XXEinjector>`_
