@@ -21,6 +21,14 @@ hash抓取
 - ntdsdump
 - 利用powershell(DSInternals)分析hash
 
+隐藏文件
+----------------------------------------
+- 创建系统隐藏文件
+    - ``attrib +s +a +r +h filename`` / ``attrib +s +h filename``
+- 利用NTFS ADS (Alternate　Data　Streams) 创建隐藏文件
+- 利用Windows保留字
+    - ``aux|prn|con|nul|com1|com2|com3|com4|com5|com6|com7|com8|com9|lpt1|lpt2|lpt3|lpt4|lpt5|lpt6|lpt7|lpt8|lpt9``
+
 权限提升
 ----------------------------------------
 权限提升有多重方式，有利用二进制漏洞、逻辑漏洞等技巧。利用二进制漏洞获取权限的方式是利用运行在内核态中的漏洞来执行代码。比如内核、驱动中的UAF或者其他类似的漏洞，以获得较高的权限。

@@ -9,3 +9,5 @@
 - `Windows内网渗透提权 <https://www.freebuf.com/articles/system/114731.html>`_
 - `渗透技巧 从Github下载安装文件 <https://xz.aliyun.com/t/1649/>`_
 - `An introduction to privileged file operation abuse on Windows <https://offsec.provadys.com/intro-to-file-operation-abuse-on-Windows.html>`_
+- `脚本维权tips <https://xz.aliyun.com/t/4522>`_
+- `文件寄生 NTFS文件流实际应用 <https://gh0st.cn/archives/2017-03-29/1>`_
