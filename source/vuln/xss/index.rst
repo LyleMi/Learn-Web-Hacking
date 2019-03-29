@@ -8,6 +8,8 @@ XSS
    classify
    sop
    csp
+   source
+   sink
    mitigation
    wafbypass
    trick/index
