@@ -1,5 +1,5 @@
 防御
-================================
+========================================
 
 .. toctree::
    :maxdepth: 2
@@ -7,6 +7,7 @@
 
    mitigation
    reinforce
+   intrusiondetection
    emergency
    forensic
    threat
