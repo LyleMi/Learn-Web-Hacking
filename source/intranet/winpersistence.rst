@@ -1,26 +1,6 @@
 Windows持久化
 ========================================
 
-hash抓取
-----------------------------------------
-- Windows本地密码散列导出工具
-    - mimikatz
-    - wce
-    - gsecdump
-    - copypwd
-    - Pwdump
-- Windows本地密码破解工具
-    - L0phtCrack
-    - SAMInside
-    - Ophcrack
-- 彩虹表破解
-- 本机hash+明文抓取
-- win8+win2012明文抓取
-- ntds.dit的导出+QuarkPwDump读取分析
-- vssown.vbs + libesedb + NtdsXtract
-- ntdsdump
-- 利用powershell(DSInternals)分析hash
-
 隐藏文件
 ----------------------------------------
 - 创建系统隐藏文件
@@ -59,3 +39,28 @@ MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof
 sethc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ``sethc.exe`` 是 Windows系统在用户按下五次shift后调用的粘滞键处理程序，当有写文件但是没有执行权限时，可以通过替换 ``sethc.exe`` 的方式留下后门，在密码输入页面输入五次shift即可获得权限。
+
+凭证窃取
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Windows本地密码散列导出工具
+    - mimikatz
+    - wce
+    - gsecdump
+    - copypwd
+    - Pwdump
+- Windows本地密码破解工具
+    - L0phtCrack
+    - SAMInside
+    - Ophcrack
+- 彩虹表破解
+- 本机hash+明文抓取
+- win8+win2012明文抓取
+- ntds.dit的导出+QuarkPwDump读取分析
+- vssown.vbs + libesedb + NtdsXtract
+- ntdsdump
+- 利用powershell(DSInternals)分析hash
+
+其他
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 组策略首选项漏洞
+- DLL劫持

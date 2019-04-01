@@ -35,16 +35,22 @@ Weblogic
 
 简介
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-WebLogic是美国Oracle公司出品的一个application server，是一个基于JAVAEE架构的中间件，WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。将Java的动态功能和Java Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。
+WebLogic是美国Oracle公司出品的一个Application Server，是一个基于Java EE架构的中间件，WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。其将Java的动态功能和Java Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。
+
+WebLogic对业内多种标准的全面支持，包括EJB、JSP、Servlet、JMS、JDBC等。
 
 相关CVE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `CVE-2015-4852 <https://github.com/roo7break/serialator>`_
+- CVE-2015-4852
+    - https://github.com/roo7break/serialator
 - CVE-2016-3510
 - CVE-2017-3248
-- `CVE-2017-10271 <http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html>`_
-- `CVE-2018-2628 <https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA?>`_
-- `CVE-2018-2894 <https://xz.aliyun.com/t/2458>`_
+- CVE-2017-10271
+    - http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html
+- CVE-2018-2628
+    - https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA
+- CVE-2018-2894
+    - https://xz.aliyun.com/t/2458
 - CVE-2018-3191
     - https://github.com/voidfyoo/CVE-2018-3191
     - https://github.com/Libraggbond/CVE-2018-3191

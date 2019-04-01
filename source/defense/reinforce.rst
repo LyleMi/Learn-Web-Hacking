@@ -43,6 +43,12 @@ Windows
     - 设置口令有效期
     - 设置口令强度限制
     - 设置口令重试次数
+- 安装EMET
+- 启用PowerShell日志
+- 限制以下敏感文件的下载和执行
+    - ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins, isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, pif, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif
+- 限制会调起wscript的后缀
+    - bat, js, jse, vbe, vbs, wsf, wsh
 
 应用
 ----------------------------------------
@@ -109,3 +115,7 @@ Tomcat
 - 用户密码配置
 - 用户权限配置
 - 配置超时时间防DoS
+
+参考链接
+----------------------------------------
+- `awesome windows domain hardening <https://github.com/PaulSec/awesome-windows-domain-hardening>`_

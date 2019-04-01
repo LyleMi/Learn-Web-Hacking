@@ -324,6 +324,7 @@ Fuzz
     - `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
     - `pyt <https://github.com/python-security/pyt>`_
     - `Semmle QL <https://github.com/Semmle/ql>`_
+    - `prvd <https://github.com/fate0/prvd>`_
 
 - WebAssembly
     - `wabt <https://github.com/WebAssembly/wabt>`_
