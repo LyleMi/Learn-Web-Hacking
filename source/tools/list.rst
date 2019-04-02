@@ -3,342 +3,430 @@
 
 信息收集
 ----------------------------------------
-- 子域爆破
-    - `subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_
-    - `wydomain <https://github.com/ring04h/wydomain>`_
-    - `broDomain <https://github.com/code-scan/BroDomain>`_
-    - `ESD <https://github.com/FeeiCN/ESD>`_
-    - `aiodnsbrute <https://github.com/blark/aiodnsbrute>`_
 
-- 域名获取
-    - `the art of subdomain enumeration <https://github.com/appsecco/the-art-of-subdomain-enumeration>`_
-    - `sslScrape <https://github.com/cheetz/sslScrape/blob/master/sslScrape.py>`_
+子域爆破
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_
+- `wydomain <https://github.com/ring04h/wydomain>`_
+- `broDomain <https://github.com/code-scan/BroDomain>`_
+- `ESD <https://github.com/FeeiCN/ESD>`_
+- `aiodnsbrute <https://github.com/blark/aiodnsbrute>`_
 
-- 弱密码爆破
-    - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
-    - `medusa <https://github.com/jmk-foofus/medusa>`_
-    - `htpwdScan <https://github.com/lijiejie/htpwdScan>`_
-    - `patator <https://github.com/lanjelot/patator>`_
+域名获取
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `the art of subdomain enumeration <https://github.com/appsecco/the-art-of-subdomain-enumeration>`_
+- `sslScrape <https://github.com/cheetz/sslScrape/blob/master/sslScrape.py>`_
 
-- Git信息泄漏
-    - `GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_
-    - `GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_
-    - `GitTools <https://github.com/internetwache/GitTools>`_
-    - `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_
+弱密码爆破
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
+- `medusa <https://github.com/jmk-foofus/medusa>`_
+- `htpwdScan <https://github.com/lijiejie/htpwdScan>`_
+- `patator <https://github.com/lanjelot/patator>`_
 
-- 社工
-    - `theHarvester <https://github.com/laramies/theHarvester>`_
-    - `osint <http://osintframework.com/>`_
-    - `osint git <https://github.com/lockfale/OSINT-Framework>`_
-    - `LinkedInt <https://github.com/mdsecactivebreach/LinkedInt>`_
-    - `hunter <https://hunter.io>`_
-    - `pipl <https://pipl.com/>`_
-    - `GHDB <https://www.exploit-db.com/google-hacking-database/>`_
-    - `have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_
-    - `trape <https://github.com/jofpin/trape>`_
-    - `EagleEye <https://github.com/ThoughtfulDev/EagleEye>`_
-    - `Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_
-    - `Photon <https://github.com/s0md3v/Photon>`_
-    - `Sreg <https://github.com/n0tr00t/Sreg>`_
-    - `spoofcheck <https://github.com/BishopFox/spoofcheck>`_
-    - `sherlock <https://github.com/sherlock-project/sherlock>`_
-    - `email enum <https://github.com/Frint0/email-enum>`_
+Git信息泄漏
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_
+- `GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_
+- `GitTools <https://github.com/internetwache/GitTools>`_
+- `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_
 
-- 路径及文件扫描
-    - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
-    - `DirBrute <https://github.com/Xyntax/DirBrute>`_
-    - `dirsearch <https://github.com/maurosoria/dirsearch>`_
-    - `bfac <https://github.com/mazen160/bfac>`_
-    - `ds_store_exp <https://github.com/lijiejie/ds_store_exp>`_
+路径及文件扫描
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `weakfilescan <https://github.com/ring04h/weakfilescan>`_
+- `DirBrute <https://github.com/Xyntax/DirBrute>`_
+- `dirsearch <https://github.com/maurosoria/dirsearch>`_
+- `bfac <https://github.com/mazen160/bfac>`_
+- `ds_store_exp <https://github.com/lijiejie/ds_store_exp>`_
 
-- 指纹识别
-    - `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
-    - `whatweb <https://github.com/urbanadventurer/whatweb>`_
-    - `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
-    - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
+指纹识别
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
+- `whatweb <https://github.com/urbanadventurer/whatweb>`_
+- `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
+- `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 
-- 端口扫描
-    - `nmap <https://github.com/nmap/nmap>`_
-    - `zmap <https://github.com/zmap/zmap>`_
-    - `masscan <https://github.com/robertdavidgraham/masscan>`_
-    - `ShodanHat <https://github.com/HatBashBR/ShodanHat>`_
-    - DNS ``dnsenum nslookup dig fierce``
-    - SNMP ``snmpwalk``
+端口扫描
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `nmap <https://github.com/nmap/nmap>`_
+- `zmap <https://github.com/zmap/zmap>`_
+- `masscan <https://github.com/robertdavidgraham/masscan>`_
+- `ShodanHat <https://github.com/HatBashBR/ShodanHat>`_
+- DNS ``dnsenum nslookup dig fierce``
+- SNMP ``snmpwalk``
 
-- DNS数据
-    - `VirusTotal <https://www.virustotal.com/>`_
-    - `PassiveTotal <https://passivetotal.org>`_
-    - `DNSDB <https://www.dnsdb.info/>`_
-    - `sitedossier <http://www.sitedossier.com/>`_
+DNS数据
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `VirusTotal <https://www.virustotal.com/>`_
+- `PassiveTotal <https://passivetotal.org>`_
+- `DNSDB <https://www.dnsdb.info/>`_
+- `sitedossier <http://www.sitedossier.com/>`_
 
-- DNS关联
-    - `Cloudflare Enumeration Tool <https://github.com/mandatoryprogrammer/cloudflare_enum>`_
-    - `amass <https://github.com/caffix/amass>`_
-    - `Certificate Search <https://crt.sh/>`_
+DNS关联
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Cloudflare Enumeration Tool <https://github.com/mandatoryprogrammer/cloudflare_enum>`_
+- `amass <https://github.com/caffix/amass>`_
+- `Certificate Search <https://crt.sh/>`_
 
-- 云服务
-    - `Find aws s3 buckets <https://github.com/gwen001/s3-buckets-finder>`_
-    - `CloudScraper <https://github.com/jordanpotti/CloudScraper>`_
+云服务
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Find aws s3 buckets <https://github.com/gwen001/s3-buckets-finder>`_
+- `CloudScraper <https://github.com/jordanpotti/CloudScraper>`_
 
-- 数据查询
-    - `Censys <https://censys.io>`_
-    - `Shodan <https://www.shodan.io/>`_
-    - `Zoomeye <https://www.zoomeye.org/>`_
-    - `fofa <https://fofa.so/>`_
-    - `scans <https://scans.io/>`_
-    - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
+数据查询
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Censys <https://censys.io>`_
+- `Shodan <https://www.shodan.io/>`_
+- `Zoomeye <https://www.zoomeye.org/>`_
+- `fofa <https://fofa.so/>`_
+- `scans <https://scans.io/>`_
+- `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
-- Github
-    - `Github Dorks <https://github.com/techgaun/github-dorks>`_
-    - `Zen <https://github.com/s0md3v/Zen>`_
-    - `dig github history <https://github.com/dxa4481/truffleHog>`_
+Github
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Github Dorks <https://github.com/techgaun/github-dorks>`_
+- `Zen <https://github.com/s0md3v/Zen>`_
+- `dig github history <https://github.com/dxa4481/truffleHog>`_
 
-- 其他
-    - `datasploit <https://github.com/DataSploit/datasploit>`_
-    - `watchdog <https://github.com/flipkart-incubator/watchdog>`_
-    - `archive <https://archive.org/web/>`_
-    - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
-    - `htrace <https://github.com/trimstray/htrace.sh>`_
-    - `AWSBucketDump <https://github.com/jordanpotti/AWSBucketDump>`_
+其他
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `datasploit <https://github.com/DataSploit/datasploit>`_
+- `watchdog <https://github.com/flipkart-incubator/watchdog>`_
+- `archive <https://archive.org/web/>`_
+- `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
+- `htrace <https://github.com/trimstray/htrace.sh>`_
+- `AWSBucketDump <https://github.com/jordanpotti/AWSBucketDump>`_
 
+社会工程学
+----------------------------------------
+
+OSINT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `osint <http://osintframework.com/>`_
+- `osint git <https://github.com/lockfale/OSINT-Framework>`_
+- `OSINT-Collection <https://github.com/Ph055a/OSINT Collection>`_
+- `trape <https://github.com/jofpin/trape>`_
+- `Photon <https://github.com/s0md3v/Photon>`_
+
+个人搜索
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `pipl <https://pipl.com/>`_
+- `hunter <https://hunter.io>`_
+- `EagleEye <https://github.com/ThoughtfulDev/EagleEye>`_
+- `LinkedInt <https://github.com/mdsecactivebreach/LinkedInt>`_
+- `sherlock <https://github.com/sherlock-project/sherlock>`_
+- `email enum <https://github.com/Frint0/email-enum>`_
+- `Sreg <https://github.com/n0tr00t/Sreg>`_
+- `usersearch <https://usersearch.org/>`_
+
+Hacking database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `GHDB <https://www.exploit-db.com/google-hacking-database/>`_
+- `have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_
+
+钓鱼
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `spoofcheck <https://github.com/BishopFox/spoofcheck>`_
+
+综合框架
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `theHarvester <https://github.com/laramies/theHarvester>`_
+- `Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_
 
 漏洞利用
 ----------------------------------------
-- 数据库注入
-    - `SQLMap <https://github.com/sqlmapproject/sqlmap>`_
-    - `bbqsql <https://github.com/Neohapsis/bbqsql>`_
-    - `NoSQLAttack <https://github.com/youngyangyang04/NoSQLAttack>`_
-    - `NoSQLMap <https://github.com/codingo/NoSQLMap>`_
-    - `Nosql Exploitation Framework <https://github.com/torque59/Nosql-Exploitation-Framework>`_
 
-- 数据库漏洞利用
-    - `mysql unsha1 <https://github.com/cyrus-and/mysql-unsha1>`_
+数据库注入
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `SQLMap <https://github.com/sqlmapproject/sqlmap>`_
+- `bbqsql <https://github.com/Neohapsis/bbqsql>`_
+- `NoSQLAttack <https://github.com/youngyangyang04/NoSQLAttack>`_
+- `NoSQLMap <https://github.com/codingo/NoSQLMap>`_
+- `Nosql Exploitation Framework <https://github.com/torque59/Nosql-Exploitation-Framework>`_
 
-- XSS
-    - `BeEF <https://github.com/beefproject/beef>`_
-    - `XSS Reciver <https://github.com/firesunCN/BlueLotus_XSSReceiver>`_
-    - `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
-    - `DSXS <https://github.com/stamparm/DSXS>`_
-    - `XSStrike <https://github.com/s0md3v/XSStrike>`_
-    - `xsssniper <https://github.com/gbrindisi/xsssniper>`_
-    - `tracy <https://github.com/nccgroup/tracy>`_
+数据库漏洞利用
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `mysql unsha1 <https://github.com/cyrus-and/mysql-unsha1>`_
 
-- SSRF
-    - `SSRFmap <https://github.com/swisskyrepo/SSRFmap>`_
-    - `SSRF Proxy <https://github.com/bcoles/ssrf_proxy>`_
-    - `Gopherus <https://github.com/tarunkant/Gopherus>`_
-    - `SSRF Testing <https://github.com/cujanovic/SSRF-Testing>`_
+XSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `BeEF <https://github.com/beefproject/beef>`_
+- `XSS Reciver <https://github.com/firesunCN/BlueLotus_XSSReceiver>`_
+- `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
+- `DSXS <https://github.com/stamparm/DSXS>`_
+- `XSStrike <https://github.com/s0md3v/XSStrike>`_
+- `xsssniper <https://github.com/gbrindisi/xsssniper>`_
+- `tracy <https://github.com/nccgroup/tracy>`_
 
-- 模版注入
-    - `tplmap <https://github.com/epinna/tplmap>`_
+SSRF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `SSRFmap <https://github.com/swisskyrepo/SSRFmap>`_
+- `SSRF Proxy <https://github.com/bcoles/ssrf_proxy>`_
+- `Gopherus <https://github.com/tarunkant/Gopherus>`_
+- `SSRF Testing <https://github.com/cujanovic/SSRF-Testing>`_
 
-- 命令注入
-    - `commix <https://github.com/commixproject/commix>`_
+模版注入
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `tplmap <https://github.com/epinna/tplmap>`_
 
-- struts
-    - `struts scan <https://github.com/Lucifer1993/struts-scan>`_
+命令注入
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `commix <https://github.com/commixproject/commix>`_
 
-- CMS
-    - `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
-    - `Drupal enumeration & exploitation tool <https://github.com/immunIT/drupwn>`_
-    - `Wordpress Vulnerability Scanner <https://github.com/UltimateLabs/Zoom>`_
+struts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `struts scan <https://github.com/Lucifer1993/struts-scan>`_
 
-- DNS
-    - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
-    - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
-    - `Subdomain TakeOver <https://github.com/m4ll0k/takeover>`_
-    - `mpDNS <https://github.com/nopernik/mpDNS>`_
-    - `JudasDNS Nameserver DNS poisoning <https://github.com/mandatoryprogrammer/JudasDNS>`_
+CMS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Joomla Vulnerability Scanner <https://github.com/rezasp/joomscan>`_
+- `Drupal enumeration & exploitation tool <https://github.com/immunIT/drupwn>`_
+- `Wordpress Vulnerability Scanner <https://github.com/UltimateLabs/Zoom>`_
 
-- XXE
-    - `XXEinjector <https://github.com/enjoiz/XXEinjector>`_
+DNS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
+- `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
+- `Subdomain TakeOver <https://github.com/m4ll0k/takeover>`_
+- `mpDNS <https://github.com/nopernik/mpDNS>`_
+- `JudasDNS Nameserver DNS poisoning <https://github.com/mandatoryprogrammer/JudasDNS>`_
 
-- 反序列化
-    - `ysoserial <https://github.com/frohoff/ysoserial>`_
-    - `JRE8u20 RCE Gadget <https://github.com/pwntester/JRE8u20_RCE_Gadget>`_
-    - `Java Serialization Dumper <https://github.com/NickstaDB/SerializationDumper>`_
+XXE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `XXEinjector <https://github.com/enjoiz/XXEinjector>`_
 
-- 端口Hack
-    - `Oracle Database Attacking Tool <https://github.com/quentinhardy/odat>`_
-    - `nmap vulners <https://github.com/vulnersCom/nmap-vulners>`_
+反序列化
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `ysoserial <https://github.com/frohoff/ysoserial>`_
+- `JRE8u20 RCE Gadget <https://github.com/pwntester/JRE8u20_RCE_Gadget>`_
+- `Java Serialization Dumper <https://github.com/NickstaDB/SerializationDumper>`_
 
-- JWT
-    - `jwtcrack <https://github.com/brendan-rius/c-jwt-cracker>`_
+端口Hack
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Oracle Database Attacking Tool <https://github.com/quentinhardy/odat>`_
+- `nmap vulners <https://github.com/vulnersCom/nmap-vulners>`_
 
-- 无线
-    - `infernal twin <https://github.com/entropy1337/infernal-twin>`_
+JWT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `jwtcrack <https://github.com/brendan-rius/c-jwt-cracker>`_
 
-- 中间人攻击
-    - `mitmproxy <https://github.com/mitmproxy/mitmproxy>`_
-    - `MITMf <https://github.com/byt3bl33d3r/MITMf>`_
-    - `ssh mitm <https://github.com/jtesta/ssh-mitm>`_
-    - `injectify <https://github.com/samdenty99/injectify>`_
+无线
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `infernal twin <https://github.com/entropy1337/infernal-twin>`_
 
-- DDoS
-    - `Saddam <https://github.com/OffensivePython/Saddam>`_
+中间人攻击
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `mitmproxy <https://github.com/mitmproxy/mitmproxy>`_
+- `MITMf <https://github.com/byt3bl33d3r/MITMf>`_
+- `ssh mitm <https://github.com/jtesta/ssh-mitm>`_
+- `injectify <https://github.com/samdenty99/injectify>`_
+
+DDoS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Saddam <https://github.com/OffensivePython/Saddam>`_
 
 持久化
 ----------------------------------------
-- WebShell连接工具
-    - `菜刀 <https://github.com/Chora10/Cknife>`_
-    - `antSword <https://github.com/antoor/antSword>`_
 
-- WebShell
-    - `webshell <https://github.com/tennc/webshell>`_
-    - `PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_
-    - `weevely3 <https://github.com/epinna/weevely3>`_
-    - `php bash - semi-interactive web shell <https://github.com/Arrexel/phpbash>`_
-    - `Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_
-    - `b374k - PHP WebShell Custom Tool <https://github.com/b374k/b374k>`_
+WebShell连接工具
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `菜刀 <https://github.com/Chora10/Cknife>`_
+- `antSword <https://github.com/antoor/antSword>`_
 
-- 后门
-    - `pwnginx <https://github.com/t57root/pwnginx>`_
-    - `Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-Module-Backdoor>`_
+WebShell
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `webshell <https://github.com/tennc/webshell>`_
+- `PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_
+- `weevely3 <https://github.com/epinna/weevely3>`_
+- `php bash - semi-interactive web shell <https://github.com/Arrexel/phpbash>`_
+- `Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_
+- `b374k - PHP WebShell Custom Tool <https://github.com/b374k/b374k>`_
 
-- 密码提取
-    - `mimikatz <https://github.com/gentilkiwi/mimikatz>`_
-    - `sshLooter <https://github.com/mthbernardes/sshLooter>`_
-    - `keychaindump <https://github.com/juuso/keychaindump>`_
+后门
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `pwnginx <https://github.com/t57root/pwnginx>`_
+- `Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-Module-Backdoor>`_
 
-- 提权
-    - `linux exploit suggester <https://github.com/mzet-/linux-exploit-suggester>`_
-    - `LinEnum <https://github.com/rebootuser/LinEnum>`_
-    - `AutoLocalPrivilegeEscalation <https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_
-    - `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
+密码提取
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `mimikatz <https://github.com/gentilkiwi/mimikatz>`_
+- `sshLooter <https://github.com/mthbernardes/sshLooter>`_
+- `keychaindump <https://github.com/juuso/keychaindump>`_
 
-- RAT
-    - `QuasarRAT <https://github.com/quasar/QuasarRAT>`_
+提权
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `linux exploit suggester <https://github.com/mzet-/linux-exploit-suggester>`_
+- `LinEnum <https://github.com/rebootuser/LinEnum>`_
+- `AutoLocalPrivilegeEscalation <https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_
+- `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
 
-- C2
-    - `cobalt strike <https://www.cobaltstrike.com>`_
-    - `Empire <https://github.com/EmpireProject/Empire>`_
-    - `pupy <https://github.com/n1nj4sec/pupy>`_
+RAT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `QuasarRAT <https://github.com/quasar/QuasarRAT>`_
+
+C2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `cobalt strike <https://www.cobaltstrike.com>`_
+- `Empire <https://github.com/EmpireProject/Empire>`_
+- `pupy <https://github.com/n1nj4sec/pupy>`_
 
 Fuzz
 ----------------------------------------
-- Web Fuzz
-    - `wfuzz <https://github.com/xmendez/wfuzz>`_
 
-- Unicode Fuzz
-    - `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
+Web Fuzz
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `wfuzz <https://github.com/xmendez/wfuzz>`_
+
+Unicode Fuzz
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
 
 防御
 ----------------------------------------
-- XSS
-    - `js xss <https://github.com/leizongmin/js-xss>`_
-    - `DOMPurify <https://github.com/cure53/DOMPurify>`_
-    - `google csp evaluator <https://csp-evaluator.withgoogle.com/>`_
 
-- 配置检查
-    - `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
+XSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `js xss <https://github.com/leizongmin/js-xss>`_
+- `DOMPurify <https://github.com/cure53/DOMPurify>`_
+- `google csp evaluator <https://csp-evaluator.withgoogle.com/>`_
 
-- 安全检查
-    - `lynis <https://github.com/CISOfy/lynis>`_
-    - `linux malware detect <https://github.com/rfxn/linux-malware-detect>`_
+配置检查
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
 
-- IDS
-    - `ossec <https://github.com/ossec/ossec-hids>`_
+安全检查
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `lynis <https://github.com/CISOfy/lynis>`_
+- `linux malware detect <https://github.com/rfxn/linux-malware-detect>`_
 
-- threat intelligence
-    - `threatfeeds <https://threatfeeds.io/>`_
+IDS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `ossec <https://github.com/ossec/ossec-hids>`_
 
-- 入侵检查
-    - `huorong <https://www.huorong.cn/>`_
-    - `check rootkit <http://www.chkrootkit.org>`_
-    - `rootkit hunter <http://rkhunter.sourceforge.net/>`_
-    - `PC Hunter <http://www.xuetr.com/>`_
-    - `autoruns <https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns>`_
+threat intelligence
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `threatfeeds <https://threatfeeds.io/>`_
 
-- 进程查看
-    - `Process Explorer <https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer>`_
+入侵检查
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `huorong <https://www.huorong.cn/>`_
+- `check rootkit <http://www.chkrootkit.org>`_
+- `rootkit hunter <http://rkhunter.sourceforge.net/>`_
+- `PC Hunter <http://www.xuetr.com/>`_
+- `autoruns <https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns>`_
 
-- Waf
-    - `naxsi <https://github.com/nbs-system/naxsi>`_
-    - `ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_
-    - `ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_
-    - `OpenWAF <https://github.com/titansec/OpenWAF>`_
+进程查看
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Process Explorer <https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer>`_
 
-- 病毒在线查杀
-    - `virustotal <https://www.virustotal.com/>`_
-    - `virscan <http://www.virscan.org>`_
-    - `habo <https://habo.qq.com>`_
+Waf
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `naxsi <https://github.com/nbs-system/naxsi>`_
+- `ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_
+- `ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_
+- `OpenWAF <https://github.com/titansec/OpenWAF>`_
 
-- WebShell查杀
-    - `D盾 <http://www.d99net.net/index.asp>`_
-    - `深信服WebShell查杀 <http://edr.sangfor.com.cn/backdoor_detection.html>`_
+病毒在线查杀
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `virustotal <https://www.virustotal.com/>`_
+- `virscan <http://www.virscan.org>`_
+- `habo <https://habo.qq.com>`_
+
+WebShell查杀
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `D盾 <http://www.d99net.net/index.asp>`_
+- `深信服WebShell查杀 <http://edr.sangfor.com.cn/backdoor_detection.html>`_
+
+IoC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `malware ioc <https://github.com/eset/malware-ioc>`_
+- `fireeye public iocs <https://github.com/fireeye/iocs>`_
 
 运维
 ----------------------------------------
-- 流量
-    - `Bro <https://www.bro.org/>`_
-    - `Moloch <https://github.com/aol/moloch>`_
-    - `TCPFlow <https://github.com/simsong/tcpflow>`_
-    - `TCPDump <http://www.tcpdump.org/>`_
-    - `WireShark <https://www.wireshark.org>`_
-    - `Argus <https://github.com/salesforce/Argus>`_
-    - `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
 
-- 蜜罐
-    - `dionaea <https://github.com/DinoTools/dionaea>`_
-    - `Modern Honey Network  <https://github.com/threatstream/mhn>`_
+流量
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Bro <https://www.bro.org/>`_
+- `Moloch <https://github.com/aol/moloch>`_
+- `TCPFlow <https://github.com/simsong/tcpflow>`_
+- `TCPDump <http://www.tcpdump.org/>`_
+- `WireShark <https://www.wireshark.org>`_
+- `Argus <https://github.com/salesforce/Argus>`_
+- `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
 
-- VPN Install
-    - `pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_
-    - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
-    - `openvpn <https://github.com/Nyr/openvpn-install>`_
+蜜罐
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `dionaea <https://github.com/DinoTools/dionaea>`_
+- `Modern Honey Network  <https://github.com/threatstream/mhn>`_
 
-- 隧道
-    - `ngrok <https://github.com/inconshreveable/ngrok>`_
-    - `rtcp <https://github.com/knownsec/rtcp>`_
-    - `Tunna <https://github.com/SECFORCE/Tunna>`_
-    - `reGeorg <https://github.com/sensepost/reGeorg>`_
+VPN Install
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_
+- `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
+- `openvpn <https://github.com/Nyr/openvpn-install>`_
+
+隧道
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `ngrok <https://github.com/inconshreveable/ngrok>`_
+- `rtcp <https://github.com/knownsec/rtcp>`_
+- `Tunna <https://github.com/SECFORCE/Tunna>`_
+- `reGeorg <https://github.com/sensepost/reGeorg>`_
 
 钓鱼
 ----------------------------------------
-- wifi
-    - `wifiphisher <https://github.com/wifiphisher/wifiphisher>`_
-    - `evilginx <https://github.com/kgretzky/evilginx>`_
-    - `mana <https://github.com/sensepost/mana>`_
+
+wifi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `wifiphisher <https://github.com/wifiphisher/wifiphisher>`_
+- `evilginx <https://github.com/kgretzky/evilginx>`_
+- `mana <https://github.com/sensepost/mana>`_
 
 其他
 ----------------------------------------
-- 综合框架
-    - `metasploit <https://www.metasploit.com/>`_
-    - `w3af <http://w3af.org/>`_
-    - `AutoSploit <https://github.com/NullArray/AutoSploit/>`_
-    - `Nikto <https://cirt.net/nikto2>`_
-    - `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
-    - `Arachni <http://www.arachni-scanner.com/>`_
-    - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
-    - `BrupSuite <https://portswigger.net/burp/>`_
-    - `Spiderfoot <https://github.com/smicallef/spiderfoot>`_
-    - `AZScanner <https://github.com/az0ne/AZScanner>`_
-    - `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
-    - `vooki <https://www.vegabird.com/vooki/>`_
-    - `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
 
-- 审计工具
-    - `Cobra <https://github.com/FeeiCN/cobra>`_
-    - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
-    - `RIPS <http://rips-scanner.sourceforge.net/>`_
-    - `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
-    - `pyt <https://github.com/python-security/pyt>`_
-    - `Semmle QL <https://github.com/Semmle/ql>`_
-    - `prvd <https://github.com/fate0/prvd>`_
+综合框架
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `metasploit <https://www.metasploit.com/>`_
+- `w3af <http://w3af.org/>`_
+- `AutoSploit <https://github.com/NullArray/AutoSploit/>`_
+- `Nikto <https://cirt.net/nikto2>`_
+- `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
+- `Arachni <http://www.arachni-scanner.com/>`_
+- `ZAP <http://www.freebuf.com/sectool/5427.html>`_
+- `BrupSuite <https://portswigger.net/burp/>`_
+- `Spiderfoot <https://github.com/smicallef/spiderfoot>`_
+- `AZScanner <https://github.com/az0ne/AZScanner>`_
+- `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
+- `vooki <https://www.vegabird.com/vooki/>`_
+- `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
 
-- WebAssembly
-    - `wabt <https://github.com/WebAssembly/wabt>`_
-    - `binaryen <https://github.com/WebAssembly/binaryen>`_
-    - `wasmdec <https://github.com/wwwg/wasmdec>`_
+审计工具
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Cobra <https://github.com/FeeiCN/cobra>`_
+- `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
+- `RIPS <http://rips-scanner.sourceforge.net/>`_
+- `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
+- `pyt <https://github.com/python-security/pyt>`_
+- `Semmle QL <https://github.com/Semmle/ql>`_
+- `prvd <https://github.com/fate0/prvd>`_
 
-- 混淆
-    - `JStillery <https://github.com/mindedsecurity/JStillery>`_
-    - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
-    - `基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_
+WebAssembly
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `wabt <https://github.com/WebAssembly/wabt>`_
+- `binaryen <https://github.com/WebAssembly/binaryen>`_
+- `wasmdec <https://github.com/wwwg/wasmdec>`_
 
-- 其他
-    - `Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_
-    - `SecLists <https://github.com/danielmiessler/SecLists>`_
-    - `Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_
-    - `httrack <http://www.httrack.com/>`_
-    - `curl <https://curl.haxx.se/>`_
+混淆
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `JStillery <https://github.com/mindedsecurity/JStillery>`_
+- `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
+- `基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_
+
+其他
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_
+- `SecLists <https://github.com/danielmiessler/SecLists>`_
+- `Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_
+- `httrack <http://www.httrack.com/>`_
+- `curl <https://curl.haxx.se/>`_
