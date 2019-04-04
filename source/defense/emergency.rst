@@ -1,27 +1,69 @@
 应急响应
 ========================================
 
-文件分析
+事件分类
 ----------------------------------------
+- 病毒、木马、蠕虫事件
+- Web服务器入侵事件
+- 第三方服务入侵事件
+- 系统入侵事件
+    - 利用Windows漏洞攻击操作系统
+- 网络攻击事件
+    - DDoS / ARP欺骗 / DNS劫持等
+
+分析方向
+----------------------------------------
+
+文件分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 基于变化的分析
     - 日期
     - 文件增改
     - 最近使用文件 
-        - ``find / -ctime -2``
-        - ``C:\Documents and Settings\Administrator\Recent``
-        - ``C:\Documents and Settings\Default User\Recent``
-        - ``%UserProfile%\Recent``
 - 源码分析
     - 检查源码改动
     - 查杀WebShell等后门
 - 系统日志分析
-    - Windows: 事件查看器（ ``eventvwr.msc`` ）
-    - Linux: /var/log/
 - 应用日志分析
     - 分析User-Agent，e.g. ``awvs / burpsuite / w3af / nessus / openvas``
     - 对每种攻击进行关键字匹配，e.g. ``select/alert/eval``
     - 异常请求，连续的404或者500
 - ``md5sum`` 检查常用命令二进制文件的哈希，检查是否被植入rootkit
+
+进程分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 符合以下特征的进程
+    - CPU或内存资源占用长时间过高
+    - 没有签名验证信息
+    - 没有描述信息的进程
+    - 进程的路径不合法
+- dump系统内存进行分析
+
+网络分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 防火墙配置
+- DNS配置
+- 路由配置
+
+配置分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 查看Linux SE等配置
+- 查看环境变量
+- 查看配套的注册表信息检索，SAM文件
+- 内核模块
+
+Linux应急响应
+----------------------------------------
+
+文件分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 最近使用文件 
+    - ``find / -ctime -2``
+    - ``C:\Documents and Settings\Administrator\Recent``
+    - ``C:\Documents and Settings\Default User\Recent``
+    - ``%UserProfile%\Recent``
+- 系统日志分析
+    - /var/log/
 - 重点分析位置
     - ``/var/log/wtmp`` 登录进入，退出，数据交换、关机和重启纪录
     - ``/var/run/utmp`` 有关当前登录用户的信息记录
@@ -37,45 +79,62 @@
     - ``~/.ssh``
 
 用户分析
-----------------------------------------
-- Linux
-    - ``/etc/shadow`` 密码登陆相关信息
-    - ``uptime`` 查看用户登陆时间
-    - ``/etc/sudoers`` sudo用户列表
-    - 查看是否有新增用户
-- Windows
-    - 查看是否有新增用户
-    - 查看服务器是否有弱口令
-    - 查看管理员对应键值
-    - ``lusrmgr.msc`` 查看账户变化
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``/etc/shadow`` 密码登陆相关信息
+- ``uptime`` 查看用户登陆时间
+- ``/etc/sudoers`` sudo用户列表
 
 进程分析
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``netstat -ano`` 查看是否打开了可疑端口
-- ``tasklist`` 查看是否有可疑进程
 - ``w`` 命令，查看用户及其进程
-- 分析开机自启程序
+- 分析开机自启程序/脚本
     - ``/etc/init.d``
     - ``~/.bashrc``
-    - ``HKEY_CURRENT_USER\software\micorsoft\windows\currentversion\run``
+- 查看计划或定时任务
+    - ``crontab -l``
+- ``netstat -an`` / ``lsof`` 查看进程端口占用
+
+Windows应急响应
+----------------------------------------
+
+文件分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 最近使用文件 
+    - ``C:\Documents and Settings\Administrator\Recent``
+    - ``C:\Documents and Settings\Default User\Recent``
+    - ``%UserProfile%\Recent``
+- 系统日志分析
+    - 事件查看器 ``eventvwr.msc``
+
+用户分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 查看是否有新增用户
+- 查看服务器是否有弱口令
+- 查看管理员对应键值
+- ``lusrmgr.msc`` 查看账户变化
+- ``net user`` 列出当前登录账户
+- ``wmic UserAccount get`` 列出当前系统所有账户
+
+进程分析
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``netstat -ano`` 查看是否打开了可疑端口
+- ``tasklist`` 查看是否有可疑进程
+- 分析开机自启程序
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run``
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce``
+    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run``
+    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run``
+    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce``
+    - ``(ProfilePath)\Start Menu\Programs\Startup`` 启动项
+    - ``msconfig`` 启动选项卡
+    - ``gpedit.msc`` 组策略编辑器
 - 查看计划或定时任务
-- ``netstat -an`` / ``lsof`` 查看进程端口占用
-- 查看是否有CPU或内存资源占用长时间过高的进程
-
-网络分析
-----------------------------------------
-- 防火墙配置
-- DNS配置
-- 路由配置
-
-配置分析
-----------------------------------------
-- 查看Linux SE等配置
-- 查看环境变量
-- 查看配套的注册表信息检索，SAM文件
-- 内核模块
+    - ``C:\Windows\System32\Tasks\``
+    - ``C:\Windows\SysWOW64\Tasks\``
+    - ``C:\Windows\tasks\``
+    - ``schtasks``
+    - ``taskschd.msc``
 
 参考链接
 ----------------------------------------
@@ -85,3 +144,4 @@
 - `黑客入侵应急分析手工排查 <https://xz.aliyun.com/t/1140>`_
 - `同程入侵检测系统 <https://mp.weixin.qq.com/s/kzeAEvz-ejLD71fgb5t8tA>`_
 - `取证入门 web篇 <http://www.freebuf.com/column/147929.html>`_
+- `Windows 系统安全事件应急响应  <https://xz.aliyun.com/t/2524>`_

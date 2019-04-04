@@ -6,9 +6,9 @@
    :caption: Contents:
 
    mitigation
+   threat
    reinforce
+   honeypot
    intrusiondetection
    emergency
    forensic
-   threat
-   honeypot
