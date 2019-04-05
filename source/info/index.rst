@@ -7,7 +7,6 @@
 
    domain
    site
-   cdn
    port
    misc
    ref

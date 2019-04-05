@@ -7,13 +7,15 @@
 
    sql/index
    xss/index
-   file/index
-   xxe
    csrf
    ssrf
+   cmdinjection
+   fileread
+   fileupload
+   fileinclude
+   xxe
    tpl
    xpath
-   cmdinjection
    logic
    config
    middleware

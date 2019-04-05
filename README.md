@@ -20,8 +20,8 @@
     - 代码审计
     - WAF
 2. 信息收集
-    - 域名信息收集
-    - 站点信息收集
+    - 域名信息
+    - 站点信息
     - 端口信息
 3. 内网渗透
     - Windows信息收集
@@ -31,24 +31,26 @@
 4. 常见漏洞
     - SQL注入
     - XSS
-    - 文件相关漏洞
-    - XXE
     - CSRF
     - SSRF
+    - 命令注入
+    - 文件读取
+    - 文件上传
+    - 文件包含
+    - XXE
     - 模版注入
     - Xpath注入
-    - 命令注入
     - 逻辑漏洞 / 业务漏洞
     - 配置安全
-    - 引擎解析漏洞
+    - 中间件
     - Web Cache欺骗攻击
-5. 语言及其框架相关漏洞
-    - PHP相关
-    - Python相关
-    - Java相关
-    - JavaScript相关
+5. 语言与框架
+    - PHP
+    - Python
+    - Java
+    - JavaScript
     - Ruby
-6. 防御
+6. 防御技术
     - 总体思路
     - 威胁情报
     - 加固检查
@@ -57,13 +59,13 @@
     - 应急响应
     - 溯源分析
 7. 工具与资源
+    - 工具列表
+    - 推荐资源
     - 爆破工具
     - 下载工具
     - 流量相关
     - 嗅探工具
-    - SQLMap使用
-    - 工具列表
-    - 推荐资源
+    - SQLMap
 8. 其他
     - 认证方式
     - 拒绝服务攻击
@@ -71,9 +73,11 @@
 
 ### 本地生成 HTML 格式的文档
 
-```shell
-$ sudo pip install sphinx sphinx-rtd-theme
-$ make html
+```bash
+git clone https://github.com/LyleMi/Learn-Web-Hacking.git
+cd Learn-Web-Hacking
+pip install sphinx sphinx-rtd-theme
+make html
 ```
 
 ### 注
