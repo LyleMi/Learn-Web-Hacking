@@ -6,7 +6,9 @@
    :caption: Contents:
 
    mitigation
+   team
    threat
+   riskcontrol
    reinforce
    honeypot
    intrusiondetection
