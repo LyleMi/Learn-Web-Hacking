@@ -3,12 +3,13 @@
 ![](https://img.shields.io/github/stars/lylemi/learn-web-hacking.svg)
 ![](https://img.shields.io/github/forks/lylemi/learn-web-hacking.svg)
 ![](https://img.shields.io/github/issues/lylemi/learn-web-hacking.svg)
+![](https://img.shields.io/github/license/lylemi/learn-web-hacking.svg)
 
-在学习Web安全的过程中，深感相关知识浩如烟海，而且很多知识点较为零散，没有比较清晰的脉络来参考和学习，于是尝试把一些知识、想法整理总结下来，最后形成了这份笔记。
+在学习Web安全的过程中，深感相关知识浩如烟海，而且很大一部分较为零散，没有比较清晰的脉络可供参考和学习，于是尝试把一些知识、想法整理总结记录下来，最后形成了这份笔记。
 
-所学浅薄、精力有限，这份笔记会有一些错误或者还没完成的部分，会逐渐补充或修正。如果存在错误欢迎各位读者以Issue或者PR的方式批评指正。
+所学浅薄、精力有限，因此这份笔记有一些错误或是还没完成的部分，正在逐渐补充或修正。如果存在错误欢迎各位读者以Issue或者PR的方式批评指正。
 
-在编写笔记的过程中参考了很多资料，都在文末留下了相应的链接，感谢文章作者的分享。
+在编写笔记的过程中参考、摘抄了很多资料，都在文末留下了相应的链接，感谢文章作者的分享。
 
 笔记的在线版本可以点击[这里](https://websec.readthedocs.io)查看。
 
@@ -75,7 +76,7 @@
     - 拒绝服务攻击
     - Docker
 
-### 本地生成 HTML 格式的文档
+### 本地编译
 
 ```bash
 git clone https://github.com/LyleMi/Learn-Web-Hacking.git
