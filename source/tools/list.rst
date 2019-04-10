@@ -30,6 +30,10 @@ Git信息泄漏
 - `GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_
 - `GitTools <https://github.com/internetwache/GitTools>`_
 - `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_
+- `Github Dorks <https://github.com/techgaun/github-dorks>`_
+- `Zen <https://github.com/s0md3v/Zen>`_
+- `dig github history <https://github.com/dxa4481/truffleHog>`_
+- `gitrob Reconnaissance tool for GitHub organizations <https://github.com/michenriksen/gitrob>`_
 
 路径及文件扫描
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,12 +85,6 @@ DNS关联
 - `fofa <https://fofa.so/>`_
 - `scans <https://scans.io/>`_
 - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
-
-Github
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Github Dorks <https://github.com/techgaun/github-dorks>`_
-- `Zen <https://github.com/s0md3v/Zen>`_
-- `dig github history <https://github.com/dxa4481/truffleHog>`_
 
 其他
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
