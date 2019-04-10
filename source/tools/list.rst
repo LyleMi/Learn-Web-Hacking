@@ -205,6 +205,8 @@ XXE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Oracle Database Attacking Tool <https://github.com/quentinhardy/odat>`_
 - `nmap vulners <https://github.com/vulnersCom/nmap-vulners>`_
+- `nmap nse scripts <https://github.com/cldrn/nmap-nse-scripts>`_
+- `Vulnerability Scanning with Nmap <https://github.com/scipag/vulscan>`_
 
 JWT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
