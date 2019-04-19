@@ -7,5 +7,6 @@ JavaScript
 
    prototype
    vm
+   deserialization
    misc
    ref
