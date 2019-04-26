@@ -11,3 +11,4 @@
 - `An introduction to privileged file operation abuse on Windows <https://offsec.provadys.com/intro-to-file-operation-abuse-on-Windows.html>`_
 - `脚本维权tips <https://xz.aliyun.com/t/4522>`_
 - `文件寄生 NTFS文件流实际应用 <https://gh0st.cn/archives/2017-03-29/1>`_
+- `绕过域账户登录失败次数的限制 <https://nosec.org/home/detail/2510.html>`_

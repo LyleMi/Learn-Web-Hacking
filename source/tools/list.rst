@@ -84,6 +84,7 @@ DNS关联
 - `Zoomeye <https://www.zoomeye.org/>`_
 - `fofa <https://fofa.so/>`_
 - `scans <https://scans.io/>`_
+- `Just Metadata <https://github.com/FortyNorthSecurity/Just-Metadata>`_
 - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
 其他
