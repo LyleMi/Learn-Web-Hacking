@@ -127,6 +127,12 @@ Hacking database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `spoofcheck <https://github.com/BishopFox/spoofcheck>`_
 
+网盘搜索
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `虫部落 <http://magnet.chongbuluo.com/>`_
+- `盘多多 <http://www.panduoduo.net/>`_
+- `Infinite Panc <https://www.panc.cc>`_
+
 综合框架
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `theHarvester <https://github.com/laramies/theHarvester>`_
