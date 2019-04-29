@@ -71,9 +71,13 @@
     - 流量相关
     - 嗅探工具
     - SQLMap
-8. 其他
+8. 认证机制
+    - OAuth
+    - JWT
+    - Kerberos
+    - SAML
+9. 其他
     - Unicode
-    - 认证方式
     - 拒绝服务攻击
     - Docker
 

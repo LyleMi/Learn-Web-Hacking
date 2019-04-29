@@ -13,11 +13,12 @@ Web安全学习笔记
    language/index
    defense/index
    tools/index
+   auth/index
    misc/index
 
 
 目录
-==================
+================================
 
 * :ref:`genindex`
 * :ref:`modindex`
