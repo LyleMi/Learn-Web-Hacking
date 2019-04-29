@@ -6,6 +6,5 @@
    :caption: Contents:
 
    unicode
-   auth
    dos
    docker
