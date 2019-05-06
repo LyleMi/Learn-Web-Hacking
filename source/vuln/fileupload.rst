@@ -35,8 +35,8 @@ jsp引擎则可能会解析 ``jspx`` / ``jspf`` / ``jspa`` / ``jsw`` / ``jsv`` /
 
 系统命名绕过
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在Windows系统中，上传``index.php.``会重命名为``.``，可以绕过后缀检查。
-也可尝试 ``index.php ``，``index.php:1.jpg`` ``index.php::$DATA`` 等。
+在Windows系统中，上传 ``index.php.`` 会重命名为 ``.`` ，可以绕过后缀检查。
+也可尝试 ``index.php%20`` ， ``index.php:1.jpg`` ``index.php::$DATA`` 等。
 在Linux系统中，可以尝试上传名为 ``index.php/.`` 或 ``./aa/../index.php/.`` 的文件
 
 .user.ini
