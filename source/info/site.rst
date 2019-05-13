@@ -1,7 +1,9 @@
 站点信息
 ========================================
-- 判断网站是Windows架构还是Linux架构
-    - Linux大小写敏感，Windows大小写不敏感
+
+- 判断网站操作系统
+    - Linux大小写敏感
+    - Windows大小写不敏感
 
 - 扫描敏感文件
     - robots.txt
@@ -11,14 +13,33 @@
     - xx.bak
     - 等
 
-- 确定网站采用的语言、框架、中间件服务器、第三方库
-    - 查看源代码
+- 确定网站采用的语言
+    - 如PHP / Java / Python等
     - 找后缀，比如php/asp/jsp
-    - 看header里面有没有信息
-    - 根据Cookie判断
+
+- 前端框架
+    - 如jQuery / BootStrap / Vue / React / Angular等
+    - 查看源代码
+
+- 中间服务器
+    - 如 Apache / Nginx / IIS 等
+    - 查看header中的信息
     - 根据报错信息判断
     - 根据默认页面判断
-    - 根据css 图片等资源的hash值判断
+
+- Web容器服务器
+    - 如Tomcat / Jboss / Weblogic等
+
+- 后端框架
+    - 根据Cookie判断
+    - 根据CSS / 图片等资源的hash值判断
+    - 根据URL路由判断
+        - 如wp-admin
+    - 根据网页中的关键字判断
+    - 根据响应头中的X-Powered-By
+
+- CDN信息
+    - 常见的有Cloudflare、yunjiasu
 
 - 探测有没有WAF，如果有，什么类型的
     - 有WAF，找绕过方式
