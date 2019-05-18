@@ -34,6 +34,7 @@ Git信息泄漏
 - `Zen <https://github.com/s0md3v/Zen>`_
 - `dig github history <https://github.com/dxa4481/truffleHog>`_
 - `gitrob Reconnaissance tool for GitHub organizations <https://github.com/michenriksen/gitrob>`_
+- `git secrets <https://github.com/awslabs/git-secrets>`_
 
 路径及文件扫描
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,7 +158,6 @@ XSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `BeEF <https://github.com/beefproject/beef>`_
 - `XSS Reciver <https://github.com/firesunCN/BlueLotus_XSSReceiver>`_
-- `Brute XSS <https://github.com/shawarkhanethicalhacker/BruteXSS>`_
 - `DSXS <https://github.com/stamparm/DSXS>`_
 - `XSStrike <https://github.com/s0md3v/XSStrike>`_
 - `xsssniper <https://github.com/gbrindisi/xsssniper>`_
@@ -234,6 +234,10 @@ DDoS
 
 持久化
 ----------------------------------------
+
+Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `WinPwnage <https://github.com/rootm0s/WinPwnage>`_
 
 WebShell连接工具
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -421,6 +425,7 @@ wifi
 - `pyt <https://github.com/python-security/pyt>`_
 - `Semmle QL <https://github.com/Semmle/ql>`_
 - `prvd <https://github.com/fate0/prvd>`_
+- `find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_
 
 WebAssembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

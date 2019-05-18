@@ -21,6 +21,36 @@ WebShell
 - 利用文件名
     - ``__FILE__``
 
+字符串变形函数
+--------------------------------
+- ucwords
+- ucfirst
+- trim
+- substr_replace
+- substr
+- strtr
+- strtoupper
+- strtolower
+- strtok
+- str_rot13
+
+回调函数
+--------------------------------
+- call_user_func_array
+- call_user_func
+- array_filter 
+- array_walk  
+- array_map
+- registregister_shutdown_function
+- register_tick_function
+- filter_var 
+- filter_var_array 
+- uasort 
+- uksort 
+- array_reduce
+- array_walk 
+- array_walk_recursive
+
 特殊字符Shell
 --------------------------------
 PHP的字符串可以在进行异或、自增运算的时候，会直接进行运算，故可以使用特殊字符来构成Shell。
