@@ -14,6 +14,16 @@
 - exec
 - execfile
 - eval
+- timeit.sys
+- timeit.timeit
+- platform.os
+- platform.sys
+- platform.popen
+- pty.spawn
+- pty.os
+- bdb.os
+- cgi.sys
+- ...
 
 危险第三方库
 --------------------------------
