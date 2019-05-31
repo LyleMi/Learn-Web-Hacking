@@ -14,7 +14,7 @@
    fileupload
    fileinclude
    xxe
-   tpl
+   ssti
    xpath
    logic
    config

@@ -426,6 +426,7 @@ wifi
 - `Semmle QL <https://github.com/Semmle/ql>`_
 - `prvd <https://github.com/fate0/prvd>`_
 - `find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_
+- `trivy <https://github.com/knqyf263/trivy>`_
 
 WebAssembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

