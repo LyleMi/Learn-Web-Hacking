@@ -51,6 +51,12 @@ Git信息泄漏
 - `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
 - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 
+Waf指纹
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `identywaf <https://github.com/enablesecurity/identywaf>`_
+- `wafw00f <https://github.com/enablesecurity/wafw00f>`_
+- `WhatWaf <https://github.com/Ekultek/WhatWaf>`_
+
 端口扫描
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `nmap <https://github.com/nmap/nmap>`_
@@ -287,10 +293,18 @@ Fuzz
 Web Fuzz
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `wfuzz <https://github.com/xmendez/wfuzz>`_
+- `SecLists <https://github.com/danielmiessler/SecLists>`_
+- `fuzzdb <https://github.com/fuzzdb-project/fuzzdb>`_
+- `foospidy payloads <https://github.com/foospidy/payloads>`_
 
 Unicode Fuzz
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_
+
+WAF Bypass
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `abuse ssl bypass waf <https://github.com/LandGrey/abuse-ssl-bypass-waf>`_
+- `wafninja <https://github.com/khalilbijjou/wafninja>`_
 
 防御
 ----------------------------------------
@@ -443,7 +457,7 @@ WebAssembly
 其他
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_
-- `SecLists <https://github.com/danielmiessler/SecLists>`_
 - `Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_
 - `httrack <http://www.httrack.com/>`_
 - `curl <https://curl.haxx.se/>`_
+- `htrace <https://github.com/trimstray/htrace.sh>`_
