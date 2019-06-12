@@ -38,7 +38,8 @@ bypass
 - `666 lines of xss payload <https://gist.github.com/JohannesHoppe/5612274>`_
 - `xss auditor bypass <https://github.com/masatokinugawa/filterbypass>`_
 - `xss auditor bypass writeup <https://www.leavesongs.com/HTML/chrome-xss-auditor-bypass-collection.html>`_
-- `bypassing-csp-using-polyglot-jpegs <https://portswigger.net/blog/bypassing-csp-using-polyglot-jpegs>`_
+- `bypassing csp using polyglot jpegs <https://portswigger.net/blog/bypassing-csp-using-polyglot-jpegs>`_
+- `bypass xss filters using javascript global variables <https://www.secjuice.com/bypass-xss-filters-using-javascript-global-variables/>`_
 
 持久化
 ----------------------------------------

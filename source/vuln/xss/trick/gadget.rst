@@ -10,8 +10,6 @@ portswigger的一篇博文也表达了类似的想法 ``https://portswigger.net/
 
 下面有一个简单的例子，这个例子使用了 ``DOMPurify`` 来加固，但是因为引入了 ``jquery.mobile.js`` 导致可以被攻击。
 
-
-
 例子
 --------------------------------
 ::

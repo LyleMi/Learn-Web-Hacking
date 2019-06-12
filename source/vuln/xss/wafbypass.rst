@@ -10,8 +10,10 @@ WAF Bypass
     - value
     - action
     - dynsrc
-
-- 利用回车拆分关键字
+- 关键字
+    - 利用回车拆分
+    - 字符串拼接
+        - ``window["al" + "ert"]``
 - 利用编码绕过
     - base64
     - jsfuck
@@ -19,6 +21,7 @@ WAF Bypass
     - HTML
     - URL
     - hex
+        - ``window["\x61\x6c\x65\x72\x74"]``
     - unicode
     - utf7
         - ``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``
