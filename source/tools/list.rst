@@ -332,6 +332,10 @@ threat intelligence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `threatfeeds <https://threatfeeds.io/>`_
 
+平台
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `MozDef <https://github.com/mozilla/MozDef>`_
+
 入侵检查
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `huorong <https://www.huorong.cn/>`_
