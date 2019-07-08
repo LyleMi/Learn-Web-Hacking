@@ -8,12 +8,12 @@ Web安全学习笔记
 
    basic/index
    info/index
-   intranet/index
    vuln/index
    language/index
+   intranet/index
    defense/index
-   tools/index
    auth/index
+   tools/index
    misc/index
 
 
