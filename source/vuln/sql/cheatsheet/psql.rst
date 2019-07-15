@@ -18,7 +18,7 @@ PostgresSQL Payload
 - List Database
     - ``SELECT datname FROM pg_database``
 - Ascii
-    - ``SELECT char(0×41)``
+    - ``SELECT char(0x41)``
     - ``SELECT ascii('A')``
 - Delay
     - ``pg_sleep(1)``

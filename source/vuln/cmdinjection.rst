@@ -60,7 +60,7 @@ Java
 黑名单绕过
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``a=l;b=s;$a$b``
-- base64 `` `echo "bHM=" | base64 -d ` ``
+- base64 ``echo "bHM=" | base64 -d``
 - ``/?in/?s`` => ``/bin/ls``
 - 连接符 ``cat /etc/pass'w'd``
 - 未定义的初始化变量 ``cat$x /etc/passwd``

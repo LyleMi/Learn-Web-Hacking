@@ -136,6 +136,6 @@ CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource s
 
 阻止跨源访问
 ----------------------------------------
-阻止跨域写操作，可以检测请求中的 ``CSRF toke`` ，这个标记被称为Cross-Site Request Forgery (CSRF) 标记。
+阻止跨域写操作，可以检测请求中的 ``CSRF token`` ，这个标记被称为Cross-Site Request Forgery (CSRF) 标记。
 
-阻止资源的跨站读取，因为嵌入资源通常会暴露信息，需要保证资源是不可嵌入的。但是多数情况下浏览器都不会遵守 ``Conten-Type`` 消息头。例如如果在HTML文档中指定 ``<script>`` 标记，则浏览器会尝试将HTML解析为JavaScript。 
+阻止资源的跨站读取，因为嵌入资源通常会暴露信息，需要保证资源是不可嵌入的。但是多数情况下浏览器都不会遵守 ``Content-Type`` 消息头。例如如果在HTML文档中指定 ``<script>`` 标记，则浏览器会尝试将HTML解析为JavaScript。 
