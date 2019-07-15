@@ -7,8 +7,7 @@ MySQL
 - benchmark ``BENCHMARK(5000000, MD5('test'))``
 - 字符串连接
     - ``SELECT 'a' 'b'``
-    - ``SELECT 'some'+'string'``
-    - ``SELECT CONCTA('some','string')``
+    - ``SELECT CONCAT('some','string')``
 - version 
     - ``SELECT @@version``
     - ``SELECT version()``
@@ -21,7 +20,7 @@ Oracle
 --------------------------------
 - 字符串连接 
     - ``'a'||'oracle' --``
-    - ``SELECT CONCTA('some','string')``
+    - ``SELECT CONCAT('some','string')``
 - version 
     - ``SELECT banner FROM v$version``
     - ``SELECT banner FROM v$version WHERE rownum=1``

@@ -28,7 +28,7 @@ Web cache攻击类似于RPO相对路径重写攻击，都依赖于浏览器与�
 漏洞要存在，至少需要满足下面两个条件：
 
 1. web cache功能根据扩展进行保存，并忽略caching header;
-2. 当访问如 ``http://www.examplecom/home.php/non-existent.css`` 不存在的页面，会返回 ``home.php`` 的内容。
+2. 当访问如 ``http://www.example.com/home.php/non-existent.css`` 不存在的页面，会返回 ``home.php`` 的内容。
 
 漏洞防御
 --------------------------------

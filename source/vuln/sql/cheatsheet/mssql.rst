@@ -20,7 +20,7 @@ SQL Server Payload
 - Command
     - ``EXEC xp_cmdshell 'net user'``
 - Ascii
-    - ``SELECT char(0×41)``
+    - ``SELECT char(0x41)``
     - ``SELECT ascii('A')``
     - ``SELECT char(65)+char(66)`` => return ``AB``
 - Delay

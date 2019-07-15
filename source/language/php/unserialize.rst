@@ -103,7 +103,7 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
 
 ::
 
-``unserialize('O:7:"HITCON":1:{s:4:"data";s:15:"malicious value";}');``
+unserialize('O:7:"HITCON":1:{s:4:"data";s:15:"malicious value";}');
 
 输出
 
