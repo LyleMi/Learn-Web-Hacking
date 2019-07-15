@@ -29,12 +29,18 @@ Git信息泄漏
 - `GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_
 - `GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_
 - `GitTools <https://github.com/internetwache/GitTools>`_
-- `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_
-- `Github Dorks <https://github.com/techgaun/github-dorks>`_
 - `Zen <https://github.com/s0md3v/Zen>`_
 - `dig github history <https://github.com/dxa4481/truffleHog>`_
 - `gitrob Reconnaissance tool for GitHub organizations <https://github.com/michenriksen/gitrob>`_
 - `git secrets <https://github.com/awslabs/git-secrets>`_
+
+Github监控
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_
+- `Github Dorks <https://github.com/techgaun/github-dorks>`_
+- `GSIL <https://github.com/FeeiCN/GSIL>`_
+- `Hawkeye <https://github.com/0xbug/Hawkeye>`_
+- `gshark <https://github.com/neal1991/gshark>`_
 
 路径及文件扫描
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -327,14 +333,12 @@ XSS
 IDS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `ossec <https://github.com/ossec/ossec-hids>`_
+- `yulong <https://github.com/ysrc/yulong-hids>`_
+- `AgentSmith <https://github.com/DianrongSecurity/AgentSmith-HIDS>`_
 
 threat intelligence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `threatfeeds <https://threatfeeds.io/>`_
-
-平台
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `MozDef <https://github.com/mozilla/MozDef>`_
 
 入侵检查
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -384,6 +388,12 @@ IoC
 - `Argus <https://github.com/salesforce/Argus>`_
 - `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
 
+堡垒机
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `jumpserver <https://github.com/jumpserver/jumpserver>`_
+- `CrazyEye <https://github.com/triaquae/CrazyEye>`_
+- `GateOne <https://github.com/liftoff/GateOne>`_
+
 蜜罐
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Dionaea <https://github.com/DinoTools/dionaea>`_
@@ -396,6 +406,8 @@ IoC
 - `DCEPT <https://github.com/secureworks/dcept>`_
 - `Canarytokens <https://github.com/thinkst/canarytokens>`_
 - `Honeydrive <http://bruteforcelab.com/honeydrive>`_
+- `T-Pot <https://github.com/dtag-dev-sec/tpotce/>`_
+- `opencanary <https://github.com/p1r06u3/opencanary_web>`_
 
 VPN Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -413,6 +425,17 @@ VPN Install
 漏洞管理
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `SRCMS <https://github.com/martinzhou2015/SRCMS>`_
+
+风控
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `nebula <https://github.com/threathunterX/nebula>`_
+- `Liudao <https://github.com/ysrc/Liudao>`_
+- `aswan <https://github.com/momosecurity/aswan>`_
+
+SIEM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `metron <https://github.com/apache/metron>`_
+- `MozDef <https://github.com/mozilla/MozDef>`_
 
 钓鱼
 ----------------------------------------
