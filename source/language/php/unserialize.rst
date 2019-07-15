@@ -1,8 +1,11 @@
 反序列化
 ================================
 
-PHP序列化格式
+PHP序列化实现
 --------------------------------
+PHP序列化处理共有三种，分别为php_serialize、php_binary和 WDDX，默认为php_serialize，可通过配置中的 ``session.serialize_handler`` 修改。
+
+其中php_serialize的实现在 ``php-src/ext/standard/var.c`` 中，主要函数为 ``php_var_serialize_intern`` ，序列化后的格式如下：
 
 - boolean
     - ``b:<value>;``
@@ -22,6 +25,11 @@ PHP序列化格式
     - ``a:1:{s:4:"key1";s:6:"value1";}`` // ``array("key1" => "value1");``
 - object
     - ``O:<class_name_length>:"<class_name>":<number_of_properties>:{<properties>};``
+- reference
+    - 指针类型
+    - ``R:reference;``
+    - ``O:1:"A":2:{s:1:"a";i:1;s:1:"b";R:2;}``
+    - ``$a = new A();$a->a=1;$a->b=&$a->a;``
 
 PHP反序列化漏洞
 --------------------------------
@@ -34,7 +42,7 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
 
 下面提供一个简单的demo.
 
-::
+.. code:: php
 
     class Demo
     {
@@ -91,7 +99,7 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
 那么，在 ``__wakeup()`` 中加入判断是否可以阻止这个漏洞呢？
 在 ``__wakeup()`` 中我们加入一行代码
 
-::
+.. code:: php
 
     public function __wakeup()
     {
@@ -103,7 +111,7 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
 
 ::
 
-unserialize('O:7:"HITCON":1:{s:4:"data";s:15:"malicious value";}');
+    unserialize('O:7:"HITCON":1:{s:4:"data";s:15:"malicious value";}');
 
 输出
 

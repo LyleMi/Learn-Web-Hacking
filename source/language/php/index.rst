@@ -7,6 +7,8 @@ PHP
 
    backdoor
    unserialize
+   disablefunc
+   basedir
    phpinfo
    htaccess
    webshell
