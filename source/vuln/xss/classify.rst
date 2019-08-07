@@ -5,7 +5,7 @@ XSS全称为Cross Site Scripting，为了和CSS分开简写为XSS，中文名为
 
 反射型XSS
 --------------------------------
-反射型XSS是比较常见和广泛的一类，举例来说，当一个网站的代码中包含类似下面的语句：``<?php echo "<p>hello, $_GET['user']</p>";?>`` ，那么在访问时设置``/?user=</p><script>alert("hack")</script><p>``，则可执行预设好的JavaScript代码。
+反射型XSS是比较常见和广泛的一类，举例来说，当一个网站的代码中包含类似下面的语句：``<?php echo "<p>hello, $_GET['user']</p>";?>`` ，那么在访问时设置 ``/?user=</p><script>alert("hack")</script><p>`` ，则可执行预设好的JavaScript代码。
 
 反射型XSS通常出现在搜索等功能中，需要被攻击者点击对应的链接才能触发，且受到XSS Auditor、NoScript等防御手段的影响较大。
 
