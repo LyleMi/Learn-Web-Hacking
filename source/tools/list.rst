@@ -11,6 +11,8 @@
 - `broDomain <https://github.com/code-scan/BroDomain>`_
 - `ESD <https://github.com/FeeiCN/ESD>`_
 - `aiodnsbrute <https://github.com/blark/aiodnsbrute>`_
+- `OneForAll <https://github.com/shmilylty/OneForAll>`_
+- `subfinder <https://github.com/subfinder/subfinder>`_
 
 域名获取
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -150,6 +152,7 @@ Hacking database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `theHarvester <https://github.com/laramies/theHarvester>`_
 - `Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_
+- `ReconDog <https://github.com/s0md3v/ReconDog>`_
 
 漏洞利用
 ----------------------------------------
