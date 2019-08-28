@@ -102,6 +102,11 @@ DNS关联
 - `Just Metadata <https://github.com/FortyNorthSecurity/Just-Metadata>`_
 - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
+字典
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Blasting dictionary <https://github.com/rootphantomer/Blasting_dictionary>`_
+- `pydictor <https://github.com/LandGrey/pydictor>`_
+
 其他
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `datasploit <https://github.com/DataSploit/datasploit>`_
@@ -411,6 +416,7 @@ IoC
 - `Honeydrive <http://bruteforcelab.com/honeydrive>`_
 - `T-Pot <https://github.com/dtag-dev-sec/tpotce/>`_
 - `opencanary <https://github.com/p1r06u3/opencanary_web>`_
+- `HFish <https://github.com/hacklcx/HFish>`_
 
 VPN Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -479,6 +485,9 @@ wifi
 - `prvd <https://github.com/fate0/prvd>`_
 - `find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_
 - `trivy <https://github.com/knqyf263/trivy>`_
+- `chip <https://github.com/phith0n/chip>`_
+- `php malware finder <https://github.com/nbs-system/php-malware-finder>`_
+- `phpvulhunter <https://github.com/OneSourceCat/phpvulhunter>`_
 
 WebAssembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
