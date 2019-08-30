@@ -6,6 +6,7 @@ XSS
    :caption: Contents:
 
    classify
+   harm
    sop
    csp
    source
