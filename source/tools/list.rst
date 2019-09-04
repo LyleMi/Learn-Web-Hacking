@@ -43,6 +43,7 @@ Github监控
 - `GSIL <https://github.com/FeeiCN/GSIL>`_
 - `Hawkeye <https://github.com/0xbug/Hawkeye>`_
 - `gshark <https://github.com/neal1991/gshark>`_
+- `GitGot <https://github.com/BishopFox/GitGot>`_
 
 路径及文件扫描
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,7 +75,7 @@ Waf指纹
 - DNS ``dnsenum nslookup dig fierce``
 - SNMP ``snmpwalk``
 
-DNS数据
+DNS数据查询
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `VirusTotal <https://www.virustotal.com/>`_
 - `PassiveTotal <https://passivetotal.org>`_
@@ -208,13 +209,27 @@ CMS
 - `Drupal enumeration & exploitation tool <https://github.com/immunIT/drupwn>`_
 - `Wordpress Vulnerability Scanner <https://github.com/UltimateLabs/Zoom>`_
 
-DNS
+DNS相关漏洞
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `dnsAutoRebinding <https://github.com/Tr3jer/dnsAutoRebinding>`_
 - `AngelSword <https://github.com/Lucifer1993/AngelSword>`_
 - `Subdomain TakeOver <https://github.com/m4ll0k/takeover>`_
 - `mpDNS <https://github.com/nopernik/mpDNS>`_
 - `JudasDNS Nameserver DNS poisoning <https://github.com/mandatoryprogrammer/JudasDNS>`_
+
+DNS数据提取
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `dnsteal <https://github.com/m57/dnsteal>`_
+- `DNSExfiltrator <https://github.com/Arno0x/DNSExfiltrator>`_
+- `dns exfiltration by krmaxwell <https://github.com/krmaxwell/dns-exfiltration>`_
+- `dns exfiltration by coryschwartz <https://github.com/coryschwartz/dns_exfiltration>`_
+- `requestbin for dns <http://requestbin.net/dns>`_
+
+DNS 隧道
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `dnstunnel de <https://dnstunnel.de/>`_
+- `iodine <https://code.kryo.se/iodine/>`_
+- `dnscat2 <https://github.com/iagox86/dnscat2>`_
 
 XXE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -300,6 +315,10 @@ C2
 - `cobalt strike <https://www.cobaltstrike.com>`_
 - `Empire <https://github.com/EmpireProject/Empire>`_
 - `pupy <https://github.com/n1nj4sec/pupy>`_
+
+日志清除
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Log killer <https://github.com/Rizer0/Log-killer>`_
 
 Fuzz
 ----------------------------------------
