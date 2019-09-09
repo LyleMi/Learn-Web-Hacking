@@ -1,6 +1,90 @@
 域名系统
 ========================================
 
+简介
+----------------------------------------
+DNS是一个简单的请求-响应协议，是将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP协议的53端口。
+
+术语
+----------------------------------------
+
+mDNS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Multicast DNS (mDNS)，多播DNS，使用5353端口，组播地址为 ``224.0.0.251`` 或 ``[FF02::FB]`` 。在一个没有常规DNS服务器的小型网络内可以使用mDNS来实现类似DNS的编程接口、包格式和操作语义。mDNS协议的报文与DNS的报文结构相同，但有些字段对于mDNS来说有新的含义。
+
+启动mDNS的主机会在进入局域网后向所有主机组播消息，包含主机名、IP等信息，其他拥有相应服务的主机也会响应含有主机名和IP的信息。
+
+mDNS的域名是用 ``.local`` 和普通域名区分开的。
+
+FQDN
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+FQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如 ``www.example.com.`` 。
+
+TLD
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Top-Level Domain (TLD) 是属于根域的一个域，例如 ``com`` 或 ``jp`` 。
+
+TLD一般可以分为 Country Code Top-Level Domains (ccTLDs) 、Generic Top-Level Domains (gTLDs) 以及其它。
+
+IDN
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Internationalized Domain Names for Applications (IDNA) 是为了处理非ASCII字符的情况。
+
+CNAME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CNAME即Canonical name，又称alias，将域名指向另一个域名。
+
+TTL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Time To Live，无符号整数，记录DNS记录过期的时间，最小是0，最大是2147483647 (2^31 - 1)。
+
+请求响应
+----------------------------------------
+
+响应码
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- NOERROR
+
+::
+
+    No error condition
+
+- FORMERR
+
+::
+
+    Format error - The name server was unable to interpret the query
+
+- SERVFAIL
+
+::
+
+    Server failure - The name server was unable to process this query due to a problem with the name server
+
+- NXDOMAIN
+
+::
+
+    this code signifies that the domain name referenced in the query does not exist
+
+- NOTIMP
+
+::
+
+    Not Implemented - The name server does not support the requested kind of query
+
+- REFUSED
+
+::
+
+    Refused - The name server refuses to perform the specified operation for policy reasons
+
+- NODATA
+
+::
+
+    A pseudo RCODE which indicates that the name is valid, for the given class, but [there] are no records of the given type A NODATA response has to be inferred from the answer.
+
 域名系统工作原理
 ----------------------------------------
 DNS解析过程是递归查询的，具体过程如下：
@@ -39,3 +123,17 @@ DGA（Domain Generate Algorithm，域名生成算法）是一种利用随机字�
 DNS隧道
 ----------------------------------------
 DNS隧道工具将进入隧道的其他协议流量封装到DNS协议内，在隧道上传输。这些数据包出隧道时进行解封装，还原数据。
+
+参考链接
+----------------------------------------
+- `RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES <https://tools.ietf.org/html/rfc1034>`_
+- `RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION <https://tools.ietf.org/html/rfc1035>`_
+- `RFC 5936 DNS Zone Transfer Protocol <https://tools.ietf.org/html/rfc5936>`_
+- `RFC 6762 Multicast DNS <https://tools.ietf.org/html/rfc6762>`_
+- `RFC 6895 DNS IANA Considerations <https://tools.ietf.org/html/rfc6895>`_
+- `RFC 8082 NXDOMAIN <https://tools.ietf.org/html/rfc8082>`_
+- `RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY <https://tools.ietf.org/html/rfc8482>`_
+- `RFC 8490 DNS Stateful Operations <https://tools.ietf.org/html/rfc8490>`_
+- `RFC 8499 DNS Terminology <https://tools.ietf.org/html/rfc8499>`_
+- `Unbound <https://github.com/NLnetLabs/unbound>`_
+- `bind9 <https://github.com/isc-projects/bind9>`_
