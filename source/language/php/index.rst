@@ -1,5 +1,5 @@
 PHP
-================================
+========================================
 
 .. toctree::
    :maxdepth: 2
@@ -12,5 +12,6 @@ PHP
    phpinfo
    htaccess
    webshell
+   phar
    misc
    ref
