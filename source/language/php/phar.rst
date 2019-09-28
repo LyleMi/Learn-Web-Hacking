@@ -17,7 +17,9 @@ manifest 包含压缩文件的权限、属性、序列化形式存储的meta-dat
 
 原理
 ----------------------------------------
-phar的实现在 ``php-src/ext/phar/phar.c`` 中，主要是 ``phar_parse_metadata`` 函数在解析phar文件时调用了 ``php_var_unserialize`` ，因而照成问题。而phar只要在文件流中出现就会调用相关函数，所以大量的文件操作函数都可以触发phar的反序列问题。
+phar的实现在 ``php-src/ext/phar/phar.c`` 中，主要是 ``phar_parse_metadata`` 函数在解析phar文件时调用了 ``php_var_unserialize`` ，因而造成问题。
+
+而php在文件流处理过程中会调用 ``_php_stream_stat_path`` (/main/streams/streams.c) ，而后间接调用 ``phar_wrapper_stat`` ，所以大量的文件操作函数都可以触发phar的反序列问题。
 
 目前已知部分的触发函数有:
 
