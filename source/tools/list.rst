@@ -44,6 +44,7 @@ Github监控
 - `Hawkeye <https://github.com/0xbug/Hawkeye>`_
 - `gshark <https://github.com/neal1991/gshark>`_
 - `GitGot <https://github.com/BishopFox/GitGot>`_
+- `gitGraber <https://github.com/hisxo/gitGraber>`_
 
 路径及文件扫描
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,6 +93,7 @@ DNS关联
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Find aws s3 buckets <https://github.com/gwen001/s3-buckets-finder>`_
 - `CloudScraper <https://github.com/jordanpotti/CloudScraper>`_
+- `AWS Bucket Dump <https://github.com/jordanpotti/AWSBucketDump>`_
 
 数据查询
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -153,6 +155,10 @@ Hacking database
 - `虫部落 <http://magnet.chongbuluo.com/>`_
 - `盘多多 <http://www.panduoduo.net/>`_
 - `Infinite Panc <https://www.panc.cc>`_
+
+个人字典
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `genpAss <https://github.com/RicterZ/genpAss>`_
 
 综合框架
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

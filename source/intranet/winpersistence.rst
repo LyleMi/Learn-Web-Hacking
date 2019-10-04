@@ -9,6 +9,41 @@
 - 利用Windows保留字
     - ``aux|prn|con|nul|com1|com2|com3|com4|com5|com6|com7|com8|com9|lpt1|lpt2|lpt3|lpt4|lpt5|lpt6|lpt7|lpt8|lpt9``
 
+后门
+----------------------------------------
+
+sethc
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``sethc.exe`` 是 Windows系统在用户按下五次shift后调用的粘滞键处理程序，当有写文件但是没有执行权限时，可以通过替换 ``sethc.exe`` 的方式留下后门，在密码输入页面输入五次shift即可获得权限。
+
+映像劫持
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+在高版本的Windows中，替换程序是受到系统保护的，需要使用其他的技巧来实现替换。
+
+具体操作为在注册表的 ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Option`` 下添加项 ``sethc.exe`` ，然后在 ``sethc.exe`` 这个项中添加 ``debugger`` 键，键值为恶意程序的路径。
+
+定时任务
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Windows下有 ``schtasks`` 和 ``at`` 两种计划任务机制。 其中 ``at`` 在较高版本的Windows中已经弃用。
+
+登录脚本
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Windows可以在用户登录前执行脚本，使用 ``HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` 设置。
+
+屏幕保护程序
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Windows可以自定义屏幕保护程序，使用 ``HKEY_CURRENT_USER\Control Panel\Desktop`` 设置。
+
+隐藏用户
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Windows可以使用在用户名后加入 ``$`` 来创建匿名用户，这种方式创建的用户只能通过注册表查看。
+
+CLR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CLR (Common Language Runtime Compilation) 公共语言运行时，是微软为.NET产品构建的运行环境，可以粗略地理解为.NET虚拟机。
+
+.NET程序的运行离不开CLR，因此可以通过劫持CLR的方式实现后门。
+
 UAC
 ----------------------------------------
 
@@ -26,6 +61,10 @@ UAC (User Account Control) 是Windows的一个安全机制，当一些敏感操�
 - 修改ACL (access control list)
 - 安装驱动
 - 增删账户，修改账户类型，激活来宾账户
+
+自启动
+----------------------------------------
+通过在注册表中写入相应的键值可以实现程序的开机自启动，主要是 ``Run`` 和 ``RunOnce`` ，其中RunOnce和Run区别在于RunOnce的键值只作用一次，执行完毕后会自动删除。
 
 权限提升
 ----------------------------------------
@@ -53,10 +92,6 @@ MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof
 当拥有文件上传的权限但是没有Shell时，可以上传定制的mof文件至相应的位置，一定时间后这个mof就会被执行。
 
 一般会采用在mof中加入一段添加管理员用户的命令的vbs脚本，当执行后就拥有了新的管理员账户。
-
-sethc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-``sethc.exe`` 是 Windows系统在用户按下五次shift后调用的粘滞键处理程序，当有写文件但是没有执行权限时，可以通过替换 ``sethc.exe`` 的方式留下后门，在密码输入页面输入五次shift即可获得权限。
 
 凭证窃取
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
