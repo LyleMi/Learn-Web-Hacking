@@ -6,7 +6,6 @@ wget
 
 常用
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 - 普通下载 ``wget http://example.com/file.iso``
 - 指定保存文件名 ``wget ‐‐output-document=myname.iso http://example.com/file.iso``
 - 保存到指定目录 ``wget ‐‐directory-prefix=folder/subfolder http://example.com/file.iso``
@@ -17,15 +16,12 @@ wget
 
 整站下载
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 - 下载所有链接的页面和文件 ``wget ‐‐execute robots=off ‐‐recursive ‐‐no-parent ‐‐continue ‐‐no-clobber http://example.com/``
 - 下载指定后缀的文件 ``wget ‐‐level=1 ‐‐recursive ‐‐no-parent ‐‐accept mp3,MP3 http://example.com/mp3/``
 - 排除指定目录下载 ``wget ‐‐recursive ‐‐no-clobber ‐‐no-parent ‐‐exclude-directories /forums,/support http://example.com``
 
-
 指定参数
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 - user agent ``‐‐user-agent="Mozilla/5.0 Firefox/4.0.1"``
 - basic auth ``‐‐http-user=user ‐‐http-password=pwd``
 - 保存cookie ``‐‐cookies=on ‐‐save-cookies cookies.txt ‐‐keep-session-cookies``

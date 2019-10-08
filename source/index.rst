@@ -14,6 +14,7 @@ Web安全学习笔记
    defense/index
    auth/index
    tools/index
+   manual/index
    misc/index
 
 
