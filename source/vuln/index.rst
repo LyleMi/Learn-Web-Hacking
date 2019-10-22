@@ -10,6 +10,7 @@
    csrf
    ssrf
    cmdinjection
+   pathtraversal
    fileread
    fileupload
    fileinclude

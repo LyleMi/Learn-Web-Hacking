@@ -60,6 +60,10 @@ JSONP就是利用 ``<script>`` 标签的跨域能力实现跨域数据的访问�
 
 服务端收到请求后，动态生成脚本产生数据，并在代码中以产生的数据为参数调用callback函数。
 
+JSONP也存在一些安全问题，例如当对传入/传回参数没有做校验就直接执行返回的时候，会造成XSS问题。没有做Referer或Token校验就给出数据的时候，可能会造成数据泄露。
+
+另外JSONP在没有设置callback函数的白名单情况下，可以合法的做一些设计之外的函数调用，引入问题。这种攻击也被称为SOME攻击。
+
 跨源脚本API访问
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Javascript的APIs中，如 ``iframe.contentWindow`` , ``window.parent``, ``window.open`` 和 ``window.opener`` 允许文档间相互引用。当两个文档的源不同时，这些引用方式将对 ``window`` 和 ``location`` 对象的访问添加限制。

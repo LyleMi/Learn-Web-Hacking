@@ -7,7 +7,7 @@ PHP中Disable Function的实现是在php-src/Zend/Zend-API.c中。PHP在启动�
 
 这个函数根据函数名在内置函数列表中找到对应的位置并修改掉，当前版本的代码如下：
 
-.. code:: c
+.. code-block:: cpp
 
     ZEND_API int zend_disable_function(char *function_name, size_t function_name_length) /* {{{ */
     {
@@ -25,7 +25,7 @@ PHP中Disable Function的实现是在php-src/Zend/Zend-API.c中。PHP在启动�
 
 和函数的实现方式类似，disable classes也是这样实现的
 
-.. code:: c
+.. code-block:: cpp
 
     ZEND_API int zend_disable_class(char *class_name, size_t class_name_length) /* {{{ */
     {

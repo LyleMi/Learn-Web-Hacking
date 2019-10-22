@@ -118,7 +118,12 @@ DNS解析过程是递归查询的，具体过程如下：
 
 DGA
 ----------------------------------------
-DGA（Domain Generate Algorithm，域名生成算法）是一种利用随机字符来生成C&C域名，从而逃避域名黑名单检测的技术手段，常见于botnet中。
+DGA（Domain Generate Algorithm，域名生成算法）是一种利用随机字符来生成C&C域名，从而逃避域名黑名单检测的技术手段，常见于botnet中。一般来说，一个DGA域名的存活时间约在1-7天左右。
+
+通信时，客户端和服务端都运行同一套DGA算法，生成相同的备选域名列表，当需要发动攻击的时候，选择其中少量进行注册，便可以建立通信，并且可以对注册的域名应用速变IP技术，快速变换IP，从而域名和IP都可以进行快速变化。
+
+DGA域名有多种生成方式，根据种子类型可以分为确定性和不确定性的生成。不确定性的种子可能会选用当天的一些即时数据，如汇率信息等。
+
 
 DNS隧道
 ----------------------------------------
@@ -126,6 +131,9 @@ DNS隧道工具将进入隧道的其他协议流量封装到DNS协议内，在�
 
 参考链接
 ----------------------------------------
+
+RFC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES <https://tools.ietf.org/html/rfc1034>`_
 - `RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION <https://tools.ietf.org/html/rfc1035>`_
 - `RFC 5936 DNS Zone Transfer Protocol <https://tools.ietf.org/html/rfc5936>`_
@@ -135,5 +143,13 @@ DNS隧道工具将进入隧道的其他协议流量封装到DNS协议内，在�
 - `RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY <https://tools.ietf.org/html/rfc8482>`_
 - `RFC 8490 DNS Stateful Operations <https://tools.ietf.org/html/rfc8490>`_
 - `RFC 8499 DNS Terminology <https://tools.ietf.org/html/rfc8499>`_
+
+工具
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Unbound <https://github.com/NLnetLabs/unbound>`_
 - `bind9 <https://github.com/isc-projects/bind9>`_
+
+研究文章
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `DGA域名的今生前世：缘起、检测、与发展  <https://mp.weixin.qq.com/s/xbf0Qbppk8R0nx89Pb4YTg>`_
+- Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study of domain generating malware[C]//25th {USENIX} Security Symposium ({USENIX} Security 16). 2016: 263-278.

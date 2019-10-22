@@ -85,6 +85,20 @@ Linux内核功能
     - ``RUN find / -perm +6000-type f-exec chmod a-s {} \;|| true``
 - 配置Docker守护程序的TLS身份验证
 
+存在特征
+----------------------------------------
+
+Docker内
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- MAC地址为 ``02:42:ac:11:00:00`` - ``02:42:ac:11:ff:ff``
+- ``ps aux`` 大部分运行的程序 pid 都很小
+- ``cat /proc/1/cgroup`` docker的进程
+
+Docker外
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``/var/run/docker.sock`` 文件存在
+- ``2375`` / ``2376`` 端口开启
+
 参考链接
 ----------------------------------------
 - `A House of Cards An Exploration of Security When Building Docker Containers <https://blog.heroku.com/exploration-of-security-when-building-docker-containers>`_

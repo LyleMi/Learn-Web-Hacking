@@ -17,6 +17,10 @@
 Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 无用用户/用户组检查
+- 空口令帐号检查
+- 用户密码策略
+    - /etc/login.defs
+    - /etc/pam.d/system-auth
 - 敏感文件权限配置
     - /etc/passwd
     - /etc/shadow
