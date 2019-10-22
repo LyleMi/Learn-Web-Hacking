@@ -102,6 +102,12 @@ DNS关联
 - `Just Metadata <https://github.com/FortyNorthSecurity/Just-Metadata>`_
 - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
 
+Password
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Probable Wordlists <https://github.com/berzerk0/Probable-Wordlists>`_
+- `Common User Passwords Profiler <https://github.com/Mebus/cupp>`_
+- `chrome password grabber <https://github.com/x899/chrome_password_grabber>`_
+
 字典
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Blasting dictionary <https://github.com/rootphantomer/Blasting_dictionary>`_

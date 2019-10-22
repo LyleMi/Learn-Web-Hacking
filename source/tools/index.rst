@@ -6,6 +6,7 @@
    :caption: Contents:
 
    resource
+   papers
    info
    socialengineering
    fuzz

@@ -1,6 +1,12 @@
 防御
 ----------------------------------------
 
+日志检查
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Sysmon <https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon>`_
+- `LastActivityView <http://www.nirsoft.net/utils/computer_activity_view.html>`_
+- `Regshot <https://sourceforge.net/projects/regshot/>`_
+
 XSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `js xss <https://github.com/leizongmin/js-xss>`_
@@ -37,6 +43,7 @@ threat intelligence
 进程查看
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Process Explorer <https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer>`_
+- `ProcessHacker <https://processhacker.sourceforge.io/>`_
 
 Waf
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,3 +69,10 @@ IoC
 - `fireeye public iocs <https://github.com/fireeye/iocs>`_
 - `signature base <https://github.com/Neo23x0/signature-base>`_
 - `yara rules <https://github.com/Yara-Rules/rules>`_
+
+内存取证
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `SfAntiBotPro <http://edr.sangfor.com.cn/tool/SfabAntiBot_X64.7z>`_
+- `volatility <https://github.com/volatilityfoundation/volatility>`_
+- ` <>`_
+

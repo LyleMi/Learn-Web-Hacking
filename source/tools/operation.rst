@@ -10,6 +10,8 @@
 - `WireShark <https://www.wireshark.org>`_
 - `Argus <https://github.com/salesforce/Argus>`_
 - `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
+- `ngrep <https://github.com/jpr5/ngrep>`_
+- `cisco joy <https://github.com/cisco/joy>`_  A package for capturing and analyzing network flow data and intraflow data, for network research, forensics, and security monitoring.
 
 堡垒机
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
