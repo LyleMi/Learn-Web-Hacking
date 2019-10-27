@@ -8,6 +8,7 @@
 漏洞自动化
 ----------------------------------------
 - Staicu C A, Pradel M, Livshits B. SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE. JS[C]//NDSS. 2018.
+-  Atlidakis V , Godefroid P , Polishchuk M . REST-ler: Automatic Intelligent REST API Fuzzing[J]. 2018.
 
 攻击技巧
 ----------------------------------------

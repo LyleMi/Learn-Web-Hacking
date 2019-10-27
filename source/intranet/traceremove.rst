@@ -10,6 +10,8 @@ Linux
 ----------------------------------------
 + 清除历史
     + ``unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export HISTFILE=/dev/null;``
+    + ``kill -9 $$`` kill history
+    + ``history -c``
 + 删除 ``~/.ssh/known_hosts`` 中记录
 + 修改文件时间戳
     + ``touch –r``

@@ -59,14 +59,26 @@
 
 网络、路由和通信
 ----------------------------------------
-- 列出网络接口信息 ``/sbin/ifconfig -a``
+- 列出网络接口信息 ``/sbin/ifconfig -a`` / ``ip addr show``
 - 列出网络接口信息 ``cat /etc/network/interfaces``
 - 查看系统arp表 ``arp -a``
-- 打印路由信息 ``route``
+- 打印路由信息 ``route`` / ``ip ro show``
 - 查看dns配置信息 ``cat /etc/resolv.conf``
 - 打印本地端口开放信息 ``netstat -an``
 - 列出iptable的配置规则 ``iptables -L``
 - 查看端口服务映射 ``cat /etc/services``
+- Hostname ``hostname -f``
+
+已安装程序
+----------------------------------------
+- ``rpm -qa --last`` Redhat
+- ``yum list | grep installed`` CentOS
+- ``ls -l /etc/yum.repos.d/``
+- ``dpkg -l`` Debian
+- ``cat /etc/apt/sources.list`` Debian APT
+- ``pkg_info`` xBSD
+- ``pkginfo`` Solaris
+- ``pacman -Q`` Arch Linux
 
 文件
 ----------------------------------------
