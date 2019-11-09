@@ -14,5 +14,4 @@
    persistence
    defense
    operation
-   phishing
    misc

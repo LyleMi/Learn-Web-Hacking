@@ -15,7 +15,8 @@ XSS
 
 配置检查
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `gixy - Nginx 配置检查工具 <https://github.com/yandex/gixy>`_
+- `gixy <https://github.com/yandex/gixy>`_ Nginx 配置检查工具
+- `dockerscan <https://github.com/cr0hn/dockerscan>`_ Docker security analysis & hacking tools
 
 安全检查
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,3 +77,23 @@ IoC
 - `volatility <https://github.com/volatilityfoundation/volatility>`_
 - ` <>`_
 
+审计工具
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Cobra <https://github.com/FeeiCN/cobra>`_
+- `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
+- `RIPS <http://rips-scanner.sourceforge.net/>`_
+- `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
+- `pyt <https://github.com/python-security/pyt>`_
+- `Semmle QL <https://github.com/Semmle/ql>`_
+- `prvd <https://github.com/fate0/prvd>`_
+- `find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_
+- `trivy <https://github.com/knqyf263/trivy>`_
+- `chip <https://github.com/phith0n/chip>`_
+- `php malware finder <https://github.com/nbs-system/php-malware-finder>`_
+- `phpvulhunter <https://github.com/OneSourceCat/phpvulhunter>`_
+
+Security Advisories
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `apache httpd security advisories  <https://httpd.apache.org/security/>`_
+- `nginx security advisories <http://nginx.org/en/security_advisories.html>`_
+- `Jetty Security Reports <https://www.eclipse.org/jetty/documentation/current/security-reports.html>`_

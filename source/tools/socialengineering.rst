@@ -8,6 +8,7 @@ OSINT
 - `OSINT-Collection <https://github.com/Ph055a/OSINT Collection>`_
 - `trape <https://github.com/jofpin/trape>`_
 - `Photon <https://github.com/s0md3v/Photon>`_
+- `pockint <https://github.com/netevert/pockint>`_
 
 个人搜索
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,12 +29,21 @@ Hacking database
 钓鱼
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `spoofcheck <https://github.com/BishopFox/spoofcheck>`_
+- `gophish <https://github.com/gophish/gophish>`_
+- `SocialFish <https://github.com/UndeadSec/SocialFish>`_
 
 网盘搜索
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `虫部落 <http://magnet.chongbuluo.com/>`_
 - `盘多多 <http://www.panduoduo.net/>`_
 - `Infinite Panc <https://www.panc.cc>`_
+
+wifi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `wifiphisher <https://github.com/wifiphisher/wifiphisher>`_
+- `evilginx <https://github.com/kgretzky/evilginx>`_
+- `mana <https://github.com/sensepost/mana>`_
+- `pwnagotchi <https://github.com/evilsocket/pwnagotchi>`_
 
 个人字典
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

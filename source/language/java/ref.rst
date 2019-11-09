@@ -24,6 +24,7 @@
 ----------------------------------------
 - `Struts <https://github.com/apache/struts>`_
 - `Struts Examples <https://github.com/apache/struts-examples>`_
+- `Eclipse Jetty <https://github.com/eclipse/jetty.project>`_
 
 其他
 ----------------------------------------

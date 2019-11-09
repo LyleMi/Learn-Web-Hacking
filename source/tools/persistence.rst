@@ -23,6 +23,7 @@ WebShell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `pwnginx <https://github.com/t57root/pwnginx>`_
 - `Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-Module-Backdoor>`_
+- `SharpGen <https://github.com/cobbr/SharpGen>`_  .NET Core console application that utilizes the Rosyln C# compiler to quickly cross-compile .NET Framework console applications or libraries
 
 密码提取
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,6 +37,8 @@ WebShell
 - `LinEnum <https://github.com/rebootuser/LinEnum>`_
 - `AutoLocalPrivilegeEscalation <https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_
 - `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
+- `BeRoot <https://github.com/AlessandroZ/BeRoot>`_ Privilege Escalation Project - Windows / Linux / Mac
+- `GTFOBins <https://github.com/GTFOBins/GTFOBins.github.io>`_ Curated list of Unix binaries that can be exploited to bypass system security restrictions
 
 RAT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

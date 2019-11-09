@@ -3,7 +3,13 @@
 
 PHP序列化实现
 --------------------------------
-PHP序列化处理共有三种，分别为php_serialize、php_binary和 WDDX，默认为php_serialize，可通过配置中的 ``session.serialize_handler`` 修改。
+PHP序列化处理共有三种，分别为php_serialize、php_binary和WDDX（需要编译时开启支持），默认为php_serialize，可通过配置中的 ``session.serialize_handler`` 修改。
+
+其中PHP处理器的格式为：键名 + 竖线 + 经过serialize()函数序列化处理的值。
+
+其中php_binary处理器的格式为：键名的长度对应的 ASCII 字符 + 键名 + 经过serialize()函数序列化处理的值。
+
+其中php_serialize处理器的格式为：经过serialize()函数序列化处理的数组。
 
 其中php_serialize的实现在 ``php-src/ext/standard/var.c`` 中，主要函数为 ``php_var_serialize_intern`` ，序列化后的格式如下：
 

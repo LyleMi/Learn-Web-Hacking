@@ -47,6 +47,7 @@ VPN Install
 - `rtcp <https://github.com/knownsec/rtcp>`_
 - `Tunna <https://github.com/SECFORCE/Tunna>`_
 - `reGeorg <https://github.com/sensepost/reGeorg>`_
+- `gost <https://github.com/ginuerzh/gost>`_ GO Simple Tunnel
 
 漏洞管理
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

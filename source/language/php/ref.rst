@@ -25,3 +25,8 @@ Phar
 - `US Black Hat 2018 Phar <https://i.blackhat.com/us-18/Thu-August-9/us-18-Thomas-Its-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It-wp.pdf>`_
 - `利用 phar 拓展 php 反序列化漏洞攻击面 <https://paper.seebug.org/680/>`_
 - `Phar与Stream Wrapper造成PHP RCE的深入挖掘 <https://blog.zsxsoft.com/post/38>`_
+
+运行
+----------------------------------------
+- `Learning the PHP lifecycle <http://www.phpinternalsbook.com/php7/extensions_design/php_lifecycle.html>`_
+- `PHP7内核剖析 <https://github.com/pangudashu/php7-internal>`_
