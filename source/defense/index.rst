@@ -5,8 +5,8 @@
    :maxdepth: 2
    :caption: Contents:
 
-   mitigation
    team
+   sdl
    threat
    riskcontrol
    reinforce
@@ -14,3 +14,4 @@
    intrusiondetection
    emergency
    forensic
+   misc
