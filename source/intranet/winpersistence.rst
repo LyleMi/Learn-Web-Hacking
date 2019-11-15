@@ -9,6 +9,57 @@
 - 利用Windows保留字
     - ``aux|prn|con|nul|com1|com2|com3|com4|com5|com6|com7|com8|com9|lpt1|lpt2|lpt3|lpt4|lpt5|lpt6|lpt7|lpt8|lpt9``
 
+LOLBAS
+----------------------------------------
+
+简介
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，是一种白利用方式，是在2013年DerbyCon由Christopher Campbell和Matt Graeber发现，最终Philip Goh提出的概念。
+
+这些程序一般有有Microsoft或第三方认证机构的签名，但是除了可以完成正常的功能，也能够被用于内网渗透中。这些程序可能会被用于：下载安全恶意程序、执行恶意代码、绕过UAC、绕过程序控制等。
+
+常见程序
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- bitsadmin.exe
+- cdb.exe
+- certutil.exe
+    - 可安装、备份、删除、管理和执行证书
+    - 证书存储相关功能
+- cmd.exe
+- cmstp.exe
+- csc.exe
+- cscript.exe
+    - 执行脚本
+- expand.exe
+    - 展开一个或多个压缩文件
+- mofcomp.exe
+- msbuild.exe
+    - 构建应用程序
+- mshta.exe
+    - HTML应用
+- netsh.exe
+- installutil.exe
+    - 安装/卸载程序组件
+- powershell.exe
+- psexec.exe
+- reg.exe
+    - 注册表控制台
+- regedit.exe
+    - 注册表修改
+- regsvr32.exe
+    - 注册动态链接库/ActiveX控件
+- rundll32.exe
+    - 执行DLL文件中的内部函数
+- sc.exe
+    - 查看服务状态管理
+- schtasks.exe
+    - 定时计划任务
+- wmic.exe
+    - Windows管理工具
+- windbg.exe
+- wscript.exe
+    - 脚本引擎
+
 后门
 ----------------------------------------
 

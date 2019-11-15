@@ -29,6 +29,12 @@ WebAssembly
 - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
 - `基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_
 
+Proxy Pool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `proxy pool by jhao104 <https://github.com/jhao104/proxy_pool>`_
+- `Proxy Pool by Germey <https://github.com/Python3WebSpider/ProxyPool>`_
+- `scylla <https://github.com/imWildCat/scylla>`_
+
 Android
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `DroidSSLUnpinning <https://github.com/WooyunDota/DroidSSLUnpinning>`_ Android certificate pinning disable tools
