@@ -34,7 +34,7 @@ WebShell
 提权
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `linux exploit suggester <https://github.com/mzet-/linux-exploit-suggester>`_
-- `LinEnum <https://github.com/rebootuser/LinEnum>`_
+- `LinEnum <https://github.com/rebootuser/LinEnum>`_ Scripted Local Linux Enumeration & Privilege Escalation Checks
 - `AutoLocalPrivilegeEscalation <https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_
 - `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
 - `BeRoot <https://github.com/AlessandroZ/BeRoot>`_ Privilege Escalation Project - Windows / Linux / Mac

@@ -19,5 +19,5 @@
    xpath
    logic
    config
-   middleware
+   middleware/index
    webcache
