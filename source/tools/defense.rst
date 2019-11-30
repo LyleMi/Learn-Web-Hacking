@@ -29,9 +29,14 @@ IDS
 - `yulong <https://github.com/ysrc/yulong-hids>`_
 - `AgentSmith <https://github.com/DianrongSecurity/AgentSmith-HIDS>`_
 
-threat intelligence
+威胁情报
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `threatfeeds <https://threatfeeds.io/>`_
+
+APT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `APT Groups and Operations <https://docs.google.com/spreadsheets/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml>`_
+- `APTnotes <https://github.com/kbandla/APTnotes>`_
 
 入侵检查
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

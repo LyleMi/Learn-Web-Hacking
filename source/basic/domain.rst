@@ -136,11 +136,19 @@ RFC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES <https://tools.ietf.org/html/rfc1034>`_
 - `RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION <https://tools.ietf.org/html/rfc1035>`_
+- `RFC 1123 Requirements for Internet Hosts -- Application and Support <https://tools.ietf.org/html/rfc1123>`_
+- `RFC 3596 DNS Extensions to Support IP Version 6 <https://tools.ietf.org/html/rfc3596>`_
+- `RFC 5001 Automated Updates of DNS Security (DNSSEC) Trust Anchors <https://tools.ietf.org/html/rfc5001>`_
 - `RFC 5936 DNS Zone Transfer Protocol <https://tools.ietf.org/html/rfc5936>`_
+- `RFC 6376 DomainKeys Identified Mail (DKIM) Signatures <https://tools.ietf.org/html/rfc6376>`_
 - `RFC 6762 Multicast DNS <https://tools.ietf.org/html/rfc6762>`_
+- `RFC 6891 Extension Mechanisms for DNS (EDNS(0)) <https://tools.ietf.org/html/rfc6891>`_
 - `RFC 6895 DNS IANA Considerations <https://tools.ietf.org/html/rfc6895>`_
+- `RFC 7766 DNS Transport over TCP - Implementation Requirements <https://tools.ietf.org/html/rfc7766>`_
+- `RFC 7858 Specification for DNS over Transport Layer Security (TLS) <https://tools.ietf.org/html/rfc7858>`_
 - `RFC 8082 NXDOMAIN <https://tools.ietf.org/html/rfc8082>`_
 - `RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY <https://tools.ietf.org/html/rfc8482>`_
+- `RFC 8484 DNS Queries over HTTPS (DoH) <https://tools.ietf.org/html/rfc8484>`_
 - `RFC 8490 DNS Stateful Operations <https://tools.ietf.org/html/rfc8490>`_
 - `RFC 8499 DNS Terminology <https://tools.ietf.org/html/rfc8499>`_
 
