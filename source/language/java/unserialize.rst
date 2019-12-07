@@ -8,11 +8,11 @@
 如果要实现类的反序列化，则是对其实现 ``Serializable`` 接口。
 
 序列数据结构
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 + ``0xaced`` 魔术头
 
 序列化流程
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 + ObjectOutputStream实例初始化时，将魔术头和版本号写入bout （BlockDataOutputStream类型） 中
 + 调用ObjectOutputStream.writeObject()开始写对象数据
     + ObjectStreamClass.lookup()封装待序列化的类描述 （返回ObjectStreamClass类型） ，获取包括类名、自定义serialVersionUID、可序列化字段 （返回ObjectStreamField类型） 和构造方法，以及writeObject、readObject方法等
@@ -30,7 +30,7 @@
             + 若类自定义了writeObject()，则调用该方法写对象，否则调用defaultWriteFields()写入对象的字段数据 （若是非原始类型，则递归处理子对象）
 
 反序列化流程
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 + ObjectInputStream实例初始化时，读取魔术头和版本号进行校验
 + 调用ObjectInputStream.readObject()开始读对象数据
     + 读取对象类型标识
@@ -49,8 +49,11 @@
         + readSerialData()读取对象的序列化数据
             + 若类自定义了readObject()，则调用该方法读对象，否则调用defaultReadFields()读取并填充对象的字段数据
 
-相关函数
+Sink
 ----------------------------------------
+
+相关Sink函数
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``ObjectInputStream.readObject``
 - ``ObjectInputStream.readUnshared``
 - ``XMLDecoder.readObject``
@@ -60,29 +63,20 @@
 - ``JSON.parseObject``
 
 主流JSON库
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+主流的JSON库有Gson、Jackson、Fastjson等，因为JSON常在反序列化中使用，所以相关库都有较大的影响。
+
+其中Gson默认只能反序列化基本类型，如果是复杂类型，需要程序员实现反序列化机制，相对比较安全。
+
+Jackson除非指明@jsonAutoDetect，Jackson不会反序列化非public属性。在防御时，可以不使用enableDefaultTyping方法。相关CVE有CVE-2017-7525、CVE-2017-15095。
+
+Fastjson相关CVE有CVE-2017-18349。
+
+漏洞利用
 ----------------------------------------
-
-GSON
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Gson默认只能反序列化基本类型，如果是复杂类型，需要程序员实现反序列化机制，相对比较安全。
-
-Jackson
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-除非指明@jsonAutoDetect，Jackson不会反序列化非public属性。在防御时，可以不使用enableDefaultTyping方法。
-
-相关CVE有
-
-- CVE-2017-7525
-- CVE-2017-15095
-
-Fastjson
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-相关CVE有
-
-- CVE-2017-18349
 
 存在危险的基础库
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``commons-fileupload 1.3.1``
 - ``commons-io 2.4``
 - ``commons-collections 3.1``

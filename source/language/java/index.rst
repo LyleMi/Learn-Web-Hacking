@@ -10,5 +10,7 @@ Java
    container
    sandbox
    unserialize
+   rmi
+   jdni
    ref
    

@@ -7,7 +7,11 @@
 - `LastActivityView <http://www.nirsoft.net/utils/computer_activity_view.html>`_
 - `Regshot <https://sourceforge.net/projects/regshot/>`_
 
-XSS
+终端监控
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `attack monitor <https://github.com/yarox24/attack_monitor>`_ Endpoint detection & Malware analysis software
+
+XSS防护
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `js xss <https://github.com/leizongmin/js-xss>`_
 - `DOMPurify <https://github.com/cure53/DOMPurify>`_
@@ -103,3 +107,4 @@ Security Advisories
 - `nginx security advisories <http://nginx.org/en/security_advisories.html>`_
 - `Jetty Security Reports <https://www.eclipse.org/jetty/documentation/current/security-reports.html>`_
 - `Apache Tomcat <https://tomcat.apache.org/security-8.html>`_
+- `OpenSSL <https://www.openssl.org/news/vulnerabilities.html>`_

@@ -170,3 +170,5 @@ MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof
 - 组策略首选项漏洞
 - DLL劫持
 - 替换系统工具，实现后门
+- 关闭defender
+    - ``Set-MpPreference -disablerealtimeMonitoring $true``

@@ -7,26 +7,18 @@ JVM是Java平台的核心，以机器代码来实现，为程序执行提供了�
 
 JCL是JVM自带的一个标准库，含有数百个系统类。默认情况下，所有系统类都是可信任的，且拥有所有的特权。
 
-JNDI
+JDK
 ----------------------------------------
-JNDI（Java Naming and Directory Interface，JAVA命名和目录接口）是为JAVA应用程序提供命名和目录访问服务的API（Application Programing Interface，应用程序编程接口）。
+Java开发工具包（Java Development Kit，JDK）是Oracle公司发布的Java平台，有标准版（Standard Edition，Java SE）、企业版（Enterprise Edition，Java EE）等版本。
+
+在最开始，JDK以二进制形式发布，而后在2006年11月17日，Sun以GPL许可证发布了Java的源代码，于是之后出现了OpenJDK。
+
+JMX
+----------------------------------------
+JMX（Java Management Extensions，Java管理扩展）是一个为应用程序植入管理功能的框架。
 
 OGNL
 ----------------------------------------
 OGNL（Object-Graph Navigation Language，对象导航语言）是一种功能强大的表达式语言，通过简单一致的表达式语法，提供了存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。
 
 Struts2中使用了OGNL，提供了一个ValueStack类。ValueStack分为root和context两部分。root中是当前的action对象，context中是ActionContext里面所有的内容。
-
-RMI
-----------------------------------------
-RMI（Remote Method Invocation，远程方法调用）能够让在客户端Java虚拟机上的对象像调用本地对象一样调用服务端java虚拟机中的对象上的方法。
-
-RMI远程调用步骤：
-
-- 客户调用客户端辅助对象stub上的方法
-- 客户端辅助对象stub打包调用信息（变量，方法名），通过网络发送给服务端辅助对象skeleton
-- 服务端辅助对象skeleton将客户端辅助对象发送来的信息解包，找出真正被调用的方法以及该方法所在对象
-- 调用真正服务对象上的真正方法，并将结果返回给服务端辅助对象skeleton
-- 服务端辅助对象将结果打包，发送给客户端辅助对象stub
-- 客户端辅助对象将返回值解包，返回给调用者
-- 客户获得返回值

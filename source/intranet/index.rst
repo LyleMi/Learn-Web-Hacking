@@ -8,6 +8,7 @@
    windows
    winpersistence
    linux
+   linuxpersistence
    traceremove
    misc
    ref

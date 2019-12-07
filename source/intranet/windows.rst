@@ -22,13 +22,17 @@
 
 用户信息
 ----------------------------------------
-- 查看用户 ``net user``
+- 查看用户 ``net user`` / ``whoami``
+- 查看当前权限 ``net localgroup administrators``
 - 查看在线用户 ``qwinsta`` / ``query user``
 - 查看当前计算机名，全名，用户名，系统版本，工作 站域，登陆域 ``net config Workstation``
 
 网络信息
 ----------------------------------------
-- 域控信息 ``nltest /dclist:xx``
+- 域控信息
+    - ``nltest /dclist:xx``
+    - ``Get-NetDomain``
+    - ``Get-NetDomainController``
 - 内网网段信息
 - 网卡信息 ``ipconfig``
 - 外网出口
