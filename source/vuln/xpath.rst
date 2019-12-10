@@ -3,9 +3,7 @@ Xpath注入
 
 Xpath定义
 --------------------------------
-
 XPath注入攻击是指利用XPath解析器的松散输入和容错特性，能够在 URL、表单或其它信息上附带恶意的XPath 查询代码，以获得权限信息的访问权并更改这些信息。XPath注入攻击是针对Web服务应用新的攻击方法，它允许攻击者在事先不知道XPath查询相关知识的情况下，通过XPath查询得到一个XML文档的完整内容。
-
 
 Xpath注入攻击原理
 --------------------------------
@@ -30,12 +28,8 @@ Xpath注入攻击原理
              <password>123test</password>
          </user>
 
-则在XPath中其典型的查询语句如下：
+则在XPath中其典型的查询语句为： ``//users/user[loginID/text()='xyz'and password/text()='123test']``
 
-//users/user[loginID/text()='xyz'and password/text()='123test']
+但是，可以采用如下的方法实施注入攻击，绕过身份验证。如果用 户传入一个 login 和 password，例如 ``loginID = 'xyz' 和 password = '123test'`` ，则该查询语句将返回 true。但如果用户传入类似 ``' or 1=1 or ''='`` 的值，那么该查询语句也会得到 true 返回值，因为 XPath 查询语句最终会变成如下代码：``//users/user[loginID/text()=''or 1=1 or ''='' and password/text()='' or 1=1 or ''='']``
 
-但是，可以采用如下的方法实施注入攻击，绕过身份验证。如果用 户传入一个 login 和 password，例如 loginID = 'xyz' 和 password = '123test'，则该查询语句将返回 true。但如果用户传入类似 ' or 1=1 or ''=' 的值，那么该查询语句也会得到 true 返回值，因为 XPath 查询语句最终会变成如下代码：
-
-//users/user[loginID/text()=''or 1=1 or ''='' and password/text()='' or 1=1 or ''='']
-
-\这个字符串会在逻辑上使查询一直返回 true 并将一直允许攻击者访问系统。攻击者可以利用 XPath 在应用程序中动态地操作 XML 文档。攻击完成登录可以再通过XPath盲入技术获取最高权限帐号和其它重要文档信息。
+这个字符串会在逻辑上使查询一直返回 true 并将一直允许攻击者访问系统。攻击者可以利用 XPath 在应用程序中动态地操作 XML 文档。攻击完成登录可以再通过XPath盲入技术获取最高权限帐号和其它重要文档信息。

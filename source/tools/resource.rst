@@ -3,15 +3,31 @@
 
 书单推荐
 --------------------------------
+
+前端
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Web之困
 - 白帽子讲Web安全
 - Web前端黑客技术揭秘
 - XSS跨站脚本攻击剖析与防御
 
+网络
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Understanding linux network internals
+- TCP/IP Architecture, Design, and Implementation in Linux
+- Linux Kernel Networking: Implementation and Theory
+- Bulletproof SSL and TLS
+- UNIX Network Programming
+
+Hacking Programming
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Gray Hat Python
+
 Blog
 --------------------------------
 - https://www.leavesongs.com/
 - https://paper.seebug.org/
+- https://xz.aliyun.com/
 - https://portswigger.net/blog
 - https://www.hackerone.com/blog
 

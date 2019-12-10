@@ -3,9 +3,9 @@
 
 简介
 ----------------------------------------
-序列化就是把对象转换成字节流，便于保存在内存、文件、数据库中；反序列化即逆过程，由字节流还原成对象。Java中的 ``ObjectOutputStream`` 类的 ``writeObject()`` 方法可以实现序列化，类 ``ObjectInputStream类的readObject()`` 方法用于反序列化。
+序列化就是把对象转换成字节流，便于保存在内存、文件、数据库中；反序列化即逆过程，由字节流还原成对象。一般用于远程调用、通过网络将对象传输至远程服务器、存储对象到数据库或本地等待重用等场景中。Java中的 ``ObjectOutputStream`` 类的 ``writeObject()`` 方法可以实现序列化，类 ``ObjectInputStream类的readObject()`` 方法用于反序列化。如果要实现类的反序列化，则是对其实现 ``Serializable`` 接口。
 
-如果要实现类的反序列化，则是对其实现 ``Serializable`` 接口。
+当远程服务接受不可信的数据并进行反序列化且当前环境中存在可利用的类时，就认为存在反序列化漏洞。
 
 序列数据结构
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,6 +62,17 @@ Sink
 - ``ObjectMapper.readValue``
 - ``JSON.parseObject``
 
+Magic Call
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+以下的魔术方法都会在反序列化过程中被自动的调用。
+
+- ``readObject``
+- ``readExternal``
+- ``readResolve``
+- ``readObjectNoData``
+- ``validateObject``
+- ``finalize``
+
 主流JSON库
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 主流的JSON库有Gson、Jackson、Fastjson等，因为JSON常在反序列化中使用，所以相关库都有较大的影响。
@@ -97,7 +108,7 @@ Hook resolveClass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 在使用 ``readObject()`` 反序列化时会调用 ``resolveClass`` 方法读取反序列化的类名，可以通过hook该方法来校验反序列化的类，一个Demo如下
 
-::
+.. code:: java
 
     @Override
     protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
@@ -109,13 +120,13 @@ Hook resolveClass
         return super.resolveClass(desc);
     }
 
-以上的Demo就只允许序列化 ``SerialObject`` ，通过这种方式，就可以设置允许序列化的白名单
+以上的Demo就只允许序列化 ``SerialObject`` ，通过这种方式，就可以设置允许序列化的白名单，来防止反序列化漏洞被利用。SerialKiller/Jackson/Weblogic等都使用了这种方式来防御。
 
 ValidatingObjectInputStream
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Apache Commons IO Serialization包中的 ``ValidatingObjectInputStream`` 类提供了 ``accept`` 方法，可以通过该方法来实现反序列化类白/黑名单控制，一个demo如下
 
-::
+.. code:: java
 
     private static Object deserialize(byte[] buffer) throws IOException, ClassNotFoundException , ConfigurationException {
         Object obj;
@@ -126,6 +137,11 @@ Apache Commons IO Serialization包中的 ``ValidatingObjectInputStream`` 类提�
         return obj;
     }
 
-ObjectInputFilter
+ObjectInputFilter(JEP290)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Java 9提供了支持序列化数据过滤的新特性，可以继承 ``java.io.ObjectInputFilter`` 类重写 ``checkInput`` 方法来实现自定义的过滤器，并使用 ``ObjectInputStream`` 对象的 ``setObjectInputFilter`` 设置过滤器来实现反序列化类白/黑名单控制。
+Java 9提供了支持序列化数据过滤的新特性，可以继承 ``java.io.ObjectInputFilter`` 类重写 ``checkInput`` 方法来实现自定义的过滤器，并使用 ``ObjectInputStream`` 对象的 ``setObjectInputFilter`` 设置过滤器来实现反序列化类白/黑名单控制。这个机制本身是针对Java 9的一个新特性，但是随后官方突然决定向下引进该增强机制，分别对JDK 6,7,8进行了支持。这个机制主要描述了如下的机制：
+
+- 提供一个限制反序列化类的机制，白名单或者黑名单
+- 限制反序列化的深度和复杂度
+- 为RMI远程调用对象提供了一个验证类的机制
+- 定义一个可配置的过滤机制，比如可以通过配置properties文件的形式来定义过滤器
