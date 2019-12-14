@@ -34,7 +34,7 @@ Fuzz注入点
 
 测试列数
 --------------------------------------
-例如 ``http://www.foo.com/index.asp?id=12+union+select+nulll,null--`` ，不断增加 ``null`` 至不返回
+例如 ``http://www.foo.com/index.asp?id=12+union+select+null,null--`` ，不断增加 ``null`` 至不返回
 
 报错注入
 --------------------------------------

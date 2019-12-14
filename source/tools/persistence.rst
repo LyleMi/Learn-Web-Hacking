@@ -35,14 +35,24 @@ WebShell
 - `sshLooter <https://github.com/mthbernardes/sshLooter>`_
 - `keychaindump <https://github.com/juuso/keychaindump>`_
 
-提权
+Linux提权
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `linux exploit suggester <https://github.com/mzet-/linux-exploit-suggester>`_
 - `LinEnum <https://github.com/rebootuser/LinEnum>`_ Scripted Local Linux Enumeration & Privilege Escalation Checks
 - `AutoLocalPrivilegeEscalation <https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_
+
+Windows提权
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
-- `BeRoot <https://github.com/AlessandroZ/BeRoot>`_ Privilege Escalation Project - Windows / Linux / Mac
 - `GTFOBins <https://github.com/GTFOBins/GTFOBins.github.io>`_ Curated list of Unix binaries that can be exploited to bypass system security restrictions
+
+提权
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `BeRoot <https://github.com/AlessandroZ/BeRoot>`_ Privilege Escalation Project - Windows / Linux / Mac
+
+UAC Bypass
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `UAC Bypass In The Wild <https://github.com/sailay1996/UAC_Bypass_In_The_Wild>`_
 
 RAT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
