@@ -21,3 +21,4 @@
    config
    middleware/index
    webcache
+   httpSmuggling
