@@ -9,5 +9,6 @@
    python/index
    java/index
    javascript/index
+   golang
    ruby
    asp
