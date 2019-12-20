@@ -8,3 +8,4 @@
    unicode
    dos
    docker
+   search

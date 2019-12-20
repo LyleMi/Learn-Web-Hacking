@@ -45,6 +45,7 @@ Windows提权
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
 - `GTFOBins <https://github.com/GTFOBins/GTFOBins.github.io>`_ Curated list of Unix binaries that can be exploited to bypass system security restrictions
+- `UACME <https://github.com/hfiref0x/UACME>`_ Defeating Windows User Account Control
 
 提权
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

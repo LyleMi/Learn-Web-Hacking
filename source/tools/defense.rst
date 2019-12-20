@@ -36,6 +36,7 @@ IDS
 威胁情报
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `threatfeeds <https://threatfeeds.io/>`_
+- `abuseipdb <https://www.abuseipdb.com/>`_
 
 APT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
