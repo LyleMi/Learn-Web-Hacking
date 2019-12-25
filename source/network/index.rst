@@ -10,3 +10,5 @@
    route
    domain
    http
+   ssl
+   ipsec
