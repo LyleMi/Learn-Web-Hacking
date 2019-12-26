@@ -7,8 +7,10 @@
 
    basic
    udp
+   tcp
    route
    domain
    http
+   https
    ssl
    ipsec
