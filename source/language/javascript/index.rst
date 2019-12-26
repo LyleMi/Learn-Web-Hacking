@@ -7,6 +7,7 @@ JavaScript
 
    ECMAScript
    engine
+   wasm
    scope
    strict
    async

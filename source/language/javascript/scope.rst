@@ -90,3 +90,9 @@
     console.log(Counter.value()); /* logs 2 */
     Counter.decrement();
     console.log(Counter.value()); /* logs 1 */
+
+全局对象
+----------------------------------------
+全局对象是一个特殊的对象，它的作用域是全局的。
+
+全平台可用的全局对象是 ``globalThis`` ，它跟全局作用域里的this值相同。另外在浏览器中存在 ``self`` 和 ``window`` 全局对象，Web Workers中存在 ``self`` 全局对象，Node.js 中存在 ``global`` 全局对象。
