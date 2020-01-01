@@ -9,3 +9,4 @@ CheatSheet
    mysql
    psql
    oracle
+   sqlite3
