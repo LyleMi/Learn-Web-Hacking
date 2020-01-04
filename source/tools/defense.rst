@@ -10,6 +10,7 @@
 终端监控
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `attack monitor <https://github.com/yarox24/attack_monitor>`_ Endpoint detection & Malware analysis software
+- `artillery <https://github.com/BinaryDefense/artillery>`_ The Artillery Project is an open-source blue team tool designed to protect Linux and Windows operating systems through multiple methods.
 
 XSS防护
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
