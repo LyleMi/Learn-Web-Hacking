@@ -10,6 +10,7 @@ PHP
    disablefunc
    basedir
    phpinfo
+   stream
    htaccess
    webshell
    phar
