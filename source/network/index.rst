@@ -8,6 +8,7 @@
    basic
    udp
    tcp
+   dhcp
    route
    domain
    http
