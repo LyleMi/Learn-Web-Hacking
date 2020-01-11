@@ -11,6 +11,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `attack monitor <https://github.com/yarox24/attack_monitor>`_ Endpoint detection & Malware analysis software
 - `artillery <https://github.com/BinaryDefense/artillery>`_ The Artillery Project is an open-source blue team tool designed to protect Linux and Windows operating systems through multiple methods.
+- `yurita <https://github.com/paypal/yurita>`_ Anomaly detection framework @ PayPal
 
 XSS防护
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,6 +21,7 @@ XSS防护
 
 配置检查
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Attack Surface Analyzer <https://github.com/microsoft/AttackSurfaceAnalyzer>`_ analyze operating system's security configuration for changes during software installation.
 - `gixy <https://github.com/yandex/gixy>`_ Nginx 配置检查工具
 - `dockerscan <https://github.com/cr0hn/dockerscan>`_ Docker security analysis & hacking tools
 
@@ -110,3 +112,7 @@ Security Advisories
 - `Jetty Security Reports <https://www.eclipse.org/jetty/documentation/current/security-reports.html>`_
 - `Apache Tomcat <https://tomcat.apache.org/security-8.html>`_
 - `OpenSSL <https://www.openssl.org/news/vulnerabilities.html>`_
+
+风险控制
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎
