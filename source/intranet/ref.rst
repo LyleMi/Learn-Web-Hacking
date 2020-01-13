@@ -3,12 +3,17 @@
 
 Windows
 ----------------------------------------
-- `got domain admin on internal network <https://medium.com/@adam.toscher/top-five-ways-i-got-domain-admin-on-your-internal-network-before-lunch-2018-edition-82259ab73aaa>`_
 - `Windows内网渗透提权 <https://www.freebuf.com/articles/system/114731.html>`_
 - `文件寄生 NTFS文件流实际应用 <https://gh0st.cn/archives/2017-03-29/1>`_
-- `绕过域账户登录失败次数的限制 <https://nosec.org/home/detail/2510.html>`_
 - `Windows中常见后门持久化方法总结  <https://xz.aliyun.com/t/6461>`_
 - `LOLBAS <https://lolbas-project.github.io/#>`_
+
+域渗透
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `绕过域账户登录失败次数的限制 <https://nosec.org/home/detail/2510.html>`_
+- `域渗透总结 <https://mp.weixin.qq.com/s?__biz=Mzg3NzE5OTA5NQ==&mid=2247483807&idx=1&sn=59be50aa5cc735f055db596269a857ce>`_
+- `got domain admin on internal network <https://medium.com/@adam.toscher/top-five-ways-i-got-domain-admin-on-your-internal-network-before-lunch-2018-edition-82259ab73aaa>`_
+- Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques <http://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf>`_
 
 RedTeam
 ----------------------------------------

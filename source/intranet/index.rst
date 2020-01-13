@@ -7,6 +7,7 @@
 
    windows
    winpersistence
+   domain
    linux
    linuxpersistence
    traceremove
