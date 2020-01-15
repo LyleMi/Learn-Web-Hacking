@@ -33,3 +33,4 @@ Windows不允许空格和点以及一些特殊字符作为结尾，创建这样�
 参考链接
 ----------------------------------------
 - `利用Windows特性高效猜测目录 <https://xz.aliyun.com/t/2318>`_
+- `Uploading web.config for Fun and Profit 2 <https://soroush.secproject.com/blog/2019/08/uploading-web-config-for-fun-and-profit-2/>`_
