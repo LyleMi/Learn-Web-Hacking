@@ -10,6 +10,10 @@ OSINT
 - `Photon <https://github.com/s0md3v/Photon>`_
 - `pockint <https://github.com/netevert/pockint>`_
 
+社交工具
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `SlackPirate <https://github.com/emtunc/SlackPirate>`_ Slack Enumeration and Extraction Tool - extract sensitive information from a Slack Workspace
+
 个人搜索
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `pipl <https://pipl.com/>`_

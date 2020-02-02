@@ -91,7 +91,7 @@ HTTP标准
     - If-None-Match: "737060cd8c284d8af7ad3082f209582d"
 - If-Range
     - 如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为Etag
-    - If-Range: “737060cd8c284d8af7ad3082f209582d”
+    - If-Range: "737060cd8c284d8af7ad3082f209582d"
 - If-Unmodified-Since
     - 只在实体在指定时间之后未被修改才请求成功
     - If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT

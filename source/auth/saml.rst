@@ -29,3 +29,4 @@ SAML的认证涉及到三个角色，分别为服务提供者(SP)、认证服务
 ----------------------------------------
 - `SAML Wiki <https://en.wikipedia.org/wiki/SAML_2.0>`_
 - `RFC7522 <https://tools.ietf.org/html/rfc7522>`_
+- `SSO Wars The Token Menace <https://i.blackhat.com/USA-19/Wednesday/us-19-Munoz-SSO-Wars-The-Token-Menace.pdf>`_
