@@ -12,4 +12,5 @@ SQL注入
    bypass
    tricks
    cheatsheet/index
+   precompile
    ref
