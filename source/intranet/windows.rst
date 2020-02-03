@@ -60,6 +60,9 @@
 ----------------------------------------
 - 查看补丁安装情况
     - ``wmic qfe get Caption,Description,HotFixID,InstalledOn``
+- 日志与事件信息
+    - ``wevtutil``
 - 注册表信息
+    - ``reg``
 - 安装的监控软件
 - 安装的杀毒软件

@@ -10,3 +10,4 @@
    jwt
    kerberos
    saml
+   windows
