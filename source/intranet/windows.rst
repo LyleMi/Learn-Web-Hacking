@@ -44,6 +44,8 @@
     - ``netsh firewall show config``
     - ``netsh firewall show state``
 - hosts文件
+- DNS缓存
+    - ``Get-CimInstance -Namespace root/StandardCimv2 -ClassName MSFT_DNSClientCache``
 
 密码信息
 ----------------------------------------
