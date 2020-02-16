@@ -51,6 +51,7 @@ Bypass
 ---------------------------------
 - LD_PRELOAD绕过
     - https://github.com/yangyangwithgnu/bypass_disablefunc_via_LD_PRELOAD
+    - ``mail()`` + ``putenv``
 - PHP OPcache
 - Mail函数
 - imap_open

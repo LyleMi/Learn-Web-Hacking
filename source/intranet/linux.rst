@@ -15,6 +15,7 @@
     - ``cat /etc/issue``
 - 主机名 ``hostname``
 - 文件系统 ``df -a``
+- 内核日志 ``dmesg`` / ``/var/log/dmesg``
 
 用户和组
 ----------------------------------------
@@ -23,10 +24,15 @@
 - 列出所有用户hash（root）``cat /etc/shadow``
 - 用户
     - 查询用户的基本信息 ``finger``
-    - 当前登录的用户 ``users`` ``who -a``
+    - 当前登录的用户 ``users`` ``who -a`` ``/var/log/utmp``
 - 目前登录的用户 ``w``
-- 登入过的用户信息 ``last``
-- 显示系统中所有用户最近一次登录信息 ``lastlog``
+- 登入过的用户信息 ``last`` / ``/var/log/wtmp``
+- 显示系统中所有用户最近一次登录信息 ``lastlog`` / ``/var/log/lastlog``
+- 登录成功日志 ``/var/log/secure``
+- 登录失败日志 ``/var/log/faillog``
+- 查看特权用户 ``grep :0 /etc/passwd``
+- 查看passwd最后修改时间 ``ls -l /etc/passwd``
+- 查看是否存在空口令用户 ``awk -F: 'length($2)==0 {print $1}' /etc/shadow``
 
 用户和权限信息
 ----------------------------------------
@@ -40,22 +46,36 @@
 - 打印系统环境信息 ``env``
 - 打印系统环境信息 ``set``
 - 环境变量中的路径信息 ``echo  $PATH``
-- 打印历史命令 ``history``
+- 打印历史命令 ``history`` / ``~/.bash_history``
 - 显示当前路径 ``pwd``
 - 显示默认系统遍历 ``cat /etc/profile``
 - 显示可用的shell ``cat /etc/shells``
 
-服务信息
+进程信息
 ----------------------------------------
 - 查看进程信息 ``ps aux``
+- 资源占有情况 ``top -c``
+- 查看进程关联文件 ``lsof -c $PID``
+
+服务信息
+----------------------------------------
 - 由inetd管理的服务列表 ``cat /etc/inetd.conf``
 - 由xinetd管理的服务列表 ``cat /etc/xinetd.conf``
 - nfs服务器的配置 ``cat /etc/exports``
+- 邮件信息 ``/var/log/mailog``
 
-作业和任务
+计划任务
 ----------------------------------------
 - 显示指定用户的计划作业（root） ``crontab -l -u %user%``
-- 计划任务 ``ls -la /etc/cron*``
+- 计划任务
+    - ``/var/spool/cron/*``
+    - ``/var/spool/anacron/*``
+    - ``/etc/crontab``
+    - ``/etc/anacrontab``
+    - ``/etc/cron.*``
+    - ``/etc/anacrontab``
+- 开机启动项
+    - ``/etc/rc.d/init.d/``
 
 网络、路由和通信
 ----------------------------------------
@@ -68,6 +88,7 @@
 - 列出iptable的配置规则 ``iptables -L``
 - 查看端口服务映射 ``cat /etc/services``
 - Hostname ``hostname -f``
+- 查看进程端口情况 ``netstat -anltp | grep $PID``
 
 已安装程序
 ----------------------------------------

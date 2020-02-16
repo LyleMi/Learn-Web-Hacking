@@ -55,3 +55,5 @@ Kerberos
 参考链接
 ----------------------------------------
 - `Kerberos认证流程详解 <https://blog.csdn.net/jewes/article/details/20792021>`_
+- `Delegate to the Top: Abusing Kerberos for arbitrary impersonations and RCE <https://www.blackhat.com/docs/asia-17/materials/asia-17-Hart-Delegate-To-The-Top-Abusing-Kerberos-For-Arbitrary-Impersonations-And-RCE-wp.pdf>`_
+- `Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94?redirectedfrom=MSDN>`_

@@ -9,7 +9,7 @@ PHP
    unserialize
    disablefunc
    basedir
-   phpinfo
+   config
    stream
    htaccess
    webshell

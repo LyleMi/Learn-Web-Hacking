@@ -4,6 +4,7 @@
 Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `WinPwnage <https://github.com/rootm0s/WinPwnage>`_
+- `RdpThief <https://github.com/0x09AL/RdpThief>`_ Extracting Clear Text Passwords from mstsc.exe using API Hooking
 
 WebShell连接工具
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
