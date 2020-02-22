@@ -66,6 +66,13 @@ C2
 - `Empire <https://github.com/EmpireProject/Empire>`_
 - `pupy <https://github.com/n1nj4sec/pupy>`_
 
+转发
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `reDuh <https://github.com/sensepost/reDuh>`_ Create a TCP circuit through validly formed HTTP requests
+- `reGeorg <https://github.com/sensepost/reGeorg>`_ pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn
+- `Neo-reGeorg <https://github.com/L-codes/Neo-reGeorg>`_ Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+- `ABPTTS <https://github.com/nccgroup/ABPTTS>`_ TCP tunneling over HTTP/HTTPS for web application servers
+
 日志清除
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Log killer <https://github.com/Rizer0/Log-killer>`_

@@ -124,7 +124,7 @@ DGA（Domain Generate Algorithm，域名生成算法）是一种利用随机字�
 
 DGA域名有多种生成方式，根据种子类型可以分为确定性和不确定性的生成。不确定性的种子可能会选用当天的一些即时数据，如汇率信息等。
 
-安全机制
+加密方案
 ----------------------------------------
 作为主流的防御方案，DNS加密有五种方案，分别是 DNS-over-TLS (DoT)、DNS-over-DTLS、DNS-over-HTTPS (DoH)、DNS-over-QUIC以及DNSCrypt。
 
@@ -183,5 +183,6 @@ RFC
 研究文章
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `DGA域名的今生前世：缘起、检测、与发展  <https://mp.weixin.qq.com/s/xbf0Qbppk8R0nx89Pb4YTg>`_
+- `DNSSEC原理和分析 <https://blog.thecjw.me/?p=1221>`_
 - Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study of domain generating malware[C]//25th {USENIX} Security Symposium ({USENIX} Security 16). 2016: 263-278.
 - An End-to-End Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?
