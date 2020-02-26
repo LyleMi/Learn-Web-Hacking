@@ -10,3 +10,4 @@
    unicode
    dos
    docker
+   apt
