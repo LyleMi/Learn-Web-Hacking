@@ -5,6 +5,8 @@
 ----------------------------------------
 - `ognl <http://commons.apache.org/proper/commons-ognl/>`_
 - `Java SE Security Guide <https://docs.oracle.com/javase/9/security/toc.htm>`_
+- `Java RMI Release Notes for JDK 6 <https://docs.oracle.com/javase/7/docs/technotes/guides/rmi/relnotes.html>`_
+- `Java Release Notes for JDK 7 <https://www.oracle.com/technetwork/java/javase/7u21-relnotes-1932873.html>`_
 
 反序列化
 ----------------------------------------
@@ -39,3 +41,4 @@ JNDI
 - `Overview of JNDI <https://docs.oracle.com/javase/tutorial/jndi/overview/index.html>`_
 - `关于 JNDI 注入 <https://paper.seebug.org/417/>`_
 - `A Journey From JNDI LDAP Manipulation To RCE <https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf>`_
+- ` 如何绕过高版本JDK的限制进行JNDI注入 <https://www.freebuf.com/column/207439.html>`_

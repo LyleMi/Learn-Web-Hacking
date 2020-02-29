@@ -11,6 +11,7 @@ Java
    sandbox
    unserialize
    rmi
-   jdni
+   jndi
+   jdk
    ref
    

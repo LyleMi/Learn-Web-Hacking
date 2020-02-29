@@ -19,6 +19,8 @@ Tomcat服务器是由一系列可配置的组件构成的，其中核心组件�
 
 相关CVE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- CVE-2020-1938
+    - https://www.freebuf.com/vuls/228108.html
 - CVE-2019-0232
     - 远程代码执行
     - https://github.com/pyn3rd/CVE-2019-0232/
@@ -70,6 +72,9 @@ WebLogic对业内多种标准的全面支持，包括EJB、JSP、Servlet、JMS�
 - CVE-2018-2894
     - 任意文件上传
     - https://xz.aliyun.com/t/2458
+- CVE-2018-2893
+    - 反序列化
+    - https://www.freebuf.com/vuls/178105.html
 - CVE-2018-2628
     - https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA
 - CVE-2018-1258
