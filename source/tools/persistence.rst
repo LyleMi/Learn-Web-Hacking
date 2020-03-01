@@ -25,6 +25,8 @@ WebShell
 - `pwnginx <https://github.com/t57root/pwnginx>`_
 - `Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-Module-Backdoor>`_
 - `SharpGen <https://github.com/cobbr/SharpGen>`_  .NET Core console application that utilizes the Rosyln C# compiler to quickly cross-compile .NET Framework console applications or libraries
+- `IIS-Raid <https://github.com/0x09AL/IIS-Raid>`_ A native backdoor module for Microsoft IIS
+
 
 隐藏
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

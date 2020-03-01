@@ -120,6 +120,12 @@ Tomcat
 - 用户权限配置
 - 配置超时时间防DoS
 
+密码管理策略
+----------------------------------------
+- 长度不少于8个字符
+- 不存在于已有字典之中
+- 不使用基于知识的认证方式
+
 参考链接
 ----------------------------------------
 - `awesome windows domain hardening <https://github.com/PaulSec/awesome-windows-domain-hardening>`_

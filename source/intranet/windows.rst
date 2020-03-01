@@ -10,6 +10,8 @@
 - 查看所有环境变量 ``set``
 - 查看计划任务 ``schtasks /QUERY /fo LIST /v``
 - 查看安装驱动 ``DRIVERQUERY``
+- 查看操作系统架构 ``wmic os get osarchitecture``
+- 查看逻辑盘 ``wmic logicaldisk get caption``
 
 域信息
 ----------------------------------------
@@ -22,7 +24,8 @@
 
 用户信息
 ----------------------------------------
-- 查看用户 ``net user`` / ``whoami``
+- 查看用户 ``net user`` / ``whoami`` / ``whoami /all``
+- 用户特权信息 ``whoami /priv``
 - 查看当前权限 ``net localgroup administrators``
 - 查看在线用户 ``qwinsta`` / ``query user``
 - 查看当前计算机名，全名，用户名，系统版本，工作 站域，登陆域 ``net config Workstation``
