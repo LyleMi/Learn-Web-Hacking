@@ -11,7 +11,8 @@
    socialengineering
    fuzz
    exploit
-   persistence
+   webpersistence
+   ospersistence
    defense
    operation
    misc

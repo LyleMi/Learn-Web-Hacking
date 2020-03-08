@@ -33,6 +33,9 @@
 - 查看特权用户 ``grep :0 /etc/passwd``
 - 查看passwd最后修改时间 ``ls -l /etc/passwd``
 - 查看是否存在空口令用户 ``awk -F: 'length($2)==0 {print $1}' /etc/shadow``
+- 查看远程登录的账号 ``awk '/\$1|\$6/{print $1}' /etc/shadow``
+- 查看具有sudo权限的用户
+    - ``cat /etc/sudoers | grep -v "^#\|^$" | grep "ALL=(ALL)"``
 
 用户和权限信息
 ----------------------------------------

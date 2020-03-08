@@ -148,10 +148,13 @@ MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Windows本地密码散列导出工具
     - mimikatz
+    - lsass
     - wce
     - gsecdump
     - copypwd
     - Pwdump
+    - ProcDump
+        - https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
 - Windows本地密码破解工具
     - L0phtCrack
     - SAMInside
@@ -164,6 +167,7 @@ MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof
 - ntdsdump
 - 利用powershell(DSInternals)分析hash
 - 使用 ``net use \\%computername% /u:%username%`` 重置密码尝试次数
+- 限制读取时，可crash操作系统后，在蓝屏的dump文件中读取
 
 其他
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
