@@ -11,7 +11,6 @@
    dhcp
    route
    domain
-   http
-   https
+   http/index
    ssl
    ipsec
