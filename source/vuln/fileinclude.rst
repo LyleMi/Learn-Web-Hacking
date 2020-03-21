@@ -65,6 +65,10 @@ msdn定义 ``#define MAX_PATH 260``，其中第260个字符为字符串结尾的
 - Base64: 使用Base64伪协议读取文件，payload为 ``?file=php://filter/convert.base64-encode/resource=index.php`` 的形式
 - data: 使用data伪协议读取文件，payload为 ``?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=`` 的形式，要求 ``allow_url_include=On``
 
+协议绕过
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``allow_url_fopen`` 和 ``allow_url_include`` 主要是针对 ``http`` ``ftp`` 两种协议起作用，因此可以使用SMB、WebDav协议等方式来绕过限制。
+
 参考链接
 ----------------------------------------
 - `Exploit with PHP Protocols <https://www.cdxy.me/?p=752>`_

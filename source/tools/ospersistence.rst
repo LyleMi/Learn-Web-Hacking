@@ -61,3 +61,7 @@ C2
 日志清除
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Log killer <https://github.com/Rizer0/Log-killer>`_ Clear all logs in [linux/windows] servers
+
+Botnet
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `byob <https://github.com/malwaredllc/byob>`_ Build Your Own Botnet

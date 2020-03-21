@@ -8,5 +8,4 @@
    httponly
    cssi
    gadget
-   jsfuck
    rpo

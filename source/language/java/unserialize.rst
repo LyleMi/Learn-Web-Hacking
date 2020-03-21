@@ -49,40 +49,6 @@
         + readSerialData()读取对象的序列化数据
             + 若类自定义了readObject()，则调用该方法读对象，否则调用defaultReadFields()读取并填充对象的字段数据
 
-Sink
-----------------------------------------
-
-相关Sink函数
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``ObjectInputStream.readObject``
-- ``ObjectInputStream.readUnshared``
-- ``XMLDecoder.readObject``
-- ``Yaml.load``
-- ``XStream.fromXML``
-- ``ObjectMapper.readValue``
-- ``JSON.parseObject``
-
-Magic Call
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-以下的魔术方法都会在反序列化过程中被自动的调用。
-
-- ``readObject``
-- ``readExternal``
-- ``readResolve``
-- ``readObjectNoData``
-- ``validateObject``
-- ``finalize``
-
-主流JSON库
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-主流的JSON库有Gson、Jackson、Fastjson等，因为JSON常在反序列化中使用，所以相关库都有较大的影响。
-
-其中Gson默认只能反序列化基本类型，如果是复杂类型，需要程序员实现反序列化机制，相对比较安全。
-
-Jackson除非指明@jsonAutoDetect，Jackson不会反序列化非public属性。在防御时，可以不使用enableDefaultTyping方法。相关CVE有CVE-2017-7525、CVE-2017-15095。
-
-Fastjson相关CVE有CVE-2017-18349。
-
 漏洞利用
 ----------------------------------------
 

@@ -14,5 +14,6 @@ JavaScript
    prototype
    vm
    deserialization
+   jsfuck
    misc
    ref

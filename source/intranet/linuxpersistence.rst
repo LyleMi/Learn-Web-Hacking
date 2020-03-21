@@ -17,5 +17,12 @@
 
 后门
 ----------------------------------------
-- strace 后门
+- ssh 后门
     - ``alias ssh='strace -o /tmp/.ssh.log -e read,write,connect -s 2048 ssh'``
+    - 后门账户
+- 常见应用
+    - ICMP
+    - DNS
+- 后门端口复用
+- ``.`` 开头隐藏文件
+- rootkit

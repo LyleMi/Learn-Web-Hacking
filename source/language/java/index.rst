@@ -13,5 +13,6 @@ Java
    rmi
    jndi
    jdk
+   sink
    ref
    
