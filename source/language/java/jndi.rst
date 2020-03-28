@@ -52,6 +52,6 @@ RMI + JNDI Reference
 
 LDAP + JNDI Reference
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-LDAP服务的Reference远程加载Factory类不受 ``com.sun.jndi.rmi.object.trustURLCodebase`` 、``com.sun.jndi.cosnaming.object.trustURLCodebase`` 等属性的限制，适用范围更广。
+Java的LDAP可以在属性值中存储特定的Java对象，且LDAP服务的Reference远程加载Factory类不受 ``com.sun.jndi.rmi.object.trustURLCodebase`` 、``com.sun.jndi.cosnaming.object.trustURLCodebase`` 等属性的限制，适用范围更广。
 
 .. |jndiarch| image:: ../../images/jndiarch.gif

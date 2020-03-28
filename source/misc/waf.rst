@@ -76,9 +76,12 @@ WAF指纹
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 字符集解析不同
 - 协议覆盖不全
+    - POST的JSON传参 / ``form-data`` / ``multipart/form-data``
 - 协议解析不正确
 - 站点和WAF对https有部分不一致
 - WAF解析与Web服务解析不一致
+    - 部分ASP+IIS会转换 ``%u0065`` 格式的字符
+    - Apache会解析畸形Method
     - 同一个参数多次出现，取的位置不一样
     - HTTP Parameter Pollution (HPP)
     - HTTP Parameter Fragmentation (HPF)

