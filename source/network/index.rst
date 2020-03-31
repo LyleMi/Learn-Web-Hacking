@@ -14,3 +14,4 @@
    http/index
    ssl
    ipsec
+   wifi
