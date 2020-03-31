@@ -1,6 +1,68 @@
 Unicode
 ========================================
 
+基本概念
+----------------------------------------
+
+BMP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BMP (Basic Multilingual Plane)，译作基本多文种平面，是Unicode中的一个编码区块。
+
+码平面
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unicode编码点分为17个平面（plane），每个平面包含2^16（即65536）个码位。17个平面的码位可表示为从U+xx0000到U+xxFFFF，其中xx表示十六进制值从0016到1016，共计17个平面。
+
+Code Point
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Code Point也被称作Code Position，译作码位或编码位置，是指组成代码空间的数值。
+
+Code Unit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+指某种 Unicode 编码方式里编码一个 Code Point 需要的最少字节数，比如 UTF-8 需要最少一个字节，UTF-16 最少两个字节，UCS-2 两个字节，UCS-4 和 UTF-32 四个字节。
+
+Surrogate Pair
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Surrogate Pair 是用于 UTF-16 的以向后兼容 UCS-2 的，做法是取 UCS-2 范围里的 0xD800~0xDBFF (称为 high surrogates) 和 0xDC00~0xDFFF (称为 low surrogates) 的码位，一个 high surrogate 接一个 low surrogate 拼成四个字节表示超出 BMP 的字符，两个 surrogate range 都是 1024 个码位，所以 surrogate pair 可以表达 1024 x 1024 = 1048576 = 0x100000 个字符。
+
+Combining Character
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+例如 ``He̊llö`` 含有重音符号之类的字符，进行组合会使用大量的码位。所以这种字符多用组合的方式来实现。
+
+BOM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+字节顺序标记（byte-order mark，BOM）是一个有特殊含义的统一码字符，码点为 ``U+FEFF`` 。当以UTF-16或UTF-32来将UCS字符所组成的字符串编码时，这个字符被用来标示其字节序。常被用于区分是否为UTF编码。
+
+编码方式
+----------------------------------------
+
+UCS-2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UCS-2 (2-byte Universal Character Set)是一种定长的编码方式，UCS-2仅仅简单的使用一个16位码元来表示码位，也就是说编码范围在0到0xFFFF的码位范围内。
+
+UTF-8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UTF-8（8-bit Unicode Transformation Format）是一种针对Unicode的可变长度字符编码，也是一种前缀码。它可以用一至四个字节对Unicode字符集中的所有有效编码点进行编码，属于Unicode标准的一部分。编码方式如下
+
++------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
+| 码点的位数 | 码点起值  | 码点终值   | 字节序列 | Byte 1   | Byte 2   | Byte 3   | Byte 4   | Byte 5   | Byte 6   |
++============+===========+============+==========+==========+==========+==========+==========+==========+==========+
+| 7          | U+0000    | U+007      | 1        | 0xxxxxxx |          |          |          |          |          |
++------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
+| 11         | U+0080    | U+07FF     | 2        | 110xxxxx | 10xxxxxx |          |          |          |          |
++------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
+| 16         | U+0800    | U+FFFF     | 3        | 1110xxxx | 10xxxxxx | 10xxxxxx |          |          |          |
++------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
+| 21         | U+10000   | U+1FFFFF   | 4        | 11110xxx | 10xxxxxx | 10xxxxxx | 10xxxxxx |          |          |
++------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
+| 26         | U+200000  | U+3FFFFFF  | 5        | 111110xx | 10xxxxxx | 10xxxxxx | 10xxxxxx | 10xxxxxx |          |
++------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
+| 31         | U+4000000 | U+7FFFFFFF | 6        | 1111110x | 10xxxxxx | 10xxxxxx | 10xxxxxx | 10xxxxxx | 10xxxxxx |
++------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
+
+UTF-16
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UTF-16 (16-bit Unicode Transformation Format)是UCS-2的拓展，用一个或者两个16位的码元来表示码位，可以对0到0x10FFFF的码位进行编码。
+
 等价性问题
 ----------------------------------------
 
@@ -44,6 +106,11 @@ Unicode正规化是文字正规化的一种形式，是指将彼此等价的序�
 - NFC Normalization Form Canonical Composition 以标准等价方式来分解，然后以标准等价重组之。若是singleton的话，重组结果有可能和分解前不同。
 - NFKD Normalization Form Compatibility Decomposition  以兼容等价方式来分解NFKC
 - Normalization Form Compatibility Composition 以兼容等价方式来分解，然后以标准等价重组之
+
+Tricks
+----------------------------------------
+- 部分语言的长度并不是字符的长度，一个UTF-16可能是两位。
+- 部分语言在翻转UTF-16等多字节编码时，会处理错误。
 
 安全问题
 ----------------------------------------
@@ -122,10 +189,23 @@ XSS
 
 参考链接
 ----------------------------------------
+
+官方文档
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Unicode equivalence <https://en.wikipedia.org/wiki/Unicode_equivalence>`_
 - `Unicode Normalization Forms <http://unicode.org/reports/tr15/>`_
 - `Unicode Security Considerations <http://unicode.org/reports/tr36/>`_
+
+RFC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `RFC 3629 <https://tools.ietf.org/html/rfc3629>`_ UTF-8, a transformation format of ISO 10646
+- `RFC 2044 <https://tools.ietf.org/html/rfc2044>`_ UTF-8, a transformation format of ISO 10646
+- `RFC 2279 <https://tools.ietf.org/html/rfc2279>`_ UTF-8, a transformation format of ISO 10646
+
+Tricks / Blogs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `IDN homograph attack <https://en.wikipedia.org/wiki/IDN_homograph_attack>`_
-- `Black Hat <https://www.blackhat.com/presentations/bh-usa-09/WEBER/BHUSA09-Weber-UnicodeSecurityPreview-PAPER.pdf>`_
+- `Black Hat Unicode Security <https://www.blackhat.com/presentations/bh-usa-09/WEBER/BHUSA09-Weber-UnicodeSecurityPreview-PAPER.pdf>`_
 - `Request encoding to bypass web application firewalls <https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/august/request-encoding-to-bypass-web-application-firewalls/>`_
 - `domain hacks with unusual unicode characters <https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/>`_
+- `其实你并不懂 Unicode <https://zhuanlan.zhihu.com/p/53714077>`_
