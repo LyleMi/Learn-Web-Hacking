@@ -6,8 +6,9 @@
    :caption: 内容索引:
 
    sso
-   oauth
    jwt
-   kerberos
+   oauth
    saml
    windows
+   kerberos
+   ntlm
