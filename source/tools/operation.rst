@@ -41,13 +41,17 @@ VPN Install
 - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
 - `openvpn <https://github.com/Nyr/openvpn-install>`_
 
-隧道
+隧道 / 代理
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `ngrok <https://github.com/inconshreveable/ngrok>`_
 - `rtcp <https://github.com/knownsec/rtcp>`_
 - `Tunna <https://github.com/SECFORCE/Tunna>`_
-- `reGeorg <https://github.com/sensepost/reGeorg>`_
 - `gost <https://github.com/ginuerzh/gost>`_ GO Simple Tunnel
+- `reDuh <https://github.com/sensepost/reDuh>`_ Create a TCP circuit through validly formed HTTP requests
+- `reGeorg <https://github.com/sensepost/reGeorg>`_ pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn
+- `Neo-reGeorg <https://github.com/L-codes/Neo-reGeorg>`_ Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
+- `ABPTTS <https://github.com/nccgroup/ABPTTS>`_ TCP tunneling over HTTP/HTTPS for web application servers
+
 
 漏洞管理
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

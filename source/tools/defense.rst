@@ -36,6 +36,10 @@ IDS
 - `yulong <https://github.com/ysrc/yulong-hids>`_
 - `AgentSmith <https://github.com/DianrongSecurity/AgentSmith-HIDS>`_
 
+SIEM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `panther <https://github.com/panther-labs/panther>`_ Detect threats with log data and improve cloud security posture
+
 威胁情报
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `threatfeeds <https://threatfeeds.io/>`_
