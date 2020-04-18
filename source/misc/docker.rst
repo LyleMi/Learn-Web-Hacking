@@ -106,10 +106,13 @@ Linux内核功能
 危险挂载
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 挂载 ``/var/run/docker.sock``
-- 挂载宿主机procfs
+- 挂载宿主机 ``/dev`` ``/proc`` 等危险目录
 
 安全加固
 ----------------------------------------
+- 启用 AppArmor
+- 启用 SELinux
+- 限制运行容器的内核功能
 - 移除依赖构建
 - 配置严格的网络访问控制策略
 - 不使用root用户启动docker
@@ -149,5 +152,7 @@ Docker外
 - `容器安全 <http://blog.nsfocus.net/docker-mirror-security/>`_
 - `CVE-2017-7494 Docker沙箱逃逸 <https://strm.sh/post/abusing-insecure-docker-deployments/>`_
 - `Docker容器安全性分析 <https://www.freebuf.com/articles/system/221319.html>`_
+- `AppArmor security profiles for Docker <https://docs.docker.com/engine/security/apparmor/>`_
+- `Docker Bench for Security <https://github.com/docker/docker-bench-security>`_
 
 .. |benchsec| image:: ../images/docker-sec-bench.png

@@ -18,6 +18,7 @@
 - `JSON反序列化之殇 <https://github.com/shengqi158/fastjson-remote-code-execute-poc/blob/master/Java_JSON%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B9%8B%E6%AE%87_%E7%9C%8B%E9%9B%AA%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B3%B0%E4%BC%9A.pdf>`_
 - `浅析Java序列化和反序列化 <https://xz.aliyun.com/t/3847>`_
 - `Commons Collections Java反序列化漏洞深入分析 <https://security.tencent.com/index.php/blog/msg/97>`_
+- `FAR SIDES OF JAVA REMOTE PROTOCOLS <https://i.blackhat.com/eu-19/Wednesday/eu-19-An-Far-Sides-Of-Java-Remote-Protocols.pdf>`_
 
 沙箱
 ----------------------------------------
