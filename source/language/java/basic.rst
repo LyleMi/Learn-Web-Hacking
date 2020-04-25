@@ -22,3 +22,19 @@ OGNL
 OGNL（Object-Graph Navigation Language，对象导航语言）是一种功能强大的表达式语言，通过简单一致的表达式语法，提供了存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。
 
 Struts2中使用了OGNL，提供了一个ValueStack类。ValueStack分为root和context两部分。root中是当前的action对象，context中是ActionContext里面所有的内容。
+
+IO模型
+----------------------------------------
+Java 对操作系统的各种 IO 模型进行了封装，形成了不同的API。
+
+BIO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BIO (Blocking I/O) 是同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。
+
+NIO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NIO (New I/O) 是一种同步非阻塞的I/O模型，在Java 1.4中引入，对应 java.nio 包，提供了 Channel , Selector，Buffer等抽象。
+
+AIO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AIO (Asynchronous I/O) 在 Java 7 中引入，是NIO的改进版，是异步非阻塞的IO模型，基于事件和回调机制实现。
