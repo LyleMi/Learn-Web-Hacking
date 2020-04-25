@@ -10,7 +10,7 @@
     - ``find / -perm +4000 -ls``
     - ``find / -perm -u=s -type f 2>/dev/null``
     - ``find / -user root -perm -4000 -print 2>/dev/null``
-    - ``find / -user root -perm -4000 -exec ls -ldb {} \;``
+    - ``find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null``
 - 利用可用的root权限
     - ``sudo -l``
 - 利用误配置的 crontab 任务

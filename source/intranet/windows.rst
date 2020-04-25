@@ -4,7 +4,7 @@
 基本命令
 ----------------------------------------
 - 查询所有计算机名称 ``dsquery computer``
-- 查看配置 ``systeminfo``
+- 查看配置及补丁信息 ``systeminfo``
 - 查看版本 ``ver``
 - 进程信息 ``tasklist /svc``
 - 查看所有环境变量 ``set``
@@ -43,12 +43,19 @@
 - 路由表 ``route print``
 - 监听的端口 ``netstat -ano``
 - 连接的端口
-- 防火墙状态及规则
-    - ``netsh firewall show config``
-    - ``netsh firewall show state``
 - hosts文件
 - DNS缓存
     - ``Get-CimInstance -Namespace root/StandardCimv2 -ClassName MSFT_DNSClientCache``
+- 探测出网情况
+    - `powershell -c "1..65535 | % {echo ((new-object Net.Sockets.TcpClient).Connect('allports.exposed',$_)) $_ } 2>$null"`
+
+防火墙
+----------------------------------------
+- 查看防火墙状态 ``netsh advfirewall show allprofiles``
+- 防火墙日志目录 ``netsh firewall show logging``
+- 防火墙规则 ``netsh advfirewall firewall show rule name=all``
+- ``netsh firewall show config``
+- ``netsh firewall show state``
 
 密码信息
 ----------------------------------------
