@@ -12,6 +12,8 @@
 - 查看安装驱动 ``DRIVERQUERY``
 - 查看操作系统架构 ``wmic os get osarchitecture``
 - 查看逻辑盘 ``wmic logicaldisk get caption``
+- 查看安装的软件信息 ``wmic product get name,version``
+- 查看服务信息 ``wmic service list brief``
 
 域信息
 ----------------------------------------

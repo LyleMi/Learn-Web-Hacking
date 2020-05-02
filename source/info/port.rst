@@ -13,12 +13,21 @@
     + 暴力破解密码
 + SMTP 25
     + 无认证时可伪造发件人
-+ DNS 53 UDP 
-    + 测试域传送漏洞
++ DNS 53 UDP
+    + 域传送漏洞
+    + DNS劫持
+    + DNS缓存投毒
+    + DNS欺骗
     + SPF / DMARC Check
     + DDoS
         + DNS Query Flood
         + DNS 反弹
++ DHCP 67/68
+    + 劫持/欺骗
++ TFTP 69
++ HTTP 80
++ POP3 110
+    + 爆破
 + SMB 137/139/445
     + 未授权访问
     + 弱口令
@@ -27,8 +36,11 @@
 + LDAP 389
     + 匿名访问
     + 注入
++ HTTPS 443
++ Linux Rexec 512/513/514
+    + 弱口令
 + Rsync 873
-    + 任意文件读写
+    + 未授权访问
 + RPC 1025
     + NFS匿名访问
 + MSSQL 1433
