@@ -15,6 +15,7 @@ Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_
 - `GTFOBins <https://github.com/GTFOBins/GTFOBins.github.io>`_ Curated list of Unix binaries that can be exploited to bypass system security restrictions
+- `JAWS <https://github.com/411Hall/JAWS>`_ Just Another Windows (Enum) Script
 
 UAC Bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
