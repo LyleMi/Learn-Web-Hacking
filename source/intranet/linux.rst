@@ -66,6 +66,7 @@
 - 由xinetd管理的服务列表 ``cat /etc/xinetd.conf``
 - nfs服务器的配置 ``cat /etc/exports``
 - 邮件信息 ``/var/log/mailog``
+- ssh配置 ``sshd_config``
 
 计划任务
 ----------------------------------------

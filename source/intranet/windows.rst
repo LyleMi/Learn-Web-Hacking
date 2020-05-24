@@ -19,6 +19,8 @@
 ----------------------------------------
 - 获取当前组的计算机名 ``net view``
 - 查看所有域 ``net view /domain``
+- 域森林、域树信息
+- 域信任信息
 - 查看域中的用户名 ``dsquery user``
 - 查询域组名称 ``net group /domain``
 - 查询域管理员 ``net group "Domain Admins" /domain``
@@ -69,6 +71,12 @@
     - ``C:\sysprep\sysprep.xml``
     - ``C:\Windows\Panther\Unattend\Unattended.xml``
     - ``C:\Windows\Panther\Unattended.xml``
+
+票据信息
+----------------------------------------
+- cmdkey
+- klist
+- msf meterpreter
 
 其他
 ----------------------------------------
