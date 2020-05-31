@@ -55,9 +55,14 @@ RAT
 
 C2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `cobalt strike <https://www.cobaltstrike.com>`_
 - `Empire <https://github.com/EmpireProject/Empire>`_
 - `pupy <https://github.com/n1nj4sec/pupy>`_
+
+Cobalt Strike
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Cobalt Strike <https://www.cobaltstrike.com>`_
+- `CrossC2 <https://github.com/gloxec/CrossC2>`_ generate CobaltStrike's cross-platform payload
+- `Cobalt Strike Aggressor Scripts <https://github.com/timwhitez/Cobalt-Strike-Aggressor-Scripts>`_
 
 日志清除
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

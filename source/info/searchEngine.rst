@@ -43,6 +43,14 @@
 
 另外也有专门的站点快照提供快照功能，如 Wayback Machine 和 `Archive.org <https://archive.org/>`_ 等。
 
+Github搜索技巧
+----------------------------------------
+- ``@example.com password/pass/pwd/secret/credentials/token``
+- ``@example.com username/user/key/login/ftp/``
+- ``@example.com config/ftp/smtp/pop``
+- ``@example.com security_credentials/connetionstring``
+- ``@example.com JDBC/ssh2_auth_password/send_keys``
+
 tips
 ----------------------------------------
 - 查询不区分大小写

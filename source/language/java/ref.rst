@@ -19,6 +19,7 @@
 - `浅析Java序列化和反序列化 <https://xz.aliyun.com/t/3847>`_
 - `Commons Collections Java反序列化漏洞深入分析 <https://security.tencent.com/index.php/blog/msg/97>`_
 - `FAR SIDES OF JAVA REMOTE PROTOCOLS <https://i.blackhat.com/eu-19/Wednesday/eu-19-An-Far-Sides-Of-Java-Remote-Protocols.pdf>`_
+- `SpringBootVulExploit <https://github.com/LandGrey/SpringBootVulExploit>`_ SpringBoot 相关漏洞学习资料，利用方法和技巧合集，黑盒安全评估 checklist
 
 沙箱
 ----------------------------------------

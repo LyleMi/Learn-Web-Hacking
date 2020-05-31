@@ -17,6 +17,10 @@
 - `vooki <https://www.vegabird.com/vooki/>`_
 - `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
 
+验证码
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `CAPTCHA22 <https://github.com/FSecureLABS/captcha22>`_ is a toolset for building, and training, CAPTCHA cracking models using neural networks.
+
 WebAssembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `wabt <https://github.com/WebAssembly/wabt>`_
