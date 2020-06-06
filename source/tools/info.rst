@@ -66,6 +66,7 @@ Github监控
 - `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
 - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 - `JA3 <https://github.com/salesforce/ja3>`_ is a standard for creating SSL client fingerprints in an easy to produce and shareable way
+- `TideFinger <https://github.com/TideSec/TideFinger>`_
 
 Waf指纹
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

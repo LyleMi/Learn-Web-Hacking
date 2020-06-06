@@ -111,10 +111,11 @@ IoC
 
 Security Advisories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `apache httpd security advisories  <https://httpd.apache.org/security/>`_
-- `nginx security advisories <http://nginx.org/en/security_advisories.html>`_
-- `Jetty Security Reports <https://www.eclipse.org/jetty/documentation/current/security-reports.html>`_
+- `Apache httpd Security Advisories  <https://httpd.apache.org/security/>`_
+- `Apache Solr <https://lucene.apache.org/solr/security.html>`_
 - `Apache Tomcat <https://tomcat.apache.org/security-8.html>`_
+- `Jetty Security Reports <https://www.eclipse.org/jetty/documentation/current/security-reports.html>`_
+- `Nginx Security Advisories <http://nginx.org/en/security_advisories.html>`_
 - `OpenSSL <https://www.openssl.org/news/vulnerabilities.html>`_
 
 风险控制

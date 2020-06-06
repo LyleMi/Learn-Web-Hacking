@@ -27,6 +27,12 @@ UAC Bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `ProcessHider <https://github.com/M00nRise/ProcessHider>`_ Post-exploitation tool for hiding processes from monitoring applications
 
+域
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `adidnsdump <https://github.com/dirkjanm/adidnsdump>`_ Active Directory Integrated DNS dump tool
+- `BloodHound <https://github.com/BloodHoundAD/BloodHound>`_ Six Degrees of Domain Admin
+- `windapsearch <https://github.com/ropnop/windapsearch>`_ Python script to enumerate users, groups and computers from a Windows domain through LDAP queries
+
 Linux
 ----------------------------------------
 
