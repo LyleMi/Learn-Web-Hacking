@@ -44,3 +44,7 @@ JNDI
 - `关于 JNDI 注入 <https://paper.seebug.org/417/>`_
 - `A Journey From JNDI LDAP Manipulation To RCE <https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf>`_
 - ` 如何绕过高版本JDK的限制进行JNDI注入 <https://www.freebuf.com/column/207439.html>`_
+
+WebShell
+----------------------------------------
+- `各种姿势jsp webshell <https://xz.aliyun.com/t/7798>`_

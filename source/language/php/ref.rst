@@ -13,6 +13,7 @@ Tricks
 - `反序列化之PHP原生类的利用 <http://www.cnblogs.com/iamstudy/articles/unserialize_in_php_inner_class.html>`_
 - `php解密的数种方法 <https://www.leavesongs.com/PENETRATION/unobfuscated-phpjiami.html>`_
 - `Surprising CTF task solution using php://filter <https://gynvael.coldwind.pl/?id=671>`_
+- `主机安全 洋葱Webshell检测实践与思考  <https://mp.weixin.qq.com/s/ol70aVdvybzMJmtfxaAAZQ>`_
 
 WebShell
 ----------------------------------------

