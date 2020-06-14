@@ -33,6 +33,10 @@ UAC Bypass
 - `BloodHound <https://github.com/BloodHoundAD/BloodHound>`_ Six Degrees of Domain Admin
 - `windapsearch <https://github.com/ropnop/windapsearch>`_ Python script to enumerate users, groups and computers from a Windows domain through LDAP queries
 
+综合工具
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Nishang <https://github.com/samratashok/nishang>`_ Offensive PowerShell for red team, penetration testing and offensive security
+
 Linux
 ----------------------------------------
 
@@ -41,6 +45,14 @@ Linux
 - `linux exploit suggester <https://github.com/mzet-/linux-exploit-suggester>`_
 - `LinEnum <https://github.com/rebootuser/LinEnum>`_ Scripted Local Linux Enumeration & Privilege Escalation Checks
 - `AutoLocalPrivilegeEscalation <https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_
+
+rootkit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `rootkit <https://github.com/nurupo/rootkit>`_
+
+后门
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `prism <https://github.com/andreafabrizi/prism>`_ is an user space stealth reverse shell backdoor
 
 综合
 ----------------------------------------

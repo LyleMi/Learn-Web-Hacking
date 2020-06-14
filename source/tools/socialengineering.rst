@@ -13,6 +13,7 @@ OSINT
 社交工具
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `SlackPirate <https://github.com/emtunc/SlackPirate>`_ Slack Enumeration and Extraction Tool - extract sensitive information from a Slack Workspace
+- `twint <https://github.com/twintproject/twint>`_ An advanced Twitter scraping & OSINT tool
 
 个人搜索
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,13 +42,6 @@ Hacking database
 - `虫部落 <http://magnet.chongbuluo.com/>`_
 - `盘多多 <http://www.panduoduo.net/>`_
 - `Infinite Panc <https://www.panc.cc>`_
-
-wifi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `wifiphisher <https://github.com/wifiphisher/wifiphisher>`_
-- `evilginx <https://github.com/kgretzky/evilginx>`_
-- `mana <https://github.com/sensepost/mana>`_
-- `pwnagotchi <https://github.com/evilsocket/pwnagotchi>`_
 
 个人字典
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

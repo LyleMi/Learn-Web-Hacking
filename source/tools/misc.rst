@@ -16,6 +16,7 @@
 - `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
 - `vooki <https://www.vegabird.com/vooki/>`_
 - `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
+- `fsociety <https://github.com/Manisso/fsociety>`_ Hacking Tools Pack
 
 验证码
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,6 +33,7 @@ WebAssembly
 - `JStillery <https://github.com/mindedsecurity/JStillery>`_
 - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
 - `基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_
+- `Invoke Obfuscation <https://github.com/danielbohannon/Invoke-Obfuscation>`_
 
 Proxy Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

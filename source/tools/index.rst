@@ -11,6 +11,7 @@
    socialengineering
    fuzz
    exploit
+   nearsource
    webpersistence
    ospersistence
    defense

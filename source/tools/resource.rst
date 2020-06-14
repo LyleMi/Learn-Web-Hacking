@@ -1,7 +1,7 @@
 推荐资源
 ================================
 
-书单推荐
+书单
 --------------------------------
 
 前端
@@ -20,6 +20,18 @@
 - Linux Kernel Networking: Implementation and Theory
 - Bulletproof SSL and TLS
 - UNIX Network Programming
+
+Java
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `learnjavabug <https://github.com/threedr3am/learnjavabug>`_ Java安全相关的漏洞和技术demo
+
+后渗透
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Powershell攻击指南 黑客后渗透之道  <https://github.com/rootclay/Powershell-Attack-Guide.git>`_
+
+红蓝对抗
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Atomic Red Team <https://github.com/redcanaryco/atomic-red-team>`_ Small and highly portable detection tests based on MITRE's ATT&CK
 
 SEO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,8 +93,11 @@ Bug Bounty
 - https://www.synack.com/
 - https://cobalt.io/
 
-Web安全相关题目
+实验环境
 --------------------------------
+
+Web安全相关CTF题目
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - https://github.com/orangetw/My-CTF-Web-Challenges
 - https://www.ripstech.com/php-security-calendar-2017/
 - https://github.com/wonderkun/CTF_web
@@ -91,3 +106,8 @@ Web安全相关题目
 - https://github.com/tsug0d/MyAwesomeWebChallenge
 - https://github.com/a0xnirudh/kurukshetra
 - http://www.xssed.com/
+
+域实验环境
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Adaz <https://github.com/christophetd/Adaz>`_: Active Directory Hunting Lab in Azure
+- `Detection <https://github.com/clong/DetectionLab>`_ Vagrant & Packer scripts to build a lab environment complete with security tooling and logging best practices
