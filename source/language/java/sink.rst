@@ -69,4 +69,10 @@ Magic Call
 
 Jackson除非指明@jsonAutoDetect，Jackson不会反序列化非public属性。在防御时，可以不使用enableDefaultTyping方法。相关CVE有CVE-2017-7525、CVE-2017-15095。
 
-Fastjson相关CVE有CVE-2017-18349。
+FastJson是阿里巴巴的开源JSON解析库，支持将Java Bean序列化为JSON字符串，也支持从JSON字符串反序列化到Java Bean，相关CVE有CVE-2017-18349等。
+
+FastJson常见的Sink点有：
+
+- ``JSON.toJSONString``
+- ``JSON.parseObject``
+- ``JSON.parse``

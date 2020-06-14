@@ -12,3 +12,4 @@
    golang
    ruby
    asp
+   powershell
