@@ -10,6 +10,7 @@ Windows
 - `渗透技巧——Windows单条日志的删除 <https://3gstudent.github.io/3gstudent.github.io/%E6%B8%97%E9%80%8F%E6%8A%80%E5%B7%A7-Windows%E5%8D%95%E6%9D%A1%E6%97%A5%E5%BF%97%E7%9A%84%E5%88%A0%E9%99%A4/>`_
 - `windows取证 文件执行记录的获取和清除  <https://xz.aliyun.com/t/7155>`_
 - `Getting DNS Client Cached Entries with CIM/WMI <https://www.darkoperator.com/blog/2020/1/14/getting-dns-client-cached-entries-with-cimwmi>`_
+- `Windows单机Persistence <https://lengjibo.github.io/Persistence/>`_
 
 域渗透
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -142,9 +142,13 @@ Windows应急响应
 - 分析开机自启程序
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run``
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce``
+    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices``
+    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce``
     - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run``
     - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run``
     - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce``
+    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices``
+    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce``
     - ``(ProfilePath)\Start Menu\Programs\Startup`` 启动项
     - ``msconfig`` 启动选项卡
     - ``gpedit.msc`` 组策略编辑器

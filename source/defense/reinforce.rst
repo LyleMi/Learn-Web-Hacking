@@ -129,3 +129,4 @@ Tomcat
 参考链接
 ----------------------------------------
 - `awesome windows domain hardening <https://github.com/PaulSec/awesome-windows-domain-hardening>`_
+- `customize attack surface reduction <https://docs.microsoft.com/zh-cn/windows/security/threat-protection/microsoft-defender-atp/customize-attack-surface-reduction>`_

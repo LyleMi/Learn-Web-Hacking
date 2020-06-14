@@ -21,6 +21,7 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
 常见程序
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - bitsadmin.exe
+    - 用于上传下载
 - cdb.exe
 - certutil.exe
     - 可安装、备份、删除、管理和执行证书
@@ -59,6 +60,8 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
 - windbg.exe
 - wscript.exe
     - 脚本引擎
+- waitfor.exe
+    - 用于同步网络中计算机，可以发送或等待系统上的信号。
 
 后门
 ----------------------------------------
@@ -81,6 +84,8 @@ Windows下有 ``schtasks`` 和 ``at`` 两种计划任务机制。 其中 ``at`` 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Windows可以在用户登录前执行脚本，使用 ``HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` 设置。
 
+也可在 ``HKCU\Environment\`` 路径下设置 ``UserInitMprLogonScript`` 来实现。
+
 屏幕保护程序
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Windows可以自定义屏幕保护程序，使用 ``HKEY_CURRENT_USER\Control Panel\Desktop`` 设置。
@@ -97,12 +102,22 @@ CLR (Common Language Runtime Compilation) 公共语言运行时，是微软为.N
 
 .NET程序的运行离不开CLR，因此可以通过劫持CLR的方式实现后门。
 
+Winlogon Helper DLL后门
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Winlogon是一个Windows组件，用来处理各种活动，如登录、注销、身份验证期间加载用户配置文件、关闭、锁定屏幕等。这种行为由注册表管理，该注册表定义在Windows登录期间启动哪些进程。所以可以依靠这个注册表来进行权限维持。
+
+注册表位置如下：
+
+- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell`` 用于执行exe程序
+- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` 用于执行exe程序
+- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify`` 用于执行dll文件
+
 UAC
 ----------------------------------------
 
 简介
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-UAC (User Account Control) 是Windows的一个安全机制，当一些敏感操作发生时，会跳出提示显式要求系统权限。
+UAC (User Account Control) 是Windows Vista 和 Windows Server 2008 引入的一个安全机制，当一些敏感操作发生时，会跳出提示显式要求系统权限。
 
 当用户登陆Windows时，每个用户都会被授予一个access token，这个token中有security identifier (SID) 的信息，决定了用户的权限。
 
@@ -184,3 +199,4 @@ MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof
 - 替换系统工具，实现后门
 - 关闭defender
     - ``Set-MpPreference -disablerealtimeMonitoring $true``
+
