@@ -41,3 +41,7 @@
 为了实现情报的同步和交换，各组织都制定了相应的标准和规范。主要有国标，美国联邦政府标准等。
 
 除了国家外，企业也有各自的情报来源，例如厂商、CERT、开发者社区、安全媒体、漏洞作者或团队、公众号、个人博客、代码仓库等。
+
+威胁框架
+----------------------------------------
+比较有影响力的威胁框架主要有洛克希德-马丁的杀伤链框架（Cyber Kill Chain Framework）、MITRE的ATT&CK框架（Common Knowledge base of Adversary Tactics and Techniques）、ODNI的CCTF框架（Common Cyber Threat Framework，公共网空威胁框架），以及NSA的TCTF框架（Technical Cyber Threat Framework，技术性网空威胁框架）。

@@ -24,3 +24,7 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
 - ``-EncodedComman``
 - ``-EncodedComma``
 - ``-EncodedComm``
+
+参考链接
+----------------------------------------
+- `PowerShell 官方文档 <https://docs.microsoft.com/zh-cn/powershell/>`_

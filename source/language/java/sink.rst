@@ -3,8 +3,8 @@
 
 命令执行/注入
 ----------------------------------------
-- Runtime.getRuntime().exec
-- ProcessBuilder
+- java.lang.Runtime.getRuntime().exec()
+- java.lang.ProcessBuilder
 
 XXE
 ----------------------------------------
