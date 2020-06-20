@@ -35,11 +35,12 @@ Git信息泄漏
 - `gitrob Reconnaissance tool for GitHub organizations <https://github.com/michenriksen/gitrob>`_
 - `git secrets <https://github.com/awslabs/git-secrets>`_
 - `shhgit <https://github.com/eth0izzle/shhgit>`_ Find GitHub secrets in real time
-- `GitHound <https://github.com/tillson/git-hound>`_ GitHound pinpoints exposed API keys on GitHub using pattern matching, commit history searching, and a unique result scoring system. A batch-catching, pattern-matching, patch-attacking secret snatcher. 
+- `GitHound <https://github.com/tillson/git-hound>`_ GitHound pinpoints exposed API keys on GitHub using pattern matching, commit history searching, and a unique result scoring system. A batch-catching, pattern-matching, patch-attacking secret snatcher
+- `x patrol <https://github.com/MiSecurity/x-patrol>`_ Github leaked patrol
 
 Github监控
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_
+- `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_ Github Sensitive Information Leakage Monitor
 - `Github Dorks <https://github.com/techgaun/github-dorks>`_
 - `GSIL <https://github.com/FeeiCN/GSIL>`_
 - `Hawkeye <https://github.com/0xbug/Hawkeye>`_

@@ -17,6 +17,7 @@
 - `vooki <https://www.vegabird.com/vooki/>`_
 - `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
 - `fsociety <https://github.com/Manisso/fsociety>`_ Hacking Tools Pack
+- `axiom <https://github.com/pry0cc/axiom>`_ A dynamic infrastructure toolkit for red teamers and bug bounty hunters
 
 验证码
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

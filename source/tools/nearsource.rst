@@ -6,6 +6,8 @@ Bad USB
 - `WiFiDuck <https://github.com/spacehuhn/WiFiDuck>`_ Keystroke injection attack plattform
 - `BadUSB code <https://github.com/Xyntax/BadUSB-code>`_ badusb的一些利用方式及代码 
 - `WHID <https://github.com/whid-injector/WHID>`_ WiFi HID Injector - An USB Rubberducky / BadUSB On Steroids
+- `BadUSB cable <https://github.com/joelsernamoreno/BadUSB-Cable>`_ based on Attiny85 microcontroller
+- `USB Rubber Ducky <https://github.com/hak5darren/USB-Rubber-Ducky>`_
 
 wifi
 ----------------------------------------
