@@ -119,6 +119,14 @@ Security Advisories
 - `Nginx Security Advisories <http://nginx.org/en/security_advisories.html>`_
 - `OpenSSL <https://www.openssl.org/news/vulnerabilities.html>`_
 
+Security Tracker
+----------------------------------------
+- `Nginx Security Tracker <https://security-tracker.debian.org/tracker/source-package/nginx>`_
+
 风险控制
 ----------------------------------------
 - `aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎
+
+规则
+----------------------------------------
+- `AttackDetection <https://github.com/ptresearch/AttackDetection>`_ Suricata PT Open Ruleset

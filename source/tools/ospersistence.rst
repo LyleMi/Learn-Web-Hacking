@@ -23,15 +23,13 @@ UAC Bypass
 - `UACME <https://github.com/hfiref0x/UACME>`_ Defeating Windows User Account Control
 - `UAC Bypass In The Wild <https://github.com/sailay1996/UAC_Bypass_In_The_Wild>`_
 
+C2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-exploitation rootkit
+
 隐藏
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `ProcessHider <https://github.com/M00nRise/ProcessHider>`_ Post-exploitation tool for hiding processes from monitoring applications
-
-域
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `adidnsdump <https://github.com/dirkjanm/adidnsdump>`_ Active Directory Integrated DNS dump tool
-- `BloodHound <https://github.com/BloodHoundAD/BloodHound>`_ Six Degrees of Domain Admin
-- `windapsearch <https://github.com/ropnop/windapsearch>`_ Python script to enumerate users, groups and computers from a Windows domain through LDAP queries
 
 综合工具
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

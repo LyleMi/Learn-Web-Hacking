@@ -111,3 +111,10 @@ Web安全相关CTF题目
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Adaz <https://github.com/christophetd/Adaz>`_: Active Directory Hunting Lab in Azure
 - `Detection <https://github.com/clong/DetectionLab>`_ Vagrant & Packer scripts to build a lab environment complete with security tooling and logging best practices
+
+Awesome 系列
+--------------------------------
+- `awesome web security <https://github.com/qazbnm456/awesome-web-security>`_
+- `Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_
+- `Awesome Security <https://github.com/sbilly/awesome-security>`_
+- `awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_
