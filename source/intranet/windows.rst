@@ -20,7 +20,8 @@
 - 获取当前组的计算机名 ``net view``
 - 查看所有域 ``net view /domain``
 - 域森林、域树信息
-- 域信任信息
+- 域信任信息 ``nltest /domain_trusts``
+- 定位域控 ``net time /domain``
 - 查看域中的用户名 ``dsquery user``
 - 查询域组名称 ``net group /domain``
 - 查询域管理员 ``net group "Domain Admins" /domain``
@@ -49,6 +50,7 @@
 - 连接的端口
 - hosts文件
 - DNS缓存
+    - ``ipconfig /displaydns``
     - ``Get-CimInstance -Namespace root/StandardCimv2 -ClassName MSFT_DNSClientCache``
 - 探测出网情况
     - `powershell -c "1..65535 | % {echo ((new-object Net.Sockets.TcpClient).Connect('allports.exposed',$_)) $_ } 2>$null"`

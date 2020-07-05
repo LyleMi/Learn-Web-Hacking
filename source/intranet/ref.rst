@@ -19,6 +19,12 @@ Windows
 - `got domain admin on internal network <https://medium.com/@adam.toscher/top-five-ways-i-got-domain-admin-on-your-internal-network-before-lunch-2018-edition-82259ab73aaa>`_
 - Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques <http://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf>`_
 - `域渗透学习笔记 <https://github.com/uknowsec/Active-Directory-Pentest-Notes>`_
+- `QOMPLX Knowledge: Fundamentals of Active Directory Trust Relationships <https://qomplx.com/qomplx-knowledge-fundamentals-of-active-directory-trust-relationships/>`_
+- `Kerberos的黄金票据详解 <https://www.cnblogs.com/backlion/p/8127868.html>`_
+- `DCShadow explained: A technical deep dive into the latest AD attack technique <https://blog.alsid.eu/dcshadow-explained-4510f52fc19d>`_
+- `Active Directory Security <https://adsecurity.org>`_
+- `Kerberos AD Attacks Kerberoasting <https://blog.xpnsec.com/kerberos-attacks-part-1/>`_
+- `Kerberos之域内委派攻击 <https://xz.aliyun.com/t/7517>`_
 
 RedTeam
 ----------------------------------------

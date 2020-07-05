@@ -115,3 +115,22 @@
 ----------------------------------------
 - 最近五天的文件 ``find / -ctime +1 -ctime -5``
 - 文件系统细节 ``debugfs``
+
+公私钥信息
+----------------------------------------
+- ``~/.ssh``
+- ``/etc/ssh``
+
+日志
+----------------------------------------
+- ``/var/log/boot.log``
+- ``/var/log/cron``
+- ``/var/log/faillog``
+- ``/var/log/lastlog``
+- ``/var/log/messages``
+- ``/var/log/secure``
+- ``/var/log/syslog``
+- ``/var/log/syslog``
+- ``/var/log/wtmp``
+- ``/var/log/wtmp``
+- ``/var/run/utmp``
