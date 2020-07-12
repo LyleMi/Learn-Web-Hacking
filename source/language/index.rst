@@ -13,3 +13,4 @@
    ruby
    asp
    powershell
+   shell

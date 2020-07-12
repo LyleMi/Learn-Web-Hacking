@@ -53,6 +53,10 @@ Windows
     - ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins, isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, pif, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif
 - 限制会调起wscript的后缀
     - bat, js, jse, vbe, vbs, wsf, wsh
+- 域
+    - 限制将计算机加入域的权限
+    - 域账户使用最小权限原则
+    - 减少非必要高权限账户的数量
 
 应用
 ----------------------------------------

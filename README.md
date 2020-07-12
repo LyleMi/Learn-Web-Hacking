@@ -68,6 +68,7 @@
     6. Ruby
     7. ASP
     8. PowerShell
+    9. Shell
 6. 内网渗透
     1. 信息收集 - Windows
     2. 持久化 - Windows

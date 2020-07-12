@@ -43,8 +43,10 @@
 
 另外也有专门的站点快照提供快照功能，如 Wayback Machine 和 `Archive.org <https://archive.org/>`_ 等。
 
-Github搜索技巧
+Github
 ----------------------------------------
+在Github中，可能会存在源码泄露、AccessKey泄露、密码、服务器配置泄露等情况，常见的搜索技巧有：
+
 - ``@example.com password/pass/pwd/secret/credentials/token``
 - ``@example.com username/user/key/login/ftp/``
 - ``@example.com config/ftp/smtp/pop``
