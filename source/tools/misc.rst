@@ -53,3 +53,4 @@ Android
 - `httrack <http://www.httrack.com/>`_
 - `curl <https://curl.haxx.se/>`_
 - `htrace <https://github.com/trimstray/htrace.sh>`_
+- `Microsoft Sysinternals Utilities <https://docs.microsoft.com/en-us/sysinternals/downloads/>`_

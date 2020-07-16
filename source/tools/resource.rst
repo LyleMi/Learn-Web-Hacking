@@ -28,6 +28,7 @@ Java
 后渗透
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Powershell攻击指南 黑客后渗透之道  <https://github.com/rootclay/Powershell-Attack-Guide.git>`_
+- `Active Directory Exploitation Cheat Sheet <https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet>`_
 
 红蓝对抗
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

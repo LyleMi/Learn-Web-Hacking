@@ -87,3 +87,7 @@ Cobalt Strike
 Botnet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `byob <https://github.com/malwaredllc/byob>`_ Build Your Own Botnet
+
+免杀工具
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `AV Evasion Tool <https://github.com/1y0n/AV_Evasion_Tool>`_ 掩日 - 免杀执行器生成工具

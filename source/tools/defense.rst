@@ -130,3 +130,4 @@ Security Tracker
 规则
 ----------------------------------------
 - `AttackDetection <https://github.com/ptresearch/AttackDetection>`_ Suricata PT Open Ruleset
+- `DailyIOC <https://github.com/StrangerealIntel/DailyIOC>`_ IOC from articles, tweets for archives

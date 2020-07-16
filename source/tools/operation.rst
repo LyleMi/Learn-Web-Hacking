@@ -90,3 +90,7 @@ SIEM
 ----------------------------------------
 - `Scout <https://github.com/HandsomeOne/Scout>`_ URL 监控系统
 - `OpenDnsdb <https://github.com/qunarcorp/open_dnsdb>`_ 基于Python的DNS管理系统
+
+系统监控
+----------------------------------------
+- `netdata <https://github.com/netdata/netdata>`_ Real-time performance monitoring
