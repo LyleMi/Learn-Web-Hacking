@@ -10,6 +10,7 @@
    domain
    linux
    linuxpersistence
+   trojan
    traceremove
    misc
    ref

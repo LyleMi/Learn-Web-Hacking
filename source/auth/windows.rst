@@ -12,3 +12,10 @@ SAM
 安全帐户管理器(Security Accounts Manager，SAM) 是Windows操作系统管理用户帐户的安全所使用的一种机制。用来存储Windows操作系统密码的数据库文件为了避免明文密码泄漏SAM文件中保存的是明文密码在经过一系列算法处理过的 Hash值被保存的Hash分为LM Hash、NTLM Hash。当用户进行身份认证时会将输入的Hash值与SAM文件中保存的Hash值进行对比。
 
 SAM文件保存于 ``%SystemRoot%\system32\config\sam`` 中，在注册表中保存在 ``HKEY_LOCAL_MACHINE\SAM\SAM`` ， ``HKEY_LOCAL_MACHINE\SECURITY\SAM`` 。 在正常情况下 SAM 文件处于锁定状态不可直接访问、复制、移动仅有 system 用户权限才可以读写该文件。
+
+密码破解
+----------------------------------------
+- 通过物理接触主机、启动其他操作系统来获取 Windows 分区上的 ``%SystemRoot%\system32\config\sam`` 文件
+- 获取 ``%SystemRoot%\repair\sam._`` 文件。
+- 使用工具从注册表中导出SAM散列值
+- 从网络中嗅探分析SMB报文，从中获取密码散列

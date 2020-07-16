@@ -68,4 +68,3 @@
 - schtasks
 - SMB+MOF || DLL Hijacks
 - PTH + compmgmt.msc
-

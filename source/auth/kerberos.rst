@@ -3,10 +3,11 @@ Kerberos
 
 简介
 ----------------------------------------
+Kerberos协议起源于美国麻省理工学院Athena项目，基于公私钥加密体制，为分布式环境提供双向验证，在RFC 1510中被采纳，Kerberos是Windows域环境中的默认身份验证协议。
+
 简单地说，Kerberos提供了一种单点登录(SSO)的方法。考虑这样一个场景，在一个网络中有不同的服务器，比如，打印服务器、邮件服务器和文件服务器。这些服务器都有认证的需求。很自然的，不可能让每个服务器自己实现一套认证系统，而是提供一个中心认证服务器（AS-Authentication Server）供这些服务器使用。这样任何客户端就只需维护一个密码就能登录所有服务器。
 
-因此，在Kerberos系统中至少有三个角色：认证服务器（AS），客户端（Client）和普通服务器（Server）。客户端和服务器将在AS的帮助下完成相互认证。
-在Kerberos系统中，客户端和服务器都有一个唯一的名字，叫做Principal。同时，客户端和服务器都有自己的密码，并且它们的密码只有自己和认证服务器AS知道。
+Kerberos协议是一个基于票据（Ticket）的系统，在Kerberos系统中至少有三个角色：认证服务器（AS），客户端（Client）和普通服务器（Server）。认证服务器对用户进行验证，并发行供用户用来 请求会话票据的TGT（票据授予票据）。票据授予服务（TGS）：在发行给客户的TGT的基础上，为网络服务发行ST（会话票据）。在Kerberos系统中，客户端和服务器都有一个唯一的名字，叫做Principal。同时，客户端和服务器都有自己的密码，并且它们的密码只有自己和认证服务器AS知道。
 
 简化的认证过程
 ----------------------------------------
@@ -54,6 +55,7 @@ Kerberos
 
 参考链接
 ----------------------------------------
+- `RFC 1510 The Kerberos Network Authentication Service <https://tools.ietf.org/html/rfc1510>`_
 - `Kerberos认证流程详解 <https://blog.csdn.net/jewes/article/details/20792021>`_
 - `Delegate to the Top: Abusing Kerberos for arbitrary impersonations and RCE <https://www.blackhat.com/docs/asia-17/materials/asia-17-Hart-Delegate-To-The-Top-Abusing-Kerberos-For-Arbitrary-Impersonations-And-RCE-wp.pdf>`_
 - `Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94?redirectedfrom=MSDN>`_
