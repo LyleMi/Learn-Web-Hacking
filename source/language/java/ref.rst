@@ -20,6 +20,7 @@
 - `Commons Collections Java反序列化漏洞深入分析 <https://security.tencent.com/index.php/blog/msg/97>`_
 - `FAR SIDES OF JAVA REMOTE PROTOCOLS <https://i.blackhat.com/eu-19/Wednesday/eu-19-An-Far-Sides-Of-Java-Remote-Protocols.pdf>`_
 - `SpringBootVulExploit <https://github.com/LandGrey/SpringBootVulExploit>`_ SpringBoot 相关漏洞学习资料，利用方法和技巧合集，黑盒安全评估 checklist
+- `Marshalling Pickles how deserializing objects can ruin your day <https://www.slideshare.net/frohoff1/appseccali-2015-marshalling-pickles>`_
 
 沙箱
 ----------------------------------------
@@ -48,3 +49,7 @@ JNDI
 WebShell
 ----------------------------------------
 - `各种姿势jsp webshell <https://xz.aliyun.com/t/7798>`_
+
+其他漏洞
+----------------------------------------
+- ` JAVA常见的XXE漏洞写法和防御 <blog.spoock.com/2018/10/23/java-xxe/index.html>`_

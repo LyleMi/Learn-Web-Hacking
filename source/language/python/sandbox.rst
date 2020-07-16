@@ -8,8 +8,20 @@
 - globals / locals / vars
 - getattr / setattr
 
+导入包方式
+--------------------------------
+- ``import os``
+- ``from os import *``
+- ``__import__("os")``
+- ``importlib``
+- ``imp``
+- ``reload(os)``
+- ``execfile`` 仅Python2支持
+
 绕过
 --------------------------------
+- ``dir(__builtins__)`` 查看内置模块
+
 - 最简单的思路是在已有的模块中import，如果那个模块中已经 import 可以利用的模块就可以使用了
 
 - 在父类中寻找可用的模块，最常见payload是 ``().__class__.__bases__[0].__subclasses__()`` 或者用魔术方法获取全局作用域 ``__init__.__func__.__globals__``

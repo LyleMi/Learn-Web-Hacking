@@ -3,27 +3,39 @@ Sink
 
 命令执行
 --------------------------------
-- os.popen
-- os.system
-- os.spawn
-- os.fork
-- os.exec
-- popen2
+- bdb.os
+- cgi.os.system
+- cgi.sys
 - commands
-- subprocess
+- ctypes.CDLL
+- eval
 - exec
 - execfile
-- eval
+- os.exec
+- os.fork
+- os.popen
+- os.spawn
+- os.system
+- platform.os
+- platform.popen
+- platform.sys
+- popen2
+- pty.os
+- pty.spawn
+- subprocess
 - timeit.sys
 - timeit.timeit
-- platform.os
-- platform.sys
-- platform.popen
-- pty.spawn
-- pty.os
-- bdb.os
-- cgi.sys
 - ...
+
+文件读取
+--------------------------------
+- open
+- os.open
+- urllib.request.urlopen('file:///')
+- codecs.open
+- fileinput
+- 仅Python2
+    - types.FileType
 
 危险第三方库
 --------------------------------

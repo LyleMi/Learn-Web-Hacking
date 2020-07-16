@@ -54,17 +54,17 @@
 
 存在危险的基础库
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``com.mchange:c3p0 0.9.5.2``
+- ``com.mchange:mchange-commons-java 0.2.11``
+- ``commons-beanutils 1.9.2``
+- ``commons-collections 3.1``
 - ``commons-fileupload 1.3.1``
 - ``commons-io 2.4``
-- ``commons-collections 3.1``
 - ``commons-logging 1.2``
-- ``commons-beanutils 1.9.2``
-- ``org.slf4j:slf4j-api 1.7.21``
-- ``com.mchange:mchange-commons-java 0.2.11``
 - ``org.apache.commons:commons-collections 4.0``
-- ``com.mchange:c3p0 0.9.5.2``
 - ``org.beanshell:bsh 2.0b5``
 - ``org.codehaus.groovy:groovy 2.3.9``
+- ``org.slf4j:slf4j-api 1.7.21``
 - ``org.springframework:spring-aop 4.1.4.RELEASE``
 
 漏洞修复和防护

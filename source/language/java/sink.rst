@@ -8,22 +8,24 @@
 
 XXE
 ----------------------------------------
+- java.net.bull.javamelody.PayloadNameRequestWrapper
+- javax.xml.bind.Unmarshaller
 - javax.xml.parsers.DocumentBuilderFactory
 - javax.xml.parsers.SAXParser
-- javax.xml.transform.TransformerFactory
-- javax.xml.validation.Validator
-- javax.xml.validation.SchemaFactory
-- javax.xml.transform.sax.SAXTransformerFactory
+- javax.xml.stream.XMLStreamReader
 - javax.xml.transform.sax.SAXSource
-- org.xml.sax.XMLReader
-- org.xml.sax.helpers.XMLReaderFactory
+- javax.xml.transform.sax.SAXTransformerFactory
+- javax.xml.transform.TransformerFactory
+- javax.xml.validation.SchemaFactory
+- javax.xml.validation.Validator
+- javax.xml.xpath.XpathExpression
+- org.apache.commons.digester3.Digester
+- org.apache.ofbiz.base.util.UtilXml
 - org.dom4j.io.SAXReader
 - org.jdom.input.SAXBuilder
 - org.jdom2.input.SAXBuilder
-- javax.xml.bind.Unmarshaller
-- javax.xml.xpath.XpathExpression
-- javax.xml.stream.XMLStreamReader
-- org.apache.commons.digester3.Digester
+- org.xml.sax.helpers.XMLReaderFactory
+- org.xml.sax.XMLReader
 
 SSRF
 ----------------------------------------
@@ -42,13 +44,13 @@ SSRF
 
 相关Sink函数
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``JSON.parseObject``
 - ``ObjectInputStream.readObject``
 - ``ObjectInputStream.readUnshared``
-- ``XMLDecoder.readObject``
-- ``Yaml.load``
-- ``XStream.fromXML``
 - ``ObjectMapper.readValue``
-- ``JSON.parseObject``
+- ``XMLDecoder.readObject``
+- ``XStream.fromXML``
+- ``Yaml.load``
 
 Magic Call
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
