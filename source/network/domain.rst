@@ -160,9 +160,14 @@ RFC
 - `RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES <https://tools.ietf.org/html/rfc1034>`_
 - `RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION <https://tools.ietf.org/html/rfc1035>`_
 - `RFC 1123 Requirements for Internet Hosts -- Application and Support <https://tools.ietf.org/html/rfc1123>`_
-- `RFC 3596 DNS Extensions to Support IP Version 6 <https://tools.ietf.org/html/rfc3596>`_
+- `RFC 2535 Domain Name System Security Extensions <https://tools.ietf.org/html/rfc2535>`_
+- `RFC 2930 Secret Key Establishment for DNS (TKEY RR) <https://tools.ietf.org/html/rfc2930>`_
+- `RFC 2931 DNS Request and Transaction Signatures ( SIG(0)s ) <https://tools.ietf.org/html/rfc2931>`_
+- `RFC 3596 Legacy Resolver Compatibility for Delegation Signer (DS) <https://tools.ietf.org/html/rfc3596>`_
+- `RFC 3755 DNS Extensions to Support IP Version 6 <https://tools.ietf.org/html/rfc3755>`_
 - `RFC 5001 Automated Updates of DNS Security (DNSSEC) Trust Anchors <https://tools.ietf.org/html/rfc5001>`_
 - `RFC 5936 DNS Zone Transfer Protocol <https://tools.ietf.org/html/rfc5936>`_
+- `RFC 5966 DNS Transport over TCP - Implementation Requirements <https://tools.ietf.org/html/rfc5966>`_
 - `RFC 6376 DomainKeys Identified Mail (DKIM) Signatures <https://tools.ietf.org/html/rfc6376>`_
 - `RFC 6762 Multicast DNS <https://tools.ietf.org/html/rfc6762>`_
 - `RFC 6891 Extension Mechanisms for DNS (EDNS(0)) <https://tools.ietf.org/html/rfc6891>`_
@@ -186,3 +191,7 @@ RFC
 - `DNSSEC原理和分析 <https://blog.thecjw.me/?p=1221>`_
 - Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study of domain generating malware[C]//25th {USENIX} Security Symposium ({USENIX} Security 16). 2016: 263-278.
 - An End-to-End Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?
+
+相关CVE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `SIGRed – Resolving Your Way into Domain Admin: Exploiting a 17 Year-old Bug in Windows DNS Servers <https://research.checkpoint.com/2020/resolving-your-way-into-domain-admin-exploiting-a-17-year-old-bug-in-windows-dns-servers/>`_

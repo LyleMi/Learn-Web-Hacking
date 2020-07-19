@@ -3,13 +3,20 @@
 
 简介
 ----------------------------------------
-威胁情报(Threat Intelligence)一般指从安全数据中提炼的，与网络空间威胁相关的信息，包括威胁来源、攻击意图、攻击手法、攻击目标信息，以及可用于解决威胁或应对危害的知识。广义的威胁情报也包括情报的加工生产、分析应用及协同共享机制。相关的概念有资产、威胁、脆弱性等，具体定义如下。
+
+产生原因
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+新一代的攻击者常常向企业和组织发起针对性的网络攻击，这种针对性强的攻击，一般经过了精心的策划，攻击方法、途径复杂，后果严重。在面对这种攻击时，攻防存在着严重的不对等，为了尽可能消除这种不对等，威胁情报 (Threat Intelligence) 应运而生。
+
+定义
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+关于威胁情报的定义有很多，一般是指从安全数据中提炼的，与网络空间威胁相关的信息，包括威胁来源、攻击意图、攻击手法、攻击目标信息，以及可用于解决威胁或应对危害的知识。广义的威胁情报也包括情报的加工生产、分析应用及协同共享机制。相关的概念有资产、威胁、脆弱性等，具体定义如下。
 
 一般威胁情报需要包含威胁源、攻击目的、攻击对象、攻击手法、漏洞、攻击特征、防御措施等。威胁情报在事前可以起到预警的作用，在威胁发生时可以协助进行检测和响应，在事后可以用于分析和溯源。
 
 常见的网络威胁情报服务有黑客或欺诈团体分析、社会媒体和开源信息监控、定向漏洞研究、定制的人工分析、实时事件通知、凭据恢复、事故调查、伪造域名检测等。
 
-在威胁情报方面，比较有代表性的厂商有RSA、IBM、McAfee、赛门铁克、FireEye等。
+在威胁情报方面，比较有代表性的厂商有BAE Systems Applied Intelligence、Booz Allen、RSA、IBM、McAfee、赛门铁克、FireEye等。
 
 相关概念
 ----------------------------------------
@@ -45,3 +52,10 @@
 威胁框架
 ----------------------------------------
 比较有影响力的威胁框架主要有洛克希德-马丁的杀伤链框架（Cyber Kill Chain Framework）、MITRE的ATT&CK框架（Common Knowledge base of Adversary Tactics and Techniques）、ODNI的CCTF框架（Common Cyber Threat Framework，公共网空威胁框架），以及NSA的TCTF框架（Technical Cyber Threat Framework，技术性网空威胁框架）。
+
+参考链接
+----------------------------------------
+- `Executive Perspectives on Cyber Threat Intelligence <https://scadahacker.com/library/Documents/Threat_Intelligence/iSight%20Partners%20-%20Executive%20Perspectives%20on%20Cyber%20Threat%20Intelligence.pdf>`_
+- `Cyber Threats: Information vs. Intelligence <https://www.darkreading.com/analytics/threat-intelligence/cyber-threats-information-vs-intelligence/a/d-id/1316851>`_
+- `威胁情报简介及市场浅析 <https://www.freebuf.com/column/136763.html>`_
+- ` <>`_

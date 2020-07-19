@@ -57,6 +57,10 @@
 
 2010年6月，震网 (Stuxnet) 被发现，在这之后供应链攻击事件开始成为网络空间安全的新兴威胁之一。随后的XcodeGhost、CCleaner等供应链攻击事件都造成了重大影响。
 
+2012年1月，Gartner 公司提出了 IAST (Interactive Application Security Testing) 的概念，提供了结合 DAST 和 SAST 两种技术的解决方案。
+
+2012年9月，Gartner 公司研究员 David Cearley 提出了 DevSecOps 的概念，表示 DevOps 的流程应该包含安全理念。
+
 2013年，MITRE 提出了 ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK) ，这是一个站在攻击者的视角来描述攻击中各阶段用到的技术的模型。
 
 2013年，Michigan 大学开始了 ZMap 项目，在2015年这个项目演化为 Censys ，从这之后网络空间测绘的项目逐渐出现。
@@ -84,3 +88,4 @@
 - `Black hat About <https://www.blackhat.com/about.html>`_
 - `The DEF CON Story <https://www.defcon.org/html/links/dc-about.html>`_
 - `Reflections on Trusting Trust <https://users.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf>`_
+- `What is DevSecOps? <https://www.devsecops.org/blog/2015/2/15/what-is-devsecops>`_

@@ -91,3 +91,4 @@ Botnet
 免杀工具
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `AV Evasion Tool <https://github.com/1y0n/AV_Evasion_Tool>`_ 掩日 - 免杀执行器生成工具
+- `DKMC <https://github.com/Mr-Un1k0d3r/DKMC>`_ Dont kill my cat - Malicious payload evasion tool

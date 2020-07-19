@@ -10,6 +10,7 @@
 
 反序列化
 ----------------------------------------
+- `AppSecCali 2015: Marshalling Pickles <https://frohoff.github.io/appseccali-marshalling-pickles/>`_
 - `Java反序列化漏洞从入门到深入 <https://mp.weixin.qq.com/s/nNTw3HMnkX63d9ybdx3USQ>`_
 - `Java反序列化漏洞通用利用分析 <https://blog.chaitin.cn/2015-11-11_java_unserialize_rce/>`_
 - `JRE8u20反序列化漏洞分析 <http://www.freebuf.com/vuls/176672.html>`_

