@@ -16,4 +16,5 @@ PHP
    phar
    sink
    misc
+   version
    ref

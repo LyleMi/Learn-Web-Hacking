@@ -68,6 +68,7 @@ Bypass
 - call_user_func_array
 - filter_var
 - filter_var_array
+- preg_replace_callback
 - register_tick_function
 - registregister_shutdown_function
 - uasort

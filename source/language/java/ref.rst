@@ -10,7 +10,12 @@
 
 反序列化
 ----------------------------------------
+- `Java 14 Object Serialization Specification <https://docs.oracle.com/en/java/javase/14/docs/specs/serialization/index.html>`_
+- `Marshalling Pickles how deserializing objects can ruin your day <https://www.slideshare.net/frohoff1/appseccali-2015-marshalling-pickles>`_
 - `AppSecCali 2015: Marshalling Pickles <https://frohoff.github.io/appseccali-marshalling-pickles/>`_
+- `More serialization hacks with AnnotationInvocationHandler <http://wouter.coekaerts.be/2015/annotationinvocationhandler>`_
+- `Pure JRE 8 RCE Deserialization gadget <https://github.com/pwntester/JRE8u20_RCE_Gadget>`_
+- `Breaking Defensive Serialization <http://slightlyrandombrokenthoughts.blogspot.com/2010/08/breaking-defensive-serialization.html>`_
 - `Java反序列化漏洞从入门到深入 <https://mp.weixin.qq.com/s/nNTw3HMnkX63d9ybdx3USQ>`_
 - `Java反序列化漏洞通用利用分析 <https://blog.chaitin.cn/2015-11-11_java_unserialize_rce/>`_
 - `JRE8u20反序列化漏洞分析 <http://www.freebuf.com/vuls/176672.html>`_
@@ -20,8 +25,7 @@
 - `浅析Java序列化和反序列化 <https://xz.aliyun.com/t/3847>`_
 - `Commons Collections Java反序列化漏洞深入分析 <https://security.tencent.com/index.php/blog/msg/97>`_
 - `FAR SIDES OF JAVA REMOTE PROTOCOLS <https://i.blackhat.com/eu-19/Wednesday/eu-19-An-Far-Sides-Of-Java-Remote-Protocols.pdf>`_
-- `SpringBootVulExploit <https://github.com/LandGrey/SpringBootVulExploit>`_ SpringBoot 相关漏洞学习资料，利用方法和技巧合集，黑盒安全评估 checklist
-- `Marshalling Pickles how deserializing objects can ruin your day <https://www.slideshare.net/frohoff1/appseccali-2015-marshalling-pickles>`_
+- `JDK8u20反序列化漏洞新型PoC思路及具体实现 <https://mp.weixin.qq.com/s/3bJ668GVb39nT0NDVD-3IA>`_
 
 沙箱
 ----------------------------------------
@@ -32,6 +36,7 @@
 - `Struts <https://github.com/apache/struts>`_
 - `Struts Examples <https://github.com/apache/struts-examples>`_
 - `Eclipse Jetty <https://github.com/eclipse/jetty.project>`_
+- `SpringBootVulExploit <https://github.com/LandGrey/SpringBootVulExploit>`_ SpringBoot 相关漏洞学习资料，利用方法和技巧合集，黑盒安全评估 checklist
 
 RMI
 ----------------------------------------

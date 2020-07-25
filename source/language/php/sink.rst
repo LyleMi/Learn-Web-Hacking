@@ -5,7 +5,6 @@ Sink
 ---------------------------------
 - eval
 - assert
-    - php 7.2 之后 assert 不能传入字符串表达式
 - call_user_func
 
 执行系统命令
