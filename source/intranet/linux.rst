@@ -25,6 +25,7 @@
 - 用户
     - 查询用户的基本信息 ``finger``
     - 当前登录的用户 ``users`` ``who -a`` ``/var/log/utmp``
+    - 查询无密码用户 ``grep 'x:0:' /etc/passwd``
 - 目前登录的用户 ``w``
 - 登入过的用户信息 ``last`` / ``/var/log/wtmp``
 - 显示系统中所有用户最近一次登录信息 ``lastlog`` / ``/var/log/lastlog``
@@ -134,3 +135,11 @@
 - ``/var/log/wtmp``
 - ``/var/log/wtmp``
 - ``/var/run/utmp``
+
+虚拟环境检测
+----------------------------------------
+- ``lsmod | grep -i "vboxsf\|vboxguest"``
+- ``lsmod | grep -i "vmw_baloon\|vmxnet"``
+- ``lsmod | grep -i "xen-vbd\|xen-vnif"``
+- ``lsmod | grep -i "virtio_pci\|virtio_net"``
+- ``lsmod | grep -i "hv_vmbus\|hv_blkvsc\|hv_netvsc\|hv_utils\|hv_storvsc"``
