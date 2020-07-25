@@ -56,6 +56,13 @@ VPN Install
 - `frp <https://github.com/fatedier/frp>`_ A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet
 - `lanproxy <https://github.com/ffay/lanproxy>`_ 内网穿透工具
 - `ligolo <https://github.com/sysdream/ligolo>`_ Reverse Tunneling made easy for pentesters
+- `EarthWorm <https://github.com/idlefire/ew>`_ 是一款用于开启 SOCKS v5 代理服务的工具，基于标准 C 开发，可提供多平台间的转接通讯，用于复杂网络环境下的数据转发。
+- `Tunna <https://github.com/SECFORCE/Tunna>`_  is a set of tools which will wrap and tunnel any TCP communication over HTTP
+
+代理链
+----------------------------------------
+- `Netch <https://github.com/NetchX/Netch>`_ Support Socks5, Shadowsocks, ShadowsocksR, V2Ray, Trojan proxies. UDP NAT FullCone
+- `proxychains <https://github.com/haad/proxychains>`_ a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4, SOCKS5 or HTTP(S) proxy
 
 资产管理
 ----------------------------------------
@@ -94,3 +101,7 @@ SIEM
 系统监控
 ----------------------------------------
 - `netdata <https://github.com/netdata/netdata>`_ Real-time performance monitoring
+
+Windows
+----------------------------------------
+- `Windows Sysinternals <https://docs.microsoft.com/zh-cn/sysinternals>`_

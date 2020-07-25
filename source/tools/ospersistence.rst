@@ -73,6 +73,7 @@ C2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Empire <https://github.com/EmpireProject/Empire>`_
 - `pupy <https://github.com/n1nj4sec/pupy>`_
+- `Covenant <https://github.com/cobbr/Covenant>`_ is a collaborative .NET C2 framework for red teamers
 
 Cobalt Strike
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
