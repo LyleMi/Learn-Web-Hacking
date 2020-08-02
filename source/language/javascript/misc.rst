@@ -22,7 +22,7 @@ JavaScript中的对象拷贝分为浅拷贝和深拷贝。
 
 常见Sink
 ----------------------------------------
-- exec
-- execSync
 - child_process
 - eval
+- exec
+- execSync

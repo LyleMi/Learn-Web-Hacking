@@ -15,5 +15,6 @@ JavaScript
    vm
    deserialization
    jsfuck
+   trick
    misc
    ref

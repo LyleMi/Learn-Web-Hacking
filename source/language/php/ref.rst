@@ -21,6 +21,7 @@ WebShell
 - `php木马加密 <https://blog.manchestergreyhats.co.uk/2018/11/07/php-malware-examination/>`_
 - `PHP WebShell变形技术总结  <https://www.freebuf.com/articles/web/155891.html>`_
 - `一些不包含数字和字母的webshell <https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html>`_
+- `PHP Webshell那些事-攻击篇 <https://mp.weixin.qq.com/s/FgzIm-IK02rjEf3JvxOxrw>`_
 
 Phar
 ----------------------------------------

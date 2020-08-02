@@ -77,6 +77,7 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
     - 追加文件内容 ``Add-Content -Path #{file_path} -Value "#{Content}"``
     - 复制文件 ``Copy-Item src dst``
     - 删除文件 ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``
+    - 子目录 ``Get-ChildItem #{file_path}``
 - 服务
     - 获取服务 ``Get-Service -Name "#{service_name}"``
     - 启动服务 ``Start-Service -Name "#{service_name}"``
