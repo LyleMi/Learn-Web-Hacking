@@ -21,19 +21,6 @@
 - Bulletproof SSL and TLS
 - UNIX Network Programming
 
-Java
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `learnjavabug <https://github.com/threedr3am/learnjavabug>`_ Java安全相关的漏洞和技术demo
-
-后渗透
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Powershell攻击指南 黑客后渗透之道  <https://github.com/rootclay/Powershell-Attack-Guide.git>`_
-- `Active Directory Exploitation Cheat Sheet <https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet>`_
-
-红蓝对抗
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Atomic Red Team <https://github.com/redcanaryco/atomic-red-team>`_ Small and highly portable detection tests based on MITRE's ATT&CK
-
 SEO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - SEO艺术
@@ -113,9 +100,25 @@ Web安全相关CTF题目
 - `Adaz <https://github.com/christophetd/Adaz>`_: Active Directory Hunting Lab in Azure
 - `Detection <https://github.com/clong/DetectionLab>`_ Vagrant & Packer scripts to build a lab environment complete with security tooling and logging best practices
 
-Awesome 系列
+知识库
 --------------------------------
+
+Awesome 系列
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `awesome web security <https://github.com/qazbnm456/awesome-web-security>`_
 - `Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_
 - `Awesome Security <https://github.com/sbilly/awesome-security>`_
 - `awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_
+
+Java
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `learnjavabug <https://github.com/threedr3am/learnjavabug>`_ Java安全相关的漏洞和技术demo
+
+红蓝对抗
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `atomic red team <https://github.com/redcanaryco/atomic-red-team>`_ Small and highly portable detection tests based on MITRE's ATT&CK
+
+后渗透
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Powershell攻击指南 黑客后渗透之道  <https://github.com/rootclay/Powershell-Attack-Guide.git>`_
+- `Active Directory Exploitation Cheat Sheet <https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet>`_

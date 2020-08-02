@@ -25,6 +25,7 @@ PowerShell
 ----------------------------------------
 - `SharpShares <https://github.com/djhohnstein/SharpShares>`_ Quick and dirty binary to list network share information from all machines in the current domain and if they're readable
 - `WinShareEnum <https://github.com/nccgroup/WinShareEnum>`_ Windows Share Enumerator
+- `HackBrowserData <https://github.com/moonD4rk/HackBrowserData>`_ 全平台的浏览器数据导出工具
 
 Kerberos
 ----------------------------------------
