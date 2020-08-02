@@ -2,6 +2,10 @@ Oracle Payload
 =====================================
 
 - dump
+    - ``select * from v$tablespace;``
+    - ``select * from user_tables;``
+    - ``select column_name from user_tab_columns where table_name = 'table_name';``
+    - ``select column_name, data_type from user_tab_columns where table_name = 'table_name';``
     - ``SELECT * FROM ALL_TABLES``
 - Comment
     - ``--``

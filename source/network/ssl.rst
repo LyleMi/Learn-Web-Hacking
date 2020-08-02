@@ -37,3 +37,20 @@ SSL/TLS协议有一个高度模块化的架构，分为很多子协议，主要�
     - 对握手协议中一些异常的错误提醒，分为fatal和warning两个级别，fatal类型的错误会直接中断SSL链接，而warning级别的错误SSL链接仍可继续，只是会给出错误警告
 - Record 协议
     - 包括对消息的分段、压缩、消息认证和完整性保护、加密等
+
+参考链接
+----------------------------------------
+
+RFC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `RFC 2246 The TLS Protocol Version 1.0 <https://tools.ietf.org/html/rfc2246>`_
+- `RFC 4346 The Transport Layer Security (TLS) Protocol Version 1.1 <https://tools.ietf.org/html/rfc4346>`_
+- `RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2 <https://tools.ietf.org/html/rfc5246>`_
+- `RFC 6101 The Secure Sockets Layer (SSL) Protocol Version 3.0 <https://tools.ietf.org/html/rfc6101>`_
+- `RFC 6176 Prohibiting Secure Sockets Layer (SSL) Version 2.0 <https://tools.ietf.org/html/rfc6176>`_
+- `RFC 7568 Deprecating Secure Sockets Layer Version 3.0 <https://tools.ietf.org/html/rfc7568>`_
+- `RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3 <https://tools.ietf.org/html/rfc8446>`_
+
+Document
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Wikipedia Transport Layer Security <https://en.wikipedia.org/wiki/Transport_Layer_Security>`_

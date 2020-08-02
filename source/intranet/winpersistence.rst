@@ -59,6 +59,8 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
     - 查看服务状态管理
 - schtasks.exe
     - 定时计划任务
+- shred
+    - 重复写入文件，防止文件恢复
 - type.exe
     - 利用ads隐藏文件 ``type <filepath> <target_file:ads>``
 - wmic.exe
