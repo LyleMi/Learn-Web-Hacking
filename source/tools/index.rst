@@ -15,6 +15,7 @@
    webpersistence
    intranet
    ospersistence
+   aduit
    defense
    operation
    misc

@@ -80,6 +80,7 @@ WebShell查杀
 ----------------------------------------
 - `D盾 <http://www.d99net.net/index.asp>`_
 - `深信服WebShell查杀 <http://edr.sangfor.com.cn/backdoor_detection.html>`_
+- `php malware finder <https://github.com/nbs-system/php-malware-finder>`_
 
 IoC
 ----------------------------------------
@@ -92,23 +93,6 @@ IoC
 ----------------------------------------
 - `SfAntiBotPro <http://edr.sangfor.com.cn/tool/SfabAntiBot_X64.7z>`_
 - `volatility <https://github.com/volatilityfoundation/volatility>`_
-
-审计工具
-----------------------------------------
-- `Cobra <https://github.com/FeeiCN/cobra>`_
-- `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
-- `RIPS <http://rips-scanner.sourceforge.net/>`_
-- `pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_
-- `pyt <https://github.com/python-security/pyt>`_
-- `Semmle QL <https://github.com/Semmle/ql>`_
-- `prvd <https://github.com/fate0/prvd>`_
-- `find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_
-- `trivy <https://github.com/knqyf263/trivy>`_
-- `chip <https://github.com/phith0n/chip>`_
-- `php malware finder <https://github.com/nbs-system/php-malware-finder>`_
-- `phpvulhunter <https://github.com/OneSourceCat/phpvulhunter>`_
-- `Sourcetrail <https://github.com/CoatiSoftware/Sourcetrail>`_ free and open-source cross-platform source explorer
-- `fortify <http://www.fortify.net/>`_
 
 Security Advisories
 ----------------------------------------
