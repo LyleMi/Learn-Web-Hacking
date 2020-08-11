@@ -1,6 +1,30 @@
 常见术语
 ========================================
 
+网络相关
+----------------------------------------
+
+网络协议
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- HTTP (HyperText Transfer Protocol)
+- HTTPS (HyperText Transfer Protocol over Secure Socket Layer)
+- 动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP)
+
+路由系统
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 自治系统 (Autonomous System, AS)
+- 内部网关协议 (Interior Gateway Protocol, IGP)
+- 外部网关协议 (External Gateway Protocol, EGP)
+- 域内路由选择 (interdomain routing)
+- 域间路由选择 (intradomain routing) 
+- 路由信息协议 (Routing Information Protocol, RIP) 
+- 开放最短路径优先 (Open Shortest Path First, OSPF)
+- 动态路由协议 (Dynamic Routing Protocols, DRP)
+- 首跳冗余性协议 (First Hop Redundancy Protocols, FHRP)
+- 热备份路由器协议 (hot standby router protocol, HSRP)
+- 虚拟路由冗余协议 (virtual router redundancy protocol, VRRP)
+- 网关负载均衡协议 (gateway load balancing protocol, GLBP)
+
 开发相关
 ----------------------------------------
 - REST (Representation State Transformation) 
@@ -22,14 +46,30 @@
     - 软件系统中错误处理或恢复模块，导致程序不安全或失效
 - 漏洞 (vulnerability)
     - 可以用于违反安全策略的缺陷或瑕疵
-- 入侵检测系统 (Intrusion Detection System, IDS)
-- 主机型入侵检测系统 (Host-based Intrusion Detection System, HIDS)
-- RASP (Runtime Application Self-protection)
-- SOAR (Security Orchestration, Automation and Response)
-- SDL (Security Development Lifecycle)
 - 高级持续威胁 (Advanced Persistent Threat, APT)
 - IAST (Interactive Application Security Testing)
 - DAST (Dynamic Application Security Testing)
 - SAST (Static Application Security Testing)
 - ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK)
+
+安全开发
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 安全信息和事件管理 (Security Information Event Management, SIEM)
+- SOAR (Security Orchestration, Automation and Response)
+- SDL (Security Development Lifecycle)
+
+防护设施
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 入侵检测系统 (Intrusion Detection System, IDS)
+- 主机型入侵检测系统 (Host-based Intrusion Detection System, HIDS)
+- RASP (Runtime Application Self-protection)
+
+安全策略
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 跨域资源共享策略 (Cross-Origin Resource Sharing, CORS)
+
+攻击相关
+----------------------------------------
+- 跨站脚本攻击 (Cross Site Scripting, XSS)
+- 跨站请求伪造 (Cross-Site Request Forgery, CSRF)
+- 中间人攻击 (Man-in-the-middle, MITM)

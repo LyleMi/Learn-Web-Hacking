@@ -3,7 +3,7 @@ HTTP 请求走私
 
 简介
 ----------------------------------------
-HTTP请求走私是一种干扰网站处理HTTP请求序列方式的技术。 
+HTTP请求走私是一种干扰网站处理HTTP请求序列方式的技术，最早在 2005 年的一篇 `文章 <https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf>`_ 中被提出。
 
 成因
 ----------------------------------------
@@ -117,8 +117,15 @@ TE-TE指前后端服务器都处理 ``Transfer-Encoding`` 请求头，但是在�
 
 参考链接
 ----------------------------------------
-- `HTTP Request Smuggling by chaiml <https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf>`_
-- `HTTP request smuggling by portswigger <https://portswigger.net/web-security/request-smuggling>`_
+
+RFC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1 <https://tools.ietf.org/html/rfc2616>`_
 - `RFC 7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing -- HTTP/1.1 <https://tools.ietf.org/html/rfc7230>`_
+
+Blog / Whitepaper
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `HTTP Request Smuggling by chaiml <https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf>`_
+- `HTTP request smuggling by portswigger <https://portswigger.net/web-security/request-smuggling>`_
 - `从一道题到协议层攻击之HTTP请求走私  <https://xz.aliyun.com/t/6654>`_
+- `HTTP Request Smuggling in 2020 <http://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges.pdf>`_

@@ -3,7 +3,7 @@ HTTPS
 
 简介
 ----------------------------------------
-HTTPS（HyperText Transfer Protocol over Secure Socket Layer）可以理解为HTTP+SSL/TLS， 即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL。
+HTTPS (HyperText Transfer Protocol over Secure Socket Layer)可以理解为HTTP+SSL/TLS， 即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL。
 
 交互
 ----------------------------------------
@@ -30,4 +30,4 @@ HTTPS（HyperText Transfer Protocol over Secure Socket Layer）可以理解为HT
 
 CA
 ----------------------------------------
-CA（Certificate Authority）是颁发数字证书的机构。是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。
+CA (Certificate Authority) 是颁发数字证书的机构。是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。
