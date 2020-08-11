@@ -12,3 +12,4 @@
    docker
    apt
    nearsource
+   terminology

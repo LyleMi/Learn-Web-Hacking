@@ -145,12 +145,18 @@ Linux内核功能
     - 内存资源
     - IO 资源
     - 磁盘资源
+    - 硬件资源
 - 使用安全的基础镜像
 - 定期安全扫描和更新补丁
-- 删除镜像中的setuid和setgid权限
+- 删除镜像中的 setuid 和 setgid 权限
     - ``RUN find / -perm +6000-type f-exec chmod a-s {} \;|| true``
 - 配置Docker守护程序的TLS身份验证
 - 如非必要 禁止容器间通信
+- rootless Docker
+    - https://get.docker.com/rootless
+- 使用 Seccomp 限制 syscall
+- 构建环境和在线环境分开
+- 证书校验
 
 Docker 环境识别
 ----------------------------------------
