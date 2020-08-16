@@ -120,11 +120,6 @@ Password
 - `Common User Passwords Profiler <https://github.com/Mebus/cupp>`_
 - `chrome password grabber <https://github.com/x899/chrome_password_grabber>`_
 
-字典
-----------------------------------------
-- `Blasting dictionary <https://github.com/rootphantomer/Blasting_dictionary>`_
-- `pydictor <https://github.com/LandGrey/pydictor>`_
-
 CI信息泄露
 ----------------------------------------
 - `secretz <https://github.com/lc/secretz>`_ minimizing the large attack surface of Travis CI

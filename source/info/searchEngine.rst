@@ -3,7 +3,7 @@
 恰当地使用搜索引擎（Google/Bing/Yahoo/Baidu等）可以获取目标站点的较多信息。
 
 搜索引擎处理流程
---------------------------------
+----------------------------------------
 - 数据预处理
     - 长度截断
     - 大小写转化
@@ -35,7 +35,21 @@
 - inurl:"nph-proxy.cgi" "Start browsing"
     - 查找代理服务器
 
-除了以上的关键字，还有allintile、allinurl、allintext、inanchor、cache等。
+除了以上的关键字，还有allintile / allinurl / allintext / inanchor / intext  / filetype / info / numberange / cache等。
+
+通配符
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``*`` 代表某一个单词
+- OR 或者 | 代表逻辑或
+- 单词前跟 ``+`` 表强制查询
+- 单词前跟 ``-`` 表排除对应关键字
+- ``"`` 强调关键字
+
+tips
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 查询不区分大小写
+- 括号会被忽略
+- 默认用 and 逻辑进行搜索
 
 快照
 ----------------------------------------
@@ -52,13 +66,3 @@ Github
 - ``@example.com config/ftp/smtp/pop``
 - ``@example.com security_credentials/connetionstring``
 - ``@example.com JDBC/ssh2_auth_password/send_keys``
-
-tips
-----------------------------------------
-- 查询不区分大小写
-- ``*`` 代表某一个单词
-- 默认用and
-- OR 或者 | 代表逻辑或
-- 单词前跟+表强制查询
-- 引号引起来可以防止常见词被忽略
-- 括号会被忽略

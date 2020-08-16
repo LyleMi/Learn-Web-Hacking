@@ -3,7 +3,6 @@
 
 Nmap
 --------------------------------
-
 ``nmap [<扫描类型>...] [<选项>] {<扫描目标说明>}``
 
 指定目标
@@ -100,3 +99,20 @@ Nmap
 - ``--packet-trace`` 跟踪发送和接收的报文
 - ``--iflist`` 列举接口和路由
 
+Masscan
+--------------------------------
+
+编译
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code:: bash
+
+    sudo apt-get install git gcc make libpcap-dev
+    git clone https://github.com/robertdavidgraham/masscan
+    cd masscan
+    make -j
+
+命令行选项
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``--ports`` 指定端口范围
+- ``--rate`` 指定速率
+- ``--source-ip`` 指定源IP

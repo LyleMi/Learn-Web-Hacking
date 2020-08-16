@@ -6,6 +6,9 @@
 
 网络协议
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- SMTP (Simple Mail Transfer Protocol)
+- POP3 (Post Office Protocol 3)
+- IMAP (Internet Mail Access Protocol)
 - HTTP (HyperText Transfer Protocol)
 - HTTPS (HyperText Transfer Protocol over Secure Socket Layer)
 - 动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP)
@@ -67,9 +70,13 @@
 安全策略
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 跨域资源共享策略 (Cross-Origin Resource Sharing, CORS)
+- 发件人策略框架 (Sender Policy Framework, SPF)
+- 域名密钥识别邮件 (DomainKeys Identified Mail, DKIM)
+- DMARC (Domain-based Message Authentication, Reporting and Conformance)
 
 攻击相关
 ----------------------------------------
 - 跨站脚本攻击 (Cross Site Scripting, XSS)
 - 跨站请求伪造 (Cross-Site Request Forgery, CSRF)
 - 中间人攻击 (Man-in-the-middle, MITM)
+- 服务端请求伪造（Server Side Request Forgery, SSRF）

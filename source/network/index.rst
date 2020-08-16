@@ -12,6 +12,7 @@
    route
    domain
    http/index
+   mail
    ssl
    ipsec
    wifi

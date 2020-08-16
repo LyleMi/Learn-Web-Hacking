@@ -7,6 +7,11 @@ Web Fuzz
 - `SecLists <https://github.com/danielmiessler/SecLists>`_
 - `fuzzdb <https://github.com/fuzzdb-project/fuzzdb>`_
 - `foospidy payloads <https://github.com/foospidy/payloads>`_
+
+字典
+----------------------------------------
+- `Blasting dictionary <https://github.com/rootphantomer/Blasting_dictionary>`_
+- `pydictor <https://github.com/LandGrey/pydictor>`_  A powerful and useful hacker dictionary builder for a brute-force attack
 - `fuzzDicts <https://github.com/TheKingOfDuck/fuzzDicts>`_ Web Pentesting Fuzz 字典
 
 Unicode Fuzz

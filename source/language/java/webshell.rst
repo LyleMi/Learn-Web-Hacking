@@ -39,15 +39,23 @@ BCEL字节码
 
 执行命令变式
 ----------------------------------------
-- java.lang.ProcessBuilder
+- java.lang.ProcessBuilder#start
+- java.lang.Runtime#exec
+- TemplatesImpl
+
+基于反射
+----------------------------------------
+- class.forName
 - MethodAccessor.invoke
 - Method.invoke
-- TemplatesImpl
 
 其他Shell变式
 ----------------------------------------
-- ScriptEngine.eval
-- URLClassLoader
-- ToolProvider.getSystemJavaCompiler
+- java.beans.Expression
+- java.lang.ClassLoader
+- java.net.URLClassLoader
 - jdk.nashorn.internal.runtime.ScriptLoader
 - ObjectInputStream.resolveClass
+- ScriptEngine.eval
+- ScriptEngineManager
+- ToolProvider.getSystemJavaCompiler

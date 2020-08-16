@@ -7,6 +7,7 @@
 
    team
    sdl
+   secops
    threat
    att8ck
    riskcontrol
