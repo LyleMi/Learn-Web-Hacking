@@ -7,4 +7,6 @@ HTTP协议簇
 
    http
    https
+   cookie
    webdav
+   ref
