@@ -1,17 +1,24 @@
 常见术语
 ========================================
 
+系统相关
+----------------------------------------
+- WMI (Windows Management Instrumentation)
+
 网络相关
 ----------------------------------------
 
 网络协议
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- SMB (Server Message Block)
 - SMTP (Simple Mail Transfer Protocol)
 - POP3 (Post Office Protocol 3)
 - IMAP (Internet Mail Access Protocol)
 - HTTP (HyperText Transfer Protocol)
 - HTTPS (HyperText Transfer Protocol over Secure Socket Layer)
 - 动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP)
+- RPC (Remote Procedure Call)
+- Java调试线协议 (JDWP, Java Debug Wire Protocol)
 
 路由系统
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,6 +34,11 @@
 - 热备份路由器协议 (hot standby router protocol, HSRP)
 - 虚拟路由冗余协议 (virtual router redundancy protocol, VRRP)
 - 网关负载均衡协议 (gateway load balancing protocol, GLBP)
+
+网络应用
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 证书透明度 (Certificate Transparency, CT)
+- DNS证书颁发机构授权 (DNS Certification Authority Authorization, CAA)
 
 开发相关
 ----------------------------------------
@@ -73,6 +85,8 @@
 - 发件人策略框架 (Sender Policy Framework, SPF)
 - 域名密钥识别邮件 (DomainKeys Identified Mail, DKIM)
 - DMARC (Domain-based Message Authentication, Reporting and Conformance)
+- DNSSEC (The Domain Name System Security Extensions)
+- 基于DNS的命名实体身份验证 (DNS-based Authentication of Named Entities, DANE)
 
 攻击相关
 ----------------------------------------

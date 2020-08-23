@@ -83,6 +83,7 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
     - 启动服务 ``Start-Service -Name "#{service_name}"``
     - 停止服务 ``Stop-Service -Name "#{service_name}"``
     - 删除服务 ``Remove-Service -Name "#{service_name}"``
+- 获取WMI支持 ``Get-WmiObject -list``
 
 参考链接
 ----------------------------------------

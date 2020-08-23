@@ -82,12 +82,15 @@ WebShell查杀
 - `深信服WebShell查杀 <http://edr.sangfor.com.cn/backdoor_detection.html>`_
 - `php malware finder <https://github.com/nbs-system/php-malware-finder>`_
 
-IoC
+规则 / IoC
 ----------------------------------------
 - `malware ioc <https://github.com/eset/malware-ioc>`_
 - `fireeye public iocs <https://github.com/fireeye/iocs>`_
 - `signature base <https://github.com/Neo23x0/signature-base>`_
 - `yara rules <https://github.com/Yara-Rules/rules>`_
+- `capa rules <https://github.com/fireeye/capa-rules>`_ standard collection of rules for capa
+- `AttackDetection <https://github.com/ptresearch/AttackDetection>`_ Suricata PT Open Ruleset
+- `DailyIOC <https://github.com/StrangerealIntel/DailyIOC>`_ IOC from articles, tweets for archives
 
 内存取证
 ----------------------------------------
@@ -111,7 +114,7 @@ Security Tracker
 ----------------------------------------
 - `aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎
 
-规则
+匹配工具
 ----------------------------------------
-- `AttackDetection <https://github.com/ptresearch/AttackDetection>`_ Suricata PT Open Ruleset
-- `DailyIOC <https://github.com/StrangerealIntel/DailyIOC>`_ IOC from articles, tweets for archives
+- `yara <https://github.com/VirusTotal/yara>`_ The pattern matching swiss knife
+- `capa <https://github.com/fireeye/capa>`_ The FLARE team's open-source tool to identify capabilities in executable files.

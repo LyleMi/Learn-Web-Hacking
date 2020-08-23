@@ -109,6 +109,7 @@ Awesome 系列
 - `Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_
 - `Awesome Security <https://github.com/sbilly/awesome-security>`_
 - `awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_
+- `Awesome CobaltStrike <https://github.com/zer0yu/Awesome-CobaltStrike>`_
 
 Java
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

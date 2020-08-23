@@ -58,4 +58,3 @@
 - `Executive Perspectives on Cyber Threat Intelligence <https://scadahacker.com/library/Documents/Threat_Intelligence/iSight%20Partners%20-%20Executive%20Perspectives%20on%20Cyber%20Threat%20Intelligence.pdf>`_
 - `Cyber Threats: Information vs. Intelligence <https://www.darkreading.com/analytics/threat-intelligence/cyber-threats-information-vs-intelligence/a/d-id/1316851>`_
 - `威胁情报简介及市场浅析 <https://www.freebuf.com/column/136763.html>`_
-- ` <>`_

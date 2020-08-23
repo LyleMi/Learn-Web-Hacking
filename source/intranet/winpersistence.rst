@@ -42,9 +42,13 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
     - 构建应用程序
 - mshta.exe
     - HTML应用
+- msxsl
+    - 处理XSL程序
 - netsh.exe
 - installutil.exe
     - 安装/卸载程序组件
+- IEExec.exe
+    - .NET Framework附带程序
 - powershell.exe
 - psexec.exe
 - reg.exe

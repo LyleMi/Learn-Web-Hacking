@@ -24,22 +24,34 @@
     - DDoS
         - DNS Query Flood
         - DNS 反弹
+    - DNS 隧道
 - DHCP 67/68
     - 劫持/欺骗
 - TFTP (69/TCP)
 - HTTP (80/TCP)
 - Kerberos (88/TCP)
+    - 主要用于监听KDC的票据请求
+    - 用于进行黄金票据和白银票据的伪造
 - POP3 (110/TCP)
     - 爆破
-- NetBIOS / SMB / Samba (137/TCP & 139/TCP & 445/TCP)
+- RPC (135/TCP)
+    - wmic 服务利用
+- NetBIOS (137/UDP & 138/UDP)
+    - 未授权访问
+    - 弱口令
+- NetBIOS / Samba (139/TCP)
     - 未授权访问
     - 弱口令
 - SNMP (161/TCP)
     - Public 弱口令
 - LDAP (389/TCP)
+    - 用于域上的权限验证服务
     - 匿名访问
     - 注入
 - HTTPS (443/TCP)
+- SMB (445/TCP)
+    - Windows 协议簇，主要功能为文件共享服务
+    - ``net use \\192.168.1.1 /user:xxx\username password``
 - Linux Rexec (512/TCP & 513/TCP & 514/TCP)
     - 弱口令
 - Rsync (873/TCP)
@@ -56,7 +68,7 @@
     - 弱密码
 - NFS (2049/TCP)
     - 权限设置不当
-- ZooKeeper (2181/TCP)
+- ZooKeeper (2171/TCP & 2181/TCP)
     - 无身份认证
 - MySQL (3306/TCP)
     - 弱密码
@@ -72,6 +84,9 @@
     - 弱密码
 - CouchDB (5984/TCP)
     - 未授权访问
+- WinRM (5985/TCP)
+    - Windows对WS-Management的实现
+    - 在Vista上需要手动启动，在Windows Server 2008中服务是默认开启的
 - Redis (6379/TCP)
     - 无密码或弱密码
     - 绝对路径写 WebShell
@@ -79,15 +94,19 @@
     - 写 SSH 公钥
     - 主从复制 RCE
     - Windows 写启动项
-- JDWP
-    - 远程命令执行漏洞
+- JDWP (8000/TCP)
+    - 远程命令执行
+- Jenkin (8080/TCP)
+    - 未授权访问
 - Elasticsearch (9200/TCP)
     - 代码执行
+    - ``http://es.addr:9200/_plugin/head/``
+    - ``http://es.addr:9200/_nodes``
 - Memcached (11211/TCP)
     - 未授权访问
 - MongoDB (27017/TCP)
     - 无密码或弱密码
-- Hadoop (50070/TCP)
+- Hadoop (50070/TCP & 50075/TCP)
 
 除了以上列出的可能出现的问题，暴露在公网上的服务若不是最新版，都可能存在已经公开的漏洞
 

@@ -46,7 +46,7 @@
 ----------------------------------------
 - 查看用户 
     - ``net user``
-    - ``whoami`` / ``whoami /all``
+    - ``whoami`` / ``whoami /priv`` / ``whoami /all``
     - ``wmic useraccount get /ALL /format:csv``
 - 用户特权信息 ``whoami /priv``
 - 查看当前权限 ``net localgroup administrators``
@@ -94,7 +94,7 @@
 
 票据信息
 ----------------------------------------
-- cmdkey
+- ``cmdkey /l``
 - klist
 - msf meterpreter
 
