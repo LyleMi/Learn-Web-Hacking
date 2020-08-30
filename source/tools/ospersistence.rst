@@ -23,6 +23,10 @@ UAC Bypass
 - `UACME <https://github.com/hfiref0x/UACME>`_ Defeating Windows User Account Control
 - `UAC Bypass In The Wild <https://github.com/sailay1996/UAC_Bypass_In_The_Wild>`_
 
+免杀
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `SigThief <https://github.com/secretsquirrel/SigThief>`_ Stealing Signatures and Making One Invalid Signature at a Time
+
 C2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-exploitation rootkit
