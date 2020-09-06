@@ -15,3 +15,4 @@ Blog
 ----------------------------------------
 - `What should a hacker know about WebDav <http://2015.zeronights.org/assets/files/35-Egorov.pdf>`_
 - `Cookie 的 SameSite 属性 <http://www.ruanyifeng.com/blog/2019/09/cookie-samesite.html>`_
+- `HTTP 协议入门 <http://www.ruanyifeng.com/blog/2016/08/http.html>`_

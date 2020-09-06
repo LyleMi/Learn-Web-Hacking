@@ -68,8 +68,11 @@
     - 弱密码
 - NFS (2049/TCP)
     - 权限设置不当
-- ZooKeeper (2171/TCP & 2181/TCP)
+- ZooKeeper (2171/TCP & 2375/TCP)
     - 无身份认证
+- Docker Remote API (2375/TCP)
+    - 未限制IP / 未启用TLS身份认证
+    - ``http://docker.addr:2375/version``
 - MySQL (3306/TCP)
     - 弱密码
     - 日志写WebShell
@@ -94,8 +97,11 @@
     - 写 SSH 公钥
     - 主从复制 RCE
     - Windows 写启动项
+- Kubernetes API Server (6443/TCP && 10250/TCP)
+    - ``https://Kubernetes:10250/pods``
 - JDWP (8000/TCP)
     - 远程命令执行
+- ActiveMQ (8061/TCP)
 - Jenkin (8080/TCP)
     - 未授权访问
 - Elasticsearch (9200/TCP)
@@ -104,9 +110,11 @@
     - ``http://es.addr:9200/_nodes``
 - Memcached (11211/TCP)
     - 未授权访问
+- RabbitMQ (15672/TCP & 15692/TCP & 25672/TCP)
 - MongoDB (27017/TCP)
     - 无密码或弱密码
 - Hadoop (50070/TCP & 50075/TCP)
+    - 未授权访问
 
 除了以上列出的可能出现的问题，暴露在公网上的服务若不是最新版，都可能存在已经公开的漏洞
 

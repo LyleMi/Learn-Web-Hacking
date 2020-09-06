@@ -33,3 +33,7 @@ Phar
 ----------------------------------------
 - `Learning the PHP lifecycle <http://www.phpinternalsbook.com/php7/extensions_design/php_lifecycle.html>`_
 - `PHP7内核剖析 <https://github.com/pangudashu/php7-internal>`_
+
+Blog
+----------------------------------------
+- `How we broke PHP <https://www.evonide.com/how-we-broke-php-hacked-pornhub-and-earned-20000-dollar/>`_

@@ -49,3 +49,31 @@ SSRF
 - ``curl_exec()``
 - ``fopen()``
 - ``readfile()``
+
+phar 触发点
+----------------------------------------
+- fileatime / filectime / filemtime
+- stat / fileinode / fileowner / filegroup / fileperms
+- file / file_get_contents / readfile / fopen`
+- file_exists / is_dir / is_executable / is_file / is_link / is_readable / is_writeable / is_writable
+- parse_ini_file
+- unlink
+- copy
+- exif
+    - exif_thumbnail
+    - exif_imagetype
+- gd
+    - imageloadfont
+    - imagecreatefrom***
+- hash
+    - hash_hmac_file
+    - hash_file
+    - hash_update_file
+    - md5_file
+    - sha1_file
+- file / url
+    - get_meta_tags
+    - get_headers
+- standard
+    - getimagesize
+    - getimagesizefromstring

@@ -111,6 +111,7 @@
 - ``pkg_info`` xBSD
 - ``pkginfo`` Solaris
 - ``pacman -Q`` Arch Linux
+- ``emerge`` Gentoo
 
 文件
 ----------------------------------------
