@@ -7,7 +7,6 @@ CSS注入最早开始于利用CSS中的 ``expression()`` ``url()`` ``regex()`` �
 
 CSS selectors
 --------------------------------
-
 ::
 
     <style>
@@ -20,13 +19,10 @@ CSS selectors
         <input type="text" id="secret" name="secret" value="abc">
     </form>
 
-
 上图是利用CSS selectors完成攻击的一个示例
-
 
 Abusing Unicode Range
 --------------------------------
-
 当可以插入CSS的时候，可以使用 ``font-face`` 配合 ``unicode-range`` 获取目标网页对应字符集。PoC如下
 
 ::

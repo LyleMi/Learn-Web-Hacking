@@ -14,9 +14,9 @@ file域的同源策略
 
 cookie的同源策略
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cookie使用不同的源定义方式，一个页面可以为本域和任何父域设置cookie，只要是父域不是公共后缀（public suffix）即可。
+cookie使用不同的源定义方式，一个页面可以为本域和任何父域设置cookie，只要是父域不是公共后缀(public suffix)即可。
 
-不管使用哪个协议（HTTP/HTTPS）或端口号，浏览器都允许给定的域以及其任何子域名访问cookie。设置 cookie时，可以使用 ``domain`` / ``path`` / ``secure`` 和 ``http-only`` 标记来限定其访问性。
+不管使用哪个协议(HTTP/HTTPS)或端口号，浏览器都允许给定的域以及其任何子域名访问cookie。设置 cookie时，可以使用 ``domain`` / ``path`` / ``secure`` 和 ``http-only`` 标记来限定其访问性。
 
 所以 ``https://localhost:8080/`` 和 ``http://localhost:8081/`` 的Cookie是共享的。
 
@@ -38,12 +38,12 @@ Flash/SilverLight跨域
 ----------------------------------------
 同源策略控制了不同源之间的交互，这些交互通常分为三类：
 
-+ 通常允许跨域写操作（Cross-origin writes）
-    + 链接（links）
++ 通常允许跨域写操作(Cross-origin writes)
+    + 链接(links)
     + 重定向
     + 表单提交
-+ 通常允许跨域资源嵌入（Cross-origin embedding）
-+ 通常不允许跨域读操作（Cross-origin reads）
++ 通常允许跨域资源嵌入(Cross-origin embedding)
++ 通常不允许跨域读操作(Cross-origin reads)
 
 可能嵌入跨源的资源的一些示例有：
 
@@ -51,7 +51,7 @@ Flash/SilverLight跨域
 + ``<link rel="stylesheet" href="...">`` 标签嵌入CSS。由于CSS的松散的语法规则，CSS的跨域需要一个设置正确的Content-Type 消息头。
 + ``<img>`` / ``<video>`` / ``<audio>`` 嵌入多媒体资源。
 + ``<object>`` ``<embed>`` 和 ``<applet>`` 的插件。
-+ ``@font-face`` 引入的字体。一些浏览器允许跨域字体（ cross-origin fonts），一些需要同源字体（same-origin fonts）。
++ ``@font-face`` 引入的字体。一些浏览器允许跨域字体( cross-origin fonts)，一些需要同源字体(same-origin fonts)。
 + ``<frame>`` 和 ``<iframe>`` 载入的任何资源。站点可以使用X-Frame-Options消息头来阻止这种形式的跨域交互。
 
 JSONP跨域
@@ -95,7 +95,7 @@ Javascript的APIs中，如 ``iframe.contentWindow`` , ``window.parent``, ``windo
 
 CORS
 ----------------------------------------
-CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。通过这个标准，可以允许浏览器读取跨域的资源。
+CORS是一个W3C标准，全称是跨域资源共享(Cross-origin resource sharing)。通过这个标准，可以允许浏览器读取跨域的资源。
 
 常见请求头
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -3,7 +3,6 @@ Bypass Via Script Gadgets
 
 简介
 --------------------------------
-
 一些网站会使用白名单或者一些基于DOM的防御方式，对这些方式，有一种被称为 ``Code Reuse`` 的攻击方式可以绕过。该方式和二进制攻防中的Gadget相似，使用目标中的合法代码来达到绕过防御措施的目的。在论文 ``Code-Reuse Attacks for the Web: Breaking Cross-Site Scripting Mitigations via Script Gadgets`` 中有该方法的具体描述。
 
 portswigger的一篇博文也表达了类似的想法 ``https://portswigger.net/blog/abusing-javascript-frameworks-to-bypass-xss-mitigations``。
