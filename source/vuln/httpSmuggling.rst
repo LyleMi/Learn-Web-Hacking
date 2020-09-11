@@ -129,3 +129,4 @@ Blog / Whitepaper
 - `HTTP request smuggling by portswigger <https://portswigger.net/web-security/request-smuggling>`_
 - `从一道题到协议层攻击之HTTP请求走私  <https://xz.aliyun.com/t/6654>`_
 - `HTTP Request Smuggling in 2020 <http://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges.pdf>`_
+- `h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext (h2c) <https://labs.bishopfox.com/tech-blog/h2c-smuggling-request-smuggling-via-http/2-cleartext-h2c>`_
