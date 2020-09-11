@@ -135,6 +135,7 @@
     - ``wmic qfe get Caption,Description,HotFixID,InstalledOn``
 - 日志与事件信息
     - ``wevtutil``
+    - ``eventvwr``
 - 注册表信息
     - ``reg``
 - 安装的各类 agent 监控软件

@@ -7,10 +7,11 @@
 
    windows
    winpersistence
+   wintrace
    domain
    linux
    linuxpersistence
+   linuxtrace
    trojan
-   traceremove
    misc
    ref

@@ -1,11 +1,10 @@
-痕迹清理
+痕迹清理 - Windows
 ========================================
 
-Windows
-----------------------------------------
-
 日志
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
+- 查看日志 ``eventvwr``
+- 伪造日志 ``eventcreate``
 - 操作日志
     - 3389登录列表
     - 文件打开日志
@@ -17,9 +16,15 @@ Windows
     - 程序更新记录
 - 登录日志
     - 系统安全日志
+- 日志路径
+    - 系统日志 ``%SystemRoot%\System32\Winevt\Logs\System.evtx``
+    - 安全日志 ``%SystemRoot%\System32\Winevt\Logs\Security.evtx``
+    - 应用程序日志 ``%SystemRoot%\System32\Winevt\Logs\Application.evtx``
+- 服务日志
+    - IIS ``%SystemDrive%\inetpub\logs\LogFiles\W3SVC1\``
 
 注册表
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 - AppCompatFlags
 - Background Activity Moderator (BAM)
 - MuiCache
@@ -27,19 +32,23 @@ Windows
 - RunMRU
 - ShimCache (AppCompatCache)
 
-文件
+注册表键
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- HKEY_LOCAL_MACHINE\system\CurrentControlSet\Services\Eventlog
+
+文件
+----------------------------------------
 
 Prefetch
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 预读取文件夹，用来存放系统已访问过的文件的预读信息，扩展名为PF。位置在 ``C:\Windows\Prefetch`` 。
 
 JumpLists
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 记录用户最近使用的文档和应用程序，方便用户快速跳转到指定文件，位置在 ``%APPDATA%\Microsoft\Windows\Recent`` 。
 
 Amcache / RecentFileCache.bcf
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Windows中的使用这两个文件来跟踪具有不同可执行文件的应用程序兼容性问题，它可用于确定可执行文件首次运行的时间和最后修改时间。
 
 在Windows 7、Windows Server 2008 R2等系统中，文件保存在 ``C:\Windows\AppCompat\Programs\RecentFileCache.bcf`` ，包含程序的创建时间、上次修改时间、上次访问时间和文件名。
@@ -47,29 +56,10 @@ Windows中的使用这两个文件来跟踪具有不同可执行文件的应用�
 在Windows 8、Windows 10、Windows Server 2012等系统中，文件保存在 ``C:\Windows\AppCompat\Programs\Amcache.hve`` ，包含文件大小、版本、sha1、二进制文件类型等信息。
 
 时间轴
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 Windows时间轴是Windows 10在1803版中引入的一个新特性，会记录访问过的网站、编辑过的文档、运行的程序等，
 
-Linux
+彻底删除
 ----------------------------------------
-+ 清除历史
-    + ``unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export HISTFILE=/dev/null;``
-    + ``kill -9 $$`` kill history
-    + ``history -c``
-+ 删除 ``~/.ssh/known_hosts`` 中记录
-+ 修改文件时间戳
-    + ``touch –r``
-+ 删除tmp目录临时文件
-
-难点
-----------------------------------------
-+ 攻击和入侵很难完全删除痕迹，没有日志记录也是一种特征
-+ 即使删除本地日志，在网络设备、安全设备、集中化日志系统中仍有记录
-+ 留存的后门包含攻击者的信息
-+ 使用的代理或跳板可能会被反向入侵
-
-注意
-----------------------------------------
-+ 在操作前检查是否有用户在线
-+ 删除文件使用磁盘覆写的功能删除
-+ 尽量和攻击前状态保持一致
+- 多次覆写文件 ``cipher /w:<path>``
+- 格式化某磁盘count次 ``format D: /P:<count>``
