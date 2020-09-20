@@ -57,6 +57,8 @@
 
 2010年6月，震网 (Stuxnet) 被发现，在这之后供应链攻击事件开始成为网络空间安全的新兴威胁之一。随后的XcodeGhost、CCleaner等供应链攻击事件都造成了重大影响。
 
+在2010年Forrester Research Inc.的分析师提出了“零信任”的概念模型时。
+
 2012年1月，Gartner 公司提出了 IAST (Interactive Application Security Testing) 的概念，提供了结合 DAST 和 SAST 两种技术的解决方案。
 
 2012年9月，Gartner 公司研究员 David Cearley 提出了 DevSecOps 的概念，表示 DevOps 的流程应该包含安全理念。
