@@ -12,6 +12,7 @@
 - `attack monitor <https://github.com/yarox24/attack_monitor>`_ Endpoint detection & Malware analysis software
 - `artillery <https://github.com/BinaryDefense/artillery>`_ The Artillery Project is an open-source blue team tool designed to protect Linux and Windows operating systems through multiple methods.
 - `yurita <https://github.com/paypal/yurita>`_ Anomaly detection framework @ PayPal
+- `crowdsec <https://github.com/crowdsecurity/crowdsec>`_ An open-source, lightweight agent to detect and respond to bad behaviours
 
 XSS防护
 ----------------------------------------
@@ -118,3 +119,7 @@ Security Tracker
 ----------------------------------------
 - `yara <https://github.com/VirusTotal/yara>`_ The pattern matching swiss knife
 - `capa <https://github.com/fireeye/capa>`_ The FLARE team's open-source tool to identify capabilities in executable files.
+
+静态分析
+----------------------------------------
+- `PHP CodeSniffer <https://github.com/squizlabs/PHP_CodeSniffer>`_ tokenizes PHP files and detects violations of a defined set of coding standards

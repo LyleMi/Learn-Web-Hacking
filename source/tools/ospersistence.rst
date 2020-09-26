@@ -57,6 +57,7 @@ rootkit
 后门
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `prism <https://github.com/andreafabrizi/prism>`_ is an user space stealth reverse shell backdoor
+- `icmpsh <https://github.com/inquisb/icmpsh>`_ Simple reverse ICMP shell
 
 综合
 ----------------------------------------

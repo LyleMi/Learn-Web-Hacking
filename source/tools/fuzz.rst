@@ -8,6 +8,10 @@ Web Fuzz
 - `fuzzdb <https://github.com/fuzzdb-project/fuzzdb>`_
 - `foospidy payloads <https://github.com/foospidy/payloads>`_
 
+Burp插件
+----------------------------------------
+- `BurpShiroPassiveScan <https://github.com/pmiaowu/BurpShiroPassiveScan>`_
+
 字典
 ----------------------------------------
 - `Blasting dictionary <https://github.com/rootphantomer/Blasting_dictionary>`_

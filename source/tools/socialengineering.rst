@@ -46,8 +46,9 @@ Hacking database
 - `盘多多 <http://www.panduoduo.net/>`_
 - `Infinite Panc <https://www.panc.cc>`_
 
-个人字典
+密码猜测
 ----------------------------------------
+- `OMEN <https://github.com/RUB-SysSec/OMEN>`_ Ordered Markov ENumerator - Password Guesser
 - `genpAss <https://github.com/RicterZ/genpAss>`_
 
 伪造
