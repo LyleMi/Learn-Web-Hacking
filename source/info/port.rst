@@ -68,6 +68,7 @@
     - 弱密码
 - NFS (2049/TCP)
     - 权限设置不当
+    - ``showmount <host>``
 - ZooKeeper (2171/TCP & 2375/TCP)
     - 无身份认证
 - Docker Remote API (2375/TCP)
