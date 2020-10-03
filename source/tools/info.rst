@@ -1,6 +1,24 @@
 信息收集
 ========================================
 
+Whois
+----------------------------------------
+- `who.is <https://who.is/>`_
+- `万网WHOIS <https://whois.aliyun.com/>`_
+- `腾讯云WHOIS <https://whois.cloud.tencent.com/>`_
+- `站长之家WHOIS <https://whois.chinaz.com/>`_
+
+网站备案
+----------------------------------------
+- `天眼查 <https://www.tianyancha.com/>`_
+- `ICP备案查询 <http://www.beianbeian.com/>`_
+- `爱站备案查询 <https://icp.aizhan.com>`_
+
+CDN查询
+----------------------------------------
+- `多地Ping <https://ping.chinaz.com/>`_
+- `CDN服务商查询 <https://tools.ipip.net/cdn.php>`_
+
 子域爆破
 ----------------------------------------
 - `subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_
@@ -17,6 +35,7 @@
 - `sslScrape <https://github.com/cheetz/sslScrape/blob/master/sslScrape.py>`_
 - `aquatone <https://github.com/michenriksen/aquatone>`_ A Tool for Domain Flyovers
 - `teemo <https://github.com/bit4woo/teemo>`_ A Domain Name & Email Address Collection Tool
+- `DNS DB 历史记录 <https://dnsdb.io/zh-cn/>`_
 
 弱密码爆破
 ----------------------------------------

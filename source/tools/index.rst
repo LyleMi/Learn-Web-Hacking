@@ -17,5 +17,6 @@
    ospersistence
    aduit
    defense
+   sdl
    operation
    misc

@@ -82,6 +82,11 @@ C2
 - `pupy <https://github.com/n1nj4sec/pupy>`_
 - `Covenant <https://github.com/cobbr/Covenant>`_ is a collaborative .NET C2 framework for red teamers
 
+DNS Shell
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `DNS Shell <https://github.com/sensepost/DNS-Shell>`_ DNS-Shell is an interactive Shell over DNS channel
+- `Reverse DNS Shell <https://github.com/ahhh/Reverse_DNS_Shell>`_ A python reverse shell that uses DNS as the c2 channel
+
 Cobalt Strike
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Cobalt Strike <https://www.cobaltstrike.com>`_

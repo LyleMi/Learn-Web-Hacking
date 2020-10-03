@@ -111,15 +111,7 @@ Security Tracker
 ----------------------------------------
 - `Nginx Security Tracker <https://security-tracker.debian.org/tracker/source-package/nginx>`_
 
-风险控制
-----------------------------------------
-- `aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎
-
 匹配工具
 ----------------------------------------
 - `yara <https://github.com/VirusTotal/yara>`_ The pattern matching swiss knife
 - `capa <https://github.com/fireeye/capa>`_ The FLARE team's open-source tool to identify capabilities in executable files.
-
-静态分析
-----------------------------------------
-- `PHP CodeSniffer <https://github.com/squizlabs/PHP_CodeSniffer>`_ tokenizes PHP files and detects violations of a defined set of coding standards
