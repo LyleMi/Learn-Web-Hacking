@@ -9,17 +9,17 @@ JCL是JVM自带的一个标准库，含有数百个系统类。默认情况下�
 
 JDK
 ----------------------------------------
-Java开发工具包（Java Development Kit，JDK）是Oracle公司发布的Java平台，有标准版（Standard Edition，Java SE）、企业版（Enterprise Edition，Java EE）等版本。
+Java开发工具包(Java Development Kit，JDK)是Oracle公司发布的Java平台，有标准版(Standard Edition，Java SE)、企业版(Enterprise Edition，Java EE)等版本。
 
 在最开始，JDK以二进制形式发布，而后在2006年11月17日，Sun以GPL许可证发布了Java的源代码，于是之后出现了OpenJDK。
 
 JMX
 ----------------------------------------
-JMX（Java Management Extensions，Java管理扩展）是一个为应用程序植入管理功能的框架。
+JMX(Java Management Extensions，Java管理扩展)是一个为应用程序植入管理功能的框架，主要为管理和监视应用程序、系统对象、设备和面向服务的网络提供相应的工具。JMX可以远程读取系统中的值、调用系统中的方法。在JMX未配置身份验证或JDK版本过低存在反序列化漏洞时，可能会导致远程代码执行。
 
 OGNL
 ----------------------------------------
-OGNL（Object-Graph Navigation Language，对象导航语言）是一种功能强大的表达式语言，通过简单一致的表达式语法，提供了存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。
+OGNL(Object-Graph Navigation Language，对象导航语言)是一种功能强大的表达式语言，通过简单一致的表达式语法，提供了存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。
 
 Struts2中使用了OGNL，提供了一个ValueStack类。ValueStack分为root和context两部分。root中是当前的action对象，context中是ActionContext里面所有的内容。
 

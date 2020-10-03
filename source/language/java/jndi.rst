@@ -3,7 +3,7 @@ JNDI
 
 简介
 ----------------------------------------
-JNDI（Java Naming and Directory Interface，Java命名和目录接口）是为Java应用程序提供命名和目录访问服务的API，允许客户端通过名称发现和查找数据、对象，用于提供基于配置的动态调用。这些对象可以存储在不同的命名或目录服务中，例如RMI、CORBA、LDAP、DNS等。
+JNDI(Java Naming and Directory Interface，Java命名和目录接口)是为Java应用程序提供命名和目录访问服务的API，允许客户端通过名称发现和查找数据、对象，用于提供基于配置的动态调用。这些对象可以存储在不同的命名或目录服务中，例如RMI、CORBA、LDAP、DNS等。
 
 其中Naming Service类似于哈希表的K/V对，通过名称去获取对应的服务。Directory Service是一种特殊的Naming Service，用类似目录的方式来存取服务。
 

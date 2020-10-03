@@ -14,21 +14,21 @@
 
 序列化流程
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ ObjectOutputStream实例初始化时，将魔术头和版本号写入bout （BlockDataOutputStream类型） 中
++ ObjectOutputStream实例初始化时，将魔术头和版本号写入bout (BlockDataOutputStream类型) 中
 + 调用ObjectOutputStream.writeObject()开始写对象数据
-    + ObjectStreamClass.lookup()封装待序列化的类描述 （返回ObjectStreamClass类型） ，获取包括类名、自定义serialVersionUID、可序列化字段 （返回ObjectStreamField类型） 和构造方法，以及writeObject、readObject方法等
+    + ObjectStreamClass.lookup()封装待序列化的类描述 (返回ObjectStreamClass类型) ，获取包括类名、自定义serialVersionUID、可序列化字段 (返回ObjectStreamField类型) 和构造方法，以及writeObject、readObject方法等
     + writeOrdinaryObject()写入对象数据
         + 写入对象类型标识
         + writeClassDesc()进入分支writeNonProxyDesc()写入类描述数据
             + 写入类描述符标识
             + 写入类名
-            + 写入SUID （当SUID为空时，会进行计算并赋值）
+            + 写入SUID (当SUID为空时，会进行计算并赋值)
             + 计算并写入序列化属性标志位
             + 写入字段信息数据
             + 写入Block Data结束标识
             + 写入父类描述数据
         + writeSerialData()写入对象的序列化数据
-            + 若类自定义了writeObject()，则调用该方法写对象，否则调用defaultWriteFields()写入对象的字段数据 （若是非原始类型，则递归处理子对象）
+            + 若类自定义了writeObject()，则调用该方法写对象，否则调用defaultWriteFields()写入对象的字段数据 (若是非原始类型，则递归处理子对象)
 
 反序列化流程
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,8 +45,8 @@
             + resolveClass()根据类名获取待反序列化的类的Class对象，如果获取失败，则抛出ClassNotFoundException
             + skipCustomData()循环读取字节直到Block Data结束标识为止
             + 读取父类描述数据
-            + initNonProxy()中判断对象与本地对象的SUID和类名 （不含包名） 是否相同，若不同，则抛出InvalidClassException
-        + ObjectStreamClass.newInstance()获取并调用离对象最近的非Serializable的父类的无参构造方法 （若不存在，则返回null） 创建对象实例
+            + initNonProxy()中判断对象与本地对象的SUID和类名 (不含包名) 是否相同，若不同，则抛出InvalidClassException
+        + ObjectStreamClass.newInstance()获取并调用离对象最近的非Serializable的父类的无参构造方法 (若不存在，则返回null) 创建对象实例
         + readSerialData()读取对象的序列化数据
             + 若类自定义了readObject()，则调用该方法读对象，否则调用defaultReadFields()读取并填充对象的字段数据
 

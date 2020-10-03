@@ -3,14 +3,14 @@ RMI
 
 简介
 ----------------------------------------
-RMI（Remote Method Invocation，远程方法调用）能够让在客户端Java虚拟机上的对象像调用本地对象一样调用服务端Java虚拟机中的对象上的方法。其中RMI标准实现是Java RMI，之外还有Weblogic RMI、Spring RMI等不同的实现。
+RMI(Remote Method Invocation，远程方法调用)能够让在客户端Java虚拟机上的对象像调用本地对象一样调用服务端Java虚拟机中的对象上的方法。其中RMI标准实现是Java RMI，之外还有Weblogic RMI、Spring RMI等不同的实现。
 
 RMI中比较重要的两个概念是Stub和Skeleton，Stub和Skeleton对同一套接口进行实现，其中Stub由Client端调用，并不进行真正的实现，而是和Server端通信。Skeleton是Server端，监听来自Stub的连接，根据Stub发送的数据进行真正的操作。
 
 调用步骤
 ----------------------------------------
 - 客户调用客户端辅助对象Stub上的方法
-- 客户端辅助对象Stub打包调用信息（变量，方法名），通过网络发送给服务端辅助对象Skeleton
+- 客户端辅助对象Stub打包调用信息(变量，方法名)，通过网络发送给服务端辅助对象Skeleton
 - 服务端辅助对象Skeleton将客户端辅助对象发送来的信息解包，找出真正被调用的方法以及该方法所在对象
 - 调用真正服务对象上的真正方法，并将结果返回给服务端辅助对象Skeleton
 - 服务端辅助对象将结果打包，发送给客户端辅助对象Stub
@@ -19,7 +19,7 @@ RMI中比较重要的两个概念是Stub和Skeleton，Stub和Skeleton对同一�
 
 样例
 ----------------------------------------
-一份代码样例如下（来自《Enterprise JavaBeans》）：
+一份代码样例如下(来自《Enterprise JavaBeans》)：
 
 Person接口定义
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,6 +166,6 @@ T3协议是用于在WebLogic服务器和其他类型的Java程序之间传输信
 
 JRMP
 ----------------------------------------
-Java远程方法协议（Java Remote Method Protocol，JRMP）是特定于Java技术的、用于查找和引用远程对象的协议。这是运行在Java远程方法调用（RMI）之下、TCP/IP之上的线路层协议。
+Java远程方法协议(Java Remote Method Protocol，JRMP)是特定于Java技术的、用于查找和引用远程对象的协议。这是运行在Java远程方法调用(RMI)之下、TCP/IP之上的线路层协议。
 
 JRMP是一个Java特有的、适用于Java之间远程调用的基于流的协议，要求客户端和服务器上都使用Java对象。
