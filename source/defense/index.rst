@@ -6,6 +6,7 @@
    :caption: 内容索引:
 
    team
+   redteam
    sdl
    secops
    threat
