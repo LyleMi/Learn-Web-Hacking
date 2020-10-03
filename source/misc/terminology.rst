@@ -13,13 +13,14 @@
 - 轻型目录访问协议 (Lightweight Directory Access Protocol, LDAP)
 - SMB (Server Message Block)
 - SMTP (Simple Mail Transfer Protocol)
+- 简单网络管理协议 (Simple Network Management Protocol, SNMP)
 - POP3 (Post Office Protocol 3)
 - IMAP (Internet Mail Access Protocol)
 - HTTP (HyperText Transfer Protocol)
 - HTTPS (HyperText Transfer Protocol over Secure Socket Layer)
-- 动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP)
+- 动态主机配置协议 (Dynamic Host Configuration Protocol, DHCP)
 - RPC (Remote Procedure Call)
-- Java调试线协议 (JDWP, Java Debug Wire Protocol)
+- Java调试线协议 (Java Debug Wire Protocol, JDWP)
 - NFS (Network File System)
 
 路由系统
@@ -33,9 +34,9 @@
 - 开放最短路径优先 (Open Shortest Path First, OSPF)
 - 动态路由协议 (Dynamic Routing Protocols, DRP)
 - 首跳冗余性协议 (First Hop Redundancy Protocols, FHRP)
-- 热备份路由器协议 (hot standby router protocol, HSRP)
-- 虚拟路由冗余协议 (virtual router redundancy protocol, VRRP)
-- 网关负载均衡协议 (gateway load balancing protocol, GLBP)
+- 热备份路由器协议 (Hot Standby Router Protocol, HSRP)
+- 虚拟路由冗余协议 (Virtual Router Redundancy Protocol, VRRP)
+- 网关负载均衡协议 (Gateway Load Balancing Protocol, GLBP)
 
 网络应用
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -7,6 +7,7 @@
 
    aduit
    waf
+   netdev
    unicode
    dos
    docker
