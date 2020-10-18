@@ -19,6 +19,7 @@ Burp插件
 - `fuzzDicts <https://github.com/TheKingOfDuck/fuzzDicts>`_ Web Pentesting Fuzz 字典
 - `bruteforce lists <https://github.com/random-robbie/bruteforce-lists>`_
 - `CT subdomains <https://github.com/internetwache/CT_subdomains>`_
+- `PentesterSpecialDict <https://github.com/ppbibo/PentesterSpecialDict>`_ 渗透测试人员专用精简化字典
 
 Unicode Fuzz
 ----------------------------------------

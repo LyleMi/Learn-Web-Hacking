@@ -57,6 +57,7 @@ Git信息泄漏
 - `shhgit <https://github.com/eth0izzle/shhgit>`_ Find GitHub secrets in real time
 - `GitHound <https://github.com/tillson/git-hound>`_ GitHound pinpoints exposed API keys on GitHub using pattern matching, commit history searching, and a unique result scoring system. A batch-catching, pattern-matching, patch-attacking secret snatcher
 - `x patrol <https://github.com/MiSecurity/x-patrol>`_ Github leaked patrol
+- `GitDorker <https://github.com/obheda12/GitDorker>`_ scrape secrets from GitHub through usage of a large repository of dorks
 
 Github监控
 ----------------------------------------

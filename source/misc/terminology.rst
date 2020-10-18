@@ -37,6 +37,9 @@
 - 热备份路由器协议 (Hot Standby Router Protocol, HSRP)
 - 虚拟路由冗余协议 (Virtual Router Redundancy Protocol, VRRP)
 - 网关负载均衡协议 (Gateway Load Balancing Protocol, GLBP)
+- 网络地址转换 (Network Address Translation, NAT)
+- 点对点协议 (Point-to-Point Protocol, PPP)
+- 生成树协议 (Spanning Tree Protocol, STP)
 
 网络应用
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +48,7 @@
 
 开发相关
 ----------------------------------------
-- REST (Representation State Transformation) 
+- REST (Representation State Transformation)
 - 持续集成 (Continuous Integration, CI)
 - 持续交付 (Continuous Deployment, CD)
 
@@ -64,7 +67,6 @@
     - 软件系统中错误处理或恢复模块，导致程序不安全或失效
 - 漏洞 (vulnerability)
     - 可以用于违反安全策略的缺陷或瑕疵
-- 高级持续威胁 (Advanced Persistent Threat, APT)
 - IAST (Interactive Application Security Testing)
 - DAST (Dynamic Application Security Testing)
 - SAST (Static Application Security Testing)
@@ -93,7 +95,26 @@
 
 攻击相关
 ----------------------------------------
+
+漏洞类型
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 跨站脚本攻击 (Cross Site Scripting, XSS)
 - 跨站请求伪造 (Cross-Site Request Forgery, CSRF)
 - 中间人攻击 (Man-in-the-middle, MITM)
 - 服务端请求伪造（Server Side Request Forgery, SSRF）
+- 高级持续威胁 (Advanced Persistent Threat, APT)
+
+攻击方式
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 鱼叉攻击 (Spear Phishing)
+- 水坑攻击 (Water Holing)
+
+防御相关
+----------------------------------------
+- IoC (Indicators of Compromise)
+
+防御技术
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 网络检测响应技术 (Network-based Detection and Response, NDR)
+- 终端检测响应技术 (Endpoint Detection and Response, EDR)
+- 自适应安全架构 (Adaptive Security Architecture, ASA)

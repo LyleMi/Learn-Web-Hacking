@@ -39,6 +39,7 @@ Hacking database
 - `HFish <https://github.com/hacklcx/HFish>`_ A Most Convenient Honeypot Platform
 - `blackeye <https://github.com/thelinuxchoice/blackeye>`_ complete Phishing Tool, with 32 templates +1 customizable
 - `king phisher <https://github.com/rsmusllp/king-phisher/>`_ Phishing Campaign Toolkit
+- `espoofer <https://github.com/chenjj/espoofer>`_ An email spoofing testing tool that aims to bypass SPF/DKIM/DMARC and forge DKIM signatures
 
 网盘搜索
 ----------------------------------------

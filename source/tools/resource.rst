@@ -112,6 +112,10 @@ Awesome 系列
 - `awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_
 - `Awesome CobaltStrike <https://github.com/zer0yu/Awesome-CobaltStrike>`_
 
+Bug Hunting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `HowToHunt <https://github.com/KathanP19/HowToHunt>`_ Tutorials and Things to Do while Hunting Vulnerability
+
 Java
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `learnjavabug <https://github.com/threedr3am/learnjavabug>`_ Java安全相关的漏洞和技术demo
