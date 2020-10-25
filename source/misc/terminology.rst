@@ -51,6 +51,9 @@
 - REST (Representation State Transformation)
 - 持续集成 (Continuous Integration, CI)
 - 持续交付 (Continuous Deployment, CD)
+- 软件即服务 (Software as a Service, SaaS)
+- 平台即服务 (Platform as a Service, PaaS)
+- 基础设施即服务 (Insfrastructure as a Service, IaaS)
 
 安全相关
 ----------------------------------------

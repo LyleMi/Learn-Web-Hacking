@@ -8,6 +8,12 @@ Web Fuzz
 - `fuzzdb <https://github.com/fuzzdb-project/fuzzdb>`_
 - `foospidy payloads <https://github.com/foospidy/payloads>`_
 
+XSS Payloads
+----------------------------------------
+- `PORTSWIGGER XSS cheat sheet <https://portswigger.net/web-security/cross-site-scripting/cheat-sheet>`_
+- `Pgaijin66 XSS-Payloads <https://github.com/Pgaijin66/XSS-Payloads>`_
+- `OWASP XSS <https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet>`_
+
 Burp插件
 ----------------------------------------
 - `BurpShiroPassiveScan <https://github.com/pmiaowu/BurpShiroPassiveScan>`_

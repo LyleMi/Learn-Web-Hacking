@@ -17,4 +17,5 @@ PHP
    sink
    misc
    version
+   trick
    ref

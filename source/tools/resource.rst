@@ -67,6 +67,10 @@ Hacking Programming
 - 黑客秘笈——渗透测试实用指南
 - 黑客攻防技术宝典——web实战篇
 
+WebSite
+--------------------------------
+- https://adsecurity.org/
+
 Blog
 --------------------------------
 - https://www.leavesongs.com/
@@ -106,6 +110,7 @@ Web安全相关CTF题目
 
 Awesome 系列
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Awesome-Android-Security <https://github.com/saeidshirazi/awesome-android-security>`_
 - `awesome web security <https://github.com/qazbnm456/awesome-web-security>`_
 - `Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_
 - `Awesome Security <https://github.com/sbilly/awesome-security>`_
