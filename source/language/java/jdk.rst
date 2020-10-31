@@ -50,3 +50,7 @@ JDK 8
 8u191
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - LDAP远程Reference代码默认不信任，影响LDAP远程Reference代码攻击方式
+
+8u251
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- com.sun.org.apache.bcel.internal.util.ClassLoader 类被删除

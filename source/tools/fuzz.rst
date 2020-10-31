@@ -7,6 +7,7 @@ Web Fuzz
 - `SecLists <https://github.com/danielmiessler/SecLists>`_
 - `fuzzdb <https://github.com/fuzzdb-project/fuzzdb>`_
 - `foospidy payloads <https://github.com/foospidy/payloads>`_
+- `ffuf <https://github.com/ffuf/ffuf>`_ Fast web fuzzer written in Go
 
 XSS Payloads
 ----------------------------------------

@@ -7,6 +7,7 @@
 - `BloodHound <https://github.com/BloodHoundAD/BloodHound>`_ Six Degrees of Domain Admin
 - `windapsearch <https://github.com/ropnop/windapsearch>`_ Python script to enumerate users, groups and computers from a Windows domain through LDAP queries
 - `ldapdomaindump <https://github.com/dirkjanm/ldapdomaindump>`_ Active Directory information dumper via LDAP 
+- `Kerberoast <https://github.com/nidem/kerberoast>`_ a series of tools for attacking MS Kerberos implementations
 
 Azure AD
 ----------------------------------------

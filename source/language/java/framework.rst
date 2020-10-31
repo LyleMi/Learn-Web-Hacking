@@ -85,3 +85,56 @@ Spring在推出之初方案较为繁琐，因此提供了Spring Boot作为自动
 - 如果Controller返回字符串，ViewResolver将字符串转换成相应的视图对象
 - DispatchServlet将视图对象中的数据，输出给服务器
 - 服务器将数据输出给客户端
+
+Shiro
+----------------------------------------
+
+简介
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apache Shiro是一个功能强大且易于使用的Java安全框架，功能包括身份验证，授权，加密和会话管理。
+
+CVE概览
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- CVE-2020-13933  
+    - Apache Shiro < 1.6.0
+    - 身份验证绕过漏洞
+- CVE-2020-11989
+    - SHIRO-782 
+    - Apache Shiro < 1.5.3
+    - 身份验证绕过漏洞
+- CVE-2020-1957
+    - SHIRO-682
+    - Apache Shiro < 1.5.2
+    - 身份验证绕过漏洞
+- CVE-2019-12422
+    - SHIRO-721
+    - Apache Shiro < 1.4.2
+    - Padding Oracle Attack 远程代码执行漏洞
+- CVE-2016-4437
+    - SHIRO-550
+    - Apache Shiro <= 1.2.4
+    - 反序列化远程代码执行漏洞
+- CVE-2014-0074
+    - SHIRO-460 
+    - Apache Shiro < 1.2.3
+    - 身份验证绕过漏洞
+
+CVE-2020-13933
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apache Shiro 1.6.0之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。
+
+CVE-2020-11989
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apache Shiro 1.5.3之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。此漏洞存在两种攻击方式。
+
+CVE-2020-1957
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apache Shiro 1.5.2之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。
+
+CVE-2019-12422
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apache Shiro 1.4.2之前的版本默认使用 ``AES/CBC/PKCS5Padding`` 模式加密,开启RememberMe功能的Shiro组件将允许远程攻击者构造序列化数据，通过Padding Oracle Attack进行爆破，即使在秘钥未知的条件下，也可以在目标服务器上执行任意命令。
+
+CVE-2016-4437
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apache Shiro 1.2.5之前的版本在 ``org.apache.shiro.mgt.AbstractRememberMeManager`` 中存在AES默认秘钥 ``kPH+bIxk5D2deZiIxcaaaA==`` ，开启RememberMe功能的Shiro组件将允许远程攻击者构造序列化数据，在目标服务器上执行任意命令。

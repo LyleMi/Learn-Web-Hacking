@@ -22,6 +22,7 @@
 - RPC (Remote Procedure Call)
 - Java调试线协议 (Java Debug Wire Protocol, JDWP)
 - NFS (Network File System)
+- 服务主体名称 (Service Principal Names, SPN)
 
 路由系统
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,21 +79,15 @@
 安全开发
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 安全信息和事件管理 (Security Information Event Management, SIEM)
-- SOAR (Security Orchestration, Automation and Response)
+- 自动化响应SOAR模型 (Security Orchestration, Automation and Response, SOAR)
 - SDL (Security Development Lifecycle)
-
-防护设施
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 入侵检测系统 (Intrusion Detection System, IDS)
-- 主机型入侵检测系统 (Host-based Intrusion Detection System, HIDS)
-- RASP (Runtime Application Self-protection)
 
 安全策略
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 跨域资源共享策略 (Cross-Origin Resource Sharing, CORS)
 - 发件人策略框架 (Sender Policy Framework, SPF)
 - 域名密钥识别邮件 (DomainKeys Identified Mail, DKIM)
-- DMARC (Domain-based Message Authentication, Reporting and Conformance)
+- 基于域名的消息认证报告与一致性协议 (Domain-based Message Authentication, Reporting and Conformance, DMARC)
 - DNSSEC (The Domain Name System Security Extensions)
 - 基于DNS的命名实体身份验证 (DNS-based Authentication of Named Entities, DANE)
 
@@ -104,7 +99,7 @@
 - 跨站脚本攻击 (Cross Site Scripting, XSS)
 - 跨站请求伪造 (Cross-Site Request Forgery, CSRF)
 - 中间人攻击 (Man-in-the-middle, MITM)
-- 服务端请求伪造（Server Side Request Forgery, SSRF）
+- 服务端请求伪造 (Server Side Request Forgery, SSRF)
 - 高级持续威胁 (Advanced Persistent Threat, APT)
 
 攻击方式
@@ -118,6 +113,21 @@
 
 防御技术
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 网络检测响应技术 (Network-based Detection and Response, NDR)
-- 终端检测响应技术 (Endpoint Detection and Response, EDR)
+- 网络检测响应 (Network-based Detection and Response, NDR)
+- 终端检测响应 (Endpoint Detection and Response, EDR)
+- 托管检测响应 (Managed Detection and Response, MDR)
+- 扩展检测响应 (Extended Detection and Response, XDR)
 - 自适应安全架构 (Adaptive Security Architecture, ASA)
+- 零信任网络访问 (Zero Trust Network Access, ZTNA)
+- 云安全配置管理 (Cloud Security Posture Management, CSPM)
+
+防护设施
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 入侵检测系统 (Intrusion Detection System, IDS)
+- 主机型入侵检测系统 (Host-based Intrusion Detection System, HIDS)
+- RASP (Runtime Application Self-protection)
+- 统一端点管理 (Unified Endpoint Management, UEM)
+
+运维
+----------------------------------------
+- 智能运维 (Artificial Intelligence for IT Operations, AIOps)
