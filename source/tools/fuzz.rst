@@ -17,7 +17,9 @@ XSS Payloads
 
 Burp插件
 ----------------------------------------
+- `BurpBounty <https://github.com/wagiro/BurpBounty>`_ Scan Check Builder
 - `BurpShiroPassiveScan <https://github.com/pmiaowu/BurpShiroPassiveScan>`_
+- `IntruderPayloads <https://github.com/1N3/IntruderPayloads>`_ A collection of Burpsuite Intruder payloads
 
 字典
 ----------------------------------------

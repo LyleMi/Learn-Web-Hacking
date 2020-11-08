@@ -46,6 +46,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 证书透明度 (Certificate Transparency, CT)
 - DNS证书颁发机构授权 (DNS Certification Authority Authorization, CAA)
+- 应用级网关 (Application Level Gateway, ALG)
 
 开发相关
 ----------------------------------------
@@ -131,3 +132,10 @@
 运维
 ----------------------------------------
 - 智能运维 (Artificial Intelligence for IT Operations, AIOps)
+- 风险和脆弱性评估 (Risk and Vulnerability Assessments, RVA)
+
+认证
+----------------------------------------
+- 双因素认证 (Two-Factor Authentication, 2FA)
+- 多因素认证 (Multi-Factor Authentication, MFA)
+- 一次性密码 (One-Time Password, OTP)

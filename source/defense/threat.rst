@@ -10,6 +10,8 @@
 
 定义
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+威胁情报(Threat Intelligence)，也被称作安全情报(Security Intelligence)、安全威胁情报(Security Threat Intelligence)。
+
 关于威胁情报的定义有很多，一般是指从安全数据中提炼的，与网络空间威胁相关的信息，包括威胁来源、攻击意图、攻击手法、攻击目标信息，以及可用于解决威胁或应对危害的知识。广义的威胁情报也包括情报的加工生产、分析应用及协同共享机制。相关的概念有资产、威胁、脆弱性等，具体定义如下。
 
 一般威胁情报需要包含威胁源、攻击目的、攻击对象、攻击手法、漏洞、攻击特征、防御措施等。威胁情报在事前可以起到预警的作用，在威胁发生时可以协助进行检测和响应，在事后可以用于分析和溯源。
@@ -27,7 +29,7 @@
 
 威胁(Threat)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-能够通过未授权访问、毁坏、揭露、数据修改和或拒绝服务对系统造成潜在危害的起因，威胁可由威胁的主体（威胁源）、能力、资源、动机、途径、可能性和后果等多种属性来刻画
+能够通过未授权访问、毁坏、揭露、数据修改和或拒绝服务对系统造成潜在危害的起因，威胁可由威胁的主体(威胁源)、能力、资源、动机、途径、可能性和后果等多种属性来刻画
 
 脆弱性 / 漏洞(Vulnerability)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,7 +53,7 @@
 
 威胁框架
 ----------------------------------------
-比较有影响力的威胁框架主要有洛克希德-马丁的杀伤链框架（Cyber Kill Chain Framework）、MITRE的ATT&CK框架（Common Knowledge base of Adversary Tactics and Techniques）、ODNI的CCTF框架（Common Cyber Threat Framework，公共网空威胁框架），以及NSA的TCTF框架（Technical Cyber Threat Framework，技术性网空威胁框架）。
+比较有影响力的威胁框架主要有洛克希德-马丁的杀伤链框架(Cyber Kill Chain Framework)、MITRE的ATT&CK框架(Common Knowledge base of Adversary Tactics and Techniques)、ODNI的CCTF框架(Common Cyber Threat Framework，公共网空威胁框架)，以及NSA的TCTF框架(Technical Cyber Threat Framework，技术性网空威胁框架)。
 
 参考链接
 ----------------------------------------

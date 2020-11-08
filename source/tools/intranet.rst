@@ -8,6 +8,7 @@
 - `windapsearch <https://github.com/ropnop/windapsearch>`_ Python script to enumerate users, groups and computers from a Windows domain through LDAP queries
 - `ldapdomaindump <https://github.com/dirkjanm/ldapdomaindump>`_ Active Directory information dumper via LDAP 
 - `Kerberoast <https://github.com/nidem/kerberoast>`_ a series of tools for attacking MS Kerberos implementations
+- `ADRecon <https://github.com/sense-of-security/ADRecon>`_ Active Directory Recon
 
 Azure AD
 ----------------------------------------
@@ -32,3 +33,7 @@ Kerberos
 ----------------------------------------
 - `Rubeus <https://github.com/GhostPack/Rubeus>`_
 - `kerbrute <https://github.com/ropnop/kerbrute>`_ A tool to perform Kerberos pre-auth bruteforcing
+
+自动化审计
+----------------------------------------
+- `Infection Monkey <https://github.com/guardicore/monkey>`_ Data center Security Testing Tool
