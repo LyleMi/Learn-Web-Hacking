@@ -59,6 +59,7 @@ VPN Install
 - `EarthWorm <https://github.com/idlefire/ew>`_ 是一款用于开启 SOCKS v5 代理服务的工具，基于标准 C 开发，可提供多平台间的转接通讯，用于复杂网络环境下的数据转发。
 - `Tunna <https://github.com/SECFORCE/Tunna>`_  is a set of tools which will wrap and tunnel any TCP communication over HTTP
 - `mssqlproxy <https://github.com/blackarrowsec/mssqlproxy>`_ is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
+- `nps <https://github.com/ehang-io/nps>`_ a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal
 
 代理链
 ----------------------------------------

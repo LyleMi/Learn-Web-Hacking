@@ -18,6 +18,7 @@ Exchange
 ----------------------------------------
 - `ruler <https://github.com/sensepost/ruler>`_ A tool to abuse Exchange services
 - `MailSniper <https://github.com/dafthack/MailSniper>`_
+- `PrivExchange <https://github.com/dirkjanm/PrivExchange>`_  Exchange your privileges for Domain Admin privs by abusing Exchange
 
 PowerShell
 ----------------------------------------
