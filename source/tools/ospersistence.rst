@@ -29,6 +29,7 @@ UAC Bypass
 
 C2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `SharpSploit <https://github.com/cobbr/SharpSploit>`_ .NET post-exploitation library written in C#
 - `Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-exploitation rootkit
 
 隐藏

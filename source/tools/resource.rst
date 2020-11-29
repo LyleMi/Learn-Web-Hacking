@@ -60,6 +60,9 @@ Hacking Programming
 - 企业安全建设入门——基于开源软件打造企业网络安全 （刘焱）
 - 企业安全建设指南——金融行业安全架构与技术实践 （聂君等）
 - 大型互联网企业安全架构（石祖文）
+- CISSP官方学习指南
+- CISSP认证考试指南
+- Linux系统安全 纵深防御、安全扫描与入侵检测（胥峰）
 
 综合
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -110,12 +113,13 @@ Web安全相关CTF题目
 
 Awesome 系列
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Awesome-Android-Security <https://github.com/saeidshirazi/awesome-android-security>`_
-- `awesome web security <https://github.com/qazbnm456/awesome-web-security>`_
-- `Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_
-- `Awesome Security <https://github.com/sbilly/awesome-security>`_
-- `awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_
 - `Awesome CobaltStrike <https://github.com/zer0yu/Awesome-CobaltStrike>`_
+- `Awesome Cybersecurity Blue Team <https://github.com/fabacab/awesome-cybersecurity-blueteam>`_
+- `Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_
+- `awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_
+- `Awesome Security <https://github.com/sbilly/awesome-security>`_
+- `awesome web security <https://github.com/qazbnm456/awesome-web-security>`_
+- `Awesome-Android-Security <https://github.com/saeidshirazi/awesome-android-security>`_
 
 Bug Hunting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

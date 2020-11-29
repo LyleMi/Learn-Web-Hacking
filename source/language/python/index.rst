@@ -9,6 +9,6 @@ Python
    unserialize
    sandbox
    framework
+   obfuscate
    sink
    ref
-   
