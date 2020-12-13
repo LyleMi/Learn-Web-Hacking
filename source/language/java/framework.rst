@@ -86,6 +86,23 @@ Spring在推出之初方案较为繁琐，因此提供了Spring Boot作为自动
 - DispatchServlet将视图对象中的数据，输出给服务器
 - 服务器将数据输出给客户端
 
+CVE概览
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- CVE-2018-1270
+    - Spring Websocket 远程代码执行漏洞
+    - Spring Framework 5.0 - 5.0.5
+    - Spring Framework 4.3 - 4.3.15
+- CVE-2018-1273
+    - Spring Data 远程代码执行漏洞
+    - Spring Data Commons 1.13 - 1.13.10
+    - Spring Data Commons 2.0 - 2.0.5
+    - Spring Data REST 2.6 - 2.6.10
+    - Spring Data REST 3.0 - 3.0.5
+- CVE-2017-8046
+    - Spring Data REST 远程代码执行漏洞
+- CVE-2017-4971
+    - Spring Web Flow 远程代码执行漏洞
+
 Shiro
 ----------------------------------------
 
