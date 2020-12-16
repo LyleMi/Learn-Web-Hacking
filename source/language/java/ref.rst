@@ -37,7 +37,7 @@
 - `WebLogic反序列化漏洞漫谈 <https://www.freebuf.com/articles/web/169770.html>`_
 - `从WebLogic看反序列化漏洞的利用与防御 <https://cert.360.cn/report/detail?id=c8eed4b36fe8b19c585a1817b5f10b9e>`_
 - `JSON反序列化之殇 <https://github.com/shengqi158/fastjson-remote-code-execute-poc/blob/master/Java_JSON%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B9%8B%E6%AE%87_%E7%9C%8B%E9%9B%AA%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B3%B0%E4%BC%9A.pdf>`_
-- ` Shiro组件漏洞与攻击链分析  <https://mp.weixin.qq.com/s/j_gx9C_xL1LyrnuFFPFsfg>`_
+- `Shiro组件漏洞与攻击链分析 <https://mp.weixin.qq.com/s/j_gx9C_xL1LyrnuFFPFsfg>`_
 - `Application Security With Apache Shiro <https://www.infoq.com/articles/apache-shiro/>`_
 - `Shiro安全框架【快速入门】 <https://zhuanlan.zhihu.com/p/54176956>`_
 - `Shiro 实战(四) - 过滤器机制 <https://cloud.tencent.com/developer/article/1367702>`_
@@ -65,7 +65,7 @@ JNDI
 - `Overview of JNDI <https://docs.oracle.com/javase/tutorial/jndi/overview/index.html>`_
 - `关于 JNDI 注入 <https://paper.seebug.org/417/>`_
 - `A Journey From JNDI LDAP Manipulation To RCE <https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf>`_
-- ` 如何绕过高版本JDK的限制进行JNDI注入 <https://www.freebuf.com/column/207439.html>`_
+- `如何绕过高版本JDK的限制进行JNDI注入 <https://www.freebuf.com/column/207439.html>`_
 
 WebShell
 ----------------------------------------
@@ -73,4 +73,4 @@ WebShell
 
 其他漏洞
 ----------------------------------------
-- ` JAVA常见的XXE漏洞写法和防御 <blog.spoock.com/2018/10/23/java-xxe/index.html>`_
+- `JAVA常见的XXE漏洞写法和防御 <blog.spoock.com/2018/10/23/java-xxe/index.html>`_
