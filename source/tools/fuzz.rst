@@ -24,7 +24,7 @@ Burp插件
 字典
 ----------------------------------------
 - `Blasting dictionary <https://github.com/rootphantomer/Blasting_dictionary>`_
-- `pydictor <https://github.com/LandGrey/pydictor>`_  A powerful and useful hacker dictionary builder for a brute-force attack
+- `pydictor <https://github.com/LandGrey/pydictor>`_ A powerful and useful hacker dictionary builder for a brute-force attack
 - `fuzzDicts <https://github.com/TheKingOfDuck/fuzzDicts>`_ Web Pentesting Fuzz 字典
 - `bruteforce lists <https://github.com/random-robbie/bruteforce-lists>`_
 - `CT subdomains <https://github.com/internetwache/CT_subdomains>`_

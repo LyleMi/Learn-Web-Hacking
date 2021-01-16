@@ -96,6 +96,7 @@ SIEM
 系统监控
 ----------------------------------------
 - `netdata <https://github.com/netdata/netdata>`_ Real-time performance monitoring
+- `bcc <https://github.com/iovisor/bcc>`_ Tools for BPF-based Linux IO analysis, networking, monitoring, and more
 
 Windows
 ----------------------------------------

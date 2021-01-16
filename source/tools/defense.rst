@@ -36,6 +36,7 @@ IDS
 - `ossec <https://github.com/ossec/ossec-hids>`_
 - `yulong <https://github.com/ysrc/yulong-hids>`_
 - `AgentSmith <https://github.com/DianrongSecurity/AgentSmith-HIDS>`_
+- `ByteDance HIDS  <https://github.com/bytedance/ByteDance-HIDS>`_ Cloud-Native Host-Based Intrusion Detection
 
 SIEM
 ----------------------------------------

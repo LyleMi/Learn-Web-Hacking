@@ -89,6 +89,7 @@ Github监控
 - `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
 - `JA3 <https://github.com/salesforce/ja3>`_ is a standard for creating SSL client fingerprints in an easy to produce and shareable way
 - `TideFinger <https://github.com/TideSec/TideFinger>`_
+- `JARM <https://github.com/salesforce/jarm>`_ active Transport Layer Security (TLS) server fingerprinting tool
 
 Waf指纹
 ----------------------------------------
@@ -140,6 +141,7 @@ Password
 - `Probable Wordlists <https://github.com/berzerk0/Probable-Wordlists>`_ Wordlists sorted by probability originally created for password generation and testing
 - `Common User Passwords Profiler <https://github.com/Mebus/cupp>`_
 - `chrome password grabber <https://github.com/x899/chrome_password_grabber>`_
+- `DefaultCreds cheat sheet <https://github.com/ihebski/DefaultCreds-cheat-sheet>`_ One place for all the default credentials to assist the pentesters during an engagement
 
 CI信息泄露
 ----------------------------------------
@@ -160,3 +162,4 @@ CI信息泄露
 - `archive <https://archive.org/web/>`_
 - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
 - `htrace <https://github.com/trimstray/htrace.sh>`_
+- `Quake Command-Line Application <https://github.com/360quake/quake_rs>`_ 360网络空间测绘系统
