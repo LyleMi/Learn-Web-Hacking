@@ -11,6 +11,7 @@ Sink
 - eval
 - exec
 - execfile
+- input // python2 only
 - os.exec
 - os.fork
 - os.popen

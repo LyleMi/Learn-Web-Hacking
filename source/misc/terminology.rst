@@ -11,7 +11,10 @@
 网络协议
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 轻型目录访问协议 (Lightweight Directory Access Protocol, LDAP)
-- SMB (Server Message Block)
+- 标识名 (Distinguished Name, DN)
+- 相对标识名 (Relative Distinguished Name, RDN)
+- 服务器消息块 (Server Message Block, SMB)
+- 网络文件共享系统 (Common Internet File System, CIFS)
 - SMTP (Simple Mail Transfer Protocol)
 - 简单网络管理协议 (Simple Network Management Protocol, SNMP)
 - POP3 (Post Office Protocol 3)
@@ -19,10 +22,11 @@
 - HTTP (HyperText Transfer Protocol)
 - HTTPS (HyperText Transfer Protocol over Secure Socket Layer)
 - 动态主机配置协议 (Dynamic Host Configuration Protocol, DHCP)
-- RPC (Remote Procedure Call)
+- 远程过程调用 (Remote Procedure Call, RPC)
 - Java调试线协议 (Java Debug Wire Protocol, JDWP)
-- NFS (Network File System)
+- 网络文件系统 (Network File System, NFS)
 - 服务主体名称 (Service Principal Names, SPN)
+- 简单身份验证 (Simple Authentication and Security Layer, SASL)
 
 路由系统
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -30,8 +34,8 @@
 - 内部网关协议 (Interior Gateway Protocol, IGP)
 - 外部网关协议 (External Gateway Protocol, EGP)
 - 域内路由选择 (interdomain routing)
-- 域间路由选择 (intradomain routing) 
-- 路由信息协议 (Routing Information Protocol, RIP) 
+- 域间路由选择 (intradomain routing)
+- 路由信息协议 (Routing Information Protocol, RIP)
 - 开放最短路径优先 (Open Shortest Path First, OSPF)
 - 动态路由协议 (Dynamic Routing Protocols, DRP)
 - 首跳冗余性协议 (First Hop Redundancy Protocols, FHRP)
@@ -41,12 +45,19 @@
 - 网络地址转换 (Network Address Translation, NAT)
 - 点对点协议 (Point-to-Point Protocol, PPP)
 - 生成树协议 (Spanning Tree Protocol, STP)
+- QUIC (Quick UDP Internet Connections)
 
 网络应用
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 证书透明度 (Certificate Transparency, CT)
 - DNS证书颁发机构授权 (DNS Certification Authority Authorization, CAA)
 - 应用级网关 (Application Level Gateway, ALG)
+
+Kerberos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 密钥分发中心 (Key Distribution Center, KDC)
+- 认证服务器 (Authentication Server, AS)
+- 票据授权服务器 (Ticket Granting Server, TGS)
 
 开发相关
 ----------------------------------------
@@ -104,11 +115,14 @@
 - 中间人攻击 (Man-in-the-middle, MITM)
 - 服务端请求伪造 (Server Side Request Forgery, SSRF)
 - 高级持续威胁 (Advanced Persistent Threat, APT)
+- 远程命令执行 (Remote Command Execute, RCE)
+- 远程代码执行 (Remote Code Execute, RCE)
 
 攻击方式
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 鱼叉攻击 (Spear Phishing)
 - 水坑攻击 (Water Holing)
+- 分布式拒绝服务 (Distributed Denial of Service, DDoS)
 
 防御相关
 ----------------------------------------
@@ -128,6 +142,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 入侵检测系统 (Intrusion Detection System, IDS)
 - 主机型入侵检测系统 (Host-based Intrusion Detection System, HIDS)
+- 主机入侵防御系统 (Host Intrusion Prevent System, HIPS)
 - RASP (Runtime Application Self-protection)
 - 统一端点管理 (Unified Endpoint Management, UEM)
 
@@ -135,6 +150,7 @@
 ----------------------------------------
 - 智能运维 (Artificial Intelligence for IT Operations, AIOps)
 - 风险和脆弱性评估 (Risk and Vulnerability Assessments, RVA)
+- 计算机安全应急响应组 (Computer Emergency Response Team, CERT)
 
 认证
 ----------------------------------------

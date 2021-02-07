@@ -28,7 +28,7 @@ XSS防护
 
 安全检查
 ----------------------------------------
-- `lynis <https://github.com/CISOfy/lynis>`_
+- `lynis <https://github.com/CISOfy/lynis>`_ Security auditing tool for Linux, macOS, and UNIX-based systems
 - `linux malware detect <https://github.com/rfxn/linux-malware-detect>`_
 
 IDS
@@ -51,6 +51,7 @@ APT
 ----------------------------------------
 - `APT Groups and Operations <https://docs.google.com/spreadsheets/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml>`_
 - `APTnotes <https://github.com/kbandla/APTnotes>`_
+- `APT Hunter <https://github.com/ahmedkhlief/APT-Hunter>`_ Threat Hunting tool for windows event logs which made by purple team mindset to provide detect APT movements hidden in the sea of windows event logs to decrease the time to uncover suspicious activity
 
 入侵检查
 ----------------------------------------
