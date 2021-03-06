@@ -80,7 +80,7 @@ VPN Install
 风控
 ----------------------------------------
 - `nebula <https://github.com/threathunterX/nebula>`_
-- `Liudao <https://github.com/ysrc/Liudao>`_
+- `Liudao <https://github.com/ysrc/Liudao>`_ “六道”实时业务风控系统
 - `aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎
 
 SIEM

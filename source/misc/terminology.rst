@@ -27,6 +27,7 @@
 - 网络文件系统 (Network File System, NFS)
 - 服务主体名称 (Service Principal Names, SPN)
 - 简单身份验证 (Simple Authentication and Security Layer, SASL)
+- 链路本地多播名称解析 (Link-Local Multicast Name Resolution, LLMNR)
 
 路由系统
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,6 +105,10 @@ Kerberos
 - 基于域名的消息认证报告与一致性协议 (Domain-based Message Authentication, Reporting and Conformance, DMARC)
 - DNSSEC (The Domain Name System Security Extensions)
 - 基于DNS的命名实体身份验证 (DNS-based Authentication of Named Entities, DANE)
+
+安全模型
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 构建安全成熟度模型 (Building Security In Maturity Model, BSIMM)
 
 攻击相关
 ----------------------------------------

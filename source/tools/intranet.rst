@@ -10,6 +10,10 @@
 - `Kerberoast <https://github.com/nidem/kerberoast>`_ a series of tools for attacking MS Kerberos implementations
 - `ADRecon <https://github.com/sense-of-security/ADRecon>`_ Active Directory Recon
 
+容器
+----------------------------------------
+- `CDK <https://github.com/cdk-team/CDK>`_ an open-sourced container penetration toolkit, offering stable exploitation in different slimmed containers without any OS dependency
+
 Azure AD
 ----------------------------------------
 - `ROADtools <https://github.com/dirkjanm/ROADtools>`_ Azure AD exploration framework

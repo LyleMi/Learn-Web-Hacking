@@ -4,7 +4,7 @@
 Windows
 ----------------------------------------
 
-凭证获取 
+凭证获取
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `mimikatz <https://github.com/gentilkiwi/mimikatz>`_
 - `RdpThief <https://github.com/0x09AL/RdpThief>`_ Extracting Clear Text Passwords from mstsc.exe using API Hooking
@@ -73,6 +73,7 @@ rootkit
 - `sshLooterC <https://github.com/mthbernardes/sshLooterC>`_ program to steal passwords from ssh
 - `keychaindump <https://github.com/juuso/keychaindump>`_ A proof-of-concept tool for reading OS X keychain passwords
 - `LaZagne <https://github.com/AlessandroZ/LaZagne>`_ Credentials recovery project
+- `SecretScanner <https://github.com/deepfence/SecretScanner>`_ Find secrets and passwords in container images and file systems
 
 权限提升
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -144,3 +144,13 @@
 - ``lsmod | grep -i "xen-vbd\|xen-vnif"``
 - ``lsmod | grep -i "virtio_pci\|virtio_net"``
 - ``lsmod | grep -i "hv_vmbus\|hv_blkvsc\|hv_netvsc\|hv_utils\|hv_storvsc"``
+
+容器内信息收集
+----------------------------------------
+- ``capsh --print``
+- ``cat /proc/1/cgroup``
+- ``env | grep KUBE``
+- ``ls -l .dockerenv``
+- ``ls -l /run/secrets/Kubernetes.io/``
+- ``mount``
+- ``ps aux``

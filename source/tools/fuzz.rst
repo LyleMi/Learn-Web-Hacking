@@ -9,6 +9,11 @@ Web Fuzz
 - `foospidy payloads <https://github.com/foospidy/payloads>`_
 - `ffuf <https://github.com/ffuf/ffuf>`_ Fast web fuzzer written in Go
 
+扫描器
+----------------------------------------
+- `Nuclei <https://github.com/projectdiscovery/nuclei>`_ a fast tool for configurable targeted vulnerability scanning based on templates offering massive extensibility and ease of use
+- `xray <https://github.com/chaitin/xray>`_ 安全评估工具，支持常见 web 安全问题扫描和自定义 poc
+
 XSS Payloads
 ----------------------------------------
 - `PORTSWIGGER XSS cheat sheet <https://portswigger.net/web-security/cross-site-scripting/cheat-sheet>`_

