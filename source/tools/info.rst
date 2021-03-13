@@ -67,7 +67,7 @@ Github监控
 - `Hawkeye <https://github.com/0xbug/Hawkeye>`_
 - `gshark <https://github.com/neal1991/gshark>`_
 - `GitGot <https://github.com/BishopFox/GitGot>`_
-- `gitGraber <https://github.com/hisxo/gitGraber>`_
+- `gitGraber <https://github.com/hisxo/gitGraber>`_ monitor GitHub to search and find sensitive data in real time for different online services
 
 路径及文件扫描
 ----------------------------------------

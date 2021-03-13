@@ -9,6 +9,7 @@
 - `ldapdomaindump <https://github.com/dirkjanm/ldapdomaindump>`_ Active Directory information dumper via LDAP 
 - `Kerberoast <https://github.com/nidem/kerberoast>`_ a series of tools for attacking MS Kerberos implementations
 - `ADRecon <https://github.com/sense-of-security/ADRecon>`_ Active Directory Recon
+- `Creds <https://github.com/S3cur3Th1sSh1t/Creds>`_ Some usefull Scripts and Executables for Pentest & Forensics
 
 容器
 ----------------------------------------
@@ -42,3 +43,9 @@ Kerberos
 自动化审计
 ----------------------------------------
 - `Infection Monkey <https://github.com/guardicore/monkey>`_ Data center Security Testing Tool
+
+绕过
+----------------------------------------
+- `SysWhispers <https://github.com/jthuraisamy/SysWhispers>`_ AV/EDR evasion via direct system calls
+- `SysWhispers2 <https://github.com/jthuraisamy/SysWhispers2>`_ AV/EDR evasion via direct system calls
+- `Dumpert <https://github.com/outflanknl/Dumpert>`_ LSASS memory dumper using direct system calls and API unhooking
