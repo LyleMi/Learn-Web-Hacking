@@ -1,7 +1,10 @@
-安全运营
+安全建设
 ========================================
 
 参考链接
+----------------------------------------
+
+安全运营
 ----------------------------------------
 - `我理解的安全运营 by 职业欠钱 <https://zhuanlan.zhihu.com/p/39467201>`_
 - `再谈安全运营 by 职业欠钱 <https://zhuanlan.zhihu.com/p/84591095>`_
@@ -12,3 +15,7 @@
 - `赵彦的CISO闪电战 两年甲方安全修炼之路 <https://www.freebuf.com/articles/es/200024.html>`_
 - `胡珀谈安全运营 by lake2 <https://mp.weixin.qq.com/s?__biz=MzI2MjQ1NTA4MA==&mid=2247484735&idx=1&sn=02e06dd84ee0322dd2f9fe761b244013>`_
 - `小步快跑，快速迭代：安全运营的器术法道 <https://mp.weixin.qq.com/s/rc6X5SlsoRp6s7RCEZ67mA>`_
+
+资产管理
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `资产管理的难点 <https://mp.weixin.qq.com/s?__biz=MzA5MDY3MzMyOQ==&mid=2649439751&idx=1&sn=18ac49aff75ee4b1433e429df56ba44b>`_

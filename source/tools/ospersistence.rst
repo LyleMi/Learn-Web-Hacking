@@ -38,6 +38,14 @@ C2
 - `Invoke Phant0m <https://github.com/hlldz/Invoke-Phant0m>`_ Windows Event Log Killer
 - `EventCleaner <https://github.com/QAX-A-Team/EventCleaner>`_ A tool mainly to erase specified records from Windows event logs, with additional functionalities
 
+DLL注入
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `sRDI <https://github.com/monoxgas/sRDI>`_ Shellcode Reflective DLL Injection
+
+rootkit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `r77-rootkit <https://github.com/bytecode77/r77-rootkit>`_ Ring 3 rootkit with single file installer and fileless persistence that hides processes, files, network connections, etc
+
 伪造
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `parent PID spoofing <https://github.com/countercept/ppid-spoofing>`_ Scripts for performing and detecting parent PID spoofing

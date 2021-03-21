@@ -90,6 +90,7 @@ Kerberos
 - DAST (Dynamic Application Security Testing)
 - SAST (Static Application Security Testing)
 - ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK)
+- 横向移动 (Lateral Movement)
 
 安全开发
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
