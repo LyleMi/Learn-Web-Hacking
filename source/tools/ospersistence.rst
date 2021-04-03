@@ -51,6 +51,11 @@ rootkit
 - `parent PID spoofing <https://github.com/countercept/ppid-spoofing>`_ Scripts for performing and detecting parent PID spoofing
 - `GetSystem <https://github.com/py7hagoras/GetSystem>`_ This is a C# implementation of making a process/executable run as NT AUTHORITY/SYSTEM. This is achieved through parent ID spoofing of almost any SYSTEM process.
 
+MiTM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Seth <https://github.com/SySS-Research/Seth>`_ Perform a MitM attack and extract clear text credentials from RDP connections
+- `pyrdp <https://github.com/GoSecure/pyrdp>`_ RDP man-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact
+
 综合工具
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Nishang <https://github.com/samratashok/nishang>`_ Offensive PowerShell for red team, penetration testing and offensive security
@@ -67,6 +72,7 @@ Linux
 rootkit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `rootkit <https://github.com/nurupo/rootkit>`_
+- `Diamorphine <https://github.com/m0nad/Diamorphine>`_ LKM rootkit for Linux Kernels 2.6.x/3.x/4.x/5.x (x86/x86_64 and ARM64) 
 
 后门
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -40,6 +40,8 @@ Hacking database
 - `blackeye <https://github.com/thelinuxchoice/blackeye>`_ complete Phishing Tool, with 32 templates +1 customizable
 - `king phisher <https://github.com/rsmusllp/king-phisher/>`_ Phishing Campaign Toolkit
 - `espoofer <https://github.com/chenjj/espoofer>`_ An email spoofing testing tool that aims to bypass SPF/DKIM/DMARC and forge DKIM signatures
+- `ditto <https://github.com/evilsocket/ditto>`_ A tool for IDN homograph attacks and detection
+- `SiteCopy <https://github.com/Threezh1/SiteCopy>`_ sitecopy is a tool that facilitates personal website backup and network data collection 
 
 网盘搜索
 ----------------------------------------

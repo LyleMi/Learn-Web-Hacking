@@ -77,3 +77,15 @@ phar 触发点
 - standard
     - getimagesize
     - getimagesizefromstring
+
+原生类利用
+---------------------------------
+- XSS
+    - Error
+    - Exception
+- SSRF
+    - SoapClient
+- open_basedir 绕过
+    - DirectoryIterator 结合 ``glob://``
+- XXE
+    - SimpleXMLElement
