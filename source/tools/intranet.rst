@@ -57,3 +57,8 @@ Kerberos
 - `SysWhispers <https://github.com/jthuraisamy/SysWhispers>`_ AV/EDR evasion via direct system calls
 - `SysWhispers2 <https://github.com/jthuraisamy/SysWhispers2>`_ AV/EDR evasion via direct system calls
 - `Dumpert <https://github.com/outflanknl/Dumpert>`_ LSASS memory dumper using direct system calls and API unhooking
+
+内网扫描
+----------------------------------------
+- `InScan <https://github.com/inbug-team/InScan>`_ 边界打点后的自动化渗透工具
+- `fscan <https://github.com/shadow1ng/fscan>`_ 一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。

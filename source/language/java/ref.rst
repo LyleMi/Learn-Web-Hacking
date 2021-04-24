@@ -8,6 +8,10 @@
 - `Java RMI Release Notes for JDK 6 <https://docs.oracle.com/javase/7/docs/technotes/guides/rmi/relnotes.html>`_
 - `Java Release Notes for JDK 7 <https://www.oracle.com/technetwork/java/javase/7u21-relnotes-1932873.html>`_
 
+机制说明
+----------------------------------------
+- `深入理解Java类加载 <https://www.cnblogs.com/czwbig/p/11127222.html>`_
+
 反序列化
 ----------------------------------------
 
@@ -52,6 +56,10 @@
 - `Struts Examples <https://github.com/apache/struts-examples>`_
 - `Eclipse Jetty <https://github.com/eclipse/jetty.project>`_
 - `SpringBootVulExploit <https://github.com/LandGrey/SpringBootVulExploit>`_ SpringBoot 相关漏洞学习资料，利用方法和技巧合集，黑盒安全评估 checklist
+
+框架利用技巧
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Spring Boot Fat Jar 写文件漏洞到稳定 RCE 的探索 <https://landgrey.me/blog/22/>`_
 
 RMI
 ----------------------------------------
