@@ -45,6 +45,7 @@ LOLBAS，全称Living Off The Land Binaries and Scripts (and also Libraries)，�
 - forfiles.exe
     - ``forfiles /p c:\windows\system32 /m notepad.exe /c calc.exe``
 - mofcomp.exe
+- makecab.exe
 - msbuild.exe
     - 构建应用程序
 - mshta.exe

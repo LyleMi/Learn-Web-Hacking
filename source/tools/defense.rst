@@ -122,3 +122,7 @@ Security Tracker
 DoS防护
 ----------------------------------------
 - `Gatekeeper <https://github.com/AltraMayor/gatekeeper>`_` open-source DDoS protection system
+
+对手模拟
+----------------------------------------
+- `sliver <https://github.com/BishopFox/sliver>`_ Adversary Simulation Framework
