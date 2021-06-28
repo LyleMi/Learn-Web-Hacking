@@ -70,6 +70,7 @@ Nmap
     - ``--max_scan-delay<milliseconds>``
 - 设置时间模板
     - ``-T <Paranoid|Sneaky|Polite|Normal|Aggressive|Insane>``
+    - ``-T<0-5>`` (越大越快)
 
 逃避检测相关
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,6 +92,7 @@ Nmap
 - ``-oS<filespec>`` ScRipTKIdd|3oUTpuT
 - ``-oG<filespec>`` Grep输出
 - ``-oA<basename>`` 输出至所有格式
+- ``--open`` 仅输出可能开放的端口信息
 
 细节和调试
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

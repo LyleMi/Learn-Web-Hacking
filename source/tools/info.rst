@@ -143,6 +143,7 @@ Password
 - `Common User Passwords Profiler <https://github.com/Mebus/cupp>`_
 - `chrome password grabber <https://github.com/x899/chrome_password_grabber>`_
 - `DefaultCreds cheat sheet <https://github.com/ihebski/DefaultCreds-cheat-sheet>`_ One place for all the default credentials to assist the pentesters during an engagement
+- `SuperWordlist <https://github.com/fuzz-security/SuperWordlist>`_
 
 CI信息泄露
 ----------------------------------------

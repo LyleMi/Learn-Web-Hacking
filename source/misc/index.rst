@@ -12,5 +12,6 @@
    dos
    docker
    apt
+   supplychain
    nearsource
    terminology

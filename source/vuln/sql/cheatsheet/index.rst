@@ -10,3 +10,4 @@ CheatSheet
    psql
    oracle
    sqlite3
+   nosql
