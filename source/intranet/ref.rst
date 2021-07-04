@@ -11,6 +11,7 @@ Windows
 - `windows取证 文件执行记录的获取和清除  <https://xz.aliyun.com/t/7155>`_
 - `Getting DNS Client Cached Entries with CIM/WMI <https://www.darkoperator.com/blog/2020/1/14/getting-dns-client-cached-entries-with-cimwmi>`_
 - `Windows单机Persistence <https://lengjibo.github.io/Persistence/>`_
+- `Dumping RDP Credentials <https://pentestlab.blog/2021/05/24/dumping-rdp-credentials/>`_
 
 域渗透
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

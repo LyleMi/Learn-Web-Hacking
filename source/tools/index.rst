@@ -19,4 +19,5 @@
    defense
    sdl
    operation
+   forensics
    misc

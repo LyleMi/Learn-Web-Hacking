@@ -7,5 +7,7 @@ Windows内网渗透
 
    info
    persistence
+   privilege
    trace
+   lateral
    domain
