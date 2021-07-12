@@ -102,6 +102,10 @@ htmlhelp_basename = 'Web-Secdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
+
+latex_engine = 'xelatex'
+latex_use_xindy = False
+
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -114,6 +118,7 @@ latex_elements = {
     # Additional stuff for the LaTeX preamble.
     #
     # 'preamble': '',
+    'preamble': '\\usepackage[UTF8]{ctex}\n',
 
     # Latex figure (float) alignment
     #

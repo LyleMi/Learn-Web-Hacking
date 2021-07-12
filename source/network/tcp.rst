@@ -5,10 +5,6 @@ TCP协议
 ----------------------------------------
 TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由RFC 793定义。
 
-TCP状态
-----------------------------------------
-|statetransition|
-
 三次握手
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 三次握手（Three-Way Handshake）是指建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。
@@ -44,5 +40,3 @@ TCP采用拥塞控制算法来减少或者避免拥塞现象的发生，TCP的�
 - `RFC 3390 Increasing TCP's Initial Window <https://tools.ietf.org/html/rfc3390>`_
 - `RFC 5681 TCP Congestion Control <https://tools.ietf.org/html/rfc5681>`_
 - `TCP congestion control wiki <https://en.wikipedia.org/wiki/TCP_congestion_control>`_
-
-.. |statetransition| image:: ../images/tcp-state-transition-diagram.gif
