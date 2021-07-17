@@ -18,6 +18,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+from datetime import date
 import sphinx_rtd_theme
 extensions = [
     'sphinx.ext.todo',
@@ -38,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Web安全学习笔记'
-copyright = u'2019-2021, Lyle'
+copyright = u'2019-%d, Lyle' % date.today().year
 author = u'Lyle'
 
 # The version info for the project you're documenting, acts as replacement for

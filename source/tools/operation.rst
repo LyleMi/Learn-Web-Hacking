@@ -38,6 +38,7 @@
 - `opencanary <https://github.com/p1r06u3/opencanary_web>`_
 - `HFish <https://github.com/hacklcx/HFish>`_
 - `kippo <https://github.com/desaster/kippo>`_ SSH Honeypot
+- `Ehoney <https://github.com/seccome/Ehoney>`_ 欺骗防御系统
 
 VPN Install
 ----------------------------------------
@@ -97,6 +98,11 @@ SIEM
 ----------------------------------------
 - `netdata <https://github.com/netdata/netdata>`_ Real-time performance monitoring
 - `bcc <https://github.com/iovisor/bcc>`_ Tools for BPF-based Linux IO analysis, networking, monitoring, and more
+
+云上扫描
+----------------------------------------
+- `Cloud Custodian <https://github.com/cloud-custodian/cloud-custodian>`_ Rules engine for cloud security, cost optimization, and governance, DSL in yaml for policies to query, filter, and take actions on resources
+- `cloudquery <https://github.com/cloudquery/cloudquery>`_ cloudquery transforms your cloud infrastructure into SQL database for easy monitoring, governance and security
 
 Windows
 ----------------------------------------

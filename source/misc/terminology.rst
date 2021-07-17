@@ -63,13 +63,6 @@ Kerberos
 开发相关
 ----------------------------------------
 - REST (Representation State Transformation)
-- 持续集成 (Continuous Integration, CI)
-- 持续交付 (Continuous Deployment, CD)
-- 函数即服务 (Function as a Service, FaaS)
-- 容器即服务 (Container as a Service, CaaS)
-- 软件即服务 (Software as a Service, SaaS)
-- 平台即服务 (Platform as a Service, PaaS)
-- 基础设施即服务 (Insfrastructure as a Service, IaaS)
 
 安全相关
 ----------------------------------------
@@ -164,3 +157,21 @@ Kerberos
 - 双因素认证 (Two-Factor Authentication, 2FA)
 - 多因素认证 (Multi-Factor Authentication, MFA)
 - 一次性密码 (One-Time Password, OTP)
+
+可信计算
+----------------------------------------
+- 可信平台模块 (Trusted Platform Module, TPM)
+
+云
+----------------------------------------
+- 弹性云计算 (Elastic Compute Cloud, EC2)
+- 简单存储服务 (Simple Storage Service, S3)
+- 元数据服务 (Instance Metadata Service, IMDS)
+- 持续集成 (Continuous Integration, CI)
+- 持续交付 (Continuous Deployment, CD)
+- 函数即服务 (Function as a Service, FaaS)
+- 容器即服务 (Container as a Service, CaaS)
+- 软件即服务 (Software as a Service, SaaS)
+- 平台即服务 (Platform as a Service, PaaS)
+- 基础设施即服务 (Insfrastructure as a Service, IaaS)
+- 边缘计算机器 (Edge Computing Machine, ECM)

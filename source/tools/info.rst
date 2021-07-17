@@ -90,6 +90,7 @@ Github监控
 - `JA3 <https://github.com/salesforce/ja3>`_ is a standard for creating SSL client fingerprints in an easy to produce and shareable way
 - `TideFinger <https://github.com/TideSec/TideFinger>`_
 - `JARM <https://github.com/salesforce/jarm>`_ active Transport Layer Security (TLS) server fingerprinting tool
+- `fingerprintjs <https://github.com/fingerprintjs/fingerprintjs>`_ Browser fingerprinting library with the highest accuracy and stability
 
 Waf指纹
 ----------------------------------------
