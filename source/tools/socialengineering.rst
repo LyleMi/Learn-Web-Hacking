@@ -43,6 +43,10 @@ Hacking database
 - `ditto <https://github.com/evilsocket/ditto>`_ A tool for IDN homograph attacks and detection
 - `SiteCopy <https://github.com/Threezh1/SiteCopy>`_ sitecopy is a tool that facilitates personal website backup and network data collection 
 
+squatting
+----------------------------------------
+- `dnstwist <https://github.com/elceef/dnstwist>`_ Domain name permutation engine for detecting homograph phishing attacks, typo squatting, and brand impersonation
+
 网盘搜索
 ----------------------------------------
 - `虫部落 <http://magnet.chongbuluo.com/>`_

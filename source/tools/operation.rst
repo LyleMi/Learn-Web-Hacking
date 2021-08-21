@@ -99,11 +99,6 @@ SIEM
 - `netdata <https://github.com/netdata/netdata>`_ Real-time performance monitoring
 - `bcc <https://github.com/iovisor/bcc>`_ Tools for BPF-based Linux IO analysis, networking, monitoring, and more
 
-云上扫描
-----------------------------------------
-- `Cloud Custodian <https://github.com/cloud-custodian/cloud-custodian>`_ Rules engine for cloud security, cost optimization, and governance, DSL in yaml for policies to query, filter, and take actions on resources
-- `cloudquery <https://github.com/cloudquery/cloudquery>`_ cloudquery transforms your cloud infrastructure into SQL database for easy monitoring, governance and security
-
 Windows
 ----------------------------------------
 - `Windows Sysinternals <https://docs.microsoft.com/zh-cn/sysinternals>`_

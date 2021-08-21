@@ -14,6 +14,7 @@
    nearsource
    webpersistence
    intranet
+   cloud
    ospersistence
    aduit
    defense
