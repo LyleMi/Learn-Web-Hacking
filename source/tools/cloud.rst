@@ -7,6 +7,7 @@
 - `kube bench <https://github.com/aquasecurity/kube-bench>`_
 - `kube hunter <https://github.com/aquasecurity/kube-hunter>`_ Hunt for security weaknesses in Kubernetes clusters
 - `KubiScan <https://github.com/cyberark/KubiScan>`_ A tool to scan Kubernetes cluster for risky permissions
+- `kubescape <https://github.com/armosec/kubescape>`_ kubescape is the first tool for testing if Kubernetes is deployed securely as defined in Kubernetes Hardening Guidance by to NSA and CISA
 
 安全加固
 ----------------------------------------

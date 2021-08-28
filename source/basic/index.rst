@@ -8,3 +8,4 @@
    history
    atkhistory
    outlook
+   law
