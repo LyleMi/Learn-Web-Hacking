@@ -22,6 +22,46 @@ Nmap
 - ``-sU`` UDP Scan
 - ``-sN/sF/sX`` TCP Null, FIN, and Xmas scans
 
+.. list-table:: 扫描方式表
+   :widths: 15 15 25 25 20
+   :header-rows: 1
+
+   * - 名称
+     - 包标记
+     - 端口OPEN
+     - 端口CLOSE
+     - 特点
+   * - TCP SYN scan
+     - SYN
+     - 回复ACK+SYN
+     - 回复RST
+     - 应用程序无日志，但是容易被发现
+   * - 全连接扫描
+     - SYN
+     - 回复ACK+SYN
+     - 回复RST
+     - 容易被发现
+   * - ACK扫描
+     - ACK
+     - 回复RST
+     - 包被丢弃
+     - .
+   * - FIN扫描
+     - FIN
+     - 包被丢弃
+     - 回复RST
+     - 需要等待超时，效率低
+   * - TCP Xmas扫描
+     - FIN+URG+PSH
+     - 包被丢弃
+     - 回复RST
+     - 需要等待超时，效率低；不适用所有操作系统
+   * - TCP NULL扫描
+     - NULL
+     - 包被丢弃
+     - 回复RST
+     - 需要等待超时，效率低；不适用所有操作系统
+
 端口扫描
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``--scanflags``  定制的TCP扫描

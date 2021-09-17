@@ -42,6 +42,7 @@ Hacking database
 - `espoofer <https://github.com/chenjj/espoofer>`_ An email spoofing testing tool that aims to bypass SPF/DKIM/DMARC and forge DKIM signatures
 - `ditto <https://github.com/evilsocket/ditto>`_ A tool for IDN homograph attacks and detection
 - `SiteCopy <https://github.com/Threezh1/SiteCopy>`_ sitecopy is a tool that facilitates personal website backup and network data collection 
+- `goblin <https://github.com/xiecat/goblin>`_ 一款适用于红蓝对抗中的仿真钓鱼系统
 
 squatting
 ----------------------------------------

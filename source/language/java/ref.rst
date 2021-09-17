@@ -35,6 +35,7 @@
 - `FAR SIDES OF JAVA REMOTE PROTOCOLS <https://i.blackhat.com/eu-19/Wednesday/eu-19-An-Far-Sides-Of-Java-Remote-Protocols.pdf>`_
 - `JDK8u20反序列化漏洞新型PoC思路及具体实现 <https://mp.weixin.qq.com/s/3bJ668GVb39nT0NDVD-3IA>`_
 - `Pwn a CTF Platform with Java JRMP Gadget <http://blog.orange.tw/2018/03/pwn-ctf-platform-with-java-jrmp-gadget.html>`_
+- `漫谈 JEP 290 <https://nosec.org/home/detail/4846.html>`_
 
 框架
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

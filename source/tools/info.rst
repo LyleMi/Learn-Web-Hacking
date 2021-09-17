@@ -28,6 +28,7 @@ CDN查询
 - `aiodnsbrute <https://github.com/blark/aiodnsbrute>`_
 - `OneForAll <https://github.com/shmilylty/OneForAll>`_
 - `subfinder <https://github.com/subfinder/subfinder>`_
+- `altdns <https://github.com/infosec-au/altdns>`_ Generates permutations, alterations and mutations of subdomains and then resolves them
 
 域名获取
 ----------------------------------------

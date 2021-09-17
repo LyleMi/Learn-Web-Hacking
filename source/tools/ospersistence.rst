@@ -30,6 +30,7 @@ UAC Bypass
 C2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `SharpSploit <https://github.com/cobbr/SharpSploit>`_ .NET post-exploitation library written in C#
+- `SharpBeacon <https://github.com/mai1zhi2/SharpBeacon>`_ 用.net重写了CobaltStrike stager及Beacon，其中包括正常上线、文件管理、进程管理、令牌管理、结合SysCall进行注入、原生端口转发、关ETW等一系列功能
 - `Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-exploitation rootkit
 
 隐藏
