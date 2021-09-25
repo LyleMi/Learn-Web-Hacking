@@ -14,6 +14,7 @@ MySQL Payload
 - Current User
     - ``SELECT user()``
     - ``SELECT system_user()``
+    - ``SELECT current_role()``
 - List User
     - ``SELECT user FROM mysql.user``
 - Current Database

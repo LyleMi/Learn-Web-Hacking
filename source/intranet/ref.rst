@@ -3,6 +3,7 @@
 
 Windows
 ----------------------------------------
+- `Windows 威胁防护 <https://docs.microsoft.com/zh-cn/windows/security/threat-protection/>`_
 - `Windows内网渗透提权 <https://www.freebuf.com/articles/system/114731.html>`_
 - `文件寄生 NTFS文件流实际应用 <https://gh0st.cn/archives/2017-03-29/1>`_
 - `Windows中常见后门持久化方法总结  <https://xz.aliyun.com/t/6461>`_
@@ -26,6 +27,8 @@ Windows
 - `Active Directory Security <https://adsecurity.org>`_
 - `Kerberos AD Attacks Kerberoasting <https://blog.xpnsec.com/kerberos-attacks-part-1/>`_
 - `Kerberos之域内委派攻击 <https://xz.aliyun.com/t/7517>`_
+- `adsec <https://github.com/cfalta/adsec>`_ An introduction to Active Directory security
+- `Attacking Active Directory <https://zer1t0.gitlab.io/posts/attacking_ad/>`_
 
 RedTeam
 ----------------------------------------
