@@ -39,6 +39,7 @@ PowerShell
 
 内网信息收集
 ----------------------------------------
+- `nbtscan <https://github.com/scallywag/nbtscan>`_ NetBIOS scanning tool
 - `SharpShares <https://github.com/djhohnstein/SharpShares>`_ Quick and dirty binary to list network share information from all machines in the current domain and if they're readable
 - `WinShareEnum <https://github.com/nccgroup/WinShareEnum>`_ Windows Share Enumerator
 - `HackBrowserData <https://github.com/moonD4rk/HackBrowserData>`_ 全平台的浏览器数据导出工具
@@ -47,6 +48,7 @@ Kerberos
 ----------------------------------------
 - `Rubeus <https://github.com/GhostPack/Rubeus>`_
 - `kerbrute <https://github.com/ropnop/kerbrute>`_ A tool to perform Kerberos pre-auth bruteforcing
+- `kerberoast <https://github.com/nidem/kerberoast>`_ A series of tools for attacking MS Kerberos implementations
 
 自动化审计
 ----------------------------------------

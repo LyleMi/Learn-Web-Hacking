@@ -105,6 +105,7 @@ Waf指纹
 - `zmap <https://github.com/zmap/zmap>`_
 - `masscan <https://github.com/robertdavidgraham/masscan>`_
 - `ShodanHat <https://github.com/HatBashBR/ShodanHat>`_
+- `lzr <https://github.com/stanford-esrg/lzr>`_ LZR quickly detects and fingerprints unexpected services running on unexpected ports
 - `ZGrab2 <https://github.com/zmap/zgrab2>`_ Fast Go Application Scanner
 - `RustScan <https://github.com/RustScan/RustScan>`_ The Modern Port Scanner
 - DNS ``dnsenum nslookup dig fierce``

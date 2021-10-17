@@ -154,9 +154,18 @@ Kerberos
 
 认证
 ----------------------------------------
+- 单点登录 (Single Sign-On, SSO)
 - 双因素认证 (Two-Factor Authentication, 2FA)
 - 多因素认证 (Multi-Factor Authentication, MFA)
 - 一次性密码 (One-Time Password, OTP)
+
+Kerbose
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 认证服务器 (Authentication Server, AS)
+- 密钥分发中心 (Key Distribution Center, KDC)
+- 票据授权票据，票据的票据 (Ticket Granting Ticket, TGT)
+- 票据授权服务器 (Ticket Granting Server, TGS)
+- 特定服务提供端 (Service Server, SS)
 
 可信计算
 ----------------------------------------

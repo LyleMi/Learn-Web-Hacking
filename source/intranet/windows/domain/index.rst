@@ -5,6 +5,7 @@
    :caption: 内容索引:
 
    user
+   proto
    domain
    ad
    attack

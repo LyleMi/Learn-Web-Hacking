@@ -19,3 +19,7 @@ SAM文件保存于 ``%SystemRoot%\system32\config\sam`` 中，在注册表中保
 - 获取 ``%SystemRoot%\repair\sam._`` 文件。
 - 使用工具从注册表中导出SAM散列值
 - 从网络中嗅探分析SMB报文，从中获取密码散列
+
+SPNEGO
+----------------------------------------
+SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation)是微软提供的一种使用GSS-API认证机制的安全协议，用于使Webserver共享Windows Credentials，它扩展了Kerberos。
