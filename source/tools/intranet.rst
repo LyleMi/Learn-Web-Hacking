@@ -12,6 +12,11 @@
 - `ADRecon <https://github.com/sense-of-security/ADRecon>`_ Active Directory Recon
 - `Creds <https://github.com/S3cur3Th1sSh1t/Creds>`_ Some usefull Scripts and Executables for Pentest & Forensics
 - `Lithnet Password Protection for Active Directory <https://github.com/lithnet/ad-password-protection>`_ Active Directory password filter featuring breached password checking and custom complexity rules
+- `ASREPRoast <https://github.com/HarmJ0y/ASREPRoast>`_ Project that retrieves crackable hashes from KRB5 AS-REP responses for users without kerberoast preauthentication enabled.
+
+LDAP
+----------------------------------------
+- `SharpHound3 <https://github.com/BloodHoundAD/SharpHound3>`_ Data Collector for the BloodHound Project
 
 容器
 ----------------------------------------

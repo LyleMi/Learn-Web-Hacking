@@ -18,3 +18,7 @@
 ----------------------------------------
 - `Cloud Custodian <https://github.com/cloud-custodian/cloud-custodian>`_ Rules engine for cloud security, cost optimization, and governance, DSL in yaml for policies to query, filter, and take actions on resources
 - `cloudquery <https://github.com/cloudquery/cloudquery>`_ cloudquery transforms your cloud infrastructure into SQL database for easy monitoring, governance and security
+
+靶场环境
+----------------------------------------
+- `metarget <https://github.com/Metarget/metarget>`_ a framework providing automatic constructions of vulnerable infrastructures.

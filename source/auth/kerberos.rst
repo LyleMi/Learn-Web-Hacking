@@ -57,13 +57,6 @@ Kerberos协议是一个基于票据(Ticket)的系统，在Kerberos系统中至�
 8. 服务器可以选择返回一个用session key加密的之前的是时间戳来完成双向验证
 9. 客户端通过解开消息，比较发回的时间戳和自己发送的时间戳是否一致，来验证服务器
 
-攻击方式
-----------------------------------------
-
-Kerberoasting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Kerberoasting攻击由Tim Medin在2014 DerbyCon conference上 `公开 <https://www.youtube.com/watch?v=PUyhlN-E5MU>`_ 。
-
 参考链接
 ----------------------------------------
 

@@ -38,10 +38,22 @@ DCShadow攻击指在Active Directory环境下创建一个恶意的域控制器�
 
 Kerberoasting Attacks
 ----------------------------------------
-域内的任何一台主机，都可以通过查询SPN，Kerberoasting即是向域内的所有服务请求TGS，然后进行暴力破解。
+Kerberoasting攻击由Tim Medin在2014 DerbyCon conference上 `公开 <https://www.youtube.com/watch?v=PUyhlN-E5MU>`_ 。指域内的任何一台主机，都可以通过查询SPN，Kerberoasting即是向域内的所有服务请求TGS，然后进行暴力破解。
+
+Roasting AS-REP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+该攻击枚举域中不需要Kerberos预身份认证的帐户，向这些账户请求一条加密信息，并离线尝试获取到的账户哈希。该方式需要账户明确设置了 ``DONT_REQ_PREAUTH`` 。
 
 Kerberos Delegation Attacks
 ----------------------------------------
 在一个域中，A使用Kerberos身份验证访问服务B，B再使用A的身份去访问C，这个过程就可以理解为委派。委派主要分为非约束委派（Unconstrained delegation）和约束委派（Constrained delegation）两种，非约束委派可以访问域内任意其它服务，约束委派对认证做了限制不可以访问其他的服务。
 
 Kerberos Delegation（Kerberos委派）攻击分为非约束委派攻击和约束委派攻击。原理都是基于域内已经配置了委派的账户来获取其它账户的权限。
+
+其他漏洞利用
+----------------------------------------
+- ProxyLogon (CVE-2021-26855)
+- ProxyShell (CVE-2021-34473)
+- SMBGhost (CVE-2020-0796)
+- Zerologon (CVE-2020-1472)
+- 永恒之蓝 (MS17-010)

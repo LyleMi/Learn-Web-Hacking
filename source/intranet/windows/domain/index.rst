@@ -8,4 +8,6 @@
    proto
    domain
    ad
+   gp
+   winkerberos
    attack

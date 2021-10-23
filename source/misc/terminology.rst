@@ -173,14 +173,33 @@ Kerbose
 
 云
 ----------------------------------------
+
+计算
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 弹性云计算 (Elastic Compute Cloud, EC2)
+- 阿里云弹性云计算 (Elastic Compute Service, ECS)
+- 云服务器 (Cloud Virtual Machine, CVM)
+
+存储
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 简单存储服务 (Simple Storage Service, S3)
-- 元数据服务 (Instance Metadata Service, IMDS)
-- 持续集成 (Continuous Integration, CI)
-- 持续交付 (Continuous Deployment, CD)
+- 对象存储 (Cloud Object Storage, COS) 
+
+XaaS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 函数即服务 (Function as a Service, FaaS)
 - 容器即服务 (Container as a Service, CaaS)
 - 软件即服务 (Software as a Service, SaaS)
 - 平台即服务 (Platform as a Service, PaaS)
 - 基础设施即服务 (Insfrastructure as a Service, IaaS)
+
+特定平台
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- OCI (Oracle Cloud Infrastructure)
+
+其他服务
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 元数据服务 (Instance Metadata Service, IMDS)
+- 持续集成 (Continuous Integration, CI)
+- 持续交付 (Continuous Deployment, CD)
 - 边缘计算机器 (Edge Computing Machine, ECM)

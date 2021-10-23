@@ -42,6 +42,7 @@
     - ``Get-NetDomain``
     - ``Get-NetDomainController``
     - ``net group "Domain controllers"``
+- 组策略
 
 用户信息
 ----------------------------------------
