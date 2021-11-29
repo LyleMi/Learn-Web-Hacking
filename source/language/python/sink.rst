@@ -3,9 +3,12 @@ Sink
 
 命令执行
 --------------------------------
+- asyncio.new_event_loop().subprocess_exec
+- asyncio.subprocess
 - bdb.os
 - cgi.os.system
 - cgi.sys
+- code.InteractiveInterpreter
 - commands
 - ctypes.CDLL
 - eval
@@ -13,6 +16,7 @@ Sink
 - execfile
 - input // python2 only
 - os.exec
+- os.exec*
 - os.fork
 - os.popen
 - os.spawn
@@ -26,6 +30,7 @@ Sink
 - subprocess
 - timeit.sys
 - timeit.timeit
+- typing.get_type_hints() + ``__annotations__``
 - ...
 
 文件读取

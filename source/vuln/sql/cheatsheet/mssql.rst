@@ -1,10 +1,12 @@
 SQL Server Payload
-=====================================
+========================================
 
 常见Payload
 ----------------------------------------
 - Version
     - ``SELECT @@version``
+    - ``SELECT SERVERPROPERTY('Edition');``
+    - ``SELECT SERVERPROPERTY('EngineEdition');``
 - Comment 
     - ``SELECT 1 -- comment``
     - ``SELECT /*comment*/1``
@@ -46,6 +48,8 @@ SQL Server Payload
     - ``exec xp_getnetname``
 - 服务器信息
     - ``exec xp_msver``
+- 系统配置
+    - ``select * from sys.configurations;``
 
 注册表读写
 ----------------------------------------

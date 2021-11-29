@@ -8,6 +8,7 @@
 - `Sourcetrail <https://github.com/CoatiSoftware/Sourcetrail>`_ free and open-source cross-platform source explorer
 - `trivy <https://github.com/knqyf263/trivy>`_ A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 - `fortify <http://www.fortify.net/>`_
+- `joern <https://github.com/joernio/joern>`_ Open-source code analysis platform for C/C++/Java/Binary/Javascript based on code property graphs
 
 PHP
 ----------------------------------------
