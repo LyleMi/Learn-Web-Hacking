@@ -12,6 +12,7 @@ Web安全学习笔记
    vuln/index
    language/index
    intranet/index
+   cloud/index
    defense/index
    auth/index
    tools/index

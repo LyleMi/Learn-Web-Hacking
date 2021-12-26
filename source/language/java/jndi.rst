@@ -28,7 +28,6 @@ JDNI主要有几种攻击载荷：
 - CORBA
 - IOR
 - JNDI Reference
-- JNDI Reference
 - LDAP
 - Remote Location
 - Remote Object
