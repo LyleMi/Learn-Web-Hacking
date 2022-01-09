@@ -28,11 +28,15 @@ Docker有三个基本概念，镜像（Image）、容器（Container）、仓库
 
 组成
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker引擎由如下主要组件构成：Docker客户端（Docker Client）、Docker守护进程（Docker daemon）、containerd以及runc，它们共同负责容器的创建和运行。
+Docker引擎由如下主要组件构成：Docker客户端（Docker Client）、Docker守护进程（Docker daemon）、containerd以及RunC，它们共同负责容器的创建和运行。
 
 Docker Client是和Docker Daemon建立通信客户端，Docker Client可以通过http/unix socket等方式Daemon建立通信。
 
-Docker Daemon在宿主机运行，作为服务端接受来自客户端的请求，主要功能包括镜像管理、镜像构建、REST API、身份验证、安全、核心网络以及编排。Docker daemon通过位于 ``/var/run/docker.sock`` 的本地 IPC/Unix socket 来实现Docker远程API，默认非TLS网络端口为2375，TLS默认端口为2376。
+Docker Daemon是容器管理的守护进程，在宿主机运行，作为服务端接受来自客户端的请求，主要功能包括镜像管理、镜像构建、REST API、身份验证、安全、核心网络以及编排。Docker daemon通过位于 ``/var/run/docker.sock`` 的本地 IPC/Unix socket 来实现Docker远程API，默认非TLS网络端口为2375，TLS默认端口为2376。
+
+containerd 是容器技术标准化之后出现的，用于将容器运行时从 Docker Daemon 剥离。containerd 主要职责是镜像管理、容器执行。
+
+RunC 是 Docker 按照OCF标准制定的一种具体实现，实现了容器启动与停止、资源隔离等功能。
 
 数据
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

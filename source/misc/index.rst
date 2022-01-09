@@ -8,9 +8,9 @@
    aduit
    waf
    netdev
+   finger
    unicode
    dos
-   docker
    apt
    supplychain
    nearsource

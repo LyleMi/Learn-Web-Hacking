@@ -174,6 +174,12 @@ Kerbose
 云
 ----------------------------------------
 
+容器
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 容器运行时 (Container Runtime Interface, CRI)
+- 开放容器标准 (Open Container Initiative, OCI)
+- 开放容器格式标准 (Open Container Format, OCF)
+
 计算
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - 弹性云计算 (Elastic Compute Cloud, EC2)
