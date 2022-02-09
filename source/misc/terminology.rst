@@ -79,9 +79,9 @@ Kerberos
     - 软件系统中错误处理或恢复模块，导致程序不安全或失效
 - 漏洞 (vulnerability)
     - 可以用于违反安全策略的缺陷或瑕疵
-- IAST (Interactive Application Security Testing)
-- DAST (Dynamic Application Security Testing)
-- SAST (Static Application Security Testing)
+- 交互式应用程序安全测试 (Interactive Application Security Testing, IAST)
+- 动态应用程序安全测试 (Dynamic Application Security Testing, DAST)
+- 静态应用程序安全测试 (Static Application Security Testing, SAST)
 - ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK)
 - 横向移动 (Lateral Movement)
 

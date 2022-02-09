@@ -123,6 +123,7 @@ Docker使用Seccomp来限制容器对宿主机内核发起的系统调用。
 
 容器逃逸漏洞
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- CVE-2021-41091
 - CVE-2019-14271 Docker cp
 - CVE-2019-13139 Docker build code execution
 - CVE-2019-5736 runC

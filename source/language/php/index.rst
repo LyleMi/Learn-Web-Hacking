@@ -13,6 +13,7 @@ PHP
    stream
    htaccess
    webshell
+   obfuscate
    phar
    sink
    misc
