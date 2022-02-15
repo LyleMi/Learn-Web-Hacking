@@ -25,6 +25,7 @@ OSINT
 - `email enum <https://github.com/Frint0/email-enum>`_
 - `Sreg <https://github.com/n0tr00t/Sreg>`_
 - `usersearch <https://usersearch.org/>`_
+- `User Searcher <https://www.user-searcher.com/>`_ User-Searcher is a powerful and free tool to help you search username in 2000+ websites.
 
 Hacking database
 ----------------------------------------
