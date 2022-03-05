@@ -246,3 +246,4 @@ B步骤中，认证服务器向客户端发送访问令牌，例如：
 - `理解OAuth <http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html>`_
 - `OAuth 2.0 Vulnerabilities <https://ldapwiki.com/wiki/OAuth%202.0%20Vulnerabilities>`_
 - `OAuth Community Site <https://oauth.net/>`_
+- `Hidden OAuth attack vectors <https://portswigger.net/research/hidden-oauth-attack-vectors>`_

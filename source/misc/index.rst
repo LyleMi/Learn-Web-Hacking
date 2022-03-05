@@ -10,7 +10,9 @@
    netdev
    finger
    unicode
+   json
    dos
+   email
    apt
    supplychain
    nearsource
