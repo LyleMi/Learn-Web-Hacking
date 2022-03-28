@@ -5,7 +5,7 @@
    :maxdepth: 2
    :caption: 内容索引:
 
-   aduit
+   audit
    waf
    netdev
    finger

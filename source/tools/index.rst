@@ -16,7 +16,7 @@
    intranet
    cloud
    ospersistence
-   aduit
+   audit
    defense
    sdl
    operation
