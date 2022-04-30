@@ -1,9 +1,17 @@
 常见术语
 ========================================
 
-系统相关
+Windows
 ----------------------------------------
 - WMI (Windows Management Instrumentation)
+- ETW (Event Tracing for Windows)
+- WFP (Windows Filtering Platform)
+- MS-RPC (Microsoft Remote Procedure Call)
+- MS-SAMR (Security Account Manager Remote Protocol)
+- MS-SCMR (Service Control Manager Remote Protocol)
+- MS-DRSR (Directory Replication Service Remote Protocol)
+- MS-TSCH (Task Scheduler Service Remoting Protocol)
+- DCOM (Distributed Component Object Model)
 
 网络相关
 ----------------------------------------
@@ -28,6 +36,7 @@
 - 服务主体名称 (Service Principal Names, SPN)
 - 简单身份验证 (Simple Authentication and Security Layer, SASL)
 - 链路本地多播名称解析 (Link-Local Multicast Name Resolution, LLMNR)
+- 分布式运行环境 / RPC (Distributed Computing Environment / Remote Procedure Calls, DCE/RPC)
 
 路由系统
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,6 +93,7 @@ Kerberos
 - 静态应用程序安全测试 (Static Application Security Testing, SAST)
 - ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK)
 - 横向移动 (Lateral Movement)
+- 入侵和攻击模拟 (Breach and Attack Simulation, BAS)
 
 安全开发
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,6 +137,7 @@ Kerberos
 防御相关
 ----------------------------------------
 - IoC (Indicators of Compromise)
+- IoA (Indicators of Activity)
 
 防御技术
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

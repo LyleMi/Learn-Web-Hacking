@@ -30,6 +30,11 @@ Windows
 - `adsec <https://github.com/cfalta/adsec>`_ An introduction to Active Directory security
 - `Attacking Active Directory <https://zer1t0.gitlab.io/posts/attacking_ad/>`_
 
+协议
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `DEC/RPC <https://github.com/dcerpc/dcerpc>`_
+- `The dark side of Microsoft Remote Procedure Call protocols <https://redcanary.com/blog/msrpc-to-attack/>`_
+
 RedTeam
 ----------------------------------------
 - `RedTeamManual <https://github.com/klionsec/RedTeamManual>`_

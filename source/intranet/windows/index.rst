@@ -10,4 +10,5 @@ Windows内网渗透
    privilege
    trace
    lateral
+   msrpc
    domain/index

@@ -15,7 +15,7 @@
     - 嗅探抓取明文密码
 - SMTP (25/TCP)
     - 无认证时可伪造发件人
-- DNS (53/UDP)
+- DNS (53/UDP & 53/TCP)
     - 域传送漏洞
     - DNS劫持
     - DNS缓存投毒
@@ -42,7 +42,7 @@
 - NetBIOS / Samba (139/TCP)
     - 未授权访问
     - 弱口令
-- SNMP (161/TCP)
+- SNMP (161/TCP & 161/UDP)
     - Public 弱口令
 - LDAP (389/TCP)
     - 用于域上的权限验证服务
@@ -109,7 +109,7 @@
     - 代码执行
     - ``http://es.addr:9200/_plugin/head/``
     - ``http://es.addr:9200/_nodes``
-- Memcached (11211/TCP)
+- Memcached (11211/TCP & 11211/UDP)
     - 未授权访问
 - RabbitMQ (15672/TCP & 15692/TCP & 25672/TCP)
 - MongoDB (27017/TCP)
