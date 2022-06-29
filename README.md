@@ -6,6 +6,9 @@
 ![](https://img.shields.io/github/license/lylemi/learn-web-hacking.svg)
 
 [English version ReadME (英文版 README）](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/README_en.md)
+
+[笔记链接](https://websec.readthedocs.io)
+
 ### 序
 ---
 
