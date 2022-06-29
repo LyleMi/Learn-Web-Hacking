@@ -5,6 +5,7 @@
 ![](https://img.shields.io/github/issues/lylemi/learn-web-hacking.svg)
 ![](https://img.shields.io/github/license/lylemi/learn-web-hacking.svg)
 
+[English version ReadME (英文版 README）](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/README_en.md)
 ### 序
 ---
 
