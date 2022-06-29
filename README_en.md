@@ -7,6 +7,8 @@
 
 [中文版 README（Chinese version ReadME）](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/README.md) 
 
+[Link to notes](https://websec.readthedocs.io)
+
 # About
 ---
 Upon diving into the vast ocean of knowledge that is Network security, the author realized that many topics and concepts often are scattered and unorganized. Learning becomes unnecessarily difficult without a well layed out structure or guide. Thus after grasping the basics, attempted to gather concepts, record them and eventually lead to the creation of this note compilation. The hope is that it can assist those who are planning to learn network security.
