@@ -5,6 +5,7 @@
 ![](https://img.shields.io/github/issues/lylemi/learn-web-hacking.svg)
 ![](https://img.shields.io/github/license/lylemi/learn-web-hacking.svg)
 
+[Chinese version ReadME](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/README.md) [English version ReadME](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/README_en.md)
 # About
 ---
 Upon diving into the vast ocean of knowledge that is Network security, the author realized that many topics and concepts often are scattered and unorganized. Learning becomes unnecessarily difficult without a well layed out structure or guide. Thus after grasping the basics, attempted to gather concepts, record them and eventually lead to the creation of this note compilation. The hope is that it can assist those who are planning to learn network security.
