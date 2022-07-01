@@ -5,6 +5,10 @@
 ![](https://img.shields.io/github/issues/lylemi/learn-web-hacking.svg)
 ![](https://img.shields.io/github/license/lylemi/learn-web-hacking.svg)
 
+[English version ReadME (英文版 README）](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/README_en.md)
+
+[笔记链接](https://websec.readthedocs.io)
+
 ### 序
 ---
 
@@ -40,13 +44,14 @@
     1. 网络基础
     2. UDP协议
     3. TCP协议
-    4. 路由算法
-    5. 域名系统
-    6. HTTP标准
-    7. HTTPS
-    8. SSL/TLS
-    9. IPsec
-    10. Wi-Fi
+    4. DHCP协议
+    5. 路由算法
+    6. 域名系统
+    7. HTTP标准
+    8. 邮件协议族
+    9. SSL/TLS
+    10. IPsec
+    11. Wi-Fi
 3. 信息收集
     1. 网络整体架构
     2. 域名信息
@@ -54,6 +59,7 @@
     4. 站点信息
     5. 搜索引擎利用
     6. 社会工程学
+    7. 参考链接
 4. 常见漏洞攻防
     1. SQL注入
     2. XSS
@@ -82,62 +88,80 @@
     7. ASP
     8. PowerShell
     9. Shell
+    10. Csharp
 6. 内网渗透
     1. Windows内网渗透
     2. Linux内网渗透
     3. 后门技术
     4. 综合技巧
     5. 参考链接
-7. 防御技术
+7. 云安全
+    1. 容器标准
+    2. Docker
+    3. 参考链接
+8. 防御技术
     1. 团队建设
-    2. 安全开发
-    3. 威胁情报
-    4. ATT&CK
-    5. 风险控制
-    6. 防御框架
-    7. 加固检查
-    8. 入侵检测
-    9. 蜜罐技术
-    10. RASP
-    11. 应急响应
-    12. 溯源分析
-8. 认证机制
-    1. SSO
-    2. JWT
-    3. OAuth
-    4. SAML
-    5. Windows
-    6. Kerberos
-    7. NTLM 身份验证
-9. 工具与资源
+    2. 红蓝对抗
+    3. 安全开发
+    4. 安全建设
+    5. 威胁情报
+    6. ATT&CK
+    7. 风险控制
+    8. 防御框架
+    9. 加固检查
+    10. 入侵检测
+    11. 零信任安全
+    12. 蜜罐技术
+    13. RASP
+    14. 应急响应
+    15. 溯源分析
+9. 认证机制
+    1. 多因子认证
+    2. SSO
+    3. JWT
+    4. OAuth
+    5. SAML
+    6. SCRAM
+    7. Windows
+    8. Kerberos
+    9. NTLM 身份验证
+10. 工具与资源
     1. 推荐资源
     2. 相关论文
     3. 信息收集
     4. 社会工程学
     5. 模糊测试
-    6. 漏洞利用
+    6. 漏洞利用/测试
     7. 近源渗透
     8. Web持久化
     9. 横向移动
-    10. 操作系统持久化
-    11. 审计工具
-    12. 防御
-    13. 运维
-    14. 其他
-10. 手册速查
+    10. 云安全
+    11. 操作系统持久化
+    12. 审计工具
+    13. 防御
+    14. 安全开发
+    15. 运维
+    16. 取证
+    17. 其他
+11. 手册速查
     1. 爆破工具
     2. 下载工具
     3. 流量相关
     4. 嗅探工具
     5. SQLMap使用
-11. 其他
+12. 其他
     1. 代码审计
     2. WAF
-    3. Unicode
-    4. 拒绝服务攻击
-    5. Docker
-    6. APT
-    7. 近源渗透
+    3. 常见网络设备
+    4. 指纹
+    5. Unicode
+    6. JSON
+    7. 拒绝服务攻击
+    8. 邮件安全
+    9. APT
+    10. 供应链安全
+    11. 近源渗透
+    12. 常见术语
 
 ### 本地编译
 ---
@@ -149,7 +173,7 @@ pip install sphinx sphinx-rtd-theme
 make html
 ```
 
-### Contribution
+### 贡献
 ---
 
 如果有任何的问题、意见或者建议欢迎以Issue或PR的形式提出，不胜感激。
