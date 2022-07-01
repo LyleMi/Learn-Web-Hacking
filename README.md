@@ -173,7 +173,7 @@ pip install sphinx sphinx-rtd-theme
 make html
 ```
 
-### Contribution
+### 贡献
 ---
 
 如果有任何的问题、意见或者建议欢迎以Issue或PR的形式提出，不胜感激。
