@@ -184,7 +184,7 @@ Thanks to all who [contributed](https://github.com/LyleMi/Learn-Web-Hacking/grap
 ### License
 ---
 
-Published through license CC0 1.0, click [here](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/LICENSE) to browse notes 
+Published through license CC0 1.0, click [here](https://github.com/LyleMi/Learn-Web-Hacking/blob/master/LICENSE) to view
 
 ### note
 ---
