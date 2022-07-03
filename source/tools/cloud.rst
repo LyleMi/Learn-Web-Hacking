@@ -32,3 +32,4 @@ k8s
 靶场环境
 ----------------------------------------
 - `metarget <https://github.com/Metarget/metarget>`_ a framework providing automatic constructions of vulnerable infrastructures.
+- `CloudGoat <https://github.com/RhinoSecurityLabs/cloudgoat>`_ Rhino Security Labs' "Vulnerable by Design" AWS deployment tool

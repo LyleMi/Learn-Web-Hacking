@@ -21,6 +21,7 @@ CDN查询
 
 子域爆破
 ----------------------------------------
+- `Amass <https://github.com/OWASP/Amass>`_ In-depth Attack Surface Mapping and Asset Discovery
 - `subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_
 - `wydomain <https://github.com/ring04h/wydomain>`_
 - `broDomain <https://github.com/code-scan/BroDomain>`_
@@ -121,7 +122,6 @@ DNS数据查询
 DNS关联
 ----------------------------------------
 - `Cloudflare Enumeration Tool <https://github.com/mandatoryprogrammer/cloudflare_enum>`_
-- `amass <https://github.com/caffix/amass>`_
 - `Certificate Search <https://crt.sh/>`_
 
 云服务

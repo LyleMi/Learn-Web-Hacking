@@ -10,4 +10,5 @@
    ad
    gp
    winkerberos
+   atkmap
    attack

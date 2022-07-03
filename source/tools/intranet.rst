@@ -28,6 +28,7 @@ LDAP
 Azure AD
 ----------------------------------------
 - `ROADtools <https://github.com/dirkjanm/ROADtools>`_ Azure AD exploration framework
+- `Stormspotter <https://github.com/Azure/Stormspotter>`_ Azure Red Team tool for graphing Azure and Azure Active Directory objects
 
 Exchange
 ----------------------------------------

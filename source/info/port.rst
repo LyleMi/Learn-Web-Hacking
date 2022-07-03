@@ -32,7 +32,7 @@
 - Kerberos (88/TCP)
     - 主要用于监听KDC的票据请求
     - 用于进行黄金票据和白银票据的伪造
-- POP3 (110/TCP)
+- POP3 (110/TCP & 995/TCP)
     - 爆破
 - RPC (135/TCP)
     - wmic 服务利用
@@ -42,6 +42,7 @@
 - NetBIOS / Samba (139/TCP)
     - 未授权访问
     - 弱口令
+- IMAP (143/TCP & 993/TCP)
 - SNMP (161/TCP & 161/UDP)
     - Public 弱口令
 - LDAP (389/TCP)
