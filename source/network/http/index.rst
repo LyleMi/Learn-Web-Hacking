@@ -8,6 +8,7 @@ HTTP协议簇
    http
    httpver
    https
+   websocket
    cookie
    webdav
    ref

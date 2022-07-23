@@ -10,6 +10,8 @@ RFC
 - `RFC 4918 <https://tools.ietf.org/html/rfc4918>`_ HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)
 - `RFC 5323 <https://tools.ietf.org/html/rfc5323>`_ Web Distributed Authoring and Versioning (WebDAV) SEARCH
 - `RFC 5842 <https://tools.ietf.org/html/rfc5842>`_ Binding Extensions to Web Distributed Authoring and Versioning (WebDAV)
+- `The WebSocket Protocol <https://datatracker.ietf.org/doc/html/rfc6455>`_
+- `Clarifying Registry Procedures for the WebSocket Subprotocol Name Registry <https://datatracker.ietf.org/doc/html/rfc7936>`_
 
 Blog
 ----------------------------------------
