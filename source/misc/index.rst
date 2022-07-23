@@ -11,6 +11,7 @@
    finger
    unicode
    json
+   hash
    dos
    email
    apt
