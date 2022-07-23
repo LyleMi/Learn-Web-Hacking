@@ -29,6 +29,8 @@ Windows
 - `Kerberos之域内委派攻击 <https://xz.aliyun.com/t/7517>`_
 - `adsec <https://github.com/cfalta/adsec>`_ An introduction to Active Directory security
 - `Attacking Active Directory <https://zer1t0.gitlab.io/posts/attacking_ad/>`_
+- `Certified Pre-Owned Abusing Active Directory Certificate Services <https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf>`_
+- `Microsoft Advanced Threat Analytics <https://docs.microsoft.com/zh-cn/advanced-threat-analytics/what-is-ata>`_
 
 协议
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

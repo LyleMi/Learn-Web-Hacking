@@ -8,7 +8,9 @@
    proto
    domain
    ad
+   adcs
    gp
    winkerberos
    atkmap
    attack
+   defense

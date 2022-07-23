@@ -13,14 +13,28 @@
 
 DCSync 攻击
 ----------------------------------------
-DCSync是域渗透中经常会用到的技术。DCSync是mimikatz在2015年添加的一个功能，由Benjamin DELPY gentilkiwi和Vincent LE TOUX共同编写，基于 `DRS <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/f977faaa-673e-4f66-b9bf-48c640241d47>`_ 来导出域内所有用户的hash。
+域内有多台域控服务器时，为了同步域控服务器的修改，微软提供了基于远程目录协议 `DRSR <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/f977faaa-673e-4f66-b9bf-48c640241d47>`_ 的同步机制。
+
+在多个域控服务器之间，每隔一段时间会有一次域数据的同步。由需要同步的域控服务器向其它服务器发送 GetNCChanges 请求，请求中包含需要同步的数据。数据量较多时，则重复这个过程。
+
+DCSync 就是使用这种机制进行域渗透的技术，由Benjamin DELPY gentilkiwi和Vincent LE TOUX共同编写，在2015年添加到 mimikatz 的一个功能，可以导出域内所有用户的hash。
 
 这种方式需要满足以下任一一种权限：
 
-- Administrators组内的用户
-- Domain Admins组内的用户
-- Enterprise Admins组内的用户
+- Administrators 组内的用户
+- Domain Admins 组内的用户
+- Enterprise Admins 组内的用户
 - 域控制器的计算机帐户
+
+或者拥有特定的几条 DACL:
+
+- DS-Replication-Get-Changes
+- DS-Replication-Get-Changes-All
+- DS-Replication-Get-Changes-In-Filtered-Set
+
+当没有管理员用户，但是拥有 WriteDACL 权限时，可以写入上述 DACL 来完成 DCSync 。
+
+对于这种攻击，可以通过检测 GetNCChanges 发起者的方式，如果由非域控机器发起对应请求，则可以认为是 DCSync 攻击。
 
 DCShadow 攻击
 ----------------------------------------
@@ -52,8 +66,16 @@ Kerberos Delegation（Kerberos委派）攻击分为非约束委派攻击和约�
 
 其他漏洞利用
 ----------------------------------------
-- ProxyLogon (CVE-2021-26855)
+- 域用户提权 (CVE-2022-26923)
+- KDC bamboozling (CVE-2021-42287)
+- Name impersonation (CVE-2021-42278)
 - ProxyShell (CVE-2021-34473)
+- ProxyLogon (CVE-2021-26855)
+- PrintNightmare (CVE-2021-1675 / CVE-2021-34527)
 - SMBGhost (CVE-2020-0796)
 - Zerologon (CVE-2020-1472)
+- NTLM Relay (CVE-2019-1040)
 - 永恒之蓝 (MS17-010)
+- 域用户提权 (MS14-068)
+- Gpp漏洞 (MS14-025)
+- SAMR协议漏洞 (MS14-016)
