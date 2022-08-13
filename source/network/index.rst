@@ -10,7 +10,7 @@
    tcp
    dhcp
    route
-   domain
+   domain/index
    http/index
    mail
    ssl
