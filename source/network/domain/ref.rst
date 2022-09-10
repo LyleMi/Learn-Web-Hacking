@@ -3,6 +3,7 @@
 
 RFC
 ----------------------------------------
+- `RFC 920 Domain Requirements <https://www.rfc-editor.org/rfc/rfc920>`_
 - `RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES <https://tools.ietf.org/html/rfc1034>`_
 - `RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION <https://tools.ietf.org/html/rfc1035>`_
 - `RFC 1123 Requirements for Internet Hosts -- Application and Support <https://tools.ietf.org/html/rfc1123>`_
@@ -20,11 +21,20 @@ RFC
 - `RFC 6895 DNS IANA Considerations <https://tools.ietf.org/html/rfc6895>`_
 - `RFC 7766 DNS Transport over TCP - Implementation Requirements <https://tools.ietf.org/html/rfc7766>`_
 - `RFC 7858 Specification for DNS over Transport Layer Security (TLS) <https://tools.ietf.org/html/rfc7858>`_
+- `RFC 7871 Client Subnet in DNS Queries <https://tools.ietf.org/html/rfc7871>`_
 - `RFC 8082 NXDOMAIN <https://tools.ietf.org/html/rfc8082>`_
 - `RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY <https://tools.ietf.org/html/rfc8482>`_
 - `RFC 8484 DNS Queries over HTTPS (DoH) <https://tools.ietf.org/html/rfc8484>`_
 - `RFC 8490 DNS Stateful Operations <https://tools.ietf.org/html/rfc8490>`_
 - `RFC 8499 DNS Terminology <https://tools.ietf.org/html/rfc8499>`_
+
+Whois 相关
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `RFC 812 NICNAME/WHOIS <https://tools.ietf.org/html/rfc812>`_
+- `RFC 954 NICNAME/WHOIS <https://tools.ietf.org/html/rfc954>`_
+- `RFC 2167 Referral Whois (RWhois) Protocol V1.5 <https://tools.ietf.org/html/rfc2167>`_
+- `RFC 3912 WHOIS Protocol Specification <https://tools.ietf.org/html/rfc3912>`_
+- `RFC 7485 Inventory and Analysis of WHOIS Registration Objects <https://tools.ietf.org/html/rfc7485>`_
 
 RDAP 相关
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

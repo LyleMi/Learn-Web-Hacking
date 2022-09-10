@@ -4,7 +4,6 @@
 Windows
 ----------------------------------------
 - `Windows 威胁防护 <https://docs.microsoft.com/zh-cn/windows/security/threat-protection/>`_
-- `Windows内网渗透提权 <https://www.freebuf.com/articles/system/114731.html>`_
 - `文件寄生 NTFS文件流实际应用 <https://gh0st.cn/archives/2017-03-29/1>`_
 - `Windows中常见后门持久化方法总结  <https://xz.aliyun.com/t/6461>`_
 - `LOLBAS <https://lolbas-project.github.io/#>`_
@@ -31,6 +30,11 @@ Windows
 - `Attacking Active Directory <https://zer1t0.gitlab.io/posts/attacking_ad/>`_
 - `Certified Pre-Owned Abusing Active Directory Certificate Services <https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf>`_
 - `Microsoft Advanced Threat Analytics <https://docs.microsoft.com/zh-cn/advanced-threat-analytics/what-is-ata>`_
+
+权限提升
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Windows内网渗透提权 <https://www.freebuf.com/articles/system/114731.html>`_
+- `UACMe <https://github.com/hfiref0x/UACME>`_ Defeating Windows User Account Control
 
 协议
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

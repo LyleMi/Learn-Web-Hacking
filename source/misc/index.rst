@@ -17,4 +17,5 @@
    apt
    supplychain
    nearsource
+   spider
    terminology
