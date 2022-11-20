@@ -12,6 +12,7 @@
    route
    domain/index
    http/index
+   ssh/index
    mail
    ssl
    ipsec
