@@ -128,9 +128,11 @@ DoS防护
 ----------------------------------------
 - `Gatekeeper <https://github.com/AltraMayor/gatekeeper>`_` open-source DDoS protection system
 
-对手模拟
+对手模拟 / 攻击模拟
 ----------------------------------------
 - `sliver <https://github.com/BishopFox/sliver>`_ Adversary Simulation Framework
+- `caldera <https://github.com/mitre/caldera>`_ Automated Adversary Emulation Platform
+- `DumpsterFire <https://github.com/TryCatchHCF/DumpsterFire>`_
 
 入侵防护
 ----------------------------------------

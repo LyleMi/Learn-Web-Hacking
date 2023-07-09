@@ -32,6 +32,7 @@ C2
 - `SharpSploit <https://github.com/cobbr/SharpSploit>`_ .NET post-exploitation library written in C#
 - `SharpBeacon <https://github.com/mai1zhi2/SharpBeacon>`_ 用.net重写了CobaltStrike stager及Beacon，其中包括正常上线、文件管理、进程管理、令牌管理、结合SysCall进行注入、原生端口转发、关ETW等一系列功能
 - `Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-exploitation rootkit
+- `PoshC2 <https://github.com/nettitude/PoshC2>`_ A proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement
 
 隐藏
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,6 +61,7 @@ MiTM
 综合工具
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Nishang <https://github.com/samratashok/nishang>`_ Offensive PowerShell for red team, penetration testing and offensive security
+- `SharPersist <https://github.com/fireeye/SharPersist>`_ Windows persistence toolkit written in C#
 
 Linux
 ----------------------------------------

@@ -106,10 +106,6 @@ Windows
 ----------------------------------------
 - `Toxiproxy <https://github.com/Shopify/toxiproxy>`_ A TCP proxy to simulate network and system conditions for chaos and resiliency testing
 
-红队模拟
-----------------------------------------
-- `CALDERA <https://github.com/mitre/caldera>`_ Scalable Automated Adversary Emulation Platform
-
 网络模拟
 ----------------------------------------
 - `Internet Emulator <https://github.com/seed-labs/seed-emulator>`_ A Python framework for creating emulation of the Internet
