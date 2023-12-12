@@ -50,3 +50,4 @@ Tricks
 ----------------------------------------
 - `Service Worker 安全探索 <https://github.com/etherdream/sw-sec>`_
 - `前端黑魔法 <https://github.com/EtherDream/web-frontend-magic>`_
+- `Unicode XSS via Combining Characters <https://gist.github.com/paj28/86c7b8f37371d89c9a36ed0280fcf450>`_
