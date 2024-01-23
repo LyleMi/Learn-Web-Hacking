@@ -139,6 +139,7 @@ DNS关联
 - `scans <https://scans.io/>`_
 - `Just Metadata <https://github.com/FortyNorthSecurity/Just-Metadata>`_
 - `publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_
+- `Tiny Scan <https://www.tiny-scan.com>`_ A URL scan tool that provides comprehensive information about any given URL
 
 Password
 ----------------------------------------
