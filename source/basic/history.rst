@@ -22,7 +22,7 @@ MVC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 随着Web应用开发越来越标准化，出现了MVC等思想。MVC是Model/View/Control的缩写，Model用于封装数据和数据处理方法，视图View是数据的HTML展现，控制器Controller负责响应请求，协调Model和View。
 
-Model，View和Controller的分开，是一种典型的关注点分离的思想，使得代码复用性和组织性更好，Web应用的配置性和灵活性也越来越好。而数据访问也逐渐通过面向对象的方式来替代直接的SQL访问，出现了ORM (Object Relation Mapping) 的概念。
+Model，View和Controller的分开，是一种典型的关注点分离的思想，使得代码复用性和组织性更好，Web应用的配置性和灵活性也越来越好。而数据访问也逐渐通过面向对象的方式来替代直接的SQL访问，出现了ORM (Object-Relational Mapping) 的概念。
 
 除了MVC，类似的设计思想还有MVP、MVVM等。
 
