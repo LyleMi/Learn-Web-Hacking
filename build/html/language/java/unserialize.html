@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deserialization &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Deserialization</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/java/unserialize.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deserialization">
+<h1>Deserialization<a class="headerlink" href="#deserialization" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Serialization is to convert objects into byte streams, which are easy to save in memory, files, and databases; deserialization is the reverse process, which restores objects from byte streams. It is generally used in scenarios such as remote calls, transferring objects to remote servers through the network, storing objects to databases or waiting for reuse locally. The <code class="docutils literal notranslate"><span class="pre">writeObject()</span></code> method of the <code class="docutils literal notranslate"><span class="pre">ObjectOutputStream`</span> <span class="pre">class</span> <span class="pre">in</span> <span class="pre">Java</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">serialized,</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">``readObject()</span></code> method of the <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">class</span> <span class="pre">`</span></code> class is used for deserialization. If you want to implement deserialization of a class, you will implement the <code class="docutils literal notranslate"><span class="pre">Serializable</span></code> interface to it.</p>
+<p>When a remote service accepts untrusted data and deserializes it and there are available classes in the current environment, a deserialization vulnerability is considered to exist.</p>
+<section id="sequence-data-structure">
+<h3>Sequence data structure<a class="headerlink" href="#sequence-data-structure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0xaced</span></code> Magic Head / STREAM_MAGIC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x0005</span></code> Version number / STREAM_VERSION / Reference java.io.ObjectStreamConstants</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x73</span></code> object type identification</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x72</span></code> class descriptor identification</p></li>
+</ul>
+</section>
+<section id="serialization-process">
+<h3>Serialization process<a class="headerlink" href="#serialization-process" title="Link to this heading"></a></h3>
+<p>+When ObjectOutputStream instance is initialized, write the magic header and version number to bout (BlockDataOutputStream type)
++ Call ObjectOutputStream.writeObject() to start writing object data
++ ObjectStreamClass.lookup() encapsulates the class description to be serialized (returns the ObjectStreamClass type), obtains the class name, custom serialVersionUID, serializable fields (returns the ObjectStreamField type) and constructor methods, as well as writeObject, readObject methods, etc.
++ writeOrdinaryObject() writes object data
++ Write object type identification
++ writeClassDesc() Enter the branch writeNonProxyDesc() Write class description data
++ Write class descriptor identifier
++ Write class name
++ Write to SUID (when SUID is empty, calculation and assignment will be performed)
++ Calculate and write serialized attribute flag bits
++ Write field information data
++ Write Block Data end flag
++ Write parent class description data
++ writeSerialData() writes the serialized data of the object
++ If the class customizes writeObject(), then call this method to write the object. Otherwise, call defaultWriteFields() to write the object field data (if it is a non-primitive type, then process the child object recursively)</p>
+</section>
+<section id="deserialization-process">
+<h3>Deserialization process<a class="headerlink" href="#deserialization-process" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>When ObjectInputStream instance is initialized, read the magic header and version number for verification</p></li>
+<li><p>Call ObjectInputStream.readObject() to start reading object data</p></li>
+<li><p>Read object type identification</p></li>
+<li><p>readOrdinaryObject() reads data object</p></li>
+<li><p>readClassDesc() reads class description data</p></li>
+<li><p>Read the class descriptor identifier and enter the branch readNonProxyDesc()</p></li>
+<li><p>Read the class name</p></li>
+<li><p>Read SUID</p></li>
+<li><p>Read and decompose serialized attribute flag bits</p></li>
+<li><p>Read field information data</p></li>
+<li><p>resolveClass() Get the Class object of the class to be deserialized according to the class name. If the acquisition fails, a ClassNotFoundException will be thrown.</p></li>
+<li><p>skipCustomData() loops to read bytes until the Block Data ends the flag</p></li>
+<li><p>Read parent class description data</p></li>
+<li><p>In initNonProxy(), determine whether the SUID and class name of the object and the local object are the same (excluding the package name). If it is different, an InvalidClassException will be thrown.</p></li>
+<li><p>ObjectStreamClass.newInstance() Gets and calls the parameterless constructor method of the non-Serializable parent class closest to the object (returns null if it does not exist) Create an object instance</p></li>
+<li><p>readSerialData() reads the serialized data of the object</p></li>
+<li><p>If the class customizes readObject(), then call this method to read the object. Otherwise, call defaultReadFields() to read and fill the field data of the object.</p></li>
+</ul>
+</section>
+</section>
+<section id="vulnerability-exploitation">
+<h2>Vulnerability exploitation<a class="headerlink" href="#vulnerability-exploitation" title="Link to this heading"></a></h2>
+<section id="common-trigger-points">
+<h3>Common trigger points<a class="headerlink" href="#common-trigger-points" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>JDBC Deserialization</p></li>
+<li><p>JSON Deserialization</p></li>
+</ul>
+</section>
+<section id="a-dangerous-basic-library">
+<h3>A dangerous basic library<a class="headerlink" href="#a-dangerous-basic-library" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>`` com.mchange: C3p0 0.9.5.2``</p></li>
+</ul>
+<p>-`` com
+- <code class="docutils literal notranslate"><span class="pre">commons-beanutils</span> <span class="pre">1.9.2</span></code>
+- <code class="docutils literal notranslate"><span class="pre">commons-collections</span> <span class="pre">3.1</span></code>
+- <code class="docutils literal notranslate"><span class="pre">commons-fileupload</span> <span class="pre">1.3.1</span></code>
+- <cite>‘Commons-yo 2.4`</cite>
+- <code class="docutils literal notranslate"><span class="pre">commons-logging</span> <span class="pre">1.2</span></code>
+- <code class="docutils literal notranslate"><span class="pre">org.apache.commons:commons-collections</span> <span class="pre">4.0</span></code>
+- `` Org.Beanshell: BSH 2.0B5``
+- <code class="docutils literal notranslate"><span class="pre">org.codehaus.groovy:groovy</span> <span class="pre">2.3.9</span></code>
+- `` org.slf4j: SLF4J-API 1.7.21``
+- <code class="docutils literal notranslate"><span class="pre">org.springframework:spring-aop</span> <span class="pre">4.1.4.RELEASE</span></code></p>
+</section>
+<section id="echo-method">
+<h3>Echo method<a class="headerlink" href="#echo-method" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Echo through middleware features</p></li>
+<li><p>Echo by throwing exception</p></li>
+<li><p>Echo through OOB</p></li>
+<li><p>Echo by writing static files</p></li>
+</ul>
+</section>
+</section>
+<section id="vulnerability-repair-and-protection">
+<h2>Vulnerability repair and protection<a class="headerlink" href="#vulnerability-repair-and-protection" title="Link to this heading"></a></h2>
+<section id="hook-resolveclass">
+<h3>Hook resolveClass<a class="headerlink" href="#hook-resolveclass" title="Link to this heading"></a></h3>
+<p>When deserializing using <code class="docutils literal notranslate"><span class="pre">readObject()</span></code>, the <code class="docutils literal notranslate"><span class="pre">`</span></code> method is called to read the deserialized class name. You can check the deserialized class by hooking this method. A demo is as follows</p>
+<p>&#64;Override
+protected Class&lt;?&gt; resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
+if (!desc.getName().equals(SerialObject.class.getName())) {
+throw new InvalidClassException(
+“Unauthorized deserialization attempt”,
+desc.getName());
+}
+return super.resolveClass(desc);
+}</p>
+<p>The above demo only allows serialization <code class="docutils literal notranslate"><span class="pre">SerialObject</span></code>. In this way, a whitelist that allows serialization can be set to prevent deserialization vulnerabilities from being exploited. SerialKiller/Jackson/Weblogic etc. use this method to defend.</p>
+</section>
+<section id="validatingobjectinputstream">
+<h3>ValidatingObjectInputStream<a class="headerlink" href="#validatingobjectinputstream" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">ValidatingObjectInputStream`</span> <span class="pre">class</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">Apache</span> <span class="pre">Commons</span> <span class="pre">IO</span> <span class="pre">Serialization</span> <span class="pre">package</span> <span class="pre">provides</span> <span class="pre">the</span> <span class="pre">``accept</span></code> method, which can be used to implement white/blacklist control of the deserialization class. A demo is as follows</p>
+<p>private static Object deserialize(byte[] buffer) throws IOException, ClassNotFoundException , ConfigurationException {
+Object obj;
+ByteArrayInputStream bais = new ByteArrayInputStream(buffer);
+ValidatingObjectInputStream ois = new ValidatingObjectInputStream(bais);
+ois.accept(SerialObject.class);
+obj = ois.readObject();
+return obj;
+}</p>
+</section>
+<section id="objectinputfilter-jep290">
+<h3>ObjectInputFilter(JEP290)<a class="headerlink" href="#objectinputfilter-jep290" title="Link to this heading"></a></h3>
+<p>Java 9 provides new features that support serialized data filtering. You can inherit the <code class="docutils literal notranslate"><span class="pre">java.io.ObjectInputFilter</span></code> class override the <code class="docutils literal notranslate"><span class="pre">checkInput</span></code> method to implement a custom filter and use the <code class="docutils literal notranslate"><span class="pre">ObjectInputStream</span></code> object’s <code class="docutils literal notranslate"><span class="pre">setObjectInputFilter</span></code> Sets filters to implement deserialization class white/blacklist control. This mechanism itself is a new feature of Java 9, but then the official suddenly decided to introduce the enhancement mechanism downward, supporting JDK 6, 7, 8 respectively. This mechanism mainly describes the following mechanism:</p>
+<ul class="simple">
+<li><p>Provide a mechanism to restrict deserialization classes, whitelists or blacklists</p></li>
+<li><p>Limit the depth and complexity of deserialization</p></li>
+<li><p>Provides a verification class mechanism for RMI remote call objects</p></li>
+<li><p>Define a configurable filtering mechanism, for example, you can define filters by configuring properties files</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

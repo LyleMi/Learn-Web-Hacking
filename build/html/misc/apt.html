@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.9. APT &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.10. Supply Chain Security" href="supplychain.html" />
+    <link rel="prev" title="11.8. Email security" href="email.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">11. other</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audit.html">11.1. Code Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">11.2. WAF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="netdev.html">11.3. Common network equipment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finger.html">11.4. fingerprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.html">11.5. Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json.html">11.6. JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hash.html">11.7. Hash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">11.8. Email security</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.9. APT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">11.9.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced">11.9.2. Advanced</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#persistent">11.9.3. Persistent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#investigation-phase">11.9.3.1. Investigation phase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-first-invasion-phase">11.9.3.2. The first invasion phase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permission-enhancement-phase">11.9.3.3. Permission enhancement phase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stay-on-the-visit-phase">11.9.3.4. Stay on the visit phase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-stage">11.9.3.5. Extended stage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attack-revenue-stage">11.9.3.6. Attack Revenue Stage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#threat">11.9.4. Threat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#related-events">11.9.5. Related events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ioc">11.9.6. IoC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-link">11.9.7. Reference link</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="supplychain.html">11.10. Supply Chain Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nearsource.html">11.11. Near source permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spider.html">11.12. reptile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminology.html">11.13. Common Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ics.html">11.14. Industrial control safety</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">11. </span>other</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11.9. </span>APT</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/misc/apt.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apt">
+<h1><span class="section-number">11.9. </span>APT<a class="headerlink" href="#apt" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">11.9.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>APT (Advanced Persistent Threat), translates as advanced persistent threat. In 2006, the concept of APT attacks was formally proposed to describe hidden and ongoing cyberattacks discovered in U.S. military and government networks from the late 1990s to the early 2000s.</p>
+<p>APT attacks are mostly used to use the Internet to conduct cyber espionage activities. Most of their targets are to obtain high-value sensitive intelligence or control target systems, which poses a very serious threat to target systems.</p>
+<p>The APT attack is usually an organization whose group is an entity that has both the ability and intention to conduct an attack continuously and effectively. Attacks initiated by individuals or small groups are generally not called APTs, because even if their groups intend to attack specific targets, they rarely have advanced and lasting resources to complete the corresponding attack behavior.</p>
+<p>APT attack methods usually include supply chain attacks, social engineering attacks, zero-day attacks, and botnets. Based on these attacks, it will place custom malicious code on one or more computers to perform specific tasks and keep it undiscovered for a long time.</p>
+<p>Unlike the traditional large-area scanning attack method, APT attacks usually only target a single specific target, and most attacks will combine a series of means to complete an APT attack, making it very concealed and complex, making it very concealed and complex, Detection of APT attacks becomes quite difficult. As the name suggests, the characteristics of APT are mainly reflected in the following three aspects.</p>
+</section>
+<section id="advanced">
+<h2><span class="section-number">11.9.2. </span>Advanced<a class="headerlink" href="#advanced" title="Link to this heading"></a></h2>
+<p>APT attacks will combine all currently available attack methods and technologies, making the attack extremely concealed and permeable.</p>
+<p>Phishing is one of the ways to attack. Attackers usually use social engineering and other means to forge highly credible emails, impersonate companies or organizations trusted by the target to send malicious emails that are difficult to distinguish between true and false. These emails are used to induce victims to visit websites controlled by the attacker or download malicious code.</p>
+<p>APT attacks usually use other methods to disguise their own attack behavior, thereby achieving the purpose of avoiding security system detection. For example, some malicious codes will evade antivirus software detection by forging legal signatures. Take the Shibu virus as an example. It uses a white and black mode when attacking, and uses a legal certificate to sign its code. This attack method will make most malicious code search engines directly think that the malicious code is Legal, without any testing.</p>
+<p>In addition to using legitimate signatures to bypass detection, APT attackers often use third-party sites as media to attack targets during the attack process, rather than using the traditional point-to-point attack mode. This pattern is often called a puddle attack.</p>
+<p>Pud attack is a method of invasion. Generally speaking, after the attacker has a certain understanding of the target, he determines the websites frequently visited by the target, and then invades one or several of them, and implants maliciously on these websites. code, and finally achieve the ability to infect the target with the help of this website. Because this kind of attack uses the target’s trusted third-party website, the success rate of the attack is much higher than that of phishing attacks.</p>
+<p>Another feature that can reflect the advanced nature of APT attacks is the zero-day vulnerability. Currently, the price of a zero-day vulnerability in the black market in the international market ranges from hundreds of thousands to millions. The stable utilization of each zero-day vulnerability requires a large amount of resource investment. . In APT attacks, the zero-day vulnerability is widely used. Taking APT28 as an example, according to statistics, APT28 used at least six zero-day vulnerabilities in the attack in 2015 alone.</p>
+</section>
+<section id="persistent">
+<h2><span class="section-number">11.9.3. </span>Persistent<a class="headerlink" href="#persistent" title="Link to this heading"></a></h2>
+<p>It is very different from traditional cyber attacks based on short-term interests. The process of an APT attack usually involves multiple implementation phases. In many cases, attackers use layer by layer penetration to break through advanced defense systems. The entire attack process generally lasts for several months or even years. Generally speaking, APT attacks can be divided into the following stages.</p>
+<section id="investigation-phase">
+<h3><span class="section-number">11.9.3.1. </span>Investigation phase<a class="headerlink" href="#investigation-phase" title="Link to this heading"></a></h3>
+<p>In order to be able to find the vulnerability of the target, the attacker usually does a lot of preparation. At this stage, attackers will mostly use privacy collection based on big data analysis or social engineering-based attacks to collect target information, and make full preparations for subsequent attacks.</p>
+</section>
+<section id="the-first-invasion-phase">
+<h3><span class="section-number">11.9.3.2. </span>The first invasion phase<a class="headerlink" href="#the-first-invasion-phase" title="Link to this heading"></a></h3>
+<p>Based on the information of the initial reconnaissance, the attacker can usually collect information such as the software, operating system version, and other information used by the target. After obtaining this information, the attacker can mine zero-day vulnerabilities in the corresponding version of the software or use known vulnerabilities to conduct initial intrusions on the system and obtain certain control rights for the target.</p>
+</section>
+<section id="permission-enhancement-phase">
+<h3><span class="section-number">11.9.3.3. </span>Permission enhancement phase<a class="headerlink" href="#permission-enhancement-phase" title="Link to this heading"></a></h3>
+<p>In complex networks, the permissions obtained by an attacker for the first intrusion are usually lower permissions, and for further attacks, the attacker needs to obtain higher permissions to complete the attack behavior they need. At this stage, attackers usually use permission escalation vulnerabilities or blasting passwords to achieve the purpose of permission escalation, and finally obtain the administrator rights of the system or even the domain.</p>
+</section>
+<section id="stay-on-the-visit-phase">
+<h3><span class="section-number">11.9.3.4. </span>Stay on the visit phase<a class="headerlink" href="#stay-on-the-visit-phase" title="Link to this heading"></a></h3>
+<p>After successfully invading the target computer and having certain permissions, attackers generally use various methods to maintain access to the system. One of the more commonly used methods is to steal the login credentials of legitimate users. After obtaining the user’s access credentials, you can use the remote control tool (RAT) to establish the connection, and after the connection is established, a specific backdoor is implanted to achieve the effect of continuous control.</p>
+</section>
+<section id="extended-stage">
+<h3><span class="section-number">11.9.3.5. </span>Extended stage<a class="headerlink" href="#extended-stage" title="Link to this heading"></a></h3>
+<p>When an attacker grasps a certain target, it will gradually spread across the intranet in a slower and more concealed way. The main method is to conduct a certain investigation on the intranet first. Based on these investigations, relevant information about intranet computers are obtained, and combined with this information, software vulnerabilities or weak password blasting are used to conduct horizontal further penetration to obtain more permissions and information.</p>
+</section>
+<section id="attack-revenue-stage">
+<h3><span class="section-number">11.9.3.6. </span>Attack Revenue Stage<a class="headerlink" href="#attack-revenue-stage" title="Link to this heading"></a></h3>
+<p>The main purpose of APT attacks is to steal information from the target system or cause some damage to it. After completing the horizontal expansion control of certain intranet machines. Attackers targeting collecting information will use encrypted channels to gradually pass back the acquired information and eliminate traces of intrusion. Attacks targeting the damage will be carried out accordingly at this stage.</p>
+</section>
+</section>
+<section id="threat">
+<h2><span class="section-number">11.9.4. </span>Threat<a class="headerlink" href="#threat" title="Link to this heading"></a></h2>
+<p>Unlike traditional attacks, the attack methods and solutions of APT attacks are mostly designed for specific attack objects and purposes. Compared with other attacks, attackers have very clear goals and goals, and rarely use automated attack methods, but precise attacks.</p>
+<p>In addition, the targets of APT are mostly sensitive enterprises and departments such as government agencies, finance, and energy. Once these targets are successfully attacked, their impact is often very huge. According to currently known information, APT attacks have occurred in general elections in the United States, Russia and other countries, as well as in some political events in Europe. APT attacks have become an important means of the country’s previous struggle.</p>
+</section>
+<section id="related-events">
+<h2><span class="section-number">11.9.5. </span>Related events<a class="headerlink" href="#related-events" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Iran earthquake virus in 2010</p></li>
+<li><p>2013 American Prism Gate Incident</p></li>
+<li><p>…</p></li>
+</ul>
+</section>
+<section id="ioc">
+<h2><span class="section-number">11.9.6. </span>IoC<a class="headerlink" href="#ioc" title="Link to this heading"></a></h2>
+<p>IoC (Indicators of Compromise) is defined in the field of forensics as evidence that computer security is compromised.</p>
+<p>There are several common IoCs:</p>
+<ul class="simple">
+<li><p>hash</p></li>
+<li><p>IP</p></li>
+<li><p>Domain Name</p></li>
+<li><p>network</p></li>
+<li><p>Host Features</p></li>
+<li><p>tool</p></li>
+<li><p>TTPS</p></li>
+</ul>
+</section>
+<section id="reference-link">
+<h2><span class="section-number">11.9.7. </span>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://projectsharp.org/2020/02/23/APTanalysisandTTPsextraction">APT analysis and TTPs extraction</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="email.html" class="btn btn-neutral float-left" title="11.8. Email security" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="supplychain.html" class="btn btn-neutral float-right" title="11.10. Supply Chain Security" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

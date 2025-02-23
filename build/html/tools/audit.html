@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.12. Audit tools &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.13. defense" href="defense.html" />
+    <link rel="prev" title="9.11. Operating system persistence" href="ospersistence.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">9. Tools and resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="resource.html">9.1. Recommended resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papers.html">9.2. Related papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info.html">9.3. Information collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socialengineering.html">9.4. Social Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fuzz.html">9.5. Fuzzy test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploit.html">9.6. Vulnerability Exploit/Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nearsource.html">9.7. Near source permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webpersistence.html">9.8. Web endurance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.html">9.9. Move horizontally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html">9.10. Cloud Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ospersistence.html">9.11. Operating system persistence</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.12. Audit tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general">9.12.1. General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#php">9.12.2. PHP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python">9.12.3. Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java">9.12.4. Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript">9.12.5. JavaScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supply-chain">9.12.6. Supply Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mini-program">9.12.7. Mini Program</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="defense.html">9.13. defense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdl.html">9.14. Safe development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">9.15. Operation and maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forensics.html">9.16. Getting evidence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html">9.17. other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">9. </span>Tools and resources</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9.12. </span>Audit tools</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tools/audit.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="audit-tools">
+<h1><span class="section-number">9.12. </span>Audit tools<a class="headerlink" href="#audit-tools" title="Link to this heading"></a></h1>
+<section id="general">
+<h2><span class="section-number">9.12.1. </span>General<a class="headerlink" href="#general" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/FeeiCN/cobra">Cobra</a></p></li>
+<li><p><cite>semmle ql &lt;https:/thrithub.com/semmle/ql&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/CoatiSoftware/Sourcetrail">Sourcetrail</a> free and open-source cross-platform source explorer</p></li>
+<li><p><a class="reference external" href="https://github.com/knqyf263/trivy">trivy</a> A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI</p></li>
+<li><p><a class="reference external" href="http://www.fortify.net/">fortify</a></p></li>
+<li><p><a class="reference external" href="https://github.com/joernio/joern">joern</a> Open-source code analysis platform for C/C++/Java/Binary/Javascript based on code property graphs</p></li>
+</ul>
+</section>
+<section id="php">
+<h2><span class="section-number">9.12.2. </span>PHP<a class="headerlink" href="#php" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://rips-scanner.sourceforge.net/">RIPS</a></p></li>
+<li><p><cite>prvd &lt;https://github.com/fate0/prvd&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/OneSourceCat/phpvulhunter">phpvulhunter</a></p></li>
+<li><p><a class="reference external" href="https://github.com/phith0n/chip">chip</a> a simple tool to detect potential security threat in php code</p></li>
+</ul>
+</section>
+<section id="python">
+<h2><span class="section-number">9.12.3. </span>Python<a class="headerlink" href="#python" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>pyvulhunter &lt;https://github.com/shengqi158/pyvulhunter&gt;</cite> _</p></li>
+<li><p><cite>puddle &lt;https://github.com/python-security/pyt&gt;</cite> _</p></li>
+</ul>
+</section>
+<section id="java">
+<h2><span class="section-number">9.12.4. </span>Java<a class="headerlink" href="#java" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/find-sec-bugs/find-sec-bugs">find sec bugs</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JackOfMostTrades/gadgetinspector">Gadget Inspector</a>  A byte code analyzer for finding deserialization gadget chains in Java applications</p></li>
+</ul>
+</section>
+<section id="javascript">
+<h2><span class="section-number">9.12.5. </span>JavaScript<a class="headerlink" href="#javascript" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ajinabraham/NodeJsScan">NodeJsScan</a></p></li>
+</ul>
+</section>
+<section id="supply-chain">
+<h2><span class="section-number">9.12.6. </span>Supply Chain<a class="headerlink" href="#supply-chain" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/DependencyTrack/dependency-track">Dependency-Track</a> is an intelligent Supply Chain Component Analysis platform that allows organizations to identify and reduce risk from the use of third-party and open source components</p></li>
+</ul>
+</section>
+<section id="mini-program">
+<h2><span class="section-number">9.12.7. </span>Mini Program<a class="headerlink" href="#mini-program" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/r3x5ur/unveilr">unveilr</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ospersistence.html" class="btn btn-neutral float-left" title="9.11. Operating system persistence" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="defense.html" class="btn btn-neutral float-right" title="9.13. defense" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

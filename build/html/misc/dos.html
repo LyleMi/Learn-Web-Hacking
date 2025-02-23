@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denial of Service Attack &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Denial of Service Attack</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/misc/dos.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="denial-of-service-attack">
+<h1>Denial of Service Attack<a class="headerlink" href="#denial-of-service-attack" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>DoS (Denial of Service) refers to denial of service, which is a cyber attack method commonly used to paralyze servers or networks.</p>
+<p>In normal times, more is the distributed denial of service (DDoS) attack. This attack refers to using a sufficient number of puppet computers to generate a large number of attack data packets to target one or more targets on the network. Implementing DDoS attacks increases the power exponentially, thereby exhausting the resources of the victim target and forcing the target to lose its ability to provide normal services.</p>
+</section>
+<section id="udp-reflection">
+<h2>UDP reflection<a class="headerlink" href="#udp-reflection" title="Link to this heading"></a></h2>
+<p>Reflective DDoS attack based on UDP articles is a form of denial of service attack. The attacker does not directly attack the target, but uses some open servers on the Internet to forge the address of the attacked person and send special request messages based on UDP service to the server, so that data that is several times more than the request messages are sent to The IP is attacked, thereby indirectly forming a DDoS attack on the latter.</p>
+<p>Services commonly used for DoS attacks include:</p>
+<ul class="simple">
+<li><p>NTP</p></li>
+<li><p>DNS</p></li>
+<li><p>SSDP</p></li>
+<li><p>Memcached</p></li>
+</ul>
+<p>Among them, DNS attacks mainly refer to DNS Request Flood, DNS Response Flood, false source + real source DNS Query Flood, authoritative server attacks and Local server attacks.</p>
+</section>
+<section id="tcp-flood">
+<h2>TCP Flood<a class="headerlink" href="#tcp-flood" title="Link to this heading"></a></h2>
+<p>TCP Flood is an attack that takes advantage of the defects of TCP protocol. This method sends a large number of forged TCP SYN requests to the attacking server through forged IP. After the attacked server responds to the handshake packet (SYN+ACK), because the forged IP will not respond afterwards. The server will remain in SYN_RECV state and try again. This will cause TCP waiting for connection queue resources to be exhausted and normal business cannot be carried out.</p>
+</section>
+<section id="shrew-ddos">
+<h2>Shrew DDoS<a class="headerlink" href="#shrew-ddos" title="Link to this heading"></a></h2>
+<p>Shrew DDoS uses TCP’s retransmission mechanism to adjust the attack cycle to repeatedly trigger the RTO of the TCP protocol to achieve the attack effect. Its packets are sent at a fixed, maliciously selected slow time, a mode that limits TCP traffic to a small part of its ideal rate while transmitting at an average rate low enough to avoid detection.</p>
+<p>Modern operating systems have made corresponding modifications to the TCP protocol so that it is not affected.</p>
+</section>
+<section id="ping-of-death">
+<h2>Ping Of Death<a class="headerlink" href="#ping-of-death" title="Link to this heading"></a></h2>
+<p>Under normal circumstances, there will be no ICMP packets greater than 65536 bytes, but packets support shard reorganization mechanism. In this way, ICMP packets greater than 65536 bytes can be sent and reorganized on the target host, which will eventually cause the target buffer to overflow and cause a denial of service attack.</p>
+<p>Modern operating systems have checked this attack method so that it is not affected.</p>
+</section>
+<section id="challenge-collapsar-cc">
+<h2>Challenge Collapsar (CC)<a class="headerlink" href="#challenge-collapsar-cc" title="Link to this heading"></a></h2>
+<p>CC attack is a DoS attack targeting resources. Attackers usually use requests to consume server resources to achieve their goals.</p>
+<p>There are many ways to attack CC. Common attacks can be achieved through a large number of expensive functions such as search pages and item display pages. Some HTTP servers can also implement attacks by uploading super large files and sending requests for large and complex parameters.</p>
+</section>
+<section id="slow-attack">
+<h2>Slow attack<a class="headerlink" href="#slow-attack" title="Link to this heading"></a></h2>
+<p>HTTP slow attack was officially disclosed by Wong Onn Chee and Tom Brennan at the 2012 OWASP Conference, using low-speed packets to consume server resources to achieve the purpose of denial of service.</p>
+<p>Slow attacks are divided into three attack methods: Slow headers / Slow body / Slow read. Slow headers keep sending HTTP headers slowly, consuming server connections and memory resources. Slow body sends a Content-Length HTTP POST request, sending only a small amount of data at a time, keeping the connection alive. Slow reads the Response at a very low speed.</p>
+</section>
+<section id="based-on-service-features">
+<h2>Based on service features<a class="headerlink" href="#based-on-service-features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Compression pack decompression</p></li>
+<li><p>Huge 0 bytes of compressed package</p></li>
+<li><p>Read the file</p></li>
+<li><p>Read unlimited files such as <code class="docutils literal notranslate"><span class="pre">/dev/urandom</span></code></p></li>
+<li><p>High frequency access to specific large file download links</p></li>
+<li><p>Restricted deserialization</p></li>
+<li><p>Deserialize huge arrays</p></li>
+<li><p>Regular analysis</p></li>
+<li><p>A huge backtracking expression</p></li>
+</ul>
+</section>
+<section id="common-protection-methods">
+<h2>Common protection methods<a class="headerlink" href="#common-protection-methods" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fingerprint detection attack based on specific attacks, block/speed limit operation of corresponding traffic</p></li>
+<li><p>Model normal traffic and block/speed limit the identified abnormal traffic</p></li>
+<li><p>Comprehensive speed limiting strategy based on IP/port</p></li>
+<li><p>Block/speed limit operation based on geographical location</p></li>
+</ul>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<p>-<cite>Linux Academy of &lt;https://linuxaCademy.com/howtoguides/posts/show/topic/13191-denial-of-service-dos&gt;</cite> _
+- <a class="reference external" href="https://github.com/shekyan/slowhttptest">slowhttptest</a> Application Layer DoS attack simulator
+- <a class="reference external" href="https://en.wikipedia.org/wiki/Slowloris_(computer_security)">Slowloris wiki</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

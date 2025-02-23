@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.5. SQLMap usage &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. other" href="../misc/index.html" />
+    <link rel="prev" title="10.4. Sniffing Tool" href="sniffing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">10. Quick manual check</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="brute.html">10.1. Blasting tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">10.2. Download Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traffic.html">10.3. Traffic related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sniffing.html">10.4. Sniffing Tool</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.5. SQLMap usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-parameters">10.5.1. Common parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tamper-quick-check">10.5.2. Tamper Quick Check</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">10. </span>Quick manual check</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.5. </span>SQLMap usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/manual/sqlmap.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sqlmap-usage">
+<h1><span class="section-number">10.5. </span>SQLMap usage<a class="headerlink" href="#sqlmap-usage" title="Link to this heading"></a></h1>
+<p>Install <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/sqlmaproject/sqlmap.git</span> <span class="pre">sqlmap</span></code></p>
+<section id="common-parameters">
+<h2><span class="section-number">10.5.1. </span>Common parameters<a class="headerlink" href="#common-parameters" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-u</span></code> <code class="docutils literal notranslate"><span class="pre">--url</span></code> Specify the target url</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-m</span></code> Get multiple target scans from text</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span></code> Load HTTP request from file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--data</span></code> Submit data in POST</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-random-agent</span></code> Random ua</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--user-agent</span></code> specifies ua</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--delay</span></code> Sets the delay between requests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--timeout</span></code> Specify the timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--dbms</span></code> specifies db. The dbs supported by sqlmap include MySQL, Oracle, PostgreSQL, Microsoft SQL Server, Microsoft Access, SQLite, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--os</span></code> Specify the database server operating system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--tamper</span></code> Specify tamper</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--level</span></code> Specify the detection level</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--risk</span></code> Specify risk level</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--technique</span></code> Injection technology</p></li>
+<li><p>B: Boolean-based blind SQL injection</p></li>
+<li><p>E: Error-based SQL injection</p></li>
+<li><p>U: UNION query SQL injection</p></li>
+<li><p>S: Stacked queries SQL injection</p></li>
+<li><p>T: Time-based blind SQL injection</p></li>
+</ul>
+</section>
+<section id="tamper-quick-check">
+<h2><span class="section-number">10.5.2. </span>Tamper Quick Check<a class="headerlink" href="#tamper-quick-check" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sniffing.html" class="btn btn-neutral float-left" title="10.4. Sniffing Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../misc/index.html" class="btn btn-neutral float-right" title="11. other" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

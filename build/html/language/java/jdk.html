@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDK &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">JDK</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/java/jdk.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jdk">
+<h1>JDK<a class="headerlink" href="#jdk" title="Link to this heading"></a></h1>
+<section id="jdk-8">
+<h2>JDK 8<a class="headerlink" href="#jdk-8" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sun.net.www.protocol</span></code> no longer supports the gopher protocol</p></li>
+</ul>
+<section id="u251">
+<h3>8U251<a class="headerlink" href="#u251" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>com.sun.org.apache.bcel.internal.util.ClassLoader class was deleted</p></li>
+</ul>
+</section>
+<section id="u191">
+<h3>8U191<a class="headerlink" href="#u191" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>LDAP remote Reference code is not trusted by default, affecting the attack method of LDAP remote Reference code</p></li>
+</ul>
+</section>
+<section id="u121">
+<h3>8u121<a class="headerlink" href="#u121" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>RMI has added deserialization whitelisting mechanism</p></li>
+<li><p>RMI remote Reference code is not trusted by default, affecting the attack method of RMI remote Reference code</p></li>
+</ul>
+</section>
+<section id="u113">
+<h3>8u113<a class="headerlink" href="#u113" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">com.sun.jndi.rmi.object.trustURLCodebase</span></code> Default is false</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">com.sun.jndi.cosnaming.object.trustURLCodebase</span></code> Default is false</p></li>
+</ul>
+</section>
+</section>
+<section id="jdk-7">
+<h2>JDK 7<a class="headerlink" href="#jdk-7" title="Link to this heading"></a></h2>
+<section id="a-01">
+<h3>7 A 01<a class="headerlink" href="#a-01" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>LDAP remote Reference code is not trusted by default, affecting the attack method of LDAP remote Reference code</p></li>
+</ul>
+</section>
+<section id="and-122">
+<h3>7 and 122<a class="headerlink" href="#and-122" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">com.sun.jndi.rmi.object.trustURLCodebase</span></code> Default is false</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">com.sun.jndi.cosnaming.object.trustURLCodebase</span></code> Default is false</p></li>
+</ul>
+</section>
+<section id="and-40">
+<h3>7 and 40<a class="headerlink" href="#and-40" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">isInvalid</span></code> method was added to the <code class="docutils literal notranslate"><span class="pre">java.io.File</span></code> class to detect whether the file name contains empty bytes</p></li>
+</ul>
+</section>
+</section>
+<section id="jdk-6">
+<h2>JDK 6<a class="headerlink" href="#jdk-6" title="Link to this heading"></a></h2>
+<section id="u211">
+<h3>6u211<a class="headerlink" href="#u211" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>LDAP remote Reference code is not trusted by default, affecting the attack method of LDAP remote Reference code</p></li>
+</ul>
+</section>
+<section id="rabbits-141">
+<h3>6 rabbits 141<a class="headerlink" href="#rabbits-141" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">com.sun.jndi.rmi.object.trustURLCodebase</span></code> Default is false</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">com.sun.jndi.cosnaming.object.trustURLCodebase</span></code> Default is false</p></li>
+</ul>
+</section>
+<section id="u45">
+<h3>6u45<a class="headerlink" href="#u45" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>java.rmi.server.useCodebaseOnly defaults to true, disable automatic loading of remote class files</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -38,9 +38,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Web安全学习笔记'
-copyright = u'2019-%d, Lyle' % date.today().year
-author = u'Lyle'
+project = u'Web Security Study Notes'
+copyright = u'2025-%d, Lyle' % date.today().year
+author = u'Kasem545'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -56,7 +56,7 @@ release = u'1.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'zh_CN'
+language = 'en_US'
 # language = 'en'
 
 # List of patterns, relative to source directory, that match files and

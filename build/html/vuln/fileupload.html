@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File upload &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">File upload</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/fileupload.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-upload">
+<h1>File upload<a class="headerlink" href="#file-upload" title="Link to this heading"></a></h1>
+<section id="file-type-detection-bypass">
+<h2>File type detection bypass<a class="headerlink" href="#file-type-detection-bypass" title="Link to this heading"></a></h2>
+<section id="change-request-bypass">
+<h3>Change request bypass<a class="headerlink" href="#change-request-bypass" title="Link to this heading"></a></h3>
+<p>Some sites only detect file types on the front end, and this type of detection can directly modify network requests bypass.
+Similarly, some sites only check the information in the HTTP Header on the backend, such as <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code>, etc., and this kind of check can also be bypassed by modifying network requests.</p>
+</section>
+<section id="magic-detection-bypass">
+<h3>Magic detection bypass<a class="headerlink" href="#magic-detection-bypass" title="Link to this heading"></a></h3>
+<p>Some sites use file headers to detect file types, and this kind of check can be added to the corresponding bytes before the shell to bypass the check. The header bytes of several common file types are shown in the following table</p>
+</section>
+<section id="suffix-bypass">
+<h3>Suffix bypass<a class="headerlink" href="#suffix-bypass" title="Link to this heading"></a></h3>
+<p>Some services only judge file types based on suffixes, information during uploading, or Magic Header, and can be bypassed at this time.</p>
+<p>php Due to historical reasons, some interpreters may support suffixes that comply with the regular <code class="docutils literal notranslate"><span class="pre">/ph(p[2-7]?|t(ml)?)/</span></code>, such as <code class="docutils literal notranslate"><span class="pre">php</span></code>/<code class="docutils literal notranslate"><span class="pre">php5</span></code>/ <code class="docutils literal notranslate"><span class="pre">pht</span></code> / <code class="docutils literal notranslate"><span class="pre">phtml</span></code> / <code class="docutils literal notranslate"><span class="pre">shtml</span></code> / <code class="docutils literal notranslate"><span class="pre">pwml</span></code> / <code class="docutils literal notranslate"><span class="pre">phtm</span></code> etc. can test this type when uploading php files is prohibited.</p>
+<p>The jsp engine may parse suffixes such as <code class="docutils literal notranslate"><span class="pre">jspx</span></code>/<cite>jspf`</cite>/<cite>jspa`</cite>/<cite>jsw`</cite>/<cite>jsv`</cite>/<cite>jtml`</cite>. Asp supports <code class="docutils literal notranslate"><span class="pre">asa`</span> <span class="pre">`/</span> <span class="pre">``asax</span></code> / <code class="docutils literal notranslate"><span class="pre">cer</span></code> / <code class="docutils literal notranslate"><span class="pre">cdx</span></code> / <code class="docutils literal notranslate"><span class="pre">aspx</span></code> / <code class="docutils literal notranslate"><span class="pre">ascx</span></code> / <code class="docutils literal notranslate"><span class="pre">ashx</span></code> / <code class="docutils literal notranslate"><span class="pre">asmx</span></code> / <code class="docutils literal notranslate"><span class="pre">asp{80-</span> <span class="pre">90}</span></code> and other suffixes.</p>
+<p>In addition to these bypasses, other suffixes can also cause problems, such as <code class="docutils literal notranslate"><span class="pre">vbs</span></code> / <code class="docutils literal notranslate"><span class="pre">asis</span></code> / <code class="docutils literal notranslate"><span class="pre">sh</span></code> / <code class="docutils literal notranslate"><span class="pre">reg</span></code> / <code class="docutils literal notranslate"><span class="pre">cgi</span></code> / <code class="docutils literal notranslate"><span class="pre">exe</span></code> / <code class="docutils literal notranslate"><span class="pre">dll</span></code> / <code class="docutils literal notranslate"><span class="pre">com</span></code> / <code class="docutils literal notranslate"><span class="pre">bat</span></code> / <code class="docutils literal notranslate"><span class="pre">pl</span></code> / <code class="docutils literal notranslate"><span class="pre">cfc</span></code> / <code class="docutils literal notranslate"><span class="pre">cfm</span></code> / <code class="docutils literal notranslate"><span class="pre">ini</span></code> etc.</p>
+</section>
+<section id="system-naming-bypass">
+<h3>System naming bypass<a class="headerlink" href="#system-naming-bypass" title="Link to this heading"></a></h3>
+<p>On Windows systems, uploading <code class="docutils literal notranslate"><span class="pre">index.php.`</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">renamed</span> <span class="pre">to</span> <span class="pre">``.</span></code>, and suffix checking can be bypassed.
+You can also try <code class="docutils literal notranslate"><span class="pre">index.php%20`,</span> <span class="pre">``index.php:1.jpg````````</span></code>, etc.
+In Linux systems, you can try uploading a file named <code class="docutils literal notranslate"><span class="pre">index.php/.</span></code> or <code class="docutils literal notranslate"><span class="pre">./aa/../index.php/.</span></code></p>
+</section>
+<section id="user-ini">
+<h3>.user.ini<a class="headerlink" href="#user-ini" title="Link to this heading"></a></h3>
+<p>During the execution of php, in addition to the main php.ini, PHP will also scan the INI file in each directory, starting from the directory where the executed PHP file is located and continues to the web root directory ($_SERVER[ ‘DOCUMENT_ROOT’] specified). If the executed PHP file is outside the web root directory, only that directory is scanned. <code class="docutils literal notranslate"><span class="pre">.user.ini</span></code> can define options for patterns other than PHP_INI_SYSTEM, so you can use <code class="docutils literal notranslate"><span class="pre">.user.ini</span></code> to add non-php suffix files to construct a shell, such as <a href="#id1"><span class="problematic" id="id2">``</span></a>auto_prepend_file=01.gif` ` .</p>
+</section>
+<section id="waf-bypass">
+<h3>WAF bypass<a class="headerlink" href="#waf-bypass" title="Link to this heading"></a></h3>
+<p>Some wafs only process part of the data during the writing process, and can bypass their processing functions by adding a large amount of junk data.</p>
+<p>In addition, Waf and Web systems handle <code class="docutils literal notranslate"><span class="pre">boundary</span></code> inconsistently, so you can use the wrong <code class="docutils literal notranslate"><span class="pre">boundary</span></code> to complete the bypass.</p>
+</section>
+<section id="competition-upload-bypass">
+<h3>Competition upload bypass<a class="headerlink" href="#competition-upload-bypass" title="Link to this heading"></a></h3>
+<p>Some servers use the method of saving first and then deleting illegal files. In this kind of server, you can upload a file that will generate a Web shell and try to access it. After multiple times, you can get the shell.</p>
+</section>
+</section>
+<section id="attack-skills">
+<h2>Attack skills<a class="headerlink" href="#attack-skills" title="Link to this heading"></a></h2>
+<section id="apache-rewrites-getshell">
+<h3>Apache rewrites GetShell<a class="headerlink" href="#apache-rewrites-getshell" title="Link to this heading"></a></h3>
+<p>Apache can consider uploading.htaccess based on whether redirects are allowed</p>
+<p>The content is</p>
+<p>AddType application/x-httpd-php .png
+php_flag engine 1</p>
+<p>You can use png or other suffix files to make php scripts</p>
+</section>
+<section id="read-files-at-will-with-soft-links">
+<h3>Read files at will with soft links<a class="headerlink" href="#read-files-at-will-with-soft-links" title="Link to this heading"></a></h3>
+<p>When the uploaded compressed package file will be decompressed, you can consider uploading files with symbolic links.
+If the server is not protected properly, the effect of reading any file can be achieved.</p>
+</section>
+</section>
+<section id="protection-skills">
+<h2>Protection skills<a class="headerlink" href="#protection-skills" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use whitelist to limit the types of uploaded files</p></li>
+<li><p>Use stricter file type checking methods</p></li>
+<li><p>Restrict Web Server to parse uploaded folders</p></li>
+</ul>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.freebuf.com/articles/web/188464.html">Constructing a high-quality upload vulnerability Fuzz dictionary</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

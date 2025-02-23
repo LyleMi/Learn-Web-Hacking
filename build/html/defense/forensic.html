@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.17. Traceability analysis &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Authentication mechanism" href="../auth/index.html" />
+    <link rel="prev" title="7.16. Emergency response" href="emergency.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. Defense Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="team.html">7.1. Team building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redteam.html">7.2. Red and blue confrontation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdl.html">7.3. Safe development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secops.html">7.4. Safety construction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat.html">7.5. Threat intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="att8ck.html">7.6. That &amp; ck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework.html">7.7. Defense Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reinforce.html">7.8. Reinforcement inspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html">7.9. IDS and IPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#common-intrusion-points">7.10. Common intrusion points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#monitoring-implementation">7.11. Monitoring implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#reference-link">7.12. Reference link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zt.html">7.13. Zero trust security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeypot.html">7.14. Honeypot technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rasp.html">7.15. RASP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html">7.16. Emergency response</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.17. Traceability analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#attack-aircraft-traceability-technology">7.17.1. Attack aircraft traceability technology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#log-based-traceability">7.17.1.1. Log-based traceability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#routing-input-debugging-technology">7.17.1.2. Routing input debugging technology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controllable-flood-technology">7.17.1.3. Controllable flood technology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#traceability-technology-based-on-package-data-modification">7.17.1.4. Traceability technology based on package data modification</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#based-on-honeypot-traceability">7.17.2. Based on honeypot traceability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analytical-model">7.17.3. Analytical Model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kill-kain-model">7.17.3.1. Kill Kain model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#diamond-model">7.17.3.2. Diamond model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#correlation-analysis-method">7.17.4. Correlation analysis method</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#documentation">7.17.4.1. Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#behavioral-analysis">7.17.4.2. Behavioral Analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#executable-file-similarity-analysis">7.17.4.3. Executable file similarity analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-logging-method">7.17.5. Clear logging method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-link">7.17.6. Reference link</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>Defense Technology</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7.17. </span>Traceability analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/defense/forensic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="traceability-analysis">
+<h1><span class="section-number">7.17. </span>Traceability analysis<a class="headerlink" href="#traceability-analysis" title="Link to this heading"></a></h1>
+<section id="attack-aircraft-traceability-technology">
+<h2><span class="section-number">7.17.1. </span>Attack aircraft traceability technology<a class="headerlink" href="#attack-aircraft-traceability-technology" title="Link to this heading"></a></h2>
+<section id="log-based-traceability">
+<h3><span class="section-number">7.17.1.1. </span>Log-based traceability<a class="headerlink" href="#log-based-traceability" title="Link to this heading"></a></h3>
+<p>Use routers, hosts and other devices to record key information (time, source address, destination address) in the data stream transmitted by the network, and reverse tracking is performed based on log queries when tracking.</p>
+<p>The advantages of this method are strong compatibility, support for post-traceability, and have small network overhead. However, this method is also limited by performance, space and privacy protection. Taking into account the above factors, the recorded data characteristics and number of data can be limited. In addition, technologies such as traffic mirroring can be used to reduce the impact on network performance.</p>
+</section>
+<section id="routing-input-debugging-technology">
+<h3><span class="section-number">7.17.1.2. </span>Routing input debugging technology<a class="headerlink" href="#routing-input-debugging-technology" title="Link to this heading"></a></h3>
+<p>In scenarios where the attack continues to send data and the characteristics are relatively stable, the router’s input debugging technology can be used to dynamically track upwards when matching the attack traffic. This method is more effective in DDoS attack traceability and has a small network overhead.</p>
+</section>
+<section id="controllable-flood-technology">
+<h3><span class="section-number">7.17.1.3. </span>Controllable flood technology<a class="headerlink" href="#controllable-flood-technology" title="Link to this heading"></a></h3>
+<p>When tracing, flood attacks are carried out to potential upstream routers. If the attack traffic is found to be reduced, the attack traffic will flow through the corresponding route. The advantage of this method is that it does not require pre-deployment and requires less coordination. But this method itself is an attack that will have some impact on the network.</p>
+</section>
+<section id="traceability-technology-based-on-package-data-modification">
+<h3><span class="section-number">7.17.1.4. </span>Traceability technology based on package data modification<a class="headerlink" href="#traceability-technology-based-on-package-data-modification" title="Link to this heading"></a></h3>
+<p>This traceability method directly modifies the data packet, adds encoding or tagging information, and reconstructs the transmission path at the receiving end. This method has less manpower investment and supports post-fact analysis, but it is not very supportive of some protocols.</p>
+<p>Based on this method, random marking technology has been derived. Each route identifies data packets with a certain probability, and the receiver collects multiple packets and reconstructs them.</p>
+</section>
+</section>
+<section id="based-on-honeypot-traceability">
+<h2><span class="section-number">7.17.2. </span>Based on honeypot traceability<a class="headerlink" href="#based-on-honeypot-traceability" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Social Network jsonp API</p></li>
+<li><p>Get the attacker’s IP</p></li>
+<li><p>Get burp information</p></li>
+</ul>
+</section>
+<section id="analytical-model">
+<h2><span class="section-number">7.17.3. </span>Analytical Model<a class="headerlink" href="#analytical-model" title="Link to this heading"></a></h2>
+<section id="kill-kain-model">
+<h3><span class="section-number">7.17.3.1. </span>Kill Kain model<a class="headerlink" href="#kill-kain-model" title="Link to this heading"></a></h3>
+<p>The concept of kill chain originates from the military field and is a model that describes the attack link. Generally, kill chains include reconnaissance, weapon construction, payload delivery, exploitation, installation and implantation, communication control, and achievement of goals. Several stages.</p>
+<p>The earlier the kill chain link prevents the attack, the better the protection effect, so the concept of the kill chain can also be used to counter attacks.</p>
+<p>During the tracking phase, attackers usually use scanning and search methods to find possible target information and evaluate the cost of the attack. At this stage, you can discover it through log analysis, email analysis, etc., and at this stage, you can also use threat intelligence and other methods to obtain attack information.</p>
+<p>During the weapon construction stage, the attacker usually has prepared the attack tools and conducts attempted attacks. At this stage, there may be attack records in IDS, and accounts such as external network applications and email addresses may have password explosion records. Some attackers will use public attack tools that will carry certain known characteristics.</p>
+<p>During the payload delivery stage, attackers usually use network vulnerabilities, harpoons, puddles, network hijacking, USB flash drives and other methods to deliver malicious code. At this stage, some personnel have received attack payloads in the corresponding channels, and sufficient safety training for personnel can achieve a certain degree of defense.</p>
+<p>During the breakthrough and utilization stage, the attacker will execute malicious code to obtain system control permissions. At this time, the Trojan program has been executed. At this stage, the corresponding attack can be found by relying on antivirus software, abnormal behavior alarms, etc.</p>
+<p>During the installation and implantation phase, attackers usually install Webshell or implant backdoors, rootkits, etc. on the web server to achieve persistence control of the server. These implants can be found by reverse engineering the samples.</p>
+<p>During the communication control phase, the attacker has implemented remote communication control, and the Trojan will communicate with the control server through three-party Web websites, DNS tunnels, mails, etc. At this time, you can find traces of the Trojan horse by analyzing the log.</p>
+<p>When the target phase is achieved, the attacker begins to achieve his purpose, which may be to disrupt the normal operation of the system, steal target data, extort, lateral movement, etc. At this time, there may be an attack tool uploaded by an attacker in the controlled machine. At this stage, you can use honeypots and other methods to discover it.</p>
+</section>
+<section id="diamond-model">
+<h3><span class="section-number">7.17.3.2. </span>Diamond model<a class="headerlink" href="#diamond-model" title="Link to this heading"></a></h3>
+<p>The diamond model was proposed in 2013 by Sergio Catagirone and others from the Cyber Intelligence Analysis and Threat Research Institute (CCIATR).</p>
+<p>The model divides all security events into four core elements, namely Adversary, Capability, Infrastructure and Victim, and uses diamond-shaped connections to represent their relationships , hence the name “Diamond Model”.</p>
+<p>The kill chain model is characterized by explaining the attack line and the process of the attack, while the diamond model is characterized by explaining the attacker’s purpose and attack methods in a single event.</p>
+<p>When using diamond model analysis, the fulcrum analysis method is usually used. Pivoting refers to the analysis technique that extracts an element and uses it to combine it with a data source to discover related elements. The fulcrum can be changed at any time in analysis, and the four core features and two extended features (social politics, technology) may all become the fulcrum of analysis at that time.</p>
+</section>
+</section>
+<section id="correlation-analysis-method">
+<h2><span class="section-number">7.17.4. </span>Correlation analysis method<a class="headerlink" href="#correlation-analysis-method" title="Link to this heading"></a></h2>
+<p>Correlation analysis is used to combine multiple different attack samples.</p>
+<section id="documentation">
+<h3><span class="section-number">7.17.4.1. </span>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>hash</p></li>
+<li><p>ssdeep</p></li>
+<li><p>Version information (Company/Author/Last Modified Author/Creation Time/Last Modified Time)</p></li>
+</ul>
+</section>
+<section id="behavioral-analysis">
+<h3><span class="section-number">7.17.4.2. </span>Behavioral Analysis<a class="headerlink" href="#behavioral-analysis" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Based on network behavior</p></li>
+<li><p>Similar interaction methods</p></li>
+</ul>
+</section>
+<section id="executable-file-similarity-analysis">
+<h3><span class="section-number">7.17.4.3. </span>Executable file similarity analysis<a class="headerlink" href="#executable-file-similarity-analysis" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Special port</p></li>
+<li><p>Special string/key</p></li>
+<li><p>PDB file path</p></li>
+<li><p>Similar folders</p></li>
+<li><p>Code reuse</p></li>
+<li><p>Similar code snippets</p></li>
+</ul>
+</section>
+</section>
+<section id="clear-logging-method">
+<h2><span class="section-number">7.17.5. </span>Clear logging method<a class="headerlink" href="#clear-logging-method" title="Link to this heading"></a></h2>
+<p>-<code class="docutils literal notranslate"><span class="pre">kill</span> <span class="pre">&lt;bash</span> <span class="pre">process</span> <span class="pre">ID&gt;</span></code> will not be stored
+- <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">+o</span> <span class="pre">history</span></code> does not write history
+- <code class="docutils literal notranslate"><span class="pre">unset</span> <span class="pre">HISTFILE</span></code> Clears the history of environment variables</p>
+</section>
+<section id="reference-link">
+<h2><span class="section-number">7.17.6. </span>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mp.weixin.qq.com/s/vlr2X68tMTgDhdDk4aow0g">Honey pot technology that uses social accounts to accurately trace the source</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="emergency.html" class="btn btn-neutral float-left" title="7.16. Emergency response" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../auth/index.html" class="btn btn-neutral float-right" title="8. Authentication mechanism" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

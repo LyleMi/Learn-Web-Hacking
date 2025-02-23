@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.15. Operation and maintenance &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.16. Getting evidence" href="forensics.html" />
+    <link rel="prev" title="9.14. Safe development" href="sdl.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">9. Tools and resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="resource.html">9.1. Recommended resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papers.html">9.2. Related papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info.html">9.3. Information collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socialengineering.html">9.4. Social Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fuzz.html">9.5. Fuzzy test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploit.html">9.6. Vulnerability Exploit/Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nearsource.html">9.7. Near source permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webpersistence.html">9.8. Web endurance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.html">9.9. Move horizontally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html">9.10. Cloud Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ospersistence.html">9.11. Operating system persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">9.12. Audit tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defense.html">9.13. defense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdl.html">9.14. Safe development</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.15. Operation and maintenance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flow">9.15.1. flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fortress">9.15.2. Fortress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#honey-jar">9.15.3. Honey jar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vpn-install">9.15.4. VPN Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tunnel-agent">9.15.5. Tunnel / Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#proxy-chain">9.15.6. Proxy chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asset-management">9.15.7. asset Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compliance">9.15.8. Compliance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#risk-control">9.15.9. Risk control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#siem">9.15.10. SIEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#safe-operation-and-maintenance">9.15.11. Safe operation and maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-monitoring">9.15.12. System monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">9.15.13. Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-testing">9.15.14. Network testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-simulation">9.15.15. Network simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="forensics.html">9.16. Getting evidence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html">9.17. other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">9. </span>Tools and resources</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9.15. </span>Operation and maintenance</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tools/operation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="operation-and-maintenance">
+<h1><span class="section-number">9.15. </span>Operation and maintenance<a class="headerlink" href="#operation-and-maintenance" title="Link to this heading"></a></h1>
+<section id="flow">
+<h2><span class="section-number">9.15.1. </span>flow<a class="headerlink" href="#flow" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.bro.org/">Bro</a></p></li>
+<li><p><a class="reference external" href="https://github.com/aol/moloch">Moloch</a>  Large scale, open source, indexed packet capture and search</p></li>
+<li><p><a class="reference external" href="https://github.com/simsong/tcpflow">TCPFlow</a></p></li>
+<li><p><a class="reference external" href="http://www.tcpdump.org/">TCPDump</a></p></li>
+<li><p><a class="reference external" href="https://www.wireshark.org">WireShark</a></p></li>
+<li><p><a class="reference external" href="https://github.com/salesforce/Argus">Argus</a></p></li>
+<li><p><a class="reference external" href="https://github.com/seladb/PcapPlusPlus">PcapPlusPlus</a></p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">`</span></a></p></li>
+<li><p><a class="reference external" href="https://github.com/cisco/joy">cisco joy</a>  A package for capturing and analyzing network flow data and intraflow data, for network research, forensics, and security monitoring.</p></li>
+<li><p><a class="reference external" href="https://github.com/nfstream/nfstream">NFStream</a> a Flexible Network Data Analysis Framework</p></li>
+<li><p><a class="reference external" href="https://github.com/odedshimon/BruteShark">BruteShark</a> Network Analysis Tool</p></li>
+</ul>
+</section>
+<section id="fortress">
+<h2><span class="section-number">9.15.2. </span>Fortress<a class="headerlink" href="#fortress" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/jumpserver/jumpserver">jumpserver</a></p></li>
+<li><p><cite>Crazyye &lt;https://github.com/riryquae/crazye&gt;</cite> `</p></li>
+<li><p><a class="reference external" href="https://github.com/liftoff/GateOne">GateOne</a></p></li>
+</ul>
+</section>
+<section id="honey-jar">
+<h2><span class="section-number">9.15.3. </span>Honey jar<a class="headerlink" href="#honey-jar" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a href="#id3"><span class="problematic" id="id4">`</span></a>SEEE &lt;HTPLS HTPS2/Dinatoals/Dinatoals 2-</p></li>
+<li><p><a class="reference external" href="https://github.com/threatstream/mhn">Modern Honey Network</a></p></li>
+<li><p><a class="reference external" href="https://github.com/micheloosterhof/cowrie">Cowrie</a> SSH/Telnet Honey Can</p></li>
+<li><p><a class="reference external" href="https://github.com/omererdem/honeything">honeything</a> IoT honeypot</p></li>
+<li><p><a class="reference external" href="http://conpot.org/">ConPot</a> Honeypot for industrial control facilities</p></li>
+<li><p><a class="reference external" href="https://github.com/Plazmaz/MongoDB-HoneyProxy">MongoDB HoneyProxy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jordan-wright/elastichoney">ElasticHoney</a></p></li>
+<li><p><a class="reference external" href="https://github.com/secureworks/dcept">DCEPT</a></p></li>
+<li><p><a class="reference external" href="https://github.com/thinkst/canarytokens">Canarytokens</a></p></li>
+<li><p><a class="reference external" href="http://bruteforcelab.com/honeydrive">Honeydrive</a></p></li>
+<li><p><a class="reference external" href="https://github.com/dtag-dev-sec/tpotce/">T-Pot</a> The All In One Honeypot Platform</p></li>
+<li><p><a class="reference external" href="https://github.com/p1r06u3/opencanary_web">opencanary</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hacklcx/HFish">HFish</a></p></li>
+<li><p><cite>Kippo &lt;https://github.com/desaster/kippo&gt;</cite> _ ssh honeypot</p></li>
+<li><p><a class="reference external" href="https://github.com/seccome/Ehoney">Ehoney</a> Deception Defense System</p></li>
+</ul>
+</section>
+<section id="vpn-install">
+<h2><span class="section-number">9.15.4. </span>VPN Install<a class="headerlink" href="#vpn-install" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/viljoviitanen/setup-simple-pptp-vpn">pptp</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hwdsl2/setup-ipsec-vpn">ipsec</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Nyr/openvpn-install">openvpn</a></p></li>
+</ul>
+</section>
+<section id="tunnel-agent">
+<h2><span class="section-number">9.15.5. </span>Tunnel / Agent<a class="headerlink" href="#tunnel-agent" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>`` ngrok &lt;<a class="reference external" href="https://github.com/intonshreevle/ngrok">https://github.com/intonshreevle/ngrok</a>&gt; `` _</p></li>
+<li><p>`` rtcp &lt;<a class="reference external" href="https://github.com/knownsec/rtcp">https://github.com/knownsec/rtcp</a>&gt; <a href="#id5"><span class="problematic" id="id6">`</span></a>_</p></li>
+<li><p><cite>thin &lt;https://github.com/secforce/tunna&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/sensepost/reDuh">reDuh</a> Create a TCP circuit through validly formed HTTP requests</p></li>
+<li><p><a class="reference external" href="https://github.com/sensepost/reGeorg">reGeorg</a> pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn</p></li>
+<li><p><a class="reference external" href="https://github.com/L-codes/Neo-reGeorg">Neo-reGeorg</a> Neo-reGeorg is a project that seeks to aggressively refactor reGeorg</p></li>
+<li><p><a class="reference external" href="https://github.com/nccgroup/ABPTTS">ABPTTS</a> TCP tunneling over HTTP/HTTPS for web application servers</p></li>
+<li><p><a class="reference external" href="https://github.com/fatedier/frp">frp</a> A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet</p></li>
+<li><p><a class="reference external" href="https://github.com/ffay/lanproxy">lanproxy</a> Intranet penetration tool</p></li>
+<li><p><a class="reference external" href="https://github.com/sysdream/ligolo">ligolo</a> Reverse Tunneling made easy for pentesters</p></li>
+<li><p><a class="reference external" href="https://github.com/idlefire/ew">EarthWorm</a> is a tool used to enable SOCKS v5 proxy service. It is developed based on Standard C and can provide multi-platform forwarding communication for complex networks. Data forwarding in the environment.</p></li>
+<li><p><a class="reference external" href="https://github.com/SECFORCE/Tunna">Tunna</a>  is a set of tools which will wrap and tunnel any TCP communication over HTTP</p></li>
+<li><p><a class="reference external" href="https://github.com/blackarrowsec/mssqlproxy">mssqlproxy</a> is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse</p></li>
+<li><p><a class="reference external" href="https://github.com/ehang-io/nps">nps</a> a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal</p></li>
+</ul>
+</section>
+<section id="proxy-chain">
+<h2><span class="section-number">9.15.6. </span>Proxy chain<a class="headerlink" href="#proxy-chain" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/NetchX/Netch">Netch</a> Support Socks5, Shadowsocks, ShadowsocksR, V2Ray, Trojan proxies. UDP NAT FullCone</p></li>
+<li><p><a class="reference external" href="https://github.com/haad/proxychains">proxychains</a> a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4, SOCKS5 or HTTP(S) proxy</p></li>
+<li><p><a class="reference external" href="https://github.com/ginuerzh/gost">gost</a> GO Simple Tunnel</p></li>
+</ul>
+</section>
+<section id="asset-management">
+<h2><span class="section-number">9.15.7. </span>asset Management<a class="headerlink" href="#asset-management" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Tencent/bk-cmdb">BlueKing CMDB</a> Enterprise-level configuration management platform for assets and applications</p></li>
+<li><p><a class="reference external" href="https://github.com/TophantTechnology/ARL">ARL</a> Asset Reconnaissance Lighthouse System</p></li>
+</ul>
+</section>
+<section id="compliance">
+<h2><span class="section-number">9.15.8. </span>Compliance<a class="headerlink" href="#compliance" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/momosecurity/bombus">bombus</a> Compliance Audit Platform</p></li>
+</ul>
+</section>
+<section id="risk-control">
+<h2><span class="section-number">9.15.9. </span>Risk control<a class="headerlink" href="#risk-control" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/threathunterX/nebula">nebula</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ysrc/Liudao">Liudao</a> “Six Paths” real-time business risk control system</p></li>
+<li><p><a class="reference external" href="https://github.com/momosecurity/aswan">aswan</a> Momo Risk Control System Static Rules Engine</p></li>
+</ul>
+</section>
+<section id="siem">
+<h2><span class="section-number">9.15.10. </span>SIEM<a class="headerlink" href="#siem" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>Metron &lt;https://github.com/apache/metron&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/mozilla/MozDef">MozDef</a></p></li>
+</ul>
+</section>
+<section id="safe-operation-and-maintenance">
+<h2><span class="section-number">9.15.11. </span>Safe operation and maintenance<a class="headerlink" href="#safe-operation-and-maintenance" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/HandsomeOne/Scout">Scout</a> URL Monitoring System</p></li>
+<li><p><a class="reference external" href="https://github.com/qunarcorp/open_dnsdb">OpenDnsdb</a> Python-based DNS management system</p></li>
+</ul>
+</section>
+<section id="system-monitoring">
+<h2><span class="section-number">9.15.12. </span>System monitoring<a class="headerlink" href="#system-monitoring" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/netdata/netdata">netdata</a> Real-time performance monitoring</p></li>
+<li><p><a class="reference external" href="https://github.com/iovisor/bcc">bcc</a> Tools for BPF-based Linux IO analysis, networking, monitoring, and more</p></li>
+</ul>
+</section>
+<section id="windows">
+<h2><span class="section-number">9.15.13. </span>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/zh-cn/sysinternals">Windows Sysinternals</a></p></li>
+</ul>
+</section>
+<section id="network-testing">
+<h2><span class="section-number">9.15.14. </span>Network testing<a class="headerlink" href="#network-testing" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Shopify/toxiproxy">Toxiproxy</a> A TCP proxy to simulate network and system conditions for chaos and resiliency testing</p></li>
+</ul>
+</section>
+<section id="network-simulation">
+<h2><span class="section-number">9.15.15. </span>Network simulation<a class="headerlink" href="#network-simulation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/seed-labs/seed-emulator">Internet Emulator</a> A Python framework for creating emulation of the Internet</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sdl.html" class="btn btn-neutral float-left" title="9.14. Safe development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="forensics.html" class="btn btn-neutral float-right" title="9.16. Getting evidence" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

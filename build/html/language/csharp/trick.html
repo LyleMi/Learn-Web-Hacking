@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utilization skills &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Utilization skills</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/csharp/trick.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="utilization-skills">
+<h1>Utilization skills<a class="headerlink" href="#utilization-skills" title="Link to this heading"></a></h1>
+<section id="p-invoke">
+<h2>P/Invoke<a class="headerlink" href="#p-invoke" title="Link to this heading"></a></h2>
+<p>Platform Invoke (P/Invoke) provides C#’s ability to access data structures, callbacks, and functions in DLLs. The basic usage methods are shown in the official <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke">Platform Invoke</a> documentation. Using the capabilities of P/Invoke, C# programs can easily call standard Windows APIs.</p>
+<p>using System;
+using System.Runtime.InteropServices;</p>
+<p>public class Program
+{
+// Import user32.dll (containing the function we need) and define
+// the method corresponding to the native function.
+[DllImport(“user32.dll”, CharSet = CharSet.Unicode, SetLastError = true)]
+private static extern int MessageBox(IntPtr hWnd, string lpText, string lpCaption, uint uType);</p>
+<p>public static void Main(string[] args)
+{
+// Invoke the function as a regular managed method.
+MessageBox(IntPtr.Zero, “Command-line message box”, “Attention!”, 0);
+}
+}</p>
+<p>The disadvantage of P/Invoke is that the referenced API calls will eventually appear in the IAT of the executable file, making some sensitive behaviors easily noticed by the protection software. At the same time, some sensitive APIs may be monitored by the protection software, and API calls made in this way are also easily intercepted by the protection software.</p>
+</section>
+<section id="d-invoke">
+<h2>D/Invoke<a class="headerlink" href="#d-invoke" title="Link to this heading"></a></h2>
+<p>Based on P/Invoke, some researchers proposed D/Invoke based on the <a href="#id1"><span class="problematic" id="id2">`Delegates &lt;https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/`_</span></a> mechanism, Call the required API in a more obscure way.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

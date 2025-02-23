@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.11. Operating system persistence &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.12. Audit tools" href="audit.html" />
+    <link rel="prev" title="9.10. Cloud Security" href="cloud.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">9. Tools and resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="resource.html">9.1. Recommended resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papers.html">9.2. Related papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info.html">9.3. Information collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socialengineering.html">9.4. Social Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fuzz.html">9.5. Fuzzy test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploit.html">9.6. Vulnerability Exploit/Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nearsource.html">9.7. Near source permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webpersistence.html">9.8. Web endurance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.html">9.9. Move horizontally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html">9.10. Cloud Security</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.11. Operating system persistence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">9.11.1. Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#certificate-acquisition">9.11.1.1. Certificate acquisition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#elevate-permissions">9.11.1.2. Elevate permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uac-bypass">9.11.1.3. UAC Bypass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#no-killing">9.11.1.4. No killing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c2">9.11.1.5. C2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hide">9.11.1.6. hide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dll-injection">9.11.1.7. DLL injection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rootkit">9.11.1.8. rootkit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#forged">9.11.1.9. Forged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mitm">9.11.1.10. Mitm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comprehensive-tools">9.11.1.11. Comprehensive Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">9.11.2. Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">9.11.2.1. Elevate permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">9.11.2.2. rootkit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#back-door">9.11.2.3. back door</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#comprehensive">9.11.3. comprehensive</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">9.11.3.1. Certificate acquisition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">9.11.3.2. Elevate permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rat">9.11.3.3. RAT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">9.11.3.4. C2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dns-shell">9.11.3.5. DNS Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cobalt-strike">9.11.3.6. Cobalt Strike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#log-clearing">9.11.3.7. Log clearing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#botnet">9.11.3.8. Botnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kill-free-tool">9.11.3.9. Kill-free tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">9.12. Audit tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defense.html">9.13. defense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdl.html">9.14. Safe development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">9.15. Operation and maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forensics.html">9.16. Getting evidence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html">9.17. other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">9. </span>Tools and resources</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9.11. </span>Operating system persistence</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tools/ospersistence.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="operating-system-persistence">
+<h1><span class="section-number">9.11. </span>Operating system persistence<a class="headerlink" href="#operating-system-persistence" title="Link to this heading"></a></h1>
+<section id="windows">
+<h2><span class="section-number">9.11.1. </span>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h2>
+<section id="certificate-acquisition">
+<h3><span class="section-number">9.11.1.1. </span>Certificate acquisition<a class="headerlink" href="#certificate-acquisition" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><cite>Mimikatz &lt;https://github.com/gentilkiwi/mimikatz&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/0x09AL/RdpThief">RdpThief</a> Extracting Clear Text Passwords from mstsc.exe using API Hooking</p></li>
+<li><p><a class="reference external" href="https://github.com/quarkslab/quarkspwdump">quarkspwdump</a> Dump various types of Windows credentials without injecting in any process</p></li>
+<li><p><a class="reference external" href="https://github.com/GhostPack/SharpDump">SharpDump</a> C# port of PowerSploit’s Out-Minidump.ps1 functionality</p></li>
+</ul>
+</section>
+<section id="elevate-permissions">
+<h3><span class="section-number">9.11.1.2. </span>Elevate permissions<a class="headerlink" href="#elevate-permissions" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/abatchy17/WindowsExploits">WindowsExploits</a></p></li>
+<li><p><a class="reference external" href="https://github.com/GTFOBins/GTFOBins.github.io">GTFOBins</a> Curated list of Unix binaries that can be exploited to bypass system security restrictions</p></li>
+<li><p><a class="reference external" href="https://github.com/411Hall/JAWS">JAWS</a> Just Another Windows (Enum) Script</p></li>
+</ul>
+</section>
+<section id="uac-bypass">
+<h3><span class="section-number">9.11.1.3. </span>UAC Bypass<a class="headerlink" href="#uac-bypass" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/rootm0s/WinPwnage">WinPwnage</a> UAC bypass, Elevate, Persistence and Execution methods</p></li>
+<li><p><a class="reference external" href="https://github.com/hfiref0x/UACME">UACME</a> Defeating Windows User Account Control</p></li>
+<li><p><a class="reference external" href="https://github.com/sailay1996/UAC_Bypass_In_The_Wild">UAC Bypass In The Wild</a></p></li>
+</ul>
+</section>
+<section id="no-killing">
+<h3><span class="section-number">9.11.1.4. </span>No killing<a class="headerlink" href="#no-killing" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/secretsquirrel/SigThief">SigThief</a> Stealing Signatures and Making One Invalid Signature at a Time</p></li>
+</ul>
+</section>
+<section id="c2">
+<h3><span class="section-number">9.11.1.5. </span>C2<a class="headerlink" href="#c2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cobbr/SharpSploit">SharpSploit</a> .NET post-exploitation library written in C#</p></li>
+<li><p><a class="reference external" href="https://github.com/mai1zhi2/SharpBeacon">SharpBeacon</a> Rewrite CobaltStrike stager and Beacon with .net, including normal online, file management, process management, token management, injection with SysCall, native A series of functions such as port forwarding and ETW shutdown</p></li>
+<li><p><a class="reference external" href="https://github.com/zerosum0x0/koadic">Koadic</a> is a Windows post-exploitation rootkit</p></li>
+<li><p><a class="reference external" href="https://github.com/nettitude/PoshC2">PoshC2</a> A proxy aware C2 framework used to aid red teamers with post-exploitation and lateral movement</p></li>
+</ul>
+</section>
+<section id="hide">
+<h3><span class="section-number">9.11.1.6. </span>hide<a class="headerlink" href="#hide" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/M00nRise/ProcessHider">ProcessHider</a> Post-exploitation tool for hiding processes from monitoring applications</p></li>
+<li><p><a class="reference external" href="https://github.com/hlldz/Invoke-Phant0m">Invoke Phant0m</a> Windows Event Log Killer</p></li>
+<li><p><a class="reference external" href="https://github.com/QAX-A-Team/EventCleaner">EventCleaner</a> A tool mainly to erase specified records from Windows event logs, with additional functionalities</p></li>
+</ul>
+</section>
+<section id="dll-injection">
+<h3><span class="section-number">9.11.1.7. </span>DLL injection<a class="headerlink" href="#dll-injection" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/monoxgas/sRDI">sRDI</a> Shellcode Reflective DLL Injection</p></li>
+</ul>
+</section>
+<section id="rootkit">
+<h3><span class="section-number">9.11.1.8. </span>rootkit<a class="headerlink" href="#rootkit" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/bytecode77/r77-rootkit">r77-rootkit</a> Ring 3 rootkit with single file installer and fileless persistence that hides processes, files, network connections, etc</p></li>
+</ul>
+</section>
+<section id="forged">
+<h3><span class="section-number">9.11.1.9. </span>Forged<a class="headerlink" href="#forged" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/countercept/ppid-spoofing">parent PID spoofing</a> Scripts for performing and detecting parent PID spoofing</p></li>
+<li><p><a class="reference external" href="https://github.com/py7hagoras/GetSystem">GetSystem</a> This is a C# implementation of making a process/executable run as NT AUTHORITY/SYSTEM. This is achieved through parent ID spoofing of almost any SYSTEM process.</p></li>
+</ul>
+</section>
+<section id="mitm">
+<h3><span class="section-number">9.11.1.10. </span>Mitm<a class="headerlink" href="#mitm" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/SySS-Research/Seth">Seth</a> Perform a MitM attack and extract clear text credentials from RDP connections</p></li>
+<li><p><a class="reference external" href="https://github.com/GoSecure/pyrdp">pyrdp</a> RDP man-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact</p></li>
+</ul>
+</section>
+<section id="comprehensive-tools">
+<h3><span class="section-number">9.11.1.11. </span>Comprehensive Tools<a class="headerlink" href="#comprehensive-tools" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/samratashok/nishang">Nishang</a> Offensive PowerShell for red team, penetration testing and offensive security</p></li>
+<li><p><a class="reference external" href="https://github.com/fireeye/SharPersist">SharPersist</a> Windows persistence toolkit written in C#</p></li>
+</ul>
+</section>
+</section>
+<section id="linux">
+<h2><span class="section-number">9.11.2. </span>Linux<a class="headerlink" href="#linux" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">9.11.2.1. </span>Elevate permissions<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/mzet-/linux-exploit-suggester">linux exploit suggester</a></p></li>
+<li><p><a class="reference external" href="https://github.com/rebootuser/LinEnum">LinEnum</a> Scripted Local Linux Enumeration &amp; Privilege Escalation Checks</p></li>
+<li><p><a class="reference external" href="https://github.com/ngalongc/AutoLocalPrivilegeEscalation">AutoLocalPrivilegeEscalation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/liamg/traitor">traitor</a> Automatic Linux privesc via exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w docker.sock</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3><span class="section-number">9.11.2.2. </span>rootkit<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/nurupo/rootkit">rootkit</a></p></li>
+<li><p><a class="reference external" href="https://github.com/m0nad/Diamorphine">Diamorphine</a> LKM rootkit for Linux Kernels 2.6.x/3.x/4.x/5.x (x86/x86_64 and ARM64)</p></li>
+</ul>
+</section>
+<section id="back-door">
+<h3><span class="section-number">9.11.2.3. </span>back door<a class="headerlink" href="#back-door" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/andreafabrizi/prism">prism</a> is an user space stealth reverse shell backdoor</p></li>
+<li><p><a class="reference external" href="https://github.com/inquisb/icmpsh">icmpsh</a> Simple reverse ICMP shell</p></li>
+</ul>
+</section>
+</section>
+<section id="comprehensive">
+<h2><span class="section-number">9.11.3. </span>comprehensive<a class="headerlink" href="#comprehensive" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">9.11.3.1. </span>Certificate acquisition<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/mthbernardes/sshLooterC">sshLooterC</a> program to steal passwords from ssh</p></li>
+<li><p><a class="reference external" href="https://github.com/juuso/keychaindump">keychaindump</a> A proof-of-concept tool for reading OS X keychain passwords</p></li>
+<li><p><a class="reference external" href="https://github.com/AlessandroZ/LaZagne">LaZagne</a> Credentials recovery project</p></li>
+<li><p><a class="reference external" href="https://github.com/deepfence/SecretScanner">SecretScanner</a> Find secrets and passwords in container images and file systems</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3><span class="section-number">9.11.3.2. </span>Elevate permissions<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/AlessandroZ/BeRoot">BeRoot</a> Privilege Escalation Project - Windows / Linux / Mac</p></li>
+</ul>
+</section>
+<section id="rat">
+<h3><span class="section-number">9.11.3.3. </span>RAT<a class="headerlink" href="#rat" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/quasar/QuasarRAT">QuasarRAT</a></p></li>
+</ul>
+</section>
+<section id="id6">
+<h3><span class="section-number">9.11.3.4. </span>C2<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EmpireProject/Empire">Empire</a></p></li>
+<li><p><cite>pupy &lt;https://github.com/n1nj4sec/pupy&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/cobbr/Covenant">Covenant</a> is a collaborative .NET C2 framework for red teamers</p></li>
+<li><p><a class="reference external" href="https://github.com/Rvn0xsy/Cooolis-ms">Cooolis-ms</a> Code execution tools containing Metasploit Payload Loader, Cobalt Strike External C2 Loader, and Reflective DLL injection</p></li>
+</ul>
+</section>
+<section id="dns-shell">
+<h3><span class="section-number">9.11.3.5. </span>DNS Shell<a class="headerlink" href="#dns-shell" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/sensepost/DNS-Shell">DNS Shell</a> DNS-Shell is an interactive Shell over DNS channel</p></li>
+<li><p><a class="reference external" href="https://github.com/ahhh/Reverse_DNS_Shell">Reverse DNS Shell</a> A python reverse shell that uses DNS as the c2 channel</p></li>
+</ul>
+</section>
+<section id="cobalt-strike">
+<h3><span class="section-number">9.11.3.6. </span>Cobalt Strike<a class="headerlink" href="#cobalt-strike" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cobaltstrike.com">Cobalt Strike</a></p></li>
+<li><p><a class="reference external" href="https://github.com/gloxec/CrossC2">CrossC2</a> generate CobaltStrike’s cross-platform payload</p></li>
+<li><p><a class="reference external" href="https://github.com/timwhitez/Cobalt-Strike-Aggressor-Scripts">Cobalt Strike Aggressor Scripts</a></p></li>
+</ul>
+</section>
+<section id="log-clearing">
+<h3><span class="section-number">9.11.3.7. </span>Log clearing<a class="headerlink" href="#log-clearing" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Rizer0/Log-killer">Log killer</a> Clear all logs in [linux/windows] servers</p></li>
+</ul>
+</section>
+<section id="botnet">
+<h3><span class="section-number">9.11.3.8. </span>Botnet<a class="headerlink" href="#botnet" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/malwaredllc/byob">byob</a> Build Your Own Botnet</p></li>
+</ul>
+</section>
+<section id="kill-free-tool">
+<h3><span class="section-number">9.11.3.9. </span>Kill-free tool<a class="headerlink" href="#kill-free-tool" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/1y0n/AV_Evasion_Tool">AV Evasion Tool</a> Sun Covering - Kill-free Executor Generation Tool</p></li>
+<li><p><a class="reference external" href="https://github.com/Mr-Un1k0d3r/DKMC">DKMC</a> Dont kill my cat - Malicious payload evasion tool</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cloud.html" class="btn btn-neutral float-left" title="9.10. Cloud Security" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="audit.html" class="btn btn-neutral float-right" title="9.12. Audit tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

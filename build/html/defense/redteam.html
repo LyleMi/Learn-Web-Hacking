@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.2. Red and blue confrontation &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.3. Safe development" href="sdl.html" />
+    <link rel="prev" title="7.1. Team building" href="team.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. Defense Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="team.html">7.1. Team building</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.2. Red and blue confrontation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#concept">7.2.1. concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cyber-offensive-and-defensive-drills">7.2.2. Cyber offensive and defensive drills</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#focus">7.2.3. Focus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#target">7.2.4. Target</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparation">7.2.5. Preparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#action-process">7.2.6. Action Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#things-to-note">7.2.7. Things to note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-link">7.2.8. Reference link</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdl.html">7.3. Safe development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secops.html">7.4. Safety construction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat.html">7.5. Threat intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="att8ck.html">7.6. That &amp; ck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework.html">7.7. Defense Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reinforce.html">7.8. Reinforcement inspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html">7.9. IDS and IPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#common-intrusion-points">7.10. Common intrusion points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#monitoring-implementation">7.11. Monitoring implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#reference-link">7.12. Reference link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zt.html">7.13. Zero trust security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeypot.html">7.14. Honeypot technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rasp.html">7.15. RASP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html">7.16. Emergency response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forensic.html">7.17. Traceability analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>Defense Technology</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7.2. </span>Red and blue confrontation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/defense/redteam.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="red-and-blue-confrontation">
+<h1><span class="section-number">7.2. </span>Red and blue confrontation<a class="headerlink" href="#red-and-blue-confrontation" title="Link to this heading"></a></h1>
+<section id="concept">
+<h2><span class="section-number">7.2.1. </span>concept<a class="headerlink" href="#concept" title="Link to this heading"></a></h2>
+<p>The concept of red and blue confrontation originated from the US exercises in the 1960s. The exercises refer to the army to conduct large-scale live-arms exercises. The exercises are usually divided into the Red Army and the Blue Army, among which the Blue Army usually refers to the simulation confrontation exercises in the army. The troops that specialize in playing the imaginary enemy and conduct targeted training with the Red Army (representing our frontal troops). This method is also called Red Teaming.</p>
+<p>The concept of red and blue confrontation in cybersecurity comes from this. As the defensive party of the enterprise, the Red Army ensures the safety of the enterprise through security reinforcement, attack monitoring, emergency response and other means. As the attacking party, the Blue Army aims to discover security vulnerabilities and obtain business permissions or data, and uses various attack methods to try to bypass the Red Army’s layers of protection and achieve the established goals. What may cause confusion is that in Europe and the United States, the red team generally represents the attacking side, the blue team represents the defense side, and the color represents the opposite.</p>
+</section>
+<section id="cyber-offensive-and-defensive-drills">
+<h2><span class="section-number">7.2.2. </span>Cyber offensive and defensive drills<a class="headerlink" href="#cyber-offensive-and-defensive-drills" title="Link to this heading"></a></h2>
+<p>More influential exercises include “Locked Shields”, “Cyberstorm”, etc. Among them, the “lock shield” is held once a year by the NATO Cyber Defense Centre of Excellence (CCDCOE). The Cyber Storm is led by the U.S. Department of Homeland Security (DHS) and has been held every two years since 2006.</p>
+<p>Compared with APT attacks, the offensive and defensive exercises are relatively short, only 1 to 4 weeks, and there is a defensive target. The APT attack target is unique, with a duration of several months to several years, and is even more concealed.</p>
+</section>
+<section id="focus">
+<h2><span class="section-number">7.2.3. </span>Focus<a class="headerlink" href="#focus" title="Link to this heading"></a></h2>
+<p>The work content of the enterprise network blue army mainly includes penetration testing and red-blue confrontation. The technologies used in these two methods are basically the same, but the focus is different.</p>
+<p>Penetration testing focuses on using a shorter time to explore more security vulnerabilities, and generally does not pay much attention to whether attack behavior is monitored and discovered. The purpose is to help business systems expose and converge more risks.</p>
+<p>The red and blue confrontation is closer to real scenes, and tends to be practical, and faces complex scenes and a wide range of techniques. Focus on bypassing the defense system and achieving the goal of obtaining business permissions or data without any silence. Don’t find all risk points, because the more attacks you are, the greater the probability of being discovered. Once discovered, the Red Army will kick the Blue Army out of the battlefield. The purpose of the Red and Blue Confrontation is to test the in-depth defense capabilities, alarm operation quality, and emergency response capabilities in real attacks.</p>
+</section>
+<section id="target">
+<h2><span class="section-number">7.2.4. </span>Target<a class="headerlink" href="#target" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Assess the effectiveness of existing defense capabilities, identify the weaknesses of the defense system and propose specific response plans</p></li>
+<li><p>Using real and effective simulation attacks to evaluate potential business impacts due to security issues, provide effective data for security management to quantify the ROI of security investments</p></li>
+<li><p>Improve company security maturity and its ability to detect and respond to attacks</p></li>
+</ul>
+</section>
+<section id="preparation">
+<h2><span class="section-number">7.2.5. </span>Preparation<a class="headerlink" href="#preparation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Organizational Chart</p></li>
+<li><p>Network-wide topology diagram</p></li>
+<li><p>Logical structure diagram of each system</p></li>
+<li><p>Calling relationship between systems</p></li>
+<li><p>Data flow relationship</p></li>
+<li><p>Asset sorting</p></li>
+<li><p>Core Asset List</p></li>
+<li><p>Business system assets</p></li>
+<li><p>Equipment Assets</p></li>
+<li><p>Outsourcing/third-party service assets</p></li>
+<li><p>Historical legacy assets</p></li>
+<li><p>Business Asset Information</p></li>
+<li><p>Business system name</p></li>
+<li><p>Business system type</p></li>
+<li><p>Server Type</p></li>
+<li><p>Domain name/IP address</p></li>
+<li><p>Service Port</p></li>
+<li><p>Version</p></li>
+<li><p>System deployment location</p></li>
+<li><p>Development framework</p></li>
+<li><p>middleware</p></li>
+<li><p>database</p></li>
+<li><p>Responsible person</p></li>
+<li><p>Maintenance staff</p></li>
+<li><p>Equipment asset information</p></li>
+<li><p>Device name</p></li>
+<li><p>Device version number</p></li>
+<li><p>Firmware version number</p></li>
+<li><p>IP address</p></li>
+<li><p>Deployment location</p></li>
+<li><p>Responsible person</p></li>
+<li><p>Maintenance staff</p></li>
+<li><p>Outsourcing/third-party service asset information</p></li>
+<li><p>Manufacturer Contact Information</p></li>
+<li><p>System Name</p></li>
+<li><p>System Type</p></li>
+<li><p>IP/URL address</p></li>
+<li><p>Deployment location</p></li>
+<li><p>Responsible person</p></li>
+<li><p>Maintenance staff</p></li>
+<li><p>Manufacturer Contact Information</p></li>
+<li><p>Third-party duty staff</p></li>
+<li><p>Risk sorting</p></li>
+<li><p>Infrastructure Risk</p></li>
+<li><p>Account permission sorting</p></li>
+<li><p>Internet risk investigation</p></li>
+<li><p>Converge the attack surface</p></li>
+<li><p>Emergency response plan</p></li>
+<li><p>Business Continuity Plan</p></li>
+<li><p>Disaster Recovery Plan</p></li>
+</ul>
+</section>
+<section id="action-process">
+<h2><span class="section-number">7.2.6. </span>Action Process<a class="headerlink" href="#action-process" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Attack Preparation</p></li>
+<li><p>Clarify the scope of authorization, testing objectives, restrictions, etc.</p></li>
+<li><p>Reporting and authorization process</p></li>
+<li><p>Action Cost and Budget</p></li>
+<li><p>Attack execution</p></li>
+<li><p>In the time period for filing</p></li>
+<li><p>Within the target scope of filing</p></li>
+<li><p>Filed attack IP and network environment</p></li>
+<li><p>Attack completed</p></li>
+<li><p>Restore all modifications</p></li>
+<li><p>Remove all persistence controls</p></li>
+<li><p>Submit attack reports and improvement suggestions</p></li>
+</ul>
+</section>
+<section id="things-to-note">
+<h2><span class="section-number">7.2.7. </span>Things to note<a class="headerlink" href="#things-to-note" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Report before testing</p></li>
+<li><p>It may affect business operations and communicate in advance</p></li>
+<li><p>After confirming the vulnerability and business communication, issue a work order and repair it</p></li>
+<li><p>Vulnerability Closed Loop</p></li>
+</ul>
+</section>
+<section id="reference-link">
+<h2><span class="section-number">7.2.8. </span>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mp.weixin.qq.com/s/8iJs2ON66NY1Jdbt7c-BTA">Through attack to promote defense, thinking on the construction of enterprise blue army</a></p></li>
+<li><p><a class="reference external" href="http://avfisher.win/archives/1175">Red Teaming for Cloud</a></p></li>
+<li><p><a class="reference external" href="https://www.freebuf.com/articles/neopoints/252229.html">Guidelines for the construction of enterprise blue teams for cyber offensive and defense drills</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="team.html" class="btn btn-neutral float-left" title="7.1. Team building" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sdl.html" class="btn btn-neutral float-right" title="7.3. Safe development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

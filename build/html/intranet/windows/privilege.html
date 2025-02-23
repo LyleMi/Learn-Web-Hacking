@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permissions &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Permissions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/intranet/windows/privilege.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="permissions">
+<h1>Permissions<a class="headerlink" href="#permissions" title="Link to this heading"></a></h1>
+<section id="uac">
+<h2>UAC<a class="headerlink" href="#uac" title="Link to this heading"></a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>UAC (User Account Control) is a security mechanism introduced by Windows Vista and Windows Server 2008. When some sensitive operations occur, a prompt will pop up and explicitly require system permissions.</p>
+<p>When a user logs into Windows, each user will be granted an access token, which contains information about security identifier (SID) and determines the user’s permissions.</p>
+</section>
+<section id="will-trigger-uac-operation">
+<h3>Will trigger UAC operation<a class="headerlink" href="#will-trigger-uac-operation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Start the application with administrator privileges</p></li>
+<li><p>Modify system and UAC settings</p></li>
+<li><p>Modify files or directories without permissions (%SystemRoot% / %ProgramFiles% etc.)</p></li>
+<li><p>Modify ACL (access control list)</p></li>
+<li><p>Install the driver</p></li>
+<li><p>Add and delete accounts, modify account types, and activate guest accounts</p></li>
+</ul>
+</section>
+<section id="bypass">
+<h3>ByPass<a class="headerlink" href="#bypass" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>DLL related</p></li>
+<li><p>Process Injection</p></li>
+<li><p>Registration form</p></li>
+</ul>
+</section>
+</section>
+<section id="elevate-permissions">
+<h2>Elevate permissions<a class="headerlink" href="#elevate-permissions" title="Link to this heading"></a></h2>
+<p>There are multiple ways to increase permissions, and there are skills to exploit binary vulnerabilities, logical vulnerabilities, etc. The way to obtain permissions using binary vulnerabilities is to use vulnerabilities running in the kernel state to execute code. For example, kernel, UAF in the driver or other similar vulnerabilities to obtain higher permissions.</p>
+<p>Logical vulnerabilities mainly exploit some logic problems in the system. For example, some folder users can write to, but will be started with administrator privileges.</p>
+<section id="write-files-at-will">
+<h3>Write files at will<a class="headerlink" href="#write-files-at-will" title="Link to this heading"></a></h3>
+<p>In Windows, the following are the sensitive locations that users can write.</p>
+<ul class="simple">
+<li><p>User’s own files and directories, including <code class="docutils literal notranslate"><span class="pre">AppData```````Temp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\</span></code>, by default, users can write to</p></li>
+<li><p>subdirectory of <code class="docutils literal notranslate"><span class="pre">C:\ProgramData</span></code>, by default, users can create folders and write files</p></li>
+<li><p>subdirectory of <code class="docutils literal notranslate"><span class="pre">C:\Windows\Temp</span></code>. By default, users can create folders and write files.</p></li>
+</ul>
+<p>Specific ACL information can be viewed by AccessChk or PowerShell’s <code class="docutils literal notranslate"><span class="pre">Get-Acl</span></code> command.</p>
+<p>You can use the write permissions to these folders and their subdirectories to write some dlls that may be loaded, and use the load execution of the dll to obtain permissions.</p>
+</section>
+<section id="mof">
+<h3>MOF<a class="headerlink" href="#mof" title="Link to this heading"></a></h3>
+<p>MOF is a file (<code class="docutils literal notranslate"><span class="pre">c:/windows/system32/wbem/mof/nullevt.mof</span></code>) in the Windows system, called “Managed Object Format”, which is used to monitor process creation and death every five seconds.</p>
+<p>When you have permission to upload files but do not have a shell, you can upload the customized mof file to the corresponding location, and this mof will be executed after a certain period of time.</p>
+<p>Generally, a vbs script that adds a command to add an administrator user to the mof will be used, and after execution, a new administrator account will be available.</p>
+</section>
+<section id="certificate-theft">
+<h3>Certificate theft<a class="headerlink" href="#certificate-theft" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Windows Local Password Hash Export Tool</p></li>
+<li><p>facial expressions</p></li>
+<li><p>lsass</p></li>
+<li><p>WCE</p></li>
+<li><p>gsecdump</p></li>
+<li><p>Copypwd</p></li>
+<li><p>Pwdump</p></li>
+<li><p>ProcDump</p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">https://docs.microsoft.com/en-us/sysinternals/downloads/procdump</a></p></li>
+<li><p>Windows local password cracking tool</p></li>
+<li><p>L0phtCrack</p></li>
+<li><p>SAMInside</p></li>
+<li><p>Ophcrack</p></li>
+<li><p>Rainbow Table Cracked</p></li>
+<li><p>native hash+ plaintext crawling</p></li>
+<li><p>win8+win2012 plain text crawling</p></li>
+<li><p>Export of ntds.dit + QuarkPwDump read analysis</p></li>
+<li><p>vssown.vbs + libesedb + NtdsXtract</p></li>
+<li><p>ntdsdump</p></li>
+<li><p>Using powershell(DSInternals) to analyze hash</p></li>
+<li><p>Number of attempts to reset password using <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">use</span> <span class="pre">\%computername%</span> <span class="pre">/u:%username%</span></code></p></li>
+<li><p>When reading is restricted, you can crash the operating system and read it in the blue screen dump file</p></li>
+</ul>
+</section>
+<section id="other">
+<h3>other<a class="headerlink" href="#other" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Group Policy Preference Vulnerability</p></li>
+<li><p>DLL hijacking</p></li>
+<li><p>Replace the system tool to realize the backdoor</p></li>
+<li><p>Close the defender</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Set-MpPreference</span> <span class="pre">-disablerealtimeMonitoring</span> <span class="pre">$true</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/network/domain/basic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>DNS is a simple request-response protocol, a distributed database that maps domain names and IP addresses to each other, which can make people more convenient to access the Internet. DNS uses port 53 of TCP and UDP protocols.</p>
+</section>
+<section id="request-response">
+<h1>Request response<a class="headerlink" href="#request-response" title="Link to this heading"></a></h1>
+<section id="dns-records">
+<h2>DNS records<a class="headerlink" href="#dns-records" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>A</p></li>
+<li><p>Return the IPv4 address corresponding to the domain name</p></li>
+<li><p>AAAA</p></li>
+<li><p>NS</p></li>
+<li><p>Domain Name Server</p></li>
+<li><p>Return to which domain name server to resolve the domain name</p></li>
+<li><p>PTR</p></li>
+<li><p>Reverse Recording</p></li>
+<li><p>Records from IP address to domain name</p></li>
+<li><p>MX</p></li>
+<li><p>Email exchange history</p></li>
+<li><p>Record the IP address corresponding to the email domain name</p></li>
+</ul>
+</section>
+<section id="response-code">
+<h2>Response code<a class="headerlink" href="#response-code" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>noeror</p></li>
+</ul>
+<p>No error condition</p>
+<ul class="simple">
+<li><p>FORMERR</p></li>
+</ul>
+<p>Format error - The name server was unable to interpret the query</p>
+<ul class="simple">
+<li><p>SERVFAIL</p></li>
+</ul>
+<p>Server failure - The name server was unable to process this query due to a problem with the name server</p>
+<ul class="simple">
+<li><p>Nxdomain</p></li>
+</ul>
+<p>this code signifies that the domain name referenced in the query does not exist</p>
+<ul class="simple">
+<li><p>NOTIMP</p></li>
+</ul>
+<p>Not Implemented - The name server does not support the requested kind of query</p>
+<ul class="simple">
+<li><p>REFUSED</p></li>
+</ul>
+<p>Refused - The name server refuses to perform the specified operation for policy reasons</p>
+<ul class="simple">
+<li><p>Nadata</p></li>
+</ul>
+<p>A pseudo RCODE which indicates that the name is valid, for the given class, but [there] are no records of the given type A NODATA response has to be inferred from the answer.</p>
+</section>
+</section>
+<section id="how-the-domain-name-system-works">
+<h1>How the domain name system works<a class="headerlink" href="#how-the-domain-name-system-works" title="Link to this heading"></a></h1>
+<section id="analytical-process">
+<h2>Analytical process<a class="headerlink" href="#analytical-process" title="Link to this heading"></a></h2>
+<p>The DNS resolution process is recursively query, and the specific process is as follows:</p>
+<ul class="simple">
+<li><p>When a user wants to access the domain name www.example.com, first check whether the hosts are recorded or whether the machine has DNS cache. If so, the result will be returned directly. Otherwise, query the recursive server for the IP address of the domain name.</p></li>
+<li><p>When the recursive cache is empty, first query the root server for the IP address of the com top-level domain</p></li>
+<li><p>The root server informs the recursive server com the IP address of the top-level domain server</p></li>
+<li><p>Recursively query the com top-level domain server’s IP of the authoritative server responsible for example.com</p></li>
+<li><p>com top-level domain server returns the corresponding IP address</p></li>
+<li><p>Recursively query the address record of www.example.com from the authoritative server of example.com</p></li>
+<li><p>Authoritative server informs www.example.com of the address record</p></li>
+<li><p>Recursive server returns query results to client</p></li>
+</ul>
+</section>
+<section id="domain-delivery">
+<h2>Domain delivery<a class="headerlink" href="#domain-delivery" title="Link to this heading"></a></h2>
+<p>DNS servers can be divided into primary servers, backup servers and cache servers. Domain transfer refers to the backup server copying data from the main server and updating its own database using the obtained data. Domain delivery is a mechanism for synchronizing databases between primary and secondary servers.</p>
+</section>
+</section>
+<section id="server-type">
+<h1>Server Type<a class="headerlink" href="#server-type" title="Link to this heading"></a></h1>
+<section id="root-server">
+<h2>Root Server<a class="headerlink" href="#root-server" title="Link to this heading"></a></h2>
+<p>The root server is the core of DNS, responsible for the resolution of the top-level domain names in the Internet, is used to maintain the authoritative information of the domain, and guide the DNS query to the corresponding domain name server.</p>
+<p>The root server represents the top <code class="docutils literal notranslate"><span class="pre">.</span></code> domain in the domain name tree, and is generally omitted.</p>
+<p>The domain names of 13 IPv4 root servers are a to m, that is, a.root-servers.org to m.root-servers.org. All servers store the same data and only contain the authoritative information of the TLD domain name approved by ICANN.</p>
+</section>
+<section id="authoritative-server">
+<h2>Authoritative Server<a class="headerlink" href="#authoritative-server" title="Link to this heading"></a></h2>
+<p>The domain name zone file is stored on the authoritative server, and the authoritative information of the domain name within the domain is maintained. The recursive server can obtain resource records for DNS query from the authoritative server.</p>
+<p>An authoritative server needs to be registered in the TLD management bureau to which the domain name it hosts belongs. The same authoritative server can host different TLD domain names, and there can also be multiple authoritative servers in the same domain.</p>
+</section>
+<section id="recursive-server">
+<h2>Recursive server<a class="headerlink" href="#recursive-server" title="Link to this heading"></a></h2>
+<p>The recursive server is responsible for receiving user query requests, performing recursive queries and responding to user query requests. Initially, the recursive server only records the Hint file with the root domain name.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

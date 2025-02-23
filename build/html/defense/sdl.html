@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.3. Safe development &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.4. Safety construction" href="secops.html" />
+    <link rel="prev" title="7.2. Red and blue confrontation" href="redteam.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. Defense Technology</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="team.html">7.1. Team building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redteam.html">7.2. Red and blue confrontation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.3. Safe development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">7.3.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step">7.3.2. step</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#phase-1-training">7.3.2.1. Phase 1: Training</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phase-2-identify-security-requirements">7.3.2.2. Phase 2: Identify security requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phase-3-design">7.3.2.3. Phase 3: Design</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phase-4-implementation">7.3.2.4. Phase 4: Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phase-5-verification">7.3.2.5. Phase 5: Verification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phase-6-release">7.3.2.6. Phase 6: Release</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-link">7.3.3. Reference link</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="secops.html">7.4. Safety construction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threat.html">7.5. Threat intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="att8ck.html">7.6. That &amp; ck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework.html">7.7. Defense Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reinforce.html">7.8. Reinforcement inspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html">7.9. IDS and IPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#common-intrusion-points">7.10. Common intrusion points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#monitoring-implementation">7.11. Monitoring implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intrusiondetection.html#reference-link">7.12. Reference link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zt.html">7.13. Zero trust security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeypot.html">7.14. Honeypot technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rasp.html">7.15. RASP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emergency.html">7.16. Emergency response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forensic.html">7.17. Traceability analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>Defense Technology</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7.3. </span>Safe development</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/defense/sdl.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="safe-development">
+<h1><span class="section-number">7.3. </span>Safe development<a class="headerlink" href="#safe-development" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">7.3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Security Development Lifecycle (SDL) is a management model proposed by Microsoft to guide the software development process from a security perspective. Used to help developers build safer software, solve security compliance requirements, and reduce development costs.</p>
+</section>
+<section id="step">
+<h2><span class="section-number">7.3.2. </span>step<a class="headerlink" href="#step" title="Link to this heading"></a></h2>
+<section id="phase-1-training">
+<h3><span class="section-number">7.3.2.1. </span>Phase 1: Training<a class="headerlink" href="#phase-1-training" title="Link to this heading"></a></h3>
+<p>All members of the development team must receive appropriate security training and understand relevant security knowledge. The training targets include developers, testers, project managers, product managers, etc.</p>
+</section>
+<section id="phase-2-identify-security-requirements">
+<h3><span class="section-number">7.3.2.2. </span>Phase 2: Identify security requirements<a class="headerlink" href="#phase-2-identify-security-requirements" title="Link to this heading"></a></h3>
+<p>Before the project is established, it is necessary to determine the safety requirements in advance, determine the project’s planning time, and avoid changes in demand caused by safety as much as possible.</p>
+</section>
+<section id="phase-3-design">
+<h3><span class="section-number">7.3.2.3. </span>Phase 3: Design<a class="headerlink" href="#phase-3-design" title="Link to this heading"></a></h3>
+<p>The minimum acceptable level of safety is determined during the design phase. Consider what attack surfaces the project involves and whether it can reduce the attack surface.</p>
+<p>Model the project threat, clarify what aspects of the attack that may come from, and consider which parts of the project need to be penetration testing.</p>
+</section>
+<section id="phase-4-implementation">
+<h3><span class="section-number">7.3.2.4. </span>Phase 4: Implementation<a class="headerlink" href="#phase-4-implementation" title="Link to this heading"></a></h3>
+<p>The implementation stage mainly involves tools, unsafe functions, static analysis and other aspects.</p>
+<p>In terms of tools, the main consideration is that the editors, linkers and other related tools used by the development team may involve some security-related issues. Therefore, when using the tool version, you need to communicate with the security team in advance.</p>
+<p>In terms of functions, the main consideration is that many commonly used functions may have security risks, and unsafe functions and APIs should be disabled and functions recommended by the security team should be used.</p>
+<p>Code static analysis can be accomplished with relevant tools, and the results are combined with manual analysis.</p>
+</section>
+<section id="phase-5-verification">
+<h3><span class="section-number">7.3.2.5. </span>Phase 5: Verification<a class="headerlink" href="#phase-5-verification" title="Link to this heading"></a></h3>
+<p>The verification phase involves dynamic program analysis and attack surface reaudification. Dynamic analysis supplements static analysis, and the commonly used methods are fuzzy testing and penetration testing. Fuzz testing finds possible problems for the program by introducing specific formats or random data to the application.</p>
+<p>Considering that the project often causes the final product to be inconsistent with the initial goal due to changes in demand, it is necessary to analyze and consider the threat model and attack surface later in the project, and correct it if a problem occurs.</p>
+</section>
+<section id="phase-6-release">
+<h3><span class="section-number">7.3.2.6. </span>Phase 6: Release<a class="headerlink" href="#phase-6-release" title="Link to this heading"></a></h3>
+<p>After the program is released, it is necessary to respond to security incidents and preset how to deal with security problems.</p>
+<p>In addition, if the product contains third-party code, you also need to consider how to respond to the problems introduced by third-party dependencies.</p>
+</section>
+</section>
+<section id="reference-link">
+<h2><span class="section-number">7.3.3. </span>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/securityengineering/sdl/practices">SDL Practices</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling">Threat Modeling</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="redteam.html" class="btn btn-neutral float-left" title="7.2. Red and blue confrontation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="secops.html" class="btn btn-neutral float-right" title="7.4. Safety construction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

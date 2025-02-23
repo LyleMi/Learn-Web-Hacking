@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>domain &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">domain</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/intranet/windows/domain/domain.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="domain">
+<h1>domain<a class="headerlink" href="#domain" title="Link to this heading"></a></h1>
+<p>Domain refers to a logical environment that logically organizes multiple computers in the network and performs centralized management. A domain is the core management unit of organization and storage resources. In the domain, there is at least one domain controller, and the domain controller stores the user account and secure database of the entire domain.</p>
+<section id="domain-structure">
+<h2>Domain Structure<a class="headerlink" href="#domain-structure" title="Link to this heading"></a></h2>
+<section id="domain-tree">
+<h3>Domain Tree<a class="headerlink" href="#domain-tree" title="Link to this heading"></a></h3>
+<p>A domain tree is composed of multiple domains that share the same table structure and configuration, forming a continuous namespace.</p>
+</section>
+<section id="forest">
+<h3>Forest<a class="headerlink" href="#forest" title="Link to this heading"></a></h3>
+<p>Forests is a complex AD instance consisting of one or several domains, each domain tree has its own unique namespace.</p>
+</section>
+</section>
+<section id="domain-controller">
+<h2>Domain Controller<a class="headerlink" href="#domain-controller" title="Link to this heading"></a></h2>
+<p>The ADDS directory is stored in the Domain Controller. There can be multiple domain controllers in a domain. Each domain controller has almost equal status and has almost the same database.</p>
+<p>After adding a user account to a domain controller, the account will be automatically copied to the database of other domain controllers.</p>
+<p>AD databases have multi-master Replication Model and single-host replication Model.</p>
+<p>Multi-host mode can directly update AD objects in any domain controller and copy the updated objects to other domain controllers. Most of the data is copied in multi-host mode.</p>
+<p>Single-host replication mode refers to a domain controller called an Operations Master responsible for receiving requests to change data and copying the data to other domain controllers.</p>
+</section>
+<section id="trust">
+<h2>trust<a class="headerlink" href="#trust" title="Link to this heading"></a></h2>
+<p>A trust relationship needs to be created between two domains in order to access resources in the corresponding domain.</p>
+<section id="domain-trust-type">
+<h3>Domain trust type<a class="headerlink" href="#domain-trust-type" title="Link to this heading"></a></h3>
+<p>The trust methods of Active Directory can be divided into the following types:</p>
+<ul class="simple">
+<li><p>Tree-Root Trust</p></li>
+<li><p>Transferable in both directions</p></li>
+<li><p>Parent-Child Trust</p></li>
+<li><p>Transferable, two-way pedestrian</p></li>
+<li><p>Forest Trust</p></li>
+<li><p>If two forests create a trust relationship, all domains in the forest trust each other</p></li>
+<li><p>The trust relationship between two forests cannot be automatically extended to other forests</p></li>
+<li><p>Realm Trust</p></li>
+<li><p>ADDS domain can create trust between Kerberos domains on non-Windows systems</p></li>
+<li><p>External Trust</p></li>
+<li><p>The trust relationship can be created between domains located within two forests through external trust</p></li>
+<li><p>Shortcut Trust</p></li>
+<li><p>Can shorten the time to verify the user’s identity</p></li>
+</ul>
+</section>
+</section>
+<section id="or">
+<h2>OR<a class="headerlink" href="#or" title="Link to this heading"></a></h2>
+<p>Organization Unit (OU) is a container object that organizes objects in the domain into logical groups to help administrators manage. OU includes users, computers, work groups, printers, security policies, and other organizational units.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

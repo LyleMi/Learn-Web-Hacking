@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>container &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">container</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/java/container.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="container">
+<h1>container<a class="headerlink" href="#container" title="Link to this heading"></a></h1>
+<p>Common Java servers include Tomcat, Weblogic, JBoss, GlassFish, Jetty, Resin, IBM Websphere, etc. Here is a brief explanation of some frameworks.</p>
+<section id="tomcat">
+<h2>Tomcat<a class="headerlink" href="#tomcat" title="Link to this heading"></a></h2>
+<p>Tomcat is a lightweight application server, which is widely used in small and medium-sized systems and concurrent access users, and is used to develop and debug JSP programs.</p>
+<p>After receiving the request, Tomcat’s processing flow is as follows:</p>
+<ul class="simple">
+<li><p>Client accesses the web server and sends HTTP requests</p></li>
+<li><p>After receiving the request, the web server passes it to the Servlet container</p></li>
+<li><p>Servlet container loads Servlet, generates Servlet instance, and passes objects representing request and response to it</p></li>
+<li><p>The Servlet instance uses the request object to obtain the client’s request information, and then performs corresponding processing</p></li>
+<li><p>The Servlet instance sends the processing results back to the client through the response object. The container is responsible for ensuring that the response is sent correctly and returns control to the web server.</p></li>
+</ul>
+<p>The Tomcat server is composed of a series of configurable components, where the core component is the Catalina Servlet container, which is the top-level container for all other Tomcat components.</p>
+<section id="related-cve">
+<h3>Related CVE<a class="headerlink" href="#related-cve" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>CVE-2020-1938</p></li>
+<li><p><a class="reference external" href="https://www.freebuf.com/vuls/228108.html">https://www.freebuf.com/vuls/228108.html</a></p></li>
+<li><p>CVE-2019-0232</p></li>
+<li><p>Remote code execution</p></li>
+<li><p><a class="reference external" href="https://github.com/pyn3rd/CVE-2019-0232/">https://github.com/pyn3rd/CVE-2019-0232/</a></p></li>
+<li><p>CVE-2017-12615</p></li>
+<li><p>Any file writing</p></li>
+<li><p><a class="reference external" href="https://mp.weixin.qq.com/s?__biz=MzI1NDg4MTIxMw==&amp;mid=2247483659&amp;idx=1&amp;sn=c23b3a3b3b43d70999bdbe644e79f7e5">https://mp.weixin.qq.com/s?__biz=MzI1NDg4MTIxMw==&amp;mid=2247483659&amp;idx=1&amp;sn=c23b3a3b3b43d70999bdbe644e79f7e5</a></p></li>
+<li><p>CVE-2013-2067</p></li>
+<li><p>CVE-2012-4534</p></li>
+<li><p>CVE-2012-4431</p></li>
+<li><p>CVE-2012-3546</p></li>
+<li><p>CVE-2012-3544</p></li>
+<li><p>CVE-2012-2733</p></li>
+<li><p>CVE-2011-3375</p></li>
+<li><p>CVE-2011-3190</p></li>
+<li><p>CVE-2008-2938</p></li>
+</ul>
+</section>
+</section>
+<section id="weblogic">
+<h2>Weblogic<a class="headerlink" href="#weblogic" title="Link to this heading"></a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>WebLogic is an Application Server produced by Oracle, the United States. It is a middleware based on the Java EE architecture. WebLogic is a Java application server used to develop, integrate, deploy and manage large distributed Web applications, network applications and database applications. It introduces the dynamic functions of Java and the security of Java Enterprise standards into the development, integration, deployment and management of large-scale network applications.</p>
+<p>WebLogic provides comprehensive support for a variety of standards in the industry, including EJB, JSP, Servlet, JMS, JDBC, etc.</p>
+</section>
+<section id="id1">
+<h3>Related CVE<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>CVE-2019-2725</p></li>
+<li><p>wls-wsat deserialization remote code execution</p></li>
+<li><p>CVE-2019-2658</p></li>
+<li><p>CVE-2019-2650</p></li>
+<li><p>CVE-2019-2649</p></li>
+<li><p>CVE-2019-2648</p></li>
+<li><p>CVE-2019-2647</p></li>
+<li><p>CVE-2019-2646</p></li>
+<li><p>CVE-2019-2645</p></li>
+<li><p>CVE-2019-2618</p></li>
+<li><p><a class="reference external" href="https://github.com/jas502n/cve-2019-2618/">https://github.com/jas502n/cve-2019-2618/</a></p></li>
+<li><p>CVE-2019-2615</p></li>
+<li><p>CVE-2019-2568</p></li>
+<li><p>CVE-2018-3252</p></li>
+<li><p>CVE-2018-3248</p></li>
+<li><p>CVE-2018-3245</p></li>
+<li><p>CVE-2018-3201</p></li>
+<li><p>CVE-2018-3197</p></li>
+<li><p>CVE-2018-3191</p></li>
+<li><p><a class="reference external" href="https://github.com/voidfyoo/CVE-2018-3191">https://github.com/voidfyoo/CVE-2018-3191</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Libraggbond/CVE-2018-3191">https://github.com/Libraggbond/CVE-2018-3191</a></p></li>
+<li><p>CVE-2018-2894</p></li>
+<li><p>Upload any file</p></li>
+<li><p><a class="reference external" href="https://xz.aliyun.com/t/2458">https://xz.aliyun.com/t/2458</a></p></li>
+<li><p>CVE-2018-2893</p></li>
+<li><p>Deserialization</p></li>
+<li><p><a class="reference external" href="https://www.freebuf.com/vuls/178105.html">https://www.freebuf.com/vuls/178105.html</a></p></li>
+<li><p>CVE-2018-2628</p></li>
+<li><p><a class="reference external" href="https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA">https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA</a></p></li>
+<li><p>CVE-2018-1258</p></li>
+<li><p>CVE-2017-10271</p></li>
+<li><p>XMLDecoder deserialization vulnerability</p></li>
+<li><p><a class="reference external" href="http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html">http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html</a></p></li>
+<li><p>CVE-2017-3248</p></li>
+<li><p>CVE-2016-3510</p></li>
+<li><p>CVE-2015-4852</p></li>
+<li><p><a class="reference external" href="https://github.com/roo7break/serialator">https://github.com/roo7break/serialator</a></p></li>
+</ul>
+</section>
+</section>
+<section id="jboss">
+<h2>JBoss<a class="headerlink" href="#jboss" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Introduction<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>JBoss is a container and server that manages EJB based on J2EE, but the JBoss core service does not include WEB containers that support servlet/JSP, and is generally bound to Tomcat or Jetty.</p>
+</section>
+<section id="id3">
+<h3>Related CVE<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>CVE-2017-12149</p></li>
+<li><p>Deserialization vulnerability</p></li>
+<li><p>Visit <code class="docutils literal notranslate"><span class="pre">/invoker/readonly</span></code>, if the page exists, there will be a deserialization vulnerability</p></li>
+</ul>
+</section>
+</section>
+<section id="jetty">
+<h2>Jetty<a class="headerlink" href="#jetty" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>Introduction<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>Jetty is an open source servlet container.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

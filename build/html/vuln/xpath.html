@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xpath injection &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Xpath injection</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/xpath.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xpath-injection">
+<h1>Xpath injection<a class="headerlink" href="#xpath-injection" title="Link to this heading"></a></h1>
+<section id="xpath-definition">
+<h2>Xpath definition<a class="headerlink" href="#xpath-definition" title="Link to this heading"></a></h2>
+<p>XPath injection attacks are the ability to attach malicious XPath query code on URLs, forms, or other information to gain access to permission information and change it using the loose input and fault tolerance of the XPath parser. XPath injection attack is a new attack method for web services. It allows attackers to obtain the complete content of an XML document through XPath query without knowing the relevant knowledge of XPath query in advance.</p>
+</section>
+<section id="xpath-injection-attack-principle">
+<h2>Xpath injection attack principle<a class="headerlink" href="#xpath-injection-attack-principle" title="Link to this heading"></a></h2>
+<p>XPath injection attacks mainly involve building special inputs, which are often some combinations of XPath syntax. These inputs will be passed into the web application as parameters, and the intruders want by executing XPath queries. Below is login verification The modules in it are used as an example to illustrate the implementation principle of XPath injection attack.</p>
+<p>In the login verification program of a web application, there are generally two parameters: username and password. The program will perform authorization operations through the username and password submitted by the user. If the verification data is stored in an XML file, the principle is to authorize access by looking for the results of the user name (username) and password in the user table.</p>
+<p>The user.xml file exists as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">users</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">firstname</span><span class="o">&gt;</span><span class="n">Ben</span><span class="o">&lt;/</span><span class="n">firstname</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">lastname</span><span class="o">&gt;</span><span class="n">Elmore</span><span class="o">&lt;/</span><span class="n">lastname</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">loginID</span><span class="o">&gt;</span><span class="n">abc</span><span class="o">&lt;/</span><span class="n">loginID</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span><span class="n">test123</span><span class="o">&lt;/</span><span class="n">password</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">user</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">firstname</span><span class="o">&gt;</span><span class="n">Shlomy</span><span class="o">&lt;/</span><span class="n">firstname</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">lastname</span><span class="o">&gt;</span><span class="n">Gantz</span><span class="o">&lt;/</span><span class="n">lastname</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">loginID</span><span class="o">&gt;</span><span class="n">xyz</span><span class="o">&lt;/</span><span class="n">loginID</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span><span class="mi">123</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">password</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">user</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Then in XPath, its typical query statement is: <code class="docutils literal notranslate"><span class="pre">//users/user[loginID/text()='xyz'and</span> <span class="pre">password/text()='123test']</span></code></p>
+<p>However, the following method can be used to implement the injection attack to bypass authentication. If the user passes in a login and password, such as <code class="docutils literal notranslate"><span class="pre">loginID</span> <span class="pre">=</span> <span class="pre">'xyz'</span> <span class="pre">and</span> <span class="pre">password</span> <span class="pre">=</span> <span class="pre">'123test'</span></code>, the query will return true. But if the user passes in a value similar to <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">or</span> <span class="pre">1=1</span> <span class="pre">or</span> <span class="pre">''='</span></code>, then the query statement will also get the true return value, because the XPath query statement will eventually become the following code: <code class="docutils literal notranslate"><span class="pre">//users</span> <span class="pre">/user[loginID/text()=''or</span> <span class="pre">1=1</span> <span class="pre">or</span> <span class="pre">''=''</span> <span class="pre">and</span> <span class="pre">password/text()=''</span> <span class="pre">or</span> <span class="pre">1=1</span> <span class="pre">or</span> <span class="pre">''='']`</span></code></p>
+<p>This string logically causes the query to return true and will always allow the attacker to access the system. An attacker can use XPath to manipulate XML documents dynamically in an application. After the attack is completed, you can then obtain the highest permission account and other important document information through XPath blind entry technology.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

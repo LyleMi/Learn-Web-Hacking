@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.1. Web technology evolution &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.2. Network security concept" href="outlook.html" />
+    <link rel="prev" title="1. Introduction" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Introduction</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Web technology evolution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simple-website">1.1.1. Simple website</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#static-page">1.1.1.1. Static page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multimedia-stage">1.1.1.2. Multimedia stage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cgi-stage">1.1.1.3. CGI stage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mvc">1.1.1.4. MVC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-interaction">1.1.2. Data interaction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-data-interaction">1.1.2.1. Simple data interaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ajax">1.1.2.2. Ajax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#restful">1.1.2.3. RESTful</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graphql">1.1.2.4. GraphQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#binary">1.1.2.5. Binary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#architecture-evolution">1.1.3. Architecture evolution</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#middleware">1.1.3.1. middleware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distributed">1.1.3.2. distributed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cloud-service">1.1.4. Cloud Service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#serverless">1.1.4.1. Serverless</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#microservices">1.1.4.2. Microservices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api-gateway">1.1.4.3. API Gateway</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#software-development">1.1.5. Software Development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ci-cd">1.1.5.1. CI/CD</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-link">1.1.6. Reference link</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="outlook.html">1.2. Network security concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="law.html">1.3. Laws and regulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">1. </span>Introduction</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.1. </span>Web technology evolution</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/basic/history.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="web-technology-evolution">
+<h1><span class="section-number">1.1. </span>Web technology evolution<a class="headerlink" href="#web-technology-evolution" title="Link to this heading"></a></h1>
+<section id="simple-website">
+<h2><span class="section-number">1.1.1. </span>Simple website<a class="headerlink" href="#simple-website" title="Link to this heading"></a></h2>
+<section id="static-page">
+<h3><span class="section-number">1.1.1.1. </span>Static page<a class="headerlink" href="#static-page" title="Link to this heading"></a></h3>
+<p>In the initial stage of Web technology, the main content of the website was static. Most sites were hosted on ISPs and composed of text and pictures. The production and expression form were also mainly based on tables. The behavior of users at that time was also very simple, basically just browsing the web.</p>
+</section>
+<section id="multimedia-stage">
+<h3><span class="section-number">1.1.1.2. </span>Multimedia stage<a class="headerlink" href="#multimedia-stage" title="Link to this heading"></a></h3>
+<p>With the continuous development of technology, multimedia technologies such as audio, video, and Flash have been born. The addition of multimedia makes the web page more vivid and vivid, and the interaction on the web page also brings users a better experience.</p>
+</section>
+<section id="cgi-stage">
+<h3><span class="section-number">1.1.1.3. </span>CGI stage<a class="headerlink" href="#cgi-stage" title="Link to this heading"></a></h3>
+<p>Gradually, multimedia can no longer meet people’s requests, so CGI (Common Gateway Interface) came into being. CGI defines the communication interface standard between the Web server and external applications, so the Web server can execute external programs through CGI, allowing external programs to generate dynamic content based on the content of the Web request.</p>
+<p>At this time, various programming languages such as PHP/ASP/JSP have gradually joined the market, and more modular and more powerful applications can be realized based on these languages.</p>
+</section>
+<section id="mvc">
+<h3><span class="section-number">1.1.1.4. </span>MVC<a class="headerlink" href="#mvc" title="Link to this heading"></a></h3>
+<p>As web application development becomes more and more standardized, ideas such as MVC have emerged. MVC is the abbreviation of Model/View/Control. Model is used to encapsulate data and data processing methods. View View is the HTML presentation of data. The controller Controller is responsible for responding to requests and coordinating Model and View.</p>
+<p>The separation of Model, View and Controller is a typical idea of separation of concerns, which makes code reusability and organization better, and the configuration and flexibility of web applications are getting better and better. Data access has gradually replaced direct SQL access through an object-oriented method, and the concept of ORM (Object-Relational Mapping) emerged.</p>
+<p>In addition to MVC, similar design ideas include MVP, MVVM, etc.</p>
+</section>
+</section>
+<section id="data-interaction">
+<h2><span class="section-number">1.1.2. </span>Data interaction<a class="headerlink" href="#data-interaction" title="Link to this heading"></a></h2>
+<section id="simple-data-interaction">
+<h3><span class="section-number">1.1.2.1. </span>Simple data interaction<a class="headerlink" href="#simple-data-interaction" title="Link to this heading"></a></h3>
+<p>In the beginning of the development of web technology, most of the front-end and back-end interactions used relatively simple methods such as web forms, XML, SOAP, etc.</p>
+</section>
+<section id="ajax">
+<h3><span class="section-number">1.1.2.2. </span>Ajax<a class="headerlink" href="#ajax" title="Link to this heading"></a></h3>
+<p>At the beginning, the user can only get the results after submitting the entire form, which has a very poor user experience. As a result, Ajax (Asynchronous Javascript And XML) technology became popular, allowing applications to obtain or update data without updating the entire page. This makes web applications respond to user actions more quickly and avoids sending unchanged messages on the network.</p>
+</section>
+<section id="restful">
+<h3><span class="section-number">1.1.2.3. </span>RESTful<a class="headerlink" href="#restful" title="Link to this heading"></a></h3>
+<p>During the CGI period, front and back ends usually do not have strict distinctions. As the demand for decoupling and replication continues to increase, the concept of front and back ends begins to become clear. The front-end mainly refers to the website front-end part, which runs on the PC, mobile and other browsers to be displayed for users to browse. It consists of HTML5, CSS3, and JavaScript. The backend mainly refers to the logical part of the website, involving the addition, deletion, modification and search of data, etc.</p>
+<p>At this time, REST (Representation State Transformation) gradually became a popular web architecture style.</p>
+<p>REST encourages the organization of system functions based on URLs and make full use of the semantics of HTTP itself, rather than just using HTTP as a remote data transfer protocol. Generally, RESTful has the following characteristics:</p>
+<ul class="simple">
+<li><p>Domain name and main domain name are separated</p></li>
+<li><p>api.example.com</p></li>
+<li><p>example.com/api/</p></li>
+<li><p>With version control</p></li>
+<li><p>api.example.com/v1</p></li>
+<li><p>api.example.com/v2</p></li>
+<li><p>Locate resources using URL</p></li>
+<li><p>GET /users Get all users</p></li>
+<li><p>GET /team/:team/users Get all users of a team</p></li>
+<li><p>POST /users Create user</p></li>
+<li><p>PATCH/PUT /users Modify a user data</p></li>
+<li><p>DELETE /users Delete a user data</p></li>
+<li><p>Use HTTP verbs to describe operations</p></li>
+<li><p>GET Get resources, single or multiple</p></li>
+<li><p>POST Create Resources</p></li>
+<li><p>PUT/PATCH updates resources, the client provides complete resource data</p></li>
+<li><p>DELETE Delete Resources</p></li>
+<li><p>Use status code correctly</p></li>
+<li><p>Use status codes to improve readability of returned data</p></li>
+<li><p>Use JSON by default as the data response format</p></li>
+<li><p>There are clear documentation</p></li>
+</ul>
+</section>
+<section id="graphql">
+<h3><span class="section-number">1.1.2.4. </span>GraphQL<a class="headerlink" href="#graphql" title="Link to this heading"></a></h3>
+<p>The data in some network service scenarios has complex dependencies. In order to deal with these scenarios, Facebook launched GraphQL to query and store data in a graphical data structure. Some websites also use GraphQL as a way to interact with APIs.</p>
+</section>
+<section id="binary">
+<h3><span class="section-number">1.1.2.5. </span>Binary<a class="headerlink" href="#binary" title="Link to this heading"></a></h3>
+<p>As the business’s performance requirements increase, the front and back ends have begun to use HTTP/2, custom Protocol Buffers and other methods to speed up data interaction.</p>
+</section>
+</section>
+<section id="architecture-evolution">
+<h2><span class="section-number">1.1.3. </span>Architecture evolution<a class="headerlink" href="#architecture-evolution" title="Link to this heading"></a></h2>
+<p>As the business continues to develop, the business architecture is becoming more and more complex. Traditional functions are split into different modules, and concepts such as middleware and middle platforms have emerged. Technologies such as proxy services, load balancing, database subtables, off-site disaster recovery, caching, CDN, message queues, and security protection are becoming more and more widely used, increasing the complexity of Web development and operation and maintenance.</p>
+<p>There are more and more client forms, and other scenarios such as iOS and Android are also appearing in the client scenarios of Web services.</p>
+<p>The earlier relational databases MySQL, PostgreSQL, etc. can no longer meet the needs, and databases such as Redis/Memcached cache databases have emerged that meet specific needs.</p>
+<p>In order to meet specific business needs, different infrastructures such as Lucene/Solr/Elasticsearch search application server, Kafka/RabbitMQ/ZeroMQ messaging system, Spark computing engine, and Hive data warehouse platform have emerged.</p>
+<section id="middleware">
+<h3><span class="section-number">1.1.3.1. </span>middleware<a class="headerlink" href="#middleware" title="Link to this heading"></a></h3>
+<p>Middleware is a standalone software program used to manage computing resources and network communications. Commonly used functions include filtering IP, merge interface, merge port, routing, permission verification, load balancing, reverse proxy, etc.</p>
+</section>
+<section id="distributed">
+<h3><span class="section-number">1.1.3.2. </span>distributed<a class="headerlink" href="#distributed" title="Link to this heading"></a></h3>
+<p>With the continuous increase in the amount of data, it is difficult for a single device to carry such access, and different functions are also split into different applications, thus a distributed service framework (RPC) that improves business reuse and integration has emerged.</p>
+</section>
+</section>
+<section id="cloud-service">
+<h2><span class="section-number">1.1.4. </span>Cloud Service<a class="headerlink" href="#cloud-service" title="Link to this heading"></a></h2>
+<p>Before the birth of cloud computing, most of the computing resources were physical machines in a “bare metal” state. Operations and maintenance personnel chose the corresponding hardware, built the IDC network of the computer room, completed the provision of services, and invested in hardware infrastructure and maintenance. . After the cloud service appears, users can directly purchase cloud hosts, and the infrastructure is managed by suppliers. This method is also called IaaS (Infrastructure-as-a-Service).</p>
+<p>As the architecture continues to develop, the application operation is more granular, the deployment environment is containerized, and various functions are disassembled into microservices or Serverless architectures.</p>
+<section id="serverless">
+<h3><span class="section-number">1.1.4.1. </span>Serverless<a class="headerlink" href="#serverless" title="Link to this heading"></a></h3>
+<p>The Serverless architecture consists of two parts, namely Faas (Function-as-a-Service) and BaaS (Backend-as-a-Service).</p>
+<p>FaaS is an operation platform. Users upload logical functions that need to be executed, such as some timing tasks, data processing tasks, etc. to the cloud function platform, configure execution condition triggers, routing, etc., and the function execution can be completed through the cloud platform.</p>
+<p>BaaS includes back-end service components, which complete third-party services based on APIs, mainly databases, object storage, message queues, log services, etc.</p>
+</section>
+<section id="microservices">
+<h3><span class="section-number">1.1.4.2. </span>Microservices<a class="headerlink" href="#microservices" title="Link to this heading"></a></h3>
+<p>Microservices originated from the Micro-Web-Service proposed by Dr. Peter Rodgers at the Cloud Computing Expo in 2005. The fundamental idea is similar to Unix’s pipeline design concept. In 2014, Martin Fowler and James Lewis jointly proposed the concept of microservices, defining the microservice architecture style as a method of developing a single application through a set of small services, each service running in its own process and through Lightweight mechanism for communication (HTTP API).</p>
+<p>Microservices is a software architecture style applied to component design and deployment architecture. It combines complex large applications in a modular way:</p>
+<ul class="simple">
+<li><p>Each service function is cohesive and separates from the interface.</p></li>
+<li><p>Each service is highly autonomous and decoupled, and can be independently deployed, versioned and capacity scaled.</p></li>
+<li><p>Communication between services through API.</p></li>
+<li><p>Each service has an independent state and can only be accessed through the service itself.</p></li>
+</ul>
+<p>With the continuous development of microservice technology, this idea has also been applied to the front end. In 2018, the first micro front-end tool single-spa appeared on github. Then a single-spa-based framework qiankun appeared.</p>
+</section>
+<section id="api-gateway">
+<h3><span class="section-number">1.1.4.3. </span>API Gateway<a class="headerlink" href="#api-gateway" title="Link to this heading"></a></h3>
+<p>The API gateway is a server. The client only needs to use a simple access method to access the API gateway. The API gateway will proxy access to the back-end service. At the same time, because the service governance characteristics are uniformly placed on the API gateway, the service governance characteristics are changed. It can be transparent to the client, and to a certain extent, the basic characteristics such as service governance and business services are decoupled, and the upgrade of service governance characteristics is also easier to achieve.</p>
+</section>
+</section>
+<section id="software-development">
+<h2><span class="section-number">1.1.5. </span>Software Development<a class="headerlink" href="#software-development" title="Link to this heading"></a></h2>
+<section id="ci-cd">
+<h3><span class="section-number">1.1.5.1. </span>CI/CD<a class="headerlink" href="#ci-cd" title="Link to this heading"></a></h3>
+<p>Continuous Integration (CI) is the process of allowing developers to integrate their work into shared branches. Frequent integration helps resolve isolation, reducing the size of each commit to reduce the likelihood of merge conflicts.</p>
+<p>Continuous Deployment (CD) is an extension of continuous integration that will build deployments from integrated test suites to pre-production environments. This allows it to evaluate each build directly in a production class environment, so developers can verify bug fixes or test new features without adding any effort.</p>
+</section>
+</section>
+<section id="reference-link">
+<h2><span class="section-number">1.1.6. </span>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://arcentry.com/blog/scaling-webapps-for-newbs-and-non-techies/">Scaling webapps for newbs</a></p></li>
+<li><p><a class="reference external" href="https://learnku.com/articles/24050">GitHub’s Restful HTTP API Design Decomposition</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="1. Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="outlook.html" class="btn btn-neutral float-right" title="1.2. Network security concept" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

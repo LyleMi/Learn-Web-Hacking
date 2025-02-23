@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTP request smuggling &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">HTTP request smuggling</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/httpSmuggling.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="http-request-smuggling">
+<h1>HTTP request smuggling<a class="headerlink" href="#http-request-smuggling" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>HTTP request smuggling is a technology that interferes with the way websites handle HTTP request sequences. It was first published in 2005 in an article &lt;<a class="reference external" href="https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf">https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf</a>&gt;`_ propose.</p>
+</section>
+<section id="causes">
+<h2>Causes<a class="headerlink" href="#causes" title="Link to this heading"></a></h2>
+<p>Request smuggling mostly occurs when the front-end server and back-end server have inconsistent understanding of the data passed in by the client. This is because the HTTP specification provides two different ways to specify the end position of the request, namely the <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> and <code class="docutils literal notranslate"><span class="pre">Transfer-Encoding</span></code> headers.</p>
+</section>
+<section id="classification">
+<h2>Classification<a class="headerlink" href="#classification" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>CLTE: The front-end server uses the <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> header, and the back-end server uses the <code class="docutils literal notranslate"><span class="pre">Transfer-Encoding</span></code> header</p></li>
+<li><p>TECL: The front-end server uses the <code class="docutils literal notranslate"><span class="pre">Transfer-Encoding</span></code> header, and the back-end server uses the <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> header.</p></li>
+<li><p>TETE: Both the front-end and back-end servers support the <code class="docutils literal notranslate"><span class="pre">Transfer-Encoding</span></code> header, but one of the servers can be induced to not process it in some way.</p></li>
+</ul>
+</section>
+<section id="attack">
+<h2>attack<a class="headerlink" href="#attack" title="Link to this heading"></a></h2>
+<section id="get-request-with-cl-not-0">
+<h3>GET request with CL not 0<a class="headerlink" href="#get-request-with-cl-not-0" title="Link to this heading"></a></h3>
+<p>The current server allows GET requests to carry the request body, while the backend server does not allow GET requests to carry the request body. It will directly ignore the <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> header in the GET request and do not process it. For example, the following example:</p>
+<p>GET / HTTP/1.1
+Host: example.com
+Content-Length: 44</p>
+<p>GET /secret HTTP/1.1
+Host: example.com</p>
+<p>The front-end server handled <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code>, while the back-end server did not handle <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code>. Based on the pipeline mechanism, it believes that these are two independent requests, which caused the vulnerability to occur.</p>
+</section>
+<section id="cl-cl">
+<h3>CL-CL<a class="headerlink" href="#cl-cl" title="Link to this heading"></a></h3>
+<p>According to RFC 7230, when the server receives two <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> requests, and the values of the two are different, an error of 400 is required, but some servers do not strictly implement this specification. In this case, when the current backend takes different <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> values, a vulnerability will occur. For example:</p>
+<p>POST / HTTP/1.1
+Host: example.com
+Content-Length: 8
+Content-Length: 7</p>
+<p>12345
+a</p>
+<p>In this example a will be taken to the next request and becomes <a href="#id1"><span class="problematic" id="id2">``</span></a>aGET / HTTP/1.1
+<a href="#id3"><span class="problematic" id="id4">``</span></a>.</p>
+</section>
+<section id="cl-te">
+<h3>CL-TE<a class="headerlink" href="#cl-te" title="Link to this heading"></a></h3>
+<p>CL-TE refers to the front-end server processing the request header of <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code>, while the back-end server complies with the provisions of RFC2616, ignores <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> and handles <code class="docutils literal notranslate"><span class="pre">Transfer-Encoding</span></code>. For example:</p>
+<p>POST / HTTP/1.1
+Host: example.com
+…
+Connection: keep-alive
+Content-Length: 6
+Transfer-Encoding: chunked</p>
+<p>0</p>
+<p>a</p>
+<p>In this example, a will also be taken to the next request and becomes <a href="#id5"><span class="problematic" id="id6">``</span></a>aGET / HTTP/1.1
+<a href="#id7"><span class="problematic" id="id8">``</span></a>.</p>
+</section>
+<section id="te-cl">
+<h3>TE-CL<a class="headerlink" href="#te-cl" title="Link to this heading"></a></h3>
+<p>TE-CL refers to the front-end server processing the <code class="docutils literal notranslate"><span class="pre">Transfer-Encoding</span></code> request header, while the back-end server processing the <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> request header. For example:</p>
+<p>POST / HTTP/1.1
+Host: example.com
+…
+Content-Length: 4
+Transfer-Encoding: chunked</p>
+<p>12
+aPOST / HTTP/1.1</p>
+<p>0</p>
+</section>
+<section id="you-re">
+<h3>You’re<a class="headerlink" href="#you-re" title="Link to this heading"></a></h3>
+<p>TE-TE means that both front and backend servers process the <code class="docutils literal notranslate"><span class="pre">Transfer-Encoding</span></code> request header, but it performs differently in fault tolerance. For example, some servers may process the <code class="docutils literal notranslate"><span class="pre">Transfer-encoding</span></code>, tests such as:</p>
+<p>POST / HTTP/1.1
+Host: example.com
+…
+Content-length: 4
+Transfer-Encoding: chunked
+Transfer-encoding: cow</p>
+<p>5C
+aPOST / HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 15</p>
+<p>x=1
+0</p>
+</section>
+</section>
+<section id="defense">
+<h2>defense<a class="headerlink" href="#defense" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Disable backend connection reuse</p></li>
+<li><p>Make sure all servers in the connection have the same configuration</p></li>
+<li><p>Reject ambiguity requests</p></li>
+</ul>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<section id="rfc">
+<h3>RFC<a class="headerlink" href="#rfc" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc2616">RFC 2616 Hypertext Transfer Protocol – HTTP/1.1</a></p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc7230">RFC 7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing – HTTP/1.1</a></p></li>
+</ul>
+</section>
+<section id="blog-whitepaper">
+<h3>Blog / Whitepaper<a class="headerlink" href="#blog-whitepaper" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf">HTTP Request Smuggling by chaiml</a></p></li>
+<li><p><a class="reference external" href="https://portswigger.net/web-security/request-smuggling">HTTP request smuggling by portswigger</a></p></li>
+<li><p><a class="reference external" href="https://xz.aliyun.com/t/6654">HTTP request smuggling from one question to protocol-level attacks</a></p></li>
+<li><p><a class="reference external" href="http://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges.pdf">HTTP Request Smuggling in 2020</a></p></li>
+<li><p><a class="reference external" href="https://labs.bishopfox.com/tech-blog/h2c-smuggling-request-smuggling-via-http/2-cleartext-h2c">h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext (h2c)</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

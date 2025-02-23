@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strict mode &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Strict mode</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/javascript/strict.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="strict-mode">
+<h1>Strict mode<a class="headerlink" href="#strict-mode" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>In ES5, in addition to the normal running mode, strict mode is added, which makes the code explicitly separate from the “sloppy mode/sloppy mode” (sloppy mode) mode under stricter conditions run. Strict pattern is more than just a subset: it is produced to form semantics that are different from normal code.</p>
+<p>The purpose of introducing a strict model is mainly to:</p>
+<ul class="simple">
+<li><p>Eliminate some original silent errors by throwing errors</p></li>
+<li><p>Eliminate some unreasonable and imperfect aspects of JavaScript syntax and reduce some weird behaviors</p></li>
+<li><p>Eliminate some insecurity in code running and ensure the safety of code running</p></li>
+<li><p>Fixed some defects that made it difficult for JavaScript engine to perform optimizations, improve compiler efficiency, and increase running speed</p></li>
+<li><p>Disable some syntax that may be defined in future versions of ECMAScript to lay the groundwork for newer versions of JavaScript</p></li>
+</ul>
+</section>
+<section id="call">
+<h2>Call<a class="headerlink" href="#call" title="Link to this heading"></a></h2>
+<p>Strict mode is used to enable the string using the <code class="docutils literal notranslate"><span class="pre">&quot;use</span> <span class="pre">strict&quot;;</span></code> string. For the entire script file, you can place <code class="docutils literal notranslate"><span class="pre">&quot;use</span> <span class="pre">strict&quot;`</span></code> first line of the script file to enable the entire script to run in strict mode. If this line is not on the first line, it will not take effect and will run in normal mode.</p>
+<p>For a single function, put “use strict”`` on the first line of the function body, and the entire function runs in strict mode.</p>
+</section>
+<section id="behavior-change">
+<h2>Behavior change<a class="headerlink" href="#behavior-change" title="Link to this heading"></a></h2>
+<p>In strict mode, there are mainly the following behavior changes:</p>
+<section id="explicit-declaration-of-global-variables">
+<h3>Explicit declaration of global variables<a class="headerlink" href="#explicit-declaration-of-global-variables" title="Link to this heading"></a></h3>
+<p>In normal mode, if a variable is assigned without a declaration, the default is a global variable. Strict mode prohibits this usage, and global variables must be explicitly declared.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>“use strict”;
+for(i = 0; i &lt; 2; i++) { // ReferenceError: i is not defined
+}</p>
+</section>
+<section id="use-with-statements-are-prohibited">
+<h3>Use with statements are prohibited<a class="headerlink" href="#use-with-statements-are-prohibited" title="Link to this heading"></a></h3>
+<p>The with statement cannot be determined at compile time. Which object the attribute belongs to, which will affect the compilation efficiency, so it is prohibited in strict mode.</p>
+</section>
+<section id="create-an-eval-scope">
+<h3>Create an eval scope<a class="headerlink" href="#create-an-eval-scope" title="Link to this heading"></a></h3>
+<p>In normal mode, the scope of the eval statement depends on whether it is in the global scope or in the functional scope. In strict mode, the eval statement itself is a scope and can no longer generate global variables. The variables it generates can only be used inside eval.</p>
+</section>
+<section id="disable-variable-deletion">
+<h3>Disable variable deletion<a class="headerlink" href="#disable-variable-deletion" title="Link to this heading"></a></h3>
+<p>Variables cannot be deleted in strict mode. Only the object properties whose configurable is set to true can be deleted.</p>
+</section>
+<section id="an-explicit-error">
+<h3>An explicit error<a class="headerlink" href="#an-explicit-error" title="Link to this heading"></a></h3>
+<p>Some errors will only fail silently in normal mode, but will report errors in strict mode, including the following scenarios:</p>
+<ul class="simple">
+<li><p>Assign read-only properties of an object</p></li>
+<li><p>Assign a property read using the getter method</p></li>
+<li><p>Add new properties to objects that prohibit expansion</p></li>
+<li><p>Delete an undeleteable property</p></li>
+</ul>
+</section>
+<section id="syntax-error">
+<h3>Syntax error<a class="headerlink" href="#syntax-error" title="Link to this heading"></a></h3>
+<p>Strict mode has added some syntax errors, including:</p>
+<ul class="simple">
+<li><p>Objects cannot have attributes with duplicate names</p></li>
+<li><p>Functions cannot have parameters with duplicate names</p></li>
+<li><p>Octal notation is prohibited</p></li>
+<li><p>Function must be declared at the top level</p></li>
+<li><p>Added reserved words</p></li>
+<li><p>class</p></li>
+<li><p>enum</p></li>
+<li><p>export</p></li>
+<li><p>extends</p></li>
+<li><p>import</p></li>
+<li><p>super</p></li>
+</ul>
+</section>
+<section id="security-enhancement">
+<h3>Security enhancement<a class="headerlink" href="#security-enhancement" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Forbid this keyword to point to global objects</p></li>
+<li><p>Forbidden to traverse the call stack inside the function</p></li>
+</ul>
+</section>
+<section id="restrict-arguments-objects">
+<h3>Restrict arguments objects<a class="headerlink" href="#restrict-arguments-objects" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Assigning arguments is not allowed</p></li>
+<li><p>arguments no longer track changes in parameters</p></li>
+<li><p>Prohibit arguments.callee</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

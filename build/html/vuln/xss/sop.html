@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Same Origin Policy &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Same Origin Policy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/vuln/xss/sop.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="same-origin-policy">
+<h1>Same Origin Policy<a class="headerlink" href="#same-origin-policy" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Same-origin policies limit how resource interactions are conducted between different sources and are an important security mechanism for isolating potential malicious files.
+Whether the same origin is determined by the URL. The URL consists of a protocol, domain name, port and path. If the protocol, domain name and port of the two URLs are the same, it means that they are the same origin.</p>
+<section id="homogenic-policy-for-file-domain">
+<h3>Homogenic policy for file domain<a class="headerlink" href="#homogenic-policy-for-file-domain" title="Link to this heading"></a></h3>
+<p>In previous browsers, the URIs of any two file domains were considered homologous. Any HTML file on the local disk can read any other file on the local disk.</p>
+<p>Starting with Gecko 1.9, files use a more nuanced homologous strategy, and files can only read another file if the parent directory of the source file is the ancestor directory of the target file.</p>
+</section>
+<section id="same-origin-policy-for-cookies">
+<h3>Same Origin Policy for Cookies<a class="headerlink" href="#same-origin-policy-for-cookies" title="Link to this heading"></a></h3>
+<p>Cookies use different source definition methods. A page can set cookies for this domain and any parent domain as long as it is a parent domain and not a public suffix.</p>
+<p>Regardless of which protocol (HTTP/HTTPS) or port number is used, the browser allows the given domain and any of its subdomains to access cookies. When setting cookies, you can use the <code class="docutils literal notranslate"><span class="pre">domain</span></code> / <code class="docutils literal notranslate"><span class="pre">path</span></code> / <code class="docutils literal notranslate"><span class="pre">secure</span></code> and <code class="docutils literal notranslate"><span class="pre">http-only</span></code> tags to limit their accessibility.</p>
+<p>So the <code class="docutils literal notranslate"><span class="pre">https://localhost:8080/`</span> <span class="pre">and</span> <span class="pre">``http://localhost:8081/</span></code> cookies are shared.</p>
+</section>
+<section id="flash-silverlight-cross-domain">
+<h3>Flash/SilverLight Cross-domain<a class="headerlink" href="#flash-silverlight-cross-domain" title="Link to this heading"></a></h3>
+<p>Various plug-ins in the browser also have cross-domain requirements. Usually, by configuring crossdomain.xml on the server, setting up crossdomain access to this service.</p>
+<p>The client will request this file. If it finds that its domain name is in the access list, it will initiate a real request, otherwise it will not send the request.</p>
+</section>
+</section>
+<section id="changes-to-the-source">
+<h2>Changes to the source<a class="headerlink" href="#changes-to-the-source" title="Link to this heading"></a></h2>
+<p>Homology policies believe that domains and subdomains belong to different domains, such as <code class="docutils literal notranslate"><span class="pre">child1.a.com</span></code> vs. <code class="docutils literal notranslate"><span class="pre">a.com</span></code> / <code class="docutils literal notranslate"><span class="pre">child1.a.com</span></code> with <code class="docutils literal notranslate"><span class="pre">child2.a.com</span></code> / <code class="docutils literal notranslate"><span class="pre">xxx.child1.a.com</span></code> and <code class="docutils literal notranslate"><span class="pre">child1.a.com</span></code> have different sources.</p>
+<p>For this case, you can set <a href="#id1"><span class="problematic" id="id2">``</span></a>document.domain=’a.com’` in two aspects to change its source to achieve communication between any of the above two pages.</p>
+<p>In addition, because the browser saves the port number separately, this assignment will cause the port number to be <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+</section>
+<section id="cross-original-access">
+<h2>Cross-original access<a class="headerlink" href="#cross-original-access" title="Link to this heading"></a></h2>
+<p>Homologous policies control interactions between different sources, which are usually divided into three categories:</p>
+<ul class="simple">
+<li><p>Cross-origin writes are usually allowed</p></li>
+<li><p>Links (links)</p></li>
+<li><p>Redirect</p></li>
+<li><p>Form Submission</p></li>
+<li><p>Cross-origin embedding is usually allowed</p></li>
+<li><p>Cross-origin reads are not usually allowed</p></li>
+</ul>
+<p>Some examples of resources that may be embedded across origin are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;...&quot;&gt;&lt;/script&gt;</span></code> Tags are embedded in cross-domain scripts. Syntax error messages can only be captured in homologous scripts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">rel=&quot;stylesheet&quot;</span> <span class="pre">href=&quot;...&quot;&gt;</span></code> Tag embeds CSS. Due to the loose syntax rules of CSS, CSS needs a correct Content-Type message header to set up.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> / <code class="docutils literal notranslate"><span class="pre">&lt;video&gt;</span></code> / <code class="docutils literal notranslate"><span class="pre">&lt;audio&gt;</span></code> Embed multimedia resources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;object&gt;``````</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;embed&gt;</span></code> plugins.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;font-face</span></code> font introduced. Some browsers allow cross-origin fonts, while some require same-origin fonts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;frame&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code> any resource loaded. Sites can use X-Frame-Options message headers to block this form of cross-domain interaction.</p></li>
+</ul>
+<section id="jsonp-cross-domain">
+<h3>JSONP Cross-domain<a class="headerlink" href="#jsonp-cross-domain" title="Link to this heading"></a></h3>
+<p>JSONP uses the cross-domain capability of the <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag to achieve cross-domain data access, requesting that the dynamically generated JavaScript script also bring a callback function name as a parameter.</p>
+<p>After the server receives the request, it dynamically generates the script to generate data, and calls the callback function with the generated data as parameters in the code.</p>
+<p>JSONP also has some security problems, such as when returning directly without verification of incoming/return parameters, it will cause XSS problems. Data leakage may occur when data is given without Referer or Token verification.</p>
+<p>In addition, JSONP can legally make some function calls outside the design without setting a whitelist of callback functions to introduce problems. This kind of attack is also called a SOME attack.</p>
+</section>
+<section id="cross-origin-script-api-access">
+<h3>Cross-origin script API access<a class="headerlink" href="#cross-origin-script-api-access" title="Link to this heading"></a></h3>
+<p>Javascript APIs, such as <code class="docutils literal notranslate"><span class="pre">iframe.contentWindow`,</span> <span class="pre">``window.parent`,</span> <span class="pre">``window.open`</span> <span class="pre">and</span> <span class="pre">``window.opener`</span> <span class="pre">allow</span> <span class="pre">documents</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">referenced.</span> <span class="pre">When</span> <span class="pre">the</span> <span class="pre">sources</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">two</span> <span class="pre">documents</span> <span class="pre">are</span> <span class="pre">different,</span> <span class="pre">these</span> <span class="pre">references</span> <span class="pre">will</span> <span class="pre">add</span> <span class="pre">restrictions</span> <span class="pre">on</span> <span class="pre">access</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">``window</span></code> and <code class="docutils literal notranslate"><span class="pre">location</span></code> objects.</p>
+<p><code class="docutils literal notranslate"><span class="pre">window</span></code> methods that allow cross-origin access are</p>
+<ul class="simple">
+<li><p>window.blur</p></li>
+<li><p>window.close</p></li>
+<li><p>window.focus</p></li>
+<li><p>window.postMessage</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">window</span></code> properties that allow cross-origin access are</p>
+<ul class="simple">
+<li><p>window.closed</p></li>
+<li><p>window.frames</p></li>
+<li><p>window.length</p></li>
+<li><p>window.location</p></li>
+<li><p>window.opener</p></li>
+<li><p>window.parent</p></li>
+<li><p>window.self</p></li>
+<li><p>window.top</p></li>
+<li><p>window.window</p></li>
+</ul>
+<p>Among them, <code class="docutils literal notranslate"><span class="pre">window.location</span></code> allows reading/writing, and other attributes only allow reading.</p>
+</section>
+<section id="cross-origin-data-storage-access">
+<h3>Cross-origin data storage access<a class="headerlink" href="#cross-origin-data-storage-access" title="Link to this heading"></a></h3>
+<p>Data stored in the browser, such as <code class="docutils literal notranslate"><span class="pre">localStorage</span></code> and <code class="docutils literal notranslate"><span class="pre">IndexedDB</span></code>, are split by source. Each source has its own separate storage space, and Javascript scripts in one source cannot read and write data belonging to other sources.</p>
+</section>
+</section>
+<section id="cors">
+<h2>CORS<a class="headerlink" href="#cors" title="Link to this heading"></a></h2>
+<p>CORS is a W3C standard, and its full name is Cross-origin resource sharing. Through this standard, browsers can be allowed to read cross-domain resources.</p>
+<section id="common-request-headers">
+<h3>Common request headers<a class="headerlink" href="#common-request-headers" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Origin</p></li>
+<li><p>The source site URI of the pre-check request or actual request, the browser request will send this field by default</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Origin:</span> <span class="pre">&lt;origin&gt;</span></code></p></li>
+<li><p>Access-Control-Request-Method</p></li>
+<li><p>Declare the method to use the request</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Method:</span> <span class="pre">&lt;method&gt;</span></code></p></li>
+<li><p>Access-Control-Request-Headers</p></li>
+<li><p>Declare the header field used by the request</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Headers:</span> <span class="pre">&lt;field-name&gt;[,</span> <span class="pre">&lt;field-name&gt;]*</span></code></p></li>
+</ul>
+</section>
+<section id="common-return-to-the-head">
+<h3>Common return to the head<a class="headerlink" href="#common-return-to-the-head" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Access-Control-Allow-Origin</p></li>
+<li><p>Declare the source outdated URI that is allowed to access</p></li>
+<li><p>Wildcard characters <code class="docutils literal notranslate"><span class="pre">*````</span></code> for requests carrying credentials</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Access-Control-Allow-Origin:</span> <span class="pre">&lt;origin&gt;</span> <span class="pre">|</span> <span class="pre">*</span></code></p></li>
+<li><p>Access-Control-Expose-Headers</p></li>
+<li><p>Declares that the exposed heads are allowed</p></li>
+<li><p>e.g. <code class="docutils literal notranslate"><span class="pre">Access-Control-Expose-Headers:</span> <span class="pre">X-My-Custom-Header,</span> <span class="pre">X-Another-Custom-Header</span></code></p></li>
+<li><p>Access-Control-Max-Age</p></li>
+<li><p>Statement of Cache Time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Access-Control-Max-Age:</span> <span class="pre">&lt;delta-seconds&gt;</span></code></p></li>
+<li><p>Access-Control-Allow-Credentials</p></li>
+<li><p>Declare whether to allow bringing in in the request</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Access-Control-Allow-Credentials:</span> <span class="pre">true</span></code></p></li>
+<li><p>Access-Control-Allow-Methods</p></li>
+<li><p>Declare the allowed access method</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Access-Control-Allow-Methods:</span> <span class="pre">&lt;method&gt;[,</span> <span class="pre">&lt;method&gt;]*</span></code></p></li>
+<li><p>Access-Control-Allow-Headers</p></li>
+<li><p>Declare allowed headers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Access-Control-Allow-Headers:</span> <span class="pre">&lt;field-name&gt;[,</span> <span class="pre">&lt;field-name&gt;]*</span></code></p></li>
+</ul>
+</section>
+<section id="defense-advice">
+<h3>Defense advice<a class="headerlink" href="#defense-advice" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Do not enable CORS unless necessary</p></li>
+<li><p>Define a detailed whitelist, do not use wildcards, only configure the required headers</p></li>
+<li><p>Configuration <code class="docutils literal notranslate"><span class="pre">Vary:</span> <span class="pre">Origin</span></code> header</p></li>
+<li><p>Do not use <code class="docutils literal notranslate"><span class="pre">Access-Control-Allow-Credentials</span></code> unless necessary</p></li>
+<li><p>Limit cache time</p></li>
+</ul>
+</section>
+</section>
+<section id="block-cross-origin-access">
+<h2>Block cross-origin access<a class="headerlink" href="#block-cross-origin-access" title="Link to this heading"></a></h2>
+<p>Block cross-domain write operations and can detect <code class="docutils literal notranslate"><span class="pre">CSRF</span> <span class="pre">token</span></code> in a request, which is called the Cross-Site Request Forgery (CSRF) tag.</p>
+<p>Block cross-site reading of resources, because embedded resources usually expose information, and it is necessary to ensure that resources are not embedded. However, in most cases, the browser will not comply with the <code class="docutils literal notranslate"><span class="pre">Content-Type`</span> <span class="pre">message</span> <span class="pre">header.</span> <span class="pre">For</span> <span class="pre">example,</span> <span class="pre">if</span> <span class="pre">you</span> <span class="pre">specify</span> <span class="pre">the</span> <span class="pre">``&lt;script&gt;</span></code> tag in an HTML document, the browser will try to parse the HTML into JavaScript.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

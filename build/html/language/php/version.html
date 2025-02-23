@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Version security changes &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Version security changes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/php/version.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="version-security-changes">
+<h1>Version security changes<a class="headerlink" href="#version-security-changes" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>8.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Comparison of string vs. number weak type will first convert the number to string and then compare two strings</p></li>
+</ul>
+<p>-Exception throws instead of warning when introspecting errors in internal parameters
+- <code class="docutils literal notranslate"><span class="pre">assert</span></code> no longer supports code execution
+- Remove <code class="docutils literal notranslate"><span class="pre">create_function</span></code>
+- Remove the e-mode in <code class="docutils literal notranslate"><span class="pre">mb_ereg_replace()</span></code>
+- Meta-information in Phar is no longer automatically deserialized
+-<cite>parse_str`</cite> must be passed in the second parameter
+- Remove <code class="docutils literal notranslate"><span class="pre">string.strip_tags</span></code> in <code class="docutils literal notranslate"><span class="pre">php://filter</span></code></p>
+</section>
+<section id="id2">
+<h2>7.2<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>String without quotes will produce E_WARNING</p></li>
+<li><p>create_function abandoned</p></li>
+<li><p>assert cannot pass in string expressions</p></li>
+<li><p>Using parse_str() without the second parameter will generate an E_DEPRECATED warning</p></li>
+<li><p>__autoload() is abandoned</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>7.1<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Insufficient parameters provided by calling user-defined functions will throw an error exception instead of a warning</p></li>
+<li><p>No more destructors are called on incomplete objects</p></li>
+<li><p>call_user_func() no longer supports calls to addressed functions</p></li>
+<li><p>The e-pattern modifiers for mb_ereg_replace() and mb_ereg_replace() are discarded</p></li>
+<li><p>ext/mcrypt is abandoned</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>7.0<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>preg_replace “ “ modifier generates an E_WARNING error and is invalid</p></li>
+<li><p>Remove all ext/mysql functions</p></li>
+<li><p>Remove all ext/mssql functions</p></li>
+<li><p>Remove call_user_method() and call_user_method_array()</p></li>
+<li><p>foreach no longer changes internal array pointers</p></li>
+<li><p>Previously, if an octal character contains an invalid number, the invalid number will be silently abridged (0128 will be parsed as 012), and now such an octal character will produce a parsing error</p></li>
+<li><p>Hexadecimal strings are no longer considered as numbers</p></li>
+<li><p>dl() is no longer available in PHP-FPM, and is still available in CLI and embedded SAPIs</p></li>
+<li><p>Remove ASP and script PHP tags, i.e. <code class="docutils literal notranslate"><span class="pre">&lt;%</span> <span class="pre">%&gt;</span></code> / <code class="docutils literal notranslate"><span class="pre">&lt;%=</span> <span class="pre">%&gt;</span></code> / <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">language=&quot;php&quot;&gt;</span> <span class="pre">&lt;/script&gt;</span></code></p></li>
+<li><p>When the value overflows, the internal function will fail</p></li>
+<li><p>$HTTP_RAW_POST_DATA was removed</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>5.6<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>$HTTP_RAW_POST_DATA is abandoned</p></li>
+<li><p>CURLOPT_SAFE_UPLOAD must be set to FALSE before you can use the &#64;file syntax to upload files</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>5.5<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>preg_replace “ “ modifier generates E_DEPRECATED error</p></li>
+<li><p>Abandoned <a href="#id7"><span class="problematic" id="id8">``</span></a>mysql_*` series functions</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>5.4<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Safe mode is no longer supported</p></li>
+<li><p>Remove Magic Quotes</p></li>
+<li><p>Converting an array into a string will produce an E_NOTICE level error</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

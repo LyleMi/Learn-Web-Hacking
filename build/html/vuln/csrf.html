@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSRF &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CSRF</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/csrf.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="csrf">
+<h1>CSRF<a class="headerlink" href="#csrf" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Cross-Site Request Forgery (CSRF), also known as One Click Attack or Session Riding, usually abbreviated as CSRF, is a malicious exploitation of the website. Although it sounds like XSS, it is very different from XSS, which exploits trusted users within the site, while CSRF exploits trusted websites by masquerading requests from trusted users.</p>
+</section>
+<section id="classification">
+<h2>Classification<a class="headerlink" href="#classification" title="Link to this heading"></a></h2>
+<section id="resources-include">
+<h3>Resources include<a class="headerlink" href="#resources-include" title="Link to this heading"></a></h3>
+<p>Resources include types that may be seen in most demonstrations or basic courses introducing CSRF concepts. This type boils down to an attacker who controls the resources contained in HTML tags (e.g. &lt;image&gt;, &lt;audio&gt;, &lt;video&gt;, &lt;object&gt;, &lt;script&gt;, etc.). If an attacker can affect the URL being loaded, any tag containing remote resources can complete the attack.</p>
+<p>Due to the lack of source point checking for cookies, as mentioned above, this attack does not require XSS and can be performed by any attacker-controlled site or the site itself. This type is limited to GET requests only, because these are the browser’s unique request types for the resource URL. The main limitation of this type is that it requires incorrectly using a secure HTTP request method.</p>
+</section>
+<section id="based-on-form">
+<h3>Based on form<a class="headerlink" href="#based-on-form" title="Link to this heading"></a></h3>
+<p>It is usually seen when using the secure request method correctly. The attacker creates a form that wants the victim to submit; it contains a JavaScript snippet that forces the victim’s browser to submit.</p>
+<p>The form can be made up of hidden elements so completely that it is difficult for victims to spot it.</p>
+<p>If cookies are handled improperly, an attacker can launch an attack on any site and the attack will succeed as long as the victim logs in with a valid cookie. If the request is purposeful, a successful attack will bring the victim back to their usual page. This method is particularly effective for phishing attacks where an attacker can point a victim to a specific page.</p>
+</section>
+<section id="xmlhttprequest">
+<h3>XMLHttpRequest<a class="headerlink" href="#xmlhttprequest" title="Link to this heading"></a></h3>
+<p>XMLHttpRequest is probably the least seen way, and since many modern web applications rely on XHR, many applications spend a lot of time building and implementing this specific countermeasure.</p>
+<p>XHR-based CSRFs usually appear as XSS payloads due to SOP. Without Cross-Origin Resource Sharing (CORS), XHR is limited to the original requests that attackers host their own payloads.</p>
+<p>This type of CSRF attack payload is basically a standard XHR, and attackers have found some ways to inject victim browser DOM.</p>
+</section>
+</section>
+<section id="defense">
+<h2>defense<a class="headerlink" href="#defense" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Detect user submissions through CSRF-token or verification code</p></li>
+<li><p>Verify Referer/Content-Type</p></li>
+<li><p>It is best to use POST operations for user modification and deletion operations, etc.</p></li>
+<li><p>Avoid cookies that are common across the site and strictly set the cookie domain</p></li>
+</ul>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.github.com/jrozner/csrf-demo">demo</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/&#64;jrozner/wiping-out-csrf-ded97ae7e83f">Wiping Out CSRF</a></p></li>
+<li><p><a class="reference external" href="https://www.slideshare.net/0ang3el/neat-tricks-to-bypass-csrfprotection">Neat tricks to bypass CSRF protection</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

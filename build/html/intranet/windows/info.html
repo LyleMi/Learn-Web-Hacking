@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Information collection &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Information collection</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/intranet/windows/info.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="information-collection">
+<h1>Information collection<a class="headerlink" href="#information-collection" title="Link to this heading"></a></h1>
+<section id="basic-commands">
+<h2>Basic Commands<a class="headerlink" href="#basic-commands" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Hostname <code class="docutils literal notranslate"><span class="pre">hostname</span></code></p></li>
+<li><p>Query all computer names <code class="docutils literal notranslate"><span class="pre">dsquery</span> <span class="pre">computer</span></code></p></li>
+<li><p>View configuration and patch information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">systeminfo</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">qfe</span> <span class="pre">get</span> <span class="pre">description,installedOn</span> <span class="pre">/format:csv</span></code></p></li>
+<li><p>View version <code class="docutils literal notranslate"><span class="pre">ver</span></code></p></li>
+<li><p>Process information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tasklist</span> <span class="pre">/svc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">process</span> <span class="pre">get</span> <span class="pre">caption,executablepath,commandline</span> <span class="pre">/format:csv</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get-process</span></code></p></li>
+<li><p>View all environment variables <code class="docutils literal notranslate"><span class="pre">set</span></code></p></li>
+<li><p>View scheduled tasks <code class="docutils literal notranslate"><span class="pre">schtasks</span> <span class="pre">/QUERY</span> <span class="pre">/fo</span> <span class="pre">LIST</span> <span class="pre">/v</span></code></p></li>
+<li><p>View installation driver <code class="docutils literal notranslate"><span class="pre">DRIVERQUERY</span></code></p></li>
+<li><p>View operating system information</p></li>
+<li><p>Architecture <code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">os</span> <span class="pre">get</span> <span class="pre">osarchitecture</span></code></p></li>
+<li><p>System name <code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">os</span> <span class="pre">get</span> <span class="pre">caption</span></code></p></li>
+<li><p>View the logic disk <code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">logicaldisk</span> <span class="pre">get</span> <span class="pre">caption</span></code></p></li>
+<li><p>View installed software information <code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">product</span> <span class="pre">get</span> <span class="pre">name,version</span></code></p></li>
+<li><p>View service information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">service</span> <span class="pre">list</span> <span class="pre">brief</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sc</span> <span class="pre">query</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Get-WmiObject</span> <span class="pre">win32_service</span> <span class="pre">|</span> <span class="pre">select</span> <span class="pre">PathName</span></code></p></li>
+</ul>
+</section>
+<section id="domain-information">
+<h2>Domain information<a class="headerlink" href="#domain-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Get the computer name of the current group <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">view</span></code></p></li>
+<li><p>Network Discovery <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">view</span> <span class="pre">/all</span></code></p></li>
+<li><p>View all domains <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">view</span> <span class="pre">/domain</span></code></p></li>
+<li><p>Domain forest, domain tree information</p></li>
+<li><p>Domain Trust Information <code class="docutils literal notranslate"><span class="pre">nltest</span> <span class="pre">/domain_trusts</span></code></p></li>
+<li><p>Positioning Domain Control <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">time</span> <span class="pre">/domain</span></code></p></li>
+<li><p>View username in the domain <code class="docutils literal notranslate"><span class="pre">dsquery</span> <span class="pre">user</span></code></p></li>
+<li><p>Query domain group name <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">group</span> <span class="pre">/domain</span></code></p></li>
+<li><p>Query Domain Admins <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">group</span> <span class="pre">&quot;Domain</span> <span class="pre">Admins&quot;</span> <span class="pre">/domain</span></code></p></li>
+<li><p>Domain control information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nltest</span> <span class="pre">/dclist:xx</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Get-NetDomain</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Get-NetDomainController</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">group</span> <span class="pre">&quot;Domain</span> <span class="pre">controllers&quot;</span></code></p></li>
+<li><p>Group Policy</p></li>
+</ul>
+</section>
+<section id="user-information">
+<h2>User Information<a class="headerlink" href="#user-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>View users</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">user</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whoami</span></code> / <code class="docutils literal notranslate"><span class="pre">whoami</span> <span class="pre">/priv</span></code> / <code class="docutils literal notranslate"><span class="pre">whoami</span> <span class="pre">/all</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">useraccount</span> <span class="pre">get</span> <span class="pre">/ALL</span> <span class="pre">/format:csv</span></code></p></li>
+<li><p>User Privilege Information <code class="docutils literal notranslate"><span class="pre">whoami</span> <span class="pre">/priv</span></code></p></li>
+<li><p>View current permissions <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">localgroup</span> <span class="pre">administrators</span></code></p></li>
+<li><p>View online users <code class="docutils literal notranslate"><span class="pre">quser</span></code>/ <code class="docutils literal notranslate"><span class="pre">qwinsta</span></code>/ <code class="docutils literal notranslate"><span class="pre">query</span> <span class="pre">user</span></code></p></li>
+<li><p>View the current computer name, full name, user name, system version, worksite domain, login domain <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">config</span> <span class="pre">Workstation</span></code></p></li>
+<li><p>ACL information <code class="docutils literal notranslate"><span class="pre">get-acl</span></code></p></li>
+</ul>
+</section>
+<section id="network-information">
+<h2>Network information<a class="headerlink" href="#network-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Intranet segment information</p></li>
+<li><p>Network card information <code class="docutils literal notranslate"><span class="pre">ipconfig</span></code></p></li>
+<li><p>External network export</p></li>
+<li><p>ARP table <code class="docutils literal notranslate"><span class="pre">arp</span> <span class="pre">-a</span></code></p></li>
+<li><p>Routing table <code class="docutils literal notranslate"><span class="pre">route</span> <span class="pre">print</span></code></p></li>
+<li><p>Listening port <code class="docutils literal notranslate"><span class="pre">netstat</span> <span class="pre">-ano</span></code></p></li>
+<li><p>Connected port</p></li>
+<li><p>Port information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Get-NetTCPConnection</span></code></p></li>
+<li><p>hosts file</p></li>
+<li><p>Main and backup DNS</p></li>
+<li><p>DNS cache</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipconfig</span> <span class="pre">/displaydns</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Get-CimInstance</span> <span class="pre">-Namespace</span> <span class="pre">root/StandardCimv2</span> <span class="pre">-ClassName</span> <span class="pre">MSFT_DNSClientCache</span></code></p></li>
+<li><p>Detect the network situation</p></li>
+<li><p><cite>powershell -c “1..65535 | % {echo ((new-object Net.Sockets.TcpClient).Connect(‘allports.exposed’,$_)) $_ } 2&gt;$null”</cite></p></li>
+</ul>
+</section>
+<section id="firewall">
+<h2>Firewall<a class="headerlink" href="#firewall" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>View the firewall status <code class="docutils literal notranslate"><span class="pre">netsh</span> <span class="pre">advfirewall</span> <span class="pre">show</span> <span class="pre">allprofiles</span></code></p></li>
+<li><p>Firewall log directory <code class="docutils literal notranslate"><span class="pre">netsh</span> <span class="pre">firewall</span> <span class="pre">show</span> <span class="pre">logging</span></code></p></li>
+<li><p>Firewall rules <code class="docutils literal notranslate"><span class="pre">netsh</span> <span class="pre">advfirewall</span> <span class="pre">firewall</span> <span class="pre">show</span> <span class="pre">rule</span> <span class="pre">name=all</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netsh</span> <span class="pre">firewall</span> <span class="pre">show</span> <span class="pre">config</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netsh</span> <span class="pre">firewall</span> <span class="pre">show</span> <span class="pre">state</span></code></p></li>
+</ul>
+</section>
+<section id="password-information">
+<h2>Password information<a class="headerlink" href="#password-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Windows RDP connection record</p></li>
+<li><p>Account password saved in the browser</p></li>
+<li><p>Various passwords in the system password manager</p></li>
+<li><p>Password information in unattended installation files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\sysprep.inf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\sysprep\sysprep.xml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\Windows\Panther\Unattend\Unattended.xml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\Windows\Panther\Unattended.xml</span></code></p></li>
+</ul>
+</section>
+<section id="note-information">
+<h2>Note information<a class="headerlink" href="#note-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmdkey</span> <span class="pre">/l</span></code></p></li>
+<li><p>klist</p></li>
+<li><p>msf meterpreter</p></li>
+</ul>
+</section>
+<section id="special-files">
+<h2>Special files<a class="headerlink" href="#special-files" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>document</p></li>
+<li><p>xlsx / xls</p></li>
+<li><p>docx / doc</p></li>
+<li><p>PPTX / PPT</p></li>
+<li><p>vsdx / vsd</p></li>
+<li><p>md / txt</p></li>
+<li><p>Compressed files</p></li>
+<li><p>zip / rar / 7z</p></li>
+<li><p>VPN configuration</p></li>
+<li><p>OVPn</p></li>
+<li><p>Code</p></li>
+<li><p>py / php / jsp / aspx / asp / sql</p></li>
+<li><p>Configuration File</p></li>
+<li><p>conf / ini / xml</p></li>
+<li><p>Specific keywords</p></li>
+<li><p>Account / Account / Login / User</p></li>
+<li><p>Password / pass</p></li>
+<li><p>Code/Document/Shift/Backup/git/svn</p></li>
+<li><p>Email / Address Book / Cluster / Office</p></li>
+<li><p>Agent / Intranet / VPN</p></li>
+<li><p>Equipment/Assets</p></li>
+<li><p>System / Operation / Topology / Network / IT</p></li>
+<li><p>Backend / Admin / Database</p></li>
+<li><p>Monitoring / Isolation / Firewall / Gate Gate / Patrol Inspection</p></li>
+</ul>
+</section>
+<section id="lan-surviving-host">
+<h2>LAN surviving host<a class="headerlink" href="#lan-surviving-host" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>NetBIOS Scan</p></li>
+<li><p>OXID Scan</p></li>
+</ul>
+</section>
+<section id="other">
+<h2>other<a class="headerlink" href="#other" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Shared folders enabled</p></li>
+<li><p>Recycling yard</p></li>
+<li><p>Recently run commands</p></li>
+<li><p>Access file history</p></li>
+<li><p>Check the patch installation status</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wmic</span> <span class="pre">qfe</span> <span class="pre">get</span> <span class="pre">Caption,Description,HotFixID,InstalledOn</span></code></p></li>
+<li><p>Logs and Event Information</p></li>
+<li><p>`` Wevtutil```</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventvwr</span></code></p></li>
+<li><p>Registration Information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reg</span></code></p></li>
+<li><p>Various agent monitoring software installed</p></li>
+<li><p>Installed antivirus software</p></li>
+<li><p>View/Set suffix association</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assoc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assoc</span> <span class="pre">.ext=example</span></code></p></li>
+<li><p>PowerShell Version</p></li>
+<li><p>.Net version</p></li>
+<li><p>Wi-Fi Password</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

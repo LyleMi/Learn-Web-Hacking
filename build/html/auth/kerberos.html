@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerberos &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Kerberos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/auth/kerberos.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kerberos">
+<h1>Kerberos<a class="headerlink" href="#kerberos" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The Kerberos protocol originated from the Athena project of the MIT Institute of Technology in the United States. It is based on the public-private key encryption system and provides two-way verification for distributed environments. It was adopted in RFC 1510. Kerberos is the default authentication protocol in Windows domain environments.</p>
+<p>Simply put, Kerberos provides a single sign-on (SSO) method. Consider a scenario where there are different servers in a network, such as print servers, mail servers, and file servers. These servers have authentication requirements. It is natural that it is impossible to enable each server to implement an authentication system by itself, but to provide a central authentication server (AS) for these servers to use. In this way, any client can log in to all servers by just maintaining a password.</p>
+<p>The Kerberos protocol is a Ticket-based system that has at least three roles in the Kerberos system: an authentication server (AS), a client (Client) and a normal server (Server).</p>
+<p>The authentication server verifies the user and issues a TGT (Treasure Grant Ticket) for the user to request session tickets. The TGS (TGS) issues ST (Session Notes) for the network service based on the TGT issued to the customer.</p>
+<p>In the Kerberos system, both the client and the server have a unique name, called Principal. At the same time, both the client and the server have their own passwords, and only their passwords are known to them and the authentication server AS.</p>
+</section>
+<section id="basic-concepts">
+<h2>Basic concepts<a class="headerlink" href="#basic-concepts" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Principal (safe individual)</p></li>
+<li><p>The certified individual has a name and password</p></li>
+<li><p>KDC (Key Distribution Center)</p></li>
+<li><p>Network services that provide tickets and temporary session keys</p></li>
+<li><p>Ticket</p></li>
+<li><p>A record that users can use to prove their identity to the server, including the user’s identity, session key, timestamp, and some other information. Most of the information in the Ticket is encrypted, and the key is the server’s key</p></li>
+<li><p>Authenticator</p></li>
+<li><p>A record containing some recently generated information that requires a session key shared between the user and the server</p></li>
+<li><p>Credentials</p></li>
+<li><p>A ticket plus a secret session key</p></li>
+<li><p>Authentication Server (AS)</p></li>
+<li><p>Authenticated users with long-term key</p></li>
+<li><p>AS gives users ticket granting ticket and short-term key</p></li>
+<li><p>Certification Service</p></li>
+<li><p>Ticket Granting Server (TGS)</p></li>
+<li><p>Authenticated users with short-term key and Ticket Granting Ticket</p></li>
+<li><p>TGS issues tickets to users to access other servers</p></li>
+<li><p>Authorization and access control services</p></li>
+</ul>
+</section>
+<section id="simplified-certification-process">
+<h2>Simplified certification process<a class="headerlink" href="#simplified-certification-process" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The client initiates a request to the server, and the request content is: the client’s principal, the server’s principal</p></li>
+</ol>
+<p>2. After AS receives the request, it randomly generates a password Kc, s(session key), and generates the following two tickets and returns them to the client.
+1. The ticket to the client is encrypted with the client’s password, and the content is a random password, session, server_principal
+2. Encrypt the ticket to the server side with the server’s password, and the content is a random password, session, client_principal
+3. After the client gets the two bills in the second step, he first uses his own password to unbox the bills, obtain Kc and s, and then generates an Authenticator, which mainly includes the verification codes of the current time and Ts, c, and Encrypted with SessionKey Kc,s. Then the client sends Authenticator and the tickets to the server to the server at the same time
+4. The server first uses its own password to unbox the invoice, get the SessionKey Kc,s, and then unbox the Authenticator with Kc,s, and do the following check
+1. Check whether the timestamp in Authenticator is within 5 minutes of the current time, and check whether the timestamp appears for the first time. If this timestamp is not the first time it appears, it means that someone intercepted the content sent by the client and carried out a Replay attack.
+2. Check if checksum is correct
+3. If all are correct, the client will pass the authentication
+5. The server segment can optionally reply a message to the client to complete two-way authentication, with the content encrypted time stamps with session key
+6. The client verifies the server by unpacking the message and comparing whether the sent back timestamp is consistent with the timestamp sent by itself.</p>
+</section>
+<section id="complete-certification-process">
+<h2>Complete certification process<a class="headerlink" href="#complete-certification-process" title="Link to this heading"></a></h2>
+<p>The process introduced above has been able to complete mutual authentication between the client and the server. However, what is more inconvenient is that the client requires the client to enter its own password every time he or she authenticates.</p>
+<p>Therefore, in the Kerberos system, a new role was introduced called: Ticket Granting Service (TGS - Ticket Granting Service), which is similar to an ordinary server, except that the service it provides is distributed to clients and other servers. Certified bills.</p>
+<p>In this way, there are four roles in the Kerberos system: authentication server (AS), client (Client), ordinary server (Server) and ticket authorization service (TGS). In this way, the authentication process for the client to communicate with the server for the first time is divided into the following 6 steps:</p>
+<ol class="arabic simple">
+<li><p>The client initiates a request to the AS, and the request content is: the client’s principal, the bill authorization server’s rincipal</p></li>
+</ol>
+<p>2. After the AS receives the request, it randomly generates a password Kc, s(session key), and generates the following two tickets to return to the client:
+1. The ticket to the client is encrypted with the client’s password, and the content is a random password, session, tgs_principal
+2. The ticket to tgs is encrypted with the password of tgs, and the content is a random password, session, client_principal
+3. After the client gets the two bills in the second step, he first uses his own password to unbox the bills, obtain Kc and s, and then generates an Authenticator, which mainly includes the verification codes of the current time and Ts, c, and Encrypted with SessionKey Kc,s. Then the client initiates a request to tgs, including:
+1. Authenticator
+2. Send the ticket to tgs to the server at the same time
+3. server_principal
+4. TGS first unboxes the invoice with its own password, get the SessionKey Kc,s, and then unboxes the Authenticator with Kc,s, and do the following check
+1. Check whether the timestamp in Authenticator is within 5 minutes of the current time, and check whether the timestamp appears for the first time. If this timestamp is not the first time it appears, it means that someone intercepted the content sent by the client and carried out a Replay attack.
+2. Check if checksum is correct
+3. If all are correct, the client will pass the authentication
+5. tgs generates a session key to assemble two tickets to the client
+1. The tickets encrypted with the session key of the client and tgs, including the newly generated session key and server_principal
+2. Encrypted tickets with the server’s password, including the newly generated session key and client principal
+6. After the client receives two tickets, it unties its own, then generates an Authenticator and sends a request to the server, including
+1. Authenticator
+2. Tickets to the server
+7. After the server receives the request, it uses its own password to unbox the invoice and gets the session key, and then unboxes the authenticator with the session key to verify it for no reason.
+8. The server can choose to return a time stamp encrypted with the session key to complete two-way verification.
+9. The client verifies the server by unpacking the message and comparing whether the sent back timestamp is consistent with the timestamp sent by itself.</p>
+</section>
+<section id="pros-and-cons">
+<h2>Pros and cons<a class="headerlink" href="#pros-and-cons" title="Link to this heading"></a></h2>
+<section id="advantage">
+<h3>advantage<a class="headerlink" href="#advantage" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Passwords are not easy to be escaped</p></li>
+<li><p>Password not transmitted online</p></li>
+<li><p>Password guessing is more difficult</p></li>
+<li><p>It is difficult to use after the bill is stolen because it needs to be used with the authentication header</p></li>
+</ul>
+</section>
+<section id="shortcoming">
+<h3>shortcoming<a class="headerlink" href="#shortcoming" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Lack of revocation mechanism</p></li>
+<li><p>Introduced complex key management</p></li>
+<li><p>Requires clock synchronization</p></li>
+<li><p>Restricted stretchability</p></li>
+</ul>
+</section>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<section id="specification">
+<h3>specification<a class="headerlink" href="#specification" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc1510">RFC 1510 The Kerberos Network Authentication Service</a></p></li>
+<li><p><a class="reference external" href="https://blog.csdn.net/jewes/article/details/20792021">Detailed explanation of Kerberos certification process</a></p></li>
+</ul>
+</section>
+<section id="attack">
+<h3>attack<a class="headerlink" href="#attack" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.blackhat.com/docs/asia-17/materials/asia-17-Hart-Delegate-To-The-Top-Abusing-Kerberos-For-Arbitrary-Impersonations-And-RCE-wp.pdf">Delegate to the Top: Abusing Kerberos for arbitrary impersonations and RCE</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94?redirectedfrom=MSDN">Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff649429(v=pandp.10)">Kerberos Technical Supplement for Windows</a></p></li>
+<li><p><a class="reference external" href="https://adsecurity.org/?p=2293">Cracking Kerberos TGS Tickets Using Kerberoast – Exploiting Kerberos to Compromise the Active Directory Domain</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype chain &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Prototype chain</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/javascript/prototype.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="prototype-chain">
+<h1>Prototype chain<a class="headerlink" href="#prototype-chain" title="Link to this heading"></a></h1>
+<section id="explicit-and-implicit-prototypes">
+<h2>Explicit and implicit prototypes<a class="headerlink" href="#explicit-and-implicit-prototypes" title="Link to this heading"></a></h2>
+<p>JavaScript prototypes are divided into explicit prototype property and implicit prototype link.</p>
+<p>The explicit prototype refers to prototype, which is an attribute of the function. This attribute is a pointer, pointing to an object, displaying the properties of the prototype of the modified object. Only the function has this attribute.</p>
+<p>Implicit prototype refers to the built-in property prototype that any object in JavaScript has. Before ES5 there was no standard way to access this built-in property, but most browsers support access through <code class="docutils literal notranslate"><span class="pre">__proto__`.</span> <span class="pre">ES5</span> <span class="pre">has</span> <span class="pre">a</span> <span class="pre">standard</span> <span class="pre">Get</span> <span class="pre">method</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">built-in</span> <span class="pre">attribute</span> <span class="pre">``Object.getPrototypeOf()</span></code>.</p>
+<p>The implicit prototype points to the prototype of the function (constructor) that creates this object. <code class="docutils literal notranslate"><span class="pre">__proto__</span></code> points to the prototype object of the current object, and prototype points to the prototype object of the object constructed with the current function as the constructor.</p>
+<p>The function of explicit prototypes is used to realize prototype-based inheritance and sharing of attributes.
+Implicit prototypes are used to form prototype chains, and are also used to implement prototype-based inheritance. For example, when we access the x attribute in the object obj, if we cannot find it in obj, we will search in sequence along <a href="#id1"><span class="problematic" id="id2">``</span></a>__proto__`.</p>
+<p>Note: Object.prototype This object is an exception, its __proto__ value is null</p>
+</section>
+<section id="the-process-of-new">
+<h2>The process of new<a class="headerlink" href="#the-process-of-new" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>var Person = function(){};
+was p = new person ();</p>
+<p>The new process is divided into the following three steps:
+- <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">p={};</span></code> Initialize an object p
+- <code class="docutils literal notranslate"><span class="pre">p.__proto__</span> <span class="pre">=</span> <span class="pre">Person.prototype;</span></code>
+- <code class="docutils literal notranslate"><span class="pre">Person.call(p);</span></code> Construct p, which can also be called initialization p</p>
+<p>The key is the second step, let’s prove it:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>var Person = function(){};
+was p = new person ();
+alert(p.__proto__ === Person.prototype);</p>
+<p>This code will return true. Instructions that our step 2 is correct.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>var Person = function(){};
+Person.prototype.sayName = function() {
+alert(“My Name is Jacky”);
+};</p>
+<p>Person.prototype.age = 27;
+was p = new person ();
+p.sayName();</p>
+<p>p is an object that refers to Person. We define a sayName method and age property on the Person prototype. When we execute p.age, we will first look up inside this (that is, inside the constructor), and if it is not found, then trace up along the prototype chain.</p>
+<p>How does the upward traceability go upward here? Here you need to use the <code class="docutils literal notranslate"><span class="pre">__proto__</span></code> attribute to link to the prototype (that is, Person.prototype) for searching. Finally, the age attribute was found on the prototype.</p>
+</section>
+<section id="prototype-chain-pollution">
+<h2>Prototype chain pollution<a class="headerlink" href="#prototype-chain-pollution" title="Link to this heading"></a></h2>
+<p>As mentioned above, JavaScript is dynamic inheritance. When modifying its own object through <a href="#id3"><span class="problematic" id="id4">``</span></a>__proto__`, it will affect objects with the same prototype. Therefore, when the key-value pair is user-controlled, prototype chain pollution may occur.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

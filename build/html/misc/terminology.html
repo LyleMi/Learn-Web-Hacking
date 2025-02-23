@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.13. Common Terms &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.14. Industrial control safety" href="ics.html" />
+    <link rel="prev" title="11.12. reptile" href="spider.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">11. other</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audit.html">11.1. Code Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">11.2. WAF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="netdev.html">11.3. Common network equipment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finger.html">11.4. fingerprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.html">11.5. Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json.html">11.6. JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hash.html">11.7. Hash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">11.8. Email security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apt.html">11.9. APT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supplychain.html">11.10. Supply Chain Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nearsource.html">11.11. Near source permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spider.html">11.12. reptile</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.13. Common Terms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">11.13.1. Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-related">11.13.2. Network related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#network-protocol">11.13.2.1. Network protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#routing-system">11.13.2.2. Routing system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#network-applications">11.13.2.3. Network applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kerberos">11.13.2.4. Kerberos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#development-related">11.13.3. Development related</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#safety-related">11.13.4. Safety related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#safe-development">11.13.4.1. Safe development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security-policy">11.13.4.2. Security Policy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security-model">11.13.4.3. Security Model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#attack-related">11.13.5. Attack-related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vulnerability-type">11.13.5.1. Vulnerability Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attack-method">11.13.5.2. Attack method</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#defense-related">11.13.6. Defense-related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#defense-technology">11.13.6.1. Defense Technology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#protective-facilities">11.13.6.2. Protective facilities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#operation-and-maintenance">11.13.7. Operation and maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#certification">11.13.8. Certification</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kerbose">11.13.8.1. Kerbose</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#trusted-computing">11.13.9. Trusted computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloud">11.13.10. cloud</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#container">11.13.10.1. container</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculate">11.13.10.2. calculate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storage">11.13.10.3. storage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wife">11.13.10.4. Wife</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specific-platform">11.13.10.5. Specific platform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-services">11.13.10.6. Other services</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ics.html">11.14. Industrial control safety</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">11. </span>other</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11.13. </span>Common Terms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/misc/terminology.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="common-terms">
+<h1><span class="section-number">11.13. </span>Common Terms<a class="headerlink" href="#common-terms" title="Link to this heading"></a></h1>
+<section id="windows">
+<h2><span class="section-number">11.13.1. </span>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>WMI (Windows Management Instrumentation)</p></li>
+<li><p>ETW (Event Tracing for Windows)</p></li>
+<li><p>WFP (Windows Filtering Platform)</p></li>
+<li><p>MS-RPC (Microsoft Remote Procedure Call)</p></li>
+<li><p>MS-SAMR (Security Account Manager Remote Protocol)</p></li>
+<li><p>MS-SCMR (Service Control Manager Remote Protocol)</p></li>
+<li><p>MS-DRSR (Directory Replication Service Remote Protocol)</p></li>
+<li><p>MS-TSCH (Task Scheduler Service Remoting Protocol)</p></li>
+<li><p>DCOM (Distributed Component Object Model)</p></li>
+</ul>
+</section>
+<section id="network-related">
+<h2><span class="section-number">11.13.2. </span>Network related<a class="headerlink" href="#network-related" title="Link to this heading"></a></h2>
+<section id="network-protocol">
+<h3><span class="section-number">11.13.2.1. </span>Network protocol<a class="headerlink" href="#network-protocol" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Lightweight Directory Access Protocol (LDAP)</p></li>
+<li><p>Distinguished Name (DN)</p></li>
+<li><p>Relative Distinguished Name (RDN)</p></li>
+<li><p>Server Message Block (SMB)</p></li>
+<li><p>Common Internet File System (CIFS)</p></li>
+<li><p>SMTP (Simple Mail Transfer Protocol)</p></li>
+<li><p>Simple Network Management Protocol (SNMP)</p></li>
+<li><p>POP3 (Post Office Protocol 3)</p></li>
+<li><p>IMAP (Internet Mail Access Protocol)</p></li>
+<li><p>HTTP (HyperText Transfer Protocol)</p></li>
+<li><p>HTTPS (HyperText Transfer Protocol over Secure Socket Layer)</p></li>
+<li><p>Dynamic Host Configuration Protocol (DHCP)</p></li>
+<li><p>Remote Procedure Call (RPC)</p></li>
+<li><p>Java Debug Wire Protocol (JDWP)</p></li>
+<li><p>Network File System (NFS)</p></li>
+<li><p>Service Principal Names (SPN)</p></li>
+<li><p>Simple Authentication and Security Layer (SASL)</p></li>
+<li><p>Link-Local Multicast Name Resolution, LLMNR</p></li>
+<li><p>Distributed Computing Environment / Remote Procedure Calls, DCE/RPC)</p></li>
+</ul>
+</section>
+<section id="routing-system">
+<h3><span class="section-number">11.13.2.2. </span>Routing system<a class="headerlink" href="#routing-system" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Autonomous System (AS)</p></li>
+<li><p>Interior Gateway Protocol (IGP)</p></li>
+<li><p>External Gateway Protocol (EGP)</p></li>
+<li><p>Interdomain routing</p></li>
+<li><p>Inter-domain routing</p></li>
+<li><p>Routing Information Protocol (RIP)</p></li>
+<li><p>Open Shortest Path First (OSPF)</p></li>
+<li><p>Dynamic Routing Protocols (DRP)</p></li>
+<li><p>First Hop Redundancy Protocols (FHRP)</p></li>
+<li><p>Hot Standby Router Protocol (HSRP)</p></li>
+<li><p>Virtual Router Redundancy Protocol (VRRP)</p></li>
+<li><p>Gateway Load Balancing Protocol (GLBP)</p></li>
+<li><p>Network Address Translation (NAT)</p></li>
+<li><p>Point-to-Point Protocol (PPP)</p></li>
+<li><p>Spanning Tree Protocol (STP)</p></li>
+<li><p>QUIC (Quick UDP Internet Connections)</p></li>
+</ul>
+</section>
+<section id="network-applications">
+<h3><span class="section-number">11.13.2.3. </span>Network applications<a class="headerlink" href="#network-applications" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Certificate Transparency (CT)</p></li>
+<li><p>DNS Certification Authority Authorization (CAA)</p></li>
+<li><p>Application Level Gateway (ALG)</p></li>
+</ul>
+</section>
+<section id="kerberos">
+<h3><span class="section-number">11.13.2.4. </span>Kerberos<a class="headerlink" href="#kerberos" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Key Distribution Center (KDC)</p></li>
+<li><p>Authentication Server (Authentication Server, AS)</p></li>
+<li><p>Ticket Granting Server (TGS)</p></li>
+</ul>
+</section>
+</section>
+<section id="development-related">
+<h2><span class="section-number">11.13.3. </span>Development related<a class="headerlink" href="#development-related" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>REST (Representation State Transformation)</p></li>
+</ul>
+</section>
+<section id="safety-related">
+<h2><span class="section-number">11.13.4. </span>Safety related<a class="headerlink" href="#safety-related" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Disadvantages (defect / mistake)</p></li>
+<li><p>Software weaknesses in implementation and design</p></li>
+<li><p>Disadvantages are collective names for defects and defects</p></li>
+<li><p>Flaws (bug)</p></li>
+<li><p>Software disadvantages at the implementation level</p></li>
+<li><p>Easy to be discovered and repaired</p></li>
+<li><p>For example: Buffer overflow</p></li>
+<li><p>Flaw (flaw)</p></li>
+<li><p>A design disadvantage that is difficult to detect</p></li>
+<li><p>Flaws often require manual analysis to be discovered</p></li>
+<li><p>Error handling or recovery module in the software system, resulting in insecure or failure of the program</p></li>
+<li><p>Vulnerability (vulnerability)</p></li>
+<li><p>Can be used for defects or defects that violate security policies</p></li>
+<li><p>Interactive Application Security Testing (IAST)</p></li>
+<li><p>Dynamic Application Security Testing (DAST)</p></li>
+<li><p>Static Application Security Testing (SAST)</p></li>
+<li><p>ATT&amp;CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&amp;CK)</p></li>
+<li><p>Lateral Movement</p></li>
+<li><p>Breach and Attack Simulation (BAS)</p></li>
+</ul>
+<section id="safe-development">
+<h3><span class="section-number">11.13.4.1. </span>Safe development<a class="headerlink" href="#safe-development" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Security Information Event Management (SIEM)</p></li>
+<li><p>Security Orchestration, Automation and Response, SOAR</p></li>
+<li><p>SDL (Security Development Lifecycle)</p></li>
+</ul>
+</section>
+<section id="security-policy">
+<h3><span class="section-number">11.13.4.2. </span>Security Policy<a class="headerlink" href="#security-policy" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Cross-Origin Resource Sharing, CORS</p></li>
+<li><p>Sender Policy Framework (SPF)</p></li>
+<li><p>DomainKeys Identified Mail (DKIM)</p></li>
+<li><p>Domain-based Message Authentication, Reporting and Conformance, DMARC</p></li>
+<li><p>DNSSEC (The Domain Name System Security Extensions)</p></li>
+<li><p>DNS-based Authentication of Named Entities, DANE</p></li>
+</ul>
+</section>
+<section id="security-model">
+<h3><span class="section-number">11.13.4.3. </span>Security Model<a class="headerlink" href="#security-model" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Building Security In Maturity Model (BSIMM)</p></li>
+</ul>
+</section>
+</section>
+<section id="attack-related">
+<h2><span class="section-number">11.13.5. </span>Attack-related<a class="headerlink" href="#attack-related" title="Link to this heading"></a></h2>
+<section id="vulnerability-type">
+<h3><span class="section-number">11.13.5.1. </span>Vulnerability Type<a class="headerlink" href="#vulnerability-type" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Cross Site Scripting (XSS)</p></li>
+<li><p>Cross-Site Request Forgery (CSRF)</p></li>
+<li><p>Man-in-the-middle, MITM</p></li>
+<li><p>Server Side Request Forgery (SSRF)</p></li>
+<li><p>Advanced Persistent Threat (APT)</p></li>
+<li><p>Remote Command Execute (RCE)</p></li>
+<li><p>Remote Code Execute (RCE)</p></li>
+<li><p>Out-of-band data (Out-Of-Band, OOB)</p></li>
+</ul>
+</section>
+<section id="attack-method">
+<h3><span class="section-number">11.13.5.2. </span>Attack method<a class="headerlink" href="#attack-method" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Spear Phishing</p></li>
+<li><p>Water Holing</p></li>
+<li><p>Distributed Denial of Service (DDoS)</p></li>
+</ul>
+</section>
+</section>
+<section id="defense-related">
+<h2><span class="section-number">11.13.6. </span>Defense-related<a class="headerlink" href="#defense-related" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>IoC (Indicators of Compromise)</p></li>
+<li><p>IoA (Indicators of Activity)</p></li>
+</ul>
+<section id="defense-technology">
+<h3><span class="section-number">11.13.6.1. </span>Defense Technology<a class="headerlink" href="#defense-technology" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Network-based Detection and Response (NDR)</p></li>
+<li><p>Endpoint Detection and Response (EDR)</p></li>
+<li><p>Managed Detection and Response (MDR)</p></li>
+<li><p>Extended Detection and Response (XDR)</p></li>
+<li><p>Adaptive Security Architecture (ASA)</p></li>
+<li><p>Zero Trust Network Access (ZTNA)</p></li>
+<li><p>Cloud Security Posture Management (CSPM)</p></li>
+</ul>
+</section>
+<section id="protective-facilities">
+<h3><span class="section-number">11.13.6.2. </span>Protective facilities<a class="headerlink" href="#protective-facilities" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Intrusion Detection System (IDS)</p></li>
+<li><p>Host-based Intrusion Detection System (HIDS)</p></li>
+<li><p>Host Intrusion Prevent System (HIPS)</p></li>
+<li><p>RASP (Runtime Application Self-protection)</p></li>
+<li><p>Unified Endpoint Management (UEM)</p></li>
+</ul>
+</section>
+</section>
+<section id="operation-and-maintenance">
+<h2><span class="section-number">11.13.7. </span>Operation and maintenance<a class="headerlink" href="#operation-and-maintenance" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Intelligent Intelligence for IT Operations, AIOps</p></li>
+<li><p>Risk and Vulnerability Assessments (RVA)</p></li>
+<li><p>Computer Emergency Response Team (CERT)</p></li>
+</ul>
+</section>
+<section id="certification">
+<h2><span class="section-number">11.13.8. </span>Certification<a class="headerlink" href="#certification" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Single Sign-On (Single Sign-On, SSO)</p></li>
+<li><p>Two-Factor Authentication (2FA)</p></li>
+<li><p>Multi-Factor Authentication (MFA)</p></li>
+<li><p>One-Time Password (OTP)</p></li>
+</ul>
+<section id="kerbose">
+<h3><span class="section-number">11.13.8.1. </span>Kerbose<a class="headerlink" href="#kerbose" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Authentication Server (Authentication Server, AS)</p></li>
+<li><p>Key Distribution Center (KDC)</p></li>
+<li><p>Ticket Granting Ticket, TGT</p></li>
+<li><p>Ticket Granting Server (TGS)</p></li>
+<li><p>Service Server, SS)</p></li>
+</ul>
+</section>
+</section>
+<section id="trusted-computing">
+<h2><span class="section-number">11.13.9. </span>Trusted computing<a class="headerlink" href="#trusted-computing" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Trusted Platform Module (TPM)</p></li>
+</ul>
+</section>
+<section id="cloud">
+<h2><span class="section-number">11.13.10. </span>cloud<a class="headerlink" href="#cloud" title="Link to this heading"></a></h2>
+<section id="container">
+<h3><span class="section-number">11.13.10.1. </span>container<a class="headerlink" href="#container" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Container Runtime Interface (CRI)</p></li>
+<li><p>Open Container Initiative, OCI</p></li>
+<li><p>Open Container Format (OCF)</p></li>
+</ul>
+</section>
+<section id="calculate">
+<h3><span class="section-number">11.13.10.2. </span>calculate<a class="headerlink" href="#calculate" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Elastic Compute Cloud (EC2)</p></li>
+<li><p>Alibaba Cloud Elastic Compute Service (ECS)</p></li>
+<li><p>Cloud Virtual Machine (CVM)</p></li>
+</ul>
+</section>
+<section id="storage">
+<h3><span class="section-number">11.13.10.3. </span>storage<a class="headerlink" href="#storage" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Simple Storage Service (Simple Storage Service, S3)</p></li>
+<li><p>Object Storage (COS)</p></li>
+</ul>
+</section>
+<section id="wife">
+<h3><span class="section-number">11.13.10.4. </span>Wife<a class="headerlink" href="#wife" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Function as a Service (FaaS)</p></li>
+<li><p>Container as a Service (CaaS)</p></li>
+<li><p>Software as a Service (SaaS)</p></li>
+<li><p>Platform as a Service (PaaS)</p></li>
+<li><p>Insfrastructure as a Service (IaaS)</p></li>
+</ul>
+</section>
+<section id="specific-platform">
+<h3><span class="section-number">11.13.10.5. </span>Specific platform<a class="headerlink" href="#specific-platform" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>OCI (Oracle Cloud Infrastructure)</p></li>
+</ul>
+</section>
+<section id="other-services">
+<h3><span class="section-number">11.13.10.6. </span>Other services<a class="headerlink" href="#other-services" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Instance Metadata Service (IMDS)</p></li>
+<li><p>Continuous Integration (CI)</p></li>
+<li><p>Continuous Deployment (CD)</p></li>
+<li><p>Edge Computing Machine (ECM)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="spider.html" class="btn btn-neutral float-left" title="11.12. reptile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ics.html" class="btn btn-neutral float-right" title="11.14. Industrial control safety" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

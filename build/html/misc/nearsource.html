@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.11. Near source permeability &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.12. reptile" href="spider.html" />
+    <link rel="prev" title="11.10. Supply Chain Security" href="supplychain.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">11. other</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="audit.html">11.1. Code Audit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">11.2. WAF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="netdev.html">11.3. Common network equipment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finger.html">11.4. fingerprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicode.html">11.5. Unicode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json.html">11.6. JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hash.html">11.7. Hash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">11.8. Email security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apt.html">11.9. APT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supplychain.html">11.10. Supply Chain Security</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.11. Near source permeability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usb-attack">11.11.1. USB attack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#badusb">11.11.1.1. BadUSB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#autorun">11.11.1.2. Autorun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb-killer">11.11.1.3. USB Killer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#side-channel">11.11.1.4. Side channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hid-attack">11.11.1.5. HID Attack</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#in">11.11.2. In</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#password-blasting">11.11.2.1. Password blasting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#signal-suppression">11.11.2.2. Signal suppression</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#access-control">11.11.3. Access control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#electromagnetic-pulse">11.11.3.1. Electromagnetic pulse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ic-card">11.11.3.2. IC card</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-link">11.11.4. Reference link</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spider.html">11.12. reptile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminology.html">11.13. Common Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ics.html">11.14. Industrial control safety</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">11. </span>other</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11.11. </span>Near source permeability</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/misc/nearsource.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="near-source-permeability">
+<h1><span class="section-number">11.11. </span>Near source permeability<a class="headerlink" href="#near-source-permeability" title="Link to this heading"></a></h1>
+<section id="usb-attack">
+<h2><span class="section-number">11.11.1. </span>USB attack<a class="headerlink" href="#usb-attack" title="Link to this heading"></a></h2>
+<section id="badusb">
+<h3><span class="section-number">11.11.1.1. </span>BadUSB<a class="headerlink" href="#badusb" title="Link to this heading"></a></h3>
+<p>Perform malicious actions by reprogramming the internal microcontroller of the USB device, such as registering as a keyboard device, sending specific keys for malicious actions.</p>
+</section>
+<section id="autorun">
+<h3><span class="section-number">11.11.1.2. </span>Autorun<a class="headerlink" href="#autorun" title="Link to this heading"></a></h3>
+<p>Depending on the host configuration, some operating systems will automatically execute predetermined files located on the USB device memory. Malware can be executed in this way.</p>
+</section>
+<section id="usb-killer">
+<h3><span class="section-number">11.11.1.3. </span>USB Killer<a class="headerlink" href="#usb-killer" title="Link to this heading"></a></h3>
+<p>The device is permanently destroyed by special USB devices based on electrical and other methods.</p>
+</section>
+<section id="side-channel">
+<h3><span class="section-number">11.11.1.4. </span>Side channel<a class="headerlink" href="#side-channel" title="Link to this heading"></a></h3>
+<p>Some monitoring/test channel transmission devices are added by modifying USB.</p>
+</section>
+<section id="hid-attack">
+<h3><span class="section-number">11.11.1.5. </span>HID Attack<a class="headerlink" href="#hid-attack" title="Link to this heading"></a></h3>
+<p>HID (human interface device) refers to a human-computer interaction device used to provide data input to a computer, such as a keyboard, a mouse, etc. HID attack refers to an attacker emulating a special USB device into a keyboard and performing a predetermined malicious operation once it is connected to the computer. HID attacks can be implemented based on Android devices, data line devices, etc.</p>
+</section>
+</section>
+<section id="in">
+<h2><span class="section-number">11.11.2. </span>In<a class="headerlink" href="#in" title="Link to this heading"></a></h2>
+<section id="password-blasting">
+<h3><span class="section-number">11.11.2.1. </span>Password blasting<a class="headerlink" href="#password-blasting" title="Link to this heading"></a></h3>
+<p>Based on WPA2 verification method, Wi-Fi can crack offline passwords by grabbing handbags.</p>
+</section>
+<section id="signal-suppression">
+<h3><span class="section-number">11.11.2.2. </span>Signal suppression<a class="headerlink" href="#signal-suppression" title="Link to this heading"></a></h3>
+<p>A high-powered device can be used to capture the handshake packet and mimic the target AP, thereby enabling a man-in-the-middle attack.</p>
+</section>
+</section>
+<section id="access-control">
+<h2><span class="section-number">11.11.3. </span>Access control<a class="headerlink" href="#access-control" title="Link to this heading"></a></h2>
+<section id="electromagnetic-pulse">
+<h3><span class="section-number">11.11.3.1. </span>Electromagnetic pulse<a class="headerlink" href="#electromagnetic-pulse" title="Link to this heading"></a></h3>
+<p>In some electronic systems with electronic access control and electronic password locks, integrated circuits are more sensitive to electromagnetic pulses, and can destroy the equipment by adding electromagnetic pulses (EMP) to achieve the opening effect.</p>
+</section>
+<section id="ic-card">
+<h3><span class="section-number">11.11.3.2. </span>IC card<a class="headerlink" href="#ic-card" title="Link to this heading"></a></h3>
+<p>Equipment based on chameleons and other devices can use simulation, cracking, and copying IC cards to crack access control.</p>
+</section>
+</section>
+<section id="reference-link">
+<h2><span class="section-number">11.11.4. </span>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.secpulse.com/archives/123723.html">Near Source Penetration Hardware Guide</a></p></li>
+<li><p><a class="reference external" href="https://mp.weixin.qq.com/s/dmh3dDt0BaZYIcWdSTsQcg">Near source penetration of red and blue confrontation</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="supplychain.html" class="btn btn-neutral float-left" title="11.10. Supply Chain Security" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="spider.html" class="btn btn-neutral float-right" title="11.12. reptile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

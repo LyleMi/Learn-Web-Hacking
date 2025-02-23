@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.4. Sniffing Tool &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.5. SQLMap usage" href="sqlmap.html" />
+    <link rel="prev" title="10.3. Traffic related" href="traffic.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">10. Quick manual check</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="brute.html">10.1. Blasting tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">10.2. Download Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traffic.html">10.3. Traffic related</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.4. Sniffing Tool</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nmap">10.4.1. Nmap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#specify-the-target">10.4.1.1. Specify the target</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#host-discovery">10.4.1.2. Host Discovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#port-scan">10.4.1.3. Port Scan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#service-and-version-detection">10.4.1.4. Service and version detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operating-system-scan">10.4.1.5. Operating system scan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#time-and-performance">10.4.1.6. Time and performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#escape-detection-related">10.4.1.7. Escape detection related</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output">10.4.1.8. Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#details-and-debugging">10.4.1.9. Details and debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#masscan">10.4.2. Masscan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compilation">10.4.2.1. Compilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-line-options">10.4.2.2. Command line options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqlmap.html">10.5. SQLMap usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">10. </span>Quick manual check</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.4. </span>Sniffing Tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/manual/sniffing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sniffing-tool">
+<h1><span class="section-number">10.4. </span>Sniffing Tool<a class="headerlink" href="#sniffing-tool" title="Link to this heading"></a></h1>
+<section id="nmap">
+<h2><span class="section-number">10.4.1. </span>Nmap<a class="headerlink" href="#nmap" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">nmap</span> <span class="pre">[&lt;scan</span> <span class="pre">type&gt;...]</span> <span class="pre">[&lt;option&gt;]</span> <span class="pre">{&lt;scan</span> <span class="pre">target</span> <span class="pre">description&gt;}</span></code></p>
+<section id="specify-the-target">
+<h3><span class="section-number">10.4.1.1. </span>Specify the target<a class="headerlink" href="#specify-the-target" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>CIDR style <code class="docutils literal notranslate"><span class="pre">192.168.1.0/24</span></code></p></li>
+<li><p>Comma splitting <code class="docutils literal notranslate"><span class="pre">www.baidu.com,www.zhihu.com</span></code></p></li>
+<li><p>Dividing line <code class="docutils literal notranslate"><span class="pre">10.22-25.43.32</span></code></p></li>
+<li><p>From file <code class="docutils literal notranslate"><span class="pre">-iL</span> <span class="pre">&lt;inputfile&gt;`</span></code></p></li>
+<li><p>Exclude unwanted host <code class="docutils literal notranslate"><span class="pre">--exclude</span> <span class="pre">&lt;host1</span> <span class="pre">[,</span> <span class="pre">host2]</span> <span class="pre">[,</span> <span class="pre">host3]</span> <span class="pre">...</span> <span class="pre">&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">--excludefile</span> <span class="pre">&lt;excludefile&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="host-discovery">
+<h3><span class="section-number">10.4.1.2. </span>Host Discovery<a class="headerlink" href="#host-discovery" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-sL</span></code> List Scan - simply list targets to scan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-sn/-sP</span></code> Ping Scan - disable port scan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-Pn</span></code> Treat all hosts as online – skip host discovery</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-sS/sT/sA/sW/sM</span></code> TCP SYN/Connect()/ACK/Window/Maimon scans</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-sU</span></code> UDP Scan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-sN/sF/sX</span></code> TCP Null, FIN, and Xmas scans</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">widths<span class="colon">:</span></dt>
+<dd class="field-odd"><p>15 15 25 25 20</p>
+</dd>
+<dt class="field-even">header-rows<span class="colon">:</span></dt>
+<dd class="field-even"><p>1</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><ul>
+<li><p>Name</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Package tags</p></li>
+<li><p>Port OPEN</p></li>
+<li><p>Port CLOSE</p></li>
+<li><p>Features</p></li>
+</ul>
+<ul class="simple">
+<li><ul>
+<li><p>TCP SYN scan</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>SYN</p></li>
+<li><p>Reply ACK+SYN</p></li>
+<li><p>Reply to RST</p></li>
+<li><p>The application has no logs, but is easily discovered</p></li>
+</ul>
+<ul class="simple">
+<li><ul>
+<li><p>Full connection scan</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>SYN</p></li>
+<li><p>Reply ACK+SYN</p></li>
+<li><p>Reply to RST</p></li>
+<li><p>Easy to be discovered</p></li>
+</ul>
+<ul class="simple">
+<li><ul>
+<li><p>ACK scan</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>ACK</p></li>
+<li><p>Reply to RST</p></li>
+<li><p>The bag is discarded</p></li>
+<li><p>.</p></li>
+</ul>
+<ul class="simple">
+<li><ul>
+<li><p>FIN scan</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>FIN</p></li>
+<li><p>The bag is discarded</p></li>
+<li><p>Reply to RST</p></li>
+<li><p>Need to wait for timeout, low efficiency</p></li>
+</ul>
+<ul class="simple">
+<li><ul>
+<li><p>TCP Xmas Scan</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>FIN+URG+PSH</p></li>
+<li><p>The bag is discarded</p></li>
+<li><p>Reply to RST</p></li>
+<li><p>Need to wait for timeout, inefficient; not applicable to all operating systems</p></li>
+</ul>
+<ul class="simple">
+<li><ul>
+<li><p>TCP NULL Scan</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>NULL</p></li>
+<li><p>The bag is discarded</p></li>
+<li><p>Reply to RST</p></li>
+<li><p>Need to wait for timeout, inefficient; not applicable to all operating systems</p></li>
+</ul>
+</section>
+<section id="port-scan">
+<h3><span class="section-number">10.4.1.3. </span>Port Scan<a class="headerlink" href="#port-scan" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--scanflags</span></code> Customized TCP scanning</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-P0</span></code> without ping</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PS</span> <span class="pre">[port</span> <span class="pre">list]</span></code> (TCP SYN ping) // need root on Unix</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PA</span> <span class="pre">[port</span> <span class="pre">list]</span></code> (TCP ACK ping)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PU</span> <span class="pre">[port</span> <span class="pre">list]</span></code> (UDP ping)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PR</span> <span class="pre">(Arp</span> <span class="pre">ping)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&lt;port</span> <span class="pre">message&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> Quick Scan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> does not use random order scans</p></li>
+</ul>
+</section>
+<section id="service-and-version-detection">
+<h3><span class="section-number">10.4.1.4. </span>Service and version detection<a class="headerlink" href="#service-and-version-detection" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-sV</span></code> version detection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--allports</span></code> does not exclude any ports for version detection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--version-intensity</span> <span class="pre">&lt;intensity&gt;</span></code> Set version scan intensity</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--version-light</span></code> Turn on lightweight mode // Level 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--version-all</span></code> Try each probe // Level 9</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--version-trace</span></code> Tracking version scanning activity</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-sR</span> <span class="pre">RPC</span></code> scan</p></li>
+</ul>
+</section>
+<section id="operating-system-scan">
+<h3><span class="section-number">10.4.1.5. </span>Operating system scan<a class="headerlink" href="#operating-system-scan" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-O</span></code> Enable operating system detection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--osscan-limit</span></code> performs operating system detection for specified targets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--osscan-guess</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--fuzzy</span></code> speculate on the operating system detection results</p></li>
+</ul>
+</section>
+<section id="time-and-performance">
+<h3><span class="section-number">10.4.1.6. </span>Time and performance<a class="headerlink" href="#time-and-performance" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Resize the parallel scan group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--min-hostgroup&lt;milliseconds&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--max-hostgroup&lt;milliseconds&gt;</span></code></p></li>
+<li><p>Adjust the parallelism of the detection packets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--min-parallelism&lt;milliseconds&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--max-parallelism&lt;milliseconds&gt;</span></code></p></li>
+<li><p>Adjust the detection message timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--min_rtt_timeout</span> <span class="pre">&lt;milliseconds&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--max-rtt-timeout</span> <span class="pre">&lt;milliseconds&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--initial-rtt-timeout</span> <span class="pre">&lt;milliseconds&gt;</span></code></p></li>
+<li><p>Give up low-speed target host</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--host-timeout&lt;milliseconds&gt;</span></code></p></li>
+<li><p>Adjust the time interval of the detection message</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--scan-delay&lt;milliseconds&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--max_scan-delay&lt;milliseconds&gt;</span></code></p></li>
+<li><p>Set time template</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-T</span> <span class="pre">&lt;Paranoid|Sneaky|Polite|Normal|Aggressive|Insane&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-T&lt;0-5&gt;</span></code> (The bigger the faster)</p></li>
+</ul>
+</section>
+<section id="escape-detection-related">
+<h3><span class="section-number">10.4.1.7. </span>Escape detection related<a class="headerlink" href="#escape-detection-related" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code> message segmentation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--mtu</span></code> Use the specified MTU</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-D&lt;decoy1[,</span> <span class="pre">decoy2][,</span> <span class="pre">ME],</span> <span class="pre">...&gt;</span></code> Use bait to conceal scan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-S&lt;IP_Address&gt;</span></code> Source address coaxing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">&lt;interface&gt;</span></code> Use the specified interface</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--source-port&lt;portnumber&gt;;-g&lt;portnumber&gt;</span></code> Source port coaxing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--data-length&lt;number&gt;</span></code> Attach random data when sending a message</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--ttl</span> <span class="pre">&lt;value&gt;</span></code> Set ttl</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--randomize-hosts</span></code> Random order of target hosts</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--spoof-mac&lt;macaddress,</span> <span class="pre">prefix,</span> <span class="pre">orvendorname&gt;</span></code> MAC address coaxing</p></li>
+</ul>
+</section>
+<section id="output">
+<h3><span class="section-number">10.4.1.8. </span>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-oN&lt;filespec&gt;</span></code> standard output</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-oX&lt;filespec&gt;</span></code> XML output</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-oS&lt;filespec&gt;</span></code> ScRipTKIdd|3oUTpuT</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-oG&lt;filespec&gt;</span></code> Grep output</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-oA&lt;basename&gt;</span></code> output to all formats</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--open</span></code> only outputs possible open port information</p></li>
+</ul>
+</section>
+<section id="details-and-debugging">
+<h3><span class="section-number">10.4.1.9. </span>Details and debugging<a class="headerlink" href="#details-and-debugging" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-v</span></code> information detail</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">[level]</span></code> debug level</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--packet-trace</span></code> Tracking of sent and received messages</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--iflist</span></code> List interfaces and routes</p></li>
+</ul>
+</section>
+</section>
+<section id="masscan">
+<h2><span class="section-number">10.4.2. </span>Masscan<a class="headerlink" href="#masscan" title="Link to this heading"></a></h2>
+<section id="compilation">
+<h3><span class="section-number">10.4.2.1. </span>Compilation<a class="headerlink" href="#compilation" title="Link to this heading"></a></h3>
+<p>sudo apt-get install git gcc make libpcap-dev
+git clone <a class="reference external" href="https://github.com/robertdavidgraham/masscan">https://github.com/robertdavidgraham/masscan</a>
+cd masscan
+make -j</p>
+</section>
+<section id="command-line-options">
+<h3><span class="section-number">10.4.2.2. </span>Command line options<a class="headerlink" href="#command-line-options" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--ports</span></code> Specify the port range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--rate</span></code> Specify the rate</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--source-ip</span></code> Specify the source IP</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="traffic.html" class="btn btn-neutral float-left" title="10.3. Traffic related" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sqlmap.html" class="btn btn-neutral float-right" title="10.5. SQLMap usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

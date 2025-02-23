@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.2. Domain name information &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.3. Port information" href="port.html" />
+    <link rel="prev" title="3.1. Network portal/information" href="network.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Information collection</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="network.html">3.1. Network portal/information</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Domain name information</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#whois">3.2.1. Whois</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-engine-search">3.2.2. Search Engine Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#third-party-inquiry">3.2.3. Third-party inquiry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asn-information-association">3.2.4. ASN information association</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#domain-name-relevance">3.2.5. Domain name relevance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#website-information-utilization">3.2.6. Website information utilization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#https-certificate">3.2.7. HTTPS certificate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#certificate-transparency">3.2.7.1. Certificate transparency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#san">3.2.7.2. SAN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#domain-transmission-vulnerability">3.2.8. Domain Transmission Vulnerability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#passive-dns">3.2.9. Passive DNS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-analysis">3.2.10. General analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#important-records">3.2.11. Important records</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cname">3.2.11.1. CNAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mx-record">3.2.11.2. MX Record</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ns-records">3.2.11.3. NS Records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spf-record">3.2.11.4. SPF record</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cdn">3.2.12. CDN</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cdn-verification">3.2.12.1. CDN verification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#domain-name-search">3.2.12.2. Domain name search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#history-search">3.2.12.3. History search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#email-information">3.2.12.4. Email information</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#breast-explosion">3.2.13. Breast explosion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cache-detection-technology">3.2.14. Cache detection technology</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="port.html">3.3. Port information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="site.html">3.4. Site information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="searchEngine.html">3.5. Search engine utilization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="social.html">3.6. Social Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref.html">3.7. Reference link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3. </span>Information collection</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Domain name information</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/info/domain.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="domain-name-information">
+<h1><span class="section-number">3.2. </span>Domain name information<a class="headerlink" href="#domain-name-information" title="Link to this heading"></a></h1>
+<section id="whois">
+<h2><span class="section-number">3.2.1. </span>Whois<a class="headerlink" href="#whois" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://www.whois.com/">Whois</a> A database that can query whether a domain name is registered and the detailed information of the domain name is registered. Some useful information may exist, such as the domain name owner, the domain name registrar, Email, etc.</p>
+</section>
+<section id="search-engine-search">
+<h2><span class="section-number">3.2.2. </span>Search Engine Search<a class="headerlink" href="#search-engine-search" title="Link to this heading"></a></h2>
+<p>Search engines usually record domain name information, which can be queried through the syntax of <code class="docutils literal notranslate"><span class="pre">site:</span> <span class="pre">domain</span></code>.</p>
+</section>
+<section id="third-party-inquiry">
+<h2><span class="section-number">3.2.3. </span>Third-party inquiry<a class="headerlink" href="#third-party-inquiry" title="Link to this heading"></a></h2>
+<p>There are quite a lot of third-party applications in the network that provide subdomain query functions. Here are some examples, and more websites can be found in the 8.1 tool list.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dnsdumpster.com/">DNSDumpster</a></p></li>
+<li><p><cite>virusortal &lt;https://www.virustom.com/&gt;</cite> _</p></li>
+<li><p>CrtSearch</p></li>
+<li><p>threatminer</p></li>
+<li><p>Censys</p></li>
+</ul>
+</section>
+<section id="asn-information-association">
+<h2><span class="section-number">3.2.4. </span>ASN information association<a class="headerlink" href="#asn-information-association" title="Link to this heading"></a></h2>
+<p>An Autonomous System (AS) in the network is a small unit that has the right to autonomously decide what routing protocol should be used in this system. This network unit can be a simple network or a network group controlled by one or more ordinary network administrators, which is a single managed network unit (such as a university, a business or a company) Individual).</p>
+<p>An autonomous system is sometimes called a routing domain. An autonomous system will assign a globally unique 16-digit number, which is called the Autonomous System Number (ASN). Therefore, the possible related IP can be found through the ASN number, for example:</p>
+<p>whois -h whois.radb.net – ‘-i origin AS111111’ | grep -Eo “([0-9.]+){4}/[0-9]+” | uniq
+nmap –script targets-asn –script-args targets-asn.asn=15169</p>
+</section>
+<section id="domain-name-relevance">
+<h2><span class="section-number">3.2.5. </span>Domain name relevance<a class="headerlink" href="#domain-name-relevance" title="Link to this heading"></a></h2>
+<p>Multiple domain names registered by the same enterprise/individual are usually related, such as using the same email address to register, using the same filing, and the same person in charge to register, etc. This method can be used to find the associated domain names. . One operation step is as follows:</p>
+<ul class="simple">
+<li><p>Query the domain name registration email address</p></li>
+<li><p>Query the registration number through the domain name</p></li>
+<li><p>Query the domain name through the registration number</p></li>
+<li><p>Counter check the registration email</p></li>
+<li><p>Counter-check registrants</p></li>
+<li><p>The domain name query through the registrant is inquired about the email address</p></li>
+<li><p>Search the domain name through the previous email</p></li>
+<li><p>Query the subdomain of the domain name obtained above</p></li>
+</ul>
+<p>In addition, when some companies register domain names, they will register domain names with different tlds, such as example.com / example.cn. However, the domain names of different tlds may also be registered by other people and need to be identified separately.</p>
+</section>
+<section id="website-information-utilization">
+<h2><span class="section-number">3.2.6. </span>Website information utilization<a class="headerlink" href="#website-information-utilization" title="Link to this heading"></a></h2>
+<p>There is quite a lot of information in the website, and some information may be exposed by the website itself, various security policies, settings, etc.</p>
+<p>The interaction of the website itself is usually not limited to a single domain name, but will interact with other subdomains. For this case, other subdomain information in the site can be collected by crawling the website. This information usually appears in JavaScript files, resource file links, etc.</p>
+<p>Website security policies such as cross-domain policies, CSP rules, etc. usually also contain information about relevant domain names. Sometimes multiple domain names use the same SSL/TLS certificate for convenience, so sometimes relevant domain name information can be obtained through the certificate.</p>
+</section>
+<section id="https-certificate">
+<h2><span class="section-number">3.2.7. </span>HTTPS certificate<a class="headerlink" href="#https-certificate" title="Link to this heading"></a></h2>
+<section id="certificate-transparency">
+<h3><span class="section-number">3.2.7.1. </span>Certificate transparency<a class="headerlink" href="#certificate-transparency" title="Link to this heading"></a></h3>
+<p>To ensure that HTTPS certificates are not misissued or forged, the CA will record the certificates in a log that is publicly verified, tamperable and only attached content, and any interested party can view all certificates issued by the Authorization Center. Therefore, the relevant domain name can be obtained by querying the authorized certificate.</p>
+</section>
+<section id="san">
+<h3><span class="section-number">3.2.7.2. </span>SAN<a class="headerlink" href="#san" title="Link to this heading"></a></h3>
+<p>Subject Alternate Name (SAN), simply put, when multiple domain names are needed and used for various services, use SAN certificates more often. SAN allows the use of the subjectAltName field in a security certificate to associate multiple values with the certificate, which are called subject alternative names.</p>
+</section>
+</section>
+<section id="domain-transmission-vulnerability">
+<h2><span class="section-number">3.2.8. </span>Domain Transmission Vulnerability<a class="headerlink" href="#domain-transmission-vulnerability" title="Link to this heading"></a></h2>
+<p>DNS domain transfer refers to the redundant backup server refreshing its own domain (zone) database using data from the primary server. This is to prevent the master server from affecting the resolution of the entire domain name when it is unexpectedly unavailable.</p>
+<p>Generally speaking, domain transfer operations should only allow trusted backup DNS servers to initiate, but if authorization is misconfigured, any user can obtain domain name information for the entire DNS server. This error authorization is called a DNS domain transmission vulnerability.</p>
+</section>
+<section id="passive-dns">
+<h2><span class="section-number">3.2.9. </span>Passive DNS<a class="headerlink" href="#passive-dns" title="Link to this heading"></a></h2>
+<p>Passive DNS passively records responses from different domain name servers from recursive domain name servers to form a database. Using the Passive DNS database, you can know which IPs have been bound to the domain name, which domain names have been associated with, and when the domain name was the earliest/recently appeared, providing great help for testing. Virustotal, passivetotal, CIRCL and other websites all provide query of Passive DNS database.</p>
+</section>
+<section id="general-analysis">
+<h2><span class="section-number">3.2.10. </span>General analysis<a class="headerlink" href="#general-analysis" title="Link to this heading"></a></h2>
+<p>General parsing is to parse all A records of <cite>*.example.com</cite> to a certain IP address. This situation needs to be handled when enumerating subdomains in order to prevent a large number of invalid records from being generated.</p>
+</section>
+<section id="important-records">
+<h2><span class="section-number">3.2.11. </span>Important records<a class="headerlink" href="#important-records" title="Link to this heading"></a></h2>
+<section id="cname">
+<h3><span class="section-number">3.2.11.1. </span>CNAME<a class="headerlink" href="#cname" title="Link to this heading"></a></h3>
+<p>CNAME is Canonical name, also known as alias, which points the domain name to another domain name. It may contain information about other related services. The CDN acceleration feature used by many websites takes advantage of this record.</p>
+</section>
+<section id="mx-record">
+<h3><span class="section-number">3.2.11.2. </span>MX Record<a class="headerlink" href="#mx-record" title="Link to this heading"></a></h3>
+<p>MX record is Mail Exchanger, which records the server address corresponding to the domain name when sending emails. Can be used to find SMTP server information.</p>
+</section>
+<section id="ns-records">
+<h3><span class="section-number">3.2.11.3. </span>NS Records<a class="headerlink" href="#ns-records" title="Link to this heading"></a></h3>
+<p>NS (Name Server) records are records of domain name servers, used to specify which DNS server the domain name is resolved.</p>
+</section>
+<section id="spf-record">
+<h3><span class="section-number">3.2.11.4. </span>SPF record<a class="headerlink" href="#spf-record" title="Link to this heading"></a></h3>
+<p>SPF (Sender Policy Framework) is a DNS record type proposed to prevent spam. It is a TXT type record that is used to register all IP addresses owned by a domain name for outgoing mail. Relevant IP information can be obtained through SPF records. The commonly used command is <code class="docutils literal notranslate"><span class="pre">dig</span> <span class="pre">example.com</span> <span class="pre">txt</span></code>.</p>
+</section>
+</section>
+<section id="cdn">
+<h2><span class="section-number">3.2.12. </span>CDN<a class="headerlink" href="#cdn" title="Link to this heading"></a></h2>
+<section id="cdn-verification">
+<h3><span class="section-number">3.2.12.1. </span>CDN verification<a class="headerlink" href="#cdn-verification" title="Link to this heading"></a></h3>
+<p>You can determine whether the target uses CDN through ping in multiple places. Common websites include <a href="#id2"><span class="problematic" id="id3">``</span></a><a class="reference external" href="http://ping.chinaz.com/">http://ping.chinaz.com/</a><a href="#id4"><span class="problematic" id="id5">``</span></a><a href="#id6"><span class="problematic" id="id7">``</span></a><a class="reference external" href="https://asm.ca.com/en/ping">https://asm.ca.com/en/ping</a>.php` ` etc.</p>
+</section>
+<section id="domain-name-search">
+<h3><span class="section-number">3.2.12.2. </span>Domain name search<a class="headerlink" href="#domain-name-search" title="Link to this heading"></a></h3>
+<p>The parent or child domain name of a domain name that uses a CDN does not necessarily use a CDN. You can find the corresponding IP in this way.</p>
+</section>
+<section id="history-search">
+<h3><span class="section-number">3.2.12.3. </span>History search<a class="headerlink" href="#history-search" title="Link to this heading"></a></h3>
+<p>CDN may be launched after the website is online for a period of time. You can find the real IP by looking for domain name resolution records.</p>
+</section>
+<section id="email-information">
+<h3><span class="section-number">3.2.12.4. </span>Email information<a class="headerlink" href="#email-information" title="Link to this heading"></a></h3>
+<p>Email communication through social engineering methods and obtain the IP address from the email header. The IP address may be the real IP of the website or the target export IP.</p>
+</section>
+</section>
+<section id="breast-explosion">
+<h2><span class="section-number">3.2.13. </span>Breast explosion<a class="headerlink" href="#breast-explosion" title="Link to this heading"></a></h2>
+<p>In environments such as intranet where the above skills are not easy to use, or when you want to monitor the launch of new domain names, you can find a valid domain name through batch attempts.</p>
+</section>
+<section id="cache-detection-technology">
+<h2><span class="section-number">3.2.14. </span>Cache detection technology<a class="headerlink" href="#cache-detection-technology" title="Link to this heading"></a></h2>
+<p>In enterprise networks, DNS servers are usually configured to provide domain name resolution services to hosts within the network. Domain name cache detection (DNS Cache Snooping) technology sends domain name resolution requests to these servers, but does not require the use of recursive mode to detect whether a domain name has been requested. This method can be used to detect whether certain software is used, especially security software.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="network.html" class="btn btn-neutral float-left" title="3.1. Network portal/information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="port.html" class="btn btn-neutral float-right" title="3.3. Port information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

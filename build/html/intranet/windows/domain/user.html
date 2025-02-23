@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>user &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">user</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/intranet/windows/domain/user.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user">
+<h1>user<a class="headerlink" href="#user" title="Link to this heading"></a></h1>
+<section id="user-groups-and-work-groups">
+<h2>User Groups and Work Groups<a class="headerlink" href="#user-groups-and-work-groups" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>user<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>There are some users set up for specific purposes in Windows system, namely: SYSTEM, Trustedinstaller, Everyone, Creator Owner, etc. These special users do not belong to any user group. It is a completely independent account. Among them, SYSTEM has the account that manages the entire computer, and general operations cannot obtain the permissions equivalent to it.</p>
+</section>
+<section id="user-group">
+<h3>User Group<a class="headerlink" href="#user-group" title="Link to this heading"></a></h3>
+<p>Windows systems have built-in many local user groups for managing user permissions. As long as the user account is added to the corresponding user group, the user account will also have the permissions owned by the corresponding user group.</p>
+<p>By default, the system divides 7 groups for the user and gives different operation permissions to each group. These groups are: Administrators, High-Person Users, Normal Users, Backup Operators, File Replication Groups, Guests, Identity Authenticated Users.</p>
+</section>
+<section id="working-group">
+<h3>Working Group<a class="headerlink" href="#working-group" title="Link to this heading"></a></h3>
+<p>Workgroups are the most commonly used simplest and most common resource management model. By default, computers are in workgroups called workgroups. The working group model is relatively loose, suitable for situations where the number of computers in the network is small and does not require strict management.</p>
+</section>
+</section>
+<section id="users-in-the-domain">
+<h2>Users in the domain<a class="headerlink" href="#users-in-the-domain" title="Link to this heading"></a></h2>
+<section id="domain-user">
+<h3>Domain User<a class="headerlink" href="#domain-user" title="Link to this heading"></a></h3>
+<p>Users in a domain environment have different accounts from local users, and domain user accounts are saved in the active directory. In a domain environment, a domain user can log in on any computer in the domain. In the domain, users can use SID (Security Identifier) to indicate their identity, and use NTLM hash or Kerberos to verify their identity.</p>
+</section>
+<section id="machine-user">
+<h3>Machine User<a class="headerlink" href="#machine-user" title="Link to this heading"></a></h3>
+<p>Machine users are also called machine accounts or computer accounts. All hosts joining the domain will have a machine user, and the user name of the machine user ends with <code class="docutils literal notranslate"><span class="pre">$</span></code>.</p>
+</section>
+</section>
+<section id="group-policy">
+<h2>Group Policy<a class="headerlink" href="#group-policy" title="Link to this heading"></a></h2>
+<p>Group Policy is used to control the working environment of user accounts and computer accounts. Group Policy provides centralized management and configuration of user settings in operating systems, applications, and active directories. The local group policy (LGPO or LocalGPO) can manage group policy objects on independent and non-domain computers. Group policies in domain environments are often called GPOs (Group Policy Object).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deserialization &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Deserialization</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/php/unserialize.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deserialization">
+<h1>Deserialization<a class="headerlink" href="#deserialization" title="Link to this heading"></a></h1>
+<section id="php-serialization-implementation">
+<h2>PHP serialization implementation<a class="headerlink" href="#php-serialization-implementation" title="Link to this heading"></a></h2>
+<section id="common-processors">
+<h3>Common Processors<a class="headerlink" href="#common-processors" title="Link to this heading"></a></h3>
+<p>There are several types of PHP serialization processing, namely php, php_serialize, php_binary and WDDX (requires support when compiling). The default is php, which can be modified through the <code class="docutils literal notranslate"><span class="pre">session.serialize_handler</span></code> in the configuration.</p>
+<p>If WDDX support is added during PHP compilation, you can only use WDDX, and WDDX will be deprecated since PHP 7.4. From PHP 5.5.4, php_serialize can be used. php_serialize simply uses the serialize/unserialize function directly internally and does not have the limitations that php and php_binary have.</p>
+<p>The format of the PHP processor is: key name + vertical line + value serialized by serialize() function.</p>
+<p>The format of the php_binary processor is: the ASCII character corresponding to the length of the key name + the value serialized by the serialize() function.</p>
+<p>The format of the php_serialize processor is: an array processed by serialize() function.</p>
+</section>
+<section id="serialization-format">
+<h3>Serialization format<a class="headerlink" href="#serialization-format" title="Link to this heading"></a></h3>
+<p>The implementation of php_serialize is in <code class="docutils literal notranslate"><span class="pre">php-src/ext/standard/var.c</span></code>, and the main function is <code class="docutils literal notranslate"><span class="pre">php_var_serialize_intern</span></code>, and the serialized format is as follows:</p>
+<ul class="simple">
+<li><p>boolean</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b:&lt;value&gt;;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b:1;</span></code> // true</p></li>
+<li><p>`` b: 0; `` // false</p></li>
+<li><p>integer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i:&lt;value&gt;;</span></code></p></li>
+<li><p>double</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d:&lt;value&gt;;</span></code></p></li>
+<li><p>NULL</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">N;</span></code></p></li>
+<li><p>string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s:&lt;length&gt;:&quot;&lt;value&gt;&quot;;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s:1:&quot;s&quot;;</span></code></p></li>
+<li><p>array</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a:&lt;length&gt;:{key,</span> <span class="pre">value};</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a:1:{s:4:&quot;key1&quot;;s:6:&quot;value1&quot;;}</span></code> // <code class="docutils literal notranslate"><span class="pre">array(&quot;key1&quot;</span> <span class="pre">=&gt;</span> <span class="pre">&quot;value1&quot;);</span></code></p></li>
+<li><p>object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">O:&lt;class_name_length&gt;:&quot;&lt;class_name&gt;&quot;:&lt;number_of_properties&gt;:{&lt;properties&gt;};</span></code></p></li>
+<li><p>reference</p></li>
+<li><p>Pointer type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">R:reference;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">O:1:&quot;A&quot;:2:{s:1:&quot;a&quot;;i:1;s:1:&quot;b&quot;;R:2;}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">A();$a-&gt;a=1;$a-&gt;b=&amp;$a-&gt;a;</span></code></p></li>
+</ul>
+</section>
+<section id="private-and-protected">
+<h3>Private and protected<a class="headerlink" href="#private-and-protected" title="Link to this heading"></a></h3>
+<p>Private is different from protect variables and public variables and cannot be set directly.</p>
+<p>The private attribute can only be accessed within the class it is defined and will not be inherited. The class name is preceded by the attribute, that is, <code class="docutils literal notranslate"><span class="pre">%00className%00</span></code> is used to calibrate it is private.</p>
+<p>The protected property can be accessed in the parent and child classes, and the variable is added before the <code class="docutils literal notranslate"><span class="pre">%00*%00</span></code> to calibrate it is protected.</p>
+</section>
+</section>
+<section id="php-deserialization-vulnerability">
+<h2>PHP deserialization vulnerability<a class="headerlink" href="#php-deserialization-vulnerability" title="Link to this heading"></a></h2>
+<p>When deserializing, php will call functions such as <code class="docutils literal notranslate"><span class="pre">__wakeup`</span> <span class="pre">/</span> <span class="pre">``__sleep</span></code>, which may cause problems such as code execution. If there is no related function, the related destructor will also be called during destruction, which will also cause code execution.</p>
+<p>In addition, the <code class="docutils literal notranslate"><span class="pre">__toString</span></code> / <code class="docutils literal notranslate"><span class="pre">__call</span></code> two functions are also possible to use.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">__wakeup`</span> <span class="pre">is</span> <span class="pre">fired</span> <span class="pre">during</span> <span class="pre">deserialization,</span> <span class="pre">``__destruct`</span> <span class="pre">is</span> <span class="pre">fired</span> <span class="pre">during</span> <span class="pre">GC,</span> <span class="pre">``__toString</span></code> is fired during echo, <code class="docutils literal notranslate"><span class="pre">__call</span></code> is fired during an undefined function call Triggered.</p>
+<p>Here is a simple demo.</p>
+<p>class Demo
+{</p>
+<p>public $data;</p>
+<p>public function __construct($data)
+{
+$this-&gt;data = $data;
+echo “construct&lt;br /&gt;”;
+}</p>
+<p>public function __wakeup()
+{
+echo “wake up&lt;br /&gt;”;
+}</p>
+<p>public function __destruct()
+{
+echo “Data’s value is $this-&gt;data. &lt;br /&gt;”;
+echo “destruct&lt;br /&gt;”;
+}
+}</p>
+<p>var_dump(serialize(new Demo(“raw value”)));</p>
+<p>Output</p>
+<p>construct
+Data’s value is raw value.
+destruct
+string(44) “O:4:”Demo”:1:{s:4:”data”;s:9:”raw value”;}”</p>
+<p>After modifying the serialized string, execute</p>
+<p><code class="docutils literal notranslate"><span class="pre">unserialize('O:4:&quot;Demo&quot;:1:{s:4:&quot;data&quot;;s:15:&quot;malicious</span> <span class="pre">value&quot;;}');</span></code></p>
+<p>Output</p>
+<p>wake up
+Data’s value is malicious value.
+destruct</p>
+<p>See here that the value has been modified.</p>
+<p>The above is a simple application of <a href="#id1"><span class="problematic" id="id2">``</span></a>unserialize()`. It is not difficult to see that if <a href="#id3"><span class="problematic" id="id4">``</span></a>__wakeup()` or <a href="#id5"><span class="problematic" id="id6">``</span></a>__desturct()` has sensitive operations, such as reading and writing files or operating databases, you can use functions. Implement the behavior of reading and writing files or reading data.</p>
+<p>So, can you add judgment to <code class="docutils literal notranslate"><span class="pre">__wakeup()</span></code> to prevent this vulnerability?
+In <code class="docutils literal notranslate"><span class="pre">__wakeup()</span></code> we add a line of code</p>
+<p>public function __wakeup()
+{
+if($this-&gt;data != ‘raw value’) $this-&gt;data = ‘raw value’;
+echo “wake up&lt;br /&gt;”;
+}</p>
+<p>But in fact, it can still be bypassed. In versions such as PHP5 &lt; 5.6.25 and PHP7 &lt; 7.0.10, there are loopholes in wakeup. When the number of objects in deserialization is not equal to the previous number, wakeup will be bypassed, so use the following payload</p>
+<p>unserialize(‘O:7:”HITCON”:1:{s:4:”data”;s:15:”malicious value”;}’);</p>
+<p>Output</p>
+<p>Data’s value is malicious value.
+destruct</p>
+<p>Here wakeup is bypassed, and the value is still modified.</p>
+</section>
+<section id="utilization-point">
+<h2>Utilization point<a class="headerlink" href="#utilization-point" title="Link to this heading"></a></h2>
+<section id="soapclient-native-utilization">
+<h3>SoapClient Native Utilization<a class="headerlink" href="#soapclient-native-utilization" title="Link to this heading"></a></h3>
+<p>The SoapClient class in php can create soap data packets. In non-wsdl mode, when the instance of SoapClient is deserialized, a soap request will be made to the url specified by the second parameter. This feature can be used in SSRF.</p>
+</section>
+<section id="ziparchive-native-utilization">
+<h3>ZipArchive native utilization<a class="headerlink" href="#ziparchive-native-utilization" title="Link to this heading"></a></h3>
+<p>If the flag parameter in php native class <code class="docutils literal notranslate"><span class="pre">ZipArchive::open()</span></code> is set to <code class="docutils literal notranslate"><span class="pre">ZipArchive::OVERWRITE</span></code>, the specified file will be deleted. This feature can be used to delete files under certain conditions.</p>
+</section>
+<section id="session">
+<h3>Session<a class="headerlink" href="#session" title="Link to this heading"></a></h3>
+<p>In PHP, session is stored in file form by default. The file is named after session_sessionid. When the session is controlled to a certain extent, deserialization can be triggered through session.</p>
+</section>
+</section>
+<section id="related-cve">
+<h2>Related CVE<a class="headerlink" href="#related-cve" title="Link to this heading"></a></h2>
+<section id="cve-2016-7124">
+<h3>CVE-2016-7124<a class="headerlink" href="#cve-2016-7124" title="Link to this heading"></a></h3>
+<p>In versions before PHP 5.6.25 and before 7.0.10, <code class="docutils literal notranslate"><span class="pre">__wakeup()</span></code> will not be executed when the number of attributes (variables) of an object is greater than the actual number.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

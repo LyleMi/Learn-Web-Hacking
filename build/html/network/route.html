@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.5. Routing algorithm &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.6. Domain Name System" href="domain/index.html" />
+    <link rel="prev" title="2.4. DHCP protocol" href="dhcp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Computer network and protocol</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic.html">2.1. Network Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp.html">2.2. UDP protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcp.html">2.3. TCP protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dhcp.html">2.4. DHCP protocol</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5. Routing algorithm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">2.5.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions-of-routing-algorithm">2.5.2. Functions of routing algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autonomous-system-as-autonomous-system">2.5.3. Autonomous System AS (Autonomous System)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#two-major-types-of-routing-protocols">2.5.4. Two major types of routing protocols</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rip">2.5.5. RIP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ospf">2.5.6. OSPF</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="domain/index.html">2.6. Domain Name System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http/index.html">2.7. HTTP protocol cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh/index.html">2.8. SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mail.html">2.9. Mail Agreement Family</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssl.html">2.10. SSL/TLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipsec.html">2.11. IPsec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi.html">2.12. In</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">2. </span>Computer network and protocol</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.5. </span>Routing algorithm</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/network/route.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="routing-algorithm">
+<h1><span class="section-number">2.5. </span>Routing algorithm<a class="headerlink" href="#routing-algorithm" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">2.5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>A routing algorithm is an algorithm used to find an optimal path from the source router to the destination router. There are multiple routing algorithms, and each algorithm has different impacts on network and router resources; since the routing algorithm uses multiple metrics, the optimal path selection for different routing algorithms is also different.</p>
+</section>
+<section id="functions-of-routing-algorithm">
+<h2><span class="section-number">2.5.2. </span>Functions of routing algorithm<a class="headerlink" href="#functions-of-routing-algorithm" title="Link to this heading"></a></h2>
+<p>Path selection between source/sink pairs and sending packets to their destination after the route is selected.</p>
+<p>Requirements for routing algorithms:</p>
+<ul class="simple">
+<li><p>Correctness: Ensure packets are transferred from the source node to the destination node</p></li>
+<li><p>Simplicity: easy to implement, small hardware and software overhead</p></li>
+<li><p>Adaptive: also known as robustness, the algorithm can adapt to changes in traffic volume and network topology</p></li>
+<li><p>Stability: Can run for a long time without fault</p></li>
+<li><p>Fairness: Every node has the opportunity to transmit information</p></li>
+<li><p>Optimality: Try to choose a good route</p></li>
+</ul>
+</section>
+<section id="autonomous-system-as-autonomous-system">
+<h2><span class="section-number">2.5.3. </span>Autonomous System AS (Autonomous System)<a class="headerlink" href="#autonomous-system-as-autonomous-system" title="Link to this heading"></a></h2>
+<p>Classic definition:</p>
+<ul class="simple">
+<li><p>A complete set of routers and networks managed by an organization.</p></li>
+<li><p>Use a routing protocol within the AS and common metrics to determine the routes of packets within the AS.</p></li>
+<li><p>Use a routing protocol between AS to determine the routing of packets between ASs.</p></li>
+</ul>
+<p>Although one AS uses multiple internal routing protocols and metrics, it exhibits a single and consistent routing policy for other AS.</p>
+</section>
+<section id="two-major-types-of-routing-protocols">
+<h2><span class="section-number">2.5.4. </span>Two major types of routing protocols<a class="headerlink" href="#two-major-types-of-routing-protocols" title="Link to this heading"></a></h2>
+<p>In the Internet, routing protocols can be divided into internal gateway protocol IGP (Interior Gateway Protocol) and external gateway protocol EGP (External Gateway Protocol).</p>
+<p>IGP is a routing protocol used within an AS, such as RIP and OSPF protocols, which is an intradomain routing. When the source host and the destination host are in different AS, when the data report reaches the boundary of the AS, the external gateway protocol EGP is used to pass the routing information to another autonomous system, such as BGP-4, which is inter-domain routing ( intradomain routing).</p>
+</section>
+<section id="rip">
+<h2><span class="section-number">2.5.5. </span>RIP<a class="headerlink" href="#rip" title="Link to this heading"></a></h2>
+<p>Routing Information Protocol (RIP) is a routing protocol based on distance vectors. The RIP protocol requires that every router in the network maintain the distance from itself to every other destination network within the autonomous system and the next hop router address.</p>
+</section>
+<section id="ospf">
+<h2><span class="section-number">2.5.6. </span>OSPF<a class="headerlink" href="#ospf" title="Link to this heading"></a></h2>
+<p>Open Shortest Path First (OSPF), the algorithm is called “Shortest Path First” because it uses the shortest path algorithm SPF proposed by Dijkstra, which is just the name of a protocol, and it does not mean that other routing protocols are not “Shortest path first”.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dhcp.html" class="btn btn-neutral float-left" title="2.4. DHCP protocol" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="domain/index.html" class="btn btn-neutral float-right" title="2.6. Domain Name System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

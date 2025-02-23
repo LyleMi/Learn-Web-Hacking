@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Cookie</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/network/http/cookie.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cookie">
+<h1>Cookie<a class="headerlink" href="#cookie" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Cookies (plural form cookies), type “small text file”, refer to data stored on the user’s local terminal in order to identify the user’s identity.</p>
+</section>
+<section id="property">
+<h2>property<a class="headerlink" href="#property" title="Link to this heading"></a></h2>
+<section id="name">
+<h3>name<a class="headerlink" href="#name" title="Link to this heading"></a></h3>
+<p>The name of the cookie.</p>
+</section>
+<section id="value">
+<h3>value<a class="headerlink" href="#value" title="Link to this heading"></a></h3>
+<p>The value of the cookie.</p>
+</section>
+<section id="expires">
+<h3>expires<a class="headerlink" href="#expires" title="Link to this heading"></a></h3>
+<p>When the Expires property defaults, it means it is a session cookie, which is invalid when the user closes the browser.</p>
+</section>
+<section id="max-age">
+<h3>max-age<a class="headerlink" href="#max-age" title="Link to this heading"></a></h3>
+<p>max-age can be positive, negative, and 0. If the max-age attribute is positive, the browser will persist it. When the max-age attribute is negative, it means that the cookie is just a session cookie. When max-age is 0, this cookie is deleted immediately. Under the conditions where both Expires and max-age exist, max-age has higher priority.</p>
+</section>
+<section id="domain">
+<h3>domain<a class="headerlink" href="#domain" title="Link to this heading"></a></h3>
+<p>Specify the domain name of the cookie, the default is the current domain name. When setting the domain, it can be set to itself and its parent domain. The child domain can access the cookies of the parent domain, otherwise it cannot.</p>
+</section>
+<section id="path">
+<h3>path<a class="headerlink" href="#path" title="Link to this heading"></a></h3>
+<p>Specify a URL path that must appear in the path of the resource to be requested before the corresponding cookie can be sent.</p>
+</section>
+<section id="secure">
+<h3>secure<a class="headerlink" href="#secure" title="Link to this heading"></a></h3>
+<p>Transfers only over HTTPS.</p>
+</section>
+<section id="httponly">
+<h3>httponly<a class="headerlink" href="#httponly" title="Link to this heading"></a></h3>
+<p>Restriction cookies to be read only during HTTP transmission, and to a certain extent, they are protected from XSS attacks.</p>
+</section>
+<section id="the-sames">
+<h3>The sames<a class="headerlink" href="#the-sames" title="Link to this heading"></a></h3>
+<p>SameSite supports three values: Strict/Lax/None. Strict is the strictest, completely prohibiting third-party cookies. Cookies will not be sent under any circumstances when cross-sites. Lax allows some third parties to request cookies, mainly in three situations: link, preload, and GET forms. When the SameSite property of a cookie is None, and Secure is set, cookies will be sent regardless of whether they are cross-site or not.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

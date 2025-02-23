@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic concepts &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Basic concepts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/java/basic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-concepts">
+<h1>Basic concepts<a class="headerlink" href="#basic-concepts" title="Link to this heading"></a></h1>
+<section id="jvm">
+<h2>JVM<a class="headerlink" href="#jvm" title="Link to this heading"></a></h2>
+<p>JVM is the core of the Java platform and is implemented in machine code, providing all the basic functions required for program execution, such as bytecode parser, JIT compiler, garbage collector, etc. Since it is implemented by machine code, it is also subject to attacks from binary files.</p>
+<p>JCL is a standard library that comes with JVM, which contains hundreds of system classes. By default, all system classes are trustworthy and have all privileges.</p>
+</section>
+<section id="jdk">
+<h2>JDK<a class="headerlink" href="#jdk" title="Link to this heading"></a></h2>
+<p>The Java Development Kit (JDK) is a Java platform released by Oracle, with standard Edition (Java SE), enterprise Edition (Java EE) and other versions.</p>
+<p>At the beginning, the JDK was released in binary form, and then on November 17, 2006, Sun released the Java source code under the GPL license, and then OpenJDK appeared.</p>
+</section>
+<section id="jmx">
+<h2>JMX<a class="headerlink" href="#jmx" title="Link to this heading"></a></h2>
+<p>JMX (Java Management Extensions) is a framework for implanting management functions for applications, mainly providing corresponding tools for managing and monitoring applications, system objects, devices and service-oriented networks. JMX can remotely read values in the system and call methods in the system. Remote code execution may result in deserialization vulnerability when JMX is not configured for authentication or JDK version is too low.</p>
+</section>
+<section id="jni">
+<h2>JNI<a class="headerlink" href="#jni" title="Link to this heading"></a></h2>
+<p>JNI (Java Native Interface) is an interface provided by Java to interact with other languages.</p>
+</section>
+<section id="jna">
+<h2>JNA<a class="headerlink" href="#jna" title="Link to this heading"></a></h2>
+<p>JNA (Java Native Access) is a framework on JNI, which is used to automatically implement the mapping of Java interfaces to native functions without the need to write additional JNI code.</p>
+</section>
+<section id="ognl">
+<h2>OGNL<a class="headerlink" href="#ognl" title="Link to this heading"></a></h2>
+<p>OGNL (Object-Graph Navigation Language) is a powerful expression language. Through simple and consistent expression syntax, it provides access to any attributes of an object, calling the object method, and traversing the entire object structure diagram. , implement field type conversion and other functions.</p>
+<p>OGNL is used in Struts2 and a ValueStack class is provided. ValueStack is divided into two parts: root and context. The current action object in root is the context, and all the contents in the ActionContext are included.</p>
+</section>
+<section id="io-model">
+<h2>IO model<a class="headerlink" href="#io-model" title="Link to this heading"></a></h2>
+<p>Java encapsulates various IO models of the operating system and forms different APIs.</p>
+<section id="bio">
+<h3>BIO<a class="headerlink" href="#bio" title="Link to this heading"></a></h3>
+<p>BIO (Blocking I/O) is a synchronous blocking I/O mode, and the read and write data must be blocked in a thread and wait for it to complete.</p>
+</section>
+<section id="nio">
+<h3>NIO<a class="headerlink" href="#nio" title="Link to this heading"></a></h3>
+<p>NIO (New I/O) is a synchronous non-blocking I/O model, introduced in Java 1.4, corresponding to the java.nio package, providing abstractions such as Channel, Selector, Buffer, etc.</p>
+</section>
+<section id="aio">
+<h3>AIO<a class="headerlink" href="#aio" title="Link to this heading"></a></h3>
+<p>AIO (Asynchronous I/O) was introduced in Java 7 and is an improved version of NIO. It is an asynchronous non-blocking IO model, implemented based on event and callback mechanisms.</p>
+</section>
+</section>
+<section id="reflection">
+<h2>reflection<a class="headerlink" href="#reflection" title="Link to this heading"></a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>Java reflection mechanism refers to the fact that in the running state, all properties and methods of any class can be known; for any object, any methods and properties of it can be called; this dynamic acquisition of information and dynamically calling objects The function of the method is called the reflex mechanism of the language.</p>
+</section>
+<section id="related-categories">
+<h3>Related categories<a class="headerlink" href="#related-categories" title="Link to this heading"></a></h3>
+</section>
+<section id="class-related">
+<h3>Class Related<a class="headerlink" href="#class-related" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>asSubclass(Class&lt;U&gt; clazz)</p></li>
+<li><p>Convert the object of the passed class to an object representing its subclass</p></li>
+<li><p>Cast</p></li>
+<li><p>Convert an object to an object representing a class or an interface</p></li>
+<li><p>getClassLoader()</p></li>
+<li><p>Get the loader of the class</p></li>
+<li><p>getClasses()</p></li>
+<li><p>Return an array containing objects of all public classes and interface classes in the class</p></li>
+<li><p>getDeclaredClasses()</p></li>
+<li><p>Return an array containing objects of all classes and interface classes in the class</p></li>
+<li><p>forName(String className)</p></li>
+<li><p>Return the object of the class according to the class name</p></li>
+<li><p>getName()</p></li>
+<li><p>Get the full path name of the class</p></li>
+<li><p>newInstance()</p></li>
+<li><p>Create an instance of the class</p></li>
+<li><p>getPackage()</p></li>
+<li><p>Get packages for class</p></li>
+<li><p>getSimpleName()</p></li>
+<li><p>Get the name of the class</p></li>
+<li><p>getSuperclass()</p></li>
+<li><p>Get the name of the parent class inherited by the current class</p></li>
+<li><p>Getinterfaces ()</p></li>
+<li><p>Obtain the class or interface implemented by the current class</p></li>
+<li><p>getField(String name)</p></li>
+<li><p>Obtain a public property object</p></li>
+<li><p>getFields()</p></li>
+<li><p>Obtain all public property objects</p></li>
+<li><p>getDeclaredField(String name)</p></li>
+<li><p>Obtain a certain attribute object</p></li>
+<li><p>getDeclaredFields()</p></li>
+<li><p>Get all attribute objects</p></li>
+<li><p>getAnnotation(Class&lt;A&gt; annotationClass)</p></li>
+<li><p>Returns the public annotation object in this class that matches the parameter type</p></li>
+<li><p>getAnnotations()</p></li>
+<li><p>Return all public annotation objects in this class</p></li>
+<li><p>getDeclaredAnnotation(Class&lt;A&gt; annotationClass)</p></li>
+<li><p>Returns all annotation objects in this class that match the parameter type</p></li>
+<li><p>getDeclaredAnnotations()</p></li>
+<li><p>Return all annotation objects in this class</p></li>
+<li><p>getConstructor(Class…&lt;?&gt; parameterTypes)</p></li>
+<li><p>Obtain the public constructor method in this class that matches the parameter type</p></li>
+<li><p>getConstructors()</p></li>
+<li><p>Obtain all public constructors of this class</p></li>
+<li><p>getDeclaredConstructor(Class…&lt;?&gt; parameterTypes)</p></li>
+<li><p>Obtain the constructor method in this class that matches the parameter type</p></li>
+<li><p>getDeclaredConstructors()</p></li>
+<li><p>Obtain all constructors of this class</p></li>
+<li><p>getMethod(String name, Class…&lt;?&gt; parameterTypes)</p></li>
+<li><p>Methods to obtain a publicly owned class</p></li>
+<li><p>Getmethods ()</p></li>
+<li><p>Obtain all public methods of this class</p></li>
+<li><p>getDeclaredMethod(String name, Class…&lt;?&gt; parameterTypes)</p></li>
+<li><p>Obtain a method of this class</p></li>
+<li><p>getDeclaredMethods()</p></li>
+<li><p>Get all methods of this class</p></li>
+<li><p>isAnnotation()</p></li>
+<li><p>Return true if it is an annotation type</p></li>
+<li><p>isAnnotationPresent(Class&lt;? extends Annotation&gt; annotationClass)</p></li>
+<li><p>Return true if the type annotation type is specified</p></li>
+<li><p>isAnonymousClass()</p></li>
+<li><p>Return true if it is an anonymous class</p></li>
+<li><p>Disagree ()</p></li>
+<li><p>Return true if it is an array class</p></li>
+<li><p>isEnum()</p></li>
+<li><p>Return true if it is an enumeration class</p></li>
+<li><p>isInstance(Object obj)</p></li>
+<li><p>Return true if obj is an instance of this class</p></li>
+<li><p>isInterface()</p></li>
+<li><p>Return true if it is an interface class</p></li>
+<li><p>isLocalClass()</p></li>
+<li><p>Return true if it is a local class</p></li>
+<li><p>isMemberClass()</p></li>
+<li><p>Return true if it is an inner class</p></li>
+</ul>
+</section>
+<section id="field-related">
+<h3>Field-related<a class="headerlink" href="#field-related" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>equals(Object obj)</p></li>
+<li><p>Return true if the attribute is equal to obj</p></li>
+<li><p>get(Object obj)</p></li>
+<li><p>Obj’s corresponding attribute value</p></li>
+<li><p>set(Object obj, Object value)</p></li>
+<li><p>Set the corresponding attribute value in obj</p></li>
+</ul>
+</section>
+<section id="method-related">
+<h3>Method related<a class="headerlink" href="#method-related" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>invoke(Object obj, Object… args)</p></li>
+<li><p>Pass the object object and parameters to call the corresponding method of the object</p></li>
+</ul>
+</section>
+<section id="constructor">
+<h3>Constructor<a class="headerlink" href="#constructor" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>newInstance(Object… initargs)</p></li>
+<li><p>Create object of class based on passed parameters</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

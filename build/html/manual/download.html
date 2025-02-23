@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.2. Download Tool &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.3. Traffic related" href="traffic.html" />
+    <link rel="prev" title="10.1. Blasting tools" href="brute.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">9. Tools and resources</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">10. Quick manual check</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="brute.html">10.1. Blasting tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.2. Download Tool</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wget">10.2.1. wget</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#commonly-used">10.2.1.1. Commonly used</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#download-the-entire-site">10.2.1.2. Download the entire site</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specify-parameters">10.2.1.3. Specify parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#curl">10.2.2. curl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">10.2.2.1. Commonly used</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regular">10.2.2.2. Regular</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="traffic.html">10.3. Traffic related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sniffing.html">10.4. Sniffing Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqlmap.html">10.5. SQLMap usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">10. </span>Quick manual check</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.2. </span>Download Tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/manual/download.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="download-tool">
+<h1><span class="section-number">10.2. </span>Download Tool<a class="headerlink" href="#download-tool" title="Link to this heading"></a></h1>
+<section id="wget">
+<h2><span class="section-number">10.2.1. </span>wget<a class="headerlink" href="#wget" title="Link to this heading"></a></h2>
+<section id="commonly-used">
+<h3><span class="section-number">10.2.1.1. </span>Commonly used<a class="headerlink" href="#commonly-used" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Normal download <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">http://example.com/file.iso</span></code></p></li>
+<li><p>Specify the save file name <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐output-document=myname.iso</span> <span class="pre">http://example.com/file.iso</span></code></p></li>
+<li><p>Save to the specified directory <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐directory-prefix=folder/subfolder</span> <span class="pre">http://example.com/file.iso</span></code></p></li>
+<li><p>Large file breakpoints continue to pass <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐continue</span> <span class="pre">http://example.com/big.file.iso</span></code></p></li>
+<li><p>Download the url list in the specified file <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐input</span> <span class="pre">list-of-file-urls.txt</span></code></p></li>
+<li><p>Download multiple files with a specified number list <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">http://example.com/images/{1..20}.jpg</span></code></p></li>
+<li><p>Download all resources of the web page <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐page-requisites</span> <span class="pre">‐‐span-hosts</span> <span class="pre">‐‐convert-links</span> <span class="pre">‐‐adjust-extension</span> <span class="pre">http://example.com/dir/file</span></code></p></li>
+</ul>
+</section>
+<section id="download-the-entire-site">
+<h3><span class="section-number">10.2.1.2. </span>Download the entire site<a class="headerlink" href="#download-the-entire-site" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Download all linked pages and files <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐execute</span> <span class="pre">robots=off</span> <span class="pre">‐‐recursive</span> <span class="pre">‐‐no-parent</span> <span class="pre">‐continue</span> <span class="pre">‐‐no-clobber</span> <span class="pre">http://example.com/</span></code></p></li>
+<li><p>Download the file with the specified suffix <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐level=1</span> <span class="pre">‐‐recursive</span> <span class="pre">‐no-parent</span> <span class="pre">‐‐accept</span> <span class="pre">mp3,MP3</span> <span class="pre">http://example.com/mp3/</span></code></p></li>
+<li><p>Exclude the specified directory download <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">‐‐recursive</span> <span class="pre">‐no-clobber</span> <span class="pre">‐‐no-parent</span> <span class="pre">‐exclude-directories</span> <span class="pre">/forums,/support</span> <span class="pre">http://example.com</span></code></p></li>
+</ul>
+</section>
+<section id="specify-parameters">
+<h3><span class="section-number">10.2.1.3. </span>Specify parameters<a class="headerlink" href="#specify-parameters" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>user agent <code class="docutils literal notranslate"><span class="pre">‐‐user-agent=&quot;Mozilla/5.0</span> <span class="pre">Firefox/4.0.1&quot;</span></code></p></li>
+<li><p>basic auth <code class="docutils literal notranslate"><span class="pre">‐‐http-user=user</span> <span class="pre">‐‐http-password=pwd</span></code></p></li>
+<li><p>保存cookie <code class="docutils literal notranslate"><span class="pre">‐‐cookies=on</span> <span class="pre">‐‐save-cookies</span> <span class="pre">cookies.txt</span> <span class="pre">‐‐keep-session-cookies</span></code></p></li>
+<li><p>使用cookie <code class="docutils literal notranslate"><span class="pre">‐‐cookies=on</span> <span class="pre">‐‐load-cookies</span> <span class="pre">cookies.txt</span> <span class="pre">‐‐keep-session-cookies</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="curl">
+<h2><span class="section-number">10.2.2. </span>curl<a class="headerlink" href="#curl" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">10.2.2.1. </span>Commonly used<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Show directly <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">www.example.com</span></code></p></li>
+<li><p>Save the specified name <code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">newname</span></code></p></li>
+<li><p>No name specified <code class="docutils literal notranslate"><span class="pre">-O</span></code></p></li>
+</ul>
+</section>
+<section id="regular">
+<h3><span class="section-number">10.2.2.2. </span>Regular<a class="headerlink" href="#regular" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>File name <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">ftp://example.com/file[1-100].txt</span></code></p></li>
+<li><p>域名 <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">http://site.{one,two,three}.com</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="brute.html" class="btn btn-neutral float-left" title="10.1. Blasting tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="traffic.html" class="btn btn-neutral float-right" title="10.3. Traffic related" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

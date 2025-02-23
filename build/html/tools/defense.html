@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.13. defense &mdash; Web Security Study Notes 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4042127e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.14. Safe development" href="sdl.html" />
+    <link rel="prev" title="9.12. Audit tools" href="audit.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Web Security Study Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Content index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network/index.html">2. Computer network and protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info/index.html">3. Information collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">4. Language and framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/index.html">5. Intranet penetration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/index.html">6. Cloud Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../defense/index.html">7. Defense Technology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auth/index.html">8. Authentication mechanism</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">9. Tools and resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="resource.html">9.1. Recommended resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papers.html">9.2. Related papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info.html">9.3. Information collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="socialengineering.html">9.4. Social Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fuzz.html">9.5. Fuzzy test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploit.html">9.6. Vulnerability Exploit/Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nearsource.html">9.7. Near source permeability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webpersistence.html">9.8. Web endurance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intranet.html">9.9. Move horizontally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html">9.10. Cloud Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ospersistence.html">9.11. Operating system persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audit.html">9.12. Audit tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.13. defense</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#log-check">9.13.1. Log check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#terminal-monitoring">9.13.2. Terminal monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xss-protection">9.13.3. XSS protection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-check">9.13.4. Configuration Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#safety-inspection">9.13.5. Safety inspection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ids">9.13.6. IDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rasp">9.13.7. RASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#siem">9.13.8. SIEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#threat-intelligence">9.13.9. Threat intelligence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apt">9.13.10. APT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intrusion-inspection">9.13.11. Intrusion inspection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#process-view">9.13.12. Process View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#waf">9.13.13. Waf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virus-online-detection">9.13.14. Virus online detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#webshell-check">9.13.15. WebShell check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rules-ioc">9.13.16. Rules / IoC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#threat-detection">9.13.17. Threat detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#security-advisories">9.13.18. Security Advisories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#security-tracker">9.13.19. Security Tracker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#matching-tool">9.13.20. Matching Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dos-protection">9.13.21. DoS protection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adversary-simulation-attack-simulation">9.13.22. Adversary simulation/attack simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intrusion-protection">9.13.23. Intrusion protection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdl.html">9.14. Safe development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation.html">9.15. Operation and maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forensics.html">9.16. Getting evidence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html">9.17. other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">10. Quick manual check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">11. other</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web Security Study Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">9. </span>Tools and resources</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9.13. </span>defense</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tools/defense.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="defense">
+<h1><span class="section-number">9.13. </span>defense<a class="headerlink" href="#defense" title="Link to this heading"></a></h1>
+<section id="log-check">
+<h2><span class="section-number">9.13.1. </span>Log check<a class="headerlink" href="#log-check" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon">Sysmon</a></p></li>
+<li><p><a class="reference external" href="http://www.nirsoft.net/utils/computer_activity_view.html">LastActivityView</a></p></li>
+<li><p><a class="reference external" href="https://sourceforge.net/projects/regshot/">Regshot</a></p></li>
+<li><p><a class="reference external" href="https://github.com/kitabisa/teler">teler</a> Real-time HTTP Intrusion Detection</p></li>
+</ul>
+</section>
+<section id="terminal-monitoring">
+<h2><span class="section-number">9.13.2. </span>Terminal monitoring<a class="headerlink" href="#terminal-monitoring" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/yarox24/attack_monitor">attack monitor</a> Endpoint detection &amp; Malware analysis software</p></li>
+<li><p><a class="reference external" href="https://github.com/BinaryDefense/artillery">artillery</a> The Artillery Project is an open-source blue team tool designed to protect Linux and Windows operating systems through multiple methods.</p></li>
+<li><p><a class="reference external" href="https://github.com/paypal/yurita">yurita</a> Anomaly detection framework &#64; PayPal</p></li>
+<li><p><a class="reference external" href="https://github.com/crowdsecurity/crowdsec">crowdsec</a> An open-source, lightweight agent to detect and respond to bad behaviours</p></li>
+<li><p><a class="reference external" href="https://github.com/aquasecurity/tracee">tracee</a> Linux Runtime Security and Forensics using eBPF</p></li>
+</ul>
+</section>
+<section id="xss-protection">
+<h2><span class="section-number">9.13.3. </span>XSS protection<a class="headerlink" href="#xss-protection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/leizongmin/js-xss">js xss</a></p></li>
+<li><p><cite>Dompurify &lt;htts://github.com/cure53/Dompurify&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://csp-evaluator.withgoogle.com/">google csp evaluator</a></p></li>
+</ul>
+</section>
+<section id="configuration-check">
+<h2><span class="section-number">9.13.4. </span>Configuration Check<a class="headerlink" href="#configuration-check" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/microsoft/AttackSurfaceAnalyzer">Attack Surface Analyzer</a> analyze operating system’s security configuration for changes during software installation.</p></li>
+<li><p><a class="reference external" href="https://github.com/yandex/gixy">gixy</a> Nginx configuration checking tool</p></li>
+<li><p><a class="reference external" href="https://github.com/cr0hn/dockerscan">dockerscan</a> Docker security analysis &amp; hacking tools</p></li>
+</ul>
+</section>
+<section id="safety-inspection">
+<h2><span class="section-number">9.13.5. </span>Safety inspection<a class="headerlink" href="#safety-inspection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/CISOfy/lynis">lynis</a> Security auditing tool for Linux, macOS, and UNIX-based systems</p></li>
+<li><p><a class="reference external" href="https://github.com/rfxn/linux-malware-detect">linux malware detect</a></p></li>
+</ul>
+</section>
+<section id="ids">
+<h2><span class="section-number">9.13.6. </span>IDS<a class="headerlink" href="#ids" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ISC &lt;https://github.com/osec/ossec-hids&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="HTTPS://GitHub.com/Agenda/Yulong-HIDis">Yulong</a></p></li>
+<li><p><a class="reference external" href="https://github.com/DianrongSecurity/AgentSmith-HIDS">AgentSmith</a></p></li>
+<li><p><a class="reference external" href="https://github.com/bytedance/ByteDance-HIDS">ByteDance HIDS</a> Cloud-Native Host-Based Intrusion Detection</p></li>
+</ul>
+</section>
+<section id="rasp">
+<h2><span class="section-number">9.13.7. </span>RASP<a class="headerlink" href="#rasp" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/bytedance/Elkeid">Elkeid</a> Cloud-Native Host-Based Intrusion Detection solution project to provide next-generation Threat Detection and Behavior Audition with modern architecture</p></li>
+<li><p><a class="reference external" href="https://github.com/baidu-security/openrasp-iast">openrasp</a> IAST gray box scanning tool</p></li>
+</ul>
+</section>
+<section id="siem">
+<h2><span class="section-number">9.13.8. </span>SIEM<a class="headerlink" href="#siem" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/panther-labs/panther">panther</a> Detect threats with log data and improve cloud security posture</p></li>
+</ul>
+</section>
+<section id="threat-intelligence">
+<h2><span class="section-number">9.13.9. </span>Threat intelligence<a class="headerlink" href="#threat-intelligence" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://threatfeeds.io/">threatfeeds</a></p></li>
+<li><p><a class="reference external" href="https://www.abuseipdb.com/">abuseipdb</a></p></li>
+</ul>
+</section>
+<section id="apt">
+<h2><span class="section-number">9.13.10. </span>APT<a class="headerlink" href="#apt" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml">APT Groups and Operations</a></p></li>
+<li><p><cite>Cold &lt;https://github.com/kbandla/aptotnes&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/ahmedkhlief/APT-Hunter">APT Hunter</a> Threat Hunting tool for windows event logs which made by purple team mindset to provide detect APT movements hidden in the sea of windows event logs to decrease the time to uncover suspicious activity</p></li>
+</ul>
+</section>
+<section id="intrusion-inspection">
+<h2><span class="section-number">9.13.11. </span>Intrusion inspection<a class="headerlink" href="#intrusion-inspection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="HTTPS://Wuwuwuwuwuwuwuweiwu.Turf.Talent/">Turf</a></p></li>
+<li><p><a class="reference external" href="http://www.chkrootkit.org">check rootkit</a></p></li>
+<li><p><a class="reference external" href="http://rkhunter.sourceforge.net/">rootkit hunter</a></p></li>
+<li><p><a class="reference external" href="http://www.xuetr.com/">PC Hunter</a></p></li>
+<li><p><cite>autoruns &lt;https://docs.//Docs./en-us/systernals/Downloads/autoruns&gt;</cite> _</p></li>
+</ul>
+</section>
+<section id="process-view">
+<h2><span class="section-number">9.13.12. </span>Process View<a class="headerlink" href="#process-view" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer">Process Explorer</a></p></li>
+<li><p><a class="reference external" href="https://processhacker.sourceforge.io/">ProcessHacker</a></p></li>
+</ul>
+</section>
+<section id="waf">
+<h2><span class="section-number">9.13.13. </span>Waf<a class="headerlink" href="#waf" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>Nakhsi &lt;https://gith.com/nbs-system/naxi&gt;</cite> _ <cite>_</cite> _ `</p></li>
+<li><p><a class="reference external" href="https://github.com/SpiderLabs/ModSecurity">ModSecurity</a></p></li>
+<li><p><cite>ngx_lua_waf &lt;https://github.com/loveshell/ngx_lua_waf&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://github.com/titansec/OpenWAF">OpenWAF</a></p></li>
+</ul>
+</section>
+<section id="virus-online-detection">
+<h2><span class="section-number">9.13.14. </span>Virus online detection<a class="headerlink" href="#virus-online-detection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>virusortal &lt;https://www.virustom.com/&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="http://www.virscan.org">virscan</a></p></li>
+<li><p><a class="reference external" href="https://habo.qq.com">habo</a></p></li>
+</ul>
+</section>
+<section id="webshell-check">
+<h2><span class="section-number">9.13.15. </span>WebShell check<a class="headerlink" href="#webshell-check" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.d99net.net/index.asp">D Shield</a></p></li>
+<li><p><a class="reference external" href="http://edr.sangfor.com.cn/backdoor_detection.html">Shenxin WebShell check</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nbs-system/php-malware-finder">php malware finder</a></p></li>
+</ul>
+</section>
+<section id="rules-ioc">
+<h2><span class="section-number">9.13.16. </span>Rules / IoC<a class="headerlink" href="#rules-ioc" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/eset/malware-ioc">malware ioc</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fireeye/iocs">fireeye public iocs</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Neo23x0/signature-base">signature base</a></p></li>
+<li><p><cite>Whose Rules &lt;tenpses: //gitub.kum/ara-rules/</cite> _ _</p></li>
+<li><p><a class="reference external" href="https://github.com/fireeye/capa-rules">capa rules</a> standard collection of rules for capa</p></li>
+<li><p><a class="reference external" href="https://github.com/ptresearch/AttackDetection">AttackDetection</a> Suricata PT Open Ruleset</p></li>
+<li><p><a class="reference external" href="https://github.com/StrangerealIntel/DailyIOC">DailyIOC</a> IOC from articles, tweets for archives</p></li>
+</ul>
+</section>
+<section id="threat-detection">
+<h2><span class="section-number">9.13.17. </span>Threat detection<a class="headerlink" href="#threat-detection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/CRED-CLUB/ARTIF">ARTIF</a> An advanced real time threat intelligence framework to identify threats and malicious web traffic on the basis of IP reputation and historical data</p></li>
+</ul>
+</section>
+<section id="security-advisories">
+<h2><span class="section-number">9.13.18. </span>Security Advisories<a class="headerlink" href="#security-advisories" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://httpd.apache.org/security/">Apache httpd Security Advisories</a></p></li>
+<li><p><a class="reference external" href="https://lucene.apache.org/solr/security.html">Apache Solr</a></p></li>
+<li><p><a class="reference external" href="https://tomcat.apache.org/security-8.html">Apache Tomcat</a></p></li>
+<li><p><a class="reference external" href="https://www.eclipse.org/jetty/documentation/current/security-reports.html">Jetty Security Reports</a></p></li>
+<li><p><a class="reference external" href="http://nginx.org/en/security_advisories.html">Nginx Security Advisories</a></p></li>
+<li><p><a class="reference external" href="https://www.openssl.org/news/vulnerabilities.html">OpenSSL</a></p></li>
+</ul>
+</section>
+<section id="security-tracker">
+<h2><span class="section-number">9.13.19. </span>Security Tracker<a class="headerlink" href="#security-tracker" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://security-tracker.debian.org/tracker/source-package/nginx">Nginx Security Tracker</a></p></li>
+</ul>
+</section>
+<section id="matching-tool">
+<h2><span class="section-number">9.13.20. </span>Matching Tool<a class="headerlink" href="#matching-tool" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/VirusTotal/yara">yara</a> The pattern matching swiss knife</p></li>
+<li><p><a class="reference external" href="https://github.com/fireeye/capa">capa</a> The FLARE team’s open-source tool to identify capabilities in executable files.</p></li>
+</ul>
+</section>
+<section id="dos-protection">
+<h2><span class="section-number">9.13.21. </span>DoS protection<a class="headerlink" href="#dos-protection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>Gatekeeper &lt;https://github.com/AltraMayor/gatekeeper&gt;`_</cite> open-source DDoS protection system</p></li>
+</ul>
+</section>
+<section id="adversary-simulation-attack-simulation">
+<h2><span class="section-number">9.13.22. </span>Adversary simulation/attack simulation<a class="headerlink" href="#adversary-simulation-attack-simulation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/BishopFox/sliver">sliver</a> Adversary Simulation Framework</p></li>
+<li><p><a class="reference external" href="https://github.com/mitre/caldera">caldera</a> Automated Adversary Emulation Platform</p></li>
+<li><p><a class="reference external" href="https://github.com/TryCatchHCF/DumpsterFire">DumpsterFire</a></p></li>
+</ul>
+</section>
+<section id="intrusion-protection">
+<h2><span class="section-number">9.13.23. </span>Intrusion protection<a class="headerlink" href="#intrusion-protection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="HTTPS://GitHub.com/fail2half/fail2half">fail2half</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="audit.html" class="btn btn-neutral float-left" title="9.12. Audit tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sdl.html" class="btn btn-neutral float-right" title="9.14. Safe development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025-2025, Lyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
