@@ -40,7 +40,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'Web Security Study Notes'
 copyright = u'2025-%d, Lyle' % date.today().year
-author = u'Kasem545'
+author = u'Lyle'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
