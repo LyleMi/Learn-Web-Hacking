@@ -35,7 +35,7 @@ It is important to note that only this Readme is translated at the moment. Reade
 
 # table of contents
 ---
-1. Prologue (序章)
+1. Prologue
     1. Evolution of networking technology
     2. Evolution of offensive and defensive networking technology
     3. Network Security perspective
