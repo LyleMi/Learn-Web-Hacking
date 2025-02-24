@@ -1,6 +1,6 @@
-参考链接
+Reference link
 ========================================
 
-靶场
+range
 ----------------------------------------
 - `kubernetes goat <https://katacoda.com/madhuakula/scenarios/kubernetes-goat>`_

@@ -1,32 +1,32 @@
-XSS保护
+XSS protection
 ===================================================
 
-HTML过滤
+HTML Filtering
 ---------------------------------------------------
-使用一些白名单或者黑名单来过滤用户输入的HTML，以实现过滤的效果。例如DOMPurify等工具都是用该方式实现了XSS的保护。
+Use some whitelists or blacklists to filter the HTML entered by the user to achieve the filtering effect. For example, tools such as DOMPurify use this method to achieve XSS protection.
 
 X-Frame
 ---------------------------------------------------
-X-Frame-Options 响应头有三个可选的值：
+The X-Frame-Options response header has three optional values:
 
 - DENY
-    - 页面不能被嵌入到任何iframe或frame中
+- Pages cannot be embedded in any iframe or frame
 - SAMEORIGIN
-    - 页面只能被本站页面嵌入到iframe或者frame中
+- Pages can only be embedded in iframe or frame by this website page
 - ALLOW-FROM
-    - 页面允许frame或frame加载
+- Page allows frame or frame to load
 
-XSS保护头
+XSS protection header
 ---------------------------------------------------
-基于 Webkit 内核的浏览器(比如Chrome)在特定版本范围内有一个名为XSS auditor的防护机制，如果浏览器检测到了含有恶意代码的输入被呈现在HTML文档中，那么这段呈现的恶意代码要么被删除，要么被转义，恶意代码不会被正常的渲染出来。
+A browser based on the Webkit kernel (such as Chrome) has a protection mechanism called XSS auditor within a specific version. If the browser detects that input containing malicious code is rendered in an HTML document, then the malicious code presented is either Delete or escaped, the malicious code will not be rendered normally.
 
-而浏览器是否要拦截这段恶意代码取决于浏览器的XSS防护设置。
+Whether the browser wants to intercept this malicious code depends on the browser's XSS protection settings.
 
-要设置浏览器的防护机制，则可使用X-XSS-Protection字段
-该字段有三个可选的值
+To set the browser's protection mechanism, you can use the X-XSS-Protection field
+This field has three optional values
 
-- ``0`` : 表示关闭浏览器的XSS防护机制
-- ``1`` : 删除检测到的恶意代码， 如果响应报文中没有看到 X-XSS-Protection 字段，那么浏览器就认为X-XSS-Protection配置为1，这是浏览器的默认设置
-- ``1; mode=block`` : 如果检测到恶意代码，在不渲染恶意代码
+- ``0``: Indicates that the browser's XSS protection mechanism is closed
+- ``1``: Delete the detected malicious code. If the X-XSS-Protection field is not seen in the response message, the browser considers that X-XSS-Protection is configured as 1, which is the default setting of the browser.
+- ``1; mode=block``: If malicious code is detected, malicious code is not rendered
 
-FireFox没有相关的保护机制，如果需要保护，可使用NoScript等相关插件。
+FireFox does not have a relevant protection mechanism. If protection is required, you can use NoScript and other related plug-ins.

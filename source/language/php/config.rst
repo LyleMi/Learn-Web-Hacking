@@ -1,28 +1,28 @@
-安全相关配置
+Security-related configuration
 =================================
 
-函数与类限制
+Function and class restrictions
 ---------------------------------
-可通过 ``disable_functions`` / ``disable_classes`` 限制PHP可调用的函数和类。
+You can restrict functions and classes that PHP can call by ``disable_functions`` / ``disable_classes`.
 
-目录访问限制
+Directory access restrictions
 ---------------------------------
-可通过 ``open_basedir`` 限制PHP可访问的目录。
+Directories that are accessible to PHP can be restricted through ``open_basedir``.
 
-远程引用限制
+Remote reference restrictions
 ---------------------------------
-可通过 ``all_url_include`` 限制远程文件包含，默认关闭。
-可通过 ``allow_url_fopen`` 限制打开远程文件，默认开启。
+Remote file inclusion can be restricted by ``all_url_include``, and is closed by default.
+Remote files can be opened through ``allow_url_fopen``, which is enabled by default.
 
 Session
 ---------------------------------
 
 Session.Save
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PHP的Session默认handler为文件，存储在 php.ini 的 ``session.save_path`` 中，若有任意读写文件的权限，则可修改或读取session。从phpinfo中可获得session位置。
+The default handler of PHP's Session is a file, stored in ``session.save_path`` of php.ini. If you have any permission to read and write files, you can modify or read the session. The session position can be obtained from phpinfo.
 
 Session.Upload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PHP默认开启了 ``session.upload_progress.enabled`` ， 该选项会导致生成上传进度文件，其存储路径可以在phpinfo中获取。
+PHP has enabled ``session.upload_progress.enabled`` by default. This option will cause the upload progress file to be generated, and its storage path can be obtained in phpinfo.
 
-那么可以构造特别的报文向服务器发送，在有LFI的情况下即可利用。
+Then special messages can be constructed to send to the server, and can be used in the case of LFI.

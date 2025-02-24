@@ -1,26 +1,26 @@
 Phar
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-Phar（PHP Archive）文件是一种打包格式，将PHP代码文件和其他资源放入一个文件中来实现应用程序和库的分发。
+Phar (PHP Archive) file is a packaging format that places PHP code files and other resources into a file to implement the distribution of applications and libraries.
 
-在来自Secarma的安全研究员Sam Thomas在18年的Black Hat上提出后利用方式后，开始受到广泛的关注。
+After the post-utilization method was proposed by the Secarma security researcher Sam Thomas in 2018, it began to attract widespread attention.
 
-Phar可利用是因为Phar以序列化的形式存储用户自定义的meta-data，而以流的形式打开的时候，会自动反序列化，从而触发对应的攻击载荷。
+Phar can be used because Phar stores user-defined meta-data in serialized form, and when opened in stream form, it will automatically deserialize, triggering the corresponding attack payload.
 
-Phar文件结构
+Phar file structure
 ----------------------------------------
-Phar由四个部分组成，分别是 ``stub`` / ``manifest`` / 文件内容 / 签名。 stub 需要 ``__HALT_COMPILER();`` 这个调用在PHP代码中。
+Phar consists of four parts: ``stub`` / ``manifest`` / file content / signature. stub requires ``__HALT_COMPILER();`` this call is in PHP code.
 
-manifest 包含压缩文件的权限、属性、序列化形式存储的meta-data等信息，这是攻击的核心部分，主要就是解析Phar时对meta-data的反序列化。
+manifest contains information such as meta-data stored in the form of permissions, properties, serialization of compressed files. This is the core part of the attack, mainly deserialization of meta-data when parsing Phar.
 
-原理
+principle
 ----------------------------------------
-phar的实现在 ``php-src/ext/phar/phar.c`` 中，主要是 ``phar_parse_metadata`` 函数在解析phar文件时调用了 ``php_var_unserialize`` ，因而造成问题。
+The implementation of php-src/ext/phar/phar.c` is mainly because the ``phar_parse_metadata`` function calls ``php_var_unserialize`` when parsing the phar file, thus causing problems.
 
-而php在文件流处理过程中会调用 ``_php_stream_stat_path`` (/main/streams/streams.c) ，而后间接调用 ``phar_wrapper_stat`` ，所以大量的文件操作函数都可以触发phar的反序列问题。
+During the file stream processing process, php will call ``_php_stream_stat_path`" (/main/streams/streams.c) and then indirectly call ``phar_wrapper_stat``, so a large number of file operation functions can trigger the desequence problem of phar.
 
-目前已知部分的触发函数有:
+Currently known parts of the trigger functions are:
 
 fileatime / filectime / filemtime /stat / fileinode / fileowner / filegroup / fileperms / file / file_get_contents / readfile / fopen / file_exists / is_dir / is_executable / is_file / is_link / is_readable / is_writeable / is_writable / parse_ini_file / unlink / copy / exif_thumbnail / exif_imagetype / imageloadfont / imagecreatefrom*** / hash_hmac_file / hash_file / hash_update_file / md5_file / sha1_file / get_meta_tags / get_headers / getimagesize / getimagesizefromstring

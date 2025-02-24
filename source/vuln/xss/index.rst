@@ -2,18 +2,18 @@ XSS
 ================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   classify
-   harm
-   sop
-   csp
-   source
-   sink
-   mitigation
-   wafbypass
-   trick/index
-   payload
-   rootkit
-   ref
+classify
+harm
+sop
+csp
+source
+sink
+mitigation
+wafbyass
+trick/index
+payload
+rootkit
+ref

@@ -1,10 +1,10 @@
 httponly
 ================================
 
-- 在cookie为httponly的情况下，可以通过xss直接在源站完成操作，不直接获取cookie。
-- 在有登录操作的情况下，部分站点直接发送登录请求可能会带有cookie
-- 部分特定版本的浏览器可能会在httponly支持/处理上存在问题
-- 低版本浏览器支持 TRACE / TRACK，可获取敏感的header字段
-- phpinfo 等页面可能会回显信息，这些信息中包含http头
-- 通过xss劫持页面钓鱼
-- 通过xss伪造oauth等授权请求，远程登录
+- When the cookie is httponly, the operation can be completed directly on the source site through xss, and the cookie is not directly obtained.
+- In the case of login operation, some sites may send login requests directly with cookies.
+- Some specific versions of browsers may have problems with httponly support/processing
+- Low-version browsers support TRACE/TRACK, which can obtain sensitive header fields
+- Pages such as phpinfo may echo information, which contains http headers
+-Phone jailing page phishing via xss
+- Forged authorization requests such as oauth through xss, remote login

@@ -1,5 +1,5 @@
-多因子认证
+Multi-factor authentication
 ========================================
-多因子认证是在单因子认证不足以保证安全性时使用的方法，通常会引入多种方式对用户身份进行验证。身份验证方法可以基于知识的认证，即密码；也可以基于物品的认证，例如硬件密钥；也可以是基于特征的认证，例如包含指纹在内的生物特征等。
+Multi-factor authentication is a method used when single-factor authentication is not sufficient to ensure security. It usually introduces multiple ways to verify user identity. The authentication method can be based on knowledge, i.e. password; it can also be based on article authentication, such as hardware key; it can also be based on feature authentication, such as biometric features including fingerprints, etc.
 
-具体来说，目前常用的生物特征有：指纹、人脸、虹膜、静脉、声纹、体态等。常用的评价指标主要是速度（注册、识别使用的时间），精确度（假阳性、假阴性）等。
+Specifically, the commonly used biometric features currently include: fingerprints, faces, iris, veins, voiceprints, body shapes, etc. Commonly used evaluation indicators are mainly speed (registration, identification and usage time), accuracy (false positive, false negative), etc.

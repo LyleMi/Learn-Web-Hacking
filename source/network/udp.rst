@@ -1,11 +1,11 @@
-UDP协议
+UDP protocol
 ========================================
 
-主要特点
+Main features
 ----------------------------------------
-- 协议开销小、效率高。
-- UDP是无连接的，即发送数据之前不需要建立连接。
-- UDP使用尽最大努力交付，即不保证可靠交付。
-- UDP没有拥塞控制。
-- UDP支持一对一、一对多、多对一和多对多交互通信。
-- UDP的首部开销小，只有8个字节。
+- The protocol is small and the efficiency is high.
+- UDP is connected without connection, that is, no connection is required before sending data.
+- UDP uses the best efforts to deliver, i.e. no reliable delivery is guaranteed.
+- UDP has no congestion control.
+- UDP supports one-to-one, one-to-many, many-to-one and many-to-many interactive communication.
+- UDP's header overhead is small, with only 8 bytes.

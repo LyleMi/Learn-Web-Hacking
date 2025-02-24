@@ -1,39 +1,39 @@
-TCP协议
+TCP protocol
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由RFC 793定义。
+TCP (Transmission Control Protocol) is a connection-oriented, reliable, byte stream-based transmission layer communication protocol defined by RFC 793.
 
-三次握手
+Three handshakes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-三次握手（Three-Way Handshake）是指建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。
+Three-Way Handshake means that when establishing a TCP connection, the client and server need to send a total of 3 packets to confirm the establishment of the connection.
 
-第一次握手客户端将标志位 SYN 置为1，随机产生一个值 seq=s ，并将该数据包发送给服务端，客户端进入 SYN_SENT 状态，等待服务端确认。
+The first handshake client sets the flag SYN to 1, randomly generates a value of seq=s, and sends the data packet to the server. The client enters the SYN_SENT state and waits for the server to confirm.
 
-第二次握手服务端收到数据包后由标志位 SYN=1 知道客户端请求建立连接，服务端将标志位 SYN 和 ACK 都置为1，ack=s+1，随机产生一个值 seq=k ，并将该数据包发送给客户端以确认连接请求，服务端进入 SYN_RCVD 状态。
+After the second handshake server receives the data packet, the flag bit SYN=1 knows that the client requests to establish a connection. The server sets the flag bit SYN and ACK to 1, ack=s+1, and randomly generates a value seq=k , and send the data packet to the client to confirm the connection request, and the server enters the SYN_RCVD state.
 
-第三次握手客户端收到确认后，检查ack值是否为s+1，ACK标志位是否为1，如果正确则将标志位 ACK 置为1，ack=k+1，并将该数据包发送给服务端，服务端检查ack值是否为k+1，ACK标志位是否为1，如果正确则连接建立成功，客户端和服务端进入 ESTABLISHED 状态，完成三次握手。
+After the third handshake client receives the confirmation, check whether the ack value is s+1 and whether the ACK flag is 1. If it is correct, set the flag bit ACK to 1, ack=k+1, and send the packet. To the server, the server checks whether the ack value is k+1 and whether the ACK flag is 1. If it is correct, the connection is established successfully. The client and the server enter the ESTABLISHED state and complete three handshakes.
 
-四次挥手
+Four waves
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-四次挥手（Four-Way Wavehand）指断开一个TCP连接时，需要客户端和服务端总共发送4个包以确认连接的断开。
+Four-Way Wavehand means that when disconnecting a TCP connection, the client and server need to send a total of 4 packets to confirm the disconnection of the connection.
 
-第一次挥手客户端发送一个 FIN ，用来关闭客户端到服务端的数据传送，客户端进入 FIN_WAIT_1 状态。
+The first time I waved my hand to send a FIN to close the data transmission from the client to the server, and the client entered the FIN_WAIT_1 state.
 
-第二次挥手服务端收到 FIN 后，发送一个 ACK 给客户端，确认序号为收到序号+1，服务端进入 CLOSE_WAIT 状态。
+The second wave of the server sends an ACK to the client and confirms that the serial number is received +1, and the server enters the CLOSE_WAIT status.
 
-第三次挥手服务端发送一个 FIN ，用来关闭服务端到客户端的数据传送，服务端进入 LAST_ACK 状态。
+The third wave of the server sends a FIN to close the data transmission from the server to the client, and the server enters the LAST_ACK state.
 
-第四次挥手客户端收到 FIN 后，客户端进入 TIME_WAIT 状态，接着发送一个 ACK 给服务端，确认序号为收到序号+1，服务端进入 CLOSED 状态，完成四次挥手。
+The fourth wave after the client receives the FIN, the client enters the TIME_WAIT state, and then sends an ACK to the server, confirming that the serial number is received, the server enters the CLOSED state, completing four waves.
 
-拥塞控制
+Congestion Control
 ----------------------------------------
-拥塞是指网络中报文数量过多，使得服务端来不及处理，以致引起这部分乃至整个网络性能下降的现象，严重时甚至会导致网络通信业务陷入停顿即出现死锁现象。
+Congestion refers to the phenomenon that the number of messages in the network is too large, which makes the server unable to process it, causing the performance of this part and even the entire network to decline. In severe cases, it may even cause the network communication service to stop and then die-lock.
 
-TCP采用拥塞控制算法来减少或者避免拥塞现象的发生，TCP的拥塞算法有过多种实现，包括Tahoe、Reno、NewReno、Vegas、Hybla、BIC 、CUBIC、SACK、Westwood、PRR、BBR等。
+TCP uses congestion control algorithms to reduce or avoid the occurrence of congestion. TCP's congestion algorithm has been implemented in many ways, including Tahoe, Reno, NewReno, Vegas, Hybla, BIC, CUBIC, SACK, Westwood, PRR, BBR, etc.
 
-参考链接
+Reference link
 ----------------------------------------
 - `RFC 793 TRANSMISSION CONTROL PROTOCOL <https://tools.ietf.org/html/rfc793>`_
 - `RFC 2001 TCP Slow Start, Congestion Avoidance, Fast Retransmit, and Fast Recovery Algorithms <https://tools.ietf.org/html/rfc2001>`_

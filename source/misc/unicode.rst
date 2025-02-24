@@ -1,50 +1,50 @@
 Unicode
 ========================================
 
-基本概念
+Basic concepts
 ----------------------------------------
 
 BMP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-BMP (Basic Multilingual Plane)，译作基本多文种平面，是Unicode中的一个编码区块。
+BMP (Basic Multilingual Plane), translated as a basic multilingual plane, is an encoded block in Unicode.
 
-码平面
+Code plane
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Unicode编码点分为17个平面（plane），每个平面包含2^16（即65536）个码位。17个平面的码位可表示为从U+xx0000到U+xxFFFF，其中xx表示十六进制值从0016到1016，共计17个平面。
+Unicode encoding points are divided into 17 planes, each plane contains 2^16 (i.e. 65536) code bits. The code bits of the 17 planes can be represented from U+xx0000 to U+xxFFFF, where xx represents the hexadecimal value from 0016 to 1016, with a total of 17 planes.
 
 Code Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Code Point也被称作Code Position，译作码位或编码位置，是指组成代码空间的数值。
+Code Point is also called Code Position, which is translated as code bits or encoded positions, and refers to the numerical value that makes up the code space.
 
 Code Unit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-指某种 Unicode 编码方式里编码一个 Code Point 需要的最少字节数，比如 UTF-8 需要最少一个字节，UTF-16 最少两个字节，UCS-2 两个字节，UCS-4 和 UTF-32 四个字节。
+Refers to the minimum number of bytes required to encode a Code Point in a certain Unicode encoding method. For example, UTF-8 requires at least one byte, UTF-16 requires at least two bytes, UCS-2 requires at least two bytes, UCS-4 and UTF -32 Four bytes.
 
 Surrogate Pair
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Surrogate Pair 是用于 UTF-16 的以向后兼容 UCS-2 的，做法是取 UCS-2 范围里的 0xD800~0xDBFF (称为 high surrogates) 和 0xDC00~0xDFFF (称为 low surrogates) 的码位，一个 high surrogate 接一个 low surrogate 拼成四个字节表示超出 BMP 的字符，两个 surrogate range 都是 1024 个码位，所以 surrogate pair 可以表达 1024 x 1024 = 1048576 = 0x100000 个字符。
+Surrogate Pair is used for UTF-16 to be backward compatible with UCS-2. The method is to take the code bits of 0xD800~0xDBFF (called high surrogates) and 0xDC00~0xDFF (called low surrogates) in the UCS-2 range. A high surrogate followed by a low surrogate is spelled into four bytes to represent characters exceeding BMP. Both surrogate ranges are 1024 code bits, so surrogate pair can express 1024 x 1024 = 1048576 = 0x100000 characters.
 
 Combining Character
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-例如 ``He̊llö`` 含有重音符号之类的字符，进行组合会使用大量的码位。所以这种字符多用组合的方式来实现。
+For example, ``He̊llö`` contains characters such as accents, and combining them will use a large number of code points. Therefore, this kind of character is achieved by combining it.
 
 BOM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-字节顺序标记（byte-order mark，BOM）是一个有特殊含义的统一码字符，码点为 ``U+FEFF`` 。当以UTF-16或UTF-32来将UCS字符所组成的字符串编码时，这个字符被用来标示其字节序。常被用于区分是否为UTF编码。
+Byte-order mark (BOM) is a unified code character with special meaning, with a code point of ``U+FEFF``. When encoding a string composed of UCS characters with UTF-16 or UTF-32, this character is used to indicate its byte order. Often used to distinguish whether it is UTF encoding.
 
-编码方式
+Coding method
 ----------------------------------------
 
 UCS-2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-UCS-2 (2-byte Universal Character Set)是一种定长的编码方式，UCS-2仅仅简单的使用一个16位码元来表示码位，也就是说编码范围在0到0xFFFF的码位范围内。
+UCS-2 (2-byte Universal Character Set) is a fixed-length encoding method. UCS-2 simply uses a 16-bit symbol to represent the code bits, which means that the code range is between 0 and 0xFFFF. Inside.
 
 UTF-8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-UTF-8（8-bit Unicode Transformation Format）是一种针对Unicode的可变长度字符编码，也是一种前缀码。它可以用一至四个字节对Unicode字符集中的所有有效编码点进行编码，属于Unicode标准的一部分。编码方式如下
+UTF-8 (8-bit Unicode Transformation Format) is a variable-length character encoding for Unicode and is also a prefix code. It can encode all valid encoding points in the Unicode character set in one to four bytes and is part of the Unicode standard. The encoding method is as follows
 
 +------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
-| 码点的位数 | 码点起值  | 码点终值   | 字节序列 | Byte 1   | Byte 2   | Byte 3   | Byte 4   | Byte 5   | Byte 6   |
+| Number of digits of code points | Starting value of code points | End value of code points | Byte sequence | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 |
 +============+===========+============+==========+==========+==========+==========+==========+==========+==========+
 | 7          | U+0000    | U+007F     | 1        | 0xxxxxxx |          |          |          |          |          |
 +------------+-----------+------------+----------+----------+----------+----------+----------+----------+----------+
@@ -61,98 +61,98 @@ UTF-8（8-bit Unicode Transformation Format）是一种针对Unicode的可变长
 
 UTF-16
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-UTF-16 (16-bit Unicode Transformation Format)是UCS-2的拓展，用一个或者两个16位的码元来表示码位，可以对0到0x10FFFF的码位进行编码。
+UTF-16 (16-bit Unicode Transformation Format) is an extension of UCS-2. It uses one or two 16-bit symbols to represent code bits, and code bits from 0 to 0x10FFFF can be encoded.
 
-等价性问题
+Equivalence issues
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Unicode（统一码）包含了许多特殊字符，为了使得许多现存的标准能够兼容，提出了Unicode等价性（Unicode equivalence）。在字符中，有些在功能上会和其它字符或字符序列等价。因此，Unicode将一些码位序列定义成相等的。
+Unicode contains many special characters. In order to make many existing standards compatible, Unicode equivalence is proposed. Among characters, some are functionally equivalent to other characters or sequences of characters. Therefore, Unicode defines some sequences of code bits as equal.
 
-Unicode提供了两种等价概念：标准等价和兼容等价。前者是后者的一个子集。例如，字符n后接着组合字符 `~` 会（标准和兼容）等价于Unicode字符ñ。而合字ﬀ则只有兼容等价于两个f字符。
+Unicode provides two equivalent concepts: standard equivalent and compatible equivalent. The former is a subset of the latter. For example, the character n followed by the combination of the character `~` will (standard and compatible) be equivalent to the Unicode character N. The combined character ﬀ is only compatible with two f characters.
 
-Unicode正规化是文字正规化的一种形式，是指将彼此等价的序列转成同一列序。此序列在Unicode标准中称作正规形式。
+Unicode regularization is a form of text regularization, which refers to converting sequences of equivalents to the same sequence. This sequence is called the regular form in the Unicode standard.
 
-对于每种等价概念，Unicode又定义两种形式，一种是完全合成的，一种是完全分解的。因此，最后会有四种形式，其缩写分别为：NFC、NFD、NFKC、NFKD。对于Unicode的文字处理程序而言，正规化是很重要的。因为它影响了比较、搜索和排序的意义。 
+For each equivalent concept, Unicode defines two forms, one is completely synthesized and the other is completely decomposed. Therefore, there will be four forms at the end, and their abbreviations are: NFC, NFD, NFKC, and NFKD. For Unicode word processing programs, regularization is very important. Because it affects the meaning of comparison, search and sorting.
 
-标准等价
+Standard equivalent
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-统一码中标准等价的基础概念为字符的组成和分解的交互使用。合成指的是将简单的字符合并成较少的预组字符的过程，如字符n和组合字符 `~` 可以组成统一码ñ。分解则是反向过程，即将预组字符变回部件。
+The basic concept of standard equivalent in unified code is the interactive use of characters composition and decomposition. Synthesis refers to the process of complying simple characters into fewer pregroup characters, such as character n and combination characters `~` can form a unified code n. Decomposition is a reverse process, that is, converting pregroup characters back to components.
 
-标准等价是指保持视觉上和功能上的等价。例如，含附加符号字母被视为和分解后的字母及其附加符号是标准等价。换句话说，预组字符‘ü’和由‘u’及 ‘¨’所组成的序列是标准等价。相似地，统一码统合了一些希腊附加符号和外观与附加符号类似的标点符号。
+Standard equivalence means maintaining visual and functional equivalence. For example, letters containing additional symbols are considered and decomposed letters and their additional symbols are standard equivalents. In other words, the pregroup character ‘ü’ and the sequence composed of ‘u’ and ‘¨’ are standard equivalents. Similarly, the Uniform Code integrates some Greek additional symbols and punctuation marks that look similar to the additional symbols.
 
-兼容等价
+Compatible equivalent
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-兼容等价的范围较标准等价来得广。如果序列是标准等价的话就会是兼容等价，反之则未必对。兼容等价更关注在于纯文字的等价，并把一些语义上的不同形式归结在一起。
+The range of compatible equivalents is wider than that of standard equivalents. If the sequence is standard equivalent, it will be compatible equivalent, otherwise it may not be correct. Compatibility equivalence focuses more on the equivalence of pure text and attributes some semantic different forms together.
 
-例如，上标数字和其所使用的数字是兼容等价，但非标准等价。其理由为下标和上标形式虽然在某些时侯属于不同意义，但若应用程序将他们视为一样也是合理的（虽然视觉上可区分）。如此，在统一码富文件中，上标和下标就可以以比较不累赘地方式出现（见下一节）。
+For example, the superscript number and the number it uses are compatible equivalents, but not standard equivalents. The reason is that although subscripts and superscript forms have different meanings at some point, it is reasonable if the application considers them the same (although visually distinguishable). In this way, in a unified code-rich file, the superscript and the subscript can appear in a relatively less cumbersome way (see next section).
 
-全角和半角的片假名也是一种兼容等价但不是标准等价。如同合字和其部件序列。其只有视觉上但没有语义上的区别。换句话说，作者通常没有特别宣称使用合字是一种意思，而不使用是另一种意思。相对地，这尽限于印刷上的选择。 
+The full and half-width Katakana is also a compatible equivalent but not a standard equivalent. Like a combination and its component sequence. It only has visual but no semantic differences. In other words, the author usually does not specifically claim that using the word combo means one meaning, and not using it means another. Relatively, this is limited to selection on printing.
 
-文字处理软件在实现统一码字符串的搜索和排序时，须考虑到等价性的存在。如果没有此特性的话，用户在搜索时将无法找到在视觉上无法区分的字形。
+When word processing software realizes the search and sorting of unified coded strings, it must take into account the existence of equivalence. Without this feature, users will not be able to find visually indistinguishable glyphs when searching.
 
-统一码提供了一个标准的正规化算法，可将所有相同的序列产生一个唯一的序列。 其等价准绳可以为标准的（NF）或兼容的（NFK）。 既然可以任意选择等价类中的元素，对每一个等价标准有多个标准形式也是有可能的。 统一码为每一种等价准绳分别提供两种正规形式：合成用的NFC和NFKC以及分解用的NFD和NFKD。 而不论是组合的或分解的形式，都会使用标准顺序，以此限制正规形式只有唯一形式。
+Unified code provides a standard regularization algorithm that produces a unique sequence for all the same sequences. Its equivalent standard can be standard (NF) or compatible (NFK). Since elements in the equivalent class can be selected arbitrarily, it is also possible to have multiple standard forms for each equivalent standard. The unified code provides two formal forms for each equivalent standard: NFC and NFKC for synthesis and NFD and NFKD for decomposition. Whether combined or decomposed forms, standard order will be used, so as to limit the regular form to only have unique forms.
 
-正规化
+normalization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-为了比较或搜索统一码字符串，软件可以使用合成或分解形式其中之一。 只要被比较或搜索的字符串使用的形式是相同的，哪种选择都没关系。 另一方面，等价概念的选择则会影响到搜索结果。 譬如，有些合字如ﬃ（U+FB03）、罗马数字如Ⅸ（U+2168），甚至是上标数字如⁵（U+2075）有其个别统一码码位。 标准正规形式并不会影响这些结果。 但兼容正规形式会分解ﬃ成f、f、i。所以搜索U+0066（f）时，在NFKC中会成功，但在NFC则会失败。 同样地有在预组罗马数字Ⅸ 中搜索拉丁字母I（U+0049）。类似地，“⁵”会转成“5”。
+To compare or search for unified code strings, the software can use one of them in synthesis or decomposition. As long as the strings that are compared or searched are used in the same form, it doesn't matter which choice. On the other hand, the choice of the concept of equivalents will affect the search results. For example, some combined characters such as ﬃ (U+FB03), Roman numerals such as Ⅸ (U+2168), and even superscript numerals such as ⁵ (U+2075) have their own individual unified code points. Standard formal forms do not affect these results. But compatible formal forms will be decomposed into f, f, i. So when searching for U+0066(f), it will succeed in NFKC, but it will fail in NFC. Similarly, search for the Latin letter I (U+0049) in the pre-group of Roman numerals IX. Similarly, "⁵" will turn into "5".
 
-对于浏览器，将上标转换成到基下划线未必是好的，因为上标的信息会因而消失。为了允许这种不同，统一码字符数据库句含了兼容格式标签，其提供了兼容转换的细节。在合字的情况下，这个标签只是 ``<compat>`` ，而在上标的情况下则为 ``<super>`` 。丰富文件格式如超文本置标语言则会使用兼容标签。例如，HTML使用自定义标签来将“5”放到上标位置。
+For browsers, converting the superscript to a base underscore is not necessarily good, because the information on the superscript will disappear. To allow for this difference, the unified code character database sentence contains compatible format tags, which provide details of compatible conversions. In the case of combinatorial characters, this tag is just ``<compat>``, and in the case of superscript it is ``<super>``. Rich file formats such as hypertext labeling languages will use compatible tags. For example, HTML uses custom tags to place "5" in the superscript position.
 
-正规形式
+Formal form
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- NFD Normalization Form Canonical Decomposition 以标准等价方式来分解
-- NFC Normalization Form Canonical Composition 以标准等价方式来分解，然后以标准等价重组之。若是singleton的话，重组结果有可能和分解前不同。
-- NFKD Normalization Form Compatibility Decomposition  以兼容等价方式来分解NFKC
-- Normalization Form Compatibility Composition 以兼容等价方式来分解，然后以标准等价重组之
+- NFD Normalization Form Canonical Decomposition Decomposition in standard equivalent
+- NFC Normalization Form Canonical Composition is broken down in a standard equivalent manner and then reorganized in a standard equivalent. If it is a singleton, the restructuring result may be different from before decomposition.
+- NFKD Normalization Form Compatibility Decomposition Decomposition NFKC in a compatible equivalent way
+- Normalization Form Compatibility Composition is broken down in a compatible equivalent manner and then reorganizes it in a standard equivalent manner.
 
 Tricks
 ----------------------------------------
-- 部分语言的长度并不是字符的长度，一个UTF-16可能是两位。
-- 部分语言在翻转UTF-16等多字节编码时，会处理错误。
+- The length of some languages is not the length of the character, a UTF-16 may be two digits.
+- Some languages will handle errors when flipping UTF-16 and other multi-byte encodings.
 
-安全问题
+Security Question
 ----------------------------------------
 
 Visual Spoofing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-例如bаidu.com(此处的a为\u0430)和baidu.com(此处的a为\x61)视觉上相同，但是实际上指向两个不同的域名。
+For example, bаidu.com (a here is \u0430) and baidu.com (a here is \x61) are visually the same, but actually point to two different domain names.
 
-bａidu.com(此处的a为\uff41)和baidu.com(此处的a为\x61)有一定的不同，但是指向两个相同的域名。
+baidu.com (a here is \uff41) and baidu.com (a here is \x61), but point to two identical domain names.
 
-这种现象可以引起一些Spoofing或者WAF Bypass的问题。
+This phenomenon can cause some problems with Spoofing or WAF Bypass.
 
 Best Fit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-如果两个字符前后编码不同，之前的编码在之后的编码没有对应，程序会尝试找最佳字符进行自动转换。
+If the two characters have different encodings before and after encoding, and the previous encoding does not correspond to the subsequent encoding, the program will try to find the best character for automatic conversion.
 
-当宽字符变成了单字节字符，字符编码会有一定的变化。
+When a wide character becomes a single-byte character, the character encoding will change to a certain extent.
 
-这种现象可能引起一些WAF Bypass。
+This phenomenon may cause some WAF Bypass.
 
 Syntax Spoofing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-以下四个Url在语法上看来是没问题的域名，但是用来做分割的字符并不是真正的分割字符，而是U+2044( ⁄ )，可以导致一些UI欺骗的问题。
+The following four Urls seem to be a good domain name syntactically, but the characters used for segmentation are not really split characters, but U+2044( ⁄ ), which can lead to some UI spoofing problems.
 
-- http://macchiato.com/x.bad.com  macchiato.com/x     bad.com  
-- http://macchiato.com?x.bad.com  macchiato.com?x     bad.com  
-- http://macchiato.com.x.bad.com  macchiato.com.x     bad.com  
-- http://macchiato.com#x.bad.com  macchiato.com#x     bad.com  
+- http://macchiato.com/x.bad.com  macchiato.com/x     bad.com
+- http://macchiato.com?x.bad.com  macchiato.com?x     bad.com
+- http://macchiato.com.x.bad.com Macchiato.com.x Bad.com
+- http://macchiato.com#x.bad.com  macchiato.com#x     bad.com
 
 Punycode Spoofs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- http://䕮䕵䕶䕱.com        http://xn--google.com  
-- http://䁾.com              http://xn--cnn.com  
-- http://岍岊岊岅岉岎.com    http://xn--citibank.com  
+- http://�定定定定.com http://xn--google.com
+- http://䁾.com              http://xn--cnn.com
+- http://田少田少田.com http://xn--citibank.com
 
-有些浏览器会直接显示puncode，但是也可以借助这种机制实现UI Spooof。
+Some browsers will directly display puncode, but this mechanism can also be used to implement UI Spooof.
 
 Buffer Overflows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在编码转换的时候，有的字符会变成多个字符，如Fluß → FLUSS → fluss这样可能导致BOF。
+During encoding conversion, some characters will become multiple characters, such as Fluß → FLUSS → fluss, which may lead to BOF.
 
-常见载荷
+Common loads
 ----------------------------------------
 
 URL
@@ -160,13 +160,13 @@ URL
 - ``‥`` (U+2025)
 - ``︰`` (U+FE30)
 - ``。`` (U+3002)
-- ``⓪``  (U+24EA)
+- `⓪ ⓪``` (U + 24EA)
 - ``／`` (U+FF0F)
 - ``ｐ`` (U+FF50)
 - ``ʰ`` (U+02B0)
-- ``ª`` (U+00AA)
+- `` ª``` (the + 00aa)
 
-SQL注入
+SQL Injection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``＇`` (U+FF07)
 - ``＂`` (U+FF02)
@@ -174,23 +174,23 @@ SQL注入
 
 XSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``＜`` (U+FF1C)
+- `` ＜ `` (u+ff1c)
 - ``＂`` (U+FF02)
 
-命令注入
+Command Injection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``＆`` (U+FF06)
-- ``｜`` (U+FF5C)
+- `` ｜ `` (U+FF5C)
 
-模板注入
+Template injection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``﹛`` (U+FE5B)
+- `﹛` `(U+Fe5b)
 - ``［`` (U+FF3B)
 
-参考链接
+Reference link
 ----------------------------------------
 
-官方文档
+Official Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Unicode equivalence <https://en.wikipedia.org/wiki/Unicode_equivalence>`_
 - `Unicode Normalization Forms <http://unicode.org/reports/tr15/>`_
@@ -208,4 +208,4 @@ Tricks / Blogs
 - `Black Hat Unicode Security <https://www.blackhat.com/presentations/bh-usa-09/WEBER/BHUSA09-Weber-UnicodeSecurityPreview-PAPER.pdf>`_
 - `Request encoding to bypass web application firewalls <https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/august/request-encoding-to-bypass-web-application-firewalls/>`_
 - `domain hacks with unusual unicode characters <https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/>`_
-- `其实你并不懂 Unicode <https://zhuanlan.zhihu.com/p/53714077>`_
+- `You don't actually understand Unicode <https://zhuanlan.zhihu.com/p/53714077>`_

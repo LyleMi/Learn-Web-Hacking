@@ -1,98 +1,98 @@
-溯源分析
+Traceability analysis
 ========================================
 
-攻击机溯源技术
+Attack aircraft traceability technology
 ----------------------------------------
 
-基于日志的溯源
+Log-based traceability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-使用路由器、主机等设备记录网络传输的数据流中的关键信息(时间、源地址、目的地址)，追踪时基于日志查询做反向追踪。
+Use routers, hosts and other devices to record key information (time, source address, destination address) in the data stream transmitted by the network, and reverse tracking is performed based on log queries when tracking.
 
-这种方式的优点在于兼容性强、支持事后追溯、网络开销较小。但是同时该方法也受性能、空间和隐私保护等的限制，考虑到以上的因素，可以限制记录的数据特征和数据数量。另外可以使用流量镜像等技术来减小对网络性能的影响。
+The advantages of this method are strong compatibility, support for post-traceability, and have small network overhead. However, this method is also limited by performance, space and privacy protection. Taking into account the above factors, the recorded data characteristics and number of data can be limited. In addition, technologies such as traffic mirroring can be used to reduce the impact on network performance.
 
-路由输入调试技术
+Routing input debugging technology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在攻击持续发送数据，且特性较为稳定的场景下，可以使用路由器的输入调试技术，在匹配到攻击流量时动态的向上追踪。这种方式在DDoS攻击追溯中比较有效，且网络开销较小。
+In scenarios where the attack continues to send data and the characteristics are relatively stable, the router's input debugging technology can be used to dynamically track upwards when matching the attack traffic. This method is more effective in DDoS attack traceability and has a small network overhead.
 
-可控洪泛技术
+Controllable flood technology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-追踪时向潜在的上游路由器进行洪泛攻击，如果发现收到的攻击流量变少则攻击流量会流经相应的路由。这种方式的优点在于不需要预先部署，对协同的需求比较少。但是这种方式本身是一种攻击，会对网络有所影响。
+When tracing, flood attacks are carried out to potential upstream routers. If the attack traffic is found to be reduced, the attack traffic will flow through the corresponding route. The advantage of this method is that it does not require pre-deployment and requires less coordination. But this method itself is an attack that will have some impact on the network.
 
-基于包数据修改追溯技术
+Traceability technology based on package data modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-这种溯源方式直接对数据包进行修改，加入编码或者标记信息，在接收端对传输路径进行重构。这种方式人力投入较少，支持事后分析，但是对某些协议的支持性不太好。
+This traceability method directly modifies the data packet, adds encoding or tagging information, and reconstructs the transmission path at the receiving end. This method has less manpower investment and supports post-fact analysis, but it is not very supportive of some protocols.
 
-基于这种方式衍生出了随机标记技术，各路由以一定概率对数据包进行标识，接收端收集到多个包后进行重构。
+Based on this method, random marking technology has been derived. Each route identifies data packets with a certain probability, and the receiver collects multiple packets and reconstructs them.
 
-基于蜜罐溯源
+Based on honeypot traceability
 ----------------------------------------
-- 社交网络jsonp API
-- 获取攻击者IP
-- 获取burp信息
+- Social Network jsonp API
+- Get the attacker's IP
+- Get burp information
 
-分析模型
+Analytical Model
 ----------------------------------------
 
-杀伤链(Kill Kain)模型
+Kill Kain model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-杀伤链这个概念源自军事领域，它是一个描述攻击环节的模型。一般杀伤链有认为侦查跟踪(Reconnaissance)、武器构建(Weaponization)、载荷投递(Delivery)、漏洞利用(Exploitation)、安装植入(Installation)、通信控制(Command&Control)、达成目标(Actions on Objective)等几个阶段。
+The concept of kill chain originates from the military field and is a model that describes the attack link. Generally, kill chains include reconnaissance, weapon construction, payload delivery, exploitation, installation and implantation, communication control, and achievement of goals. Several stages.
 
-在越早的杀伤链环节阻止攻击，防护效果就越好，因此杀伤链的概念也可以用来反制攻击。
+The earlier the kill chain link prevents the attack, the better the protection effect, so the concept of the kill chain can also be used to counter attacks.
 
-在跟踪阶段，攻击者通常会采用扫描和搜索等方式来寻找可能的目标信息并评估攻击成本。在这个阶段可以通过日志分析、邮件分析等方式来发现，这阶段也可以采用威胁情报等方式来获取攻击信息。
+During the tracking phase, attackers usually use scanning and search methods to find possible target information and evaluate the cost of the attack. At this stage, you can discover it through log analysis, email analysis, etc., and at this stage, you can also use threat intelligence and other methods to obtain attack information.
 
-武器构建阶段攻击者通常已经准备好了攻击工具，并进行尝试性的攻击，在这个阶段IDS中可能有攻击记录，外网应用、邮箱等帐号可能有密码爆破的记录。有一些攻击者会使用公开攻击工具，会带有一定的已知特征。
+During the weapon construction stage, the attacker usually has prepared the attack tools and conducts attempted attacks. At this stage, there may be attack records in IDS, and accounts such as external network applications and email addresses may have password explosion records. Some attackers will use public attack tools that will carry certain known characteristics.
 
-载荷投递阶段攻击者通常会采用网络漏洞、鱼叉、水坑、网络劫持、U盘等方式投送恶意代码。此阶段已经有人员在对应的途径收到了攻击载荷，对人员进行充分的安全培训可以做到一定程度的防御。
+During the payload delivery stage, attackers usually use network vulnerabilities, harpoons, puddles, network hijacking, USB flash drives and other methods to deliver malicious code. At this stage, some personnel have received attack payloads in the corresponding channels, and sufficient safety training for personnel can achieve a certain degree of defense.
 
-突防利用阶段攻击者会执行恶意代码来获取系统控制权限，此时木马程序已经执行，此阶段可以依靠杀毒软件、异常行为告警等方式来找到相应的攻击。
+During the breakthrough and utilization stage, the attacker will execute malicious code to obtain system control permissions. At this time, the Trojan program has been executed. At this stage, the corresponding attack can be found by relying on antivirus software, abnormal behavior alarms, etc.
 
-安装植入阶段攻击者通常会在web服务器上安装Webshell或植入后门、rootkit等来实现对服务器的持久化控制。可以通过对样本进行逆向工程来找到这些植入。
+During the installation and implantation phase, attackers usually install Webshell or implant backdoors, rootkits, etc. on the web server to achieve persistence control of the server. These implants can be found by reverse engineering the samples.
 
-通信控制阶段攻击者已经实现了远程通信控制，木马会通过Web三方网站、DNS隧道、邮件等方式和控制服务器进行通信。此时可以通过对日志进行分析来找到木马的痕迹。
+During the communication control phase, the attacker has implemented remote communication control, and the Trojan will communicate with the control server through three-party Web websites, DNS tunnels, mails, etc. At this time, you can find traces of the Trojan horse by analyzing the log.
 
-达成目标阶段时，攻击者开始完成自己的目的，可能是破坏系统正常运行、窃取目标数据、敲诈勒索、横向移动等。此时受控机器中可能已经有攻击者的上传的攻击利用工具，此阶段可以使用蜜罐等方式来发现。
+When the target phase is achieved, the attacker begins to achieve his purpose, which may be to disrupt the normal operation of the system, steal target data, extort, lateral movement, etc. At this time, there may be an attack tool uploaded by an attacker in the controlled machine. At this stage, you can use honeypots and other methods to discover it.
 
-钻石(Diamond)模型
+Diamond model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-钻石模型由网络情报分析与威胁研究中心(The Center for Cyber Intelligence Anaysis and Threat Research，CCIATR)机构的Sergio Catagirone等人在2013年提出。
+The diamond model was proposed in 2013 by Sergio Catagirone and others from the Cyber Intelligence Analysis and Threat Research Institute (CCIATR).
 
-该模型把所有的安全事件(Event)分为四个核心元素，即敌手(Adversary)，能力(Capability)，基础设施(Infrastructure)和受害者(Victim)，以菱形连线代表它们之间的关系，因而命名为“钻石模型”。
+The model divides all security events into four core elements, namely Adversary, Capability, Infrastructure and Victim, and uses diamond-shaped connections to represent their relationships , hence the name "Diamond Model".
 
-杀伤链模型的特点是可说明攻击线路和攻击的进程，而钻石模型的特点是可说明攻击者在单个事件中的攻击目的和所使用攻击手法。
+The kill chain model is characterized by explaining the attack line and the process of the attack, while the diamond model is characterized by explaining the attacker's purpose and attack methods in a single event.
 
-在使用钻石模型分析时，通常使用支点分析的方式。支点(Pivoting)指提取一个元素，并利用该元素与数据源相结合以发现相关元素的分析技术。分析中可以随时变换支点，四个核心特征以及两个扩展特征(社会政治、技术)都可能成为当时的分析支点。
+When using diamond model analysis, the fulcrum analysis method is usually used. Pivoting refers to the analysis technique that extracts an element and uses it to combine it with a data source to discover related elements. The fulcrum can be changed at any time in analysis, and the four core features and two extended features (social politics, technology) may all become the fulcrum of analysis at that time.
 
-关联分析方法
+Correlation analysis method
 ----------------------------------------
-关联分析用于把多个不同的攻击样本结合起来。
+Correlation analysis is used to combine multiple different attack samples.
 
-文档类
+Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - hash
 - ssdeep
-- 版本信息(公司/作者/最后修改作者/创建时间/最后修改时间)
+- Version information (Company/Author/Last Modified Author/Creation Time/Last Modified Time)
 
-行为分析
+Behavioral Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 基于网络行为
-    - 类似的交互方式
+- Based on network behavior
+- Similar interaction methods
 
-可执行文件相似性分析
+Executable file similarity analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 特殊端口
-- 特殊字符串/密钥
-- PDB文件路径
-    - 相似的文件夹
-- 代码复用
-    - 相似的代码片段
+- Special port
+- Special string/key
+- PDB file path
+- Similar folders
+- Code reuse
+- Similar code snippets
 
-清除日志方式
+Clear logging method
 ----------------------------------------
-- ``kill <bash process ID>`` 不会存储
-- ``set +o history`` 不写入历史记录
-- ``unset HISTFILE`` 清除历史记录的环境变量
+-``kill <bash process ID>`` will not be stored
+- ``set +o history`` does not write history
+- ``unset HISTFILE`` Clears the history of environment variables
 
-参考链接
+Reference link
 ----------------------------------------
-- `利用社交账号精准溯源的蜜罐技术 <https://mp.weixin.qq.com/s/vlr2X68tMTgDhdDk4aow0g>`_
+- `Honey pot technology that uses social accounts to accurately trace the source <https://mp.weixin.qq.com/s/vlr2X68tMTgDhdDk4aow0g>`_

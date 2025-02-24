@@ -1,10 +1,10 @@
-中间件
+middleware
 ================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   iis
-   apache
-   nginx
+iis
+apache
+nginx

@@ -1,4 +1,4 @@
-RDAP
+Rdap
 ========================================
 
-RDAP (Registration Data Access Protocol) 协议是Whois协议的后继，和 Whois 协议类似，RDAP协议提供了域名、自治系统、IP地址的信息查询。
+The RDAP (Registration Data Access Protocol) protocol is the successor to the Whois protocol. Similar to the Whois protocol, the RDAP protocol provides information query for domain names, autonomous systems, and IP addresses.

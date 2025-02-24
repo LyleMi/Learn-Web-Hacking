@@ -1,19 +1,19 @@
-类
+kind
 ========================================
 
-生命周期
+life cycle
 ----------------------------------------
-整体来说，Java中类的生命周期如下：加载 (Loading) -> [ 连接 (Linking) : 验证 (Verification) -> 准备 (Perparation) -> 解析 (Resolutin) ] -> 初始化 (Initialization) -> 使用 (Using) -> 卸载 (Unloading) 。
+Overall, the life cycle of a class in Java is as follows: Loading -> [Linking: Verification -> Preparation -> Resolutin] -> Initialization -> Use (Using) -> Unloading.
 
-加载过程分为三步：
+The loading process is divided into three steps:
 
-- 通过全限定类名来获取定义此类的二进制字节流
-- 将字节流所代表的静态存储结构转化为方法区的运行时数据结构
-- 在内存中生成代表这个类的 ``java.lang.Class`` 对象，作为方法区这个类的各种数据的访问入口
+- Get a binary byte stream that defines this class by fully qualified class name
+- Convert the static storage structure represented by the byte stream into the runtime data structure of the method area
+- Generate ``java.lang.Class`` object representing this class in memory, as an access portal for various data in this class in the method area
 
-验证阶段主要用于确保 Class 文件的字节流符合当前虚拟机的要求，分为几步：
+The verification phase is mainly used to ensure that the byte stream of the Class file meets the requirements of the current virtual machine, and is divided into several steps:
 
-- 判断文件格式：是否以 ``0xCAFEBABE`` 开始，主次版本号是否在处理范围内
-- 元数据验证
-- 字节码验证
-- 符号引用验证
+- Determine file format: whether it starts with ``0xCAFEBABE``, whether the primary and secondary version numbers are within the processing range
+- Metadata Verification
+- Bytecode verification
+- Symbol Reference Verification

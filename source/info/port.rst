@@ -1,154 +1,154 @@
-端口信息
+Port information
 ========================================
 
-常见端口及其脆弱点
+Common ports and their fragility points
 ----------------------------------------
 - FTP (21/TCP)
-    - 默认用户名密码 ``anonymous:anonymous``
-    - 暴力破解密码
-    - VSFTP某版本后门
+- Default username and password ``anonymous:anonymous``
+- Brute force password cracking
+- VSFTP version backdoor
 - SSH (22/TCP)
-    - 部分版本SSH存在漏洞可枚举用户名
-    - 暴力破解密码
+- Some versions of SSH have vulnerabilities to enumerate user names
+- Brute force password cracking
 - Telent (23/TCP)
-    - 暴力破解密码
-    - 嗅探抓取明文密码
+- Brute force password cracking
+- Sniffing and grab plaintext password
 - SMTP (25/TCP)
-    - 无认证时可伪造发件人
+- The sender can be forged without authentication
 - DNS (53/UDP & 53/TCP)
-    - 域传送漏洞
-    - DNS劫持
-    - DNS缓存投毒
-    - DNS欺骗
-    - SPF / DMARC Check
-    - DDoS
-        - DNS Query Flood
-        - DNS 反弹
-    - DNS 隧道
+- Domain Transmission Vulnerability
+- DNS hijacking
+- DNS cache poisoning
+- DNS spoofing
+- SPF / DMARC Check
+- DDoS
+- DNS Query Flood
+- DNS rebound
+- DNS tunnel
 - DHCP 67/68
-    - 劫持/欺骗
+- Hijacking/deception
 - TFTP (69/TCP)
 - HTTP (80/TCP)
 - Kerberos (88/TCP)
-    - 主要用于监听KDC的票据请求
-    - 用于进行黄金票据和白银票据的伪造
+- Mainly used to listen to KDC ticket requests
+- Forged gold and silver notes
 - POP3 (110/TCP & 995/TCP)
-    - 爆破
+- Blast
 - RPC (135/TCP)
-    - wmic 服务利用
+- wmic service utilization
 - NetBIOS (137/UDP & 138/UDP)
-    - 未授权访问
-    - 弱口令
+- Unauthorized access
+- Weak password
 - NetBIOS / Samba (139/TCP)
-    - 未授权访问
-    - 弱口令
+- Unauthorized access
+- Weak password
 - IMAP (143/TCP & 993/TCP)
 - SNMP (161/TCP & 161/UDP)
-    - Public 弱口令
+- Public Weak Password
 - LDAP (389/TCP)
-    - 用于域上的权限验证服务
-    - 匿名访问
-    - 注入
+- Used for permission verification services on domains
+- Anonymous access
+- Injection
 - HTTPS (443/TCP)
 - SMB (445/TCP)
-    - Windows 协议簇，主要功能为文件共享服务
-    - ``net use \\192.168.1.1 /user:xxx\username password``
+- Windows protocol cluster, the main function is file sharing service
+- ``net use \192.168.1.1 /user:xxx\username password``
 - Linux Rexec (512/TCP & 513/TCP & 514/TCP)
-    - 弱口令
+- Weak password
 - Rsync (873/TCP)
-    - 未授权访问
+- Unauthorized access
 - RPC (1025/TCP)
-    - NFS匿名访问
+- NFS anonymous access
 - Java RMI (1090/TCP & 1099/TCP)
-    - 反序列化远程命令执行漏洞
+- Deserialization remote command execution vulnerability
 - MSSQL (1433/TCP)
-    - 弱密码
-    - 差异备份 GetShell
-    - SA 提权
+- Weak password
+- Differential Backup GetShell
+- SA escalation of rights
 - Oracle (1521/TCP)
-    - 弱密码
+- Weak password
 - NFS (2049/TCP)
-    - 权限设置不当
-    - ``showmount <host>``
+- Improper permission settings
+- ``showmount <host>``
 - ZooKeeper (2171/TCP & 2375/TCP)
-    - 无身份认证
+- No identity authentication
 - Docker Remote API (2375/TCP)
-    - 未限制IP / 未启用TLS身份认证
-    - ``http://docker.addr:2375/version``
+- IP not restricted / TLS authentication not enabled
+- ``http://docker.addr:2375/version``
 - MySQL (3306/TCP)
-    - 弱密码
-    - 日志写WebShell
-    - UDF提权
-    - MOF提权
+- Weak password
+- Log writing WebShell
+- UDF escalation
+- MOF escalation
 - RDP / Terminal Services (3389/TCP)
-    - 弱密码
+- Weak password
 - Postgres (5432/TCP)
-    - 弱密码
-    - 执行系统命令
+- Weak password
+- Execute system commands
 - VNC (5900/TCP)
-    - 弱密码
+- Weak password
 - CouchDB (5984/TCP)
-    - 未授权访问
+- Unauthorized access
 - WinRM (5985/TCP)
-    - Windows对WS-Management的实现
-    - 在Vista上需要手动启动，在Windows Server 2008中服务是默认开启的
+- Windows' implementation of WS-Management
+- It is necessary to start manually on Vista, and the service is enabled by default in Windows Server 2008.
 - Redis (6379/TCP)
-    - 无密码或弱密码
-    - 绝对路径写 WebShell
-    - 计划任务反弹 Shell
-    - 写 SSH 公钥
-    - 主从复制 RCE
-    - Windows 写启动项
+- No password or weak password
+- Absolute path writing WebShell
+- Planned mission rebound Shell
+- Write SSH public key
+- Master-slave replication RCE
+- Windows Write Startup Item
 - Kubernetes API Server (6443/TCP && 10250/TCP)
-    - ``https://Kubernetes:10250/pods``
+- ``https://Kubernetes:10250/pods``
 - JDWP (8000/TCP)
-    - 远程命令执行
+- Remote command execution
 - ActiveMQ (8061/TCP)
 - Jenkin (8080/TCP)
-    - 未授权访问
+- Unauthorized access
 - Elasticsearch (9200/TCP)
-    - 代码执行
-    - ``http://es.addr:9200/_plugin/head/``
-    - ``http://es.addr:9200/_nodes``
+- Code execution
+- ``http://es.addr:9200/_plugin/head/``
+- ``http://es.addr:9200/_nodes``
 - Memcached (11211/TCP & 11211/UDP)
-    - 未授权访问
+- Unauthorized access
 - RabbitMQ (15672/TCP & 15692/TCP & 25672/TCP)
 - MongoDB (27017/TCP)
-    - 无密码或弱密码
+- No password or weak password
 - Hadoop (50070/TCP & 50075/TCP)
-    - 未授权访问
+- Unauthorized access
 
-除了以上列出的可能出现的问题，暴露在公网上的服务若不是最新版，都可能存在已经公开的漏洞
+In addition to the possible problems listed above, if the services exposed to the public network are not the latest version, there may be vulnerabilities that have been published.
 
-常见端口扫描技术
+Common port scanning technology
 ----------------------------------------
 
-全扫描
+Full scan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-扫描主机尝试使用三次握手与目标主机的某个端口建立正规的连接，若成功建立连接，则端口处于开放状态，反之处于关闭状态。
+The scan host attempts to establish a formal connection with a port of the target host using the three-time handshake. If the connection is successfully established, the port is open and vice versa.
 
-全扫描实现简单，且以较低的权限就可以进行该操作。但是在流量日志中会有大量明显的记录。
+Full scan is simple to implement and can be performed with lower permissions. But there will be a lot of obvious records in the traffic log.
 
-半扫描
+Half scan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-半扫描也称SYN扫描，在半扫描中，仅发送SYN数据段，如果应答为RST，则端口处于关闭状态，若应答为SYN/ACK，则端口处于监听状态。不过这种方式需要较高的权限，而且现在的大部分防火墙已经开始对这种扫描方式做处理。
+Half-scan is also called SYN scan. In half-scan, only the SYN data segment is sent. If the reply is RST, the port is in the closed state. If the reply is SYN/ACK, the port is in the listening state. However, this method requires high permissions, and most firewalls have begun to process this scanning method.
 
-FIN扫描
+FIN scan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-FIN扫描是向目标发送一个FIN数据包，如果是开放的端口，会返回RST数据包，关闭的端口则不会返回数据包，可以通过这种方式来判断端口是否打开。
+FIN scan sends a FIN packet to the target. If it is an open port, it will return the RST packet, and the closed port will not return the packet. This way, it can be used to determine whether the port is open.
 
-这种方式并不在TCP三次握手的状态中，所以不会被记录，相对SYN扫描要更隐蔽一些。
+This method is not in the state of TCP three-time handshake, so it will not be recorded, and it is more hidden than SYN scanning.
 
-Web服务
+Web Services
 ----------------------------------------
 - Jenkins
-    - 未授权访问
+- Unauthorized access
 - Gitlab
-    - 对应版本CVE
+- Corresponding version CVE
 - Zabbix
-    - 权限设置不当
+- Improper permission settings
 
-批量搜索
+Batch Search
 ----------------------------------------
 - Censys
 - Shodan

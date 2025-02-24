@@ -1,9 +1,9 @@
-常见漏洞攻防
+Common vulnerabilities attack and defense
 ================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    sql/index
    xss/index
@@ -13,9 +13,9 @@
    pathtraversal
    fileread
    fileupload
-   fileinclude
-   xxe
-   ssti
+   villain
+   XXE
+   int
    xpath
    logic
    config

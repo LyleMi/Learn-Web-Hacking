@@ -1,9 +1,9 @@
-防御技术
+Defense Technology
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    team
    redteam
@@ -11,7 +11,7 @@
    secops
    threat
    att8ck
-   riskcontrol
+   Risk Control
    framework
    reinforce
    intrusiondetection

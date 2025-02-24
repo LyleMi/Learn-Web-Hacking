@@ -1,166 +1,166 @@
-逻辑漏洞 / 业务漏洞
+Logical vulnerabilities / Business vulnerabilities
 ================================
 
-简介
+Introduction
 --------------------------------
-逻辑漏洞是指由于程序逻辑不严导致一些逻辑分支处理错误造成的漏洞。
+Logical vulnerabilities refer to vulnerabilities caused by some logical branches processing errors due to poor program logic.
 
-在实际开发中，因为开发者水平不一没有安全意识，而且业务发展迅速内部测试没有及时到位，所以常常会出现类似的漏洞。
+In actual development, similar vulnerabilities often occur because the developers have different levels of security awareness and the business is developing rapidly.
 
-安装逻辑
+Installation logic
 --------------------------------
-- 查看能否绕过判定重新安装
-- 查看能否利用安装文件获取信息
-- 看能否利用更新功能获取信息
+- Check whether you can bypass the judgment and reinstall it
+- Check whether you can use the installation file to obtain information
+- See if you can use the update function to obtain information
 
-交易
---------------------------------
-
-购买
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 修改支付的价格
-- 修改支付的状态
-- 修改购买数量为负数
-- 修改金额为负数
-- 重放成功的请求
-- 并发数据库锁处理不当
-
-业务风控
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 刷优惠券
-- 套现
-
-账户
+trade
 --------------------------------
 
-注册
+Buy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 覆盖注册
-- 尝试重复用户名
-- 注册遍历猜解已有账号
+- Modify the price paid
+- Modify payment status
+- Modify the purchase quantity to negative
+- Modify the amount to negative
+- Replay successful request
+- Improper handling of concurrent database locks
 
-密码
+Business risk control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 密码未使用哈希算法保存
-- 没有验证用户设置密码的强度
+- Scan the coupon
+- Cash out
 
-邮箱用户名
+Account
+--------------------------------
+
+register
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 前后空格
-- 大小写变换
+- Overwrite registration
+- Try to repeat username
+- Register and traverse guess the existing account
+
+password
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Password not saved using hashing algorithm
+- No verification of the user's password set strength
+
+Email username
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Front and back spaces
+-Case transformation
 
 Cookie
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 包含敏感信息
-- 未验证合法性可伪造
+- Contains sensitive information
+- Unverified legality can be forged
 
-手机号用户名
+Mobile phone number username
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 前后空格
+- Front and back spaces
 - +86
 
-登录
+Log in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 撞库
-    - 设置异地登录检查等机制
-- 账号劫持
-- 恶意尝试帐号密码锁死账户
-    - 需要设置锁定机制与解锁机制
-- 不安全的传输信道
-- 登录凭证存储在不安全的位置
+- Crazy library
+- Set up mechanisms such as remote login checking
+- Account Hijacking
+- Maliciously try to lock the account
+- Locking mechanism and unlocking mechanism need to be set
+- Insecure transmission channels
+- Login credentials are stored in an unsafe location
 
-找回密码
+Retrieve password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 重置任意用户密码
-- 密码重置后新密码在返回包中
-- Token验证逻辑在前端
-- X-Forwarded-Host处理不正确
-- 找回密码功能泄露用户敏感信息
+- Reset any user password
+- After password reset, the new password is in the return package
+- Token verification logic is on the front end
+- X-Forwarded-Host is incorrectly handled
+- Password recovery function leaks user sensitive information
 
-修改密码
+Modify password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 越权修改密码
-- 修改密码没有旧密码验证
+- Unauthorized password modification
+- Change password without old password verification
 
-申诉
+Complaint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 身份伪造
-- 逻辑绕过
+- Identity forgery
+- Logical Bypass
 
-更新
+renew
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ORM更新操作不当可更新任意字段
-- 权限限制不当可以越权修改
+- Any field can be updated if the ORM update operation is incorrect
+- Improper permission restrictions can be modified beyond the authority
 
-信息查询
+Information query
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 权限限制不当可以越权查询
-- 用户信息ID可以猜测导致遍历
+- Inappropriate permission restrictions can be exceeded
+- User information ID can guess the traversal results
 
 2FA
 --------------------------------
-- 重置密码后自动登录没有2FA
-- OAuth登录没有启用2FA
-- 2FA可爆破
-- 2FA有条件竞争
-- 修改返回值绕过
-- 激活链接没有启用2FA
-- 可通过CSRF禁用2FA
+- Automatic login after resetting password without 2FA
+- OAuth login does not enable 2FA
+- 2FA can be blasted
+- 2FA conditional competition
+- Modify the return value bypass
+- Activate link does not enable 2FA
+- 2FA can be disabled via CSRF
 
-验证码
+Verification code
 --------------------------------
-- 验证码可重用
-- 验证码可预测
-- 验证码强度不够
-- 验证码无时间限制或者失效时间长
-- 验证码无猜测次数限制
-- 验证码传递特殊的参数或不传递参数绕过
-- 验证码可从返回包中直接获取
-- 验证码不刷新或无效
-- 验证码数量有限
-- 验证码在数据包中返回
-- 修改Cookie绕过
-- 修改返回包绕过
-- 验证码在客户端生成或校验
-- 验证码可OCR或使用机器学习识别
-- 验证码用于手机短信/邮箱轰炸
+- Verification code can be reused
+- Verification code is predictable
+- The verification code is not strong enough
+- There is no time limit for verification code or long expiration time
+- No limit on the number of guesses for verification code
+- Verification code passes special parameters or does not pass parameters by bypass
+- Verification code can be obtained directly from the return package
+- Verification code is not refreshed or invalid
+- Limited number of verification codes
+- Verification code is returned in the data packet
+- Modify cookie bypass
+- Modify return package bypass
+- Verification code is generated or verified on the client side
+- Verification code can be recognized using OCR or using machine learning
+- Verification code is used for mobile phone text messages/email bombing
 
 Session
 --------------------------------
-- Session机制
-- Session猜测 / 爆破
-- Session伪造
-- Session泄漏
+- Session mechanism
+- Session guess / Blast
+- Session forgery
+- Session Leak
 - Session Fixation
 
-越权
+Overreach of authority
 --------------------------------
-- 未授权访问
-    - 静态文件
-    - 通过特定url来防止被访问
-- 水平越权
-    - 攻击者可以访问与他拥有相同权限的用户的资源 
-    - 权限类型不变，ID改变
-- 垂直越权
-    - 低级别攻击者可以访问高级别用户的资源
-    - 权限ID不变，类型改变
-- 交叉越权
-    - 权限ID改变，类型改变
+- Unauthorized access
+- Static files
+- Prevent access by specific url
+- Level overreach
+- The attacker can access the resources of a user with the same permissions as him
+- Permission type remains unchanged, ID changes
+- Vertical overreach
+- Low-level attackers can access resources of high-level users
+- Permission ID remains unchanged, type changes
+- Cross-over
+- Permission ID changes, type changes
 
-随机数安全
+Random number safety
 --------------------------------
-- 使用不安全的随机数发生器
-- 使用时间等易猜解的因素作为随机数种子
+- Use unsafe random number generator
+- Use time and other easy-to-guess factors as random number seeds
 
-其他
+other
 --------------------------------
-- 用户/订单/优惠券等ID生成有规律，可枚举
-- 接口无权限、次数限制
-- 加密算法实现误用
-- 执行顺序
-- 敏感信息泄露
+- User/order/coupon and other ID generation is regular and can be enumerated
+- No permissions on the interface, limited number of times
+- Misuse of encryption algorithm
+- Execution order
+- Sensitive information leakage
 
-参考链接
+Reference link
 --------------------------------
-- `水平越权漏洞及其解决方案 <http://blog.csdn.net/mylutte/article/details/50819146#10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1>`_
-- `细说验证码安全 测试思路大梳理 <https://xz.aliyun.com/t/6029>`_
+- `Horily overprivileges vulnerability and its solutions <http://blog.csdn.net/mylutte/article/details/50819146#10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1>`_
+- `Detailed explanation of verification code security, comprehensive review of testing ideas <https://xz.aliyun.com/t/6029>`_

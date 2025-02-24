@@ -1,95 +1,95 @@
 Docker
 ----------------------------------------
-Docker是目前最具代表性的容器平台之一，具有持续部署与测试、跨云平台支持等优点。在基于Kubernetes等容器编排工具实现的容器云环境中，通过对跨主机集群资源的调度，容器云可提供资源共享与隔离、容器编排与部署、应用支撑等功能。
+Docker is one of the most representative container platforms at present, with the advantages of continuous deployment and testing, cross-cloud platform support, etc. In a container cloud environment based on container orchestration tools such as Kubernetes, by scheduling cross-host cluster resources, the container cloud can provide functions such as resource sharing and isolation, container orchestration and deployment, and application support.
 
-基本概念
+Basic concepts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker有三个基本概念，镜像（Image）、容器（Container）、仓库（Repository）。镜像是一个只读的模版，由一组文件系统通过Union FS技术组成。
+Docker has three basic concepts: Image, Container, and Repository. Mirror is a read-only template consisting of a set of file systems through Union FS technology.
 
-镜像是静态的定义，容器是从镜像创建的运行实例。容器的本质是进程，拥有自己独立的命名空间。
+Mirror is a static definition, and the container is a running instance created from the mirror. The essence of a container is a process that has its own independent namespace.
 
-仓库（Repository） 是集中存放镜像文件的场所，用于存储、分发镜像。
+Repository is a place where mirror files are centrally stored, used to store and distribute mirrors.
 
-容器可以被启动、开始、停止、删除，每个容器都是相互隔离的，可以把容器看做是一个简易版的 Linux 环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。
+Containers can be started, started, stopped, and deleted. Each container is isolated from each other. The container can be regarded as a simple version of Linux environment (including root user permissions, process space, user space, and network space, etc.) and run. The application in it.
 
-组成
+composition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker引擎由如下主要组件构成：Docker客户端（Docker Client）、Docker守护进程（Docker daemon）、containerd以及RunC，它们共同负责容器的创建和运行。
+The Docker engine consists of the following main components: Docker client (Docker Client), Docker daemon (Docker daemon), containerd and RunC, which are collectively responsible for the creation and operation of containers.
 
-Docker Client是和Docker Daemon建立通信客户端，Docker Client可以通过http/unix socket等方式Daemon建立通信。
+Docker Client is to establish a communication client with Docker Daemon. Docker Client can establish communication through http/unix socket and other methods.
 
-Docker Daemon是容器管理的守护进程，在宿主机运行，作为服务端接受来自客户端的请求，主要功能包括镜像管理、镜像构建、REST API、身份验证、安全、核心网络以及编排。Docker daemon通过位于 ``/var/run/docker.sock`` 的本地 IPC/Unix socket 来实现Docker远程API，默认非TLS网络端口为2375，TLS默认端口为2376。
+Docker Daemon is a container management daemon that runs on the host and accepts requests from the client as a server. Its main functions include image management, image construction, REST API, authentication, security, core network and orchestration. Docker daemon implements Docker remote API through a local IPC/Unix socket located in ``/var/run/docker.sock``. The default non-TLS network port is 2375 and the default TLS port is 2376.
 
-containerd 是容器技术标准化之后出现的，用于将容器运行时从 Docker Daemon 剥离。containerd 主要职责是镜像管理、容器执行。
+containerd is a result of container technology standardization and is used to strip container runtime from Docker Daemon. containerd's main responsibilities are image management and container execution.
 
-RunC 是 Docker 按照OCF标准制定的一种具体实现，实现了容器启动与停止、资源隔离等功能。
+RunC is a specific implementation formulated by Docker according to the OCF standard, which realizes container startup and stop, resource isolation and other functions.
 
-数据
+data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker的数据主要分为持久化和非持久化数据，默认情况下非持久化存储是自动创建生命周期与容器相同，删除容器也会删除非持久化数据，在Linux环境下，非持久化数据默认存储于 ``/var/lib/docker/`` 下。
+Docker's data is mainly divided into persistent and non-persistent data. By default, non-persistent storage is automatically created with the same life cycle as the container. Deleting containers will also delete non-persistent data. In Linux environment, non-persistent data is default. Stored under ``/var/lib/docker/``.
 
-网络
+network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker网络架构源自一种叫作容器网络模型的方案，主要由CNM、Libnetwork、网络驱动构程。
+The Docker network architecture originates from a solution called the container network model, mainly composed of CNM, Libnetwork, and network drivers.
 
-安全风险与安全机制
+Security risks and security mechanisms
 ----------------------------------------
-在考虑Docker安全性的时候主要考虑以下几点
+When considering Docker security, the following points are mainly considered
 
-- 内核本身的安全性及其对命名空间和cgroups的支持
-- Docker守护进程本身的攻击面
-- 内核的“强化”安全功能以及它们如何与容器进行交互
+- The security of the kernel itself and its support for namespaces and cgroups
+- The attack surface of the Docker daemon itself
+- "Hardened" security features of the kernel and how they interact with containers
 
-Docker安全基线
+Docker Security Baseline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 |benchsec|
 
-内核命名空间/namespace
+Kernel namespace/namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker容器与LXC容器非常相似，并且具有相似的安全特性。当使用docker运行启动容器时，Docker会在后台为容器创建一组命名空间和控制组。
+Docker containers are very similar to LXC containers and have similar security features. When starting a container with docker, Docker creates a set of namespaces and control groups for the container in the background.
 
-命名空间提供了一个最直接的隔离形式：在容器中运行的进程看不到或者无法影响在另一个容器或主机系统中运行的进程。
+Namespaces provide the most direct form of isolation: processes running in containers cannot see or affect processes running in another container or host system.
 
-每个容器也有自己的网络堆栈，这意味着一个容器不能获得对另一个容器的套接字或接口的特权访问。当然，如果主机系统相应设置，容器可以通过各自的网络接口交互。如果为容器指定公共端口或使用链接时，容器之间允许IP通信。
+Each container also has its own network stack, which means that one container does not gain privileged access to another container's sockets or interfaces. Of course, if the host system is set accordingly, the containers can interact through their respective network interfaces. IP communication is allowed between containers if a public port is specified for the container or when a link is used.
 
-它们可以相互ping通，发送/接收UDP数据包，并建立TCP连接，但是如果需要可以限制它们。从网络体系结构的角度来看，给定Docker主机上的所有容器都位于网桥接口上。这意味着它们就像通过普通的以太网交换机连接的物理机器一样。
+They can ping each other, send/receive UDP packets, and establish TCP connections, but they can be restricted if needed. From a network architecture perspective, all containers on a given Docker host are located on the bridge interface. This means they are like physical machines connected through a normal Ethernet switch.
 
 Control Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-控制组是Linux容器的另一个关键组件，主要作用是实施资源核算和限制。 
+Control groups are another key component of Linux containers, and their main function is to implement resource accounting and limitations.
 
-Cgroup 提供了许多有用的度量标准，但也有助于确保每个容器都能获得公平的内存，CPU和磁盘I/O; 更重要的是单个容器不能通过耗尽资源的方式来降低系统的性能。
+Cgroup provides many useful metrics, but also helps ensure that every container has fair memory, CPU, and disk I/O; more importantly, a single container cannot reduce system performance by exhausting resources.
 
-因此，尽管 Cgroup 不能阻止一个容器访问或影响另一个容器的数据和进程，但它们对于抵御一些拒绝服务攻击是至关重要的。它们对于多租户平台尤其重要，例如公共和私人PaaS，即使在某些应用程序开始行为不当时也能保证一致的正常运行时间（和性能）。
+Therefore, although Cgroups cannot prevent one container from accessing or affecting another container's data and processes, they are critical to defend against some denial of service attacks. They are especially important for multi-tenant platforms, such as public and private PaaS, which guarantees consistent uptime (and performance) even when certain applications start to behave incorrectly.
 
-守护进程的攻击面
+Daemon's attack surface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-使用Docker运行容器意味着运行Docker守护进程，而这个守护进程当前需要root权限，因此，守护进程是需要考虑的一个地方。
+Running containers with Docker means running a Docker daemon, which currently requires root permissions, so the daemon is a place to consider.
 
-首先，只有受信任的用户才能被允许控制Docker守护进程。具体来说，Docker允许您在Docker主机和访客容器之间共享一个目录;它允许你这样做而不限制容器的访问权限。这意味着可以启动一个容器，其中/host目录将成为主机上的/目录，容器将能够不受任何限制地改变主机文件系统。
+First, only trusted users can be allowed to control the Docker daemon. Specifically, Docker allows you to share a directory between the Docker host and the guest container; it allows you to do so without restricting access to the container. This means that a container can be started, where the /host directory will become the /directory on the host, and the container will be able to change the host file system without any restrictions.
 
-这具有很强的安全意义：例如，如果通过Web服务器测试Docker以通过API配置容器，则应该更加仔细地进行参数检查，以确保恶意用户无法传递制作的参数，从而导致Docker创建任意容器。
+This has strong security significance: For example, if Docker is tested through a web server to configure containers through the API, parameter checks should be done more carefully to ensure that malicious users cannot pass the parameters made, resulting in Docker creating arbitrary containers.
 
-守护进程也可能容易受到其他输入的影响，例如从具有docker负载的磁盘或从具有docker pull的网络加载映像。
+Daemons can also be susceptible to other inputs, such as loading images from disks with docker loads or from networks with docker pulls.
 
-最终，预计Docker守护进程将运行受限特权，将操作委托给审核良好的子进程，每个子进程都有自己的（非常有限的）Linux功能范围，虚拟网络设置，文件系统管理等。也就是说，很可能，Docker引擎本身的部分将在容器中运行。
+Ultimately, the Docker daemon is expected to run restricted privileges, delegate operations to well-audited child processes, each with its own (very limited) range of Linux functionality, virtual network settings, file system management, and more. That is, it is very likely that parts of the Docker engine itself will run in the container.
 
 Capability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-默认情况下，Docker采用Capability机制来实现用户在以root身份运行容器的同时，限制部分root的操作。
+By default, Docker uses the Capability mechanism to enable users to restrict some root operations while running containers as root.
 
-在大多数情况下，容器不需要真正的root权限。因此，Docker可以运行一个Capability较低的集合，这意味着容器中的root比真正的root要少得多。例如：
+In most cases, containers do not require real root permissions. Therefore, Docker can run a collection with lower Capability, which means there are much less roots in the container than real roots. For example:
 
-- 否认所有挂载操作
-- 拒绝访问原始套接字（防止数据包欺骗）
-- 拒绝访问某些文件系统操作，如创建新的设备节点，更改文件的所有者或修改属性（包括不可变标志）
-- 拒绝模块加载
-- 其他
+- Denied all mount operations
+- Denied access to the original socket (prevent packet spoofing)
+- Denied access to certain file system operations such as creating new device nodes, changing the owner of the file, or modifying properties (including immutable flags)
+- Reject module loading
+- other
 
-这意味着，即使入侵者在容器内获取root权限，进一步攻击也会困难很多。默认情况下，Docker使用白名单而不是黑名单，去除了所有非必要的功能。
+This means that even if the intruder obtains root permissions within the container, further attacks will be much more difficult. By default, Docker uses whitelisting instead of blacklisting, removing all non-essential features.
 
 Seccomp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Docker使用Seccomp来限制容器对宿主机内核发起的系统调用。
+Docker uses Seccomp to limit system calls initiated by containers to the host kernel.
 
 .. |benchsec| image:: ../../images/docker-sec-bench.png

@@ -1,18 +1,18 @@
-持久化
+Endurance
 ========================================
 
-基于存储
+Based on storage
 ----------------------------------------
-有时候网站会将信息存储在Cookie或localStorage，而因为这些数据一般是网站主动存储的，很多时候没有对Cookie或localStorage中取出的数据做过滤，会直接将其取出并展示在页面中，甚至存了JSON格式的数据时，部分站点存在 ``eval(data)`` 之类的调用。因此当有一个XSS时，可以把payload写入其中，在对应条件下触发。
+Sometimes the website will store information in a cookie or localStorage. Because these data are usually stored actively by the website, many times the data retrieved from the cookie or localStorage is not filtered, and it will be directly taken out and displayed on the page, or even stored. When using JSON format data, some sites have calls such as ``eval(data)``. Therefore, when there is an XSS, the payload can be written into it and triggered under the corresponding conditions.
 
-在一些条件下，这种利用方式可能因为一些特殊字符造成问题，可以使用 ``String.fromCharCode`` 来绕过。
+Under some conditions, this utilization may cause problems due to some special characters, and you can use ``String.fromCharCode`` to bypass it.
 
 Service Worker
 ----------------------------------------
-Service Worker可以拦截http请求，起到类似本地代理的作用，故可以使用Service Worker Hook一些请求，在请求中返回攻击代码，以实现持久化攻击的目的。
+Service Worker can intercept http requests and play a role similar to a local proxy. Therefore, you can use Service Worker Hook to return attack code in the request to achieve the purpose of persistent attacks.
 
-在Chrome中，可通过 ``chrome://inspect/#service-workers`` 来查看Service Worker的状态，并进行停止。
+In Chrome, you can view the status of the Service Worker through ``chrome://inspect/#service-workers`` and stop it.
 
 AppCache
 ----------------------------------------
-在可控的网络环境下（公共wifi），可以使用AppCache机制，来强制存储一些Payload，未清除的情况下，用户访问站点时对应的payload会一直存在。
+In a controllable network environment (public wifi), you can use the AppCache mechanism to force storage of some payloads. If it is not cleared, the corresponding payload will always exist when the user accesses the site.

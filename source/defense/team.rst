@@ -1,43 +1,43 @@
-团队建设
+Team building
 ========================================
 
-人员分工
+Division of labor
 ----------------------------------------
-- 部门负责人
-    - 负责组织整体的信息安全规划
-    - 负责向高层沟通申请资源
-    - 负责与组织其他部门的协调沟通
-    - 共同推进信息安全工作
-    - 负责信息安全团队建设
-    - 负责安全事件应急工作处置
-    - 负责推动组织安全规划的落实
-- 合规管理员
-    - 负责安全相关管理制度、管理流程的制定，监督实施情况，修改和改进相关的制度和流程
-    - 负责合规性迎检准备工作，包括联络、迎检工作推动，迎检结果汇报等所有相关工作
-    - 负责与外部安全相关单位联络
-    - 负责安全意识培训、宣传和推广
-- 安全技术负责人
-    - 业务安全防护整体技术规划和计划
-    - 了解组织安全技术缺陷，并能找到方法进行防御
-    - 安全设备运维
-    - 服务器与网络基础设备的安全加固推进工作
-    - 安全事件排查与分析，配合定期编写安全分析报告
-    - 关注注业内安全事件， 跟踪最新漏洞信息，进行业务产品的安全检查
-    - 负责漏洞修复工作推进，跟踪解决情况，问题收集
-    - 了解最新安全技术趋势
-- 渗透/代码审计人员
-    - 对组织业务网站、业务系统进行安全评估测试
-    - 对漏洞结果提供解决方案和修复建议
-- 安全设备运维人员
-    - 负责设备配置和策略的修改
-    - 负责协助其他部门的变更导致的安全策略修改的实现
-- 安全开发
-    - 根据组织安全的需要开发安全辅助工具或平台
-    - 参与安全系统的需求分析、设计、编码等开发工作
-    - 维护公司现有的安全程序与系统
+- Department Head
+- Responsible for the overall information security planning of the organization
+- Responsible for communicating with senior management to apply for resources
+- Responsible for coordination and communication with other departments of the organization
+- Jointly promote information security work
+- Responsible for the construction of information security team
+- Responsible for emergency response to safety incidents
 
-参考链接
+
+
+- Responsible for the preparations for compliance inspections, including contact, promotion of inspection work, and reporting of inspection results.
+- Responsible for contacting external security-related units
+
+- Safety Technology Leader
+- Overall technical planning and planning of business security protection
+- Understand organizational security technology flaws and find ways to defend
+
+- Security reinforcement and promotion of server and network basic equipment
+- Security incident investigation and analysis, cooperate with the regular preparation of safety analysis reports
+- Pay attention to industry security incidents, track the latest vulnerability information, and conduct security checks on business products
+- Responsible for the promotion of vulnerability repair work, tracking and solving situations, and collecting problems
+- Understand the latest security technology trends
+- Penetration/code auditor
+- Conduct security assessment and testing of organizational business websites and business systems
+- Provide solutions and fix suggestions for vulnerability results
+- Safety equipment operation and maintenance personnel
+- Responsible for the modification of equipment configuration and policy
+
+- Security Development
+- Develop security aids or platforms according to organizational security needs
+- Participate in the development of security system requirements analysis, design, coding, etc.
+
+
+Reference link
 ----------------------------------------
-- `初入甲方的企业安全建设规划 <https://mp.weixin.qq.com/s/BqOFP217kiN55IWb_oQP-w>`_
-- `企业安全项目架构实践分享 <https://mp.weixin.qq.com/s/RlBTH9-xrY7Nd1ZJK3KjDQ>`_
-- `企业信息安全团队建设 <https://xz.aliyun.com/t/1965>`_
+- `Security Construction Planning for Party A's new entry <https://mp.weixin.qq.com/s/BqOFP217kiN55IWb_oQP-w>`_
+- `Corporate Security Project Architecture Practice Sharing <https://mp.weixin.qq.com/s/RlBTH9-xrY7Nd1ZJK3KjDQ>`_
+

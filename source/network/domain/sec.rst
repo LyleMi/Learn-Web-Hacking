@@ -1,23 +1,23 @@
-加密方案
+Encryption scheme
 ----------------------------------------
-作为主流的防御方案，DNS加密有五种方案，分别是 DNS-over-TLS (DoT)、DNS-over-DTLS、DNS-over-HTTPS (DoH)、DNS-over-QUIC以及DNSCrypt。
+As a mainstream defense solution, there are five solutions for DNS encryption, namely DNS-over-TLS (DoT), DNS-over-DTLS, DNS-over-HTTPS (DoH), DNS-over-QUIC and DNSCrypt.
 
 DoT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DoT方案在2016年发表于RFC7858，使用853端口。主要思想是Client和Server通过TCP协议建立TLS会话后再进行DNS传输，Client通过SSL证书验证服务器身份。
+The DoT solution was published in RFC7858 in 2016 and uses port 853. The main idea is that the Client and Server establish a TLS session through the TCP protocol before performing DNS transmission, and the Client verifies the server identity through the SSL certificate.
 
 DNS-over-DTLS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNS-over-DTLS和DoT类似，区别在于使用UDP协议而不是TCP协议。
+DNS-over-DTLS is similar to DoT, with the difference being using the UDP protocol instead of the TCP protocol.
 
 DoH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DoH方案在发表RFC8484，使用 ``https://dns.example.com/dns-query{?dns}``  来查询服务器的IP，复用https的443端口，流量特征比较小。DoH会对DNS服务器进行加密认证，不提供fallback选项。目前Cloudflare、Google等服务商对DoH提供了支持。
+The DoH solution is publishing RFC8484, using ``https://dns.example.com/dns-query{?dns}`` to query the server's IP, multiplex the 443 port of https, and has relatively small traffic characteristics. DoH will encrypt and authenticate the DNS server and does not provide the fallback option. Currently, Cloudflare, Google and other service providers have provided support for DoH.
 
 DNS-over-QUIC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNS-over-QUIC安全特性和DoT类似，但是性能更高，目前没有合适的软件实现。
+DNS-over-QUIC security features are similar to DoT, but have higher performance and currently there is no suitable software implementation.
 
 DNSCrypt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNSCrypt使用X25519-XSalsa20Poly1305而非标准的TLS，且DNSCrypt的Client需要额外的软件，Server需要的专门的证书。
+DNSCrypt uses X25519-XSalsa20Poly1305 instead of standard TLS, and DNSCrypt's client requires additional software and a dedicated certificate required by the Server.

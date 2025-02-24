@@ -1,21 +1,21 @@
-网络入口/信息
+Network portal/information
 ========================================
 
-- 网络拓扑信息
-    - 外网出口
-- IP信息
-    - C段
-- 线下网络
-    - Wi-Fi
-        - SSID
-        - 认证信息
+- Network topology information
+- External network export
+- IP information
+- Segment C
+- Offline Network
+- And in
+- SSID
+- Certification Information
 - VPN
-    - 厂商
-    - 登录方式
-- 邮件网关
-- 手机APP
-- 小程序后台
+- Manufacturer
+- Login method
+- Email Gateway
+- Mobile APP
+- Mini Program Backend
 - OA
 - SSO
-- 边界网络设备
-- 上游运营商
+- Border network equipment
+- Upstream operators

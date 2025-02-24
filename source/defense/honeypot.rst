@@ -1,86 +1,86 @@
-蜜罐技术
+Honeypot technology
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-蜜罐是对攻击者的欺骗技术，用以监视、检测、分析和溯源攻击行为，其没有业务上的用途，所有流入/流出蜜罐的流量都预示着扫描或者攻击行为，因此可以比较好的聚焦于攻击流量。
+Honeypot is a deceptive technology for attackers, used to monitor, detect, analyze and trace attack behavior. It has no business purpose. All traffic flowing into/out of honeypot indicates scanning or attack behavior, so it can be better. Focus on attack traffic.
 
-蜜罐可以实现对攻击者的主动诱捕，能够详细地记录攻击者攻击过程中的许多痕迹，可以收集到大量有价值的数据，如病毒或蠕虫的源码、黑客的操作等，从而便于提供丰富的溯源数据。另外蜜罐也可以消耗攻击者的时间，基于JSONP等方式来获取攻击者的画像。
+Honeypot can realize the active trapping of attackers, can record many traces of attackers in detail, and can collect a large amount of valuable data, such as viruses or worms source code, hackers' operations, etc., so as to provide rich Traceable data. In addition, honeypots can also consume the attacker's time and obtain the attacker's portrait based on JSONP and other methods.
 
-但是蜜罐存在安全隐患，如果没有做好隔离，可能成为新的攻击源。
+However, honeypots have safety risks. If they are not isolated properly, they may become a new source of attack.
 
-分类
+Classification
 ----------------------------------------
-按用途分类，蜜罐可以分为研究型蜜罐和产品型蜜罐。研究型蜜罐一般是用于研究各类网络威胁，寻找应对的方式，不增加特定组织的安全性。产品型蜜罐主要是用于防护的商业产品。
+According to the purpose, honeypots can be divided into research-type honeypots and product-type honeypots. Research-type honeypots are generally used to study various cyber threats and find ways to deal with them without increasing the security of specific organizations. Product-type honeypots are mainly commercial products used for protection.
 
-按交互方式分类，蜜罐可以分为低交互蜜罐和高交互蜜罐。低交互蜜罐模拟网络服务响应和攻击者交互，容易部署和控制攻击，但是模拟能力会相对较弱，对攻击的捕获能力不强。高交互蜜罐不是简单模拟协议或服务，而是提供真实的系统，使得被发现的概率大幅度降低。但是高交互蜜罐部署不当时存在被攻击者利用的可能性。
+Classified by interaction, honeypots can be divided into low-interaction honeypots and high-interaction honeypots. Low-interaction honeypot simulates network service response and attacker interaction, making it easy to deploy and control attacks, but its simulation capabilities will be relatively weak and its ability to capture attacks is not strong. High interactive honeypots are not simply simulated protocols or services, but provide real systems, which greatly reduces the probability of being discovered. However, the deployment of high-interaction honeypots is incorrectly deployed at that time, and there is a possibility that they will be exploited by the attacker.
 
-隐藏技术
+Hidden technology
 ----------------------------------------
-蜜罐主要涉及到的是伪装技术，主要涉及到进程隐藏、服务伪装等技术。
+Honeypot mainly involves camouflage technology, mainly involving process hiding and service camouflage technologies.
 
-蜜罐之间的隐藏，要求蜜罐之间相互隐蔽。进程隐藏，蜜罐需要隐藏监控、信息收集等进程。伪服务和命令技术，需要对部分服务进行伪装，防止攻击者获取敏感信息或者入侵控制内核。数据文件伪装，需要生成合理的虚假数据的文件。
+The hiding between honeypots requires that honeypots be hidden from each other. The process is hidden, and the honeypot needs to hide monitoring, information collection and other processes. Pseudo-service and command technology require some services to be disguised to prevent attackers from obtaining sensitive information or intruding into the control kernel. Data files are disguised and files that require reasonable false data are generated.
 
-牵引技术
+Traction technology
 ----------------------------------------
-蜜罐牵引技术是在识别到攻击者流量后，通过在正式环境中改变路由、返回特定响应的方式将攻击者牵引到特定的蜜罐地址。
-常见的牵引技术有下面几种：
+Honeypot traction technology is to pull the attacker to a specific honeypot address by changing the route in the formal environment and returning a specific response after identifying the attacker traffic.
+There are several common traction techniques:
 
-- 防火墙牵引
-- SDN牵引
-- ARP牵引
-- WAF牵引
+- Firewall traction
+- SDN traction
+- ARP traction
+- WAF traction
 
-诱饵技术
+Bait technology
 ----------------------------------------
-可以在互联网中部署一定的诱饵来吸引攻击者进入特定的蜜罐中。
-常见的诱饵有域名诱饵、Github 诱饵、网盘诱饵、邮件诱饵、主机诱饵、文件诱饵、漏洞诱饵等。
+A certain amount of bait can be deployed in the Internet to attract attackers into specific honeypots.
+Common baits include domain name bait, Github bait, net disk bait, email bait, host bait, file bait, vulnerability bait, etc.
 
-域名诱饵指使用特定的在字典中且有意义的主域名做为诱饵，比如 ``vpn.example.com`` / ``oa.example.com`` 等。
+Domain name bait refers to the use of a specific main domain name that is meaningful in the dictionary as bait, such as ``vpn.example.com`` / ``oa.example.com``, etc.
 
-Github 诱饵指在 Github 中放置代码文件、失陷凭证的方式。
+Github Bait refers to the way to place code files and lost credentials in Github.
 
-文件诱饵是在容易失陷的主机中放置虚假的拓扑图，关键系统IP的文件，从而诱导攻击者的方式。
+File bait is the way to induce attackers by placing fake topology maps, key system IP files in a host that is prone to lose.
 
-漏洞诱饵通过部署存在特定漏洞特征的蜜罐站，吸引攻击者攻击。
+Vulnerability Bait attracts attackers to attack by deploying honeypot stations with specific vulnerability characteristics.
 
-反制技术
+Counter-response technology
 ----------------------------------------
-蜜罐可以使用一些方式对攻击者进行反制，常见的方式有Jsonp、安全工具漏洞、Client漏洞反制、文件反制等方式。
+Honeypot can use some methods to counter attackers. Common methods include Jsonp, security tool vulnerabilities, Client vulnerabilities counter, file counters, etc.
 
-Jsonp主要是使用各大网站的Jsonp获取攻击者已经登录的社交账号，用以溯源。
-另外如果攻击者使用流量的方式访问蜜罐网站，可以使用运营商接口获取攻击者的手机号。
+Jsonp mainly uses Jsonp from major websites to obtain the social account that the attacker has logged in to for traceability.
+In addition, if an attacker uses traffic to access the honeypot website, he or she can use the operator interface to obtain the attacker's mobile number.
 
-安全工具漏洞是指使用安全工具的漏洞进行反制，例如Git泄露工具存在的文件泄露漏洞，基于Electron的工具存在的XSS to RCE等。
+Security tool vulnerabilities refer to countering vulnerabilities using security tools, such as file leak vulnerabilities in Git leak tools, XSS to RCE in Electron-based tools, etc.
 
-Client反制，指使用虚假的Server对存在漏洞的客户端进行反制，例如通过MySQL Client读取文件，基于RDP/SMB的漏洞进行RCE。
+Client countermeasures refer to using fake Server to counter vulnerable clients, such as reading files through MySQL Client, and RCE based on RDP/SMB vulnerabilities.
 
-反制文件，指在蜜罐环境中设置特定的文件，例如伪装的VPN客户端、特定插件来诱导攻击者点击。
+Counter file refers to setting specific files in a honeypot environment, such as disguised VPN clients and specific plug-ins to induce attackers to click.
 
-DoS反制，在获取到攻击者的C2样本后，可以通过批量上线的方式影响C2攻击者的控制服务器。
+DoS countermeasures that after obtaining the attacker's C2 samples, it can affect the C2 attacker's control server through batch launch.
 
-识别技术
+Identification technology
 ----------------------------------------
-攻击者也会尝试对蜜罐进行识别。比较容易的识别的是低交互的蜜罐，尝试一些比较复杂且少见的操作能比较容易的识别低交互的蜜罐。相对困难的是高交互蜜罐的识别，因为高交互蜜罐通常以真实系统为基础来构建，和真实系统比较近似。对这种情况，通常会基于虚拟文件系统和注册表的信息、内存分配特征、硬件特征、特殊指令等来识别。
+The attacker will also try to identify the honeypot. The one that is easier to identify is the honeypot with low interaction. Try some more complex and rare operations to easily identify the honeypot with low interaction. What is relatively difficult is the recognition of high-interactive honeypots, because high-interactive honeypots are usually built on a real system and are relatively similar to real systems. In this case, it is usually identified based on information of the virtual file system and registry, memory allocation features, hardware features, special instructions, etc.
 
-协议实现识别
+Protocol implementation identification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-部分蜜罐在实现的过程中，协议的部分参数固定或随机的范围有限，可以通过特定参数的范围来识别蜜罐。
+During the implementation of some honeypots, the protocol has a fixed or random range of partial parameters, and the honeypot can be identified by the range of specific parameters.
 
-部分蜜罐协议支持的版本范围为某一特定版本范围，可以通过对应的版本范围来推测是否为蜜罐。
+Some honeypot protocols support version ranges for a specific version range, and you can guess whether it is a honeypot based on the corresponding version range.
 
-部分蜜罐在交互过程中有探测客户端特征的交互，可以通过这些交互过程来识别蜜罐。
+Some honeypots have interactions that detect client characteristics during the interaction process, and honeypots can be identified through these interaction processes.
 
-部分蜜罐对不正确的请求也返回正常的相应，可以通过这种特征来判定蜜罐。
+Some honeypots also return normal responses for incorrect requests. This feature can be used to determine the honeypot.
 
-环境特征
+Environmental characteristics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-部分蜜罐的用户名、密码固定，或内存使用、进程占用等动态特征变化较为规律，可以通过这种方式来判断是否为蜜罐。
+Some honeypots have relatively regular changes in dynamic characteristics such as username and password, or memory usage and process occupation. This method can be used to determine whether they are honeypots.
 
-参考链接
+Reference link
 ----------------------------------------
 - `honeypot wiki <https://en.wikipedia.org/wiki/Honeypot%5f%28computing%29>`_
 - `Modern Honey Network <http://threatstream.github.io/mhn/>`_
-- `默安科技：幻阵 <https://www.moresec.cn/magic-shield.html>`_
-- `蜜罐与内网安全从0到1 <https://xz.aliyun.com/t/998>`_
--  `浅析开源蜜罐识别与全网测绘 <https://mp.weixin.qq.com/s?__biz=Mzk0NzE4MDE2NA==&mid=2247483908&idx=1&sn=e6a319e22c3cd54650bdbba511e58a43>`_
+- `Moan Technology: Magic Array <https://www.moresec.cn/magic-shield.html>`_
+- `Honeypot and intranet security from 0 to 1 <https://xz.aliyun.com/t/998>`_
+- `Simple analysis of open source honeypot identification and network mapping <https://mp.weixin.qq.com/s?__biz=Mzk0NzE4MDE2NA==&mid=2247483908&idx=1&sn=e6a319e22c3cd54650bdbba511e58a43>`_

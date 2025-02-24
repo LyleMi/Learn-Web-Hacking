@@ -1,50 +1,50 @@
 ADCS
 ========================================
 
-介绍
+introduce
 ----------------------------------------
-Active Directory 证书服务 (Active Directory Certificate Services，AD CS) 是微软用于实现 PKI 的服务。
+Active Directory Certificate Services (AD CS) is a service that Microsoft uses to implement PKI.
 
-证书
+Certificate
 ----------------------------------------
-ADCS 中的证书是 X.509 格式的数字签名文档，用于加密、签名或身份验证等。
+The certificate in ADCS is a digitally signed document in X.509 format for encryption, signature, or authentication, etc.
 
-证书常用的属性由下述字段组成
+Commonly used attributes of certificates are composed of the following fields
 
-- Subject：主题
-- Public Key：公钥
-- Extended Key Usages (EKUs)：扩展密钥，描述证书的对象标识符 (Object identifier, OID)
+- Subject: Subject
+- Public Key: Public Key
+- Extended Key Usages (EKUs): Extended key, object identifier that describes the certificate (Object identifier, OID)
 - ...
 
-常用的 EKU OID 包括：
+Commonly used EKU OIDs include:
 
-- 代码签名
-    - OID 1.3.6.1.5.5.7.3.3
-    - 证书用于签署可执行代码
-- 加密文件系统
-    - OID 1.3.6.1.4.1.311.10.3.4
-    - 证书用于加密文件系统
-- 安全电子邮件
-    - OID 1.3.6.1.5.5.7.3.4
-    - 证书用于加密电子邮件
-- 客户端身份验证
-    - OID 1.3.6.1.5.5.7.3.2
-- 智能卡登录
-    - OID 1.3.6.1.4.1.311.20.2.2
-- 服务器认证
-    - OID 1.3.6.1.5.5.7.3.1
-    - 证书用于识别服务器 (例如HTTPS 证书)
+- Code Signing
+- OID 1.3.6.1.5.5.7.3.3
+- Certificates are used to sign executable code
+- Encrypted file system
+- OID 1.3.6.1.4.1.311.10.3.4
+- Certificates are used to encrypt file systems
+- Secure Email
+- OID 1.3.6.1.5.5.7.3.4
+- Certificates are used to encrypt emails
+- Client authentication
+- OID 1.3.6.1.5.5.7.3.2
+- Smart card login
+- OID 1.3.6.1.4.1.311.20.2.2
+- Server Authentication
+- OID 1.3.6.1.5.5.7.3.1
+- Certificates are used to identify servers (such as HTTPS certificates)
 
-证书模板
+Certificate Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-微软提供了证书模板的功能，方便在域内签发证书。证书模板是注册策略和预定义证书设置的集合，包含证书有效期、用途、申请者等信息。
+Microsoft provides the function of a certificate template to facilitate issuing certificates within the domain. A certificate template is a collection of registration policies and predefined certificate settings, including information such as certificate validity period, purpose, applicant, etc.
 
-证书注册
+Certificate registration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-证书可以通过以下几种方式注册：
+Certificates can be registered in the following ways:
 
-- 通过 Windows 客户端证书注册协议 (MS-WCCE)
-- 通过 ICertPassage 远程协议 (MS-ICPR)
-- 在 ADCS 开启了对应 Web 服务的情况下，使用 Web 服务注册
-- 在服务器安装了对应服务时，通过证书注册服务 (CES) 注册
-- 在服务器安装了对应服务时，使用网络设备注册服务
+- Through Windows Client Certificate Registration Protocol (MS-WCCE)
+- Remote Protocol (MS-ICPR) via ICertPassage
+- Register with the Web service when ADCS has enabled the corresponding Web service
+- Register through Certificate Registration Service (CES) when the corresponding service is installed on the server
+- When the server has installed the corresponding service, use the network device to register the service

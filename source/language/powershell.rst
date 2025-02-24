@@ -1,23 +1,23 @@
 PowerShell
 ========================================
 
-执行策略
+Execution policy
 ----------------------------------------
-PowerShell 提供了 Restricted、AllSigned、RemoteSigned、Unrestricted、Bypass、Undefined 六种类型的执行策略。
+PowerShell provides six types of execution strategies: Restricted, AllSigned, RemoteSigned, Unrestricted, Bypass, and Undefined.
 
-Restricted 策略可以执行单个的命令，但是不能执行脚本，Windows 8、 Windows Server 2012中默认使用该策略。
+The Restricted policy can execute a single command, but cannot execute scripts. This policy is used by default in Windows 8 and Windows Server 2012.
 
-AllSigned 策略允许执行所有具有数字签名的脚本。
+The AllSigned policy allows execution of all scripts with digital signatures.
 
-RemoteSigned 当执行从网络上下载的脚本时，需要脚本具有数字签名，否则不会运行这个脚本。如果是在本地创建的脚本则可以直接执行，不要求脚本具有数字签名。
+RemoteSigned When executing a script downloaded from the network, the script needs to have a digital signature, otherwise the script will not be run. If the script is created locally, it can be executed directly and does not require the script to have a digital signature.
 
-Unrestricted 这是一种比较宽容的策略，允许运行未签名的脚本。对于从网络上下载的脚本，在运行前会进行安全性提示。
+Unrestricted This is a relatively tolerant strategy that allows unsigned scripts to be run. For scripts downloaded from the network, security prompts will be given before running.
 
-BypassBypass 执行策略对脚本的执行不设任何的限制，任何脚本都可以执行，并且不会有安全性提示。
+BypassBypass execution policy does not place any restrictions on the execution of scripts. Any script can be executed and there will be no security prompts.
 
-UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的脚本策略。
+UndefinedUndefined means that no script policy is set, and the default script policy will be inherited or used.
 
-混淆
+Confusion
 ----------------------------------------
 - ``-EC``
 - ``-EncodedCommand``
@@ -25,66 +25,66 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
 - ``-EncodedComma``
 - ``-EncodedComm``
 
-常见功能
+Common features
 ----------------------------------------
 
-计划任务
+Plan tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code:: powershell
 
-    $Action = New-ScheduledTaskAction -Execute "calc.exe"
-    $Trigger = New-ScheduledTaskTrigger -AtLogon
-    $User = New-ScheduledTaskPrincipal -GroupId "BUILTIN\Administrators" -RunLevel Highest
-    $Set = New-ScheduledTaskSettingsSet
-    $object = New-ScheduledTask -Action $Action -Principal $User -Trigger $Trigger -Settings $Set
-    Register-ScheduledTask AtomicTask -InputObject $object
-    Unregister-ScheduledTask -TaskName "AtomicTask" -confirm:$false
+$Action = New-ScheduledTaskAction -Execute "calc.exe"
+$Trigger = New-ScheduledTaskTrigger -AtLogon
+$User = New-ScheduledTaskPrincipal -GroupId "BUILTIN\Administrators" -RunLevel Highest
+$Set = New-ScheduledTaskSettingsSet
+$object = New-ScheduledTask -Action $Action -Principal $User -Trigger $Trigger -Settings $Set
+Register-ScheduledTask AtomicTask -InputObject $object
+Unregister-ScheduledTask -TaskName "AtomicTask" -confirm:$false
 
-创建链接
+Create a link
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code:: powershell
 
-    $Shell = New-Object -ComObject ("WScript.Shell")
-    $ShortCut = $Shell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\test.lnk")
-    $ShortCut.TargetPath="cmd.exe"
-    $ShortCut.WorkingDirectory = "C:\Windows\System32";
-    $ShortCut.WindowStyle = 1;
-    $ShortCut.Description = "test.";
-    $ShortCut.Save()
+$Shell = New-Object -ComObject ("WScript.Shell")
+$ShortCut = $Shell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup	est.lnk")
+$ShortCut.TargetPath="cmd.exe"
+$ShortCut.WorkingDirectory = "C:\Windows\System32";
+$ShortCut.WindowStyle = 1;
+$ShortCut.Description = "test.";
+$ShortCut.Save()
 
-编码
+coding
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code:: powershell
 
-    $OriginalCommand = '#{powershell_command}'
-    $Bytes = [System.Text.Encoding]::Unicode.GetBytes($OriginalCommand)
-    $EncodedCommand =[Convert]::ToBase64String($Bytes)
+$OriginalCommand = '#{powershell_command}'
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($OriginalCommand)
+$EncodedCommand =[Convert]::ToBase64String($Bytes)
 
-其他
+other
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 别名
-    - ``alias``
-- 下载文件
-    - ``Invoke-WebRequest "https://example.com/test.zip" -OutFile "$env:TEMP\test.zip"``
-- 解压缩
-    - ``Expand-Archive $env:TEMP\test.zip $env:TEMP\test -Force``
-- 进程
-    - 启动进程 ``Start-Process calc``
-    - 停止进程 ``Stop-Process -ID $pid``
-- 文件
-    - 新建文件 ``New-Item #{file_path} -Force | Out-Null``
-    - 设置文件内容 ``Set-Content -Path #{file_path} -Value "#{Content}"``
-    - 追加文件内容 ``Add-Content -Path #{file_path} -Value "#{Content}"``
-    - 复制文件 ``Copy-Item src dst``
-    - 删除文件 ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``
-    - 子目录 ``Get-ChildItem #{file_path}``
-- 服务
-    - 获取服务 ``Get-Service -Name "#{service_name}"``
-    - 启动服务 ``Start-Service -Name "#{service_name}"``
-    - 停止服务 ``Stop-Service -Name "#{service_name}"``
-    - 删除服务 ``Remove-Service -Name "#{service_name}"``
-- 获取WMI支持 ``Get-WmiObject -list``
+- Alias
+- ``alias``
+- Download the file
+- ``Invoke-WebRequest "https://example.com/test.zip" -OutFile "$env:TEMP	est.zip"``
+- Decompression
+- ``Expand-Archive $env:TEMP	est.zip $env:TEMP	est -Force``
+- Process
+- Start the process ``Start-Process calc``
+- Stop the process ``Stop-Process -ID $pid``
+- document
+- Create a new file ``New-Item #{file_path} -Force | Out-Null``
+- Set file content ``Set-Content -Path #{file_path} -Value "#{Content}"``
+- Add file content ``Add-Content -Path #{file_path} -Value "#{Content}"``
+- Copy file ``Copy-Item src dst``
+- Delete file ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``
+- Subdirectory ``Get-ChildItem #{file_path}``
+- Serve
+- Get Service ``Get-Service -Name "#{service_name}"``
+- Start the service ``Start-Service -Name "#{service_name}"``
+- Stop service ``Stop-Service -Name "#{service_name}"``
+- Delete service ``Remove-Service -Name "#{service_name}"``
+- Get WMI support ``Get-WmiObject -list``
 
-参考链接
+Reference link
 ----------------------------------------
-- `PowerShell 官方文档 <https://docs.microsoft.com/zh-cn/powershell/>`_
+- `PowerShell official document <https://docs.microsoft.com/zh-cn/powershell/>`_

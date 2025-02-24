@@ -1,35 +1,35 @@
-异步机制
+Asynchronous mechanism
 ========================================
 
 async / await
 ----------------------------------------
-async function 关键字用来在表达式中定义异步函数。
+The async function keyword is used to define asynchronous functions in expressions.
 
 Promise
 ----------------------------------------
-Promise 对象是一个代理对象（代理一个值），被代理的值在Promise对象创建时可能是未知的。它允许你为异步操作的成功和失败分别绑定相应的处理方法（handlers）。 这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的promise对象
+A Promise object is a proxy object (proxy with a value), and the value being prosecuted may be unknown when the Promise object is created. It allows you to bind the corresponding handling methods (handlers) for the success and failure of asynchronous operations. This allows the asynchronous method to return the value like a synchronous method, but not to return the final execution result immediately, but a promise object that represents future results.
 
-一个 Promise有以下几种状态:
+A Promise has the following states:
 
-- pending: 初始状态，既不是成功，也不是失败状态。
-- fulfilled: 意味着操作成功完成。
-- rejected: 意味着操作失败。
+- pending: The initial state is neither successful nor failed.
+- fulfilled: means that the operation is completed successfully.
+- rejected: means that the operation failed.
 
-pending 状态的 Promise 对象可能会变为 fulfilled 状态并传递一个值给相应的状态处理方法，也可能变为失败状态（rejected）并传递失败信息。当其中任一种情况出现时，Promise 对象的 then 方法绑定的处理方法（handlers ）就会被调用（then方法包含两个参数：onfulfilled 和 onrejected，它们都是 Function 类型。当Promise状态为fulfilled时，调用 then 的 onfulfilled 方法，当Promise状态为rejected时，调用 then 的 onrejected 方法， 所以在异步操作的完成和绑定处理方法之间不存在竞争）。
+A Promise object with a pending state may become fulfilled and pass a value to the corresponding state processing method, or may become rejected and pass failure information. When either of these cases occurs, the handlers bound by the then method of the Promise object will be called (then method contains two parameters: onfulfilled and onrejected, both of which are Function types. When the Promise state is fulfilled , call then 's onfulfilled method, and when the Promise state is rejected, then 's onrejected method is called, so there is no competition between the completion of asynchronous operation and the binding processing method).
 
-因为 Promise.prototype.then 和  Promise.prototype.catch 方法返回promise 对象， 所以它们可以被链式调用。
+Because the Promise.prototype.then and Promise.prototype.catch methods return promise objects, they can be called chained.
 
-执行队列
+Execution queue
 ----------------------------------------
-JavaScript中的异步运行机制如下：
-    
-- 所有同步任务都在主线程上执行，形成一个执行栈
-- 主线程之外，还存在一个任务队列。只要异步任务有了运行结果，就在任务队列之中放置一个事件。
-- 一旦执行栈中的所有同步任务执行完毕，系统就会读取任务队列，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。
-- 主线程不断重复上面的第三步。
+The asynchronous operation mechanism in JavaScript is as follows:
 
-其中浏览器的内核是多线程的，在浏览器的内核中不同的异步操作由不同的浏览器内核模块调度执行，异步操作会将相关回调添加到任务队列中。可以分为DOM事件、时间回调、网络回调三种：
+- All synchronous tasks are executed on the main thread to form an execution stack
+- In addition to the main thread, there is also a task queue. As long as the asynchronous task has a running result, an event is placed in the task queue.
+- Once all synchronous tasks in the execution stack are executed, the system will read the task queue to see what events are inside. Those corresponding asynchronous tasks end the waiting state, enter the execution stack, and start execution.
+- The main thread keeps repeating the third step above.
 
-- DOM事件：由浏览器内核的 DOM 模块来处理，当事件触发的时候，回调函数会被添加到任务队列中。
-- 时间回调：setTimeout / setInterval 等函数会由浏览器内核的 timer 模块来进行延时处理，当时间到达的时候，将回调函数添加到任务队列中。
-- 网络回调：ajax / fetch 等则由浏览器内核的 network 模块来处理，在网络请求完成返回之后，才将回调添加到任务队列中。
+The browser's kernel is multi-threaded. In the browser's kernel, different asynchronous operations are scheduled and executed by different browser kernel modules. Asynchronous operations will add related callbacks to the task queue. It can be divided into three types: DOM events, time callbacks, and network callbacks:
+
+- DOM event: handled by the DOM module of the browser kernel. When the event is triggered, the callback function will be added to the task queue.
+- Time callback: functions such as setTimeout/setInterval will be delayed by the timer module of the browser kernel. When the time arrives, the callback function will be added to the task queue.
+- Network callbacks: ajax/fetch, etc. are processed by the browser kernel's network module. The callbacks are added to the task queue after the network request is completed and returned.

@@ -1,10 +1,9 @@
-认证机制
+Authentication mechanism
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
-
+   :caption: Content index:
    mfa
    sso
    jwt

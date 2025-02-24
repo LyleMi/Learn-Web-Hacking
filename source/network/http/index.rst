@@ -1,14 +1,14 @@
-HTTP协议簇
+HTTP protocol cluster
 ========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   http
-   httpver
-   https
-   websocket
-   cookie
-   webdav
-   ref
+http
+httpver
+https
+websocket
+cookie
+webDav
+ref

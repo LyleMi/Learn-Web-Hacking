@@ -1,27 +1,27 @@
-权限系统设计模型
+Permission system design model
 ========================================
 
-常见的权限设计模式有以下几种：
+There are several common permission design patterns:
 
-- 自主访问控制 (Discretionary Access Control, DAC)
-- 强制访问控制 (Mandatory Access Control, MAC)
-- 基于角色的访问控制 (Role-Based Access Control, RBAC)
-- 基于属性的权限验证 (Attribute-Based Access Control, ABAC)
+- Discretionary Access Control (DAC)
+- Mandatory Access Control (MAC)
+- Role-Based Access Control (RBAC)
+- Attribute-Based Access Control, ABAC
 
-常用的概念有：
+Commonly used concepts are:
 
-- 用户: 发起操作的主体
-- 对象: 发起操作的客体，即操作的对象
-- 权限: 用来指代对某对象的一种/一类操作
-- 权限控制表 (Access Control List, ACL): 描述用户与权限之间关系的数据表
-- 权限控制矩阵 (Access Control Matrix): 一套抽象、形式化的安全性模型。这套模型描述了电脑系统中的安全保护状态，各别表示其下的每个附属子体，对于系统中的每个对象，其所拥有的权限。
+- User: The principal that initiated the operation
+- Object: The object that initiates the operation, that is, the object of the operation
+- Permission: Used to refer to a type of operation/class of operations on a certain object
+- Access Control List (ACL): Data table describing the relationship between a user and permissions
+- Access Control Matrix: An abstract and formal security model. This set of models describes the security protection status in a computer system, each representing the permissions it has for each appendix subbody under it.
 
-DAC 根据 ACL 的信息来决定用户是否能对某个对象进行操作。而拥有某个对象权限的用户，又可以将该对象的权限分配给其他用户，所以这种模型被称为自主（Discretionary）访问控制。
+DAC determines whether the user can operate on an object based on the information of the ACL. Users with permissions to a certain object can allocate the permissions of the object to other users, so this model is called Discretionary access control.
 
-由于 DAC 权限控制较为分散，每个用户和对象都有一些权限标识，所以引入了 MAC 。每个用户和对象都有权限标识，用户是否能操作取决于双方的权限标识关系。这种方式不能灵活的授权，适合权限控制较为严格的场景。
+Since the DAC permission control is relatively scattered, each user and object has some permission identifiers, MAC was introduced. Each user and object has permission identification, and whether the user can operate depends on the permission identification relationship between the two parties. This method cannot be flexibly authorized and is suitable for scenarios with stricter permission control.
 
-RBAC 则是迄今为止最为普及的权限设计模型，它引入了角色 (Role) 的概念。
-每个用户可以关联一个或多个角色，每个角色也可以关联一个或多个权限。
-当需要新的权限配置时，可以根据需求灵活创建角色。
+RBAC is by far the most popular permission design model, introducing the concept of role (Role).
+Each user can associate one or more roles, and each role can also associate one or more permissions.
+When new permission configuration is required, roles can be created flexibly according to requirements.
 
-不同于 RBAC 按角色进行关联， ABAC 根据属性进行关联。通常来说，属性分为几类：用户属性、环境属性（例如时间）、操作属性（当前操作）、对象属性。ABAC 则通过动态计算一个或一组属性来是否满足对应条件来进行授权判断。
+Unlike RBAC that is associated by role, ABAC is associated by attributes. Generally speaking, attributes are divided into several categories: user attributes, environment attributes (such as time), operation attributes (current operation), and object attributes. ABAC makes authorization judgment by dynamically calculating one or a set of attributes to meet the corresponding conditions.

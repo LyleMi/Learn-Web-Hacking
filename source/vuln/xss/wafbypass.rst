@@ -1,42 +1,42 @@
 WAF Bypass
 ================================
 
-- 利用<>标记
-- 利用html属性
-    - href
-    - lowsrc
-    - bgsound
-    - background
-    - value
-    - action
-    - dynsrc
-- 关键字
-    - 利用回车拆分
-    - 字符串拼接
-        - ``window["al" + "ert"]``
-- 利用编码绕过
-    - base64
-    - jsfuck
-    - String.fromCharCode
-    - HTML
-    - URL
-    - hex
-        - ``window["\x61\x6c\x65\x72\x74"]``
-    - unicode
-    - utf7
-        - ``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``
-    - utf16
-- 大小写混淆
-- 对标签属性值转码
-- 产生事件
-- css跨站解析
-- 长度限制bypass
-    - ``eval(name)``
-    - ``eval(hash)``
-    - ``import``
-    - ``$.getScript``
-    - ``$.get``
+- Use <> tags
+-Use html attributes
+- href
+- lowsrc
+- bgsound
+- background
+- value
+- action
+- dynsrc
+- Keywords
+- Use carriage return to split
+- String stitching
+- ``window["al" + "ert"]``
+- Bypass using encoding
+- base64
+- jsfuck
+- String.fromCharCode
+- HTML
+- URL
+- hex
+- ``window["\x61\x6c\x65\x72\x74"]``
+- unicode
+- And rash
+- ``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``
+- UTF16
+- Case confusion
+- Transcode the tag attribute value
+- Generate events
+- CSS cross-site analysis
+- Length limit bypass
+- ``eval(name)``
+- ``eval(hash)``
+- ``import``
+- ``$.getScript``
+- ``$.get``
 - ``.``
-    - 使用 ``。`` 绕过IP/域名
-    - ``document['cookie']`` 绕过属性取值
-- 过滤引号用 `` ` `` 绕过
+- Use ``. `` Bypass IP/domain name
+- ``document['cookie']`` bypass the attribute to get value
+- Bypass the filter quotes with ```` ``

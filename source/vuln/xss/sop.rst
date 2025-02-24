@@ -1,81 +1,81 @@
-同源策略
+Same Origin Policy
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-同源策略限制了不同源之间如何进行资源交互，是用于隔离潜在恶意文件的重要安全机制。
-是否同源由URL决定，URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。
+Same-origin policies limit how resource interactions are conducted between different sources and are an important security mechanism for isolating potential malicious files.
+Whether the same origin is determined by the URL. The URL consists of a protocol, domain name, port and path. If the protocol, domain name and port of the two URLs are the same, it means that they are the same origin.
 
-file域的同源策略
+Homogenic policy for file domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在之前的浏览器中，任意两个file域的URI被认为是同源的。本地磁盘上的任何HTML文件都可以读取本地磁盘上的任何其他文件。
+In previous browsers, the URIs of any two file domains were considered homologous. Any HTML file on the local disk can read any other file on the local disk.
 
-从Gecko 1.9开始，文件使用了更细致的同源策略，只有当源文件的父目录是目标文件的祖先目录时，文件才能读取另一个文件。
+Starting with Gecko 1.9, files use a more nuanced homologous strategy, and files can only read another file if the parent directory of the source file is the ancestor directory of the target file.
 
-cookie的同源策略
+Same Origin Policy for Cookies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cookie使用不同的源定义方式，一个页面可以为本域和任何父域设置cookie，只要是父域不是公共后缀(public suffix)即可。
+Cookies use different source definition methods. A page can set cookies for this domain and any parent domain as long as it is a parent domain and not a public suffix.
 
-不管使用哪个协议(HTTP/HTTPS)或端口号，浏览器都允许给定的域以及其任何子域名访问cookie。设置 cookie时，可以使用 ``domain`` / ``path`` / ``secure`` 和 ``http-only`` 标记来限定其访问性。
+Regardless of which protocol (HTTP/HTTPS) or port number is used, the browser allows the given domain and any of its subdomains to access cookies. When setting cookies, you can use the ``domain`` / ``path`` / ``secure`` and ``http-only`` tags to limit their accessibility.
 
-所以 ``https://localhost:8080/`` 和 ``http://localhost:8081/`` 的Cookie是共享的。
+So the ``https://localhost:8080/` and ``http://localhost:8081/`` cookies are shared.
 
-Flash/SilverLight跨域
+Flash/SilverLight Cross-domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-浏览器的各种插件也存在跨域需求。通常是通过在服务器配置crossdomain.xml，设置本服务允许哪些域名的跨域访问。
+Various plug-ins in the browser also have cross-domain requirements. Usually, by configuring crossdomain.xml on the server, setting up crossdomain access to this service.
 
-客户端会请求此文件，如果发现自己的域名在访问列表里，就发起真正的请求，否则不发送请求。
+The client will request this file. If it finds that its domain name is in the access list, it will initiate a real request, otherwise it will not send the request.
 
-源的更改
+Changes to the source
 ----------------------------------------
-同源策略认为域和子域属于不同的域，例如 ``child1.a.com`` 与 ``a.com`` / ``child1.a.com`` 与 ``child2.a.com`` / ``xxx.child1.a.com`` 与 ``child1.a.com`` 两两不同源。
+Homology policies believe that domains and subdomains belong to different domains, such as ``child1.a.com`` vs. ``a.com`` / ``child1.a.com`` with ``child2.a.com`` / ``xxx.child1.a.com`` and ``child1.a.com`` have different sources.
 
-对于这种情况，可以在两个方面各自设置 ``document.domain='a.com'`` 来改变其源来实现以上任意两个页面之间的通信。
+For this case, you can set ``document.domain='a.com'` in two aspects to change its source to achieve communication between any of the above two pages.
 
-另外因为浏览器单独保存端口号，这种赋值会导致端口号被重写为 ``null`` 。
+In addition, because the browser saves the port number separately, this assignment will cause the port number to be ``null``.
 
-跨源访问
+Cross-original access
 ----------------------------------------
-同源策略控制了不同源之间的交互，这些交互通常分为三类：
+Homologous policies control interactions between different sources, which are usually divided into three categories:
 
-+ 通常允许跨域写操作(Cross-origin writes)
-    + 链接(links)
-    + 重定向
-    + 表单提交
-+ 通常允许跨域资源嵌入(Cross-origin embedding)
-+ 通常不允许跨域读操作(Cross-origin reads)
++ Cross-origin writes are usually allowed
++ Links (links)
++ Redirect
++ Form Submission
++ Cross-origin embedding is usually allowed
++ Cross-origin reads are not usually allowed
 
-可能嵌入跨源的资源的一些示例有：
+Some examples of resources that may be embedded across origin are:
 
-+ ``<script src="..."></script>`` 标签嵌入跨域脚本。语法错误信息只能在同源脚本中捕捉到。
-+ ``<link rel="stylesheet" href="...">`` 标签嵌入CSS。由于CSS的松散的语法规则，CSS的跨域需要一个设置正确的Content-Type 消息头。
-+ ``<img>`` / ``<video>`` / ``<audio>`` 嵌入多媒体资源。
-+ ``<object>`` ``<embed>`` 和 ``<applet>`` 的插件。
-+ ``@font-face`` 引入的字体。一些浏览器允许跨域字体( cross-origin fonts)，一些需要同源字体(same-origin fonts)。
-+ ``<frame>`` 和 ``<iframe>`` 载入的任何资源。站点可以使用X-Frame-Options消息头来阻止这种形式的跨域交互。
++ ``<script src="..."></script>`` Tags are embedded in cross-domain scripts. Syntax error messages can only be captured in homologous scripts.
++ ``<link rel="stylesheet" href="...">`` Tag embeds CSS. Due to the loose syntax rules of CSS, CSS needs a correct Content-Type message header to set up.
++ ``<img>`` / ``<video>`` / ``<audio>`` Embed multimedia resources.
++ ``<object>```````` and ``<embed>`` plugins.
++ ``@font-face`` font introduced. Some browsers allow cross-origin fonts, while some require same-origin fonts.
++ ``<frame>`` and ``<iframe>`` any resource loaded. Sites can use X-Frame-Options message headers to block this form of cross-domain interaction.
 
-JSONP跨域
+JSONP Cross-domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-JSONP就是利用 ``<script>`` 标签的跨域能力实现跨域数据的访问，请求动态生成的JavaScript脚本同时带一个callback函数名作为参数。
+JSONP uses the cross-domain capability of the ``<script>`` tag to achieve cross-domain data access, requesting that the dynamically generated JavaScript script also bring a callback function name as a parameter.
 
-服务端收到请求后，动态生成脚本产生数据，并在代码中以产生的数据为参数调用callback函数。
+After the server receives the request, it dynamically generates the script to generate data, and calls the callback function with the generated data as parameters in the code.
 
-JSONP也存在一些安全问题，例如当对传入/传回参数没有做校验就直接执行返回的时候，会造成XSS问题。没有做Referer或Token校验就给出数据的时候，可能会造成数据泄露。
+JSONP also has some security problems, such as when returning directly without verification of incoming/return parameters, it will cause XSS problems. Data leakage may occur when data is given without Referer or Token verification.
 
-另外JSONP在没有设置callback函数的白名单情况下，可以合法的做一些设计之外的函数调用，引入问题。这种攻击也被称为SOME攻击。
+In addition, JSONP can legally make some function calls outside the design without setting a whitelist of callback functions to introduce problems. This kind of attack is also called a SOME attack.
 
-跨源脚本API访问
+Cross-origin script API access
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Javascript的APIs中，如 ``iframe.contentWindow`` , ``window.parent``, ``window.open`` 和 ``window.opener`` 允许文档间相互引用。当两个文档的源不同时，这些引用方式将对 ``window`` 和 ``location`` 对象的访问添加限制。
+Javascript APIs, such as ``iframe.contentWindow`, ``window.parent`, ``window.open` and ``window.opener` allow documents to be referenced. When the sources of the two documents are different, these references will add restrictions on access to the ``window`` and ``location`` objects.
 
-``window`` 允许跨源访问的方法有
+``window`` methods that allow cross-origin access are
 
 - window.blur
 - window.close
 - window.focus
 - window.postMessage
 
-``window`` 允许跨源访问的属性有
+``window`` properties that allow cross-origin access are
 
 - window.closed
 - window.frames
@@ -87,60 +87,60 @@ Javascript的APIs中，如 ``iframe.contentWindow`` , ``window.parent``, ``windo
 - window.top
 - window.window
 
-其中 ``window.location`` 允许读/写，其他的属性只允许读
+Among them, ``window.location`` allows reading/writing, and other attributes only allow reading.
 
-跨源数据存储访问
+Cross-origin data storage access
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-存储在浏览器中的数据，如 ``localStorage`` 和 ``IndexedDB``，以源进行分割。每个源都拥有自己单独的存储空间，一个源中的Javascript脚本不能对属于其它源的数据进行读写操作。
+Data stored in the browser, such as ``localStorage`` and ``IndexedDB``, are split by source. Each source has its own separate storage space, and Javascript scripts in one source cannot read and write data belonging to other sources.
 
 CORS
 ----------------------------------------
-CORS是一个W3C标准，全称是跨域资源共享(Cross-origin resource sharing)。通过这个标准，可以允许浏览器读取跨域的资源。
+CORS is a W3C standard, and its full name is Cross-origin resource sharing. Through this standard, browsers can be allowed to read cross-domain resources.
 
-常见请求头
+Common request headers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Origin
-    - 预检请求或实际请求的源站URI, 浏览器请求默认会发送该字段
-    - ``Origin: <origin>``
+- The source site URI of the pre-check request or actual request, the browser request will send this field by default
+- ``Origin: <origin>``
 - Access-Control-Request-Method
-    - 声明请求使用的方法
-    - ``Access-Control-Request-Method: <method>``
+- Declare the method to use the request
+- ``Access-Control-Request-Method: <method>``
 - Access-Control-Request-Headers
-    - 声明请求使用的header字段
-    - ``Access-Control-Request-Headers: <field-name>[, <field-name>]*``
+- Declare the header field used by the request
+- ``Access-Control-Request-Headers: <field-name>[, <field-name>]*``
 
-常见返回头
+Common return to the head
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Access-Control-Allow-Origin
-    - 声明允许访问的源外域URI
-    - 对于携带身份凭证的请求不可使用通配符 ``*``
-    - ``Access-Control-Allow-Origin: <origin> | *``
+- Declare the source outdated URI that is allowed to access
+- Wildcard characters ``*`````` for requests carrying credentials
+- ``Access-Control-Allow-Origin: <origin> | *``
 - Access-Control-Expose-Headers
-    - 声明允许暴露的头
-    - e.g. ``Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header``
+- Declares that the exposed heads are allowed
+- e.g. ``Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header``
 - Access-Control-Max-Age
-    - 声明Cache时间
-    - ``Access-Control-Max-Age: <delta-seconds>``
+- Statement of Cache Time
+- ``Access-Control-Max-Age: <delta-seconds>``
 - Access-Control-Allow-Credentials
-    - 声明是否允许在请求中带入
-    - ``Access-Control-Allow-Credentials: true``
+- Declare whether to allow bringing in in the request
+- ``Access-Control-Allow-Credentials: true``
 - Access-Control-Allow-Methods
-    - 声明允许的访问方式
-    - ``Access-Control-Allow-Methods: <method>[, <method>]*``
+- Declare the allowed access method
+- ``Access-Control-Allow-Methods: <method>[, <method>]*``
 - Access-Control-Allow-Headers
-    - 声明允许的头
-    - ``Access-Control-Allow-Headers: <field-name>[, <field-name>]*``
+- Declare allowed headers
+- ``Access-Control-Allow-Headers: <field-name>[, <field-name>]*``
 
-防御建议
+Defense advice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 如非必要不开启CORS
-- 定义详细的白名单，不使用通配符，仅配置所需要的头
-- 配置 ``Vary: Origin`` 头部
-- 如非必要不使用 ``Access-Control-Allow-Credentials``
-- 限制缓存的时间
+- Do not enable CORS unless necessary
+- Define a detailed whitelist, do not use wildcards, only configure the required headers
+- Configuration ``Vary: Origin`` header
+- Do not use ``Access-Control-Allow-Credentials`` unless necessary
+- Limit cache time
 
-阻止跨源访问
+Block cross-origin access
 ----------------------------------------
-阻止跨域写操作，可以检测请求中的 ``CSRF token`` ，这个标记被称为Cross-Site Request Forgery (CSRF) 标记。
+Block cross-domain write operations and can detect ``CSRF token`` in a request, which is called the Cross-Site Request Forgery (CSRF) tag.
 
-阻止资源的跨站读取，因为嵌入资源通常会暴露信息，需要保证资源是不可嵌入的。但是多数情况下浏览器都不会遵守 ``Content-Type`` 消息头。例如如果在HTML文档中指定 ``<script>`` 标记，则浏览器会尝试将HTML解析为JavaScript。 
+Block cross-site reading of resources, because embedded resources usually expose information, and it is necessary to ensure that resources are not embedded. However, in most cases, the browser will not comply with the ``Content-Type` message header. For example, if you specify the ``<script>`` tag in an HTML document, the browser will try to parse the HTML into JavaScript.

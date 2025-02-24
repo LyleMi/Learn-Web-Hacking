@@ -1,32 +1,32 @@
 SAML
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-SAML (Security Assertion Markup Language) 译为安全断言标记语言，是一种xXML格式的语言，使用XML格式交互，来完成SSO的功能。
+SAML (Security Assertion Markup Language) is a language in xXML format that uses XML format interaction to complete the functions of SSO.
 
-SAML存在1.1和2.0两个版本，这两个版本不兼容，不过在逻辑概念或者对象结构上大致相当，只是在一些细节上有所差异。
+There are two versions 1.1 and 2.0 in SAML, which are incompatible, but are roughly the same in terms of logical concepts or object structures, but there are differences in some details.
 
-认证过程
+Certification process
 ----------------------------------------
-SAML的认证涉及到三个角色，分别为服务提供者(SP)、认证服务(IDP)、用户(Client)。一个比较典型认证过程如下：
+SAML authentication involves three roles, namely service provider (SP), authentication service (IDP), and user (Client). A typical authentication process is as follows:
 
-1. Client访问受保护的资源
-2. SP生成认证请求SAML返回给Client
-3. Client提交请求到IDP
-4. IDP返回认证请求
-5. Client登陆IDP
-6. 认证成功后，IDP生成私钥签名标识了权限的SAML，返回给Client
-7. Client提交SAML给SP
-8. SP读取SAML，确定请求合法，返回资源
+1. Client accesses protected resources
+2. SP generates authentication request SAML to return to Client
+3. Client submits a request to IDP
+4. IDP returns authentication request
+5. Client login IDP
+6. After the authentication is successful, IDP generates a private key signature that identifies the permissions SAML and returns it to the Client.
+7. Client submits SAML to SP
+8. SP reads SAML, confirms that the request is legal, and returns the resource
 
-安全问题
+Security Question
 ----------------------------------------
-- 源于ssl模式下的认证可选性，可以删除签名方式标签绕过认证
-- 如果SAML中缺少了expiration，并且断言ID不是唯一的，那么就可能被重放攻击影响
+- From the authentication option in SSL mode, you can delete the signature tag to bypass authentication
+- If expiration is missing in SAML and the assertion that the ID is not unique, it may be affected by a replay attack
 
-参考链接
+Reference link
 ----------------------------------------
-- `SAML Wiki <https://en.wikipedia.org/wiki/SAML_2.0>`_
-- `RFC7522 <https://tools.ietf.org/html/rfc7522>`_
+- `Saml Wiki <https://en.wikipedia.org/wiki/saml_2.0>` _
+- Apply, "you will be shrouded: //
 - `SSO Wars The Token Menace <https://i.blackhat.com/USA-19/Wednesday/us-19-Munoz-SSO-Wars-The-Token-Menace.pdf>`_

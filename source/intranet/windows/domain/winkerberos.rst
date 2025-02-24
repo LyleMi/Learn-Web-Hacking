@@ -1,11 +1,11 @@
-Kerberos的Windows实现
+Kerberos' Windows implementation
 ========================================
 
-相关定义
+Related definitions
 ----------------------------------------
 
 SPN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-服务主体名称 (ServicePrincipal Names, SPN) ，是服务实例(如HTTP、SMB等)的唯一标识符。
+ServicePrincipal Names (SPN) is a unique identifier for service instances (such as HTTP, SMB, etc.).
 
-SPN分为两种类型：一种是注册在活动目录的机器帐户下，当一个服务的权限为 Local System 或 Network Service，则SPN注册在机器帐户下。一种是注册在活动目录的域用户帐户下，当一个服务的权限为一个域用户，则SPN注册在域用户帐户下。
+SPNs are divided into two types: one is to register under the machine account in the active directory. When a service's permissions are Local System or Network Service, SPN is registered under the machine account. One is to register under the domain user account in the active directory. When a service's permissions are a domain user, the SPN is registered under the domain user account.

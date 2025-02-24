@@ -1,15 +1,15 @@
-危害
+harm
 ================================
-存在XSS漏洞时，可能会导致以下几种情况：
+When an XSS vulnerability exists, the following situations may be caused:
 
-1. 用户的Cookie被获取，其中可能存在Session ID等敏感信息。若服务器端没有做相应防护，攻击者可用对应Cookie登陆服务器。
+1. The user's cookie is obtained, which may contain sensitive information such as Session ID. If the server does not provide corresponding protection, the attacker can log in to the server with the corresponding cookie.
 
-2. 攻击者能够在一定限度内记录用户的键盘输入。
+2. The attacker can record the user's keyboard input within a certain limit.
 
-3. 攻击者通过CSRF等方式以用户身份执行危险操作。
+3. The attacker performs dangerous operations as a user through CSRF and other means.
 
-4. XSS蠕虫。
+4. XSS worm.
 
-5. 获取用户浏览器信息。
+5. Obtain user browser information.
 
-6. 利用XSS漏洞扫描用户内网。
+6. Use XSS vulnerabilities to scan the user's intranet.

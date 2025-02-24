@@ -1,14 +1,14 @@
-相关 CVE
+Related CVE
 ========================================
 
 CVE-2018-15473
 ----------------------------------------
-CVE-2018-15473 允许客户端通过遍历的方式获取服务端存在的用户名，该漏洞影响 OpenSSH <= 7.7 的版本。
+CVE-2018-15473 allows the client to obtain the username existing on the server through traversal. This vulnerability affects the version of OpenSSH <= 7.7.
 
 CVE-2016-20012
 ----------------------------------------
-CVE-2016-20012 允许客户端在只知道公钥信息的情况下通过 SSH_MSG_USERAUTH_REQUEST 遍历客户端是否可以通过某个 <用户, 公钥> 对登录。
+CVE-2016-20012 allows clients to traverse whether the client can log in through a <user, public key> pair when only knowing the public key information.
 
-由于 OpenSSH 的开发者认为修改相关的认证方式会需要需要增加 client 读取私钥的频度，因此没有对应进行修复。
+Since the developers of OpenSSH believe that modifying the relevant authentication method requires increasing the frequency of client reading the private key, no corresponding repair is made.
 
-相关的讨论可以参考这个 `PR <https://github.com/openssh/openssh-portable/pull/270>`_ 。
+For related discussions, please refer to this `PR <https://github.com/openssh/openssh-portable/pull/270>`_ .

@@ -1,11 +1,11 @@
-后门
+back door
 ================================
 
-php.ini构成的后门
+Backdoor made by php.ini
 ---------------------------------
-利用 auto_prepend_file 和 include_path
+Use auto_prepend_file and include_path
 
-.user.ini文件构成的PHP后门
+PHP backdoor composed of .user.ini file
 ---------------------------------
-.user.ini可运行于所有以fastcgi运行的server。
-利用方式同php.ini
+.user.ini can run on all servers running in fastcgi.
+Use the same as php.ini

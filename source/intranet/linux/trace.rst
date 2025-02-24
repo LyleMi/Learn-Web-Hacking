@@ -1,54 +1,54 @@
-痕迹清理
+Trace cleaning
 ========================================
 
-历史命令
+Historical Commands
 ----------------------------------------
 - ``unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export HISTFILE=/dev/null;``
 - ``kill -9 $$`` kill history
 - ``history -c``
-- 在 ``HISTSIZE=0`` 中设置 ``HISTSIZE=0``
+- Set ``HISTSIZE=0`` in ``HISTSIZE=0``
 
-清除/修改日志文件
+Clear/modify log files
 ----------------------------------------
-- ``/var/log/btmp``
-- ``/var/log/lastlog``
-- ``/var/log/wtmp``
-- ``/var/log/utmp``
+- `/was/log/btmp```s
+- ``/was/log/load log``
+- ``/VAR/LOG/WTMP``
+- ``/was/log/ump```s
 - ``/var/log/secure``
-- ``/var/log/message``
+- ``/VAR/LOG/MESSAGE`
 
-登录痕迹
+Login traces
 ----------------------------------------
-- 删除 ``~/.ssh/known_hosts`` 中记录
-- 修改文件时间戳
-    - ``touch –r``
-- 删除tmp目录临时文件
+- Delete the records in ``~/.ssh/known_hosts``
+- Modify file timestamp
+- ``touch –r``
+- Delete Temporary Files of the TMP Directory
 
-操作痕迹
+Operation traces
 ----------------------------------------
-- vim 不记录历史命令 ``:set history=0``
-- ssh 登录痕迹
-    - 无痕登录 ``ssh -T user@host /bin/bash -i``
+- vim does not record historical commands ``:set history=0``
+- ssh login traces
+- Wuhen Login ``ssh -T user@host /bin/bash -i``
 
-覆写文件
+Overwrite the file
 ----------------------------------------
 - shred
 - dd
 - wipe
 
-难点
+difficulty
 ----------------------------------------
-- 攻击和入侵很难完全删除痕迹，没有日志记录也是一种特征
-- 即使删除本地日志，在网络设备、安全设备、集中化日志系统中仍有记录
-- 留存的后门包含攻击者的信息
-- 使用的代理或跳板可能会被反向入侵
+- It is difficult to completely delete traces when attacking and intrusion, and no logging is also a feature
+- Even if the local log is deleted, there are still records in network equipment, security equipment, and centralized log systems
+- The retained backdoor contains the attacker's information
+- The agent or springboard used may be reverse-invaded
 
-注意
+Notice
 ----------------------------------------
-- 在操作前检查是否有用户在线
-- 删除文件使用磁盘覆写的功能删除
-- 尽量和攻击前状态保持一致
+- Check if there are users online before operation
+- Delete files using disk override function
+- Try to keep the same state as before the attack
 
-参考链接
+Reference link
 ----------------------------------------
-- `Linux 入侵痕迹清理技巧 <https://mp.weixin.qq.com/s/i2WvFmF1qQjbx-BaStXb1Q>`_
+- `Linux intrusion trace cleaning skills <https://mp.weixin.qq.com/s/i2WvFmF1qQjbx-BaStXb1Q>`_

@@ -1,32 +1,32 @@
-术语
+the term
 ----------------------------------------
 
 mDNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Multicast DNS (mDNS)，多播DNS，使用5353端口，组播地址为 ``224.0.0.251`` 或 ``[FF02::FB]`` 。在一个没有常规DNS服务器的小型网络内可以使用mDNS来实现类似DNS的编程接口、包格式和操作语义。mDNS协议的报文与DNS的报文结构相同，但有些字段对于mDNS来说有新的含义。
+Multicast DNS (mDNS), multicast DNS, uses port 5353, multicast address is ``224.0.0.251`` or ``[FF02::FB]``. mDNS can be used in a small network without a regular DNS server to implement DNS-like programming interfaces, package formats, and operational semantics. The packet structure of mDNS protocol is the same as that of DNS, but some fields have new meanings for mDNS.
 
-启动mDNS的主机会在进入局域网后向所有主机组播消息，包含主机名、IP等信息，其他拥有相应服务的主机也会响应含有主机名和IP的信息。
+The host that starts mDNS multicasts messages to all hosts after entering the LAN, including host name, IP and other information. Other hosts with corresponding services will also respond to information containing host name and IP.
 
-mDNS的域名是用 ``.local`` 和普通域名区分开的。
+The domain name of mDNS is distinguished from the normal domain name by ``.local``.
 
 FQDN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-FQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如 ``www.example.com.`` 。
+FQDN (Fully-Qualified Domain Name) is the complete form of a domain name, mainly containing zero-length root tags, such as ``www.example.com.``.
 
 TLD
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Top-Level Domain (TLD) 是属于根域的一个域，例如 ``com`` 或 ``jp`` 。
+Top-Level Domain (TLD) is a domain belonging to the root domain, such as ``com`` or ``jp``.
 
-TLD一般可以分为 Country Code Top-Level Domains (ccTLDs) 、Generic Top-Level Domains (gTLDs) 以及其它。
+TLDs can generally be divided into Country Code Top-Level Domains (ccTLDs), Generic Top-Level Domains (gTLDs), and others.
 
 IDN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Internationalized Domain Names for Applications (IDNA) 是为了处理非ASCII字符的情况。
+Internationalized Domain Names for Applications (IDNA) is to handle non-ASCII characters.
 
 CNAME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CNAME即Canonical name，又称alias，将域名指向另一个域名。
+CNAME is Canonical name, also known as alias, which points the domain name to another domain name.
 
 TTL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Time To Live，无符号整数，记录DNS记录过期的时间，最小是0，最大是2147483647 (2^31 - 1)。
+Time To Live, unsigned integer, record the time when DNS records expire, the minimum is 0, and the maximum is 2147483647 (2^31 - 1).

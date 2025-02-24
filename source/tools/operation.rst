@@ -1,7 +1,7 @@
-运维
+Operation and maintenance
 ========================================
 
-流量
+flow
 ----------------------------------------
 - `Bro <https://www.bro.org/>`_
 - `Moloch <https://github.com/aol/moloch>`_  Large scale, open source, indexed packet capture and search
@@ -10,24 +10,24 @@
 - `WireShark <https://www.wireshark.org>`_
 - `Argus <https://github.com/salesforce/Argus>`_
 - `PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_
-- `ngrep <https://github.com/jpr5/ngrep>`_
+- `
 - `cisco joy <https://github.com/cisco/joy>`_  A package for capturing and analyzing network flow data and intraflow data, for network research, forensics, and security monitoring.
 - `NFStream <https://github.com/nfstream/nfstream>`_ a Flexible Network Data Analysis Framework
 - `BruteShark <https://github.com/odedshimon/BruteShark>`_ Network Analysis Tool
 
-堡垒机
+Fortress
 ----------------------------------------
 - `jumpserver <https://github.com/jumpserver/jumpserver>`_
-- `CrazyEye <https://github.com/triaquae/CrazyEye>`_
+- `Crazyye <https://github.com/riryquae/crazye>` `
 - `GateOne <https://github.com/liftoff/GateOne>`_
 
-蜜罐
+Honey jar
 ----------------------------------------
-- `Dionaea <https://github.com/DinoTools/dionaea>`_
+- `SEEE <HTPLS HTPS2/Dinatoals/Dinatoals 2-
 - `Modern Honey Network  <https://github.com/threatstream/mhn>`_
-- `Cowrie <https://github.com/micheloosterhof/cowrie>`_ SSH/Telnet蜜罐
-- `honeything <https://github.com/omererdem/honeything>`_ IoT蜜罐
-- `ConPot <http://conpot.org/>`_ 工控设施蜜罐
+- `Cowrie <https://github.com/micheloosterhof/cowrie>`_ SSH/Telnet Honey Can
+- `honeything <https://github.com/omererdem/honeything>`_ IoT honeypot
+- `ConPot <http://conpot.org/>`_ Honeypot for industrial control facilities
 - `MongoDB HoneyProxy <https://github.com/Plazmaz/MongoDB-HoneyProxy>`_
 - `ElasticHoney <https://github.com/jordan-wright/elastichoney>`_
 - `DCEPT <https://github.com/secureworks/dcept>`_
@@ -36,8 +36,8 @@
 - `T-Pot <https://github.com/dtag-dev-sec/tpotce/>`_ The All In One Honeypot Platform
 - `opencanary <https://github.com/p1r06u3/opencanary_web>`_
 - `HFish <https://github.com/hacklcx/HFish>`_
-- `kippo <https://github.com/desaster/kippo>`_ SSH Honeypot
-- `Ehoney <https://github.com/seccome/Ehoney>`_ 欺骗防御系统
+- `Kippo <https://github.com/desaster/kippo>` _ ssh honeypot
+- `Ehoney <https://github.com/seccome/Ehoney>`_ Deception Defense System
 
 VPN Install
 ----------------------------------------
@@ -45,55 +45,55 @@ VPN Install
 - `ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_
 - `openvpn <https://github.com/Nyr/openvpn-install>`_
 
-隧道 / 代理
+Tunnel / Agent
 ----------------------------------------
-- `ngrok <https://github.com/inconshreveable/ngrok>`_
-- `rtcp <https://github.com/knownsec/rtcp>`_
-- `Tunna <https://github.com/SECFORCE/Tunna>`_
+- `` ngrok <https://github.com/intonshreevle/ngrok> `` _
+- `` rtcp <https://github.com/knownsec/rtcp> `_
+- `thin <https://github.com/secforce/tunna>` _
 - `reDuh <https://github.com/sensepost/reDuh>`_ Create a TCP circuit through validly formed HTTP requests
 - `reGeorg <https://github.com/sensepost/reGeorg>`_ pwn a bastion webserver and create SOCKS proxies through the DMZ. Pivot and pwn
 - `Neo-reGeorg <https://github.com/L-codes/Neo-reGeorg>`_ Neo-reGeorg is a project that seeks to aggressively refactor reGeorg
 - `ABPTTS <https://github.com/nccgroup/ABPTTS>`_ TCP tunneling over HTTP/HTTPS for web application servers
 - `frp <https://github.com/fatedier/frp>`_ A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet
-- `lanproxy <https://github.com/ffay/lanproxy>`_ 内网穿透工具
+- `lanproxy <https://github.com/ffay/lanproxy>`_ Intranet penetration tool
 - `ligolo <https://github.com/sysdream/ligolo>`_ Reverse Tunneling made easy for pentesters
-- `EarthWorm <https://github.com/idlefire/ew>`_ 是一款用于开启 SOCKS v5 代理服务的工具，基于标准 C 开发，可提供多平台间的转接通讯，用于复杂网络环境下的数据转发。
+- `EarthWorm <https://github.com/idlefire/ew>`_ is a tool used to enable SOCKS v5 proxy service. It is developed based on Standard C and can provide multi-platform forwarding communication for complex networks. Data forwarding in the environment.
 - `Tunna <https://github.com/SECFORCE/Tunna>`_  is a set of tools which will wrap and tunnel any TCP communication over HTTP
 - `mssqlproxy <https://github.com/blackarrowsec/mssqlproxy>`_ is a toolkit aimed to perform lateral movement in restricted environments through a compromised Microsoft SQL Server via socket reuse
 - `nps <https://github.com/ehang-io/nps>`_ a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal
 
-代理链
+Proxy chain
 ----------------------------------------
 - `Netch <https://github.com/NetchX/Netch>`_ Support Socks5, Shadowsocks, ShadowsocksR, V2Ray, Trojan proxies. UDP NAT FullCone
 - `proxychains <https://github.com/haad/proxychains>`_ a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4, SOCKS5 or HTTP(S) proxy
 - `gost <https://github.com/ginuerzh/gost>`_ GO Simple Tunnel
 
-资产管理
+asset Management
 ----------------------------------------
-- `BlueKing CMDB <https://github.com/Tencent/bk-cmdb>`_ 面向资产及应用的企业级配置管理平台
-- `ARL <https://github.com/TophantTechnology/ARL>`_ 资产侦察灯塔系统
+- `BlueKing CMDB <https://github.com/Tencent/bk-cmdb>`_ Enterprise-level configuration management platform for assets and applications
+- `ARL <https://github.com/TophantTechnology/ARL>`_ Asset Reconnaissance Lighthouse System
 
-合规
+Compliance
 ----------------------------------------
-- `bombus <https://github.com/momosecurity/bombus>`_ 合规审计平台
+- `bombus <https://github.com/momosecurity/bombus>`_ Compliance Audit Platform
 
-风控
+Risk control
 ----------------------------------------
 - `nebula <https://github.com/threathunterX/nebula>`_
-- `Liudao <https://github.com/ysrc/Liudao>`_ “六道”实时业务风控系统
-- `aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎
+- `Liudao <https://github.com/ysrc/Liudao>`_ "Six Paths" real-time business risk control system
+- `aswan <https://github.com/momosecurity/aswan>`_ Momo Risk Control System Static Rules Engine
 
 SIEM
 ----------------------------------------
-- `metron <https://github.com/apache/metron>`_
+- `Metron <https://github.com/apache/metron>` _
 - `MozDef <https://github.com/mozilla/MozDef>`_
 
-安全运维
+Safe operation and maintenance
 ----------------------------------------
-- `Scout <https://github.com/HandsomeOne/Scout>`_ URL 监控系统
-- `OpenDnsdb <https://github.com/qunarcorp/open_dnsdb>`_ 基于Python的DNS管理系统
+- `Scout <https://github.com/HandsomeOne/Scout>`_ URL Monitoring System
+- `OpenDnsdb <https://github.com/qunarcorp/open_dnsdb>`_ Python-based DNS management system
 
-系统监控
+System monitoring
 ----------------------------------------
 - `netdata <https://github.com/netdata/netdata>`_ Real-time performance monitoring
 - `bcc <https://github.com/iovisor/bcc>`_ Tools for BPF-based Linux IO analysis, networking, monitoring, and more
@@ -102,10 +102,10 @@ Windows
 ----------------------------------------
 - `Windows Sysinternals <https://docs.microsoft.com/zh-cn/sysinternals>`_
 
-网络测试
+Network testing
 ----------------------------------------
 - `Toxiproxy <https://github.com/Shopify/toxiproxy>`_ A TCP proxy to simulate network and system conditions for chaos and resiliency testing
 
-网络模拟
+Network simulation
 ----------------------------------------
 - `Internet Emulator <https://github.com/seed-labs/seed-emulator>`_ A Python framework for creating emulation of the Internet

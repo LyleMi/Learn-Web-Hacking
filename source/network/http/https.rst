@@ -1,33 +1,33 @@
 HTTPS
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-HTTPS (HyperText Transfer Protocol over Secure Socket Layer)可以理解为HTTP+SSL/TLS， 即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL。
+HTTPS (HyperText Transfer Protocol over Secure Socket Layer) can be understood as HTTP+SSL/TLS, that is, the SSL layer is added under HTTP. The security basis of HTTPS is SSL.
 
-交互
+Interaction
 ----------------------------------------
 
-证书验证阶段
+Certificate verification stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 浏览器发起 HTTPS 请求
-- 服务端返回 HTTPS 证书
-    - 其中证书包含：
-        - 颁发机构信息
-        - 公钥
-        - 公司信息
-        - 域名
-        - 有效期
-        - 指纹
-- 客户端验证证书是否合法，如果不合法则提示告警
+- Browser initiates HTTPS request
+- Server returns HTTPS certificate
+- Where the certificate contains:
+- Authority information
+- Public Key
+- Company Information
+- Domain Name
+- Valid period
+- Fingerprint
+- The client verifies whether the certificate is legal, and if it is not legal, it will prompt an alarm
 
-数据传输阶段
+Data transmission stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 当证书验证合法后，在本地生成随机数
-- 通过公钥加密随机数，并把加密后的随机数传输到服务端
-- 服务端通过私钥对随机数进行解密
-- 服务端通过客户端传入的随机数构造对称加密算法，对返回结果内容进行加密后传输
+- When the certificate verification is valid, generate random numbers locally
+- Encrypt random numbers through public key and transmit the encrypted random numbers to the server
+- The server decrypts the random number through the private key
+- The server constructs a symmetric encryption algorithm through random numbers sent by the client, encrypts and transmits the returned result content
 
 CA
 ----------------------------------------
-CA (Certificate Authority) 是颁发数字证书的机构。是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。
+CA (Certificate Authority) is the agency that issues digital certificates. It is an authoritative institution responsible for issuing and managing digital certificates, and as a trusted third party in e-commerce transactions, it assumes the responsibility for verifying the legality of public keys in the public key system.

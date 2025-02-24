@@ -1,7 +1,7 @@
 Ruby
 ========================================
 
-参考链接
+Reference link
 ----------------------------------------
 - `ruby deserialization <https://www.elttam.com.au/blog/ruby-deserialization/>`_
-- `Ruby 安全漫谈 <https://mp.weixin.qq.com/s/ECLwMbbrf9lWXkhbUergXg>`_
+- `Ruby Security Talk <https://mp.weixin.qq.com/s/ECLwMbbrf9lWXkhbUergXg>`_

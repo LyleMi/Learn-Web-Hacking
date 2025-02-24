@@ -1,15 +1,15 @@
-防护
+Protection
 ========================================
-- 使用ATA等商业化防护工具
-- 安装杀毒软件、EDR等工具
-- 关闭高危服务
-- 统一配置防火墙策略
-- 对域控等高危账号使用白名单进行行为管理
-- 检测高危操作
-    - 权限提升
-    - 高危账号密码修改、重置
-- 行为频率建模
-    - 对大量尝试登录/信息查询进行报警
-- 及时安装补丁
-- 对特定攻击行为进行监控
-    - 通过GPO下发自启动、计划任务
+- Use commercial protection tools such as ATA
+- Install antivirus software, EDR and other tools
+- Close high-risk services
+- Unified configuration of firewall policies
+- Use whitelists for behavior management of high-risk accounts such as domain control
+- Detect high-risk operations
+- Permission enhancement
+- Modify and reset high-risk account password
+- Behavior frequency modeling
+- Alarms for a large number of attempts to log in/information query
+- Install patches in time
+- Monitor specific attack behaviors
+- Posted by GPO and schedule tasks

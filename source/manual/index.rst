@@ -1,9 +1,9 @@
-手册速查
+Quick manual check
 ================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    brute
    download

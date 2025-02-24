@@ -1,74 +1,74 @@
-拒绝服务攻击
+Denial of Service Attack
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-DoS（Denial of Service）指拒绝服务，是一种常用来使服务器或网络瘫痪的网络攻击手段。
+DoS (Denial of Service) refers to denial of service, which is a cyber attack method commonly used to paralyze servers or networks.
 
-在平时更多提到的是分布式拒绝服务（DDoS，Distributed Denial of Service） 攻击，该攻击是指利用足够数量的傀儡计算机产生数量巨大的攻击数据包，对网络上的一台或多台目标实施DDoS攻击，成倍地提高威力，从而耗尽受害目标的资源，迫使目标失去提供正常服务的能力。
+In normal times, more is the distributed denial of service (DDoS) attack. This attack refers to using a sufficient number of puppet computers to generate a large number of attack data packets to target one or more targets on the network. Implementing DDoS attacks increases the power exponentially, thereby exhausting the resources of the victim target and forcing the target to lose its ability to provide normal services.
 
-UDP反射
+UDP reflection
 ----------------------------------------
-基于UDP文的反射DDoS攻击是拒绝服务攻击的一种形式。攻击者不直接攻击目标，而是利用互联网中某些开放的服务器，伪造被攻击者的地址并向该服务器发送基于UDP服务的特殊请求报文，使得数倍于请求报文的数据被发送到被攻击IP，从而对后者间接形成DDoS攻击。
+Reflective DDoS attack based on UDP articles is a form of denial of service attack. The attacker does not directly attack the target, but uses some open servers on the Internet to forge the address of the attacked person and send special request messages based on UDP service to the server, so that data that is several times more than the request messages are sent to The IP is attacked, thereby indirectly forming a DDoS attack on the latter.
 
-常用于DoS攻击的服务有:
+Services commonly used for DoS attacks include:
 
 - NTP
 - DNS
 - SSDP
 - Memcached
 
-其中DNS攻击主要是指DNS Request Flood、DNS Response Flood、虚假源+真实源DNS Query Flood、权威服务器攻击和Local服务器攻击。
+Among them, DNS attacks mainly refer to DNS Request Flood, DNS Response Flood, false source + real source DNS Query Flood, authoritative server attacks and Local server attacks.
 
 TCP Flood
 ----------------------------------------
-TCP Flood是一种利用TCP协议缺陷的攻击，这种方式通过伪造IP向攻击服务器发送大量伪造的TCP SYN请求，被攻击服务器回应握手包后（SYN+ACK），因为伪造的IP不会回应之后的握手包，服务器会保持在SYN_RECV状态，并尝试重试。这会使得TCP等待连接队列资源耗尽，正常业务无法进行。
+TCP Flood is an attack that takes advantage of the defects of TCP protocol. This method sends a large number of forged TCP SYN requests to the attacking server through forged IP. After the attacked server responds to the handshake packet (SYN+ACK), because the forged IP will not respond afterwards. The server will remain in SYN_RECV state and try again. This will cause TCP waiting for connection queue resources to be exhausted and normal business cannot be carried out.
 
 Shrew DDoS
 ----------------------------------------
-Shrew DDoS利用了TCP的重传机制，调整攻击周期来反复触发TCP协议的RTO，达到攻击的效果。其数据包以固定的、恶意选择的慢速时间发送，这种模式能够将TCP流量限制为其理想速率的一小部分，同时以足够低的平均速率进行传输以避免检测。
+Shrew DDoS uses TCP's retransmission mechanism to adjust the attack cycle to repeatedly trigger the RTO of the TCP protocol to achieve the attack effect. Its packets are sent at a fixed, maliciously selected slow time, a mode that limits TCP traffic to a small part of its ideal rate while transmitting at an average rate low enough to avoid detection.
 
-现代操作系统已经对TCP协议进行了相应的修改，使得其不受影响。
+Modern operating systems have made corresponding modifications to the TCP protocol so that it is not affected.
 
 Ping Of Death
 ----------------------------------------
-在正常情况下不会存在大于65536个字节的ICMP包，但是报文支持分片重组机制。通过这种方式可以发送大于65536字节的ICMP包并在目标主机上重组，最终会导致被攻击目标缓冲区溢出，引起拒绝服务攻击。
+Under normal circumstances, there will be no ICMP packets greater than 65536 bytes, but packets support shard reorganization mechanism. In this way, ICMP packets greater than 65536 bytes can be sent and reorganized on the target host, which will eventually cause the target buffer to overflow and cause a denial of service attack.
 
-现代操作系统已经对这种攻击方式进行检查，使得其不受影响。
+Modern operating systems have checked this attack method so that it is not affected.
 
 Challenge Collapsar (CC)
 ----------------------------------------
-CC攻击是一种针对资源的DoS攻击，攻击者通常会常用请求较为消耗服务器资源的方式来达到目的。
+CC attack is a DoS attack targeting resources. Attackers usually use requests to consume server resources to achieve their goals.
 
-CC攻击的方式有很多种，常见的攻击可以通过大量访问搜索页、物品展示页等消耗大的功能来实现。部分HTTP服务器也可通过上传超大文件、发送大量且复杂的参数的请求来实现攻击。
+There are many ways to attack CC. Common attacks can be achieved through a large number of expensive functions such as search pages and item display pages. Some HTTP servers can also implement attacks by uploading super large files and sending requests for large and complex parameters.
 
-慢速攻击
+Slow attack
 ----------------------------------------
-HTTP慢速攻击是由Wong Onn Chee 和 Tom Brennan在2012年的OWASP大会上正式披露，用低速发包来消耗服务器资源以达到拒绝服务的目的。
+HTTP slow attack was officially disclosed by Wong Onn Chee and Tom Brennan at the 2012 OWASP Conference, using low-speed packets to consume server resources to achieve the purpose of denial of service.
 
-慢速攻击分为 Slow headers / Slow body / Slow read 三种攻击方式。Slow headers 一直不停的慢速发送HTTP头部，消耗服务器的连接和内存资源。Slow body 发送一个 Content-Length 很大的 HTTP POST请求，每次只发送很少量的数据，使该连接一直保持存活。Slow read以很低的速度读取Response。
+Slow attacks are divided into three attack methods: Slow headers / Slow body / Slow read. Slow headers keep sending HTTP headers slowly, consuming server connections and memory resources. Slow body sends a Content-Length HTTP POST request, sending only a small amount of data at a time, keeping the connection alive. Slow reads the Response at a very low speed.
 
-基于服务特性
+Based on service features
 ----------------------------------------
-- 压缩包解压
-    - 巨大的0字节的压缩包
-- 读文件
-    - 读 ``/dev/urandom`` 等无限制的文件
-    - 高频访问特定的大文件下载链接
-- 受限制的反序列化
-    - 反序列化巨大的数组
-- 正则解析
-    - 消耗巨大的回溯表达式
+- Compression pack decompression
+- Huge 0 bytes of compressed package
+- Read the file
+- Read unlimited files such as ``/dev/urandom``
+- High frequency access to specific large file download links
+- Restricted deserialization
+- Deserialize huge arrays
+- Regular analysis
+- A huge backtracking expression
 
-常用的防护方式
+Common protection methods
 ----------------------------------------
-- 基于特定攻击的指纹检测攻击，对相应流量进行封禁/限速操作
-- 对正常流量进行建模，对识别出的异常流量进行封禁/限速操作
-- 基于IP/端口进行综合限速策略
-- 基于地理位置进行封禁/限速操作
+- Fingerprint detection attack based on specific attacks, block/speed limit operation of corresponding traffic
+- Model normal traffic and block/speed limit the identified abnormal traffic
+- Comprehensive speed limiting strategy based on IP/port
+- Block/speed limit operation based on geographical location
 
-参考链接
+Reference link
 ----------------------------------------
-- `linux academy dos <https://linuxacademy.com/howtoguides/posts/show/topic/13191-denial-of-service-dos>`_
+-`Linux Academy of <https://linuxaCademy.com/howtoguides/posts/show/topic/13191-denial-of-service-dos>` _
 - `slowhttptest <https://github.com/shekyan/slowhttptest>`_ Application Layer DoS attack simulator
 - `Slowloris wiki <https://en.wikipedia.org/wiki/Slowloris_(computer_security)>`_

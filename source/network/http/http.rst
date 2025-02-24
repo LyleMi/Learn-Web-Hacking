@@ -1,313 +1,313 @@
-HTTP标准
+HTTP Standard
 ========================================
 
-报文格式
+Message format
 ----------------------------------------
 
-请求报文格式
+Request message format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
-    <method><request-URL><version>
-    <headers>
+<method><request-URL><version>
+<headers>
 
-    <entity-body>
+<entity-body>
 
-响应报文格式
+Response message format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
-    <version><status><reason-phrase>
-    <headers>
+<version><status><reason-phrase>
+<headers>
 
-    <entity-body>
+<entity-body>
 
-字段解释
+Field explanation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - method
-    - HTTP动词
-    - 常见方法：HEAD / GET / POST / PUT / DELETE / PATCH / OPTIONS / TRACE
-    - 扩展方法：LOCK / MKCOL / COPY / MOVE
+- HTTP verbs
+- Common Methods: HEAD/GET/POST/PUT/DELETE/PATCH/OPTIONS/TRACE
+- Extension method: LOCK/MKCOL/COPY/MOVE
 - version
-    - 报文使用的HTTP版本
-    - 格式为HTTP/<major>.<minor>
+- HTTP version used by the packet
+- Format is HTTP/<major>.<minor>
 - url
-    - ``<scheme>://<user>:<password>@<host>:<port>/<path>;<params>?<query>#<frag>``
+- ``<scheme>://<user>:<password>@<host>:<port>/<path>;<params>?<query>#<frag>``
 
-请求头列表
+Request header list
 ----------------------------------------
 - Accept
-    - 指定客户端能够接收的内容类型
-    - Accept: text/plain, text/html
+- Specify the type of content that the client can receive
+- Accept: text/plain, text/html
 - Accept-Charset
-    - 浏览器可以接受的字符编码集
-    - Accept-Charset: iso-8859-5
+- A set of characters that are acceptable to the browser
+- Accept-Charset: iso-8859-5
 - Accept-Encoding
-    - 指定浏览器可以支持的web服务器返回内容压缩编码类型
-    - Accept-Encoding: compress, gzip
+- Specify the type of web server return content compression encoding that the browser can support
+- Accept-Encoding: compress, gzip
 - Accept-Language
-    - 浏览器可接受的语言
-    - Accept-Language: en,zh
+- Browser acceptable language
+- Accept-Language: en,zh
 - Accept-Ranges
-    - 可以请求网页实体的一个或者多个子范围字段
-    - Accept-Ranges: bytes
+- One or more sub-range fields of a web entity can be requested
+- Accept-Ranges: bytes
 - Authorization
-    - HTTP授权的授权证书
-    - Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+- Authorization certificate for HTTP authorization
+- Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
 - Cache-Control
-    - 指定请求和响应遵循的缓存机制 Cache-Control: no-cache
+- Specify the caching mechanism to which requests and responses follow Cache-Control: no-cache
 - Connection
-    - 表示是否需要持久连接 // HTTP 1.1默认进行持久连接
-    - Connection: close
+- Indicates whether a persistent connection is required // HTTP 1.1 defaults to perform persistent connections
+- Connection: close
 - Cookie
-    - HTTP请求发送时，会把保存在该请求域名下的所有cookie值一起发送给web服务器
-    - Cookie: role=admin;ssid=1
+- When an HTTP request is sent, all cookie values stored under the request domain name will be sent to the web server together
+- Cookie: role=admin;ssid=1
 - Content-Length
-    - 请求的内容长度
-    - Content-Length: 348
+- Requested content length
+- Content-Length: 348
 - Content-Type
-    - 请求的与实体对应的MIME信息
-    - Content-Type: application/x-www-form-urlencoded
+- Requested MIME information corresponding to the entity
+- Content-Type: application/x-www-form-urlencoded
 - Date
-    - 请求发送的日期和时间
-    - Date: Tue, 15 Nov 2010 08:12:31 GMT
+- Date and time of requesting send
+- Data: TUE, 15 Nov 2010 08:12:31 GMT
 - Expect
-    - 请求的特定的服务器行为
-    - Expect: 100-continue
+- The specific server behavior requested
+- Expect: 100-continue
 - From
-    - 发出请求的用户的Email
-    - From: user@email.com
+- Email of the requested user
+- From: user@email.com
 - Host
-    - 指定请求的服务器的域名和端口号
-    - Host: www.github.com
+- Specify the domain name and port number of the requested server
+- Host: www.github.com
 - If-Match
-    - 只有请求内容与实体相匹配才有效
-    - If-Match: "737060cd8c284d8af7ad3082f209582d"
+- Only if the requested content matches the entity is valid
+- If-Match: "737060cd8c284d8af7ad3082f209582d"
 - If-Modified-Since
-    - 如果请求的部分在指定时间之后被修改则请求成功，未被修改则返回304代码
-    - If-Modified-Since: Sat, 29 Oct 2018 19:43:31 GMT
+- If the requested part is modified after the specified time, the request is successful, and if it is not modified, the 304 code will be returned
+- If-Modified-Since: Sat, 29 Oct 2018 19:43:31 GMT
 - If-None-Match
-    - 如果内容未改变返回304代码，参数为服务器先前发送的Etag，与服务器回应的Etag比较判断是否改变
-    - If-None-Match: "737060cd8c284d8af7ad3082f209582d"
+- If the content has not changed, return 304 code, the parameter is the Etag sent by the server, and compare it with the Etag responded by the server to determine whether it has changed.
+- If-None-Match: "737060cd8c284d8af7ad3082f209582d"
 - If-Range
-    - 如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为Etag
-    - If-Range: "737060cd8c284d8af7ad3082f209582d"
+- If the entity has not changed, the server sends the missing part of the client, otherwise the entire entity is sent. The parameter is also Etag
+- If-Range: "737060cd8c284d8af7ad3082f209582d"
 - If-Unmodified-Since
-    - 只在实体在指定时间之后未被修改才请求成功
-    - If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT
+- Request succeeds only if the entity has not been modified after the specified time
+- If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT
 - Max-Forwards
-    - 限制信息通过代理和网关传送的时间
-    - Max-Forwards: 10
+- Limit the time when information is transmitted through the proxy and gateway
+- Max-Forwards: 10
 - Pragma
-    - 用来包含实现特定的指令
-    - Pragma: no-cache
+- Used to include implementation specific instructions
+- Pragma: no-cache
 - Proxy-Authorization
-    - 连接到代理的授权证书
-    - Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+- Certificate of authorization to the proxy
+- Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
 - Range
-    - 只请求实体的一部分，指定范围
-    - Range: bytes=500-999
-- Referer
-    - 先前网页的地址，当前请求网页紧随其后,即来路
-    - Referer: http://www.zcmhi.com/archives/71.html
-- TE
-    - 客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息
-    - TE: trailers,deflate;q=0.5
+- Only request part of the entity, specify the scope
+- Range: bytes=500-999
+- referring
+- The address of the previous web page, the current requested web page is immediately followed, that is, the origin
+- Refer: http://www.zcmhi.com/archives/71.html
+- the
+- The client is willing to accept the transmission code and notify the server to accept the end-top information
+- TE: trailers,deflate;q=0.5
 - Upgrade
-    - 向服务器指定某种传输协议以便服务器进行转换（如果支持）
-    - Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+- Specify some transport protocol to the server for conversion (if supported)
+- Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
 - User-Agent
-    - User-Agent的内容包含发出请求的用户信息
-    - User-Agent: Mozilla/5.0 (Linux; X11)
+- The content of User-Agent contains user information that issued the request
+- User-Agent: Mozilla/5.0 (Linux; X11)
 - Via
-    - 通知中间网关或代理服务器地址，通信协议
-    - Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)
+- Notify the intermediate gateway or proxy server address, communication protocol
+- Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)
 - Warning
-    - 关于消息实体的警告信息
-    - Warn: 199 Miscellaneous warning
+- Warning information about the message entity
+- Warn: 199 Miscellaneous warning
 
-响应头列表
+Response header list
 ----------------------------------------
 - Accept-Ranges
-    - 表明服务器是否支持指定范围请求及哪种类型的分段请求
-    - Accept-Ranges: bytes
+- Indicates whether the server supports specified range requests and which type of segment requests
+- Accept-Ranges: bytes
 - Access-Control-Allow-Origin
-    - 配置有权限访问资源的域
-    - Access-Control-Allow-Origin: <origin>|*
+- Configure domains with permission to access resources
+- Access-Control-Allow-Origin: <origin>|*
 - Age
-    - 从原始服务器到代理缓存形成的估算时间（以秒计，非负）
-    - Age: 12
+- Estimated time (in seconds, non-negative) from the origin server to the proxy cache formation
+- Age: 12
 - Allow
-    - 对某网络资源的有效的请求行为，不允许则返回405
-    - Allow: GET, HEAD
+- If valid request behavior for a certain network resource, if not allowed, return 405
+- Allow: GET, HEAD
 - Cache-Control
-    - 告诉所有的缓存机制是否可以缓存及哪种类型
-    - Cache-Control: no-cache
+- Tell all cache mechanisms whether and which type
+-Cache-Control: No-Cache
 - Content-Encoding
-    - web服务器支持的返回内容压缩编码类型。
-    - Content-Encoding: gzip
+- The web server supports the return content compression encoding type.
+- Content-Encoding: gzip
 - Content-Language
-    - 响应体的语言
-    - Content-Language: en,zh
+- Language of the response body
+- Content-Language: en,zh
 - Content-Length
-    - 响应体的长度
-    - Content-Length: 348
+- Length of the response body
+- Content-Length: 348
 - Content-Location
-    - 请求资源可替代的备用的另一地址
-    - Content-Location: /index.htm
+- Another alternative address to request a resource to replace
+- Content-Location: /index.htm
 - Content-MD5
-    - 返回资源的MD5校验值
-    - Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==
+- Return the MD5 check value of the resource
+- Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==
 - Content-Range
-    - 在整个返回体中本部分的字节位置
-    - Content-Range: bytes 21010-47021/47022
+- Byte position of this part in the entire return body
+- Content-Range: bytes 21010-47021/47022
 - Content-Type
-    - 返回内容的MIME类型
-    - Content-Type: text/html; charset=utf-8
+- Return the MIME type of content
+- Content-Type: text/html; charset=utf-8
 - Date
-    - 原始服务器消息发出的时间
-    - Date: Tue, 15 Nov 2010 08:12:31 GMT
-- ETag
-    - 请求变量的实体标签的当前值
-    - ETag: "737060cd8c284d8af7ad3082f209582d"
+- Time of the origin server message
+- Data: TUE, 15 Nov 2010 08:12:31 GMT
+- Etag
+- The current value of the entity label of the request variable
+Attj: “737060 Sadda, 4 Dahda 082, 09582 D”
 - Expires
-    - 响应过期的日期和时间
-    - Expires: Thu, 01 Dec 2010 16:00:00 GMT
+- Response expiration date and time
+- Expires: Thu, 01 Dec 2010 16:00:00 GMT
 - Last-Modified
-    - 请求资源的最后修改时间
-    - Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT
+- Last modification time for requesting resources
+- Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT
 - Location
-    - 用来重定向接收方到非请求URL的位置来完成请求或标识新的资源
-    - Location: http://www.zcmhi.com/archives/94.html
+- Used to redirect the receiver to the location of the non-requested URL to complete the request or identify a new resource
+- Location: http://www.zcmhi.com/archives/94.html
 - Pragma
-    - 包括实现特定的指令，它可应用到响应链上的任何接收方
-    - Pragma: no-cache
+- Includes implementation specific instructions that can be applied to any receiver on the response chain
+- Pragma: no-cache
 - Proxy-Authenticate
-    - 它指出认证方案和可应用到代理的该URL上的参数
-    - Proxy-Authenticate: Basic
+- It indicates the authentication scheme and the parameters on that URL that can be applied to the proxy
+- Proxy-Authenticate: Basic
 - Refresh
-    - 应用于重定向或一个新的资源被创造，在5秒之后重定向（由网景提出，被大部分浏览器支持） 
-    - Refresh: 5; url=http://www.zcmhi.com/archives/94.html
+- Apply for redirection or a new resource is created, redirected after 5 seconds (proposed by Netscape, supported by most browsers)
+- Refresh: 5; url=http://www.zcmhi.com/archives/94.html
 - Retry-After
-    - 如果实体暂时不可取，通知客户端在指定时间之后再次尝试
-    - Retry-After: 120
+- If the entity is temporarily undesirable, notify the client to try again after the specified time
+- Retry-After: 120
 - Server
-    - web服务器软件名称
-    - Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)
+- Web server software name
+- Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)
 - Set-Cookie
-    - 设置Http Cookie Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1
+- Set Http Cookie Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1
 - Strict-Transport-Security
-    - 设置浏览器强制使用HTTPS访问
-    - max-age: x秒的时间内 访问对应域名都使用HTTPS请求
-    - includeSubDomains: 网站的子域名也启用规则
-    - Strict-Transport-Security: max-age=1000; includeSubDomains
+- Set browser to force HTTPS access
+- max-age: In x seconds, accessing the corresponding domain name uses HTTPS requests.
+- includeSubDomains: The subdomains of the website also enables rules
+- Strict-Transport-Security: max-age=1000; includeSubDomains
 - Trailer
-    - 指出头域在分块传输编码的尾部存在 Trailer: Max-Forwards
+- Indicates that the header field exists at the tail of the block transmission encoding Trailer: Max-Forwards
 - Transfer-Encoding
-    - 文件传输编码
-    - Transfer-Encoding:chunked
+- File transfer encoding
+- Transfer-Encoding:chunked
 - Vary
-    - 告诉下游代理是使用缓存响应还是从原始服务器请求
-    - Vary: *
+- Tell the downstream agent whether to use cached responses or request from the original server
+- Vary: *
 - Via
-    - 告知代理客户端响应是通过哪里发送的
-    - Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)
+- Tell the proxy client where the response is sent
+- Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)
 - Warning
-    - 警告实体可能存在的问题
-    - Warning: 199 Miscellaneous warning
+- Warn of possible problems in the entity
+- Warning: 199 Miscellaneous warning
 - WWW-Authenticate
-    - 表明客户端请求实体应该使用的授权方案
-    - WWW-Authenticate: Basic
+- Indicates that the authorization scheme that the client requesting entity should use
+- WWW-Authenticate: Basic
 - X-Content-Type-Options
-    - 配置禁止MIME类型嗅探
-    - X-Content-Type-Options: nosniff
+- Configure sniffing of MIME type
+- X-Content-Type-Options: nosniff
 - X-Frame-Options
-    - 配置页面是否能出现在 <frame>, <iframe>, <embed>, <object> 等标签中，防止点击劫持
-    - X-Frame-Options: deny
+- Whether the configuration page can appear in <frame>, <iframe>, <embed>, <object> and other tags to prevent click hijacking
+- X-Frame-Options: deny
 - X-XSS-Protection
-    - 配置XSS防护机制
-    - X-XSS-Protection: 1; mode=block
+- Configure XSS protection mechanism
+- X-XSS-Protection: 1; mode=block
 
-HTTP状态返回代码 1xx（临时响应）
+HTTP status return code 1xx (temporary response)
 ----------------------------------------
-表示临时响应并需要请求者继续执行操作的状态代码。
+A status code that represents a temporary response and requires the requester to continue the operation.
 
 =====     ========    ======================================================================
-Code      代码         说明
+Code Code Description
 =====     ========    ======================================================================
-100       继续         服务器返回此代码表示已收到请求的第一部分，正在等待其余部分 
-101       切换协议     请求者已要求服务器切换协议，服务器已确认并准备切换
+100 Continue The server returns this code to indicate that the first part of the request has been received and is waiting for the rest.
+101 Switching protocol The requester has asked the server to switch the protocol, the server has confirmed and is ready to switch.
 =====     ========    ======================================================================
 
-HTTP状态返回代码 2xx （成功）
+HTTP status return code 2xx (success)
 ----------------------------------------
-表示成功处理了请求的状态代码。
+The status code indicating that the request was successfully processed.
 
 =====     ==========    ======================================================================
-Code      代码           说明
+Code Code Description
 =====     ==========    ======================================================================
-200       成功           服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页
-201       已创建         请求成功并且服务器创建了新的资源
-202       已接受         服务器已接受请求，但尚未处理
-203       非授权信息      服务器已成功处理了请求，但返回的信息可能来自另一来源
-204       无内容         服务器成功处理了请求，但没有返回任何内容
-205       重置内容        m服务器成功处理了请求，但没有返回任何内容
-206       部分内容        服务器成功处理了部分GET请求
+200 Success The server has successfully processed the request. Usually, this means that the server provides the requested webpage
+201 Created The request was successful and the server created a new resource
+202 Accepted The server has accepted the request, but has not been processed yet
+203 Unauthorized information The server has successfully processed the request, but the returned information may be from another source
+204 No content The server successfully processed the request but did not return any content
+205 Reset content m server successfully processed the request but did not return any content
+206 Some content The server successfully processed some GET requests
 =====     ==========    ======================================================================
 
-HTTP状态返回代码 3xx （重定向）
+HTTP status return code 3xx (redirect)
 ----------------------------------------
-表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。
+It means that further operations are needed to complete the request. Typically, these status codes are used to redirect.
 
 =====     ============    ======================================================================
-Code      代码             说明
+Code Code Description
 =====     ============    ======================================================================
-300       多种选择          针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。
-301       永久移动          请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。
-302       临时移动          服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。
-303       查看其他位置       请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。
-304       未修改            自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。
-305       使用代理          请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。
-307       临时重定向        服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。
+More than 300 Choices The server can perform multiple operations for requests. The server can select an action based on the requester (user agent), or provide a list of actions for the requester to select.
+301 Permanent Move The requested web page has been moved to the new location permanently. When the server returns this response (response to a GET or HEAD request), the requestor is automatically transferred to the new location.
+302 Temporary Move The server currently responds to requests from web pages in different locations, but the requester should continue to use the original location to make future requests.
+303 View Other Locations The server returns this code when the requester should use a separate GET request for different locations to retrieve the response.
+304 Not modified Since the last request, the requested web page has not been modified. When the server returns this response, the content of the web page will not be returned.
+305 Using a Proxy Requesters can only use the proxy to access the requested web page. If the server returns this response, it also means that the requester should use a proxy.
+307 Temporary redirection The server currently responds to requests from web pages in different locations, but the requester should continue to use the original location to make future requests.
 =====     ============    ======================================================================
 
-HTTP状态返回代码 4xx（请求错误）
+HTTP status return code 4xx (request error)
 ----------------------------------------
-这些状态代码表示请求可能出错，妨碍了服务器的处理。
+These status codes indicate that a request may have an error, hindering the server's processing.
 
 =====     ==================    ======================================================================
-Code      代码                   说明
+Code Code Description
 =====     ==================    ======================================================================
-400       错误请求               服务器不理解请求的语法。
-401       未授权                 请求要求身份验证。对于需要登录的网页，服务器可能返回此响应。
-403       禁止                   服务器拒绝请求。
-404       未找到                 服务器找不到请求的网页。
-405       方法禁用               禁用请求中指定的方法。
-406       不接受                 无法使用请求的内容特性响应请求的网页。
-407       需要代理授权            此状态代码与 401（未授权）类似，但指定请求者应当授权使用代理。
-408       请求超时               服务器等候请求时发生超时。
-409       冲突                   服务器在完成请求时发生冲突。 服务器必须在响应中包含有关冲突的信息。
-410       已删除                 如果请求的资源已永久删除，服务器就会返回此响应。
-411       需要有效长度            服务器不接受不含有效内容长度标头字段的请求。
-412       未满足前提条件          服务器未满足请求者在请求中设置的其中一个前提条件。
-413       请求实体过大            服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。
-414       请求的 URI 过长         请求的 URI（通常为网址）过长，服务器无法处理。
-415       不支持的媒体类型         请求的格式不受请求页面的支持。
-416       请求范围不符合要求       如果页面无法提供请求的范围，则服务器会返回此状态代码。
-417       未满足期望值            服务器未满足"期望"请求标头字段的要求。
+400 Error request The server does not understand the syntax of the request.
+401 Unauthorized Request for authentication. The server may return this response for web pages that need to be logged in.
+403 Forbidden The server rejects the request.
+404 Not Found The server cannot find the requested web page.
+405 Method Disable Disable the method specified in the request.
+406 Not accepted A web page that cannot respond to the requested content feature.
+407 Requires proxy authorization This status code is similar to 401 (unauthorized), but specifies that the requester should authorize the proxy.
+408 Request timeout A timeout occurred while the server was waiting for the request.
+409 Conflict A conflict occurred when the server completed the request. The server must include information about the conflict in the response.
+410 Deleted If the requested resource has been permanently deleted, the server returns this response.
+411 Valid length required The server does not accept requests that do not contain the valid content length header field.
+412 Prerequisite not met The server does not meet one of the prerequisites set by the requester in the request.
+413 The requesting entity is too large The server cannot process the request because the requesting entity is too large, exceeding the server's processing capacity.
+414 The requested URI is too long The requested URI (usually the URL) is too long and the server cannot handle it.
+415 Unsupported Media Types The requested format is not supported by the requested page.
+416 The request scope does not meet the requirements If the page cannot provide the requested scope, the server returns this status code.
+417 Expected value not met The server did not meet the requirements of the "Expected" request header field.
 =====     ==================    ======================================================================
 
-HTTP状态返回代码 5xx（服务器错误）
+HTTP status return code 5xx (server error)
 ----------------------------------------
-这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。
+These status codes indicate an internal error occurred on the server when trying to process the request. These errors may be errors in the server itself, not request errors.
 
 =====     ==================    ======================================================================
-Code      代码                    说明
+Code Code Description
 =====     ==================    ======================================================================
-500       服务器内部错误            服务器遇到错误，无法完成请求。
-501       尚未实施                  服务器不具备完成请求的功能。例如，服务器无法识别请求方法时可能会返回此代码。
-502       错误网关                  服务器作为网关或代理，从上游服务器收到无效响应。
-503       服务不可用                 服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。
-504       网关超时                服务器作为网关或代理，但是没有及时从上游服务器收到请求。
-505       HTTP 版本不受支持        服务器不支持请求中所用的 HTTP 协议版本。
+500 Internal Server Error The server encountered an error and could not complete the request.
+501 Not yet implemented The server does not have the function to complete the request. For example, this code may be returned when the server fails to recognize the request method.
+502 Error Gateway The server, as a gateway or proxy, received an invalid response from the upstream server.
+503 Service Unavailable The server is currently unavailable (due to overload or downtime maintenance). Usually, this is just a temporary state.
+504 Gateway timeout The server acts as a gateway or proxy, but does not receive the request from the upstream server in time.
+505 HTTP version not supported The server does not support the HTTP protocol version used in the request.
 =====     ==================    ======================================================================

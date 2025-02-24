@@ -1,9 +1,9 @@
-常见Sink
+Common Sink
 ========================================
 
-命令执行/注入
+Command execution/injection
 ----------------------------------------
-- java.lang.Runtime.getRuntime().exec()
+- java.lang.runtime.Getruntime (). Exec ()
 - java.lang.ProcessBuilder
 
 XXE
@@ -39,10 +39,10 @@ SSRF
 - URL.openStream
 - URLConnection.getInputStream
 
-反序列化
+Deserialization
 ----------------------------------------
 
-相关Sink函数
+Related Sink Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``JSON.parseObject``
 - ``ObjectInputStream.readObject``
@@ -54,7 +54,7 @@ SSRF
 
 Magic Call
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-以下的魔术方法都会在反序列化过程中被自动的调用。
+The following magic methods will be automatically called during the deserialization process.
 
 - ``readObject``
 - ``readExternal``
@@ -63,17 +63,17 @@ Magic Call
 - ``validateObject``
 - ``finalize``
 
-主流JSON库
+Mainstream JSON library
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-主流的JSON库有Gson、Jackson、Fastjson等，因为JSON常在反序列化中使用，所以相关库都有较大的影响。
+Mainstream JSON libraries include Gson, Jackson, Fastjson, etc. Because JSON is often used in deserialization, the related libraries have a great impact.
 
-其中Gson默认只能反序列化基本类型，如果是复杂类型，需要程序员实现反序列化机制，相对比较安全。
+Among them, Gson can only deserialize basic types by default. If it is a complex type, programmers need to implement the deserialization mechanism, which is relatively safe.
 
-Jackson除非指明@jsonAutoDetect，Jackson不会反序列化非public属性。在防御时，可以不使用enableDefaultTyping方法。相关CVE有CVE-2017-7525、CVE-2017-15095。
+Jackson Jackson does not deserialize non-public properties unless @jsonAutoDetect is specified. When defending, the enableDefaultTyping method can be not used. Related CVEs include CVE-2017-7525 and CVE-2017-15095.
 
-FastJson是阿里巴巴的开源JSON解析库，支持将Java Bean序列化为JSON字符串，也支持从JSON字符串反序列化到Java Bean，相关CVE有CVE-2017-18349等。
+FastJson is Alibaba's open source JSON parsing library. It supports serializing Java Beans into JSON strings, and also supports deserialization from JSON strings to Java Beans. Related CVEs include CVE-2017-18349, etc.
 
-FastJson常见的Sink点有：
+Common Sink points in FastJson are:
 
 - ``JSON.toJSONString``
 - ``JSON.parseObject``

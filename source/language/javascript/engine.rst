@@ -1,26 +1,26 @@
-引擎
+engine
 ========================================
 
 V8
 ----------------------------------------
-V8是Chrome的JavaScript语言处理程序（VM）。其引擎由TurboFan、Ignition和Liftoff组成。其中Turbofan是其优化编译器，Ignition则是其解释器，Liftoff是WebAssembly的代码生成器。
+V8 is a JavaScript language handler (VM) for Chrome. Its engine consists of TurboFan, Ignition and Liftoff. Among them, Turbofan is its optimization compiler, Ignition is its interpreter, and Liftoff is WebAssembly's code generator.
 
 SpiderMonkey
 ----------------------------------------
-SpiderMonkey是Mozilla项目的一部分，是一个用 C/C++ 实现的JavaScript脚本引擎。
+SpiderMonkey is part of the Mozilla project and is a JavaScript scripting engine implemented in C/C++.
 
 JavaScriptCore
 ----------------------------------------
-JavaScriptCore的优化执行分为四个部分，LLInt、Baseline、DFG、FTL。LLInt是最开始的解释执行部分，Baseline是暂时的JIT，DFG阶段开始做一定的优化，FTL阶段做了充分的优化。
+The optimization execution of JavaScriptCore is divided into four parts: LLInt, Baseline, DFG, and FTL. LLInt is the initial interpretation execution part, Baseline is the temporary JIT, and certain optimizations are started in the DFG stage, and sufficient optimizations are made in the FTL stage.
 
 ChakraCore
 ----------------------------------------
-ChakraCore是一个完整的JavaScript虚拟机，由微软实现，用于Edge浏览器以及IE的后期版本中。
+ChakraCore is a complete JavaScript virtual machine implemented by Microsoft and used in Edge browser as well as in later versions of IE.
 
 JScript
 ----------------------------------------
-JScript是由微软开发的脚本语言，是微软对ECMAScript规范的实现，用于IE的早期版本中。
+JScript is a scripting language developed by Microsoft and is an implementation of the ECMAScript specification by Microsoft and is used in early versions of IE.
 
 JerryScript
 ----------------------------------------
-JerryScript是一个适用于嵌入式设备的小型JavaScript引擎，由三星开发并维护。
+JerryScript is a small JavaScript engine for embedded devices developed and maintained by Samsung.

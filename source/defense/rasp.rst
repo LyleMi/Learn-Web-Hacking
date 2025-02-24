@@ -1,18 +1,18 @@
 RASP
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-RASP（Runtime Application Self-Protection）由Gartner在2014年引入，是一种应用层的安全保护技术。
+RASP (Runtime Application Self-Protection) was introduced by Gartner in 2014 and is an application-level security protection technology.
 
-参考链接
+Reference link
 ----------------------------------------
 
-厂商
+Manufacturer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `OpenRASP <https://rasp.baidu.com/>`_
 - `Micro Focus <https://www.microfocus.com/en-us/products/application-defender/features>`_
-- `Prevoty <https://www.prevoty.com/>`_
+- `Fires <https://www.prevoty.com/>` _
 - `waratek <https://www.waratek.com/application-security-platform/>`_
 - `OWASP AppSensor <http://appsensor.org/>`_
 - `Shadowd <https://shadowd.zecure.org/overview/introduction/>`_
@@ -23,5 +23,5 @@ RASP（Runtime Application Self-Protection）由Gartner在2014年引入，是一
 
 Blog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Python RASP 工程化 一次入侵的思考 <https://mp.weixin.qq.com/s/icWaHsC6dzlclxfLhvQjYA>`_
-- `浅谈RASP技术攻防之基础篇 <https://www.freebuf.com/articles/web/197823.html>`_
+- `Python RASP Engineering Thinking of an Invasion <https://mp.weixin.qq.com/s/icWaHsC6dzlclxfLhvQjYA>`_
+- `A brief discussion on the basics of RASP technology offensive and defense <https://www.freebuf.com/articles/web/197823.html>`_

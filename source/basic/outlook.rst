@@ -1,26 +1,26 @@
-网络安全观
+Network security concept
 ========================================
 
-网络安全定义
+Network Security Definition
 ----------------------------------------
-网络安全的一个通用定义指网络信息系统的硬件、软件及其系统中的数据受到保护，不因偶然的或者恶意的破坏、更改、泄露，系统能连续、可靠、正常地运行，服务不中断。网络安全简单的说是在网络环境下能够识别和消除不安全因素的能力。
+A general definition of network security means that the hardware, software and data in the network information system are protected and are not damaged, changed or leaked by accident or maliciously. The system can operate continuously, reliably and normally without interruption of services. Network security is simply the ability to identify and eliminate unsafe factors in a network environment.
 
-网络安全在不同环境和应用中有不同的解释，例如系统运行的安全、系统信息内容的安全、信息通信与传播的安全等。
+Network security has different explanations in different environments and applications, such as the security of system operation, the security of system information content, and the security of information communication and dissemination.
 
-网络安全的基本需求包括可靠性、可用性、保密性、完整性、不可抵赖性、可控性、可审查性、真实性等。其中三个最基本的要素是机密性 (Confidentiality)、完整性 (Integrity)、可用性 (Availability)。
+The basic requirements for network security include reliability, availability, confidentiality, integrity, non-refutability, controllability, censorship, authenticity, etc. The three most basic elements are confidentiality, integrity, and availability.
 
-机密性是不将有用信息泄漏给非授权用户的特性。可以通过信息加密、身份认证、访问控制、安全通信协议等技术实现，信息加密是防止信息非法泄露的最基本手段，主要强调有用信息只被授权对象使用的特征。
+Confidentiality is a feature that does not leak useful information to unauthorized users. It can be achieved through technologies such as information encryption, identity authentication, access control, secure communication protocols, etc. Information encryption is the most basic means to prevent illegal information leakage, and mainly emphasizes the characteristics of useful information being used only by authorized objects.
 
-完整性是指信息在传输、交换、存储和处理过程中，保持信息不被破坏或修改、不丢失和信息未经授权不能改变的特性，也是最基本的安全特征。
+Integrity refers to the characteristics of keeping information from being destroyed or modified, lost, and unauthorized during transmission, exchange, storage and processing of information, and is also the most basic security feature.
 
-可用性指信息资源可被授权实体按要求访问、正常使用或在非正常情况下能恢复使用的特性。在系统运行时正确存取所需信息，当系统遭受意外攻击或破坏时，可以迅速恢复并能投入使用。是衡量网络信息系统面向用户的一种安全性能，以保障为用户提供服务。
+Availability refers to the characteristics in which the information resource can be accessed by an authorized entity as required, used normally, or restored to use under abnormal circumstances. The required information is correctly accessed while the system is running, and can be quickly restored and put into use when the system is subject to accidental attacks or damages. It is a kind of security performance of network information systems for users to ensure the provision of services to users.
 
-网络安全的主体是保护网络上的数据和通信的安全，数据安全性是指软硬件保护措施，用来阻止对数据进行非授权的泄漏、转移、修改和破坏等，通信安全性是通信保护措施，要求在通信中采用保密安全性、传输安全性、辐射安全性等措施。
+The main body of network security is to protect the security of data and communications on the network. Data security refers to software and hardware protection measures to prevent unauthorized leakage, transfer, modification and damage of data. Communication security is a communication protection measure. , it is required to adopt confidentiality security, transmission security, radiation security and other measures in communication.
 
-系统脆弱性
+System fragility
 ----------------------------------------
-信息系统本身是脆弱的，信息系统的硬件资源、通信资源、软件及信息资源等都可能因为可预见或不可预见甚至恶意的原因而可能导致系统受到破坏、更改、泄露和功能失效，从而使系统处于异常状态，甚至崩溃瘫痪。
+The information system itself is fragile. The hardware resources, communication resources, software and information resources of the information system may cause the system to be destroyed, changed, leaked and functionally invalid due to foreseeable or unforeseeable or even malicious reasons, thus causing the system to be damaged, changed, leaked, and invalidated. In an abnormal state, even collapsed and paralyzed.
 
-硬件资源的脆弱性主要表现为物理安全方面的问题，多源于设计，采用软件程序的方法见效不大。
+The vulnerability of hardware resources is mainly manifested in physical security issues, mostly due to design, and the method of using software programs is not very effective.
 
-软件的脆弱性来源于设计和软件工程实施中遗留问题，如设计中的疏忽、内部设计的逻辑混乱，没有遵守信息系统安全原则进行设计等。
+The fragility of software comes from legacy issues in design and software engineering implementation, such as negligence in design, logical confusion in internal design, and failure to comply with information system security principles for design.

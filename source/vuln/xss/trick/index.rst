@@ -1,11 +1,11 @@
-技巧
+Skill
 ================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   httponly
-   cssi
-   gadget
-   rpo
+httponly
+cssi
+gadget
+rpo

@@ -1,52 +1,52 @@
-近源渗透
+Near source permeability
 ========================================
 
-USB攻击
+USB attack
 ----------------------------------------
 
 BadUSB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通过重新编程USB设备的内部微控制器，来执行恶意操作，例如注册为键盘设备，发送特定按键进行恶意操作。
+Perform malicious actions by reprogramming the internal microcontroller of the USB device, such as registering as a keyboard device, sending specific keys for malicious actions.
 
-AutoRUN
+Autorun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-根据主机配置的方式，一些操作系统会自动执行位于USB设备存储器上的预定文件。可以通过这种方式执行恶意软件。
+Depending on the host configuration, some operating systems will automatically execute predetermined files located on the USB device memory. Malware can be executed in this way.
 
 USB Killer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通过特殊的USB设备基于电气等方式来永久销毁设备。
+The device is permanently destroyed by special USB devices based on electrical and other methods.
 
-侧信道
+Side channel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通过改装USB增加一些监听/测信道传输设备。
+Some monitoring/test channel transmission devices are added by modifying USB.
 
-HID攻击
+HID Attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-HID(human interface device)指键盘、鼠标等用于为计算机提供数据输入的人机交互设备。HID攻击指攻击者将特殊的USB设备模拟成为键盘，一旦连接上计算机就执行预定的恶意操作。HID攻击可以基于Android设备、数据线设备等实施。
+HID (human interface device) refers to a human-computer interaction device used to provide data input to a computer, such as a keyboard, a mouse, etc. HID attack refers to an attacker emulating a special USB device into a keyboard and performing a predetermined malicious operation once it is connected to the computer. HID attacks can be implemented based on Android devices, data line devices, etc.
 
-Wi-Fi
+In
 ----------------------------------------
 
-密码爆破
+Password blasting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-基于WPA2的验证方式，Wi-Fi可以通过抓握手包的方式进行线下的密码爆破。
+Based on WPA2 verification method, Wi-Fi can crack offline passwords by grabbing handbags.
 
-信号压制
+Signal suppression
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-可以使用大功率的设备捕获握手包并模仿目标AP，从而实现中间人攻击。
+A high-powered device can be used to capture the handshake packet and mimic the target AP, thereby enabling a man-in-the-middle attack.
 
-门禁
+Access control
 ----------------------------------------
 
-电磁脉冲
+Electromagnetic pulse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-部分电子门禁和电子密码锁的电子系统中集成电路对电磁脉冲比较敏感，可以通过外加电磁脉冲(Electromagnetic Pulse，EMP)的方式破坏设备，来实现打开的效果。
+In some electronic systems with electronic access control and electronic password locks, integrated circuits are more sensitive to electromagnetic pulses, and can destroy the equipment by adding electromagnetic pulses (EMP) to achieve the opening effect.
 
-IC卡
+IC card
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-基于变色龙等设备可以使用模拟、破解、复制IC卡破解门禁。
+Equipment based on chameleons and other devices can use simulation, cracking, and copying IC cards to crack access control.
 
-参考链接
+Reference link
 ----------------------------------------
-- `近源渗透硬件指北 <https://www.secpulse.com/archives/123723.html>`_
-- `红蓝对抗之近源渗透 <https://mp.weixin.qq.com/s/dmh3dDt0BaZYIcWdSTsQcg>`_
+- `Near Source Penetration Hardware Guide <https://www.secpulse.com/archives/123723.html>`_
+- `Near source penetration of red and blue confrontation <https://mp.weixin.qq.com/s/dmh3dDt0BaZYIcWdSTsQcg>`_

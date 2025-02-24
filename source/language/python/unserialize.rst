@@ -1,57 +1,57 @@
-反序列化
+Deserialization
 ========================================
 
 pickle demo
 ----------------------------------------
-Python Pickle在反序列化时会调用 ``__reduce__`` ，可用自定义的 ``__reduce__`` 函数来实现攻击。
+Python Pickle will call ``__reduce__`` when deserialized, and the attack can be implemented using the custom ``__reduce__` function.
 
 .. code-block:: python
 
-    import pickle
-    import pickletools
-    import subprocess
+import pickle
+import pickletools
+import subprocess
 
-    class A(object):
-        a = 1
-        b = 2
-        def __reduce__(self):
-            return (subprocess.Popen, (('cmd.exe',),))
+class A(object):
+a = 1
+b = 2
+def __reduce__(self):
+return (subprocess.Popen, (('cmd.exe',),))
 
-    data = pickle.dumps(A())
-    pickletools.dis(data)
+data = pickle.dumps(A())
+pickletools.dis(data)
 
-对于这种攻击，可以用重载 find_class 来限定范围，`参考 <https://docs.python.org/3/library/pickle.html#restricting-globals>`_
+For this kind of attack, the scope can be defined by overloading find_class, `reference <https://docs.python.org/3/library/pickle.html#restricting-globals>`_
 
 .. code-block:: python
 
-    import builtins
-    import io
-    import pickle
+import builtins
+import io
+import pickle
 
-    safe_builtins = {
-        'range',
-        'complex',
-        'set',
-        'frozenset',
-        'slice',
-    }
+safe_builtins = {
+'range',
+'complex',
+'set',
+'frozenset',
+'slice',
+}
 
-    class RestrictedUnpickler(pickle.Unpickler):
+class RestrictedUnpickler(pickle.Unpickler):
 
-        def find_class(self, module, name):
-            # Only allow safe classes from builtins.
-            if module == "builtins" and name in safe_builtins:
-                return getattr(builtins, name)
-            # Forbid everything else.
-            raise pickle.UnpicklingError("global '%s.%s' is forbidden" %
-                                         (module, name))
+def find_class(self, module, name):
+# Only allow safe classes from builtins.
+if module == "builtins" and name in safe_builtins:
+return getattr(builtins, name)
+# Forbid everything else.
+raise pickle.UnpicklingError("global '%s.%s' is forbidden" %
+(module, name))
 
-    def restricted_loads(s):
-        """Helper function analogous to pickle.loads()."""
-        return RestrictedUnpickler(io.BytesIO(s)).load()
+def restricted_loads(s):
+"""Helper function analogous to pickle.loads()."""
+return RestrictedUnpickler(io.BytesIO(s)).load()
 
-其他序列化库
+Other serialization libraries
 ----------------------------------------
 - PyYAML
-- marshal
+- Marshal
 - shelve

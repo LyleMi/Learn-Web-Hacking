@@ -1,64 +1,64 @@
-原型链
+Prototype chain
 ========================================
 
-显式原型和隐式原型
+Explicit and implicit prototypes
 ----------------------------------------
-JavaScript的原型分为显式原型（explicit prototype property）和隐式原型（implicit prototype link）。
+JavaScript prototypes are divided into explicit prototype property and implicit prototype link.
 
-其中显式原型指prototype，是函数的一个属性，这个属性是一个指针，指向一个对象，显示修改对象的原型的属性，只有函数才有该属性
+The explicit prototype refers to prototype, which is an attribute of the function. This attribute is a pointer, pointing to an object, displaying the properties of the prototype of the modified object. Only the function has this attribute.
 
-隐式原型指JavaScript中任意对象都有的内置属性prototype。在ES5之前没有标准的方法访问这个内置属性，但是大多数浏览器都支持通过 ``__proto__`` 来访问。ES5中有了对于这个内置属性标准的Get方法 ``Object.getPrototypeOf()`` 。
+Implicit prototype refers to the built-in property prototype that any object in JavaScript has. Before ES5 there was no standard way to access this built-in property, but most browsers support access through ``__proto__`. ES5 has a standard Get method for this built-in attribute ``Object.getPrototypeOf()``.
 
-隐式原型指向创建这个对象的函数(constructor)的prototype， ``__proto__`` 指向的是当前对象的原型对象，而prototype指向的，是以当前函数作为构造函数构造出来的对象的原型对象。
+The implicit prototype points to the prototype of the function (constructor) that creates this object. ``__proto__`` points to the prototype object of the current object, and prototype points to the prototype object of the object constructed with the current function as the constructor.
 
-显式原型的作用用来实现基于原型的继承与属性的共享。
-隐式原型的用于构成原型链，同样用于实现基于原型的继承。举个例子，当我们访问obj这个对象中的x属性时，如果在obj中找不到，那么就会沿着 ``__proto__`` 依次查找。
+The function of explicit prototypes is used to realize prototype-based inheritance and sharing of attributes.
+Implicit prototypes are used to form prototype chains, and are also used to implement prototype-based inheritance. For example, when we access the x attribute in the object obj, if we cannot find it in obj, we will search in sequence along ``__proto__`.
 
 ::
 
-  Note: Object.prototype 这个对象是个例外，它的__proto__值为null
+Note: Object.prototype This object is an exception, its __proto__ value is null
 
-new 的过程
+The process of new
 ----------------------------------------
 
 .. code-block:: javascript
 
-  var Person = function(){};
-  var p = new Person();
+var Person = function(){};
+was p = new person ();
 
-new的过程拆分成以下三步：
-- ``var p={};`` 初始化一个对象p
+The new process is divided into the following three steps:
+- ``var p={};`` Initialize an object p
 - ``p.__proto__ = Person.prototype;``
-- ``Person.call(p);`` 构造p，也可以称之为初始化p
+- ``Person.call(p);`` Construct p, which can also be called initialization p
 
-关键在于第二步，我们来证明一下：
+The key is the second step, let’s prove it:
 
 .. code-block:: javascript
 
-  var Person = function(){};
-  var p = new Person();
-  alert(p.__proto__ === Person.prototype);
+var Person = function(){};
+was p = new person ();
+alert(p.__proto__ === Person.prototype);
 
-这段代码会返回true。说明我们步骤2是正确的。
+This code will return true. Instructions that our step 2 is correct.
 
-示例
+Example
 ----------------------------------------
 
 .. code-block:: javascript
 
-  var Person = function(){};
-  Person.prototype.sayName = function() {
-      alert("My Name is Jacky");
-  };
+var Person = function(){};
+Person.prototype.sayName = function() {
+alert("My Name is Jacky");
+};
 
-  Person.prototype.age = 27;
-  var p = new Person();
-  p.sayName();
+Person.prototype.age = 27;
+was p = new person ();
+p.sayName();
 
-p是一个引用指向Person的对象。我们在Person的原型上定义了一个sayName方法和age属性，当我们执行p.age时，会先在this的内部查找（也就是构造函数内部），如果没有找到然后再沿着原型链向上追溯。
+p is an object that refers to Person. We define a sayName method and age property on the Person prototype. When we execute p.age, we will first look up inside this (that is, inside the constructor), and if it is not found, then trace up along the prototype chain.
 
-这里的向上追溯是怎么向上的呢？这里就要使用 ``__proto__`` 属性来链接到原型（也就是Person.prototype）进行查找。最终在原型上找到了age属性。
+How does the upward traceability go upward here? Here you need to use the ``__proto__`` attribute to link to the prototype (that is, Person.prototype) for searching. Finally, the age attribute was found on the prototype.
 
-原型链污染
+Prototype chain pollution
 ----------------------------------------
-如前文提到的，JavaScript是动态继承，通过 ``__proto__`` 修改自身对象时会影响到有相同原型的对象。因此当键值对是用户可控的情况下，就可能出现原型链污染。
+As mentioned above, JavaScript is dynamic inheritance. When modifying its own object through ``__proto__`, it will affect objects with the same prototype. Therefore, when the key-value pair is user-controlled, prototype chain pollution may occur.

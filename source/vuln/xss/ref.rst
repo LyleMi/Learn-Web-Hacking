@@ -1,4 +1,4 @@
-参考链接
+Reference link
 ========================================
 
 wiki
@@ -21,13 +21,13 @@ Challenges
 CSS
 ----------------------------------------
 - `rpo <http://www.thespanner.co.uk/2014/03/21/rpo/>`_
-- `rpo攻击初探 <http://www.zjicmisa.org/index.php/archives/127/>`_
+- `Preliminary Exploration of rpo attack <http://www.zjicmisa.org/index.php/archives/127/>`_
 - `Reading Data via CSS <https://curesec.com/blog/article/blog/Reading-Data-via-CSS-Injection-180.html>`_
 - `css based attack abusing unicode range <http://mksben.l0.cm/2015/10/css-based-attack-abusing-unicode-range.html>`_
 - `css injection <https://speakerdeck.com/lmt_swallow/css-injection-plus-plus-ji-cun-shou-fa-falsegai-guan-todui-ce>`_
 - `css timing attack <https://blog.sheddow.xyz/css-timing-attack/>`_
 
-同源策略
+Same Origin Policy
 ----------------------------------------
 - `Same origin policy <https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy>`_
 - `cors security guide <https://www.bedefended.com/papers/cors-security-guide>`_
@@ -41,13 +41,13 @@ bypass
 - `bypassing csp using polyglot jpegs <https://portswigger.net/blog/bypassing-csp-using-polyglot-jpegs>`_
 - `bypass xss filters using javascript global variables <https://www.secjuice.com/bypass-xss-filters-using-javascript-global-variables/>`_
 
-持久化
+Endurance
 ----------------------------------------
-- `变种XSS 持久控制 by tig3r <http://drops.wooyun.org/web/10798>`_
+- `Variety XSS persistence control by tig3r <http://drops.wooyun.org/web/10798>`_
 - `Using Appcache and ServiceWorker for Evil <https://sakurity.com/blog/2015/08/13/middlekit.html>`_
 
 Tricks
 ----------------------------------------
-- `Service Worker 安全探索 <https://github.com/etherdream/sw-sec>`_
-- `前端黑魔法 <https://github.com/EtherDream/web-frontend-magic>`_
+- `Service Worker Security Exploration <https://github.com/etherdream/sw-sec>`_
+- `Backend Black Magic <https://github.com/EtherDream/web-frontend-magic>`_
 - `Unicode XSS via Combining Characters <https://gist.github.com/paj28/86c7b8f37371d89c9a36ed0280fcf450>`_

@@ -1,14 +1,14 @@
-目录穿越
+Directory travel
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-目录穿越（也被称为目录遍历/directory traversal/path traversal）是通过使用 ``../`` 等目录控制序列或者文件的绝对路径来访问存储在文件系统上的任意文件和目录，特别是应用程序源代码、配置文件、重要的系统文件等。
+Directory traversal (also known as directory traversal/path traversal) is to access any files and directories stored on the file system by using directory control sequences such as ``../`` or the absolute path of the file, especially Application source code, configuration files, important system files, etc.
 
-攻击载荷
+Attack payload
 ----------------------------------------
 
-URL参数
+URL parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``../``
 - ``..\``
@@ -20,25 +20,25 @@ Nginx Off by Slash
 
 UNC Bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``\\localhost\c$\windows\win.ini``
+- `` \ localhost
 
-过滤绕过
+Filter bypass
 ----------------------------------------
-- 单次替换
-    - ``...//``
-- URL编码
-- 16位Unicode编码
-    - ``\u002e``
-- 超长UTF-8编码
-    - ``\%e0%40%ae``
+- Single replacement
+- ``...//``
+- URL encoding
+- 16-bit Unicode encoding
+- ``\u002e``
+- Extra long UTF-8 encoding
+- `` `` `e0% 40% no
 
-防御
+defense
 ----------------------------------------
-在进行文件操作相关的API前，应该对用户输入做过滤。较强的规则下可以使用白名单，仅允许纯字母或数字字符等。
+Before performing file-related APIs, user input should be filtered. Under stronger rules, whitelists can be used, only pure letters or numeric characters are allowed.
 
-若规则允许的字符较多，最好使用当前操作系统路径规范化函数规范化路径后，进行过滤，最后再进行相关调用。
+If the rules allow more characters, it is best to use the current operating system path normalize the function and then filter it, and finally make related calls.
 
-参考链接
+Reference link
 ----------------------------------------
 - `Directory traversal by portswigger <https://portswigger.net/web-security/file-path-traversal>`_
 - `Path Traversal by OWASP <https://www.owasp.org/index.php/Path_Traversal>`_

@@ -1,10 +1,10 @@
-代码混淆
+Code obfuscation
 ================================
 
-常见混淆方式
+Common confusion methods
 --------------------------------
-- 基于AST变换
-- 编译为pyc文件
+- Based on AST transformation
+- Compile as pyc file
 - Pyinstaller
 - PyArmor
-- 通过 AES 加密为 pye 文件
+- Encrypted as pye files via AES

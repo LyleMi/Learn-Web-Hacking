@@ -1,20 +1,20 @@
-爆破工具
+Blasting tools
 ================================
 
 Hydra
 --------------------------------
-- ``-R`` 继续从上一次进度破解
-- ``-S`` 使用SSL链接
-- ``-s<PORT>`` 指定端口
-- ``-l<LOGIN>`` 指定破解的用户
-- ``-L<FILE>`` 指定用户名字典
-- ``-p<PASS>`` 指定密码破解
-- ``-P<FILE>`` 指定密码字典
-- ``-e<ns>`` 可选选项，n：空密码试探，s：使用指定用户和密码试探
-- ``-C<FILE>`` 使用冒号分割格式，例如"user:pwd"来代替-L/-P参数
-- ``-M<FILE>`` 指定目标列表文件一行一条
-- ``-o<FILE>`` 指定结果输出文件
-- ``-f`` 在使用-M参数以后，找到第一对登录名或者密码的时候中止破解
-- ``-t<TASKS>`` 同时运行的线程数，默认为16
-- ``-w<TIME>`` 设置最大超时的时间，单位秒，默认是30s
-- ``-vV`` 显示详细过程
+- ``-R`` continue to crack from the last progress
+- ``-S`` link with SSL
+- ``-s<PORT>`` Specify the port
+- ``-l<LOGIN>`` Specify the cracked user
+- ``-L<FILE>`` Specify user name dictionary
+- ``-p<PASS>`` Specify password cracking
+- ``-P<FILE>`` Specify password dictionary
+- ``-e<ns>`` optional option, n: empty password test, s: use the specified user and password test
+- ``-C<FILE>`` Use colon split format, such as "user:pwd" instead of the -L/-P parameter
+- ``-M<FILE>`` Specify one line of target list file
+- ``-o<FILE>`` Specify the result output file
+- ``-f`` After using the -M parameter, the cracking is aborted when the first pair of login names or passwords is found.
+- ``-t<TASKS>`` The number of threads running simultaneously, default is 16
+- ``-w<TIME>`` Set the maximum timeout, unit of seconds, the default is 30s
+- ``-vV`` display detailed process

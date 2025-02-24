@@ -1,10 +1,10 @@
-虚拟化技术与容器技术
+Virtualization technology and container technology
 ----------------------------------------
 
-传统虚拟化技术
+Traditional virtualization technology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-传统虚拟化技术通过添加hypervisor层，虚拟出网卡，内存，CPU等虚拟硬件，再在其上建立客户机，每个客户机都有自己的系统内核。传统虚拟化技术以虚拟机为管理单元，各虚拟机拥有独立的操作系统内核，不共用宿主机的软件系统资源，因此具有良好的隔离性，适用于云计算环境中的多租户场景。
+Traditional virtualization technology adds hypervisor layer, virtual network card, memory, CPU and other virtual hardware, and then builds clients on it. Each client has its own system core. Traditional virtualization technology uses virtual machines as management units. Each virtual machine has independent operating system cores and does not share the host's software system resources. Therefore, it has good isolation and is suitable for multi-tenant scenarios in cloud computing environments.
 
-容器技术
+Container technology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-容器技术可以看作一种轻量级的虚拟化方式，容器技术在操作系统层进行虚拟化，可在宿主机内核上运行多个虚拟化环境。相比于传统的应用测试与部署，容器的部署无需预先考虑应用的运行环境兼容性问题；相比于传统虚拟机，容器无需独立的操作系统内核就可在宿主机中运行，实现了更高的运行效率与资源利用率。
+Container technology can be regarded as a lightweight virtualization method. Container technology is virtualized at the operating system layer and can run multiple virtualization environments on the host kernel. Compared with traditional application testing and deployment, container deployment does not require pre-consideration of application operational environment compatibility issues; compared with traditional virtual machines, containers can run in the host without an independent operating system kernel, achieving higher operational efficiency and resource utilization rate.

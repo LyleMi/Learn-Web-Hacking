@@ -1,4 +1,4 @@
-部分运行选项与说明
+Partial run options and instructions
 ========================================
 
-- ``-Xverify:none`` 关闭类加载时的验证措施
+- ``-Xverify:none`` Verification measures when closing class loading

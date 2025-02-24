@@ -1,19 +1,19 @@
-镜像
+Mirror
 ========================================
 
-基本概念
+Basic concepts
 ----------------------------------------
-Docker 镜像可以看作是一个特殊的文件系统，用于提供容器运行时所需的文件，同时镜像还包含了一些为运行时准备的一些信息（环境变量、用户等）。
+The Docker image can be regarded as a special file system, which provides the files required for the container runtime. At the same time, the image also contains some information prepared for the runtime (environment variables, users, etc.).
 
-在构建之后镜像不会被改变，即是说镜像中不会包含动态的数据。
+The image will not be changed after construction, that is, the image will not contain dynamic data.
 
-Windows 镜像
+Windows Mirror
 ----------------------------------------
-由于 Windows 并不直接开放 syscall ，所有的 Windows 程序都必须通过 sys dll 与内核沟通，这就导致 Windows 镜像并不能直接通过 scratch 来构建，只能基于微软提供的几个基础镜像来构建。
+Since Windows does not directly open syscall, all Windows programs must communicate with the kernel through sys dll, which leads to Windows images that cannot be built directly through scratch, but can only be built based on several basic images provided by Microsoft.
 
-镜像包括：
+Mirroring includes:
 
-- `windows servercore <https://hub.docker.com/_/microsoft-windows-servercore>`_ 功能最完整，包含传统的 .net framework 环境
-- `windows nanoserver <https://hub.docker.com/_/microsoft-windows-nanoserver>`_ 包含 .net core 运行环境
-- `windows <https://hub.docker.com/_/microsoft-windows>`_ 提供完整的 windows server api，正在被 windows server 替代
-- `windows server <https://hub.docker.com/_/microsoft-windows-server/>`_ 提供完整的 windows server api
+- `windows servercore <https://hub.docker.com/_/microsoft-windows-servercore>`_ has the most complete functions and includes the traditional .net framework environment
+- `windowsnanoserver <https://hub.docker.com/_/microsoft-windows-nanoserver>`_ contains the .net core running environment
+- `windows <https://hub.docker.com/_/microsoft-windows>`_ Provides the complete windows server api, which is being replaced by windows server
+- `windows server <https://hub.docker.com/_/microsoft-windows-server//microsoft-windows-server//>`_ Provides the complete windows server api

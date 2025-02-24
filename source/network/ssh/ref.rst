@@ -1,4 +1,4 @@
-参考链接
+Reference link
 ========================================
 
 RFC
@@ -9,10 +9,10 @@ RFC
 - `RFC 4254 The Secure Shell (SSH) Connection Protocol <https://www.rfc-editor.org/rfc/rfc4254>`_
 - `RFC 8308 Extension Negotiation in the Secure Shell (SSH) Protocol <https://www.rfc-editor.org/rfc/rfc8308>`_
 
-漏洞相关
+Vulnerability related
 ----------------------------------------
 - `CVE-2016-20012 - Publickey Information leak - Only allow SSH_MSG_USERAUTH_REQUEST with signature <https://github.com/openssh/openssh-portable/pull/270>`_
 
-论文
+paper
 ----------------------------------------
 - Roy L, Lyakhov S, Jang Y, et al. Practical Privacy-Preserving Authentication for SSH[J]. Cryptology ePrint Archive, 2022.

@@ -1,16 +1,16 @@
-SQL注入
+SQL Injection
 ================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   classify
-   fuzz
-   privilege
-   dbident
-   bypass
-   tricks
-   cheatsheet/index
-   precompile
-   ref
+classify
+fuzz
+privilege
+dbident
+bypass
+tricks
+cheatsheet/index
+precompasses
+ref

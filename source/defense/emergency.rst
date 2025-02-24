@@ -1,200 +1,200 @@
-应急响应
+Emergency response
 ========================================
 
-响应流程
+Response Process
 ----------------------------------------
 
-事件发生
+An incident occurred
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-运维监控人员、客服审核人员等发现问题，向上通报。
+If the operation and maintenance monitoring personnel, customer service audit personnel find problems, they will inform them to the upper level.
 
-事件确认
+Event confirmation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-收集事件信息、分析网络活动相关程序，日志和数据，判断事件的严重性，评估出问题的严重等级，是否向上进行汇报等。
+Collect event information, analyze network activity-related procedures, logs and data, judge the severity of the event, evaluate the severity of the problem, and whether to report it upwards.
 
-事件响应
+Incident Response
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-各部门通力合作，处理安全问题，具体解决问题，避免存在漏洞未修补、后门未清除等残留问题。
+All departments work together to deal with security issues and solve problems in detail to avoid residual problems such as unpatched vulnerabilities and uncleared backdoors.
 
-事件关闭
+Event Close
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-处理完事件之后，需要关闭事件，并写出安全应急处理分析报告，完成整个应急过程。
+After handling the incident, it is necessary to close the incident and write a safety emergency response analysis report to complete the entire emergency process.
 
-事件分类
+Event classification
 ----------------------------------------
-- 病毒、木马、蠕虫事件
-- Web服务器入侵事件
-- 第三方服务入侵事件
-- 系统入侵事件
-    - 利用Windows漏洞攻击操作系统
-- 网络攻击事件
-    - DDoS / ARP欺骗 / DNS劫持等
+- Virus, Trojan, Worm Events
+- Web server intrusion event
+- Third-party service intrusion incident
+- System intrusion incident
+- Exploiting the operating system with Windows vulnerabilities
+- Cyber Attack Events
+- DDoS/ARP spoofing/DNS hijacking, etc.
 
-分析方向
-----------------------------------------
-
-文件分析
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 基于变化的分析
-    - 日期
-    - 文件增改
-    - 最近使用文件 
-- 源码分析
-    - 检查源码改动
-    - 查杀WebShell等后门
-- 系统日志分析
-- 应用日志分析
-    - 分析User-Agent，e.g. ``awvs / burpsuite / w3af / nessus / openvas``
-    - 对每种攻击进行关键字匹配，e.g. ``select/alert/eval``
-    - 异常请求，连续的404或者500
-- ``md5sum`` 检查常用命令二进制文件的哈希，检查是否被植入rootkit
-
-进程分析
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 符合以下特征的进程
-    - CPU或内存资源占用长时间过高
-    - 没有签名验证信息
-    - 没有描述信息的进程
-    - 进程的路径不合法
-- dump系统内存进行分析
-- 正在运行的进程
-- 正在运行的服务
-- 父进程和子进程
-- 后台可执行文件的完整哈希
-- 已安装的应用程序
-- 运行着密钥或其他正在自动运行的持久化程序
-- 计划任务
-
-身份信息分析
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 本地以及域账号用户
-- 异常的身份验证
-- 非标准格式的用户名
-
-日志分析
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 杀软检测记录
-
-网络分析
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 防火墙配置
-- DNS配置
-- 路由配置
-- 监听端口和相关服务
-- 最近建立的网络连接
-- RDP / VPN / SSH 等会话
-
-配置分析
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 查看Linux SE等配置
-- 查看环境变量
-- 查看配套的注册表信息检索，SAM文件
-- 内核模块
-
-Linux应急响应
+Analysis direction
 ----------------------------------------
 
-文件分析
+File Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 最近使用文件 
-    - ``find / -ctime -2``
-    - ``C:\Documents and Settings\Administrator\Recent``
-    - ``C:\Documents and Settings\Default User\Recent``
-    - ``%UserProfile%\Recent``
-- 系统日志分析
-    - /var/log/
-- 重点分析位置
-    - ``/var/log/wtmp`` 登录进入，退出，数据交换、关机和重启纪录
-    - ``/var/run/utmp`` 有关当前登录用户的信息记录
-    - ``/var/log/lastlog`` 文件记录用户最后登录的信息，可用 lastlog 命令来查看。
-    - ``/var/log/secure`` 记录登入系统存取数据的文件，例如 pop3/ssh/telnet/ftp 等都会被记录。
-    - ``/var/log/cron`` 与定时任务相关的日志信息
-    - ``/var/log/message`` 系统启动后的信息和错误日志
-    - ``/var/log/apache2/access.log`` apache access log
-    - ``/etc/passwd`` 用户列表
-    - ``/etc/init.d/`` 开机启动项
-    - ``/etc/cron*`` 定时任务
-    - ``/tmp`` 临时目录
-    - ``~/.ssh``
+- Change-based analysis
+- date
+- File addition and modification
+- Recent files
+- Source code analysis
+- Check source code changes
+- Check and kill the backdoors such as WebShell
+- System log analysis
+- Application log analysis
+- 分 truck-Agent，e.g. ``awvs / burps ie / w3af / nessus / open-vas``
+- Keyword matching for each attack, e.g. ``select/alert/eval``
+-Exception request, continuous 404 or 500
+- ``md5sum`` Check the hash of common command binary files and check whether they are implanted in rootkit
 
-用户分析
+Process Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``/etc/shadow`` 密码登陆相关信息
-- ``uptime`` 查看用户登陆时间
-- ``/etc/sudoers`` sudo用户列表
+- Processes that meet the following characteristics
+- CPU or memory resource occupies too much for a long time
+- No signature verification information
+- Processes without description of information
+- The path of the process is illegal
+- dump system memory for analysis
+- Running process
+- Running services
+- Parent and child processes
+- Full hash of background executable
+- Installed applications
+- Running a key or other persistent program that is running automatically
+- Plan tasks
 
-进程分析
+Identity information analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``netstat -ano`` 查看是否打开了可疑端口
-- ``w`` 命令，查看用户及其进程
-- 分析开机自启程序/脚本
-    - ``/etc/init.d``
-    - ``~/.bashrc``
-- 查看计划或定时任务
-    - ``crontab -l``
-- ``netstat -an`` / ``lsof`` 查看进程端口占用
+- Local and domain account users
+- Exceptional authentication
+- Usernames in non-standard formats
 
-Windows应急响应
+Log Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Soft-killing detection record
+
+Network Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Firewall configuration
+- DNS configuration
+- Routing configuration
+- Listen to ports and related services
+- Recent network connections
+- RDP/VPN/SSH and other sessions
+
+Configuration Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Check Linux SE and other configurations
+- View environment variables
+- View the accompanying registry information retrieval, SAM file
+- Kernel Module
+
+Linux Emergency Response
 ----------------------------------------
 
-文件分析
+File Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 最近使用文件 
-    - ``C:\Documents and Settings\Administrator\Recent``
-    - ``C:\Documents and Settings\Default User\Recent``
-    - ``%UserProfile%\Recent``
-- 系统日志分析
-    - 事件查看器 ``eventvwr.msc``
+- Recent files
+- ``find / -ctime -2``
+- ``C:\Documents and Settings\Administrator\Recent``
+- ``C:\Documents and Settings\Default User\Recent``
+- ``%UserProfile%\Recent``
+- System log analysis
+-/was/log/
+- Focused analysis location
+- ``/var/log/wtmp`` Log in, log out, data exchange, shutdown and restart records
+- ``/var/run/utmp`` Information record about the currently logged-in user
+- ``/var/log/lastlog`` file records the user's last login information, and can be viewed by the lastlog command.
+- ``/var/log/secure`` Files that log in to the system to access data, such as pop3/ssh/telnet/ftp, etc., will be recorded.
+- ``/var/log/cron`` Log information related to timing tasks
+- ``/var/log/message`` information and error log after system startup
+- ``/var/log/apache2/access.log`` apache access log
+- ``/etc/passwd`` User list
+- ``/etc/init.d/`` Startup item
+- ``/etc/cron*`` timed tasks
+- ``/tmp`` Temporary Directory
+- ``~/.ssh``
 
-用户分析
+User Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 查看是否有新增用户
-- 查看服务器是否有弱口令
-- 查看管理员对应键值
-- ``lusrmgr.msc`` 查看账户变化
-- ``net user`` 列出当前登录账户
-- ``wmic UserAccount get`` 列出当前系统所有账户
+- ``/etc/shadow`` Password login related information
+- ``uptime`` View user login time
+- ``/etc/sudoers`` sudo user list
 
-进程分析
+Process Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``netstat -ano`` 查看是否打开了可疑端口
-- ``tasklist`` 查看是否有可疑进程
-- 分析开机自启程序
-    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run``
-    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce``
-    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices``
-    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce``
-    - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run``
-    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run``
-    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce``
-    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices``
-    - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce``
-    - ``(ProfilePath)\Start Menu\Programs\Startup`` 启动项
-    - ``msconfig`` 启动选项卡
-    - ``gpedit.msc`` 组策略编辑器
-- 查看计划或定时任务
-    - ``C:\Windows\System32\Tasks\``
-    - ``C:\Windows\SysWOW64\Tasks\``
-    - ``C:\Windows\tasks\``
-    - ``schtasks``
-    - ``taskschd.msc``
-    - ``compmgmt.msc``
-- 查看启动服务
-    - ``services.msc``
+- ``netstat -ano`` Check whether the suspicious port is opened
+- ``w`` command to view users and their processes
+- Analyze the startup program/script
+- ``/etc/init.d``
+- ``~/.bashrc``
+- View scheduled or scheduled tasks
+- `` CRONTAB -
+- ``netstat -an`` / ``lsof`` View process port occupation
 
-日志分析
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 事件查看
-    - ``eventvwr.msc``
-
-其他
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 查看系统环境变量
-
-参考链接
+Windows Emergency Response
 ----------------------------------------
-- `黑客入侵应急分析手工排查 <https://xz.aliyun.com/t/1140>`_
-- `取证入门 web篇 <http://www.freebuf.com/column/147929.html>`_
-- `Windows 系统安全事件应急响应  <https://xz.aliyun.com/t/2524>`_
-- `企业安全应急响应 <https://xz.aliyun.com/t/1632>`_
+
+File Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Recent files
+- ``C:\Documents and Settings\Administrator\Recent``
+- ``C:\Documents and Settings\Default User\Recent``
+- ``%UserProfile%\Recent``
+- System log analysis
+- Event Viewer ``eventvwr.msc``
+
+User Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Check if there are new users
+- Check whether the server has weak passwords
+- View the administrator's corresponding key values
+- ``lusrmgr.msc`` View account changes
+- ``net user`` List current logged in account
+- ``wmic UserAccount get`` List all accounts in the current system
+
+Process Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- ``netstat -ano`` Check whether the suspicious port is opened
+- ``tasklist`` Check if there are suspicious processes
+- Analysis of the startup program
+- ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run``
+- ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce``
+- `HKEY_LOCAL_MACHINE \ software \ microsoft \ windows \ Currentversion \ runservates`
+- `` Hkey_local_machine \ software \ microsoft \ windows \ Currentversion \ Runserics Sit
+- ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run``
+- ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run``
+- ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce``
+- ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices``
+- ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce``
+- ``(ProfilePath)\Start Menu\Programs\Startup`` Startup item
+- ``msconfig`` Startup Tab
+- ``gpedit.msc`` Group Policy Editor
+- View scheduled or scheduled tasks
+- ``C:\Windows\System32\Tasks\``
+- ``C:\Windows\SysWOW64\Tasks\``
+- ``C:\Windows	asks\``
+- ``schtasks``
+- ``taskschd.msc``
+- ``compmgmt.msc``
+- View Startup Service
+- ``services.msc``
+
+Log Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Event View
+- ``eventvwr.msc``
+
+other
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- View system environment variables
+
+Reference link
+----------------------------------------
+- `Hacking intrusion emergency analysis manual investigation <https://xz.aliyun.com/t/1140>`_
+- `Beginner of evidence collection web article <http://www.freebuf.com/column/147929.html>`_
+- `Windows System Security Incident Emergency Response <https://xz.aliyun.com/t/2524>`_
+- `Enterprise Security Emergency Response <https://xz.aliyun.com/t/1632>`_
 - `Technical Approaches to Uncovering and Remediating Malicious Activity <https://us-cert.cisa.gov/ncas/alerts/aa20-245a>`_

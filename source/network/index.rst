@@ -1,9 +1,9 @@
-计算机网络与协议
+Computer network and protocol
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    basic
    udp

@@ -1,73 +1,73 @@
-持久化
+Endurance
 ========================================
 
-隐藏文件
+Hide files
 ----------------------------------------
-- 创建系统隐藏文件
-    - ``attrib +s +a +r +h filename`` / ``attrib +s +h filename``
-- 利用NTFS ADS (Alternate　Data　Streams) 创建隐藏文件
-- 利用Windows保留字
-    - ``aux|prn|con|nul|com1|com2|com3|com4|com5|com6|com7|com8|com9|lpt1|lpt2|lpt3|lpt4|lpt5|lpt6|lpt7|lpt8|lpt9``
+- Create system hidden files
+- ``attrib +s +a +r +h filename`` / ``attrib +s +h filename``
+- Create hidden files with NTFS ADS (Alternate Data Streams)
+- Retain words with Windows
+- ``aux|prn|con|nul|com1|com2|com3|com4|com5|com6|com7|com8|com9|lpt1|lpt2|lpt3|lpt4|lpt5|lpt6|lpt7|lpt8|lpt9``
 
-后门
+back door
 ----------------------------------------
 
 sethc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-``sethc.exe`` 是 Windows系统在用户按下五次shift后调用的粘滞键处理程序，当有写文件但是没有执行权限时，可以通过替换 ``sethc.exe`` 的方式留下后门，在密码输入页面输入五次shift即可获得权限。
+``sethc.exe`` is a sticky key handler called by the Windows system after the user presses shift five times. When there is a write file but no execution permission, you can leave it by replacing ``sethc.exe`` Backdoor, enter shift five times on the password input page to obtain permissions.
 
-映像劫持
+Image Hijacking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在高版本的Windows中，替换程序是受到系统保护的，需要使用其他的技巧来实现替换。
+In higher versions of Windows, replacement programs are system-protected and other techniques are required to implement replacement.
 
-具体操作为在注册表的 ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Option`` 下添加项 ``sethc.exe`` ，然后在 ``sethc.exe`` 这个项中添加 ``debugger`` 键，键值为恶意程序的路径。
+The specific operation is to add the item ``sethc.exe`` under ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Option``, and then add it to the ``sethc.exe`` item ``debugger`` key, the key value is the path to the malicious program.
 
-定时任务
+Timing tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Windows下有 ``schtasks`` 和 ``at`` 两种计划任务机制。 其中 ``at`` 在较高版本的Windows中已经弃用。
+There are two types of task planning mechanisms under Windows: ``schtasks`` and ``at``. Among them, ``at` is already deprecated in higher versions of Windows.
 
-设置命令为 ``schtasks /create /tn "TEST_OnLogon" /sc onlogon /tr "cmd.exe /c calc.exe"`` 、 ``schtasks /create /tn "TEST_OnStartup" /sc onstart /ru system /tr "cmd.exe /c calc.exe"`` 。删除命令为 ``schtasks /delete /tn "TEST_OnLogon" /f`` 。
+Set the command to ``schtasks /create /tn "TEST_OnLogon" /sc onlogon /tr "cmd.exe /c calc.exe"``, ``schtasks /create /tn "TEST_OnStartup" /sc onstart /ru system /tr " cmd.exe /c calc.exe"``` . The delete command is ``schtasks /delete /tn "TEST_OnLogon" /f`` .
 
-登录脚本
+Login script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Windows可以在用户登录前执行脚本，使用 ``HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` 设置。
+Windows can execute scripts before the user logs in, using the ``HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` setting.
 
-也可在 ``HKCU\Environment\`` 路径下设置 ``UserInitMprLogonScript`` 来实现。
+You can also set ``UserInitMprLogonScript`` in the ``HKCU\Environment\`` path.
 
-屏幕保护程序
+screensaver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Windows可以自定义屏幕保护程序，使用 ``HKEY_CURRENT_USER\Control Panel\Desktop`` 设置。
+Windows can customize screen savers and use the ``HKEY_CURRENT_USER\Control Panel\Desktop`` setting.
 
-隐藏用户
+Hide users
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Windows可以使用在用户名后加入 ``$`` 来创建隐藏用户，这种帐户可在一定条件下隐藏，但是仍可以通过控制面板查看。
+Windows can create hidden users by adding ``$`` after the username. This kind of account can be hidden under certain conditions, but it can still be viewed through the control panel.
 
-在创建隐藏用户的基础上，可以修改注册表的方式创建影子用户，这种方式创建的用户只能通过注册表查看。
+On the basis of creating hidden users, you can modify the registry to create shadow users. Users created in this way can only be viewed through the registry.
 
 CLR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CLR (Common Language Runtime Compilation) 公共语言运行时，是微软为.NET产品构建的运行环境，可以粗略地理解为.NET虚拟机。
+CLR (Common Language Runtime Compilation) The common language runtime is the running environment built by Microsoft for .NET products, and can be roughly understood as a .NET virtual machine.
 
-.NET程序的运行离不开CLR，因此可以通过劫持CLR的方式实现后门。
+The operation of .NET programs cannot be separated from CLR, so the backdoor can be realized by hijacking CLR.
 
-Winlogon Helper DLL后门
+Winlogon Helper DLL backdoor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Winlogon是一个Windows组件，用来处理各种活动，如登录、注销、身份验证期间加载用户配置文件、关闭、锁定屏幕等。这种行为由注册表管理，该注册表定义在Windows登录期间启动哪些进程。所以可以依靠这个注册表来进行权限维持。
+Winlogon is a Windows component used to handle various activities such as login, logout, loading user profiles during authentication, closing, locking screens, etc. This behavior is managed by the registry, which defines which processes are started during Windows login. Therefore, you can rely on this registry to maintain permissions.
 
-注册表位置如下：
+The registry location is as follows:
 
-- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell`` 用于执行exe程序
-- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` 用于执行exe程序
-- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify`` 用于执行dll文件
+- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell`` for executing exe programs
+- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` for exe program
+- ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify`` for executing dll files
 
-自启动
+Self-start
 ----------------------------------------
 
-基于注册表的自启动
+Registry-based self-start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通过在注册表中写入相应的键值可以实现程序的开机自启动，主要是 ``Run`` 和 ``RunOnce`` ，其中RunOnce和Run区别在于RunOnce的键值只作用一次，执行完毕后会自动删除。
+By writing the corresponding key value in the registry, the program can be started automatically, mainly ``Run`` and ``RunOnce``. The difference between RunOnce and Run is that the key value of RunOnce only works once, and after execution, it is completed. It will be deleted automatically.
 
-注册表如下：
+The registry is as follows:
 
 - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run``
 - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce``
@@ -75,34 +75,34 @@ Winlogon是一个Windows组件，用来处理各种活动，如登录、注销�
 - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce``
 - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnceEx``
 
-基于策略的自启动注册表设置如下：
+The policy-based self-start registry settings are as follows:
 
 - ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run``
 - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run``
 
-设置启动文件夹注册表位置如下：
+Set the boot folder registry location as follows:
 
 - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders``
 - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders``
 - ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders``
 - ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders``
 
-设置服务启动项注册表位置如下：
+Set the service startup item registry location as follows:
 
-- ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce``
+- `` Hkey_local_machine \ software \ microsoft \ windows \ Currentversion \ Runserics Sit
 - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce``
-- ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices``
+- `HKEY_LOCAL_MACHINE \ software \ microsoft \ windows \ Currentversion \ runservates`
 - ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices``
 
-用户自启动位置 ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`` 、 ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell`` ，其中 ``Userinit`` 键允许指定用逗号分隔的多个程序。
+User-boot locations ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit``, ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell``, where the ``Userinit`` key allows Specifies multiple programs separated by commas.
 
-如果用户启动了屏幕保护程序，也可以通过屏幕保护程序来启动后面，相关注册表键值为：
+If the user starts the screen saver, you can also start the following through the screen saver. The relevant registry key values are:
 
 - ``HKEY_CURRENT_USER\Control Panel\Desktop\ScreenSaveActive``
 - ``HKEY_CURRENT_USER\Control Panel\Desktop\ScreenSaverIsSecure``
 - ``HKEY_CURRENT_USER\Control Panel\Desktop\ScreenSaveTimeOut``
 - ``HKEY_CURRENT_USER\Control Panel\Desktop\SCRNSAVE.EXE``
 
-基于特定目录的自启动
+Self-start based on specific directories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-自启动目录， ``C:\Users\Username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`` 目录对特定用户生效， ``C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`` 对所有用户生效。在NT6以前，两个目录为 ``C:\Documents and Settings\Username\Start Menu\Programs\StartUp`` / ``C:\Documents and Settings\All Users\Start Menu\Programs\StartUp`` 。
+The self-start directory, the ``C:\Users\Username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`` directory is effective for specific users, the ``C:\ProgramData\Microsoft\Windows\Start Menu\Programs \StartUp`` is effective for all users. Before NT6, the two directories were ``C:\Documents and Settings\Username\Start Menu\Programs\StartUp`` / ``C:\Documents and Settings\All Users\Start Menu\Programs\StartUp``.

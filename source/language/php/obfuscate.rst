@@ -1,6 +1,6 @@
-代码混淆
+Code obfuscation
 ========================================
 
-PHP代码混淆有多种方案，包括加密文件、混淆、基于虚拟机加密、基于opcode加密、基于扩展加密等。
+There are many solutions for PHP code obfuscation, including encrypted files, obfuscation, virtual machine-based encryption, opcode-based encryption, extended encryption, etc.
 
-加密文件是指直接加密所有php文件，通过特定方式解密后通过eval等方式执行，这种方式最容易被还原。混淆是移除变量名并通过AST一定程度改变代码组织方式以降低代码可读性的方法，这种方式可以通过对应的反向替换来做到部分还原。基于虚拟机的方式自己实现了一个虚拟机，将PHP转换为特定的代码，这种方式基本无法还原但是执行效率很低。基于opcode加密是zend guard等工具使用的方法，将代码编译为opcode后再执行。基于扩展的加密需要引入额外的扩展，实现增加垃圾代码、修改控制流、加密明文字符串等操作。
+Encrypted files refer to directly encrypting all php files, decrypting them through specific methods and executing them through eval, etc. This method is most easily restored. Obfuscation is a method of removing variable names and changing the code organization to a certain extent through AST to reduce the readability of the code. This method can be partially restored through corresponding reverse substitution. I implemented a virtual machine by myself based on a virtual machine, converting PHP into specific code. This method is basically impossible to restore but the execution efficiency is very low. Opcode encryption is a method used by tools such as Zend Guard. Compile the code into opcode and then execute it. Extension-based encryption requires the introduction of additional extensions to implement operations such as adding junk code, modifying control flow, encrypting plaintext strings, etc.

@@ -1,96 +1,96 @@
-NTLM 身份验证
+NTLM Authentication
 ========================================
 
-NTLM认证
+NTLM certification
 ----------------------------------------
-NTLM是NT LAN Manager的缩写，NTLM是基于挑战/应答的身份验证协议，是 Windows NT 早期版本中的标准安全协议。
+NTLM is the abbreviation of NT LAN Manager, which is a challenge/response authentication protocol and is a standard security protocol in earlier versions of Windows NT.
 
-基本流程
+Basic Process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 客户端在本地加密当前用户的密码成为密码散列
-- 客户端向服务器明文发送账号
-- 服务器端产生一个16位的随机数字发送给客户端，作为一个challenge
-- 客户端用加密后的密码散列来加密challenge，然后返回给服务器，作为response
-- 服务器端将用户名、challenge、response发送给域控制器
-- 域控制器用这个用户名在SAM密码管理库中找到这个用户的密码散列，然后使用这个密码散列来加密chellenge
-- 域控制器比较两次加密的challenge，如果一样那么认证成功，反之认证失败
+- The client encrypts the current user's password locally to become a password hash
+- The client sends an account to the server explicitly
+- The server generates a random number of 16-bits to send to the client as a challenge
+- The client uses the encrypted password hash to encrypt the challenge, and then returns it to the server as a response
+- Server side sends username, challenge, and response to the domain controller
+- The domain controller uses this username to find the password hash of this user in the SAM password management library, and then uses this password hash to encrypt the chestenge
+- Domain controller compares the two-time encryption challenge. If the same is true, the authentication will be successful, otherwise the authentication will fail.
 
-Net-NTLMv1
+Non-ntlmv1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Net-NTLMv1协议的基本流程如下：
+The basic process of the Net-NTLMv1 protocol is as follows:
 
-- 客户端向服务器发送一个请求
-- 服务器接收到请求后，生成一个8位的Challenge，发送回客户端
-- 客户端接收到Challenge后，使用登录用户的密码hash对Challenge加密，作为response发送给服务器
-- 服务器校验response
+- The client sends a request to the server
+- After the server receives the request, it generates an 8-bit Challenge and sends it back to the client
+- After the client receives the Challenge, it uses the password hash of the logged in user to encrypt the Challenge and sends it to the server as a response
+- Server verification response
 
-Net-NTLMv1 response的计算方法为
+The calculation method of Net-NTLMv1 response is
 
-- 将用户的NTLM hash补零至21字节分成三组7字节数据
-- 三组数据作为3DES加密算法的三组密钥，加密Server发来的Challenge
+- Divide the user's NTLM hash to zero to 21 bytes into three groups of 7 bytes of data
+- Three sets of data are used as three sets of keys of the 3DES encryption algorithm, encrypting the Challenge sent by the Server
 
-这种方式相对脆弱，可以基于抓包工具和彩虹表爆破工具进行破解。
+This method is relatively fragile and can be cracked based on packet capture tools and rainbow table blasting tools.
 
 Net-NTLMv2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-自Windows Vista起，微软默认使用Net-NTLMv2协议，其基本流程如下：
+Since Windows Vista, Microsoft has used the Net-NTLMv2 protocol by default, and its basic process is as follows:
 
-- 客户端向服务器发送一个请求
-- 服务器接收到请求后，生成一个16位的Challenge，发送回客户端
-- 客户端接收到Challenge后，使用登录用户的密码hash对Challenge加密，作为response发送给服务器
-- 服务器校验response 
+- The client sends a request to the server
+- After the server receives the request, it generates a 16-bit Challenge and sends it back to the client
+- After the client receives the Challenge, it uses the password hash of the logged in user to encrypt the Challenge and sends it to the server as a response
+- Server verification response
 
 Hash
 ----------------------------------------
 
 LM Hash
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-LM Hash(LAN Manager Hash) 是windows最早用的加密算法，由IBM设计。LM Hash 使用硬编码秘钥的DES，且存在缺陷。早期的Windows系统如XP、Server 2003等使用LM Hash，而后的系统默认禁用了LM Hash并使用NTLM Hash。
+LM Hash (LAN Manager Hash) is the earliest encryption algorithm used in Windows and designed by IBM. LM Hash uses DES with hard-coded keys and has flaws. Early Windows systems such as XP, Server 2003, etc. used LM Hash, while later systems disabled LM Hash by default and used NTLM Hash.
 
-LM Hash的计算方式为：
+The calculation method of LM Hash is:
 
-- 转换用户的密码为大写，14字节截断
-- 不足14字节则需要在其后添加0×00补足
-- 将14字节分为两段7字节的密码
-- 以 ``KGS!@#$%`` 作为秘钥对这两组数据进行DES加密，得到16字节的哈希
-- 拼接后得到最后的LM Hash。
+- Convert user's password to capital, 14 byte truncation
+- If you need to add 0×00 to make up for less than 14 bytes
+- Divide 14 bytes into two 7 bytes passwords
+- DES encryption of these two sets of data with ``KGS!@#$%`` as the key to obtain a 16-byte hash
+- Get the final LM Hash after splicing.
 
-作为早期的算法，LM Hash存在着诸多问题：
+As an early algorithm, LM Hash has many problems:
 
-- 密码长度不会超过14字符，且不区分大小写
-- 如果密码长度小于7位，后一组哈希的值确定，可以通过结尾为 ``aad3b435b51404ee`` 来判断密码长度不超过7位
-- 分组加密极大程度降低了密码的复杂度
-- DES算法强度低
+- Password length will not exceed 14 characters and is case-insensitive
+- If the password length is less than 7 digits, the value of the latter set of hashs is determined. You can judge that the password length does not exceed 7 digits by the ending of ``aad3b435b51404ee``
+- Packet encryption greatly reduces password complexity
+- Low DES algorithm strength
 
 NTLM Hash
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-为了解决LM Hash的安全问题，微软于1993年在Windows NT 3.1中引入了NTLM协议。
+In order to solve the security issues of LM Hash, Microsoft introduced the NTLM protocol in Windows NT 3.1 in 1993.
 
-Windows 2000 / XP / 2003 在密码超过14位前使用LM Hash，在密码超过14位后使用NTLM Hash。而之后从Vista开始的版本都使用NTLM Hash。
+Windows 2000/XP/2003 Use LM Hash before the password exceeds 14 digits and NTLM Hash after the password exceeds 14 digits. Later, all versions starting with Vista use NTLM Hash.
 
-NTLM Hash的计算方法为：
+The calculation method of NTLM Hash is:
 
-- 将密码转换为16进制，进行Unicode编码
-- 基于MD4计算哈希值
+- Convert password to hexadecimal and encode Unicode
+- Calculate hash value based on MD4
 
-攻击
+attack
 ----------------------------------------
 
 Pass The Hash
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Pass The Hash (PtH) 是攻击者捕获帐号登录凭证后，复用凭证Hash进行攻击的方式。
+Pass The Hash (PtH) is a way for an attacker to capture the account login credentials and reuse the credentials Hash to attack.
 
-微软在2012年12月发布了针对Pass The Hash攻击的防御指导，文章中提到了一些防御方法，并说明了为什么不针对Pass The Hash提供更新补丁。
+Microsoft released defense guidance for Pass The Hash attacks in December 2012, which mentioned some defense methods and explained why update patches are not provided for Pass The Hash.
 
 Pass The Key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在禁用NTLM的环境下，可以用mimikatz等工具直接获取密码。
+In an environment where NTLM is disabled, you can use mimikatz and other tools to get the password directly.
 
 NTLM Relay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-攻击者可以一定程度控制客户端网络的时候，可以使用中间人攻击的方式来获取权限。对客户端伪装为身份验证服务器，对服务端伪装为需要认证的客户端。
+When an attacker can control the client network to a certain extent, he can use the man-in-the-middle attack to obtain permissions. The client is disguised as an authentication server, and the server is disguised as a client that needs authentication.
 
-参考链接
+Reference link
 ----------------------------------------
-- `Windows身份认证及利用思路 <https://www.freebuf.com/articles/system/224171.html>`_
+- `Windows identity authentication and utilization ideas <https://www.freebuf.com/articles/system/224171.html>`_
 - `The NTLM Authentication Protocol and Security Support Provider <http://davenport.sourceforge.net/ntlm.html>`_

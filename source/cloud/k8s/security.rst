@@ -1,21 +1,21 @@
-安全
+Safety
 ========================================
-集群安全性考虑几个目标：
+Cluster security considers several goals:
 
-- 保证容器与宿主机隔离
-- 限制容器给基础设施/其他容器带来的干扰
-- 最小权限原则
-- 明确组件边界划分
-- 划分普通用户和管理员的角色
-- 必要时将管理员权限赋予用户
-- 允许拥有Secret数据的应用在集群中运行
+- Ensure the isolation of the container and the host
+- Limit the interference caused by containers to infrastructure/other containers
+- Minimum permission principle
+- Clarify component boundary division
+- Divide the roles of ordinary users and administrators
+- Assign administrator permissions to users if necessary
+- Allow applications with Secret data to run in the cluster
 
-常见安全问题
+Frequently Asked Questions
 ----------------------------------------
-- K8s API Server未授权访问
-- k8s 配置文件泄露 ``$HOME/.kube/config``
-- 权限提升
-    - Pod 内权限提升
-    - K8s 权限提升
-- 容器逃逸
-- 拒绝服务
+- K8s API Server unauthorized access
+- k8s configuration file leak ``$HOME/.kube/config``
+- Permission enhancement
+- Permission enhancement within Pod
+- K8s permission enhancement
+- Container escape
+- Denial of service

@@ -1,39 +1,39 @@
-其他
+other
 ========================================
 
-综合框架
+Comprehensive framework
 ----------------------------------------
 - `metasploit <https://www.metasploit.com/>`_
-- `w3af <http://w3af.org/>`_
-- `AutoSploit <https://github.com/NullArray/AutoSploit/>`_
-- `Nikto <https://cirt.net/nikto2>`_
+- Affaire <Hatab://AFA, Araj/>
+- `Autoploit <https://github.com/nullarray/autsploit/> _
+- `nobody <https://cirt.net/nikto2>` _
 - `skipfish <https://my.oschina.net/u/995648/blog/114321>`_
-- `Arachni <http://www.arachni-scanner.com/>`_
+- charming <HTTP: //VVv
 - `ZAP <http://www.freebuf.com/sectool/5427.html>`_
 - `BrupSuite <https://portswigger.net/burp/>`_
 - `Spiderfoot <https://github.com/smicallef/spiderfoot>`_
 - `AZScanner <https://github.com/az0ne/AZScanner>`_
-- `Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_
-- `vooki <https://www.vegabird.com/vooki/>`_
-- `BadMod <https://github.com/MrSqar-Ye/BadMod>`_
+- `fuxi <https://github.com/jeffzh3ng/fuxi-scanner>` _
+- `flow <https://www.vegabird.com/vooki/>` _
+- `Badmod <https://github.com/mrsqar-ye/badmod>` _
 - `fsociety <https://github.com/Manisso/fsociety>`_ Hacking Tools Pack
 - `axiom <https://github.com/pry0cc/axiom>`_ A dynamic infrastructure toolkit for red teamers and bug bounty hunters
 
-验证码
+Verification code
 ----------------------------------------
 - `CAPTCHA22 <https://github.com/FSecureLABS/captcha22>`_ is a toolset for building, and training, CAPTCHA cracking models using neural networks.
 
 WebAssembly
 ----------------------------------------
 - `wabt <https://github.com/WebAssembly/wabt>`_
-- `binaryen <https://github.com/WebAssembly/binaryen>`_
+- `Binaryen <https://github.com/webassembly/binaryen>` _
 - `wasmdec <https://github.com/wwwg/wasmdec>`_
 
-混淆
+Confusion
 ----------------------------------------
-- `JStillery <https://github.com/mindedsecurity/JStillery>`_
+- `jstillery <https://github.com/mindedsecurity/jstillery>` _
 - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
-- `基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_
+- `Hook-based php obfuscation decryption <https://github.com/CaledoniaProject/php-decoder>`_
 - `Invoke Obfuscation <https://github.com/danielbohannon/Invoke-Obfuscation>`_
 
 Proxy Pool
@@ -46,7 +46,7 @@ Android
 ----------------------------------------
 - `DroidSSLUnpinning <https://github.com/WooyunDota/DroidSSLUnpinning>`_ Android certificate pinning disable tools
 
-其他
+other
 ----------------------------------------
 - `Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_
 - `Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_

@@ -2,21 +2,21 @@ PHP
 ========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   backdoor
-   unserialize
-   disablefunc
-   basedir
-   config
-   stream
-   htaccess
-   webshell
-   obfuscate
-   phar
-   sink
-   misc
-   version
-   trick
-   ref
+backdoor
+unmutalize
+disablefunc
+doage
+config
+stream
+htaccess
+webshell
+obfuscate
+phar
+sink
+misc
+version
+trick
+ref

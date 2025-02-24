@@ -1,9 +1,9 @@
-其他
+other
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    audit
    waf
@@ -12,7 +12,7 @@
    unicode
    json
    hash
-   dos
+   of the
    email
    apt
    supplychain

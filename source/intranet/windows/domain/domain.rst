@@ -1,52 +1,52 @@
-域
+domain
 ========================================
-域指将网络中多台计算机逻辑上组织到一起，进行集中管理的逻辑环境。域是组织与存储资源的核心管理单元，在域中，至少有一台域控制器，域控制器中保存着整个域的用户帐号和安全数据库。
+Domain refers to a logical environment that logically organizes multiple computers in the network and performs centralized management. A domain is the core management unit of organization and storage resources. In the domain, there is at least one domain controller, and the domain controller stores the user account and secure database of the entire domain.
 
-域结构
+Domain Structure
 ----------------------------------------
 
-域树
+Domain Tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-域树（Trees）由多个域组成，这些域共享同一表结构和配置，形成一个连续的命名空间（namespace）。 
+A domain tree is composed of multiple domains that share the same table structure and configuration, forming a continuous namespace.
 
-林
+Forest
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-林（Forests）是一个复杂的AD实例，由一个或数个域组成，每个域树都有自己唯一的名称空间。
+Forests is a complex AD instance consisting of one or several domains, each domain tree has its own unique namespace.
 
-域控制器
+Domain Controller
 ----------------------------------------
-ADDS的目录存储在域控制器(Domain Controller)内，一个域内可以有多台域控制器，每一个域控制器的地位几乎是平等的，有几乎相同的数据库。
+The ADDS directory is stored in the Domain Controller. There can be multiple domain controllers in a domain. Each domain controller has almost equal status and has almost the same database.
 
-在一台域控制器添加一个用户账户后，这个账户会被自动复制到其他域控制器的数据库中。
+After adding a user account to a domain controller, the account will be automatically copied to the database of other domain controllers.
 
-AD数据库有多主机复制模式（Multi-master Replication Model）和单主机复制模式（Sing-master Replication Model）。
+AD databases have multi-master Replication Model and single-host replication Model.
 
-多主机模式可以直接更新任何一台域控制器内的AD对象，并将更新之后的对象复制到其他域控制器，大部分数据都是用多主机模式进行复制。
+Multi-host mode can directly update AD objects in any domain controller and copy the updated objects to other domain controllers. Most of the data is copied in multi-host mode.
 
-单主机复制模式是指由一台被称作操作主机（Operations Master）的域控制器负责接收更改数据的请求，并将数据复制到其他的域控制器。
+Single-host replication mode refers to a domain controller called an Operations Master responsible for receiving requests to change data and copying the data to other domain controllers.
 
-信任
+trust
 ----------------------------------------
-两个域之间需要创建信任关系，才可以访问对应域内的资源。
+A trust relationship needs to be created between two domains in order to access resources in the corresponding domain.
 
-域信任类型
+Domain trust type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Active Directory的信任方式可以分为以下几种：
+The trust methods of Active Directory can be divided into the following types:
 
 - Tree-Root Trust
-    - 双向具有转移性
+- Transferable in both directions
 - Parent-Child Trust
-    - 具有转移性，双向行人
+- Transferable, two-way pedestrian
 - Forest Trust
-    - 如果两个林创建了信任关系，则林中所有的域都相互信任
-    - 两个林之间的信任关系无法自动扩展到其他林上
+- If two forests create a trust relationship, all domains in the forest trust each other
+- The trust relationship between two forests cannot be automatically extended to other forests
 - Realm Trust
-    - ADDS域可以和非Windows系统的Kerberos域之间创建信任
+- ADDS domain can create trust between Kerberos domains on non-Windows systems
 - External Trust
-    - 位于两个林内的域之间可以通过外部信任来创建信任关系
+- The trust relationship can be created between domains located within two forests through external trust
 - Shortcut Trust
-    - 可以缩短验证用户身份的时间
+- Can shorten the time to verify the user's identity
 
-OU
+OR
 ----------------------------------------
-组织单位（Organization Unit，OU）是一个容器对象，将域中的对象组织成逻辑组，帮助管理员管理。OU包含用户、计算机、工作组、打印机、安全策略以及其他组织单位等。
+Organization Unit (OU) is a container object that organizes objects in the domain into logical groups to help administrators manage. OU includes users, computers, work groups, printers, security policies, and other organizational units.

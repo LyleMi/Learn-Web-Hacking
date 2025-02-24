@@ -1,98 +1,98 @@
-作用域与闭包
+Scope and closure
 ========================================
 
-作用域与作用域链
+Scope and Scope Chain
 ----------------------------------------
 
-作用域
+Scope
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-简单来说，作用域就是变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期。JavaScript的作用域是靠函数来形成的，也就是说一个函数的变量在函数外不可以访问。
+Simply put, scope is the accessible range of variables and functions, that is, scope controls the visibility and life cycle of variables and functions. The scope of JavaScript is formed by functions, which means that a function's variables cannot be accessed outside the function.
 
-作用域可以分为全局作用域、局部作用域和块级作用域，其中全局作用域主要有以下三种情况：
+Scopes can be divided into global scope, local scope and block-level scope. The global scope mainly has the following three situations:
 
-- 函数外面定义的变量拥有全局作用域
-- 未定义直接赋值的变量自动声明为拥有全局作用域
-- window对象的属性拥有全局作用
+- The variables defined outside the function have a global scope
+- Variables with undefined direct assignments are automatically declared as having global scope
+- The properties of the window object have a global role
 
-局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，所以也会把这种作用域称为函数作用域。
+Local scopes are generally only accessible within fixed code snippets. The most common one is, for example, inside functions, so this scope is also called function scope.
 
-作用域泄漏
+Scope leak
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在ES5标准时，只有全局作用域和局部作用域，没有块级作用域，这样可能会造成变量泄漏的问题。例如：
+In the ES5 standard, there are only global scopes and local scopes, and no block-level scopes, which may cause variable leakage problems. For example:
 
 .. code-block:: javascript
 
-    var i = 1;
-    function f() {
-        console.log(i)
-        if (true) {
-            var i = 2;
-        }
-    }
-    f(); // undefined
+was in = 1;
+function f() {
+console.log(i)
+if (true) {
+was in = 2;
+}
+}
+f(); // undefined
 
-作用域提升（var Hoisting）
+Scope enhancement (var Hoisting)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在JavaScript中，使用var在函数或全局内任何地方声明变量相当于在其内部最顶上声明它，这种行为称为Hoisting。例如下面这段代码等效于第二段代码
+In JavaScript, using var to declare a variable anywhere within a function or globally is equivalent to declaring it on the top of its internals, and this behavior is called Hoisting. For example, the following code is equivalent to the second code
 
 .. code-block:: javascript
 
-    function foo() {
-        console.log(x); // => undefined
-        var x = 1;
-        console.log(x); // => 1
-    }
-    foo();
+function foo() {
+console.log(x); // => undefined
+was x = 1;
+console.log(x); // => 1
+}
+foo();
 
 .. code-block:: javascript
 
-    function foo() {
-        var x;
-        console.log(x); // => undefined
-        x = 1;
-        console.log(x); // => 1
-    }
-    foo();
+function foo() {
+was x;
+console.log(x); // => undefined
+x = 1;
+console.log(x); // => 1
+}
+foo();
 
-作用域链
+Scope chain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-当函数被执行时，总是先从函数内部找寻局部变量，如果找不到相应的变量，则会向创建函数的上级作用域寻找，直到找到全局作用域为止，这个过程被称为作用域链。
+When a function is executed, the local variables are always searched for in-function. If the corresponding variable cannot be found, it will search for the superior scope of the created function until the global scope is found. This process is called the scope chain .
 
-闭包
+Closure
 ----------------------------------------
-函数与对其状态即词法环境（lexical environment）的引用共同构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在JavaScript，函数在每次创建时生成闭包。
+Functions and references to their state, lexical environment, form closures. That is, closures allow you to access external function scopes from internal functions. In JavaScript, functions generate closures each time they are created.
 
-在JavaScript中，并没有原生的对private方法的支持，即一个元素/方法只能被同一个类中的其它方法所调用。而闭包则是一种可以被用于模拟私有方法的方案。另外闭包也提供了管理全局命名空间的能力，避免非核心的方法或属性污染了代码的公共接口部分。下面是一个简单的例子：
+In JavaScript, there is no native support for private methods, that is, an element/method can only be called by other methods in the same class. Closures are a solution that can be used to simulate private methods. In addition, closures also provide the ability to manage global namespaces to avoid non-core methods or attributes pollute the public interface part of the code. Here is a simple example:
 
 .. code-block:: javascript
 
-    var Counter = (function() {
-      var privateCounter = 0;
-      function changeBy(val) {
-        privateCounter += val;
-      }
-      return {
-        increment: function() {
-          changeBy(1);
-        },
-        decrement: function() {
-          changeBy(-1);
-        },
-        value: function() {
-          return privateCounter;
-        }
-      }   
-    })();
+var Counter = (function() {
+was private counter = 0;
+function changeBy(val) {
+privateCounter += val;
+}
+return {
+increment: function() {
+changeBy(1);
+},
+decrement: function() {
+changeBy(-1);
+},
+value: function() {
+return privateCounter;
+}
+}
+})();
 
-    console.log(Counter.value()); /* logs 0 */
-    Counter.increment();
-    Counter.increment();
-    console.log(Counter.value()); /* logs 2 */
-    Counter.decrement();
-    console.log(Counter.value()); /* logs 1 */
+console.log(Counter.value()); /* logs 0 */
+Counter.increment();
+Counter.increment();
+console.log(Counter.value()); /* logs 2 */
+Counter.decrement();
+console.log(Counter.value()); /* logs 1 */
 
-全局对象
+Global Object
 ----------------------------------------
-全局对象是一个特殊的对象，它的作用域是全局的。
+A global object is a special object whose scope is global.
 
-全平台可用的全局对象是 ``globalThis`` ，它跟全局作用域里的this值相同。另外在浏览器中存在 ``self`` 和 ``window`` 全局对象，Web Workers中存在 ``self`` 全局对象，Node.js 中存在 ``global`` 全局对象。
+The global object available on the entire platform is ``globalThis``, which is the same as this value in the global scope. In addition, there are ``self`` and ``window`` global objects in the browser, ``self`` global objects in Web Workers, and ``global`` global objects in Node.js.

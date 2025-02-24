@@ -1,107 +1,107 @@
-简介
+Introduction
 ----------------------------------------
-DNS是一个简单的请求-响应协议，是将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP协议的53端口。
+DNS is a simple request-response protocol, a distributed database that maps domain names and IP addresses to each other, which can make people more convenient to access the Internet. DNS uses port 53 of TCP and UDP protocols.
 
-请求响应
+Request response
 ----------------------------------------
 
-DNS记录
+DNS records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - A
-    - 返回域名对应的IPv4地址
+- Return the IPv4 address corresponding to the domain name
 - AAAA
 - NS
-    - 域名服务器
-    - 返回该域名由哪台域名服务器解析
+- Domain Name Server
+- Return to which domain name server to resolve the domain name
 - PTR
-    - 反向记录
-    - 从IP地址到域名的记录
+- Reverse Recording
+- Records from IP address to domain name
 - MX
-    - 电子邮件交换记录
-    - 记录邮件域名对应的IP地址
+- Email exchange history
+- Record the IP address corresponding to the email domain name
 
-响应码
+Response code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- NOERROR
+- noeror
 
 ::
 
-    No error condition
+No error condition
 
 - FORMERR
 
 ::
 
-    Format error - The name server was unable to interpret the query
+Format error - The name server was unable to interpret the query
 
 - SERVFAIL
 
 ::
 
-    Server failure - The name server was unable to process this query due to a problem with the name server
+Server failure - The name server was unable to process this query due to a problem with the name server
 
-- NXDOMAIN
+- Nxdomain
 
 ::
 
-    this code signifies that the domain name referenced in the query does not exist
+this code signifies that the domain name referenced in the query does not exist
 
 - NOTIMP
 
 ::
 
-    Not Implemented - The name server does not support the requested kind of query
+Not Implemented - The name server does not support the requested kind of query
 
 - REFUSED
 
 ::
 
-    Refused - The name server refuses to perform the specified operation for policy reasons
+Refused - The name server refuses to perform the specified operation for policy reasons
 
-- NODATA
+- Nadata
 
 ::
 
-    A pseudo RCODE which indicates that the name is valid, for the given class, but [there] are no records of the given type A NODATA response has to be inferred from the answer.
+A pseudo RCODE which indicates that the name is valid, for the given class, but [there] are no records of the given type A NODATA response has to be inferred from the answer.
 
 
-域名系统工作原理
+How the domain name system works
 ----------------------------------------
 
-解析过程
+Analytical process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNS解析过程是递归查询的，具体过程如下：
+The DNS resolution process is recursively query, and the specific process is as follows:
 
-- 用户要访问域名www.example.com时，先查看本机hosts是否有记录或者本机是否有DNS缓存，如果有，直接返回结果，否则向递归服务器查询该域名的IP地址
-- 递归缓存为空时，首先向根服务器查询com顶级域的IP地址
-- 根服务器告知递归服务器com顶级域名服务器的IP地址
-- 递归向com顶级域名服务器查询负责example.com的权威服务器的IP
-- com顶级域名服务器返回相应的IP地址
-- 递归向example.com的权威服务器查询www.example.com的地址记录
-- 权威服务器告知www.example.com的地址记录
-- 递归服务器将查询结果返回客户端
+- When a user wants to access the domain name www.example.com, first check whether the hosts are recorded or whether the machine has DNS cache. If so, the result will be returned directly. Otherwise, query the recursive server for the IP address of the domain name.
+- When the recursive cache is empty, first query the root server for the IP address of the com top-level domain
+- The root server informs the recursive server com the IP address of the top-level domain server
+- Recursively query the com top-level domain server's IP of the authoritative server responsible for example.com
+- com top-level domain server returns the corresponding IP address
+- Recursively query the address record of www.example.com from the authoritative server of example.com
+- Authoritative server informs www.example.com of the address record
+- Recursive server returns query results to client
 
-域传送
+Domain delivery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNS服务器可以分为主服务器、备份服务器和缓存服务器。域传送是指备份服务器从主服务器拷贝数据，并使用得到的数据更新自身数据库。域传送是在主备服务器之间同步数据库的机制。
+DNS servers can be divided into primary servers, backup servers and cache servers. Domain transfer refers to the backup server copying data from the main server and updating its own database using the obtained data. Domain delivery is a mechanism for synchronizing databases between primary and secondary servers.
 
-服务器类型
+Server Type
 ----------------------------------------
 
-根服务器
+Root Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-根服务器是DNS的核心，负责互联网顶级域名的解析，用于维护域的权威信息，并将DNS查询引导到相应的域名服务器。
+The root server is the core of DNS, responsible for the resolution of the top-level domain names in the Internet, is used to maintain the authoritative information of the domain, and guide the DNS query to the corresponding domain name server.
 
-根服务器在域名树中代表最顶级的 ``.`` 域， 一般省略。
+The root server represents the top ``.`` domain in the domain name tree, and is generally omitted.
 
-13台IPv4根服务器的域名标号为a到m，即a.root-servers.org到m.root-servers.org，所有服务器存储的数据相同，仅包含ICANN批准的TLD域名权威信息。
+The domain names of 13 IPv4 root servers are a to m, that is, a.root-servers.org to m.root-servers.org. All servers store the same data and only contain the authoritative information of the TLD domain name approved by ICANN.
 
-权威服务器
+Authoritative Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-权威服务器上存储域名Zone文件，维护域内域名的权威信息，递归服务器可以从权威服务器获得DNS查询的资源记录。
+The domain name zone file is stored on the authoritative server, and the authoritative information of the domain name within the domain is maintained. The recursive server can obtain resource records for DNS query from the authoritative server.
 
-权威服务器需要在所承载的域名所属的TLD管理局注册，同一个权威服务器可以承载不同TLD域名，同一个域也可以有多个权威服务器。
+An authoritative server needs to be registered in the TLD management bureau to which the domain name it hosts belongs. The same authoritative server can host different TLD domain names, and there can also be multiple authoritative servers in the same domain.
 
-递归服务器
+Recursive server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-递归服务器负责接收用户的查询请求，进行递归查询并响应用户查询请求。在初始时递归服务器仅有记录了根域名的Hint文件。
+The recursive server is responsible for receiving user query requests, performing recursive queries and responding to user query requests. Initially, the recursive server only records the Hint file with the root domain name.

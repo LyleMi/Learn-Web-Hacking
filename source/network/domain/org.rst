@@ -1,10 +1,10 @@
-相关机构
+Related institutions
 ========================================
 
 ICANN
 ----------------------------------------
-互联网名称与数字地址分配机构 (Internet Corporation for Assigned Names and Numbers, ICANN) 创建于1998年9月18日，职能包括管理域名和IP地址的分配等与互联网相关的任务。
+Internet Corporation for Assigned Names and Numbers (ICANN) was founded on September 18, 1998 and its functions include managing the allocation of domain names and IP addresses and other Internet-related tasks.
 
 IANA
 ----------------------------------------
-互联网号码分配局 (Internet Assigned Numbers Authority, IANA) ，是一家互联网地址指派机构，管理国际互联网中使用的IP地址、域名和许多其它参数的机构。
+Internet Assigned Numbers Authority (IANA) is an Internet address assignment agency that manages IP addresses, domain names and many other parameters used in the international Internet.

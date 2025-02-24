@@ -1,15 +1,15 @@
-Web安全学习笔记
+Web Security Learning Notes
 ========================================
 
 .. toctree::
    :numbered:
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    basic/index
    network/index
    info/index
-   vuln/index
+   Vuln/index
    language/index
    intranet/index
    cloud/index

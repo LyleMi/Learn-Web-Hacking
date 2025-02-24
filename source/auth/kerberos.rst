@@ -1,109 +1,109 @@
 Kerberos
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-Kerberos协议起源于美国麻省理工学院Athena项目，基于公私钥加密体制，为分布式环境提供双向验证，在RFC 1510中被采纳，Kerberos是Windows域环境中的默认身份验证协议。
+The Kerberos protocol originated from the Athena project of the MIT Institute of Technology in the United States. It is based on the public-private key encryption system and provides two-way verification for distributed environments. It was adopted in RFC 1510. Kerberos is the default authentication protocol in Windows domain environments.
 
-简单地说，Kerberos提供了一种单点登录 (Single Sign-On, SSO)的方法。考虑这样一个场景，在一个网络中有不同的服务器，比如，打印服务器、邮件服务器和文件服务器。这些服务器都有认证的需求。很自然的，不可能让每个服务器自己实现一套认证系统，而是提供一个中心认证服务器(Authentication Server, AS)供这些服务器使用。这样任何客户端就只需维护一个密码就能登录所有服务器。
+Simply put, Kerberos provides a single sign-on (SSO) method. Consider a scenario where there are different servers in a network, such as print servers, mail servers, and file servers. These servers have authentication requirements. It is natural that it is impossible to enable each server to implement an authentication system by itself, but to provide a central authentication server (AS) for these servers to use. In this way, any client can log in to all servers by just maintaining a password.
 
-Kerberos协议是一个基于票据(Ticket)的系统，在Kerberos系统中至少有三个角色：认证服务器(AS)，客户端(Client)和普通服务器(Server)。
+The Kerberos protocol is a Ticket-based system that has at least three roles in the Kerberos system: an authentication server (AS), a client (Client) and a normal server (Server).
 
-认证服务器对用户进行验证，并发行供用户用来请求会话票据的TGT(票据授予票据)。票据授予服务(TGS)在发行给客户的TGT的基础上，为网络服务发行ST(会话票据)。
+The authentication server verifies the user and issues a TGT (Treasure Grant Ticket) for the user to request session tickets. The TGS (TGS) issues ST (Session Notes) for the network service based on the TGT issued to the customer.
 
-在Kerberos系统中，客户端和服务器都有一个唯一的名字，叫做Principal。同时，客户端和服务器都有自己的密码，并且它们的密码只有自己和认证服务器AS知道。
+In the Kerberos system, both the client and the server have a unique name, called Principal. At the same time, both the client and the server have their own passwords, and only their passwords are known to them and the authentication server AS.
 
-基本概念
+Basic concepts
 ----------------------------------------
-- Principal(安全个体)
-    - 被认证的个体，有一个名字(name)和口令(password)
+- Principal (safe individual)
+- The certified individual has a name and password
 - KDC (Key Distribution Center)
-    - 提供ticket和临时的会话密钥的网络服务
+- Network services that provide tickets and temporary session keys
 - Ticket
-    - 一个记录，用户可以用它来向服务器证明自己的身份，其中包括用户的标识、会话密钥、时间戳，以及其他一些信息。Ticket 中的大多数信息都被加密，密钥为服务器的密钥
+- A record that users can use to prove their identity to the server, including the user's identity, session key, timestamp, and some other information. Most of the information in the Ticket is encrypted, and the key is the server's key
 - Authenticator
-    - 一个记录，其中包含一些最近产生的信息，产生这些信息需要用到用户和服务器之间共享的会话密钥
+- A record containing some recently generated information that requires a session key shared between the user and the server
 - Credentials
-    - 一个ticket加上一个秘密的会话密钥
+- A ticket plus a secret session key
 - Authentication Server (AS)
-    - 通过 long-term key 认证用户
-    - AS 给予用户 ticket granting ticket 和 short-term key
-    - 认证服务
+- Authenticated users with long-term key
+- AS gives users ticket granting ticket and short-term key
+- Certification Service
 - Ticket Granting Server (TGS)
-    - 通过 short-term key 和 Ticket Granting Ticket 认证用户
-    - TGS 发放 tickets 给用户以访问其他的服务器
-    - 授权和访问控制服务
+- Authenticated users with short-term key and Ticket Granting Ticket
+- TGS issues tickets to users to access other servers
+- Authorization and access control services
 
-简化的认证过程
+Simplified certification process
 ----------------------------------------
-1. 客户端向服务器发起请求，请求内容是：客户端的principal，服务器的principal
-2. AS收到请求之后，随机生成一个密码Kc, s(session key), 并生成以下两个票据返回给客户端
-    1. 给客户端的票据，用客户端的密码加密，内容为随机密码，session，server_principal
-    2. 给服务器端的票据，用服务器的密码加密，内容为随机密码，session，client_principal
-3. 客户端拿到了第二步中的两个票据后，首先用自己的密码解开票据，得到Kc、s，然后生成一个Authenticator，其中主要包括当前时间和Ts,c的校验码，并且用SessionKey Kc,s加密。之后客户端将Authenticator和给server的票据同时发给服务器
-4. 服务器首先用自己的密码解开票据，拿到SessionKey Kc,s，然后用Kc,s解开Authenticator，并做如下检查
-    1. 检查Authenticator中的时间戳是不是在当前时间上下5分钟以内，并且检查该时间戳是否首次出现。如果该时间戳不是第一次出现，那说明有人截获了之前客户端发送的内容，进行Replay攻击。
-    2. 检查checksum是否正确
-    3. 如果都正确，客户端就通过了认证
-5. 服务器段可选择性地给客户端回复一条消息来完成双向认证，内容为用session key加密的时间戳
-6. 客户端通过解开消息，比较发回的时间戳和自己发送的时间戳是否一致，来验证服务器
+1. The client initiates a request to the server, and the request content is: the client's principal, the server's principal
+2. After AS receives the request, it randomly generates a password Kc, s(session key), and generates the following two tickets and returns them to the client.
+1. The ticket to the client is encrypted with the client's password, and the content is a random password, session, server_principal
+2. Encrypt the ticket to the server side with the server's password, and the content is a random password, session, client_principal
+3. After the client gets the two bills in the second step, he first uses his own password to unbox the bills, obtain Kc and s, and then generates an Authenticator, which mainly includes the verification codes of the current time and Ts, c, and Encrypted with SessionKey Kc,s. Then the client sends Authenticator and the tickets to the server to the server at the same time
+4. The server first uses its own password to unbox the invoice, get the SessionKey Kc,s, and then unbox the Authenticator with Kc,s, and do the following check
+1. Check whether the timestamp in Authenticator is within 5 minutes of the current time, and check whether the timestamp appears for the first time. If this timestamp is not the first time it appears, it means that someone intercepted the content sent by the client and carried out a Replay attack.
+2. Check if checksum is correct
+3. If all are correct, the client will pass the authentication
+5. The server segment can optionally reply a message to the client to complete two-way authentication, with the content encrypted time stamps with session key
+6. The client verifies the server by unpacking the message and comparing whether the sent back timestamp is consistent with the timestamp sent by itself.
 
-完整的认证过程
+Complete certification process
 ----------------------------------------
-上方介绍的流程已经能够完成客户端和服务器的相互认证。但是，比较不方便的是每次认证都需要客户端输入自己的密码。
+The process introduced above has been able to complete mutual authentication between the client and the server. However, what is more inconvenient is that the client requires the client to enter its own password every time he or she authenticates.
 
-因此在Kerberos系统中，引入了一个新的角色叫做：票据授权服务(TGS - Ticket Granting Service)，它的地位类似于一个普通的服务器，只是它提供的服务是为客户端发放用于和其他服务器认证的票据。
+Therefore, in the Kerberos system, a new role was introduced called: Ticket Granting Service (TGS - Ticket Granting Service), which is similar to an ordinary server, except that the service it provides is distributed to clients and other servers. Certified bills.
 
-这样，Kerberos系统中就有四个角色：认证服务器(AS)，客户端(Client)，普通服务器(Server)和票据授权服务(TGS)。这样客户端初次和服务器通信的认证流程分成了以下6个步骤：
+In this way, there are four roles in the Kerberos system: authentication server (AS), client (Client), ordinary server (Server) and ticket authorization service (TGS). In this way, the authentication process for the client to communicate with the server for the first time is divided into the following 6 steps:
 
-1. 客户端向AS发起请求，请求内容是：客户端的principal，票据授权服务器的rincipal
-2. AS收到请求之后，随机生成一个密码Kc, s(session key), 并生成以下两个票据返回给客户端：
-    1. 给客户端的票据，用客户端的密码加密，内容为随机密码，session，tgs_principal
-    2. 给tgs的票据，用tgs的密码加密，内容为随机密码，session，client_principal
-3. 客户端拿到了第二步中的两个票据后，首先用自己的密码解开票据，得到Kc、s，然后生成一个Authenticator，其中主要包括当前时间和Ts,c的校验码，并且用SessionKey Kc,s加密。之后客户端向tgs发起请求，内容包括:
-    1. Authenticator
-    2. 给tgs的票据同时发给服务器
-    3. server_principal
-4. TGS首先用自己的密码解开票据，拿到SessionKey Kc,s，然后用Kc,s解开Authenticator，并做如下检查
-    1. 检查Authenticator中的时间戳是不是在当前时间上下5分钟以内，并且检查该时间戳是否首次出现。如果该时间戳不是第一次出现，那说明有人截获了之前客户端发送的内容，进行Replay攻击。
-    2. 检查checksum是否正确
-    3. 如果都正确，客户端就通过了认证
-5. tgs生成一个session key组装两个票据给客户端
-    1. 用客户端和tgs的session key加密的票据，包含新生成的session key和server_principal
-    2. 用服务器的密码加密的票据，包括新生成的session key和client principal
-6. 客户端收到两个票据后，解开自己的，然后生成一个Authenticator，发请求给服务器，内容包括
-    1. Authenticator
-    2. 给服务器的票据
-7. 服务器收到请求后，用自己的密码解开票据，得到session key，然后用session key解开authenticator对可无端进行验证
-8. 服务器可以选择返回一个用session key加密的之前的是时间戳来完成双向验证
-9. 客户端通过解开消息，比较发回的时间戳和自己发送的时间戳是否一致，来验证服务器
+1. The client initiates a request to the AS, and the request content is: the client's principal, the bill authorization server's rincipal
+2. After the AS receives the request, it randomly generates a password Kc, s(session key), and generates the following two tickets to return to the client:
+1. The ticket to the client is encrypted with the client's password, and the content is a random password, session, tgs_principal
+2. The ticket to tgs is encrypted with the password of tgs, and the content is a random password, session, client_principal
+3. After the client gets the two bills in the second step, he first uses his own password to unbox the bills, obtain Kc and s, and then generates an Authenticator, which mainly includes the verification codes of the current time and Ts, c, and Encrypted with SessionKey Kc,s. Then the client initiates a request to tgs, including:
+1. Authenticator
+2. Send the ticket to tgs to the server at the same time
+3. server_principal
+4. TGS first unboxes the invoice with its own password, get the SessionKey Kc,s, and then unboxes the Authenticator with Kc,s, and do the following check
+1. Check whether the timestamp in Authenticator is within 5 minutes of the current time, and check whether the timestamp appears for the first time. If this timestamp is not the first time it appears, it means that someone intercepted the content sent by the client and carried out a Replay attack.
+2. Check if checksum is correct
+3. If all are correct, the client will pass the authentication
+5. tgs generates a session key to assemble two tickets to the client
+1. The tickets encrypted with the session key of the client and tgs, including the newly generated session key and server_principal
+2. Encrypted tickets with the server's password, including the newly generated session key and client principal
+6. After the client receives two tickets, it unties its own, then generates an Authenticator and sends a request to the server, including
+1. Authenticator
+2. Tickets to the server
+7. After the server receives the request, it uses its own password to unbox the invoice and gets the session key, and then unboxes the authenticator with the session key to verify it for no reason.
+8. The server can choose to return a time stamp encrypted with the session key to complete two-way verification.
+9. The client verifies the server by unpacking the message and comparing whether the sent back timestamp is consistent with the timestamp sent by itself.
 
-优缺点
+Pros and cons
 ----------------------------------------
 
-优点
+advantage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 密码不易被窃听
-- 密码不在网上传输
-- 密码猜测更困难
-- 票据被盗之后难以使用，因为需要配合认证头来使用
+- Passwords are not easy to be escaped
+- Password not transmitted online
+- Password guessing is more difficult
+- It is difficult to use after the bill is stolen because it needs to be used with the authentication header
 
-缺点
+shortcoming
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 缺乏撤销机制
-- 引入了复杂的密钥管理
-- 需要时钟同步
-- 伸缩性受限
+- Lack of revocation mechanism
+- Introduced complex key management
+- Requires clock synchronization
+- Restricted stretchability
 
-参考链接
+Reference link
 ----------------------------------------
 
-规范
+specification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `RFC 1510 The Kerberos Network Authentication Service <https://tools.ietf.org/html/rfc1510>`_
-- `Kerberos认证流程详解 <https://blog.csdn.net/jewes/article/details/20792021>`_
+- `Detailed explanation of Kerberos certification process <https://blog.csdn.net/jewes/article/details/20792021>`_
 
-攻击
+attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Delegate to the Top: Abusing Kerberos for arbitrary impersonations and RCE <https://www.blackhat.com/docs/asia-17/materials/asia-17-Hart-Delegate-To-The-Top-Abusing-Kerberos-For-Arbitrary-Impersonations-And-RCE-wp.pdf>`_
 - `Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94?redirectedfrom=MSDN>`_

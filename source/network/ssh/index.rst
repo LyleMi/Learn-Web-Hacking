@@ -2,8 +2,8 @@ SSH
 ========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   cve
-   ref
+cve
+ref

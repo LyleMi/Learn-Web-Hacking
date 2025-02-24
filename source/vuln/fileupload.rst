@@ -1,85 +1,85 @@
-文件上传
+File upload
 ========================================
 
-文件类型检测绕过
+File type detection bypass
 ----------------------------------------
 
-更改请求绕过
+Change request bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-有的站点仅仅在前端检测了文件类型，这种类型的检测可以直接修改网络请求绕过。
-同样的，有的站点在后端仅检查了HTTP Header中的信息，比如 ``Content-Type`` 等，这种检查同样可以通过修改网络请求绕过。
+Some sites only detect file types on the front end, and this type of detection can directly modify network requests bypass.
+Similarly, some sites only check the information in the HTTP Header on the backend, such as ``Content-Type``, etc., and this kind of check can also be bypassed by modifying network requests.
 
-Magic检测绕过
+Magic detection bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-有的站点使用文件头来检测文件类型，这种检查可以在Shell前加入对应的字节以绕过检查。几种常见的文件类型的头字节如下表所示
+Some sites use file headers to detect file types, and this kind of check can be added to the corresponding bytes before the shell to bypass the check. The header bytes of several common file types are shown in the following table
 
 ==============      ============================
-类型                二进制值
+Type Binary value
 ==============      ============================
 JPG                 FF D8 FF E0 00 10 4A 46 49 46
 GIF                 47 49 46 38 39 61
-PNG                 89 50 4E 47
-TIF                 49 49 2A 00
+PNG 89 50 47
+Spectrum 49 49 A 00
 BMP                 42 4D
 ==============      ============================
 
-后缀绕过
+Suffix bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-部分服务仅根据后缀、上传时的信息或Magic Header来判断文件类型，此时可以绕过。
+Some services only judge file types based on suffixes, information during uploading, or Magic Header, and can be bypassed at this time.
 
-php由于历史原因，部分解释器可能支持符合正则 ``/ph(p[2-7]?|t(ml)?)/`` 的后缀，如 ``php`` / ``php5`` / ``pht`` / ``phtml`` / ``shtml`` / ``pwml`` / ``phtm`` 等 可在禁止上传php文件时测试该类型。
+php Due to historical reasons, some interpreters may support suffixes that comply with the regular ``/ph(p[2-7]?|t(ml)?)/``, such as ``php``/``php5``/ ``pht`` / ``phtml`` / ``shtml`` / ``pwml`` / ``phtm`` etc. can test this type when uploading php files is prohibited.
 
-jsp引擎则可能会解析 ``jspx`` / ``jspf`` / ``jspa`` / ``jsw`` / ``jsv`` / ``jtml`` 等后缀，asp支持 ``asa`` / ``asax`` / ``cer`` / ``cdx`` / ``aspx`` / ``ascx`` / ``ashx`` / ``asmx`` / ``asp{80-90}`` 等后缀。
+The jsp engine may parse suffixes such as ``jspx``/`jspf``/`jspa``/`jsw``/`jsv``/`jtml``. Asp supports ``asa` `/ ``asax`` / ``cer`` / ``cdx`` / ``aspx`` / ``ascx`` / ``ashx`` / ``asmx`` / ``asp{80- 90}`` and other suffixes.
 
-除了这些绕过，其他的后缀同样可能带来问题，如 ``vbs`` / ``asis`` / ``sh`` / ``reg`` / ``cgi`` / ``exe`` / ``dll`` / ``com`` / ``bat`` / ``pl`` / ``cfc`` / ``cfm`` / ``ini`` 等。
+In addition to these bypasses, other suffixes can also cause problems, such as ``vbs`` / ``asis`` / ``sh`` / ``reg`` / ``cgi`` / ``exe`` / ``dll`` / ``com`` / ``bat`` / ``pl`` / ``cfc`` / ``cfm`` / ``ini`` etc.
 
-系统命名绕过
+System naming bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在Windows系统中，上传 ``index.php.`` 会重命名为 ``.`` ，可以绕过后缀检查。
-也可尝试 ``index.php%20`` ， ``index.php:1.jpg`` ``index.php::$DATA`` 等。
-在Linux系统中，可以尝试上传名为 ``index.php/.`` 或 ``./aa/../index.php/.`` 的文件
+On Windows systems, uploading ``index.php.` will be renamed to ``.``, and suffix checking can be bypassed.
+You can also try ``index.php%20`, ``index.php:1.jpg``````````, etc.
+In Linux systems, you can try uploading a file named ``index.php/.`` or ``./aa/../index.php/.``
 
 .user.ini
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在php执行的过程中，除了主 ``php.ini`` 之外，PHP 还会在每个目录下扫描 INI 文件，从被执行的 PHP 文件所在目录开始一直上升到 web 根目录（$_SERVER['DOCUMENT_ROOT'] 所指定的）。如果被执行的 PHP 文件在 web 根目录之外，则只扫描该目录。 ``.user.ini`` 中可以定义除了PHP_INI_SYSTEM以外的模式的选项，故可以使用 ``.user.ini`` 加上非php后缀的文件构造一个shell，比如 ``auto_prepend_file=01.gif`` 。
+During the execution of php, in addition to the main php.ini, PHP will also scan the INI file in each directory, starting from the directory where the executed PHP file is located and continues to the web root directory ($_SERVER[ 'DOCUMENT_ROOT'] specified). If the executed PHP file is outside the web root directory, only that directory is scanned. ``.user.ini`` can define options for patterns other than PHP_INI_SYSTEM, so you can use ``.user.ini`` to add non-php suffix files to construct a shell, such as ``auto_prepend_file=01.gif` ` .
 
-WAF绕过
+WAF bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-有的waf在编写过程中考虑到性能原因，只处理一部分数据，这时可以通过加入大量垃圾数据来绕过其处理函数。
+Some wafs only process part of the data during the writing process, and can bypass their processing functions by adding a large amount of junk data.
 
-另外，Waf和Web系统对 ``boundary`` 的处理不一致，可以使用错误的 ``boundary`` 来完成绕过。 
+In addition, Waf and Web systems handle ``boundary`` inconsistently, so you can use the wrong ``boundary`` to complete the bypass.
 
-竞争上传绕过
+Competition upload bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-有的服务器采用了先保存，再删除不合法文件的方式，在这种服务器中，可以反复上传一个会生成Web Shell的文件并尝试访问，多次之后即可获得Shell。
+Some servers use the method of saving first and then deleting illegal files. In this kind of server, you can upload a file that will generate a Web shell and try to access it. After multiple times, you can get the shell.
 
-攻击技巧
+Attack skills
 ----------------------------------------
 
-Apache重写GetShell
+Apache rewrites GetShell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache可根据是否允许重定向考虑上传.htaccess
+Apache can consider uploading.htaccess based on whether redirects are allowed
 
-内容为
+The content is
 
 ::
 
-    AddType application/x-httpd-php .png
-    php_flag engine 1
+AddType application/x-httpd-php .png
+php_flag engine 1
 
-就可以用png或者其他后缀的文件做php脚本了
+You can use png or other suffix files to make php scripts
 
-软链接任意读文件
+Read files at will with soft links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-上传的压缩包文件会被解压的文件时，可以考虑上传含符号链接的文件
-若服务器没有做好防护，可实现任意文件读取的效果
+When the uploaded compressed package file will be decompressed, you can consider uploading files with symbolic links.
+If the server is not protected properly, the effect of reading any file can be achieved.
 
-防护技巧
+Protection skills
 ----------------------------------------
-- 使用白名单限制上传文件的类型
-- 使用更严格的文件类型检查方式
-- 限制Web Server对上传文件夹的解析
+- Use whitelist to limit the types of uploaded files
+- Use stricter file type checking methods
+- Restrict Web Server to parse uploaded folders
 
-参考链接
+Reference link
 ----------------------------------------
-- `构造优质上传漏洞Fuzz字典 <https://www.freebuf.com/articles/web/188464.html>`_
+- `Constructing a high-quality upload vulnerability Fuzz dictionary <https://www.freebuf.com/articles/web/188464.html>`_

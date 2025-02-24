@@ -1,12 +1,12 @@
-相关漏洞
+Related vulnerabilities
 ----------------------------------------
 
-DNS劫持
+DNS Hijacking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNS劫持有多种方式，比较早期的攻击方式是通过攻击域名解析服务器，或是伪造DNS响应的方法，来将域名解析到恶意的IP地址。
+There are many ways to hijack DNS. The earlier attack method was to resolve the domain name to a malicious IP address by attacking the domain name resolution server or forging DNS responses.
 
-随着互联网应用的不断发展，出现了基于废弃记录的劫持方式。这种方式发生的场景是次级域名的解析记录指向第三方资源，而第三方资源被释放后，解析记录并没有取消，在这种场景下，可以对应申请第三方资源，以获取控制解析记录的能力。
+With the continuous development of Internet applications, hijacking methods based on abandoned records have emerged. The scenario in which this method occurs is that the secondary domain name resolution record points to the third-party resource. After the third-party resource is released, the resolution record is not cancelled. In this scenario, the corresponding application for third-party resources can be obtained to obtain the control analysis record ability.
 
-拒绝服务
+Denial of service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNS服务通常会开启UDP端口，当DNS服务器拥有大量二级域NS记录时，通过DNS的UDP反射攻击可以实现高倍的拒绝服务。
+DNS services usually open UDP ports. When the DNS server has a large number of secondary domain NS records, UDP reflection attacks through DNS can achieve high-power denial of service.

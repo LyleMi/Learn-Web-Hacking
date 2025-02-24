@@ -1,6 +1,6 @@
-零信任安全
+Zero trust security
 ========================================
 
-参考链接
+Reference link
 ----------------------------------------
-- `美国国防部零信任的支柱 <https://mp.weixin.qq.com/s/Fd0iKkGgE6Y1e81tP3MJFQ>`_
+- `The pillar of zero trust of the US Department of Defense <https://mp.weixin.qq.com/s/Fd0iKkGgE6Y1e81tP3MJFQ>`_

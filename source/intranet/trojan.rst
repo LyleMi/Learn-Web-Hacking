@@ -1,82 +1,82 @@
-后门技术
+Backdoor technology
 ========================================
 
-开发技术
+Development technology
 ----------------------------------------
-- 管控功能实现技术
-    - 系统管理：查看系统基本信息，进程管理，服务管理
-    - 文件管理：复制/粘贴文件，删除文件/目录，下载/上传文件等
-    - Shell管理
-    - 击键记录监控
-    - 屏幕截取
-    - 音频监控
-    - 视频监控
-    - 隐秘信息查看
-    - 移动磁盘的动态监控
-    - 远程卸载
-- 自启动技术
-    - Windows自启动
-        - 基于Windows启动目录的自启动
-        - 基于注册表的自启动
-        - 基于服务程序的自启动
-        - 基于ActiveX控件的自启动
-        - 基于计划任务（Scheduled Tasks）的自启动
-    - Linux自启动
-- 用户态进程隐藏技术
-    - 基于DLL插入的进程隐藏
-        - 远程线程创建技术
-        - 设置窗口挂钩（HOOK）技术
-    - 基于SvcHost共享服务的进程隐藏
-    - 进程内存替换
-- 数据穿透和躲避技术
-    - 反弹端口
-    - 协议隧道
-        - HTTP
-        - MSN
-        - Google Talk
-- 内核级隐藏技术（Rootkit）
-- 磁盘启动级隐藏技术（Bootkit）
-    - MBR
-    - BIOS
-    - NTLDR
-    - boot.ini
-- 还原软件对抗技术
+- Control function implementation technology
+- System management: view system basic information, process management, service management
+- File management: copy/paste files, delete files/directories, download/upload files, etc.
+- Shell Management
+- Keystroke logging monitoring
+- Screen capture
+- Audio monitoring
+- Video surveillance
+- View secret information
+- Dynamic monitoring of mobile disks
+- Remote uninstall
+- Self-start technology
+- Windows Self-boot
+- Self-booting based on Windows startup directory
+- Registry-based self-start
+- Self-start based on service program
+- Self-start based on ActiveX control
+- Self-start based on Scheduled Tasks
+- Linux self-boot
+- User-state process hiding technology
+- Process hiding based on DLL insertion
+- Remote thread creation technology
+- Setting up window hook (HOOK) technology
+- Process hiding based on SvcHost shared service
+- Process memory replacement
+- Data penetration and evasion technology
+- Rebound port
+- Protocol Tunnel
+- HTTP
+- MSN
+- Google Talk
+- Kernel-level hidden technology (Rootkit)
+- Disk boot-level hidden technology (Bootkit)
+- MBR
+- BIOS
+- NTLDR
+- boot.ini
+- Restore software confrontation technology
 
-后门免杀
+No killing at the back door
 ----------------------------------------
-- 传统静态代码检测
-    - 加壳
-    - 添加花指令
-    - 输入表免杀
-- 启发式代码检测
-    - 动态函数调用
-- 云查杀
-    - 动态增大自身体积
-    - 更改云查杀服务器域名解析地址
-    - 断网
-    - 利用散列碰撞绕过云端“白名单”
-- 攻击主防杀毒软件
-    - 更改系统时间
-    - 窗口消息攻击
-    - 主动发送IRP操纵主防驱动
-- 利用证书信任
-    - 盗取利用合法证书
-    - 利用散列碰撞伪造证书
-    - 利用合法程序 DLL劫持问题的“白加黑”
+- Traditional static code detection
+- Add shell
+- Add flower instruction
+- Entry table without killing
+- Heuristic code detection
+- Dynamic function calls
+- Yunchao Kill
+- Dynamically increase your body volume
+- Change the domain name resolution address of the cloud check server
+- Disconnected
+- Bypass the cloud's "whitelist" using hash collisions
+- Attack the main anti-virus software
+- Change system time
+- Window message attack
+- Actively send IRP to control the main anti-driver
+- Utilize certificate trust
+- Stealing and exploiting legal certificates
+- Forge certificates using hash collision
+- "White and Black" of DLL hijacking problems using legal procedures
 
-检测技术
+Testing technology
 ----------------------------------------
-- 基于自启动信息的检测
-- 基于进程信息的检测
-- 基于数据传输的检测
-- Rootkit/Bootkit的检测
+- Detection based on self-start information
+- Process information-based detection
+- Data transmission-based detection
+- Rootkit/Bootkit detection
 
-后门分析
+Backdoor analysis
 ----------------------------------------
-- 动态分析
-- 静态分析
-    - 反病毒引擎扫描
-    - 文件格式识别
-    - 文件加壳识别及脱壳
-    - 明文字符串查找
-    - 链接库及导入/导出函数分析
+- Dynamic Analysis
+- Static analysis
+- Anti-virus engine scanning
+- File format recognition
+- File shelling identification and shelling
+- plain text string search
+- Link library and import/export function analysis

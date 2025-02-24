@@ -1,11 +1,11 @@
-Web持久化
+Web endurance
 ========================================
 
-WebShell管理工具
+WebShell Management Tools
 ----------------------------------------
-- `菜刀 <https://github.com/Chora10/Cknife>`_
+- `Cooker Knife <https://github.com/Chora10/Cknife>`_
 - `antSword <https://github.com/antoor/antSword>`_
-- `冰蝎 <https://github.com/rebeyond/Behinder>`_ 动态二进制加密网站管理客户端
+- `Ice Scorpion <https://github.com/rebeyond/Behinder>`_ Dynamic binary encryption website management client
 - `weevely3 <https://github.com/epinna/weevely3>`_ Weaponized web shell
 - `Altman <https://github.com/keepwn/Altman>`_ the cross platform webshell tool in .NET
 - `Webshell Sniper <https://github.com/WangYihang/Webshell-Sniper>`_ Manage your website via terminal
@@ -21,7 +21,7 @@ WebShell
 - `JSP Webshells <https://github.com/threedr3am/JSP-Webshells>`_
 - `MemShellDemo <https://github.com/jweny/MemShellDemo>`_
 
-Web后门
+Web backdoor
 ----------------------------------------
 - `pwnginx <https://github.com/t57root/pwnginx>`_
 - `Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-Module-Backdoor>`_

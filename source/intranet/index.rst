@@ -1,9 +1,9 @@
-内网渗透
+Intranet penetration
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    windows/index
    linux/index

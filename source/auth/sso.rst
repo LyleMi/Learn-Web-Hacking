@@ -1,34 +1,34 @@
 SSO
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-单点登录(SingleSignOn，SSO)指一个用户可以通过单一的ID和凭证（密码）访问多个相关但彼此独立的系统。
+Single Sign-On (SSO) refers to a user who can access multiple related but independent systems through a single ID and credentials (password).
 
-常见流程
+Common Processes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1. 用户(User)向服务提供商(Service Provider)发起请求
-2. SP重定向User至SSO身份校验服务(Identity Provider)
-3. User通过IP登录
-4. IP返回凭证给User
-5. User将凭证发给SP
-6. SP返回受保护的资源给用户
+1. The user initiates a request to the service provider
+2. SP redirects User to SSO identity verification service (Identity Provider)
+3. User logs in via IP
+4. The IP returns the credentials to User
+5. User sends the credentials to SP
+6. SP returns protected resources to users
 
-其中凭证要有以下属性
+The credential must have the following attributes
 
-- 签发者的签名
-- 凭证的身份
-- 使用的时间
-    - 过期时间
-    - 生效时间
+- The signature of the issuer
+- Identity of the credentials
+- Time of use
+- Expiration time
+- Effective time
 
-可能的攻击/漏洞
+Possible attacks/vulnerabilities
 ----------------------------------------
 
-信息泄漏
+Information leakage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-若SP和IP之前使用明文传输信息，可能会被窃取。
+If the SP and IP are previously transmitted using plaintext, it may be stolen.
 
-伪造
+Forged
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-如果在通信过程中没有对关键信息进行签名，容易被伪造。
+If the key information is not signed during the communication process, it is easy to be forged.

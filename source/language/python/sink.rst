@@ -1,26 +1,26 @@
 Sink
 ================================
 
-命令执行
+Command execution
 --------------------------------
 - asyncio.new_event_loop().subprocess_exec
 - asyncio.subprocess
-- bdb.os
-- cgi.os.system
+- BDB.os
+- CGI.os.SYSTEM
 - cgi.sys
 - code.InteractiveInterpreter
 - commands
-- ctypes.CDLL
+- ctypes.cdll
 - eval
 - exec
-- execfile
+- Execfile
 - input // python2 only
 - os.exec
 - os.exec*
-- os.fork
-- os.popen
+- OS.FORK
+- Os.PoPen
 - os.spawn
-- os.system
+- OSSYSTEM
 - platform.os
 - platform.popen
 - platform.sys
@@ -29,28 +29,28 @@ Sink
 - pty.spawn
 - subprocess
 - timeit.sys
-- timeit.timeit
+- TIMIMIT.TIMEIT
 - typing.get_type_hints() + ``__annotations__``
 - ...
 
-文件读取
+File reading
 --------------------------------
 - open
 - os.open
-- urllib.request.urlopen('file:///')
+- urllib.request.urlopen ('File: ///')
 - codecs.open
 - fileinput
-- 仅Python2
-    - types.FileType
+- Python2 only
+- types.FileType
 
-危险第三方库
+Dangerous third-party library
 --------------------------------
 - Template
-- subprocess32 
+- subprocess32
 
-反序列化
+Deserialization
 --------------------------------
-- marshal
+- Marshal
 - PyYAML
 - pickle
 - cPickle

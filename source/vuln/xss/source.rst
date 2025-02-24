@@ -1,4 +1,4 @@
-XSS数据源
+XSS data source
 ========================================
 
 URL
@@ -9,7 +9,7 @@ URL
 - ``location.search``
 - ``location.hash``
 - ``document.URL``
-- ``document.documentURI``
+- `` document.documenturi``
 - ``document.baseURI``
 
 Navigation

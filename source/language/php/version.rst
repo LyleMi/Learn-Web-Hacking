@@ -1,59 +1,59 @@
-版本安全改动
+Version security changes
 ========================================
 
 8.0
 ----------------------------------------
-- 字符串与数字弱类型比较将首先将数字转为字符串，然后比较两个字符串
-- 内部参数内省错误时抛出异常而不是警告
-- ``assert`` 不再支持执行代码
-- 移除 ``create_function``
-- 移除 ``mb_ereg_replace()`` 中的e模式
-- Phar中的元信息不再自动进行反序列化
-- ``parse_str`` 必须传入第二个参数
-- 移除 ``php://filter`` 中的 ``string.strip_tags``
+- Comparison of string vs. number weak type will first convert the number to string and then compare two strings
+-Exception throws instead of warning when introspecting errors in internal parameters
+- ``assert`` no longer supports code execution
+- Remove ``create_function``
+- Remove the e-mode in ``mb_ereg_replace()``
+- Meta-information in Phar is no longer automatically deserialized
+-`parse_str`` must be passed in the second parameter
+- Remove ``string.strip_tags`` in ``php://filter``
 
 7.2
 ----------------------------------------
-- 不带引号的字符串 会产生 E_WARNING
-- create_function 被废弃
-- assert 不能传入字符串表达式
-- 不带第二个参数的情况下使用 parse_str() 会产生 E_DEPRECATED 警告
-- __autoload() 被废弃
+- String without quotes will produce E_WARNING
+- create_function abandoned
+- assert cannot pass in string expressions
+- Using parse_str() without the second parameter will generate an E_DEPRECATED warning
+- __autoload() is abandoned
 
 7.1
 ----------------------------------------
-- 调用用户定义的函数提供的参数不足会抛出错误异常而不是警告
-- 在不完整的对象上不再调用析构方法
-- call_user_func() 不再支持对传址的函数的调用
-- mb_ereg_replace() 和 mb_eregi_replace() 的e模式修饰符被废弃
-- ext/mcrypt 被废弃
+- Insufficient parameters provided by calling user-defined functions will throw an error exception instead of a warning
+- No more destructors are called on incomplete objects
+- call_user_func() no longer supports calls to addressed functions
+- The e-pattern modifiers for mb_ereg_replace() and mb_ereg_replace() are discarded
+- ext/mcrypt is abandoned
 
 7.0
 ----------------------------------------
-- preg_replace "\e" 修饰符 产生 E_WARNING 错误 且失效
-- 移除 所有 ext/mysql 函数
-- 移除 所有 ext/mssql 函数
-- 移除 call_user_method() 和 call_user_method_array() 
-- foreach 不再改变内部数组指针
--  在之前，一个八进制字符如果含有无效数字，该无效数字将被静默删节 ( 0128 将被解析为 012)，现在这样的八进制字符将产生解析错误
-- 十六进制字符串不再被认为是数字
-- dl() 在 PHP-FPM 不再可用，在 CLI 和 embed SAPIs 中仍可用
-- 移除 ASP 和 script PHP 标签，即 ``<% %>`` / ``<%= %>`` / ``<script language="php"> </script>``
-- 在数值溢出的时候，内部函数将会失败
-- $HTTP_RAW_POST_DATA 被移除
+- preg_replace " " modifier generates an E_WARNING error and is invalid
+- Remove all ext/mysql functions
+- Remove all ext/mssql functions
+- Remove call_user_method() and call_user_method_array()
+- foreach no longer changes internal array pointers
+- Previously, if an octal character contains an invalid number, the invalid number will be silently abridged (0128 will be parsed as 012), and now such an octal character will produce a parsing error
+- Hexadecimal strings are no longer considered as numbers
+- dl() is no longer available in PHP-FPM, and is still available in CLI and embedded SAPIs
+- Remove ASP and script PHP tags, i.e. ``<% %>`` / ``<%= %>`` / ``<script language="php"> </script>``
+- When the value overflows, the internal function will fail
+- $HTTP_RAW_POST_DATA was removed
 
 5.6
 ----------------------------------------
-- $HTTP_RAW_POST_DATA 被废弃
-- 必须先设置 CURLOPT_SAFE_UPLOAD 为 FALSE 才能够使用 @file 语法来上传文件
+- $HTTP_RAW_POST_DATA is abandoned
+- CURLOPT_SAFE_UPLOAD must be set to FALSE before you can use the @file syntax to upload files
 
 5.5
 ----------------------------------------
-- preg_replace "\e" 修饰符 产生 E_DEPRECATED 错误
-- 废弃 ``mysql_*`` 系列函数
+- preg_replace " " modifier generates E_DEPRECATED error
+- Abandoned ``mysql_*` series functions
 
 5.4
 ----------------------------------------
-- 不再支持 安全模式
-- 移除 魔术引号
-- 数组转换成字符串将产生一条 E_NOTICE 级别的错误
+- Safe mode is no longer supported
+- Remove Magic Quotes
+- Converting an array into a string will produce an E_NOTICE level error

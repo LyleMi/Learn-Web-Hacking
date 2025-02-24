@@ -1,31 +1,31 @@
-安全加固
+Safety reinforcement
 ----------------------------------------
-- 最小安装
-    - 删除所有开发工具（编译器等）
-- 更新系统源
-- 启用 AppArmor
-- 启用 SELinux
-- 限制运行容器的内核功能
-- 移除依赖构建
-- 配置严格的网络访问控制策略
-- 不使用root用户启动docker
-- 不以privileged特权模式运行容器
-- 控制资源
-    - CPU Share
-    - CPU 核数
-    - 内存资源
-    - IO 资源
-    - 磁盘资源
-    - 硬件资源
-    - 单位时间内进程数量上限
-- 使用安全的基础镜像
-- 定期安全扫描和更新补丁
-- 删除镜像中的 setuid 和 setgid 权限
-    - ``RUN find / -perm +6000-type f-exec chmod a-s {} \;|| true``
-- 配置Docker守护程序的TLS身份验证
-- 如非必要 禁止容器间通信
+- Minimum installation
+- Remove all development tools (compiler, etc.)
+- Update system source
+- Enable AppArmor
+- Enable SELinux
+- Limit kernel functionality to run containers
+- Remove dependency build
+- Configure strict network access control policies
+- Start docker without using root user
+- Do not run containers in privileged mode
+- Control resources
+- CPU Share
+- CPU core count
+- Memory resources
+- IO resources
+- Disk resources
+- Hardware resources
+- Upper limit on the number of processes per unit time
+- Use safe basic mirroring
+- Regular security scans and updates to patches
+- Remove setuid and setgid permissions in the image
+- ``RUN find / -perm +6000-type f-exec chmod a-s {} \;|| true``
+- Configure TLS authentication for Docker daemon
+- If necessary, prohibit communication between containers
 - rootless Docker
-    - https://get.docker.com/rootless
-- 使用 Seccomp 限制 syscall
-- 构建环境和在线环境分开
-- 证书校验
+- https://get.docker.com/rootless
+- Use Seccomp to limit syscall
+- Separate build environment and online environment
+- Certificate verification

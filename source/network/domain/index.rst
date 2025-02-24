@@ -1,15 +1,15 @@
-域名系统
+Domain Name System
 ========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   basic
-   sec
-   tech
-   rdap
-   attack
-   org
-   terminology
-   ref
+basic
+sec
+tech
+rdap
+attack
+org
+terminology
+ref

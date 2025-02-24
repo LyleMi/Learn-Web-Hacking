@@ -1,32 +1,32 @@
-绕过技巧
+Bypassing Tips
 ================================
 
-- 编码绕过
-    - 大小写
-    - url编码
-    - html编码
-    - 十六进制编码
-    - unicode编码
-- 注释
-    - ``//`` ``--`` ``-- +`` ``-- -`` ``#`` ``/**/`` ``;%00``
-    - 内联注释用的更多，它有一个特性 ``/!**/`` 只有MySQL能识别
-    - e.g. ``index.php?id=-1 /*!UNION*/ /*!SELECT*/ 1,2,3``
-- 只过滤了一次时
-    - ``union`` => ``ununionion``
-- 相同功能替换
-    - 函数替换
-        - ``substring`` / ``mid`` / ``sub``
-        - ``ascii`` / ``hex`` / ``bin``
-        - ``benchmark`` / ``sleep``
-    - 变量替换
-        - ``user()`` / ``@@user``
-    - 符号和关键字
-        - ``and`` / ``&``
-        - ``or`` / ``|``
-- HTTP参数
-    - HTTP参数污染
-        - ``id=1&id=2&id=3`` 根据容器不同会有不同的结果
-    - HTTP分割注入
-- 缓冲区溢出
-    - 一些C语言的WAF处理的字符串长度有限，超出某个长度后的payload可能不会被处理
-- 二次注入有长度限制时，通过多句执行的方法改掉数据库该字段的长度绕过
+- Encoding bypass
+- upper and lower case
+- url encoding
+- html encoding
+- Hexadecimal encoding
+- unicode encoding
+- Comments
+- ``//`` ``--`` ``-- +`` ``-- -`` ``#`` ``/**/`` ``;%00``
+- Inline comments are used more, it has a feature ``/!**/`` Only MySQL can recognize it
+- e.g. ``index.php?id=-1 /*!UNION*/ /*!SELECT*/ 1,2,3``
+- Only filtered once
+- `` Union`` => `` UNUNUNionion``
+- Same function replacement
+- Function replacement
+- ``substring`` / ``mid`` / ``sub``
+- ``ascii`` / ``hex`` / ``bin``
+- ``benchmark`` / ``sleep``
+- Variable replacement
+- ``user()`` / ``@@user``
+- Symbols and keywords
+- ``and`` / ``&``
+- ``or`` / ``|``
+- HTTP parameters
+- HTTP parameter pollution
+- ``id=1&id=2&id=3``There will be different results depending on the container
+- HTTP segmentation injection
+- Buffer overflow
+- Some C languages WAF process strings with limited length, payloads beyond a certain length may not be processed
+- When the secondary injection has a length limit, change the length of the database bypassing by multiple sentences

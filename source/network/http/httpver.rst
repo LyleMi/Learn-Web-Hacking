@@ -1,32 +1,32 @@
-HTTP 版本
+HTTP Version
 ========================================
 
 HTTP
 ----------------------------------------
-HTTP 是基于 TCP/IP 协议的应用层协议，主要规定了客户端和服务器之间的通信格式，默认使用80端口。
+HTTP is an application-layer protocol based on the TCP/IP protocol. It mainly specifies the communication format between the client and the server, and uses port 80 by default.
 
 HTTP 0.9
 ----------------------------------------
-HTTP 0.9最早在1991年发布，仅支持GET命令，请求格式只有简单的 ``GET /url`` ，服务端仅响应HTML，响应完毕后关闭TCP连接。
+HTTP 0.9 was first released in 1991 and only supports GET commands. The request format is only a simple ``GET /url`` . The server only responds to HTML and closes the TCP connection after the response is completed.
 
 HTTP 1.0
 ----------------------------------------
-1996年5月，HTTP/1.0 版本发布，丰富了传输的格式和内容，还引入了POST、HEAD两个动词。从1.0开始，必须在尾部添加协议版本。在1.0中，也引入了状态码(status code)、多字符集支持、多部分发送(multi-part type)、权限(authorization)、缓存(cache)、内容编码(content encoding)等内容。
+In May 1996, the HTTP/1.0 version was released, enriching the format and content of the transmission, and introducing two verbs POST and HEAD. Starting from 1.0, a protocol version must be added at the tail. In 1.0, status code, multi-character set support, multi-part type, authorization, cache, content encoding, etc. are also introduced.
 
-HTTP 1.0 版的主要缺点是，每个TCP连接只能发送一个请求。发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接。
+The main disadvantage of HTTP version 1.0 is that only one request can be sent per TCP connection. After sending the data, the connection is closed. If you want to request other resources, you must create another connection.
 
-TCP连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢(slow start)，所以，HTTP 1.0版本的性能比较差。
+The cost of creating a new TCP connection is very high because the client and server need to shake hands three times, and the sending rate is slow start at the beginning, so the performance of HTTP 1.0 version is relatively poor.
 
 HTTP 1.1
 ----------------------------------------
-1997年1月，HTTP/1.1 版本发布，进一步完善了 HTTP 协议。1.1版本主要是引入了持久连接、管道机制、Content-Length、分块传输编码等内容。管道机制即在同一个TCP连接里面，客户端可以同时发送多个请求，这样就改进了HTTP协议的效率。PUT、PATCH、HEAD、 OPTIONS、DELETE等动词方法也是在HTTP 1.1版本引入的。另外1.1版本新增了Host字段，用于指定服务器的域名，这也是后来虚拟主机得以发展的基础。
+In January 1997, the HTTP/1.1 version was released, further improving the HTTP protocol. Version 1.1 mainly introduces persistent connections, pipeline mechanisms, Content-Length, block transmission encoding and other contents. The pipeline mechanism is that in the same TCP connection, the client can send multiple requests at the same time, which improves the efficiency of the HTTP protocol. Verb methods such as PUT, PATCH, HEAD, OPTIONS, DELETE, etc. were also introduced in HTTP 1.1 version. In addition, the Host field was added in version 1.1 to specify the domain name of the server, which is also the basis for the development of virtual hosts later.
 
-虽然1.1版允许复用TCP连接，但是同一个TCP连接里面，所有的数据通信是按次序进行的。服务器只有处理完一个回应，才会进行下一个回应。如果有一个请求很慢，就会阻塞后面的请求。
+Although version 1.1 allows multiplexing of TCP connections, all data communications in the same TCP connection are carried out in order. The server will only make the next response after processing one response. If there is a request that is very slow, it will block the subsequent request.
 
-SPDY
+Spdy
 ----------------------------------------
-2009年，谷歌公开了自行研发的 SPDY 协议，用于解决 HTTP/1.1 效率不高的问题，而后被当做 HTTP/2 的基础。
+In 2009, Google disclosed its own SPDY protocol to solve the problem of low HTTP/1.1 efficiency, and was then used as the basis of HTTP/2.
 
 HTTP/2
 ----------------------------------------
-2015年，HTTP/2 发布，HTTP/2是一个二进制协议，头信息和数据体都是二进制，统称为帧(frame)，帧分为头信息帧和数据帧。HTTP/2 复用TCP连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序回应。
+In 2015, HTTP/2 was released. HTTP/2 is a binary protocol. The header information and data body are both binary, collectively called frames. The frames are divided into header information frames and data frames. HTTP/2 Multiplexing TCP connections. In one connection, both the client and the browser can send multiple requests or responses at the same time, without responding in sequence.

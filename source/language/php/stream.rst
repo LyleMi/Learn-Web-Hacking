@@ -1,91 +1,91 @@
-PHP流
+PHP Streaming
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-流（Streams）的概念是在php 4.3引入的，是对流式数据的抽象，用于统一数据操作，比如文件数据、网络数据、压缩数据等。
+The concept of Streams was introduced in PHP 4.3. It is an abstraction of streaming data and is used to unify data operations, such as file data, network data, compressed data, etc.
 
-流可以通过file、open、fwrite、fclose、file_get_contents、
-file_put_contents等函数操作。
+The stream can be passed through file, open, fwrite, fclose, file_get_contents,
+Function operations such as file_put_contents.
 
-封装协议
+Packaging protocol
 ----------------------------------------
-PHP 带有很多内置 URL 风格的封装协议，可用于类似 fopen()、 copy()、 file_exists() 和 filesize() 的文件系统函数。支持的协议可用 ``stream_get_wrappers()`` 查看。
+PHP comes with many built-in URL-style encapsulation protocols that can be used for file system functions like fopen(), copy(), file_exists(), and filesize(). Supported protocols are available for viewing ``stream_get_wrappers().
 
-- ``file://`` 访问本地文件系统
-- ``http://`` 访问 HTTP(s) 网址
-- ``ftp://`` 访问 FTP(s) URLs
-- ``php://`` 访问各个输入/输出流（I/O streams）
-- ``zlib://`` 压缩流
-- ``data://`` 数据（RFC 2397）
-- ``glob://`` 查找匹配的文件路径模式
-- ``phar://`` PHP 归档
+- ``file://`` access to the local file system
+- ``http://`` access HTTP(s) URL
+- ``ftp://`` access to FTP(s) URLs
+- ``php://`` access to individual input/output streams (I/O streams)
+- ``zlib://`` compressed stream
+- ``data://`` data (RFC 2397)
+- ``glob://`` Find matching file path pattern
+- ``phar://`` PHP Archive
 - ``ssh2://`` Secure Shell 2
-- ``rar://`` RAR
-- ``ogg://`` 音频流
-- ``expect://`` 处理交互式的流
+- `` RAR: // `` RAR
+- ``ogg://`` Audio Streaming
+- ``expect://`` handles interactive streams
 
-PHP支持流
+PHP supports streaming
 ----------------------------------------
-PHP 提供了一些输入/输出（IO）流，允许访问 PHP 的输入输出流、标准输入输出和错误描述符，内存中、磁盘备份的临时文件流以及可以操作其他读取写入文件资源的过滤器。 
+PHP provides some input/output (IO) streams that allow access to PHP's input/output streams, standard input/output and error descriptors, temporary file streams for in-memory and disk backups, and other filters that can operate on read and write file resources. .
 
-需要注意的是，流不受 ``allow_url_fopen`` 限制，但是 ``php://input``、 ``php://stdin``、 ``php://memory`` 和 ``php://temp`` 受限于 ``allow_url_include`` 。
+It should be noted that streams are not restricted by ````````````, ``php://stdin``, ``php://memory`` and ``php: //temp`` is limited by ``````` .
 
-输入输出流
+Input and Output Stream
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-``php://stdin`` 、 ``php://stdout`` 和 ``php://stderr`` 允许直接访问 PHP 进程相应的输入或者输出流。数据流引用了复制的文件描述符，所以如果在打开 ``php://stdin`` 并在之后关了它，仅是关闭了复制品，真正被引用的 STDIN 并不受影响。
+``php://stdin``, ``php://stdout`` and ``php://stderr`` allow direct access to the corresponding input or output streams of the PHP process. The data stream references the copied file descriptor, so if you open ``php://stdin`` and close it afterwards, just close the copy, the STDIN that is actually referenced is not affected.
 
-其中 ``php://stdin`` 是只读的， ``php://stdout`` 和 ``php://stderr`` 是只写的。 
+where `php://stdin` is read-only, `php://stdout`` and `php://stderr`` are write-only.
 
 fd
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-php://fd 允许直接访问指定的文件描述符。例如 ``php://fd/3`` 引用了文件描述符 3。 
+php://fd allows direct access to the specified file descriptor. For example, ``php://fd/3`` refers to file descriptor 3.
 
 memory与temp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-``php://memory`` 和 ``php://temp`` 是一个类似文件包装器的数据流，允许读写临时数据。两者的唯一区别是 ``php://memory`` 总是把数据储存在内存中，而 ``php://temp`` 会在内存量达到预定义的限制后（默认是 2MB）存入临时文件中。临时文件位置的决定和 ``sys_get_temp_dir()`` 的方式一致。
+``php://memory`` and ``php://temp`` are data streams similar to file wrappers that allow temporary data to be read and written. The only difference between the two is that `php://memory` always stores data in memory, while `php://temp`` will store after the amount of memory reaches the predefined limit (default is 2MB) Enter the temporary file. The decision on the location of the temporary file is consistent with the ``sys_get_temp_dir()``.
 
-``php://temp`` 的内存限制可通过添加 ``/maxmemory:NN`` 来控制，NN 是以字节为单位、保留在内存的最大数据量，超过则使用临时文件。 
+The memory limit of ``php://temp`` can be controlled by adding ``/maxmemory:NN``, which is the maximum amount of data retained in memory in units of bytes, and if it exceeds it, a temporary file will be used.
 
 input
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-``php://input`` 是个可以访问请求的原始数据的只读流。 POST 请求的情况下，最好使用 ``php://input`` 来代替 ``$HTTP_RAW_POST_DATA``，因为它不依赖于特定的 php.ini 指令。而且，这样的情况下 ``$HTTP_RAW_POST_DATA`` 默认没有填充，比激活 ``always_populate_raw_post_data`` 潜在需要更少的内存。 ``enctype="multipart/form-data"`` 的时候 ``php://input`` 是无效的。 
+``php://input`` is a read-only stream that can access the requested raw data. In case of POST requests, it is best to use ``php://input`` instead of ``$HTTP_RAW_POST_DATA`` because it does not depend on the specific php.ini directive. Moreover, in this case ``$HTTP_RAW_POST_DATA`` is not populated by default, potentially requiring less memory than Activating ``always_populate_raw_post_data`. ````````````` is invalid when ``````````.
 
 filter
 ----------------------------------------
-``php://filter`` 是一种元封装器，设计用于数据流打开时的筛选过滤应用。PHP默认提供了一些流过滤器，除此之外，还可以使用各种自定义过滤器。
+``php://filter`` is a meta wrapper designed for filtering applications when data streams are opened. PHP provides some stream filters by default, in addition to this, various custom filters can be used.
 
-filter有resource, read, write三个参数，resource参数是必须的。它指定了你要筛选过滤的数据流。 read和write是可选参数，可以设定一个或多个过滤器名称，以管道符（|）分隔。
+The filter has three parameters: resource, read, and write, and the resource parameter is required. It specifies the data stream you want to filter. read and write are optional parameters that can set one or more filter names, separated by pipe characters (|).
 
-过滤器列表
+Filter list
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-可以通过 ``stream_get_filters()`` 获取已经注册的过滤器列表。其中PHP内置的过滤器如下：
+You can get the registered filter list through ``stream_get_filters()`. Among them, the built-in filters of PHP are as follows:
 
-- 字符串过滤器
-    - string.rot13
-    - string.toupper
-    - string.tolower
-    - string.strip_tags
-- 转换过滤器
-    - convert.base64-encode
-    - convert.base64-decode
-    - convert.quoted-printable-encode
-    - convert.quoted-printable-decode
-    - convert.iconv.*
-- 压缩过滤器
-    - zlib.deflate
-    - zlib.inflate
-    - bzip2.compress
-    - bzip2.decompress
-- 加密过滤器
-    - mcrypt.``ciphername``
-    - mdecrypt.``ciphername``
+- String filter
+- string.rot13
+- string.toupper
+- string.tolower
+- string.strip_tags
+- Convert filter
+- convert.base64-encode
+- convert.base64-decode
+- convert.quoted-printable-encode
+- convert.quoted-printable-decode
+- convert.iconv.*
+- Compression filter
+- zlib.deflate
+- zlib.inflate
+- bzip2.compress
+- bzip2.decompress
+- Encryption filter
+- mcrypt.``ciphername``
+- mdecrypt.``ciphername``
 
-过滤器利用tricks
+Filters utilize tricks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- LFI
-    - ``php://filter/convert.base64-encode/resource=index.php``
-- XXE读取文件时会因而解析报错，可用base64编码
-- base64编码会弃掉未在码表内的字符，可用于绕过一些文件格式
-- 部分 convert 会有大量的资源消耗，可用作DoS
-- rot13 / convert 转换 过WAF
+- life
+- ``php://filter/convert.base64-encode/resource=index.php``
+- XXE will parse and report errors when reading files, and can be encoded at base64
+- Base64 encoding will discard characters that are not in the code table and can be used to bypass some file formats
+- Some converts will consume a lot of resources and can be used as DoS
+- rot13/convert convert to WAF

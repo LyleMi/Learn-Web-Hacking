@@ -1,7 +1,7 @@
 Sink
 ===================================================
 
-执行JavaScript
+Execute JavaScript
 ---------------------------------------------------
 - ``eval(payload)``
 - ``setTimeout(payload, 100)``
@@ -10,14 +10,14 @@ Sink
 - ``<script>payload</script>``
 - ``<img src=x onerror=payload>``
 
-加载URL
+Load URL
 ---------------------------------------------------
 - ``location=javascript:alert(/xss/)``
 - ``location.href=javascript:alert(/xss/)``
 - ``location.assign(javascript:alert(/xss/))``
 - ``location.replace(javascript:alert(/xss/))``
 
-执行HTML
+Execute HTML
 ---------------------------------------------------
 - ``xx.innerHTML=payload``
 - ``xx.outerHTML=payload``

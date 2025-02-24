@@ -1,36 +1,36 @@
-社会工程学
+Social Engineering
 ========================================
 
-企业信息收集
+Corporate information collection
 ----------------------------------------
-一些网站如天眼查等，可以提供企业关系挖掘、工商信息、商标专利、企业年报等信息查询，可以提供企业的较为细致的信息。
+Some websites such as Tianyan Check can provide information inquiries such as corporate relationship mining, industrial and commercial information, trademark patents, and corporate annual reports, and can provide more detailed information about the company.
 
-公司主站中会有业务方向、合作单位等信息。
+There will be information on business directions, cooperative units and other information on the company's main website.
 
-人员信息收集
+Personnel information collection
 ----------------------------------------
-针对人员的信息收集考虑对目标重要人员、组织架构、社会关系的收集和分析。其中重要人员主要指高管、系统管理员、开发、运维、财务、人事、业务人员的个人电脑。
+Information collection for personnel is considered to collect and analyze targeted important personnel, organizational structures, and social relations. Among them, important personnel mainly refer to the personal computers of senior executives, system administrators, development, operation and maintenance, finance, personnel, and business personnel.
 
-人员信息收集较容易的入口点是网站，网站中可能包含网站的开发、管理维护等人员的信息。从网站联系功能中和代码的注释信息中都可能得到的所有开发及维护人员的姓名和邮件地址及其他联系方式。
+The entry point for collecting personnel information is easier to use is the website, which may contain information about personnel such as website development, management and maintenance. The names and email addresses and other contact information of all developers and all contact information that can be obtained from the comment information of the website contact function and code.
 
-在获取这些信息后，可以在Github/Linkedin等社交、招聘网站中进一步查找这些人在互联网上发布的与目标站点有关的一切信息，分析并发现有用的信息。
+After obtaining this information, you can further find all the information about the target site posted by these people on the Internet on social and recruitment websites such as Github/Linkedin, and analyze and discover useful information.
 
-此外，可以对获取到的邮箱进行密码爆破的操作，获取对应的密码。
+In addition, the obtained email can be blasted by password to obtain the corresponding password.
 
-钓鱼
+fishing
 ----------------------------------------
-基于之前收集到的信息，可以使用Office/CHM/RAR/EXE/快捷方式等文件格式制作钓鱼邮件发送至目标，进一步收集信息。
+Based on the information collected before, you can use file formats such as Office/CHM/RAR/EXE/shortcuts to create phishing emails to send to the target to further collect information.
 
-其中Office可以使用Office漏洞、宏、OLE对象、PPSX等方式构造利用文件。
+Among them, Office can use Office vulnerabilities, macros, OLE objects, PPSX and other methods to construct utilization files.
 
-Exe可以使用特殊的Unicode控制字符如RLO (Right-to-Left Override) 等来构建容易混淆的文件名。
+Exe can use special Unicode control characters such as RLO (Right-to-Left Override) to build confusing file names.
 
-RAR主要是利用自解压等方式来构建恶意文件，同样加密的压缩包也在一定程度上可以逃逸邮件网关的检测。
+RAR mainly uses self-decompression and other methods to build malicious files. Similarly, encrypted compressed packages can escape the detection of the email gateway to a certain extent.
 
-如果前期信息收集获取到了运维等人员的邮箱，可以使用运维人员的邮箱发送，如果未收集到相关的信息，可以使用伪造发送源的方式发送邮件。
+If the email address of operation and maintenance personnel is obtained during the early collection of information, it can be sent using the email address of operation and maintenance personnel. If no relevant information is collected, the email address can be sent using the method of forged sending sources.
 
-需要注意的是，钓鱼测试也需要注意合规问题，不能冒充监管单位、不能发送违法违规信息。具体可以参考《中华人民共和国电信条例》、《中华人民共和国互联网电子邮件服务管理办法》等法律法规。
+It should be noted that phishing testing also requires attention to compliance issues, and cannot impersonate regulatory units or send illegal and irregular information. For details, please refer to the "Telecommunication Regulations of the People's Republic of China" and the "Regulations on the Management of Internet Email Services of the People's Republic of China".
 
-其他信息
+Additional Information
 ----------------------------------------
-公司的公众号、企业号、网站，员工的网盘、百度文库等可能会存在一些敏感信息，如VPN/堡垒机账号、TeamViewer账号、网络设备默认口令、服务器默认口令等。
+There may be some sensitive information on the company's official account, enterprise account, website, employee's network disk, Baidu library, etc., such as VPN/fortress account, TeamViewer account, network device default password, server default password, etc.

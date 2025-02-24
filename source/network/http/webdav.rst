@@ -1,30 +1,30 @@
-WebDAV
+WebDav
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-WebDAV （Web-based Distributed Authoring and Versioning） 一种基于 HTTP 1.1协议的通信协议。它扩展了HTTP 1.1，在GET、POST、HEAD等几个HTTP标准方法以外添加了一些新的方法，使应用程序可对Web Server直接读写，并支持写文件锁定、解锁，以及版本控制等功能。
+WebDAV (Web-based Distributed Authoring and Versioning) A communication protocol based on the HTTP 1.1 protocol. It extends HTTP 1.1 and adds some new methods in addition to several HTTP standard methods such as GET, POST, HEAD, etc., so that applications can read and write directly to Web Server, and supports functions such as file locking, unlocking, and version control. .
 
-支持的方法具体为：
+The supported methods are:
 
 - OPTIONS
-    - 获取服务器的支持
+- Get server support
 - GET / PUT / POST / DELETE
-    - 资源操作
+- Resource Operation
 - TRACE
-    - 跟踪服务器
+- Tracking server
 - HEAD
 - MKCOL
-    - 创建集合
+- Create a collection
 - PROPFIND / PROPPATCH
 - COPY / MOVE
 - LOCK / UNLOCK
 
-相关CVE
+Related CVE
 ----------------------------------------
 - CVE-2015-1833
-    - Apache Jacrabbit WebDav XXE
-    - http://www.securityfocus.com/archive/1/535582
+- Apache Jacrabbit WebDav XXE
+- http://www.securityfocus.com/archive/1/535582
 - CVE-2015-7326
-    - Milton WebDav XXE
-    - http://www.securityfocus.com/archive/1/536813
+- Milton Webdav XXE
+- http://www.securityfocus.com/archive/1/536813

@@ -1,15 +1,15 @@
-语言与框架
+Language and framework
 ================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+   :caption: Content index:
 
    php/index
    python/index
-   java/index
+   Java/Index
    javascript/index
-   golang
+   Golang
    ruby
    asp
    powershell

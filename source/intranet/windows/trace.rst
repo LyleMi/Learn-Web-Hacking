@@ -1,65 +1,65 @@
-痕迹清理
+Trace cleaning
 ========================================
 
-日志
+log
 ----------------------------------------
-- 查看日志 ``eventvwr``
-- 伪造日志 ``eventcreate``
-- 操作日志
-    - 3389登录列表
-    - 文件打开日志
-    - 文件修改日志
-    - 浏览器日志
-    - 系统事件
-    - 程序安装记录
-    - 程序删除记录
-    - 程序更新记录
-- 登录日志
-    - 系统安全日志
-- 日志路径
-    - 系统日志 ``%SystemRoot%\System32\Winevt\Logs\System.evtx``
-    - 安全日志 ``%SystemRoot%\System32\Winevt\Logs\Security.evtx``
-    - 应用程序日志 ``%SystemRoot%\System32\Winevt\Logs\Application.evtx``
-- 服务日志
-    - IIS ``%SystemDrive%\inetpub\logs\LogFiles\W3SVC1\``
+- View log ``eventvwr``
+- Forged logs ``eventcreate``
+- Operation log
+- 3389 Login List
+- File Open Log
+- File modification log
+- Browser Log
+- System Events
+- Program installation record
+- Program Delete Records
+- Program update record
+- Login log
+- System Security Log
+- Log path
+- System Log ``%SystemRoot%\System32\Winevt\Logs\System.evtx``
+- Security Log ``%SystemRoot%\System32\Winevt\Logs\Security.evtx``
+- Application Log ``%SystemRoot%\System32\Winevt\Logs\Application.evtx``
+- Service Log
+- iis `%SystemDrive%\ Inetpub \ Logs \ Log files \ W3SVC1 \` `
 
-注册表
+Registration form
 ----------------------------------------
 - AppCompatFlags
 - Background Activity Moderator (BAM)
-- MuiCache
+- M UI cache
 - RecentApps
 - RunMRU
 - ShimCache (AppCompatCache)
 
-注册表键
+Registry key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - HKEY_LOCAL_MACHINE\system\CurrentControlSet\Services\Eventlog
 
-文件
+document
 ----------------------------------------
 
 Prefetch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-预读取文件夹，用来存放系统已访问过的文件的预读信息，扩展名为PF。位置在 ``C:\Windows\Prefetch`` 。
+Pre-read folder is used to store pre-read information of files that have been accessed by the system, with the extension PF. The location is in ``C:\Windows\Prefetch``.
 
 JumpLists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-记录用户最近使用的文档和应用程序，方便用户快速跳转到指定文件，位置在 ``%APPDATA%\Microsoft\Windows\Recent`` 。
+Records the recently used documents and applications by the user, so that the user can quickly jump to the specified file, located in ``%APPDATA%\Microsoft\Windows\Recent``.
 
 Amcache / RecentFileCache.bcf
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Windows中的使用这两个文件来跟踪具有不同可执行文件的应用程序兼容性问题，它可用于确定可执行文件首次运行的时间和最后修改时间。
+These two files are used in Windows to track application compatibility issues with different executables, which can be used to determine when the executable was first run and when the last modified.
 
-在Windows 7、Windows Server 2008 R2等系统中，文件保存在 ``C:\Windows\AppCompat\Programs\RecentFileCache.bcf`` ，包含程序的创建时间、上次修改时间、上次访问时间和文件名。
+In Windows 7, Windows Server 2008 R2 and other systems, the file is saved in ``C:\Windows\AppCompat\Programs\RecentFileCache.bcf``, which contains the program creation time, last modification time, last access time, and file name .
 
-在Windows 8、Windows 10、Windows Server 2012等系统中，文件保存在 ``C:\Windows\AppCompat\Programs\Amcache.hve`` ，包含文件大小、版本、sha1、二进制文件类型等信息。
+In Windows 8, Windows 10, Windows Server 2012 and other systems, the file is saved in ``C:\Windows\AppCompat\Programs\Amcache.hve``, which contains information such as file size, version, sha1, binary file type, etc.
 
-时间轴
+Timeline
 ----------------------------------------
-Windows时间轴是Windows 10在1803版中引入的一个新特性，会记录访问过的网站、编辑过的文档、运行的程序等，
+The Windows timeline is a new feature introduced by Windows 10 in version 1803. It records visited websites, edited documents, running programs, etc.
 
-彻底删除
+Delete completely
 ----------------------------------------
-- 多次覆写文件 ``cipher /w:<path>``
-- 格式化某磁盘count次 ``format D: /P:<count>``
+- Overwrite file multiple times ``cipher /w:<path>```
+- Format D: /P:<count>```

@@ -1,53 +1,53 @@
 IPsec
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-IPsec（IP Security）是IETF制定的三层隧道加密协议，它为Internet上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。特定的通信方之间在IP层通过加密与数据源认证等方式，提供了以下的安全服务：
+IPsec (IP Security) is a layer three-channel encryption protocol formulated by the IETF. It provides high-quality, interoperable, and cryptographic-based security assurance for data transmitted on the Internet. Specific communication parties provide the following security services through encryption and data source authentication at the IP layer:
 
-- 数据机密性（Confidentiality）
-    - IPsec发送方在通过网络传输包前对包进行加密。
-- 数据完整性（Data Integrity）
-    - IPsec接收方对发送方发送来的包进行认证，以确保数据在传输过程中没有被篡改。
-- 数据来源认证（Data Authentication）
-    - IPsec在接收端可以认证发送IPsec报文的发送端是否合法。
-- 防重放（Anti-Replay）
-    - IPsec接收方可检测并拒绝接收过时或重复的报文。
+- Confidentiality
+- The IPsec sender encrypts the packet before transmitting it over the network.
+- Data Integrity
+- The IPsec receiver authenticates the packets sent by the sender to ensure that the data is not tampered with during transmission.
+- Data Authentication
+- IPsec can authenticate whether the sending end that sends IPsec packets is legal.
+- Anti-Replay
+- The IPsec receiver can detect and reject outdated or duplicate messages.
 
-优点
+advantage
 ----------------------------------------
-IPsec具有以下优点：
+IPsec has the following advantages:
 
-- 支持IKE（Internet Key Exchange，因特网密钥交换），可实现密钥的自动协商功能，减少了密钥协商的开销。可以通过IKE建立和维护SA的服务，简化了IPsec的使用和管理。
-- 所有使用IP协议进行数据传输的应用系统和服务都可以使用IPsec，而不必对这些应用系统和服务本身做任何修改。
-- 对数据的加密是以数据包为单位的，而不是以整个数据流为单位，这不仅灵活而且有助于进一步提高IP数据包的安全性，可以有效防范网络攻击。
+- Supports IKE (Internet Key Exchange), which can realize the automatic key negotiation function, reducing the overhead of key negotiation. The SA services can be established and maintained through IKE, which simplifies the use and management of IPsec.
+- All application systems and services that use IP protocol for data transmission can use IPsec without any modification to these application systems and services themselves.
+- Encryption of data is in units of data packets, not in units of the entire data stream, which is not only flexible but also helps to further improve the security of IP packets and can effectively prevent network attacks.
 
-构成
+constitute
 ----------------------------------------
-IPsec由四部分内容构成：
+IPsec consists of four parts:
 
-- 负责密钥管理的Internet密钥交换协议IKE（Internet Key Exchange Protocol）
-- 负责将安全服务与使用该服务的通信流相联系的安全关联SA（Security Associations）
-- 直接操作数据包的认证头协议AH（IP Authentication Header）和安全载荷协议ESP（IP Encapsulating Security Payload）
-- 若干用于加密和认证的算法
+- Internet Key Exchange Protocol (Internet Key Exchange Protocol) responsible for key management
+- Security Associations (Security Associations) that connects a security service to the communication flow that uses the service
+- Directly operate packet authentication header protocol AH (IP Authentication Header) and security payload protocol ESP (IP Encapsulating Security Payload)
+- Several algorithms for encryption and authentication
 
-安全联盟（Security Association，SA）
+Security Association (SA)
 ----------------------------------------
-IPsec在两个端点之间提供安全通信，端点被称为IPsec对等体。
+IPsec provides secure communication between two endpoints, which are called IPsec peers.
 
-SA是IPsec的基础，也是IPsec的本质。SA是通信对等体间对某些要素的约定，例如，使用哪种协议（AH、ESP还是两者结合使用）、协议的封装模式（传输模式和隧道模式）、加密算法（DES、3DES和AES）、特定流中保护数据的共享密钥以及密钥的生存周期等。建立SA的方式有手工配置和IKE自动协商两种。
+SA is the basis of IPsec and the essence of IPsec. SA is a convention for certain elements between communication peers, such as which protocol is used (AH, ESP or a combination of both), the protocol's encapsulation mode (transmission mode and tunnel mode), encryption algorithms (DES, 3DES, and AES), shared keys that protect data in a specific stream, and the lifetime of the key. There are two ways to establish SA: manual configuration and IKE automatic negotiation.
 
-SA是单向的，在两个对等体之间的双向通信，最少需要两个SA来分别对两个方向的数据流进行安全保护。同时，如果两个对等体希望同时使用AH和ESP来进行安全通信，则每个对等体都会针对每一种协议来构建一个独立的SA。
+SA is unidirectional. In bidirectional communication between two peers, at least two SAs are required to protect data flows in both directions separately. Meanwhile, if two peers want to use AH and ESP simultaneously for secure communication, each peer will build a separate SA for each protocol.
 
-SA由一个三元组来唯一标识，这个三元组包括SPI（Security Parameter Index，安全参数索引）、目的IP地址、安全协议号（AH或ESP）。
+SA is uniquely identified by a triple, which includes SPI (Security Parameter Index), destination IP address, and security protocol number (AH or ESP).
 
-SPI是用于唯一标识SA的一个32比特数值，它在AH和ESP头中传输。在手工配置SA时，需要手工指定SPI的取值。使用IKE协商产生SA时，SPI将随机生成。
+SPI is a 32-bit value used to uniquely identify SA, which is transmitted in AH and ESP headers. When manually configuring SA, you need to manually specify the SPI value. When SA is generated using IKE negotiation, the SPI is generated randomly.
 
 IKE
 ----------------------------------------
-IKE（RFC2407，RFC2408、RFC2409）属于一种混合型协议，由Internet安全关联和密钥管理协议（ISAKMP）和两种密钥交换协议OAKLEY与SKEME组成。IKE创建在由ISAKMP定义的框架上，沿用了OAKLEY的密钥交换模式以及SKEME的共享和密钥更新技术，还定义了它自己的两种密钥交换方式。
+IKE (RFC2407, RFC2408, RFC2409) is a hybrid protocol, consisting of the Internet Security Association and Key Management Protocol (ISAKMP) and two key exchange protocols OAKLEY and SKEME. IKE is created in the framework defined by ISAKMP, using OAKLEY's key exchange mode and SKEME's sharing and key update technology, and also defines its own two key exchange methods.
 
-IKE使用了两个阶段的ISAKMP：
+IKE uses two stages of ISAKMP:
 
-第一阶段，协商创建一个通信信道（IKE SA），并对该信道进行验证，为双方进一步的IKE通信提供机密性、消息完整性以及消息源验证服务；
-第二阶段，使用已建立的IKE SA建立IPsec SA（V2中叫Child SA）。
+In the first stage, we negotiate to create a communication channel (IKE SA) and verify the channel to provide confidentiality, message integrity and message source verification services for further IKE communication between both parties;
+In the second stage, an IPsec SA is established (called Child SA in V2).

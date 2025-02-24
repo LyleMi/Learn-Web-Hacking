@@ -1,47 +1,47 @@
-入侵检测
+
 ========================================
 
-IDS与IPS
+IDS and IPS
 ----------------------------------------
-IDS与IPS是常见的防护设备，IPS相对IDS的不同点在于，IPS通常具有阻断能力。
+IDS and IPS are common protective devices. The difference between IPS and IDS is that IPS usually has blocking capabilities.
 
-常见入侵点
-----------------------------------------
-- Web入侵
-- 高危服务入侵
-
-监控实现
+Common intrusion points
 ----------------------------------------
 
-客户端监控
+- High-risk service intrusion
+
+Monitoring implementation
+----------------------------------------
+
+Client monitoring
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 监控敏感配置文件
-- 常用命令ELF文件完整性监控
-    - ``ps``
-    - ``lsof``
-    - ...
-- rootkit监控
-- 资源使用报警
-    - 内存使用率
-    - CPU使用率
-    - IO使用率
-    - 网络使用率
-- 新出现进程监控
-- 基于inotify的文件监控
+- Monitor sensitive configuration files
+- Commonly used command ELF file integrity monitoring
+- ``ps``
+- ``lsof``
+- ...
+- rootkit monitoring
 
-网络检测
+- Memory usage
+- CPU usage rate
+- IO usage rate
+- Network usage rate
+- New process monitoring
+- File monitoring based on inotify
+
+Network detection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-基于网络层面的攻击向量做检测，如Snort等。
+Detection based on attack vectors at the network level, such as Snort, etc.
 
-日志分析
+Log Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-将主机系统安全日志/操作日志、网络设备流量日志、Web应用访问日志、SQL应用访问日志等日志集中到一个统一的后台，在后台中对各类日志进行综合的分析。
+The host system security log/operation log, network device traffic log, web application access log, SQL application access log and other logs are concentrated in a unified background to conduct a comprehensive analysis of various logs in the background.
 
-参考链接
+Reference link
 ----------------------------------------
-- `企业安全建设之HIDS <https://www.freebuf.com/articles/es/194510.html>`_
-- `大型互联网企业入侵检测实战总结 <https://xz.aliyun.com/t/1626/>`_
-- `同程入侵检测系统 <https://mp.weixin.qq.com/s/kzeAEvz-ejLD71fgb5t8tA>`_
-- `Web日志安全分析系统实践 <https://xz.aliyun.com/t/2136>`_
-- `Web日志安全分析浅谈 <https://xz.aliyun.com/t/1121>`_
-- `网络层绕过IDS/IPS的一些探索 <https://mp.weixin.qq.com/s/QJeW7K-KThYHggWtJ-Fh3w>`_
+- `HIDS for enterprise security construction <https://www.freebuf.com/articles/es/194510.html>`_
+- `Summary of practical intrusion detection of large Internet companies <https://xz.aliyun.com/t/1626/>`_
+- `Tongchain intrusion detection system <https://mp.weixin.qq.com/s/kzeAEvz-ejLD71fgb5t8tA>`_
+- `Web log security analysis system practice <https://xz.aliyun.com/t/2136>`_
+- `A brief discussion on Web log security analysis <https://xz.aliyun.com/t/1121>`_
+- `Some explorations of network layer bypassing IDS/IPS <https://mp.weixin.qq.com/s/QJeW7K-KThYHggWtJ-Fh3w>`_

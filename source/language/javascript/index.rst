@@ -2,19 +2,19 @@ JavaScript
 ========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 内容索引:
+:maxdepth: 2
+:caption: Content index:
 
-   ECMAScript
-   engine
-   wasm
-   scope
-   strict
-   async
-   prototype
-   vm
-   deserialization
-   jsfuck
-   trick
-   misc
-   ref
+ECMAScript
+engine
+wasm
+scope
+strict
+async
+prototype
+vm
+deserialization
+jsfuck
+trick
+misc
+ref

@@ -1,45 +1,45 @@
-站点信息
+Site information
 ========================================
 
-- 判断网站操作系统
-    - Linux大小写敏感
-    - Windows大小写不敏感
-- 扫描敏感文件
-    - robots.txt
-    - crossdomain.xml
-    - sitemap.xml
-    - xx.tar.gz
-    - xx.bak
-    - 等
-- 确定网站采用的语言
-    - 如PHP / Java / Python等
-    - 找后缀，比如php/asp/jsp
-- 前端框架
-    - 如jQuery / BootStrap / Vue / React / Angular等
-    - 查看源代码
-- 中间服务器
-    - 如 Apache / Nginx / IIS 等
-    - 查看header中的信息
-    - 根据报错信息判断
-    - 根据默认页面判断
-- Web容器服务器
-    - 如Tomcat / Jboss / Weblogic等
-- 后端框架
-    - 根据Cookie判断
-    - 根据CSS / 图片等资源的hash值判断
-    - 根据URL路由判断
-        - 如wp-admin
-    - 根据网页中的关键字判断
-    - 根据响应头中的X-Powered-By
-- CDN信息
-    - 常见的有Cloudflare、yunjiasu
-- 探测有没有WAF，如果有，什么类型的
-    - 有WAF，找绕过方式
-    - 没有，进入下一步
-- 扫描敏感目录，看是否存在信息泄漏
-    - 扫描之前先自己尝试几个的url，人为看看反应
-- 使用爬虫爬取网站信息
-- 拿到一定信息后，通过拿到的目录名称，文件名称及文件扩展名了解网站开发人员的命名思路，确定其命名规则，推测出更多的目录及文件名
-- 常见入口目标
-    - 关注度低的系统
-    - 业务线较长的系统
+- Judge the website operating system
+- Linux case sensitivity
+- Windows case insensitive
+- Scan sensitive files
+- robots.txt
+- crossdomain.xml
+- sitemap.xml
+- xx.tar.gz
+- xx.bak
+- wait
+- Determine the language used by the website
+- such as PHP/Java/Python, etc.
+- Find suffixes, such as php/asp/jsp
+- Front-end framework
+- such as jQuery/BootStrap/Vue/React/Angular, etc.
+- View source code
+- Intermediate Server
+- such as Apache/Nginx/IIS, etc.
+- View information in the header
+- Judging based on error information
+- Judging by default page
+- Web Container Server
+- such as Tomcat/Jboss/Weblogic, etc.
+- Backend framework
+- Judging by Cookies
+- Judging from the hash value of resources such as CSS/images
+- Judging by URL routing
+- such as wp-admin
+- Judging by keywords in the web page
+- According to X-Powered-By in response header
+- CDN Information
+- Common ones include Cloudflare and yunjiasu
+- Detect whether there is WAF, if so, what type of
+- There is WAF, find a way to bypass it
+- No, go to the next step
+- Scan the sensitive directory to see if there is any information leakage
+- Try a few urls yourself before scanning and see the reactions artificially
+- Use crawlers to crawl website information
+- After obtaining certain information, understand the naming ideas of website developers through the directory name, file name and file extension you get, determine their naming rules, and infer more directories and file names
+- Common entrance targets
+- Systems with low attention
+- Systems with long business lines

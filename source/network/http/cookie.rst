@@ -1,45 +1,45 @@
 Cookie
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-Cookie（复数形态Cookies），类型为「小型文本文件」，指某些网站为了辨别用户身份而储存在用户本地终端上的数据。
+Cookies (plural form cookies), type "small text file", refer to data stored on the user's local terminal in order to identify the user's identity.
 
-属性
+property
 ----------------------------------------
 
 name
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cookie的名称。
+The name of the cookie.
 
 value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cookie的值。
+The value of the cookie.
 
 expires
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-当 Expires 属性缺省时，表示是会话性 Cookie，在用户关闭浏览器时失效。
+When the Expires property defaults, it means it is a session cookie, which is invalid when the user closes the browser.
 
 max-age
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-max-age 可以为正数、负数、0。如果 max-age 属性为正数时，浏览器会将其持久化，当 max-age 属性为负数，则表示该 Cookie 只是一个会话性 Cookie。当 max-age 为 0 时，则会立即删除这个 Cookie。Expires 和 max-age 都存在的条件下，max-age 优先级更高。
+max-age can be positive, negative, and 0. If the max-age attribute is positive, the browser will persist it. When the max-age attribute is negative, it means that the cookie is just a session cookie. When max-age is 0, this cookie is deleted immediately. Under the conditions where both Expires and max-age exist, max-age has higher priority.
 
 domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-指定Cookie的域名，默认是当前域名。domain设置时可以设置为自身及其父域，子域可以访问父域的Cookie，反之不能。
+Specify the domain name of the cookie, the default is the current domain name. When setting the domain, it can be set to itself and its parent domain. The child domain can access the cookies of the parent domain, otherwise it cannot.
 
 path
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-指定一个 URL 路径，这个路径必须出现在要请求的资源的路径中才可以发送对应的 Cookie。
+Specify a URL path that must appear in the path of the resource to be requested before the corresponding cookie can be sent.
 
 secure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-只能通过 HTTPS 传输。
+Transfers only over HTTPS.
 
 httponly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-限制Cookie仅在HTTP传输过程中被读取，一定程度上防御XSS攻击。
+Restriction cookies to be read only during HTTP transmission, and to a certain extent, they are protected from XSS attacks.
 
-SameSite
+The sames
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SameSite 支持 Strict / Lax / None 三种值。Strict最为严格，完全禁止第三方 Cookie，跨站点时，任何情况下都不会发送 Cookie。Lax 允许部分第三方请求携带 Cookie，主要是链接、预加载、GET 表单三种情况。Cookie 的 SameSite 属性为 None ，且设置了 Secure 时，无论是否跨站都会发送 Cookie。
+SameSite supports three values: Strict/Lax/None. Strict is the strictest, completely prohibiting third-party cookies. Cookies will not be sent under any circumstances when cross-sites. Lax allows some third parties to request cookies, mainly in three situations: link, preload, and GET forms. When the SameSite property of a cookie is None, and Secure is set, cookies will be sent regardless of whether they are cross-site or not.

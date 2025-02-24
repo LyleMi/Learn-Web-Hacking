@@ -1,8 +1,8 @@
-权限提升
+Elevate permissions
 ================================
 
-UDF提权
+UDF escalation
 --------------------------------
-UDF（User Defined Function，用户自定义函数）是MySQL提供的一个功能，可以通过编写DLL扩展为MySQL添加新函数，扩充其功能。
+UDF (User Defined Function) is a function provided by MySQL. It can add new functions to MySQL by writing DLL extensions and expand its functions.
 
-当获得MySQL权限之后，即可通过这种方式上传自定义的扩展文件，从MySQL中执行系统命令。
+After obtaining MySQL permissions, you can upload the customized extension file in this way and execute system commands from MySQL.

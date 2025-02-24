@@ -1,39 +1,39 @@
-配置与策略安全
+Configuration and policy security
 ========================================
 
-认证策略
+Certification Policy
 ----------------------------------------
 
-密码策略
+Password Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 未限制密码最低位数
-- 未限制密码必须包含字符集
-- 为常用密码
-- 个人信息相关
-    - 手机号
-    - 生日
-    - 姓名
-    - 用户名
-- 未检测常见弱密码
-    - 已泄露的常用密码
-    - 键盘模式
+- Unlimited minimum number of password digits
+- Unrestricted passwords must contain character sets
+- is a common password
+- Personal information related
+- Phone number
+- Birthday
+- Name
+- username
+- Common weak passwords not detected
+- Commonly leaked passwords
+- Keyboard mode
 
-加密实现
+Encryption implementation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 在客户端存储私钥
+- Store private keys on the client
 
-权限配置
+Permission configuration
 ----------------------------------------
-- 运维人员权限粒度过大
-- 客服人员权限粒度过大
+- Operation and maintenance personnel permissions are too large
+- The customer service personnel's permission granularity is too large
 
-供应链安全
+Supply Chain Security
 ----------------------------------------
 
-三方认证
+Three-party certification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 利用被攻击的第三方服务账号登录其他平台账号
+- Use the attacked third-party service account to log in to other platform accounts
 
-三方库/软件
+Three-party library/software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 公开漏洞后没有及时更新
+- Not updated in time after the vulnerability is disclosed

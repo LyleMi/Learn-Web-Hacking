@@ -1,25 +1,25 @@
 Windows
 ========================================
 
-本地用户认证
+Local user authentication
 ----------------------------------------
-Windows 在进行本地登录认证时操作系统会使用用户输入的密码作为凭证去与系统中的密码进行对比验证。通过 ``winlogon.exe`` 接收用户输入传递至 ``lsass.exe`` 进行认证。
+When Windows is authenticated by local login, the operating system will use the password entered by the user as the credentials to compare and verify with the password in the system. Authentication via ``winlogon.exe`` receive user input to ``lsass.exe``.
 
-``winlogon.exe`` 用于在用户注销、重启、锁屏后显示登录界面。 ``lsass.exe`` 用于将明文密码变成NTLM Hash的形式与SAM数据库比较认证。
+``winlogon.exe`` is used to display the login interface after the user logs out, restarts, and locks the screen. ``lsass.exe`` is used to compare authentication with SAM database by turning plaintext passwords into NTLM Hash.
 
 SAM
 ----------------------------------------
-安全帐户管理器(Security Accounts Manager，SAM) 是Windows操作系统管理用户帐户的安全所使用的一种机制。用来存储Windows操作系统密码的数据库文件为了避免明文密码泄漏SAM文件中保存的是明文密码在经过一系列算法处理过的 Hash值被保存的Hash分为LM Hash、NTLM Hash。当用户进行身份认证时会将输入的Hash值与SAM文件中保存的Hash值进行对比。
+Security Accounts Manager (SAM) is a mechanism used by the Windows operating system to manage the security of user accounts. Database files used to store Windows operating system passwords. In order to avoid plaintext password leakage, the SAM file is stored in the plaintext password. Hash values saved by a series of algorithms are divided into LM Hash and NTLM Hash. When the user authenticates the identity, the input Hash value will be compared with the Hash value saved in the SAM file.
 
-SAM文件保存于 ``%SystemRoot%\system32\config\sam`` 中，在注册表中保存在 ``HKEY_LOCAL_MACHINE\SAM\SAM`` ， ``HKEY_LOCAL_MACHINE\SECURITY\SAM`` 。 在正常情况下 SAM 文件处于锁定状态不可直接访问、复制、移动仅有 system 用户权限才可以读写该文件。
+SAM file is saved in ``%SystemRoot%\system3
 
-密码破解
+Password cracking
 ----------------------------------------
-- 通过物理接触主机、启动其他操作系统来获取 Windows 分区上的 ``%SystemRoot%\system32\config\sam`` 文件
-- 获取 ``%SystemRoot%\repair\sam._`` 文件。
-- 使用工具从注册表中导出SAM散列值
-- 从网络中嗅探分析SMB报文，从中获取密码散列
+- Get ``%SystemRoot%\system3 on Windows partition by physically touching the host and starting other operating systems
+- Get ``%SystemRoot%epair\sam._`` file.
+- Export SAM hash values from the registry using tools
+- Sniffing and analyzing SMB messages from the network and obtaining password hash from it
 
-SPNEGO
+Spne
 ----------------------------------------
-SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation)是微软提供的一种使用GSS-API认证机制的安全协议，用于使Webserver共享Windows Credentials，它扩展了Kerberos。
+SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation) is a security protocol provided by Microsoft that uses the GSS-API authentication mechanism to enable Webservers to share Windows Credentials, which extends Kerberos.

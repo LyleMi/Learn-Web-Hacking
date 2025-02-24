@@ -1,32 +1,32 @@
 WebAssembly
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-简而言之，WASM是一种分发要在浏览器中执行的代码的新方法。它是一种二进制语言，但是无法直接在处理器上运行。在运行时，代码被编译为中间字节代码，可以在浏览器内快速转换为机器代码，然后比传统JavaScript更有效地执行。
+In short, WASM is a new way to distribute code to be executed in the browser. It is a binary language, but it cannot run directly on the processor. At runtime, the code is compiled into intermediate byte code, which can be quickly converted into machine code within the browser and then executed more efficiently than traditional JavaScript.
 
-执行
+implement
 ----------------------------------------
-虽然浏览器可能以不同的方式来实现Wasm支持，但是使用的沙盒环境通常是JavaScript沙箱。 
+While browsers may implement Wasm support in different ways, the sandbox environment used is usually a JavaScript sandbox.
 
-在浏览器中运行时，Wasm应用程序需要将其代码定义为单独的文件或JavaScript块内的字节数组。 然后使用JavaScript实例化文件或代码块，目前不能在没有JavaScript包装器的情况下直接在页面中调用Wasm。
+When running in a browser, the Wasm application needs to define its code as a separate file or an array of bytes within a JavaScript block. Then use JavaScript to instantiate files or code blocks. At present, Wasm cannot be called directly in the page without a JavaScript wrapper.
 
-虽然Wasm可以用C / C++等语言编写，但它本身不能与沙箱之外的环境进行交互。这意味着当Wasm应用程序想要进行输出文本等操作时，它需要调用浏览器提供的功能，然后使用浏览器在某处输出文本。
+Although Wasm can be written in languages such as C/C++, it itself cannot interact with environments outside the sandbox. This means that when a Wasm application wants to do things like output text, it needs to call the functionality provided by the browser and then use the browser to output the text somewhere.
 
-Wasm中的内存是线性的，它在Wasm应用程序和JavaScript之间共享。 当Wasm函数将字符串返回给JavaScript时，它实际上返回一个指向Wasm应用程序内存空间内位置的指针。 Wasm应用程序本身只能访问分配给它的JavaScript内存部分，而不是整个内存空间。
+The memory in Wasm is linear and it is shared between a Wasm application and JavaScript. When the Wasm function returns a string to JavaScript, it actually returns a pointer to a location in the memory space of the Wasm application. The Wasm application itself can only access the portion of the JavaScript memory allocated to it, not the entire memory space.
 
-安全
+Safety
 ----------------------------------------
-Wasm的设计从如下几个方面考虑来保证Wasm的安全性
+The design of Wasm is considered from the following aspects to ensure the safety of Wasm
 
-- 保护用户免受由于无意的错误而导致漏洞的应用程序的侵害
-- 保护用户免受故意编写为恶意的应用程序的侵害
-- 为开发人员提供良好的缓解措施
+- Protect users from vulnerabilities due to unintentional errors
+- Protect users from intentionally written as malicious applications
+- Provide good mitigation for developers
 
-具体的安全措施有
+Specific safety measures include
 
-- Wasm应用程序在沙箱内运行
-- Wasm无法对任意地址进行函数调用。Wasm采用对函数进行编号的方式，编号存储在函数表中
-- 间接函数调用受类型签名检查的约束
-- 调用堆栈受到保护，这意味着无法覆盖返回指针
-- 实现了控制流完整性，这意味着调用意外的函数将失败
+- Wasm application runs in a sandbox
+- Wasm cannot make function calls to any address. Wasm uses the method of numbering functions, and the numbers are stored in the function table.
+- Indirect function calls are subject to type signature checking
+- The call stack is protected, which means that the return pointer cannot be overwritten
+- Control flow integrity is implemented, which means that unexpected function calls will fail
