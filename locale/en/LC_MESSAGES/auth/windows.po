@@ -20,27 +20,34 @@ msgstr ""
 
 #: ../../source/auth/windows.rst:2
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../source/auth/windows.rst:5
 msgid "本地用户认证"
-msgstr ""
+msgstr "Local User Authentication"
 
 #: ../../source/auth/windows.rst:6
 msgid ""
 "Windows 在进行本地登录认证时操作系统会使用用户输入的密码作为凭证去与系统中的密码进行对比验证。通过 ``winlogon.exe`` "
 "接收用户输入传递至 ``lsass.exe`` 进行认证。"
 msgstr ""
+"During Windows local login authentication, the operating system uses the "
+"password entered by the user as a credential and compares it with the "
+"password in the system. ``winlogon.exe`` receives the user's input and passes"
+" it to ``lsass.exe`` for authentication."
 
 #: ../../source/auth/windows.rst:8
 msgid ""
 "``winlogon.exe`` 用于在用户注销、重启、锁屏后显示登录界面。 ``lsass.exe`` 用于将明文密码变成NTLM "
 "Hash的形式与SAM数据库比较认证。"
 msgstr ""
+"``winlogon.exe`` displays the login interface after user logout, restart, or"
+" screen lock. ``lsass.exe`` converts the plaintext password into an NTLM Hash"
+" and compares it with the SAM database for authentication."
 
 #: ../../source/auth/windows.rst:11
 msgid "SAM"
-msgstr ""
+msgstr "SAM"
 
 #: ../../source/auth/windows.rst:12
 msgid ""
@@ -49,6 +56,12 @@ msgid ""
 " Hash值被保存的Hash分为LM Hash、NTLM "
 "Hash。当用户进行身份认证时会将输入的Hash值与SAM文件中保存的Hash值进行对比。"
 msgstr ""
+"The Security Accounts Manager (SAM) is a mechanism used by Windows operating "
+"systems to securely manage user accounts. To avoid plaintext password "
+"leakage, the database file used to store Windows passwords stores hash values"
+" produced from plaintext passwords through a series of algorithms. The stored"
+" hashes are divided into LM Hash and NTLM Hash. When a user authenticates, "
+"the input hash value is compared with the hash value stored in the SAM file."
 
 #: ../../source/auth/windows.rst:14
 msgid ""
@@ -56,35 +69,47 @@ msgid ""
 "``HKEY_LOCAL_MACHINE\\SAM\\SAM`` ， ``HKEY_LOCAL_MACHINE\\SECURITY\\SAM`` "
 "。 在正常情况下 SAM 文件处于锁定状态不可直接访问、复制、移动仅有 system 用户权限才可以读写该文件。"
 msgstr ""
+"The SAM file is stored at ``%SystemRoot%\\system32\\config\\sam``. In the "
+"registry, it is stored under ``HKEY_LOCAL_MACHINE\\SAM\\SAM`` and "
+"``HKEY_LOCAL_MACHINE\\SECURITY\\SAM``. Under normal circumstances, the SAM "
+"file is locked and cannot be directly accessed, copied, or moved; only the "
+"system user has permission to read and write this file."
 
 #: ../../source/auth/windows.rst:17
 msgid "密码破解"
-msgstr ""
+msgstr "Password Cracking"
 
 #: ../../source/auth/windows.rst:18
 msgid ""
 "通过物理接触主机、启动其他操作系统来获取 Windows 分区上的 ``%SystemRoot%\\system32\\config\\sam``"
 " 文件"
 msgstr ""
+"Obtain the ``%SystemRoot%\\system32\\config\\sam`` file from the Windows "
+"partition by physically accessing the host and booting another operating "
+"system"
 
 #: ../../source/auth/windows.rst:19
 msgid "获取 ``%SystemRoot%\\repair\\sam._`` 文件。"
-msgstr ""
+msgstr "Obtain the ``%SystemRoot%\\repair\\sam._`` file."
 
 #: ../../source/auth/windows.rst:20
 msgid "使用工具从注册表中导出SAM散列值"
-msgstr ""
+msgstr "Use tools to export SAM hash values from the registry"
 
 #: ../../source/auth/windows.rst:21
 msgid "从网络中嗅探分析SMB报文，从中获取密码散列"
-msgstr ""
+msgstr "Sniff and analyze SMB packets on the network to obtain password hashes"
 
 #: ../../source/auth/windows.rst:24
 msgid "SPNEGO"
-msgstr ""
+msgstr "SPNEGO"
 
 #: ../../source/auth/windows.rst:25
 msgid ""
 "SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation)是微软提供的一种使用GSS-"
 "API认证机制的安全协议，用于使Webserver共享Windows Credentials，它扩展了Kerberos。"
 msgstr ""
+"SPNEGO (Simple and Protected GSS-API Negotiation) is a security protocol "
+"provided by Microsoft that uses the GSS-API authentication mechanism. It is "
+"used to allow a web server to share Windows Credentials, and it extends "
+"Kerberos."

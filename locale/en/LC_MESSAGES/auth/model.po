@@ -20,71 +20,91 @@ msgstr ""
 
 #: ../../source/auth/model.rst:2
 msgid "权限系统设计模型"
-msgstr ""
+msgstr "Permission System Design Models"
 
 #: ../../source/auth/model.rst:4
 msgid "常见的权限设计模式有以下几种："
-msgstr ""
+msgstr "Common permission design models include the following:"
 
 #: ../../source/auth/model.rst:6
 msgid "自主访问控制 (Discretionary Access Control, DAC)"
-msgstr ""
+msgstr "Discretionary Access Control (DAC)"
 
 #: ../../source/auth/model.rst:7
 msgid "强制访问控制 (Mandatory Access Control, MAC)"
-msgstr ""
+msgstr "Mandatory Access Control (MAC)"
 
 #: ../../source/auth/model.rst:8
 msgid "基于角色的访问控制 (Role-Based Access Control, RBAC)"
-msgstr ""
+msgstr "Role-Based Access Control (RBAC)"
 
 #: ../../source/auth/model.rst:9
 msgid "基于属性的权限验证 (Attribute-Based Access Control, ABAC)"
-msgstr ""
+msgstr "Attribute-Based Access Control (ABAC)"
 
 #: ../../source/auth/model.rst:11
 msgid "常用的概念有："
-msgstr ""
+msgstr "Common concepts include:"
 
 #: ../../source/auth/model.rst:13
 msgid "用户: 发起操作的主体"
-msgstr ""
+msgstr "User: the subject that initiates an operation"
 
 #: ../../source/auth/model.rst:14
 msgid "对象: 发起操作的客体，即操作的对象"
-msgstr ""
+msgstr "Object: the target of an operation"
 
 #: ../../source/auth/model.rst:15
 msgid "权限: 用来指代对某对象的一种/一类操作"
-msgstr ""
+msgstr "Permission: one operation or a class of operations on an object"
 
 #: ../../source/auth/model.rst:16
 msgid "权限控制表 (Access Control List, ACL): 描述用户与权限之间关系的数据表"
 msgstr ""
+"Access Control List (ACL): a data table that describes the relationship "
+"between users and permissions"
 
 #: ../../source/auth/model.rst:17
 msgid ""
 "权限控制矩阵 (Access Control Matrix): "
 "一套抽象、形式化的安全性模型。这套模型描述了电脑系统中的安全保护状态，各别表示其下的每个附属子体，对于系统中的每个对象，其所拥有的权限。"
 msgstr ""
+"Access Control Matrix: an abstract and formal security model. It describes "
+"the protection state of a computer system by representing, for each subject, "
+"the permissions it has over each object in the system."
 
 #: ../../source/auth/model.rst:19
 msgid ""
 "DAC 根据 ACL "
 "的信息来决定用户是否能对某个对象进行操作。而拥有某个对象权限的用户，又可以将该对象的权限分配给其他用户，所以这种模型被称为自主（Discretionary）访问控制。"
 msgstr ""
+"DAC decides whether a user can operate on an object based on ACL "
+"information. A user who has permissions on an object can also grant those "
+"permissions to other users, so this model is called Discretionary Access "
+"Control."
 
 #: ../../source/auth/model.rst:21
 msgid ""
 "由于 DAC 权限控制较为分散，每个用户和对象都有一些权限标识，所以引入了 MAC "
 "。每个用户和对象都有权限标识，用户是否能操作取决于双方的权限标识关系。这种方式不能灵活的授权，适合权限控制较为严格的场景。"
 msgstr ""
+"Because DAC permission control is relatively decentralized and each user and "
+"object carries permission labels, MAC was introduced. Each user and object "
+"has a permission label, and whether a user can perform an operation depends "
+"on the relationship between the two labels. This approach is less flexible "
+"for authorization and is suitable for scenarios with strict permission "
+"control."
 
 #: ../../source/auth/model.rst:23
 msgid ""
 "RBAC 则是迄今为止最为普及的权限设计模型，它引入了角色 (Role) 的概念。 "
 "每个用户可以关联一个或多个角色，每个角色也可以关联一个或多个权限。 当需要新的权限配置时，可以根据需求灵活创建角色。"
 msgstr ""
+"RBAC is the most widely used permission design model so far. It introduces "
+"the concept of a Role. Each user can be associated with one or more roles, "
+"and each role can also be associated with one or more permissions. When new "
+"permission configurations are needed, roles can be created flexibly based on "
+"the requirements."
 
 #: ../../source/auth/model.rst:27
 msgid ""
@@ -92,3 +112,9 @@ msgid ""
 "根据属性进行关联。通常来说，属性分为几类：用户属性、环境属性（例如时间）、操作属性（当前操作）、对象属性。ABAC "
 "则通过动态计算一个或一组属性来是否满足对应条件来进行授权判断。"
 msgstr ""
+"Unlike RBAC, which associates permissions by role, ABAC associates them by "
+"attribute. Attributes are usually divided into several categories: user "
+"attributes, environment attributes such as time, operation attributes for the "
+"current action, and object attributes. ABAC makes authorization decisions by "
+"dynamically evaluating whether one or more attributes satisfy the "
+"corresponding conditions."

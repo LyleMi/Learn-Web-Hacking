@@ -20,88 +20,104 @@ msgstr ""
 
 #: ../../source/auth/saml.rst:2
 msgid "SAML"
-msgstr ""
+msgstr "SAML"
 
 #: ../../source/auth/saml.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/auth/saml.rst:6
 msgid ""
 "SAML (Security Assertion Markup Language) "
 "译为安全断言标记语言，是一种xXML格式的语言，使用XML格式交互，来完成SSO的功能。"
 msgstr ""
+"SAML (Security Assertion Markup Language) is an XML-based language that uses "
+"XML-formatted exchanges to implement SSO."
 
 #: ../../source/auth/saml.rst:8
 msgid "SAML存在1.1和2.0两个版本，这两个版本不兼容，不过在逻辑概念或者对象结构上大致相当，只是在一些细节上有所差异。"
 msgstr ""
+"SAML has two versions, 1.1 and 2.0. These versions are incompatible, but they"
+" are broadly similar in logical concepts and object structure, with "
+"differences in some details."
 
 #: ../../source/auth/saml.rst:11
 msgid "认证过程"
-msgstr ""
+msgstr "Authentication Process"
 
 #: ../../source/auth/saml.rst:12
 msgid "SAML的认证涉及到三个角色，分别为服务提供者(SP)、认证服务(IDP)、用户(Client)。一个比较典型认证过程如下："
 msgstr ""
+"SAML authentication involves three roles: the Service Provider (SP), the "
+"Identity Provider (IdP), and the user (Client). A typical authentication "
+"process is as follows:"
 
 #: ../../source/auth/saml.rst:14
 msgid "Client访问受保护的资源"
-msgstr ""
+msgstr "The Client accesses a protected resource"
 
 #: ../../source/auth/saml.rst:15
 msgid "SP生成认证请求SAML返回给Client"
-msgstr ""
+msgstr "The SP generates an authentication request SAML message and returns it to the Client"
 
 #: ../../source/auth/saml.rst:16
 msgid "Client提交请求到IDP"
-msgstr ""
+msgstr "The Client submits the request to the IdP"
 
 #: ../../source/auth/saml.rst:17
 msgid "IDP返回认证请求"
-msgstr ""
+msgstr "The IdP returns an authentication request"
 
 #: ../../source/auth/saml.rst:18
 msgid "Client登陆IDP"
-msgstr ""
+msgstr "The Client logs in to the IdP"
 
 #: ../../source/auth/saml.rst:19
 msgid "认证成功后，IDP生成私钥签名标识了权限的SAML，返回给Client"
 msgstr ""
+"After authentication succeeds, the IdP generates a SAML assertion indicating "
+"the permissions, signs it with the private key, and returns it to the Client"
 
 #: ../../source/auth/saml.rst:20
 msgid "Client提交SAML给SP"
-msgstr ""
+msgstr "The Client submits the SAML assertion to the SP"
 
 #: ../../source/auth/saml.rst:21
 msgid "SP读取SAML，确定请求合法，返回资源"
-msgstr ""
+msgstr "The SP reads the SAML assertion, determines that the request is valid, and returns the resource"
 
 #: ../../source/auth/saml.rst:24
 msgid "安全问题"
-msgstr ""
+msgstr "Security Issues"
 
 #: ../../source/auth/saml.rst:25
 msgid "源于ssl模式下的认证可选性，可以删除签名方式标签绕过认证"
 msgstr ""
+"Because authentication can be optional in SSL mode, deleting the signature "
+"method tag may bypass authentication"
 
 #: ../../source/auth/saml.rst:26
 msgid "如果SAML中缺少了expiration，并且断言ID不是唯一的，那么就可能被重放攻击影响"
 msgstr ""
+"If expiration is missing from SAML and assertion IDs are not unique, the "
+"implementation may be affected by replay attacks"
 
 #: ../../source/auth/saml.rst:29
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/auth/saml.rst:30
 msgid "`SAML Wiki <https://en.wikipedia.org/wiki/SAML_2.0>`_"
-msgstr ""
+msgstr "`SAML Wiki <https://en.wikipedia.org/wiki/SAML_2.0>`_"
 
 #: ../../source/auth/saml.rst:31
 msgid "`RFC7522 <https://tools.ietf.org/html/rfc7522>`_"
-msgstr ""
+msgstr "`RFC7522 <https://tools.ietf.org/html/rfc7522>`_"
 
 #: ../../source/auth/saml.rst:32
 msgid ""
 "`SSO Wars The Token Menace <https://i.blackhat.com/USA-19/Wednesday/us-19"
 "-Munoz-SSO-Wars-The-Token-Menace.pdf>`_"
 msgstr ""
+"`SSO Wars The Token Menace <https://i.blackhat.com/USA-19/Wednesday/us-19"
+"-Munoz-SSO-Wars-The-Token-Menace.pdf>`_"

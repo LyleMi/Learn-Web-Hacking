@@ -20,126 +20,145 @@ msgstr ""
 
 #: ../../source/auth/jwt.rst:2
 msgid "JWT"
-msgstr ""
+msgstr "JWT"
 
 #: ../../source/auth/jwt.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/auth/jwt.rst:6
 msgid ""
 "Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（(RFC "
 "7519).该token被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该token也可直接被用于认证，也可被加密。"
 msgstr ""
+"JSON Web Token (JWT) is an open JSON-based standard, RFC 7519, for "
+"transmitting claims between web application environments. The token is "
+"designed to be compact and secure, and is especially suitable for single "
+"sign-on (SSO) scenarios across distributed sites. JWT claims are generally "
+"used to pass authenticated user identity information between an identity "
+"provider and a service provider so that resources can be obtained from a "
+"resource server. They can also carry additional claims required by business "
+"logic. The token can be used directly for authentication and can also be "
+"encrypted."
 
 #: ../../source/auth/jwt.rst:9
 msgid "构成"
-msgstr ""
+msgstr "Structure"
 
 #: ../../source/auth/jwt.rst:10
 msgid ""
 "分为三个部分，分别为header/payload/signature。其中header是声明的类型和加密使用的算法。payload是载荷，最后是加上"
 " ``HMAC(base64(header)+base64(payload), secret)``"
 msgstr ""
+"It consists of three parts: header, payload, and signature. The header "
+"declares the type and the algorithm used for encryption or signing. The "
+"payload is the body, and the final part adds "
+"``HMAC(base64(header)+base64(payload), secret)``"
 
 #: ../../source/auth/jwt.rst:13
 msgid "安全问题"
-msgstr ""
+msgstr "Security Issues"
 
 #: ../../source/auth/jwt.rst:16
 msgid "Header部分"
-msgstr ""
+msgstr "Header"
 
 #: ../../source/auth/jwt.rst:17
 msgid "是否支持修改算法为none/对称加密算法"
-msgstr ""
+msgstr "Whether the algorithm can be changed to none or to a symmetric algorithm"
 
 #: ../../source/auth/jwt.rst:18
 msgid "删除签名"
-msgstr ""
+msgstr "Removing the signature"
 
 #: ../../source/auth/jwt.rst:19
 msgid "插入错误信息"
-msgstr ""
+msgstr "Inserting error information"
 
 #: ../../source/auth/jwt.rst:20
 msgid "直接在 header 中加入新的公钥"
-msgstr ""
+msgstr "Adding a new public key directly in the header"
 
 #: ../../source/auth/jwt.rst:21
 msgid "kid字段是否有SQL注入/命令注入/目录遍历"
 msgstr ""
+"Whether the kid field is vulnerable to SQL injection, command injection, or "
+"directory traversal"
 
 #: ../../source/auth/jwt.rst:22
 msgid "结合业务功能通过kid直接下载对应公私钥"
 msgstr ""
+"Combining business functionality with kid to directly download the "
+"corresponding public and private keys"
 
 #: ../../source/auth/jwt.rst:23
 msgid "是否强制使用白名单上的加密算法"
-msgstr ""
+msgstr "Whether use of whitelisted encryption algorithms is enforced"
 
 #: ../../source/auth/jwt.rst:24
 msgid "JWKS 劫持"
-msgstr ""
+msgstr "JWKS hijacking"
 
 #: ../../source/auth/jwt.rst:25
 msgid "JKU (JWK Set URL) / X5U (X.509 URL) 注入"
-msgstr ""
+msgstr "JKU (JWK Set URL) / X5U (X.509 URL) injection"
 
 #: ../../source/auth/jwt.rst:28
 msgid "Payload部分"
-msgstr ""
+msgstr "Payload"
 
 #: ../../source/auth/jwt.rst:29
 msgid "其中是否存在敏感信息"
-msgstr ""
+msgstr "Whether it contains sensitive information"
 
 #: ../../source/auth/jwt.rst:30
 msgid "检查过期策略，比如 ``exp`` , ``iat``"
-msgstr ""
+msgstr "Check the expiration policy, such as ``exp`` and ``iat``"
 
 #: ../../source/auth/jwt.rst:33
 msgid "Signature部分"
-msgstr ""
+msgstr "Signature"
 
 #: ../../source/auth/jwt.rst:34
 msgid "检查是否强制检查签名"
-msgstr ""
+msgstr "Check whether signature verification is enforced"
 
 #: ../../source/auth/jwt.rst:35
 msgid "密钥是否可以爆破"
-msgstr ""
+msgstr "Whether the key can be brute-forced"
 
 #: ../../source/auth/jwt.rst:36
 msgid "是否可以通过其他方式拿到密钥"
-msgstr ""
+msgstr "Whether the key can be obtained through other means"
 
 #: ../../source/auth/jwt.rst:39
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: ../../source/auth/jwt.rst:40
 msgid "重放"
-msgstr ""
+msgstr "Replay"
 
 #: ../../source/auth/jwt.rst:41
 msgid "通过匹配校验的时间做时间攻击"
-msgstr ""
+msgstr "Timing attacks based on matching and verification time"
 
 #: ../../source/auth/jwt.rst:42
 msgid "修改算法RS256为HS256"
-msgstr ""
+msgstr "Changing the algorithm from RS256 to HS256"
 
 #: ../../source/auth/jwt.rst:43
 msgid "弱密钥破解"
-msgstr ""
+msgstr "Weak key cracking"
 
 #: ../../source/auth/jwt.rst:46
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/auth/jwt.rst:47
 msgid ""
 "`Critical vulnerabilities in JSON Web Token libraries "
 "<https://auth0.com/blog/>`_"
 msgstr ""
+"`Critical vulnerabilities in JSON Web Token libraries "
+"<https://auth0.com/blog/>`_"
