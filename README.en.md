@@ -186,8 +186,9 @@ Many sources were used as references when making these notes, and the correspond
 ```bash
 git clone https://github.com/LyleMi/Learn-Web-Hacking.git
 cd Learn-Web-Hacking
-pip install sphinx sphinx-rtd-theme
-make html
+pip install -r requirements.txt
+make html-zh
+make html-en
 ```
 ### Contributions
 ---
@@ -199,8 +200,9 @@ For English translation contributions, please treat the Chinese files under `sou
 Use `locale/en/glossary.md` for preferred English terms and consistency rules before translating new sections.
 
 ```bash
-python -m sphinx -b gettext source build/gettext
-sphinx-intl update -p build/gettext -l en
+make gettext
+make i18n-en
+make html-en
 ```
 
 Thanks to all who [contributed](https://github.com/LyleMi/Learn-Web-Hacking/graphs/contributors).
