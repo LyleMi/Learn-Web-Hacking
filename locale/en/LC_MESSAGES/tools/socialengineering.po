@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/socialengineering.rst:2
+msgid "社会工程学"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:5
+msgid "OSINT"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:6
+msgid "`osint <http://osintframework.com/>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:7
+msgid "`osint git <https://github.com/lockfale/OSINT-Framework>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:8
+msgid "`OSINT-Collection <https://github.com/Ph055a/OSINT Collection>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:9
+msgid "`trape <https://github.com/jofpin/trape>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:10
+msgid "`Photon <https://github.com/s0md3v/Photon>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:11
+msgid "`pockint <https://github.com/netevert/pockint>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:14
+msgid "社交工具"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:15
+msgid ""
+"`SlackPirate <https://github.com/emtunc/SlackPirate>`_ Slack Enumeration "
+"and Extraction Tool - extract sensitive information from a Slack "
+"Workspace"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:16
+msgid ""
+"`twint <https://github.com/twintproject/twint>`_ An advanced Twitter "
+"scraping & OSINT tool"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:19
+msgid "个人搜索"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:20
+msgid "`pipl <https://pipl.com/>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:21
+msgid "`hunter <https://hunter.io>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:22
+msgid "`EagleEye <https://github.com/ThoughtfulDev/EagleEye>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:23
+msgid "`LinkedInt <https://github.com/mdsecactivebreach/LinkedInt>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:24
+msgid "`sherlock <https://github.com/sherlock-project/sherlock>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:25
+msgid "`email enum <https://github.com/Frint0/email-enum>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:26
+msgid "`Sreg <https://github.com/n0tr00t/Sreg>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:27
+msgid "`usersearch <https://usersearch.org/>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:28
+msgid ""
+"`User Searcher <https://www.user-searcher.com/>`_ User-Searcher is a "
+"powerful and free tool to help you search username in 2000+ websites."
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:31
+msgid "Hacking database"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:32
+msgid "`GHDB <https://www.exploit-db.com/google-hacking-database/>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:33
+msgid "`have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:36
+msgid "钓鱼"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:37
+msgid "`spoofcheck <https://github.com/BishopFox/spoofcheck>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:38
+msgid "`gophish <https://github.com/gophish/gophish>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:39
+msgid "`SocialFish <https://github.com/UndeadSec/SocialFish>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:40
+msgid ""
+"`HFish <https://github.com/hacklcx/HFish>`_ A Most Convenient Honeypot "
+"Platform"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:41
+msgid ""
+"`blackeye <https://github.com/thelinuxchoice/blackeye>`_ complete "
+"Phishing Tool, with 32 templates +1 customizable"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:42
+msgid ""
+"`king phisher <https://github.com/rsmusllp/king-phisher/>`_ Phishing "
+"Campaign Toolkit"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:43
+msgid ""
+"`espoofer <https://github.com/chenjj/espoofer>`_ An email spoofing "
+"testing tool that aims to bypass SPF/DKIM/DMARC and forge DKIM signatures"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:44
+msgid ""
+"`ditto <https://github.com/evilsocket/ditto>`_ A tool for IDN homograph "
+"attacks and detection"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:45
+msgid ""
+"`SiteCopy <https://github.com/Threezh1/SiteCopy>`_ sitecopy is a tool "
+"that facilitates personal website backup and network data collection"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:46
+msgid "`goblin <https://github.com/xiecat/goblin>`_ 一款适用于红蓝对抗中的仿真钓鱼系统"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:49
+msgid "squatting"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:50
+msgid ""
+"`dnstwist <https://github.com/elceef/dnstwist>`_ Domain name permutation "
+"engine for detecting homograph phishing attacks, typo squatting, and "
+"brand impersonation"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:53
+msgid "网盘搜索"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:54
+msgid "`虫部落 <http://magnet.chongbuluo.com/>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:55
+msgid "`盘多多 <http://www.panduoduo.net/>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:56
+msgid "`Infinite Panc <https://www.panc.cc>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:59
+msgid "密码猜测"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:60
+msgid ""
+"`OMEN <https://github.com/RUB-SysSec/OMEN>`_ Ordered Markov ENumerator - "
+"Password Guesser"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:61
+msgid "`genpAss <https://github.com/RicterZ/genpAss>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:64
+msgid "伪造"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:65
+msgid ""
+"`email_hack <https://github.com/Macr0phag3/email_hack>`_ 基于 Python "
+"伪造电子邮件发件人"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:68
+msgid "综合框架"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:69
+msgid "`theHarvester <https://github.com/laramies/theHarvester>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:70
+msgid "`Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_"
+msgstr ""
+
+#: ../../source/tools/socialengineering.rst:71
+msgid "`ReconDog <https://github.com/s0md3v/ReconDog>`_"
+msgstr ""

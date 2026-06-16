@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/domain/atkmap.rst:2
+msgid "域内攻击思路"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:3
+msgid "获取域控权限"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:4
+msgid "通过域控相关漏洞"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:5
+msgid "抓hash，尤其是域管理员、运维等高权限账号的哈希"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:6
+msgid "控制入域机器"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:7
+msgid "下发恶意策略控制"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:8
+msgid "获取域内用户凭证"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:9
+msgid "利用错误的域管理配置"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:10
+msgid "域内relay"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:11
+msgid "获取服务票据"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/atkmap.rst:12
+msgid "攻击Exchange等服务器"
+msgstr ""

@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/auth/saml.rst:2
+msgid "SAML"
+msgstr ""
+
+#: ../../source/auth/saml.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/auth/saml.rst:6
+msgid ""
+"SAML (Security Assertion Markup Language) "
+"译为安全断言标记语言，是一种xXML格式的语言，使用XML格式交互，来完成SSO的功能。"
+msgstr ""
+
+#: ../../source/auth/saml.rst:8
+msgid "SAML存在1.1和2.0两个版本，这两个版本不兼容，不过在逻辑概念或者对象结构上大致相当，只是在一些细节上有所差异。"
+msgstr ""
+
+#: ../../source/auth/saml.rst:11
+msgid "认证过程"
+msgstr ""
+
+#: ../../source/auth/saml.rst:12
+msgid "SAML的认证涉及到三个角色，分别为服务提供者(SP)、认证服务(IDP)、用户(Client)。一个比较典型认证过程如下："
+msgstr ""
+
+#: ../../source/auth/saml.rst:14
+msgid "Client访问受保护的资源"
+msgstr ""
+
+#: ../../source/auth/saml.rst:15
+msgid "SP生成认证请求SAML返回给Client"
+msgstr ""
+
+#: ../../source/auth/saml.rst:16
+msgid "Client提交请求到IDP"
+msgstr ""
+
+#: ../../source/auth/saml.rst:17
+msgid "IDP返回认证请求"
+msgstr ""
+
+#: ../../source/auth/saml.rst:18
+msgid "Client登陆IDP"
+msgstr ""
+
+#: ../../source/auth/saml.rst:19
+msgid "认证成功后，IDP生成私钥签名标识了权限的SAML，返回给Client"
+msgstr ""
+
+#: ../../source/auth/saml.rst:20
+msgid "Client提交SAML给SP"
+msgstr ""
+
+#: ../../source/auth/saml.rst:21
+msgid "SP读取SAML，确定请求合法，返回资源"
+msgstr ""
+
+#: ../../source/auth/saml.rst:24
+msgid "安全问题"
+msgstr ""
+
+#: ../../source/auth/saml.rst:25
+msgid "源于ssl模式下的认证可选性，可以删除签名方式标签绕过认证"
+msgstr ""
+
+#: ../../source/auth/saml.rst:26
+msgid "如果SAML中缺少了expiration，并且断言ID不是唯一的，那么就可能被重放攻击影响"
+msgstr ""
+
+#: ../../source/auth/saml.rst:29
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/auth/saml.rst:30
+msgid "`SAML Wiki <https://en.wikipedia.org/wiki/SAML_2.0>`_"
+msgstr ""
+
+#: ../../source/auth/saml.rst:31
+msgid "`RFC7522 <https://tools.ietf.org/html/rfc7522>`_"
+msgstr ""
+
+#: ../../source/auth/saml.rst:32
+msgid ""
+"`SSO Wars The Token Menace <https://i.blackhat.com/USA-19/Wednesday/us-19"
+"-Munoz-SSO-Wars-The-Token-Menace.pdf>`_"
+msgstr ""

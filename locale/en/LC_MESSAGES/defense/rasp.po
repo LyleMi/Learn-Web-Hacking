@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/defense/rasp.rst:2
+msgid "RASP"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:6
+msgid "RASP（Runtime Application Self-Protection）由Gartner在2014年引入，是一种应用层的安全保护技术。"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:9
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:12
+msgid "厂商"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:13
+msgid "`OpenRASP <https://rasp.baidu.com/>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:14
+msgid ""
+"`Micro Focus <https://www.microfocus.com/en-us/products/application-"
+"defender/features>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:15
+msgid "`Prevoty <https://www.prevoty.com/>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:16
+msgid "`waratek <https://www.waratek.com/application-security-platform/>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:17
+msgid "`OWASP AppSensor <http://appsensor.org/>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:18
+msgid "`Shadowd <https://shadowd.zecure.org/overview/introduction/>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:19
+msgid "`immun <https://www.immun.io/features>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:20
+msgid ""
+"`Contrast Security <https://www.contrastsecurity.com/runtime-application-"
+"self-protection-rasp>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:21
+msgid ""
+"`Signal Sciences <https://www.signalsciences.com/rasp-runtime-"
+"application-self-protection/>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:22
+msgid "`BrixBits <http://www.brixbits.com/security-analyzer.html>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:25
+msgid "Blog"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:26
+msgid ""
+"`Python RASP 工程化 一次入侵的思考 "
+"<https://mp.weixin.qq.com/s/icWaHsC6dzlclxfLhvQjYA>`_"
+msgstr ""
+
+#: ../../source/defense/rasp.rst:27
+msgid "`浅谈RASP技术攻防之基础篇 <https://www.freebuf.com/articles/web/197823.html>`_"
+msgstr ""

@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/javascript/ref.rst:2
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/language/javascript/ref.rst:3
+msgid "`JavaScript反调试技巧 <http://www.freebuf.com/articles/system/163579.html>`_"
+msgstr ""
+
+#: ../../source/language/javascript/ref.rst:4
+msgid ""
+"`ECMAScript Language Specification <http://www.ecma-"
+"international.org/ecma-262/5.1/#sec-15.3.4.5>`_"
+msgstr ""
+
+#: ../../source/language/javascript/ref.rst:5
+msgid "`js prototype <https://www.zhihu.com/question/34183746?sort=created>`_"
+msgstr ""
+
+#: ../../source/language/javascript/ref.rst:6
+msgid "`javascript防劫持 <https://github.com/scscms/guardJs/>`_"
+msgstr ""
+
+#: ../../source/language/javascript/ref.rst:7
+msgid ""
+"`XSS 前端防火墙 <http://fex.baidu.com/blog/2014/06/xss-frontend-"
+"firewall-3.html>`_"
+msgstr ""
+
+#: ../../source/language/javascript/ref.rst:8
+msgid ""
+"`exploiting node js deserialization bug for remote code execution "
+"<https://opsecx.com/index.php/2017/02/08/exploiting-node-js-"
+"deserialization-bug-for-remote-code-execution/>`_"
+msgstr ""
+
+#: ../../source/language/javascript/ref.rst:9
+msgid ""
+"`Prototype pollution attack <https://github.com/HoLyVieR/prototype-"
+"pollution-nsec18/>`_ Content released at NorthSec 2018 on prototype "
+"pollution"
+msgstr ""

@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/wafbypass.rst:2
+msgid "WAF Bypass"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:4
+msgid "利用<>标记"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:5
+msgid "利用html属性"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:6
+msgid "href"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:7
+msgid "lowsrc"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:8
+msgid "bgsound"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:9
+msgid "background"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:10
+msgid "value"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:11
+msgid "action"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:12
+msgid "dynsrc"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:13
+msgid "关键字"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:14
+msgid "利用回车拆分"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:15
+msgid "字符串拼接"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:16
+msgid "``window[\"al\" + \"ert\"]``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:17
+msgid "利用编码绕过"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:18
+msgid "base64"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:19
+msgid "jsfuck"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:20
+msgid "String.fromCharCode"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:21
+msgid "HTML"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:22
+msgid "URL"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:23
+msgid "hex"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:24
+msgid "``window[\"\\x61\\x6c\\x65\\x72\\x74\"]``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:25
+msgid "unicode"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:26
+msgid "utf7"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:27
+msgid "``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:28
+msgid "utf16"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:29
+msgid "大小写混淆"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:30
+msgid "对标签属性值转码"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:31
+msgid "产生事件"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:32
+msgid "css跨站解析"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:33
+msgid "长度限制bypass"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:34
+msgid "``eval(name)``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:35
+msgid "``eval(hash)``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:36
+msgid "``import``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:37
+msgid "``$.getScript``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:38
+msgid "``$.get``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:39
+msgid "``.``"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:40
+msgid "使用 ``。`` 绕过IP/域名"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:41
+msgid "``document['cookie']`` 绕过属性取值"
+msgstr ""
+
+#: ../../source/vuln/xss/wafbypass.rst:42
+msgid "过滤引号用 `` ` `` 绕过"
+msgstr ""

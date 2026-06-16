@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/auth/jwt.rst:2
+msgid "JWT"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:6
+msgid ""
+"Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（(RFC "
+"7519).该token被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该token也可直接被用于认证，也可被加密。"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:9
+msgid "构成"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:10
+msgid ""
+"分为三个部分，分别为header/payload/signature。其中header是声明的类型和加密使用的算法。payload是载荷，最后是加上"
+" ``HMAC(base64(header)+base64(payload), secret)``"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:13
+msgid "安全问题"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:16
+msgid "Header部分"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:17
+msgid "是否支持修改算法为none/对称加密算法"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:18
+msgid "删除签名"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:19
+msgid "插入错误信息"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:20
+msgid "直接在 header 中加入新的公钥"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:21
+msgid "kid字段是否有SQL注入/命令注入/目录遍历"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:22
+msgid "结合业务功能通过kid直接下载对应公私钥"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:23
+msgid "是否强制使用白名单上的加密算法"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:24
+msgid "JWKS 劫持"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:25
+msgid "JKU (JWK Set URL) / X5U (X.509 URL) 注入"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:28
+msgid "Payload部分"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:29
+msgid "其中是否存在敏感信息"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:30
+msgid "检查过期策略，比如 ``exp`` , ``iat``"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:33
+msgid "Signature部分"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:34
+msgid "检查是否强制检查签名"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:35
+msgid "密钥是否可以爆破"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:36
+msgid "是否可以通过其他方式拿到密钥"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:39
+msgid "其他"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:40
+msgid "重放"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:41
+msgid "通过匹配校验的时间做时间攻击"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:42
+msgid "修改算法RS256为HS256"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:43
+msgid "弱密钥破解"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:46
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/auth/jwt.rst:47
+msgid ""
+"`Critical vulnerabilities in JSON Web Token libraries "
+"<https://auth0.com/blog/>`_"
+msgstr ""

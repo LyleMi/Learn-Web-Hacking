@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/java/sink.rst:2
+msgid "常见Sink"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:5
+msgid "命令执行/注入"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:6
+msgid "java.lang.Runtime.getRuntime().exec()"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:7
+msgid "java.lang.ProcessBuilder"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:10
+msgid "XXE"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:11
+msgid "java.net.bull.javamelody.PayloadNameRequestWrapper"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:12
+msgid "javax.xml.bind.Unmarshaller"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:13
+msgid "javax.xml.parsers.DocumentBuilderFactory"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:14
+msgid "javax.xml.parsers.SAXParser"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:15
+msgid "javax.xml.stream.XMLStreamReader"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:16
+msgid "javax.xml.transform.sax.SAXSource"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:17
+msgid "javax.xml.transform.sax.SAXTransformerFactory"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:18
+msgid "javax.xml.transform.TransformerFactory"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:19
+msgid "javax.xml.validation.SchemaFactory"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:20
+msgid "javax.xml.validation.Validator"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:21
+msgid "javax.xml.xpath.XpathExpression"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:22
+msgid "org.apache.commons.digester3.Digester"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:23
+msgid "org.apache.ofbiz.base.util.UtilXml"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:24
+msgid "org.dom4j.io.SAXReader"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:25
+msgid "org.jdom.input.SAXBuilder"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:26
+msgid "org.jdom2.input.SAXBuilder"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:27
+msgid "org.xml.sax.helpers.XMLReaderFactory"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:28
+msgid "org.xml.sax.XMLReader"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:31
+msgid "SSRF"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:32
+msgid "HttpClient.execute"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:33
+msgid "HttpClients.execute"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:34
+msgid "HttpURLConnection.getInputStream"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:35
+msgid "ImageIO.read"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:36
+msgid "OkHttpClient.newCall.execute"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:37
+msgid "Request.Get.execute"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:38
+msgid "Request.Post.execute"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:39
+msgid "URL.openStream"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:40
+msgid "URLConnection.getInputStream"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:43
+msgid "反序列化"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:46
+msgid "相关Sink函数"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:47
+#: ../../source/language/java/sink.rst:79
+msgid "``JSON.parseObject``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:48
+msgid "``ObjectInputStream.readObject``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:49
+msgid "``ObjectInputStream.readUnshared``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:50
+msgid "``ObjectMapper.readValue``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:51
+msgid "``XMLDecoder.readObject``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:52
+msgid "``XStream.fromXML``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:53
+msgid "``Yaml.load``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:56
+msgid "Magic Call"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:57
+msgid "以下的魔术方法都会在反序列化过程中被自动的调用。"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:59
+msgid "``readObject``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:60
+msgid "``readExternal``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:61
+msgid "``readResolve``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:62
+msgid "``readObjectNoData``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:63
+msgid "``validateObject``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:64
+msgid "``finalize``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:67
+msgid "主流JSON库"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:68
+msgid "主流的JSON库有Gson、Jackson、Fastjson等，因为JSON常在反序列化中使用，所以相关库都有较大的影响。"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:70
+msgid "其中Gson默认只能反序列化基本类型，如果是复杂类型，需要程序员实现反序列化机制，相对比较安全。"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:72
+msgid "Jackson除非指明@jsonAutoDetect，Jackson不会反序列化非public属性。在防御时，可以不使用enableDefaultTyping方法。相关CVE有CVE-2017-7525、CVE-2017-15095。"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:74
+msgid ""
+"FastJson是阿里巴巴的开源JSON解析库，支持将Java Bean序列化为JSON字符串，也支持从JSON字符串反序列化到Java "
+"Bean，相关CVE有CVE-2017-18349等。"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:76
+msgid "FastJson常见的Sink点有："
+msgstr ""
+
+#: ../../source/language/java/sink.rst:78
+msgid "``JSON.toJSONString``"
+msgstr ""
+
+#: ../../source/language/java/sink.rst:80
+msgid "``JSON.parse``"
+msgstr ""

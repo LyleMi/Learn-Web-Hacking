@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/wifi.rst:2
+msgid "Wi-Fi"
+msgstr ""
+
+#: ../../source/network/wifi.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/network/wifi.rst:6
+msgid "Wi-Fi又称“无线热点”或“无线网络”，是Wi-Fi联盟的商标，一个基于IEEE 802.11标准的无线局域网技术。"
+msgstr ""
+
+#: ../../source/network/wifi.rst:9
+msgid "攻击"
+msgstr ""
+
+#: ../../source/network/wifi.rst:12
+msgid "暴力破解"
+msgstr ""
+
+#: ../../source/network/wifi.rst:13
+msgid "WiFi密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。"
+msgstr ""
+
+#: ../../source/network/wifi.rst:16
+msgid "伪造热点"
+msgstr ""
+
+#: ../../source/network/wifi.rst:17
+msgid "AP可以动态的广播自己，客户也可以主动发送探针请求。可以伪造AP发送对探针请求的响应包，来让客户端错误的识别。"
+msgstr ""
+
+#: ../../source/network/wifi.rst:20
+msgid "秘钥重装攻击"
+msgstr ""
+
+#: ../../source/network/wifi.rst:21
+msgid "该漏洞由Vanhoef发现。Wi-Fi在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。"
+msgstr ""
+
+#: ../../source/network/wifi.rst:24
+msgid "Dragonblood"
+msgstr ""
+
+#: ../../source/network/wifi.rst:25
+msgid "最新版的WPA3标准在实现上存在一些问题，同样由Vanhoef发现。包含拒绝服务攻击、降级攻击、侧信道泄露等。"
+msgstr ""
+
+#: ../../source/network/wifi.rst:28
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/network/wifi.rst:29
+msgid "`Wi-Fi Alliance <https://www.wi-fi.org/>`_"
+msgstr ""
+
+#: ../../source/network/wifi.rst:30
+msgid ""
+"`Dragonblood <https://papers.mathyvanhoef.com/dragonblood.pdf>`_ : "
+"Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd"
+msgstr ""
+
+#: ../../source/network/wifi.rst:31
+msgid ""
+"`Improving Privacy through Fast Passive Wi-Fi Scanning "
+"<https://papers.mathyvanhoef.com/nordsec2019.pdf>`_"
+msgstr ""
+
+#: ../../source/network/wifi.rst:32
+msgid ""
+"`Practical Side-Channel Attacks against WPA-TKIP "
+"<https://papers.mathyvanhoef.com/asiaccs2019.pdf>`_"
+msgstr ""
+
+#: ../../source/network/wifi.rst:33
+msgid ""
+"`Key Reinstallation Attacks: Breaking the WPA2 Protocol "
+"<https://papers.mathyvanhoef.com/blackhat-eu2017.pdf>`_"
+msgstr ""
+
+#: ../../source/network/wifi.rst:34
+msgid "`RFC 7664 Dragonfly Key Exchange <https://tools.ietf.org/html/rfc7664>`_"
+msgstr ""

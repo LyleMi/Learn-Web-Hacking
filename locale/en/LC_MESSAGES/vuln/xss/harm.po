@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/harm.rst:2
+msgid "危害"
+msgstr ""
+
+#: ../../source/vuln/xss/harm.rst:3
+msgid "存在XSS漏洞时，可能会导致以下几种情况："
+msgstr ""
+
+#: ../../source/vuln/xss/harm.rst:5
+msgid "用户的Cookie被获取，其中可能存在Session ID等敏感信息。若服务器端没有做相应防护，攻击者可用对应Cookie登陆服务器。"
+msgstr ""
+
+#: ../../source/vuln/xss/harm.rst:7
+msgid "攻击者能够在一定限度内记录用户的键盘输入。"
+msgstr ""
+
+#: ../../source/vuln/xss/harm.rst:9
+msgid "攻击者通过CSRF等方式以用户身份执行危险操作。"
+msgstr ""
+
+#: ../../source/vuln/xss/harm.rst:11
+msgid "XSS蠕虫。"
+msgstr ""
+
+#: ../../source/vuln/xss/harm.rst:13
+msgid "获取用户浏览器信息。"
+msgstr ""
+
+#: ../../source/vuln/xss/harm.rst:15
+msgid "利用XSS漏洞扫描用户内网。"
+msgstr ""

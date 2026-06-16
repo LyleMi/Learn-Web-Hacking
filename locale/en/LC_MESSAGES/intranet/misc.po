@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/misc.rst:2
+msgid "综合技巧"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:5 ../../source/intranet/misc.rst:19
+msgid "端口转发"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:6
+msgid "windows"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:7
+msgid "lcx"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:8
+msgid "netsh"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:9
+msgid "linux"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:10
+msgid "portmap"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:11
+msgid "iptables"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:12
+msgid "socket代理"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:13
+msgid "Win: xsocks"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:14
+msgid "Linux: proxychains"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:15
+msgid "基于http的转发与socket代理(低权限下的渗透)"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:16
+msgid "端口转发: tunna"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:17
+msgid "socks代理: reGeorg"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:18
+msgid "ssh通道"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:20
+msgid "socks"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:23
+msgid "获取shell"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:24
+msgid "常规shell反弹"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:34
+msgid "突破防火墙的imcp_shell反弹"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:35
+msgid "正向shell"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:43
+msgid "内网文件传输"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:44
+msgid "windows下文件传输"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:45
+msgid "powershell"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:46
+msgid "vbs脚本文件"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:47
+msgid "bitsadmin"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:48
+msgid "文件共享"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:49
+msgid "使用telnet接收数据"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:50
+msgid "hta"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:51
+msgid "linux下文件传输"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:52
+msgid "python"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:53
+msgid "wget"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:54
+msgid "tar + ssh"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:55
+msgid "利用dns传输数据"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:56
+msgid "文件编译"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:57
+msgid "powershell将exe转为txt，再txt转为exe"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:60
+msgid "远程连接 && 执行程序"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:61
+msgid "at&schtasks"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:62
+msgid "psexec"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:63
+msgid "wmic"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:64
+msgid "wmiexec.vbs"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:65
+msgid "smbexec"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:66
+msgid "powershell remoting"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:67
+msgid "SC创建服务执行"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:68
+msgid "schtasks"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:69
+msgid "SMB+MOF || DLL Hijacks"
+msgstr ""
+
+#: ../../source/intranet/misc.rst:70
+msgid "PTH + compmgmt.msc"
+msgstr ""

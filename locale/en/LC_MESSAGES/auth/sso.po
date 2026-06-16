@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/auth/sso.rst:2
+msgid "SSO"
+msgstr ""
+
+#: ../../source/auth/sso.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/auth/sso.rst:6
+msgid "单点登录(SingleSignOn，SSO)指一个用户可以通过单一的ID和凭证（密码）访问多个相关但彼此独立的系统。"
+msgstr ""
+
+#: ../../source/auth/sso.rst:9
+msgid "常见流程"
+msgstr ""
+
+#: ../../source/auth/sso.rst:10
+msgid "用户(User)向服务提供商(Service Provider)发起请求"
+msgstr ""
+
+#: ../../source/auth/sso.rst:11
+msgid "SP重定向User至SSO身份校验服务(Identity Provider)"
+msgstr ""
+
+#: ../../source/auth/sso.rst:12
+msgid "User通过IP登录"
+msgstr ""
+
+#: ../../source/auth/sso.rst:13
+msgid "IP返回凭证给User"
+msgstr ""
+
+#: ../../source/auth/sso.rst:14
+msgid "User将凭证发给SP"
+msgstr ""
+
+#: ../../source/auth/sso.rst:15
+msgid "SP返回受保护的资源给用户"
+msgstr ""
+
+#: ../../source/auth/sso.rst:17
+msgid "其中凭证要有以下属性"
+msgstr ""
+
+#: ../../source/auth/sso.rst:19
+msgid "签发者的签名"
+msgstr ""
+
+#: ../../source/auth/sso.rst:20
+msgid "凭证的身份"
+msgstr ""
+
+#: ../../source/auth/sso.rst:21
+msgid "使用的时间"
+msgstr ""
+
+#: ../../source/auth/sso.rst:22
+msgid "过期时间"
+msgstr ""
+
+#: ../../source/auth/sso.rst:23
+msgid "生效时间"
+msgstr ""
+
+#: ../../source/auth/sso.rst:26
+msgid "可能的攻击/漏洞"
+msgstr ""
+
+#: ../../source/auth/sso.rst:29
+msgid "信息泄漏"
+msgstr ""
+
+#: ../../source/auth/sso.rst:30
+msgid "若SP和IP之前使用明文传输信息，可能会被窃取。"
+msgstr ""
+
+#: ../../source/auth/sso.rst:33
+msgid "伪造"
+msgstr ""
+
+#: ../../source/auth/sso.rst:34
+msgid "如果在通信过程中没有对关键信息进行签名，容易被伪造。"
+msgstr ""

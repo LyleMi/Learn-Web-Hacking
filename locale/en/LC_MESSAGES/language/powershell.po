@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/powershell.rst:2
+msgid "PowerShell"
+msgstr ""
+
+#: ../../source/language/powershell.rst:5
+msgid "执行策略"
+msgstr ""
+
+#: ../../source/language/powershell.rst:6
+msgid ""
+"PowerShell 提供了 "
+"Restricted、AllSigned、RemoteSigned、Unrestricted、Bypass、Undefined "
+"六种类型的执行策略。"
+msgstr ""
+
+#: ../../source/language/powershell.rst:8
+msgid "Restricted 策略可以执行单个的命令，但是不能执行脚本，Windows 8、 Windows Server 2012中默认使用该策略。"
+msgstr ""
+
+#: ../../source/language/powershell.rst:10
+msgid "AllSigned 策略允许执行所有具有数字签名的脚本。"
+msgstr ""
+
+#: ../../source/language/powershell.rst:12
+msgid ""
+"RemoteSigned "
+"当执行从网络上下载的脚本时，需要脚本具有数字签名，否则不会运行这个脚本。如果是在本地创建的脚本则可以直接执行，不要求脚本具有数字签名。"
+msgstr ""
+
+#: ../../source/language/powershell.rst:14
+msgid "Unrestricted 这是一种比较宽容的策略，允许运行未签名的脚本。对于从网络上下载的脚本，在运行前会进行安全性提示。"
+msgstr ""
+
+#: ../../source/language/powershell.rst:16
+msgid "BypassBypass 执行策略对脚本的执行不设任何的限制，任何脚本都可以执行，并且不会有安全性提示。"
+msgstr ""
+
+#: ../../source/language/powershell.rst:18
+msgid "UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的脚本策略。"
+msgstr ""
+
+#: ../../source/language/powershell.rst:21
+msgid "混淆"
+msgstr ""
+
+#: ../../source/language/powershell.rst:22
+msgid "``-EC``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:23
+msgid "``-EncodedCommand``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:24
+msgid "``-EncodedComman``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:25
+msgid "``-EncodedComma``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:26
+msgid "``-EncodedComm``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:29
+msgid "常见功能"
+msgstr ""
+
+#: ../../source/language/powershell.rst:32
+msgid "计划任务"
+msgstr ""
+
+#: ../../source/language/powershell.rst:44
+msgid "创建链接"
+msgstr ""
+
+#: ../../source/language/powershell.rst:56
+msgid "编码"
+msgstr ""
+
+#: ../../source/language/powershell.rst:64
+msgid "其他"
+msgstr ""
+
+#: ../../source/language/powershell.rst:65
+msgid "别名"
+msgstr ""
+
+#: ../../source/language/powershell.rst:66
+msgid "``alias``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:67
+msgid "下载文件"
+msgstr ""
+
+#: ../../source/language/powershell.rst:68
+msgid ""
+"``Invoke-WebRequest \"https://example.com/test.zip\" -OutFile "
+"\"$env:TEMP\\test.zip\"``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:69
+msgid "解压缩"
+msgstr ""
+
+#: ../../source/language/powershell.rst:70
+msgid "``Expand-Archive $env:TEMP\\test.zip $env:TEMP\\test -Force``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:71
+msgid "进程"
+msgstr ""
+
+#: ../../source/language/powershell.rst:72
+msgid "启动进程 ``Start-Process calc``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:73
+msgid "停止进程 ``Stop-Process -ID $pid``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:74
+msgid "文件"
+msgstr ""
+
+#: ../../source/language/powershell.rst:75
+#, python-brace-format
+msgid "新建文件 ``New-Item #{file_path} -Force | Out-Null``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:76
+#, python-brace-format
+msgid "设置文件内容 ``Set-Content -Path #{file_path} -Value \"#{Content}\"``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:77
+#, python-brace-format
+msgid "追加文件内容 ``Add-Content -Path #{file_path} -Value \"#{Content}\"``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:78
+msgid "复制文件 ``Copy-Item src dst``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:79
+#, python-brace-format
+msgid "删除文件 ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:80
+#, python-brace-format
+msgid "子目录 ``Get-ChildItem #{file_path}``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:81
+msgid "服务"
+msgstr ""
+
+#: ../../source/language/powershell.rst:82
+#, python-brace-format
+msgid "获取服务 ``Get-Service -Name \"#{service_name}\"``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:83
+#, python-brace-format
+msgid "启动服务 ``Start-Service -Name \"#{service_name}\"``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:84
+#, python-brace-format
+msgid "停止服务 ``Stop-Service -Name \"#{service_name}\"``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:85
+#, python-brace-format
+msgid "删除服务 ``Remove-Service -Name \"#{service_name}\"``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:86
+msgid "获取WMI支持 ``Get-WmiObject -list``"
+msgstr ""
+
+#: ../../source/language/powershell.rst:89
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/language/powershell.rst:90
+msgid "`PowerShell 官方文档 <https://docs.microsoft.com/zh-cn/powershell/>`_"
+msgstr ""

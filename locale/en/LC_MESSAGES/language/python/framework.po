@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/python/framework.rst:2
+msgid "框架"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:5
+msgid "Django"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:8
+msgid "历史漏洞"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:9
+msgid "`CVE-2016-7401 CSRF Bypass <https://paper.seebug.org/58/>`_"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:10
+msgid ""
+"`CVE-2017-7233/7234 Open redirect vulnerability "
+"<https://www.djangoproject.com/weblog/2017/apr/04/security-releases/>`_"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:11
+msgid ""
+"`CVE-2017-12794 debug page XSS <https://www.leavesongs.com/PENETRATION"
+"/django-debug-page-xss.html>`_"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:15
+msgid "配置相关"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:16
+msgid ""
+"Nginx 在为 Django 做反向代理时，静态文件目录配置错误会导致源码泄露。访问 /static.. 会 301 重定向到 "
+"/static../"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:20
+msgid "Flask"
+msgstr ""
+
+#: ../../source/language/python/framework.rst:21
+msgid "Flask默认使用客户端session，使得session可以被伪造"
+msgstr ""

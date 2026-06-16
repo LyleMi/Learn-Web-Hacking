@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/java/jndi.rst:2
+msgid "JNDI"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:6
+msgid ""
+"JNDI(Java Naming and Directory "
+"Interface，Java命名和目录接口)是为Java应用程序提供命名和目录访问服务的API，允许客户端通过名称发现和查找数据、对象，用于提供基于配置的动态调用。这些对象可以存储在不同的命名或目录服务中，例如RMI、CORBA、LDAP、DNS等。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:8
+msgid ""
+"其中Naming Service类似于哈希表的K/V对，通过名称去获取对应的服务。Directory Service是一种特殊的Naming "
+"Service，用类似目录的方式来存取服务。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:10
+msgid "|jndiarch|"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:56
+msgid "jndiarch"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:13
+msgid "JNDI注入"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:14
+msgid ""
+"JNDI注入是2016年由pentester在BlackHat USA上的 ``A Journey From JNDI LDAP "
+"Manipulation To RCE`` 议题提出的。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:16
+msgid "其攻击过程如下"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:18
+msgid "攻击者将Payload绑定到攻击者的命名/目录服务中"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:19
+msgid "攻击者将绝对URL注入易受攻击的JNDI查找方法"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:20
+msgid "应用程序执行查找"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:21
+msgid "应用程序连接到攻击者控制的JNDI服务并返回Payload"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:22
+msgid "应用程序解码响应并触发有效负载"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:25
+msgid "攻击载荷"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:26
+msgid "JDNI主要有几种攻击载荷："
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:28
+msgid "CORBA"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:29
+msgid "IOR"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:30
+msgid "JNDI Reference"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:31
+msgid "LDAP"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:32
+msgid "Remote Location"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:33
+msgid "Remote Object"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:34
+msgid "RMI"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:35
+msgid "Serialized Object"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:38
+msgid "RMI Remote Object"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:39
+msgid ""
+"攻击者实现一个RMI恶意远程对象并绑定到RMI "
+"Registry上，将编译后的RMI远程对象类放在HTTP/FTP/SMB等服务器上。其中Codebase地址由远程服务器的 "
+"``java.rmi.server.codebase`` 属性设置，供受害者的RMI客户端远程加载。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:41
+msgid "利用条件如下："
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:43
+msgid "RMI客户端的上下文环境允许访问远程Codebase。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:44
+msgid "属性 ``java.rmi.server.useCodebaseOnly`` 的值为false。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:46
+msgid "其中JDK 6u45、7u21后，``java.rmi.server.useCodebaseOnly`` 的值默认为true。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:49
+msgid "RMI + JNDI Reference"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:50
+msgid ""
+"攻击者通过RMI服务返回一个JNDI Naming "
+"Reference，受害者解码Reference时会去攻击者指定的远程地址加载Factory类。这种方式原理上并非使用RMI Class "
+"Loading机制，因此不受 ``java.rmi.server.useCodebaseOnly`` 系统属性的限制。但是在JDK 6u132, "
+"JDK 7u122, JDK 8u113 后限制了Naming/Directory服务中JNDI Reference远程加载Object "
+"Factory类的特性。系统属性 ``com.sun.jndi.rmi.object.trustURLCodebase`` 、 "
+"``com.sun.jndi.cosnaming.object.trustURLCodebase`` "
+"的默认值变为false，即默认不允许从远程的Codebase加载Reference工厂类。"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:53
+msgid "LDAP + JNDI Reference"
+msgstr ""
+
+#: ../../source/language/java/jndi.rst:54
+msgid ""
+"Java的LDAP可以在属性值中存储特定的Java对象，且LDAP服务的Reference远程加载Factory类不受 "
+"``com.sun.jndi.rmi.object.trustURLCodebase`` "
+"、``com.sun.jndi.cosnaming.object.trustURLCodebase`` 等属性的限制，适用范围更广。"
+msgstr ""

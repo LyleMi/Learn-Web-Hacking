@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/javascript/async.rst:2
+msgid "异步机制"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:5
+msgid "async / await"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:6
+msgid "async function 关键字用来在表达式中定义异步函数。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:9
+msgid "Promise"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:10
+msgid ""
+"Promise "
+"对象是一个代理对象（代理一个值），被代理的值在Promise对象创建时可能是未知的。它允许你为异步操作的成功和失败分别绑定相应的处理方法（handlers）。"
+" 这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的promise对象"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:12
+msgid "一个 Promise有以下几种状态:"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:14
+msgid "pending: 初始状态，既不是成功，也不是失败状态。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:15
+msgid "fulfilled: 意味着操作成功完成。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:16
+msgid "rejected: 意味着操作失败。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:18
+msgid ""
+"pending 状态的 Promise 对象可能会变为 fulfilled "
+"状态并传递一个值给相应的状态处理方法，也可能变为失败状态（rejected）并传递失败信息。当其中任一种情况出现时，Promise 对象的 "
+"then 方法绑定的处理方法（handlers ）就会被调用（then方法包含两个参数：onfulfilled 和 onrejected，它们都是"
+" Function 类型。当Promise状态为fulfilled时，调用 then 的 onfulfilled "
+"方法，当Promise状态为rejected时，调用 then 的 onrejected 方法， "
+"所以在异步操作的完成和绑定处理方法之间不存在竞争）。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:20
+msgid ""
+"因为 Promise.prototype.then 和  Promise.prototype.catch 方法返回promise 对象， "
+"所以它们可以被链式调用。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:23
+msgid "执行队列"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:24
+msgid "JavaScript中的异步运行机制如下："
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:26
+msgid "所有同步任务都在主线程上执行，形成一个执行栈"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:27
+msgid "主线程之外，还存在一个任务队列。只要异步任务有了运行结果，就在任务队列之中放置一个事件。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:28
+msgid "一旦执行栈中的所有同步任务执行完毕，系统就会读取任务队列，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:29
+msgid "主线程不断重复上面的第三步。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:31
+msgid "其中浏览器的内核是多线程的，在浏览器的内核中不同的异步操作由不同的浏览器内核模块调度执行，异步操作会将相关回调添加到任务队列中。可以分为DOM事件、时间回调、网络回调三种："
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:33
+msgid "DOM事件：由浏览器内核的 DOM 模块来处理，当事件触发的时候，回调函数会被添加到任务队列中。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:34
+msgid ""
+"时间回调：setTimeout / setInterval 等函数会由浏览器内核的 timer "
+"模块来进行延时处理，当时间到达的时候，将回调函数添加到任务队列中。"
+msgstr ""
+
+#: ../../source/language/javascript/async.rst:35
+msgid "网络回调：ajax / fetch 等则由浏览器内核的 network 模块来处理，在网络请求完成返回之后，才将回调添加到任务队列中。"
+msgstr ""

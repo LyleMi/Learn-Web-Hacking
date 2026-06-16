@@ -1,0 +1,530 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/java/basic.rst:2
+msgid "基本概念"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:5
+msgid "JVM"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:6
+msgid "JVM是Java平台的核心，以机器代码来实现，为程序执行提供了所需的所有基本功能，例如字节码解析器、JIT编译器、垃圾收集器等。由于它是机器代码实现的，其同样受到二进制文件受到的攻击。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:8
+msgid "JCL是JVM自带的一个标准库，含有数百个系统类。默认情况下，所有系统类都是可信任的，且拥有所有的特权。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:11
+msgid "JDK"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:12
+msgid ""
+"Java开发工具包(Java Development Kit，JDK)是Oracle公司发布的Java平台，有标准版(Standard "
+"Edition，Java SE)、企业版(Enterprise Edition，Java EE)等版本。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:14
+msgid "在最开始，JDK以二进制形式发布，而后在2006年11月17日，Sun以GPL许可证发布了Java的源代码，于是之后出现了OpenJDK。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:17
+msgid "JMX"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:18
+msgid ""
+"JMX(Java Management "
+"Extensions，Java管理扩展)是一个为应用程序植入管理功能的框架，主要为管理和监视应用程序、系统对象、设备和面向服务的网络提供相应的工具。JMX可以远程读取系统中的值、调用系统中的方法。在JMX未配置身份验证或JDK版本过低存在反序列化漏洞时，可能会导致远程代码执行。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:21
+msgid "JNI"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:22
+msgid "JNI (Java Native Interface) 是Java提供的和其他语言交互的接口。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:25
+msgid "JNA"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:26
+msgid ""
+"JNA (Java Native Access) 是在JNI上的框架，用于自动实现Java接口到native "
+"function的映射，而不需要另外编写JNI代码。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:29
+msgid "OGNL"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:30
+msgid ""
+"OGNL(Object-Graph Navigation "
+"Language，对象导航语言)是一种功能强大的表达式语言，通过简单一致的表达式语法，提供了存取对象的任意属性、调用对象的方法、遍历整个对象的结构图、实现字段类型转化等功能。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:32
+msgid "Struts2中使用了OGNL，提供了一个ValueStack类。ValueStack分为root和context两部分。root中是当前的action对象，context中是ActionContext里面所有的内容。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:35
+msgid "IO模型"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:36
+msgid "Java 对操作系统的各种 IO 模型进行了封装，形成了不同的API。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:39
+msgid "BIO"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:40
+msgid "BIO (Blocking I/O) 是同步阻塞I/O模式，数据的读取写入必须阻塞在一个线程内等待其完成。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:43
+msgid "NIO"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:44
+msgid ""
+"NIO (New I/O) 是一种同步非阻塞的I/O模型，在Java 1.4中引入，对应 java.nio 包，提供了 Channel , "
+"Selector，Buffer等抽象。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:47
+msgid "AIO"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:48
+msgid "AIO (Asynchronous I/O) 在 Java 7 中引入，是NIO的改进版，是异步非阻塞的IO模型，基于事件和回调机制实现。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:51
+msgid "反射"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:54
+msgid "简介"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:55
+msgid "Java反射机制是指在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能被称为语言的反射机制。"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:58
+msgid "相关类"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:60
+msgid "类名"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:60
+msgid "用途"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:62
+msgid "Class"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:62
+msgid "类的实体"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:63
+msgid "Field"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:63
+msgid "类的成员变量"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:64
+msgid "Method"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:64
+msgid "类的方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:65
+#: ../../source/language/java/basic.rst:160
+msgid "Constructor"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:65
+msgid "类的构造方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:69
+msgid "Class相关"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:70
+msgid "asSubclass(Class<U> clazz)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:71
+msgid "把传递的类的对象转换成代表其子类的对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:72
+msgid "Cast"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:73
+msgid "把对象转换成代表类或是接口的对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:74
+msgid "getClassLoader()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:75
+msgid "获得类的加载器"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:76
+msgid "getClasses()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:77
+msgid "返回一个数组，数组中包含该类中所有公共类和接口类的对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:78
+msgid "getDeclaredClasses()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:79
+msgid "返回一个数组，数组中包含该类中所有类和接口类的对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:80
+msgid "forName(String className)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:81
+msgid "根据类名返回类的对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:82
+msgid "getName()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:83
+msgid "获得类的完整路径名字"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:84
+msgid "newInstance()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:85
+msgid "创建类的实例"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:86
+msgid "getPackage()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:87
+msgid "获得类的包"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:88
+msgid "getSimpleName()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:89
+msgid "获得类的名字"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:90
+msgid "getSuperclass()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:91
+msgid "获得当前类继承的父类的名字"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:92
+msgid "getInterfaces()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:93
+msgid "获得当前类实现的类或是接口"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:94
+msgid "getField(String name)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:95
+msgid "获得某个公有的属性对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:96
+msgid "getFields()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:97
+msgid "获得所有公有的属性对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:98
+msgid "getDeclaredField(String name)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:99
+msgid "获得某个属性对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:100
+msgid "getDeclaredFields()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:101
+msgid "获得所有属性对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:102
+msgid "getAnnotation(Class<A> annotationClass)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:103
+msgid "返回该类中与参数类型匹配的公有注解对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:104
+msgid "getAnnotations()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:105
+msgid "返回该类所有的公有注解对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:106
+msgid "getDeclaredAnnotation(Class<A> annotationClass)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:107
+msgid "返回该类中与参数类型匹配的所有注解对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:108
+msgid "getDeclaredAnnotations()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:109
+msgid "返回该类所有的注解对象"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:110
+msgid "getConstructor(Class...<?> parameterTypes)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:111
+msgid "获得该类中与参数类型匹配的公有构造方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:112
+msgid "getConstructors()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:113
+msgid "获得该类的所有公有构造方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:114
+msgid "getDeclaredConstructor(Class...<?> parameterTypes)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:115
+msgid "获得该类中与参数类型匹配的构造方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:116
+msgid "getDeclaredConstructors()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:117
+msgid "获得该类所有构造方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:118
+msgid "getMethod(String name, Class...<?> parameterTypes)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:119
+msgid "获得该类某个公有的方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:120
+msgid "getMethods()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:121
+msgid "获得该类所有公有的方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:122
+msgid "getDeclaredMethod(String name, Class...<?> parameterTypes)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:123
+msgid "获得该类某个方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:124
+msgid "getDeclaredMethods()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:125
+msgid "获得该类所有方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:126
+msgid "isAnnotation()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:127
+msgid "如果是注解类型则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:128
+msgid "isAnnotationPresent(Class<? extends Annotation> annotationClass)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:129
+msgid "如果是指定类型注解类型则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:130
+msgid "isAnonymousClass()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:131
+msgid "如果是匿名类则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:132
+msgid "isArray()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:133
+msgid "如果是一个数组类则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:134
+msgid "isEnum()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:135
+msgid "如果是枚举类则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:136
+msgid "isInstance(Object obj)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:137
+msgid "如果obj是该类的实例则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:138
+msgid "isInterface()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:139
+msgid "如果是接口类则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:140
+msgid "isLocalClass()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:141
+msgid "如果是局部类则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:142
+msgid "isMemberClass()"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:143
+msgid "如果是内部类则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:146
+msgid "Field相关"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:147
+msgid "equals(Object obj)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:148
+msgid "属性与obj相等则返回true"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:149
+msgid "get(Object obj)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:150
+msgid "获得obj中对应的属性值"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:151
+msgid "set(Object obj, Object value)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:152
+msgid "设置obj中对应属性值"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:155
+msgid "Method相关"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:156
+msgid "invoke(Object obj, Object... args)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:157
+msgid "传递object对象及参数调用该对象对应的方法"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:161
+msgid "newInstance(Object... initargs)"
+msgstr ""
+
+#: ../../source/language/java/basic.rst:162
+msgid "根据传递的参数创建类的对象"
+msgstr ""

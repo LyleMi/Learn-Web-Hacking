@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/htaccess.rst:2
+msgid "htaccess injection payload"
+msgstr ""
+
+#: ../../source/language/php/htaccess.rst:5
+#: ../../source/language/php/htaccess.rst:18
+msgid "file inclusion"
+msgstr ""
+
+#: ../../source/language/php/htaccess.rst:11
+msgid "code execution"
+msgstr ""
+
+#: ../../source/language/php/htaccess.rst:27
+msgid "code execution with UTF-7"
+msgstr ""
+
+#: ../../source/language/php/htaccess.rst:36
+msgid "Source code disclosure"
+msgstr ""

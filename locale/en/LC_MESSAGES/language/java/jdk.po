@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/java/jdk.rst:2
+msgid "JDK"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:5
+msgid "JDK 8"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:6
+msgid "``sun.net.www.protocol`` 不再支持gopher协议"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:9
+msgid "8u251"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:10
+msgid "com.sun.org.apache.bcel.internal.util.ClassLoader 类被删除"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:13
+msgid "8u191"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:14 ../../source/language/java/jdk.rst:31
+#: ../../source/language/java/jdk.rst:47
+msgid "LDAP远程Reference代码默认不信任，影响LDAP远程Reference代码攻击方式"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:17
+msgid "8u121"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:18
+msgid "RMI加入了反序列化白名单机制"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:19
+msgid "RMI远程Reference代码默认不信任，影响RMI远程Reference代码攻击方式"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:22
+msgid "8u113"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:23 ../../source/language/java/jdk.rst:35
+#: ../../source/language/java/jdk.rst:51
+msgid "``com.sun.jndi.rmi.object.trustURLCodebase`` 默认为false"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:24 ../../source/language/java/jdk.rst:36
+#: ../../source/language/java/jdk.rst:52
+msgid "``com.sun.jndi.cosnaming.object.trustURLCodebase`` 默认为false"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:27
+msgid "JDK 7"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:30
+msgid "7u201"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:34
+msgid "7u122"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:39
+msgid "7u40"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:40
+msgid "``java.io.File`` 类中添加了 ``isInvalid`` 方法，检测文件名中是否包含空字节"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:43
+msgid "JDK 6"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:46
+msgid "6u211"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:50
+msgid "6u141"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:55
+msgid "6u45"
+msgstr ""
+
+#: ../../source/language/java/jdk.rst:56
+msgid "java.rmi.server.useCodebaseOnly 默认为 true，禁用自动加载远程类文件"
+msgstr ""

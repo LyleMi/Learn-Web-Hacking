@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/javascript/strict.rst:2
+msgid "严格模式"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:6
+msgid ""
+"在ES5中，除了正常的运行模式之外，添加了严格模式（strict "
+"mode），这种模式使得代码显式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式在更严格的条件下运行。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:8
+msgid "引入严格模式的目的主要是："
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:10
+msgid "通过抛出错误来消除了一些原有静默错误"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:11
+msgid "消除JavaScript语法的一些不合理、不严谨之处，减少一些怪异行为"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:12
+msgid "消除代码运行的一些不安全之处，保证代码运行的安全"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:13
+msgid "修复了一些导致 JavaScript引擎难以执行优化的缺陷，提高编译器效率，增加运行速度"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:14
+msgid "禁用了在ECMAScript的未来版本中可能会定义的一些语法，为未来新版本的JavaScript做铺垫"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:17
+msgid "调用"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:18
+msgid ""
+"严格模式使用 ``\"use strict\";`` 字符串开启。对整个脚本文件而言，可以将 ``\"use strict\"`` "
+"放在脚本文件的第一行使整个脚本以严格模式运行。如果这行语句不在第一行则不会生效，会以正常模式运行。"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:20
+msgid "对单个函数而言，将 ``\"use strict\"`` 放在函数体的第一行，则整个函数以严格模式运行。"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:23
+msgid "行为改变"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:24
+msgid "在严格模式中，主要有以下的行为更改："
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:27
+msgid "全局变量显式声明"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:28
+msgid "在正常模式中，如果一个变量没有声明就赋值，默认是全局变量。严格模式禁止这种用法，全局变量必须显式声明。"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:37
+msgid "禁止使用with语句"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:38
+msgid "with语句无法在编译时就确定，属性到底归属哪个对象，这会影响编译效率，所以在严格模式中被禁止。"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:41
+msgid "创设eval作用域"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:42
+msgid "正常模式下，eval语句的作用域，取决于它处于全局作用域，还是处于函数作用域。严格模式下，eval语句本身就是一个作用域，不再能够生成全局变量了，它所生成的变量只能用于eval内部。"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:45
+msgid "禁止删除变量"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:46
+msgid "严格模式下无法删除变量。只有configurable设置为true的对象属性，才能被删除。"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:49
+msgid "显式报错"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:50
+msgid "正常模式下一些错误只会默默地失败，但是严格模式下将会报错，包括以下几种场景："
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:52
+msgid "对一个对象的只读属性进行赋值"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:53
+msgid "对一个使用getter方法读取的属性进行赋值"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:54
+msgid "对禁止扩展的对象添加新属性"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:55
+msgid "删除一个不可删除的属性"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:58
+msgid "语法错误"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:59
+msgid "严格模式新增了一些语法错误，包括："
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:61
+msgid "对象不能有重名的属性"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:62
+msgid "函数不能有重名的参数"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:63
+msgid "禁止八进制表示法"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:64
+msgid "函数必须声明在顶层"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:65
+msgid "新增保留字"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:66
+msgid "class"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:67
+msgid "enum"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:68
+msgid "export"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:69
+msgid "extends"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:70
+msgid "import"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:71
+msgid "super"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:74
+msgid "安全增强"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:75
+msgid "禁止this关键字指向全局对象"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:76
+msgid "禁止在函数内部遍历调用栈"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:79
+msgid "限制arguments对象"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:80
+msgid "不允许对arguments赋值"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:81
+msgid "arguments不再追踪参数的变化"
+msgstr ""
+
+#: ../../source/language/javascript/strict.rst:82
+msgid "禁止使用arguments.callee"
+msgstr ""

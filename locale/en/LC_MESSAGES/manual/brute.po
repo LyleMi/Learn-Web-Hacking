@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/manual/brute.rst:2
+msgid "爆破工具"
+msgstr ""
+
+#: ../../source/manual/brute.rst:5
+msgid "Hydra"
+msgstr ""
+
+#: ../../source/manual/brute.rst:6
+msgid "``-R`` 继续从上一次进度破解"
+msgstr ""
+
+#: ../../source/manual/brute.rst:7
+msgid "``-S`` 使用SSL链接"
+msgstr ""
+
+#: ../../source/manual/brute.rst:8
+msgid "``-s<PORT>`` 指定端口"
+msgstr ""
+
+#: ../../source/manual/brute.rst:9
+msgid "``-l<LOGIN>`` 指定破解的用户"
+msgstr ""
+
+#: ../../source/manual/brute.rst:10
+msgid "``-L<FILE>`` 指定用户名字典"
+msgstr ""
+
+#: ../../source/manual/brute.rst:11
+msgid "``-p<PASS>`` 指定密码破解"
+msgstr ""
+
+#: ../../source/manual/brute.rst:12
+msgid "``-P<FILE>`` 指定密码字典"
+msgstr ""
+
+#: ../../source/manual/brute.rst:13
+msgid "``-e<ns>`` 可选选项，n：空密码试探，s：使用指定用户和密码试探"
+msgstr ""
+
+#: ../../source/manual/brute.rst:14
+msgid "``-C<FILE>`` 使用冒号分割格式，例如\"user:pwd\"来代替-L/-P参数"
+msgstr ""
+
+#: ../../source/manual/brute.rst:15
+msgid "``-M<FILE>`` 指定目标列表文件一行一条"
+msgstr ""
+
+#: ../../source/manual/brute.rst:16
+msgid "``-o<FILE>`` 指定结果输出文件"
+msgstr ""
+
+#: ../../source/manual/brute.rst:17
+msgid "``-f`` 在使用-M参数以后，找到第一对登录名或者密码的时候中止破解"
+msgstr ""
+
+#: ../../source/manual/brute.rst:18
+msgid "``-t<TASKS>`` 同时运行的线程数，默认为16"
+msgstr ""
+
+#: ../../source/manual/brute.rst:19
+msgid "``-w<TIME>`` 设置最大超时的时间，单位秒，默认是30s"
+msgstr ""
+
+#: ../../source/manual/brute.rst:20
+msgid "``-vV`` 显示详细过程"
+msgstr ""

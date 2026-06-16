@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/info/site.rst:2
+msgid "站点信息"
+msgstr ""
+
+#: ../../source/info/site.rst:4
+msgid "判断网站操作系统"
+msgstr ""
+
+#: ../../source/info/site.rst:5
+msgid "Linux大小写敏感"
+msgstr ""
+
+#: ../../source/info/site.rst:6
+msgid "Windows大小写不敏感"
+msgstr ""
+
+#: ../../source/info/site.rst:7
+msgid "扫描敏感文件"
+msgstr ""
+
+#: ../../source/info/site.rst:8
+msgid "robots.txt"
+msgstr ""
+
+#: ../../source/info/site.rst:9
+msgid "crossdomain.xml"
+msgstr ""
+
+#: ../../source/info/site.rst:10
+msgid "sitemap.xml"
+msgstr ""
+
+#: ../../source/info/site.rst:11
+msgid "xx.tar.gz"
+msgstr ""
+
+#: ../../source/info/site.rst:12
+msgid "xx.bak"
+msgstr ""
+
+#: ../../source/info/site.rst:13
+msgid "等"
+msgstr ""
+
+#: ../../source/info/site.rst:14
+msgid "确定网站采用的语言"
+msgstr ""
+
+#: ../../source/info/site.rst:15
+msgid "如PHP / Java / Python等"
+msgstr ""
+
+#: ../../source/info/site.rst:16
+msgid "找后缀，比如php/asp/jsp"
+msgstr ""
+
+#: ../../source/info/site.rst:17
+msgid "前端框架"
+msgstr ""
+
+#: ../../source/info/site.rst:18
+msgid "如jQuery / BootStrap / Vue / React / Angular等"
+msgstr ""
+
+#: ../../source/info/site.rst:19
+msgid "查看源代码"
+msgstr ""
+
+#: ../../source/info/site.rst:20
+msgid "中间服务器"
+msgstr ""
+
+#: ../../source/info/site.rst:21
+msgid "如 Apache / Nginx / IIS 等"
+msgstr ""
+
+#: ../../source/info/site.rst:22
+msgid "查看header中的信息"
+msgstr ""
+
+#: ../../source/info/site.rst:23
+msgid "根据报错信息判断"
+msgstr ""
+
+#: ../../source/info/site.rst:24
+msgid "根据默认页面判断"
+msgstr ""
+
+#: ../../source/info/site.rst:25
+msgid "Web容器服务器"
+msgstr ""
+
+#: ../../source/info/site.rst:26
+msgid "如Tomcat / Jboss / Weblogic等"
+msgstr ""
+
+#: ../../source/info/site.rst:27
+msgid "后端框架"
+msgstr ""
+
+#: ../../source/info/site.rst:28
+msgid "根据Cookie判断"
+msgstr ""
+
+#: ../../source/info/site.rst:29
+msgid "根据CSS / 图片等资源的hash值判断"
+msgstr ""
+
+#: ../../source/info/site.rst:30
+msgid "根据URL路由判断"
+msgstr ""
+
+#: ../../source/info/site.rst:31
+msgid "如wp-admin"
+msgstr ""
+
+#: ../../source/info/site.rst:32
+msgid "根据网页中的关键字判断"
+msgstr ""
+
+#: ../../source/info/site.rst:33
+msgid "根据响应头中的X-Powered-By"
+msgstr ""
+
+#: ../../source/info/site.rst:34
+msgid "CDN信息"
+msgstr ""
+
+#: ../../source/info/site.rst:35
+msgid "常见的有Cloudflare、yunjiasu"
+msgstr ""
+
+#: ../../source/info/site.rst:36
+msgid "探测有没有WAF，如果有，什么类型的"
+msgstr ""
+
+#: ../../source/info/site.rst:37
+msgid "有WAF，找绕过方式"
+msgstr ""
+
+#: ../../source/info/site.rst:38
+msgid "没有，进入下一步"
+msgstr ""
+
+#: ../../source/info/site.rst:39
+msgid "扫描敏感目录，看是否存在信息泄漏"
+msgstr ""
+
+#: ../../source/info/site.rst:40
+msgid "扫描之前先自己尝试几个的url，人为看看反应"
+msgstr ""
+
+#: ../../source/info/site.rst:41
+msgid "使用爬虫爬取网站信息"
+msgstr ""
+
+#: ../../source/info/site.rst:42
+msgid "拿到一定信息后，通过拿到的目录名称，文件名称及文件扩展名了解网站开发人员的命名思路，确定其命名规则，推测出更多的目录及文件名"
+msgstr ""
+
+#: ../../source/info/site.rst:43
+msgid "常见入口目标"
+msgstr ""
+
+#: ../../source/info/site.rst:44
+msgid "关注度低的系统"
+msgstr ""
+
+#: ../../source/info/site.rst:45
+msgid "业务线较长的系统"
+msgstr ""

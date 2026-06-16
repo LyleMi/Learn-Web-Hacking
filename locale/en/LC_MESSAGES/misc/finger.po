@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/misc/finger.rst:2
+msgid "指纹"
+msgstr ""
+
+#: ../../source/misc/finger.rst:5
+msgid "浏览器指纹"
+msgstr ""
+
+#: ../../source/misc/finger.rst:6
+msgid "软件细节"
+msgstr ""
+
+#: ../../source/misc/finger.rst:7
+msgid "navigator"
+msgstr ""
+
+#: ../../source/misc/finger.rst:8
+msgid "安装插件"
+msgstr ""
+
+#: ../../source/misc/finger.rst:9
+msgid "浏览器支持的特性"
+msgstr ""
+
+#: ../../source/misc/finger.rst:10
+msgid "CSS支持"
+msgstr ""
+
+#: ../../source/misc/finger.rst:11
+msgid "JavaScript特性"
+msgstr ""
+
+#: ../../source/misc/finger.rst:12
+msgid "已安装字体"
+msgstr ""
+
+#: ../../source/misc/finger.rst:13 ../../source/misc/finger.rst:19
+#: ../../source/misc/finger.rst:25
+msgid "..."
+msgstr ""
+
+#: ../../source/misc/finger.rst:14
+msgid "WebGL信息"
+msgstr ""
+
+#: ../../source/misc/finger.rst:15
+msgid "GL版本"
+msgstr ""
+
+#: ../../source/misc/finger.rst:16
+msgid "纹理大小"
+msgstr ""
+
+#: ../../source/misc/finger.rst:17
+msgid "渲染缓冲区"
+msgstr ""
+
+#: ../../source/misc/finger.rst:18
+msgid "WebGL扩展"
+msgstr ""
+
+#: ../../source/misc/finger.rst:20
+msgid "硬件信息"
+msgstr ""
+
+#: ../../source/misc/finger.rst:21
+msgid "电池API"
+msgstr ""
+
+#: ../../source/misc/finger.rst:22
+msgid "传感器API"
+msgstr ""
+
+#: ../../source/misc/finger.rst:23
+msgid "WebRTC获取流媒体设备"
+msgstr ""
+
+#: ../../source/misc/finger.rst:24
+msgid "系统性能"
+msgstr ""
+
+#: ../../source/misc/finger.rst:26
+msgid "持久化存储"
+msgstr ""
+
+#: ../../source/misc/finger.rst:27
+msgid "cookie"
+msgstr ""
+
+#: ../../source/misc/finger.rst:28
+msgid "localStorage"
+msgstr ""
+
+#: ../../source/misc/finger.rst:29
+msgid "indexedDB"
+msgstr ""
+
+#: ../../source/misc/finger.rst:30
+msgid "sessionStorage"
+msgstr ""
+
+#: ../../source/misc/finger.rst:31
+msgid "系统设置"
+msgstr ""
+
+#: ../../source/misc/finger.rst:32
+msgid "时钟偏移"
+msgstr ""
+
+#: ../../source/misc/finger.rst:33
+msgid "主动探测"
+msgstr ""
+
+#: ../../source/misc/finger.rst:34
+msgid "构造特定DNS请求并发送"
+msgstr ""
+
+#: ../../source/misc/finger.rst:37
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/misc/finger.rst:38
+msgid "`设备指纹指南 <https://mp.weixin.qq.com/s/ClG5cgv9Cu7zoyPcWOoU4A>`_"
+msgstr ""

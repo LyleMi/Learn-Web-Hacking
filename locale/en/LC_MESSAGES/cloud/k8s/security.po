@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/cloud/k8s/security.rst:2
+msgid "安全"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:3
+msgid "集群安全性考虑几个目标："
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:5
+msgid "保证容器与宿主机隔离"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:6
+msgid "限制容器给基础设施/其他容器带来的干扰"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:7
+msgid "最小权限原则"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:8
+msgid "明确组件边界划分"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:9
+msgid "划分普通用户和管理员的角色"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:10
+msgid "必要时将管理员权限赋予用户"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:11
+msgid "允许拥有Secret数据的应用在集群中运行"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:14
+msgid "常见安全问题"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:15
+msgid "K8s API Server未授权访问"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:16
+msgid "k8s 配置文件泄露 ``$HOME/.kube/config``"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:17
+msgid "权限提升"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:18
+msgid "Pod 内权限提升"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:19
+msgid "K8s 权限提升"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:20
+msgid "容器逃逸"
+msgstr ""
+
+#: ../../source/cloud/k8s/security.rst:21
+msgid "拒绝服务"
+msgstr ""

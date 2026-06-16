@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/auth/windows.rst:2
+msgid "Windows"
+msgstr ""
+
+#: ../../source/auth/windows.rst:5
+msgid "本地用户认证"
+msgstr ""
+
+#: ../../source/auth/windows.rst:6
+msgid ""
+"Windows 在进行本地登录认证时操作系统会使用用户输入的密码作为凭证去与系统中的密码进行对比验证。通过 ``winlogon.exe`` "
+"接收用户输入传递至 ``lsass.exe`` 进行认证。"
+msgstr ""
+
+#: ../../source/auth/windows.rst:8
+msgid ""
+"``winlogon.exe`` 用于在用户注销、重启、锁屏后显示登录界面。 ``lsass.exe`` 用于将明文密码变成NTLM "
+"Hash的形式与SAM数据库比较认证。"
+msgstr ""
+
+#: ../../source/auth/windows.rst:11
+msgid "SAM"
+msgstr ""
+
+#: ../../source/auth/windows.rst:12
+msgid ""
+"安全帐户管理器(Security Accounts Manager，SAM) "
+"是Windows操作系统管理用户帐户的安全所使用的一种机制。用来存储Windows操作系统密码的数据库文件为了避免明文密码泄漏SAM文件中保存的是明文密码在经过一系列算法处理过的"
+" Hash值被保存的Hash分为LM Hash、NTLM "
+"Hash。当用户进行身份认证时会将输入的Hash值与SAM文件中保存的Hash值进行对比。"
+msgstr ""
+
+#: ../../source/auth/windows.rst:14
+msgid ""
+"SAM文件保存于 ``%SystemRoot%\\system32\\config\\sam`` 中，在注册表中保存在 "
+"``HKEY_LOCAL_MACHINE\\SAM\\SAM`` ， ``HKEY_LOCAL_MACHINE\\SECURITY\\SAM`` "
+"。 在正常情况下 SAM 文件处于锁定状态不可直接访问、复制、移动仅有 system 用户权限才可以读写该文件。"
+msgstr ""
+
+#: ../../source/auth/windows.rst:17
+msgid "密码破解"
+msgstr ""
+
+#: ../../source/auth/windows.rst:18
+msgid ""
+"通过物理接触主机、启动其他操作系统来获取 Windows 分区上的 ``%SystemRoot%\\system32\\config\\sam``"
+" 文件"
+msgstr ""
+
+#: ../../source/auth/windows.rst:19
+msgid "获取 ``%SystemRoot%\\repair\\sam._`` 文件。"
+msgstr ""
+
+#: ../../source/auth/windows.rst:20
+msgid "使用工具从注册表中导出SAM散列值"
+msgstr ""
+
+#: ../../source/auth/windows.rst:21
+msgid "从网络中嗅探分析SMB报文，从中获取密码散列"
+msgstr ""
+
+#: ../../source/auth/windows.rst:24
+msgid "SPNEGO"
+msgstr ""
+
+#: ../../source/auth/windows.rst:25
+msgid ""
+"SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation)是微软提供的一种使用GSS-"
+"API认证机制的安全协议，用于使Webserver共享Windows Credentials，它扩展了Kerberos。"
+msgstr ""

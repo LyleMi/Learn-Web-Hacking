@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/misc/supplychain.rst:2
+msgid "供应链安全"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:6
+msgid "供应链安全是指确保软件开发和交付过程中的所有环节都是安全的，以防止恶意攻击者在软件开发和交付过程中植入恶意代码或漏洞，从而保护最终用户的安全和隐私。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:8
+msgid "供应链安全包括从软件开发、测试、部署、维护到更新等整个生命周期的安全性保障，以确保软件的完整性、可靠性和安全性。在当前数字化时代，供应链安全已经成为一个非常重要的话题，因为恶意攻击者可以通过供应链攻击来入侵企业和个人的计算机系统，窃取敏感信息或者破坏系统。因此，供应链安全已经成为企业和组织必须重视的安全问题之一。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:10
+msgid "可以绕过传统的安全防御措施，例如防火墙、入侵检测系统等。此外，由于供应链中的环节非常复杂，攻击者可以选择攻击其中的任何一个环节，从而使得防御变得更加困难。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:13
+msgid "供应链安全问题"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:16
+msgid "供应链失陷"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:17
+msgid "供应链失陷是指恶意攻击者通过攻击供应商，通过供应商的链路从而进入用户的计算机系统或网络。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:20
+msgid "供应链后门"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:21
+msgid "供应链后门是指供应商提供的系统存在预置的后门、默认口令或者预留的调试接口。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:24
+msgid "供应链漏洞"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:25
+msgid "供应链漏洞是指供应链软件中存在的安全漏洞，可被攻击者利用这些漏洞来入侵最终用户的计算机系统。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:27
+msgid "供应链漏洞通常是由于软件开发、测试、部署、维护等环节中的缺陷或错误而导致的。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:30
+msgid "供应链污染"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:31
+msgid "供应链污染是指恶意攻击者通过攻击软件供应链中的一个或多个环节，将恶意代码或漏洞植入到软件中，从而使得最终用户的计算机系统或网络受到攻击。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:33
+msgid "与供应链后门不同的是，供应链污染通常是指攻击者在软件供应链中植入的恶意代码或漏洞，并不一定是一个特殊的后门。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:36
+msgid "供应链数据安全"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:37
+msgid "供应链数据安全是指隐私、敏感数据在供应链中泄露的情况。"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:40
+msgid "常见攻击方式"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:41
+msgid "创建名称类似的软件包"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:42
+msgid "Combosquatting"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:43
+msgid "Typosquatting"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:44
+msgid "修改词序"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:45
+msgid "修改分割符"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:46
+msgid "注入依赖"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:47
+msgid "命名为内部包"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:48
+msgid "影响构建"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:49
+msgid "利用 CI/CD 漏洞"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:50
+msgid "提交后门代码"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:51
+msgid "劫持开发者账号"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:52
+msgid "提交逻辑隐蔽的后门"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:53
+msgid "利用渲染问题隐藏提交逻辑"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:54
+msgid "Homoglyph"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:55
+msgid "Unicode Bidirectional"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:56
+msgid "其它控制字符"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:57
+msgid "混淆 / minified"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:60
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/misc/supplychain.rst:61
+msgid ""
+"`Introducing SLSA, an End-to-End Framework for Supply Chain Integrity "
+"<https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-"
+"framework.html>`_"
+msgstr ""

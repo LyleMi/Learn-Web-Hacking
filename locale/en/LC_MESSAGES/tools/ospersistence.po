@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/ospersistence.rst:2
+msgid "操作系统持久化"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:5
+msgid "Windows"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:8
+#: ../../source/tools/ospersistence.rst:90
+msgid "凭证获取"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:9
+msgid "`mimikatz <https://github.com/gentilkiwi/mimikatz>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:10
+msgid ""
+"`RdpThief <https://github.com/0x09AL/RdpThief>`_ Extracting Clear Text "
+"Passwords from mstsc.exe using API Hooking"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:11
+msgid ""
+"`quarkspwdump <https://github.com/quarkslab/quarkspwdump>`_ Dump various "
+"types of Windows credentials without injecting in any process"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:12
+msgid ""
+"`SharpDump <https://github.com/GhostPack/SharpDump>`_ C# port of "
+"PowerSploit's Out-Minidump.ps1 functionality"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:15
+#: ../../source/tools/ospersistence.rst:70
+#: ../../source/tools/ospersistence.rst:97
+msgid "权限提升"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:16
+msgid "`WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:17
+msgid ""
+"`GTFOBins <https://github.com/GTFOBins/GTFOBins.github.io>`_ Curated list"
+" of Unix binaries that can be exploited to bypass system security "
+"restrictions"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:18
+msgid ""
+"`JAWS <https://github.com/411Hall/JAWS>`_ Just Another Windows (Enum) "
+"Script"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:21
+msgid "UAC Bypass"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:22
+msgid ""
+"`WinPwnage <https://github.com/rootm0s/WinPwnage>`_ UAC bypass, Elevate, "
+"Persistence and Execution methods"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:23
+msgid ""
+"`UACME <https://github.com/hfiref0x/UACME>`_ Defeating Windows User "
+"Account Control"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:24
+msgid ""
+"`UAC Bypass In The Wild "
+"<https://github.com/sailay1996/UAC_Bypass_In_The_Wild>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:27
+msgid "免杀"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:28
+msgid ""
+"`SigThief <https://github.com/secretsquirrel/SigThief>`_ Stealing "
+"Signatures and Making One Invalid Signature at a Time"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:31
+#: ../../source/tools/ospersistence.rst:105
+msgid "C2"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:32
+msgid ""
+"`SharpSploit <https://github.com/cobbr/SharpSploit>`_ .NET post-"
+"exploitation library written in C#"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:33
+msgid ""
+"`SharpBeacon <https://github.com/mai1zhi2/SharpBeacon>`_ "
+"用.net重写了CobaltStrike "
+"stager及Beacon，其中包括正常上线、文件管理、进程管理、令牌管理、结合SysCall进行注入、原生端口转发、关ETW等一系列功能"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:34
+msgid ""
+"`Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-"
+"exploitation rootkit"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:35
+msgid ""
+"`PoshC2 <https://github.com/nettitude/PoshC2>`_ A proxy aware C2 "
+"framework used to aid red teamers with post-exploitation and lateral "
+"movement"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:38
+msgid "隐藏"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:39
+msgid ""
+"`ProcessHider <https://github.com/M00nRise/ProcessHider>`_ Post-"
+"exploitation tool for hiding processes from monitoring applications"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:40
+msgid ""
+"`Invoke Phant0m <https://github.com/hlldz/Invoke-Phant0m>`_ Windows Event"
+" Log Killer"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:41
+msgid ""
+"`EventCleaner <https://github.com/QAX-A-Team/EventCleaner>`_ A tool "
+"mainly to erase specified records from Windows event logs, with "
+"additional functionalities"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:44
+msgid "DLL注入"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:45
+msgid ""
+"`sRDI <https://github.com/monoxgas/sRDI>`_ Shellcode Reflective DLL "
+"Injection"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:48
+#: ../../source/tools/ospersistence.rst:77
+msgid "rootkit"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:49
+msgid ""
+"`r77-rootkit <https://github.com/bytecode77/r77-rootkit>`_ Ring 3 rootkit"
+" with single file installer and fileless persistence that hides "
+"processes, files, network connections, etc"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:52
+msgid "伪造"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:53
+msgid ""
+"`parent PID spoofing <https://github.com/countercept/ppid-spoofing>`_ "
+"Scripts for performing and detecting parent PID spoofing"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:54
+msgid ""
+"`GetSystem <https://github.com/py7hagoras/GetSystem>`_ This is a C# "
+"implementation of making a process/executable run as NT AUTHORITY/SYSTEM."
+" This is achieved through parent ID spoofing of almost any SYSTEM "
+"process."
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:57
+msgid "MiTM"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:58
+msgid ""
+"`Seth <https://github.com/SySS-Research/Seth>`_ Perform a MitM attack and"
+" extract clear text credentials from RDP connections"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:59
+msgid ""
+"`pyrdp <https://github.com/GoSecure/pyrdp>`_ RDP man-in-the-middle (mitm)"
+" and library for Python with the ability to watch connections live or "
+"after the fact"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:62
+msgid "综合工具"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:63
+msgid ""
+"`Nishang <https://github.com/samratashok/nishang>`_ Offensive PowerShell "
+"for red team, penetration testing and offensive security"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:64
+msgid ""
+"`SharPersist <https://github.com/fireeye/SharPersist>`_ Windows "
+"persistence toolkit written in C#"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:67
+msgid "Linux"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:71
+msgid ""
+"`linux exploit suggester <https://github.com/mzet-/linux-exploit-"
+"suggester>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:72
+msgid ""
+"`LinEnum <https://github.com/rebootuser/LinEnum>`_ Scripted Local Linux "
+"Enumeration & Privilege Escalation Checks"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:73
+msgid ""
+"`AutoLocalPrivilegeEscalation "
+"<https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:74
+msgid ""
+"`traitor <https://github.com/liamg/traitor>`_ Automatic Linux privesc via"
+" exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w "
+"docker.sock"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:78
+msgid "`rootkit <https://github.com/nurupo/rootkit>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:79
+msgid ""
+"`Diamorphine <https://github.com/m0nad/Diamorphine>`_ LKM rootkit for "
+"Linux Kernels 2.6.x/3.x/4.x/5.x (x86/x86_64 and ARM64)"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:82
+msgid "后门"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:83
+msgid ""
+"`prism <https://github.com/andreafabrizi/prism>`_ is an user space "
+"stealth reverse shell backdoor"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:84
+msgid "`icmpsh <https://github.com/inquisb/icmpsh>`_ Simple reverse ICMP shell"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:87
+msgid "综合"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:91
+msgid ""
+"`sshLooterC <https://github.com/mthbernardes/sshLooterC>`_ program to "
+"steal passwords from ssh"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:92
+msgid ""
+"`keychaindump <https://github.com/juuso/keychaindump>`_ A proof-of-"
+"concept tool for reading OS X keychain passwords"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:93
+msgid ""
+"`LaZagne <https://github.com/AlessandroZ/LaZagne>`_ Credentials recovery "
+"project"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:94
+msgid ""
+"`SecretScanner <https://github.com/deepfence/SecretScanner>`_ Find "
+"secrets and passwords in container images and file systems"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:98
+msgid ""
+"`BeRoot <https://github.com/AlessandroZ/BeRoot>`_ Privilege Escalation "
+"Project - Windows / Linux / Mac"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:101
+msgid "RAT"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:102
+msgid "`QuasarRAT <https://github.com/quasar/QuasarRAT>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:106
+msgid "`Empire <https://github.com/EmpireProject/Empire>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:107
+msgid "`pupy <https://github.com/n1nj4sec/pupy>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:108
+msgid ""
+"`Covenant <https://github.com/cobbr/Covenant>`_ is a collaborative .NET "
+"C2 framework for red teamers"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:109
+msgid ""
+"`Cooolis-ms <https://github.com/Rvn0xsy/Cooolis-ms>`_ 包含了Metasploit "
+"Payload Loader、Cobalt Strike External C2 Loader、Reflective DLL "
+"injection的代码执行工具"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:112
+msgid "DNS Shell"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:113
+msgid ""
+"`DNS Shell <https://github.com/sensepost/DNS-Shell>`_ DNS-Shell is an "
+"interactive Shell over DNS channel"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:114
+msgid ""
+"`Reverse DNS Shell <https://github.com/ahhh/Reverse_DNS_Shell>`_ A python"
+" reverse shell that uses DNS as the c2 channel"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:117
+msgid "Cobalt Strike"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:118
+msgid "`Cobalt Strike <https://www.cobaltstrike.com>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:119
+msgid ""
+"`CrossC2 <https://github.com/gloxec/CrossC2>`_ generate CobaltStrike's "
+"cross-platform payload"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:120
+msgid ""
+"`Cobalt Strike Aggressor Scripts <https://github.com/timwhitez/Cobalt-"
+"Strike-Aggressor-Scripts>`_"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:123
+msgid "日志清除"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:124
+msgid ""
+"`Log killer <https://github.com/Rizer0/Log-killer>`_ Clear all logs in "
+"[linux/windows] servers"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:127
+msgid "Botnet"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:128
+msgid "`byob <https://github.com/malwaredllc/byob>`_ Build Your Own Botnet"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:131
+msgid "免杀工具"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:132
+msgid ""
+"`AV Evasion Tool <https://github.com/1y0n/AV_Evasion_Tool>`_ 掩日 - "
+"免杀执行器生成工具"
+msgstr ""
+
+#: ../../source/tools/ospersistence.rst:133
+msgid ""
+"`DKMC <https://github.com/Mr-Un1k0d3r/DKMC>`_ Dont kill my cat - "
+"Malicious payload evasion tool"
+msgstr ""

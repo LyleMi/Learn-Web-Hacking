@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/msrpc.rst:2
+msgid "MSPRC"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:3
+msgid ""
+"MSRPC (Microsoft Remote Procedure Call) 是微软对 DCE/RPC "
+"协议的修改实现，用于支持Windows系统中应用程序的远程网络调用。"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:5
+msgid "MSRPC所使用的端口有 UDP 135 和 TCP 139 / 445 。"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:7
+msgid "MSRPC 可以用于"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:9
+msgid "用户遍历"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:10
+msgid "服务遍历"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:11
+msgid "凭证导出"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:12
+msgid "横向移动"
+msgstr ""
+
+#: ../../source/intranet/windows/msrpc.rst:13
+msgid "权限提升"
+msgstr ""

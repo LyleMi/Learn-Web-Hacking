@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/auth/ntlm.rst:2
+msgid "NTLM 身份验证"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:5
+msgid "NTLM认证"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:6
+msgid "NTLM是NT LAN Manager的缩写，NTLM是基于挑战/应答的身份验证协议，是 Windows NT 早期版本中的标准安全协议。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:9
+msgid "基本流程"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:10
+msgid "客户端在本地加密当前用户的密码成为密码散列"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:11
+msgid "客户端向服务器明文发送账号"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:12
+msgid "服务器端产生一个16位的随机数字发送给客户端，作为一个challenge"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:13
+msgid "客户端用加密后的密码散列来加密challenge，然后返回给服务器，作为response"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:14
+msgid "服务器端将用户名、challenge、response发送给域控制器"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:15
+msgid "域控制器用这个用户名在SAM密码管理库中找到这个用户的密码散列，然后使用这个密码散列来加密chellenge"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:16
+msgid "域控制器比较两次加密的challenge，如果一样那么认证成功，反之认证失败"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:19
+msgid "Net-NTLMv1"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:20
+msgid "Net-NTLMv1协议的基本流程如下："
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:22 ../../source/auth/ntlm.rst:38
+msgid "客户端向服务器发送一个请求"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:23
+msgid "服务器接收到请求后，生成一个8位的Challenge，发送回客户端"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:24 ../../source/auth/ntlm.rst:40
+msgid "客户端接收到Challenge后，使用登录用户的密码hash对Challenge加密，作为response发送给服务器"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:25 ../../source/auth/ntlm.rst:41
+msgid "服务器校验response"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:27
+msgid "Net-NTLMv1 response的计算方法为"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:29
+msgid "将用户的NTLM hash补零至21字节分成三组7字节数据"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:30
+msgid "三组数据作为3DES加密算法的三组密钥，加密Server发来的Challenge"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:32
+msgid "这种方式相对脆弱，可以基于抓包工具和彩虹表爆破工具进行破解。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:35
+msgid "Net-NTLMv2"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:36
+msgid "自Windows Vista起，微软默认使用Net-NTLMv2协议，其基本流程如下："
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:39
+msgid "服务器接收到请求后，生成一个16位的Challenge，发送回客户端"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:44
+msgid "Hash"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:47
+msgid "LM Hash"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:48
+msgid ""
+"LM Hash(LAN Manager Hash) 是windows最早用的加密算法，由IBM设计。LM Hash "
+"使用硬编码秘钥的DES，且存在缺陷。早期的Windows系统如XP、Server 2003等使用LM Hash，而后的系统默认禁用了LM "
+"Hash并使用NTLM Hash。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:50
+msgid "LM Hash的计算方式为："
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:52
+msgid "转换用户的密码为大写，14字节截断"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:53
+msgid "不足14字节则需要在其后添加0×00补足"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:54
+msgid "将14字节分为两段7字节的密码"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:55
+msgid "以 ``KGS!@#$%`` 作为秘钥对这两组数据进行DES加密，得到16字节的哈希"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:56
+msgid "拼接后得到最后的LM Hash。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:58
+msgid "作为早期的算法，LM Hash存在着诸多问题："
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:60
+msgid "密码长度不会超过14字符，且不区分大小写"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:61
+msgid "如果密码长度小于7位，后一组哈希的值确定，可以通过结尾为 ``aad3b435b51404ee`` 来判断密码长度不超过7位"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:62
+msgid "分组加密极大程度降低了密码的复杂度"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:63
+msgid "DES算法强度低"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:66
+msgid "NTLM Hash"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:67
+msgid "为了解决LM Hash的安全问题，微软于1993年在Windows NT 3.1中引入了NTLM协议。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:69
+msgid ""
+"Windows 2000 / XP / 2003 在密码超过14位前使用LM Hash，在密码超过14位后使用NTLM "
+"Hash。而之后从Vista开始的版本都使用NTLM Hash。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:71
+msgid "NTLM Hash的计算方法为："
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:73
+msgid "将密码转换为16进制，进行Unicode编码"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:74
+msgid "基于MD4计算哈希值"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:77
+msgid "攻击"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:80
+msgid "Pass The Hash"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:81
+msgid "Pass The Hash (PtH) 是攻击者捕获帐号登录凭证后，复用凭证Hash进行攻击的方式。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:83
+msgid ""
+"微软在2012年12月发布了针对Pass The Hash攻击的防御指导，文章中提到了一些防御方法，并说明了为什么不针对Pass The "
+"Hash提供更新补丁。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:86
+msgid "Pass The Key"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:87
+msgid "在禁用NTLM的环境下，可以用mimikatz等工具直接获取密码。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:90
+msgid "NTLM Relay"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:91
+msgid "攻击者可以一定程度控制客户端网络的时候，可以使用中间人攻击的方式来获取权限。对客户端伪装为身份验证服务器，对服务端伪装为需要认证的客户端。"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:94
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:95
+msgid "`Windows身份认证及利用思路 <https://www.freebuf.com/articles/system/224171.html>`_"
+msgstr ""
+
+#: ../../source/auth/ntlm.rst:96
+msgid ""
+"`The NTLM Authentication Protocol and Security Support Provider "
+"<http://davenport.sourceforge.net/ntlm.html>`_"
+msgstr ""

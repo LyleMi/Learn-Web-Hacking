@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/http/websocket.rst:2
+msgid "WebSocket"
+msgstr ""
+
+#: ../../source/network/http/websocket.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/network/http/websocket.rst:6
+msgid ""
+"WebSocket是一种网络传输协议，可在单个TCP连接上进行全双工通信，位于OSI模型的应用层。WebSocket协议在2011年由IETF标准化为RFC"
+" 6455，后由RFC 7936补充规范。"
+msgstr ""
+
+#: ../../source/network/http/websocket.rst:9
+msgid "交互"
+msgstr ""
+
+#: ../../source/network/http/websocket.rst:12
+msgid "握手"
+msgstr ""
+
+#: ../../source/network/http/websocket.rst:13
+msgid "握手阶段和 HTTP 协议较为类似，RFC 文档中给出的握手示例如下："
+msgstr ""
+
+#: ../../source/network/http/websocket.rst:34
+msgid ""
+"其中 Upgrade 的值必须为 websocket ，Connection 的值必须为 Upgrade ，合起来表示客户端喜欢连接升级到 "
+"Websocket 协议。"
+msgstr ""
+
+#: ../../source/network/http/websocket.rst:36
+msgid ""
+"Sec-WebSocket-Key 是一个随机值，Sec-WebSocket-Accept 是 Sec-WebSocket-Key 拼接特定字符串"
+" ``258EAFA5-E914-47DA-95CA-C5AB0DC85B11`` 计算SHA1摘要后的 Base64 编码的值。例子中 "
+"``s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`` 就是 "
+"``dGhlIHNhbXBsZSBub25jZQ==258EAFA5-E914-47DA-95CA-C5AB0DC85B11`` "
+"对应的SHA1摘要。"
+msgstr ""

@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/info/network.rst:2
+msgid "网络入口/信息"
+msgstr ""
+
+#: ../../source/info/network.rst:4
+msgid "网络拓扑信息"
+msgstr ""
+
+#: ../../source/info/network.rst:5
+msgid "外网出口"
+msgstr ""
+
+#: ../../source/info/network.rst:6
+msgid "IP信息"
+msgstr ""
+
+#: ../../source/info/network.rst:7
+msgid "C段"
+msgstr ""
+
+#: ../../source/info/network.rst:8
+msgid "线下网络"
+msgstr ""
+
+#: ../../source/info/network.rst:9
+msgid "Wi-Fi"
+msgstr ""
+
+#: ../../source/info/network.rst:10
+msgid "SSID"
+msgstr ""
+
+#: ../../source/info/network.rst:11
+msgid "认证信息"
+msgstr ""
+
+#: ../../source/info/network.rst:12
+msgid "VPN"
+msgstr ""
+
+#: ../../source/info/network.rst:13
+msgid "厂商"
+msgstr ""
+
+#: ../../source/info/network.rst:14
+msgid "登录方式"
+msgstr ""
+
+#: ../../source/info/network.rst:15
+msgid "邮件网关"
+msgstr ""
+
+#: ../../source/info/network.rst:16
+msgid "手机APP"
+msgstr ""
+
+#: ../../source/info/network.rst:17
+msgid "小程序后台"
+msgstr ""
+
+#: ../../source/info/network.rst:18
+msgid "OA"
+msgstr ""
+
+#: ../../source/info/network.rst:19
+msgid "SSO"
+msgstr ""
+
+#: ../../source/info/network.rst:20
+msgid "边界网络设备"
+msgstr ""
+
+#: ../../source/info/network.rst:21
+msgid "上游运营商"
+msgstr ""

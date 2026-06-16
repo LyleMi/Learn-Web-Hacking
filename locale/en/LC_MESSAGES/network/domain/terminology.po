@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/domain/terminology.rst:2
+msgid "术语"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:5
+msgid "mDNS"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:6
+msgid ""
+"Multicast DNS (mDNS)，多播DNS，使用5353端口，组播地址为 ``224.0.0.251`` 或 "
+"``[FF02::FB]`` "
+"。在一个没有常规DNS服务器的小型网络内可以使用mDNS来实现类似DNS的编程接口、包格式和操作语义。mDNS协议的报文与DNS的报文结构相同，但有些字段对于mDNS来说有新的含义。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:8
+msgid "启动mDNS的主机会在进入局域网后向所有主机组播消息，包含主机名、IP等信息，其他拥有相应服务的主机也会响应含有主机名和IP的信息。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:10
+msgid "mDNS的域名是用 ``.local`` 和普通域名区分开的。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:13
+msgid "FQDN"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:14
+msgid ""
+"FQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如 "
+"``www.example.com.`` 。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:17
+msgid "TLD"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:18
+msgid "Top-Level Domain (TLD) 是属于根域的一个域，例如 ``com`` 或 ``jp`` 。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:20
+msgid ""
+"TLD一般可以分为 Country Code Top-Level Domains (ccTLDs) 、Generic Top-Level "
+"Domains (gTLDs) 以及其它。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:23
+msgid "IDN"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:24
+msgid "Internationalized Domain Names for Applications (IDNA) 是为了处理非ASCII字符的情况。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:27
+msgid "CNAME"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:28
+msgid "CNAME即Canonical name，又称alias，将域名指向另一个域名。"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:31
+msgid "TTL"
+msgstr ""
+
+#: ../../source/network/domain/terminology.rst:32
+msgid "Time To Live，无符号整数，记录DNS记录过期的时间，最小是0，最大是2147483647 (2^31 - 1)。"
+msgstr ""

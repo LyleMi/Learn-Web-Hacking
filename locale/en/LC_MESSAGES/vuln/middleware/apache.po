@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/middleware/apache.rst:2
+msgid "Apache"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:5
+msgid "后缀解析"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:6
+msgid ""
+"``test.php.x1.x2.x3`` （ x1,x2,x3 为没有在 mime.types 文件中定义的文件类型）。Apache "
+"将从右往左开始判断后缀， 若x3为非可识别后缀，则判断x2，直到找到可识别后缀为止，然后对可识别后缀进行解析"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:9
+msgid ".htaccess"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:10
+msgid "当AllowOverride被启用时，上传启用解析规则的.htaccess"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:40
+msgid "目录遍历"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:41
+msgid "配置 ``Options +Indexes`` 时Apache存在目录遍历漏洞。"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:44
+msgid "CVE-2017-15715"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:45
+msgid "``%0A`` 绕过上传黑名单。"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:48
+msgid "lighttpd"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:49
+msgid "``xx.jpg/xx.php``"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:52
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/vuln/middleware/apache.rst:53
+msgid ""
+"`Apache 上传绕过 <https://www.leavesongs.com/PENETRATION/apache-"
+"cve-2017-15715-vulnerability.html>`_"
+msgstr ""

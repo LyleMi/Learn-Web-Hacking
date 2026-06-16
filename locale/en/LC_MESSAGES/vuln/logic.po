@@ -1,0 +1,481 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/logic.rst:2
+msgid "逻辑漏洞 / 业务漏洞"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:6
+msgid "逻辑漏洞是指由于程序逻辑不严导致一些逻辑分支处理错误造成的漏洞。"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:8
+msgid "在实际开发中，因为开发者水平不一没有安全意识，而且业务发展迅速内部测试没有及时到位，所以常常会出现类似的漏洞。"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:11
+msgid "安装逻辑"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:12
+msgid "查看能否绕过判定重新安装"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:13
+msgid "查看能否利用安装文件获取信息"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:14
+msgid "看能否利用更新功能获取信息"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:17
+msgid "交易"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:20
+msgid "购买"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:21
+msgid "修改支付的价格"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:22
+msgid "修改支付的状态"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:23
+msgid "修改购买数量为负数"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:24
+msgid "修改金额为负数"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:25
+msgid "重放成功的请求"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:26
+msgid "并发数据库锁处理不当"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:29
+msgid "业务风控"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:30
+msgid "刷优惠券"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:31
+msgid "套现"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:34
+msgid "账户"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:37
+msgid "注册"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:38
+msgid "覆盖注册"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:39
+msgid "尝试重复用户名"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:40
+msgid "注册遍历猜解已有账号"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:43
+msgid "密码"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:44
+msgid "密码未使用哈希算法保存"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:45
+msgid "没有验证用户设置密码的强度"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:48
+msgid "邮箱用户名"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:49 ../../source/vuln/logic.rst:59
+msgid "前后空格"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:50
+msgid "大小写变换"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:53
+msgid "Cookie"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:54
+msgid "包含敏感信息"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:55
+msgid "未验证合法性可伪造"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:58
+msgid "手机号用户名"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:60
+msgid "+86"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:63
+msgid "登录"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:64
+msgid "撞库"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:65
+msgid "设置异地登录检查等机制"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:66
+msgid "账号劫持"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:67
+msgid "恶意尝试帐号密码锁死账户"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:68
+msgid "需要设置锁定机制与解锁机制"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:69
+msgid "不安全的传输信道"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:70
+msgid "登录凭证存储在不安全的位置"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:73
+msgid "找回密码"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:74
+msgid "重置任意用户密码"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:75
+msgid "密码重置后新密码在返回包中"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:76
+msgid "Token验证逻辑在前端"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:77
+msgid "X-Forwarded-Host处理不正确"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:78
+msgid "找回密码功能泄露用户敏感信息"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:81
+msgid "修改密码"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:82
+msgid "越权修改密码"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:83
+msgid "修改密码没有旧密码验证"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:86
+msgid "申诉"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:87
+msgid "身份伪造"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:88
+msgid "逻辑绕过"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:91
+msgid "更新"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:92
+msgid "ORM更新操作不当可更新任意字段"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:93
+msgid "权限限制不当可以越权修改"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:96
+msgid "信息查询"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:97
+msgid "权限限制不当可以越权查询"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:98
+msgid "用户信息ID可以猜测导致遍历"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:101
+msgid "2FA"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:102
+msgid "重置密码后自动登录没有2FA"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:103
+msgid "OAuth登录没有启用2FA"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:104
+msgid "2FA可爆破"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:105
+msgid "2FA有条件竞争"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:106
+msgid "修改返回值绕过"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:107
+msgid "激活链接没有启用2FA"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:108
+msgid "可通过CSRF禁用2FA"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:111
+msgid "验证码"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:112
+msgid "验证码可重用"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:113
+msgid "验证码可预测"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:114
+msgid "验证码强度不够"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:115
+msgid "验证码无时间限制或者失效时间长"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:116
+msgid "验证码无猜测次数限制"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:117
+msgid "验证码传递特殊的参数或不传递参数绕过"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:118
+msgid "验证码可从返回包中直接获取"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:119
+msgid "验证码不刷新或无效"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:120
+msgid "验证码数量有限"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:121
+msgid "验证码在数据包中返回"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:122
+msgid "修改Cookie绕过"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:123
+msgid "修改返回包绕过"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:124
+msgid "验证码在客户端生成或校验"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:125
+msgid "验证码可OCR或使用机器学习识别"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:126
+msgid "验证码用于手机短信/邮箱轰炸"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:129
+msgid "Session"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:130
+msgid "Session机制"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:131
+msgid "Session猜测 / 爆破"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:132
+msgid "Session伪造"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:133
+msgid "Session泄漏"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:134
+msgid "Session Fixation"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:137
+msgid "越权"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:138
+msgid "未授权访问"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:139
+msgid "静态文件"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:140
+msgid "通过特定url来防止被访问"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:141
+msgid "水平越权"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:142
+msgid "攻击者可以访问与他拥有相同权限的用户的资源"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:143
+msgid "权限类型不变，ID改变"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:144
+msgid "垂直越权"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:145
+msgid "低级别攻击者可以访问高级别用户的资源"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:146
+msgid "权限ID不变，类型改变"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:147
+msgid "交叉越权"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:148
+msgid "权限ID改变，类型改变"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:151
+msgid "随机数安全"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:152
+msgid "使用不安全的随机数发生器"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:153
+msgid "使用时间等易猜解的因素作为随机数种子"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:156
+msgid "其他"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:157
+msgid "用户/订单/优惠券等ID生成有规律，可枚举"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:158
+msgid "接口无权限、次数限制"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:159
+msgid "加密算法实现误用"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:160
+msgid "执行顺序"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:161
+msgid "敏感信息泄露"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:164
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:165
+msgid ""
+"`水平越权漏洞及其解决方案 "
+"<http://blog.csdn.net/mylutte/article/details/50819146#10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1>`_"
+msgstr ""
+
+#: ../../source/vuln/logic.rst:166
+msgid "`细说验证码安全 测试思路大梳理 <https://xz.aliyun.com/t/6029>`_"
+msgstr ""

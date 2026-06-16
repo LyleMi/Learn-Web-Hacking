@@ -1,0 +1,436 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/sop.rst:2
+msgid "同源策略"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:6
+msgid ""
+"同源策略限制了不同源之间如何进行资源交互，是用于隔离潜在恶意文件的重要安全机制。 "
+"是否同源由URL决定，URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:10
+msgid "file域的同源策略"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:11
+msgid "在之前的浏览器中，任意两个file域的URI被认为是同源的。本地磁盘上的任何HTML文件都可以读取本地磁盘上的任何其他文件。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:13
+msgid "从Gecko 1.9开始，文件使用了更细致的同源策略，只有当源文件的父目录是目标文件的祖先目录时，文件才能读取另一个文件。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:16
+msgid "cookie的同源策略"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:17
+msgid "cookie使用不同的源定义方式，一个页面可以为本域和任何父域设置cookie，只要是父域不是公共后缀(public suffix)即可。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:19
+msgid ""
+"不管使用哪个协议(HTTP/HTTPS)或端口号，浏览器都允许给定的域以及其任何子域名访问cookie。设置 cookie时，可以使用 "
+"``domain`` / ``path`` / ``secure`` 和 ``http-only`` 标记来限定其访问性。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:21
+msgid "所以 ``https://localhost:8080/`` 和 ``http://localhost:8081/`` 的Cookie是共享的。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:24
+msgid "Flash/SilverLight跨域"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:25
+msgid "浏览器的各种插件也存在跨域需求。通常是通过在服务器配置crossdomain.xml，设置本服务允许哪些域名的跨域访问。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:27
+msgid "客户端会请求此文件，如果发现自己的域名在访问列表里，就发起真正的请求，否则不发送请求。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:30
+msgid "源的更改"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:31
+msgid ""
+"同源策略认为域和子域属于不同的域，例如 ``child1.a.com`` 与 ``a.com`` / ``child1.a.com`` 与 "
+"``child2.a.com`` / ``xxx.child1.a.com`` 与 ``child1.a.com`` 两两不同源。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:33
+msgid "对于这种情况，可以在两个方面各自设置 ``document.domain='a.com'`` 来改变其源来实现以上任意两个页面之间的通信。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:35
+msgid "另外因为浏览器单独保存端口号，这种赋值会导致端口号被重写为 ``null`` 。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:38
+msgid "跨源访问"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:39
+msgid "同源策略控制了不同源之间的交互，这些交互通常分为三类："
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:41
+msgid "通常允许跨域写操作(Cross-origin writes)"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:42
+msgid "链接(links)"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:43
+msgid "重定向"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:44
+msgid "表单提交"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:45
+msgid "通常允许跨域资源嵌入(Cross-origin embedding)"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:46
+msgid "通常不允许跨域读操作(Cross-origin reads)"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:48
+msgid "可能嵌入跨源的资源的一些示例有："
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:50
+msgid "``<script src=\"...\"></script>`` 标签嵌入跨域脚本。语法错误信息只能在同源脚本中捕捉到。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:51
+msgid ""
+"``<link rel=\"stylesheet\" href=\"...\">`` 标签嵌入CSS。由于CSS的松散的语法规则"
+"，CSS的跨域需要一个设置正确的Content-Type 消息头。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:52
+msgid "``<img>`` / ``<video>`` / ``<audio>`` 嵌入多媒体资源。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:53
+msgid "``<object>`` ``<embed>`` 和 ``<applet>`` 的插件。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:54
+msgid ""
+"``@font-face`` 引入的字体。一些浏览器允许跨域字体( cross-origin fonts)，一些需要同源字体(same-"
+"origin fonts)。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:55
+msgid "``<frame>`` 和 ``<iframe>`` 载入的任何资源。站点可以使用X-Frame-Options消息头来阻止这种形式的跨域交互。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:58
+msgid "JSONP跨域"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:59
+msgid ""
+"JSONP就是利用 ``<script>`` "
+"标签的跨域能力实现跨域数据的访问，请求动态生成的JavaScript脚本同时带一个callback函数名作为参数。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:61
+msgid "服务端收到请求后，动态生成脚本产生数据，并在代码中以产生的数据为参数调用callback函数。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:63
+msgid "JSONP也存在一些安全问题，例如当对传入/传回参数没有做校验就直接执行返回的时候，会造成XSS问题。没有做Referer或Token校验就给出数据的时候，可能会造成数据泄露。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:65
+msgid "另外JSONP在没有设置callback函数的白名单情况下，可以合法的做一些设计之外的函数调用，引入问题。这种攻击也被称为SOME攻击。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:68
+msgid "跨源脚本API访问"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:69
+msgid ""
+"Javascript的APIs中，如 ``iframe.contentWindow`` , ``window.parent``, "
+"``window.open`` 和 ``window.opener`` 允许文档间相互引用。当两个文档的源不同时，这些引用方式将对 "
+"``window`` 和 ``location`` 对象的访问添加限制。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:71
+msgid "``window`` 允许跨源访问的方法有"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:73
+msgid "window.blur"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:74
+msgid "window.close"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:75
+msgid "window.focus"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:76
+msgid "window.postMessage"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:78
+msgid "``window`` 允许跨源访问的属性有"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:80
+msgid "window.closed"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:81
+msgid "window.frames"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:82
+msgid "window.length"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:83
+msgid "window.location"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:84
+msgid "window.opener"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:85
+msgid "window.parent"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:86
+msgid "window.self"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:87
+msgid "window.top"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:88
+msgid "window.window"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:90
+msgid "其中 ``window.location`` 允许读/写，其他的属性只允许读"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:93
+msgid "跨源数据存储访问"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:94
+msgid ""
+"存储在浏览器中的数据，如 ``localStorage`` 和 "
+"``IndexedDB``，以源进行分割。每个源都拥有自己单独的存储空间，一个源中的Javascript脚本不能对属于其它源的数据进行读写操作。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:97
+msgid "CORS"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:98
+msgid ""
+"CORS是一个W3C标准，全称是跨域资源共享(Cross-origin resource "
+"sharing)。通过这个标准，可以允许浏览器读取跨域的资源。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:101
+msgid "常见请求头"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:102
+msgid "Origin"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:103
+msgid "预检请求或实际请求的源站URI, 浏览器请求默认会发送该字段"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:104
+msgid "``Origin: <origin>``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:105
+msgid "Access-Control-Request-Method"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:106
+msgid "声明请求使用的方法"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:107
+msgid "``Access-Control-Request-Method: <method>``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:108
+msgid "Access-Control-Request-Headers"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:109
+msgid "声明请求使用的header字段"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:110
+msgid "``Access-Control-Request-Headers: <field-name>[, <field-name>]*``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:113
+msgid "常见返回头"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:114
+msgid "Access-Control-Allow-Origin"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:115
+msgid "声明允许访问的源外域URI"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:116
+msgid "对于携带身份凭证的请求不可使用通配符 ``*``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:117
+msgid "``Access-Control-Allow-Origin: <origin> | *``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:118
+msgid "Access-Control-Expose-Headers"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:119
+msgid "声明允许暴露的头"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:120
+msgid ""
+"e.g. ``Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-"
+"Custom-Header``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:121
+msgid "Access-Control-Max-Age"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:122
+msgid "声明Cache时间"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:123
+msgid "``Access-Control-Max-Age: <delta-seconds>``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:124
+msgid "Access-Control-Allow-Credentials"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:125
+msgid "声明是否允许在请求中带入"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:126
+msgid "``Access-Control-Allow-Credentials: true``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:127
+msgid "Access-Control-Allow-Methods"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:128
+msgid "声明允许的访问方式"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:129
+msgid "``Access-Control-Allow-Methods: <method>[, <method>]*``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:130
+msgid "Access-Control-Allow-Headers"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:131
+msgid "声明允许的头"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:132
+msgid "``Access-Control-Allow-Headers: <field-name>[, <field-name>]*``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:135
+msgid "防御建议"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:136
+msgid "如非必要不开启CORS"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:137
+msgid "定义详细的白名单，不使用通配符，仅配置所需要的头"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:138
+msgid "配置 ``Vary: Origin`` 头部"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:139
+msgid "如非必要不使用 ``Access-Control-Allow-Credentials``"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:140
+msgid "限制缓存的时间"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:143
+msgid "阻止跨源访问"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:144
+msgid ""
+"阻止跨域写操作，可以检测请求中的 ``CSRF token`` ，这个标记被称为Cross-Site Request Forgery (CSRF)"
+" 标记。"
+msgstr ""
+
+#: ../../source/vuln/xss/sop.rst:146
+msgid ""
+"阻止资源的跨站读取，因为嵌入资源通常会暴露信息，需要保证资源是不可嵌入的。但是多数情况下浏览器都不会遵守 ``Content-Type`` "
+"消息头。例如如果在HTML文档中指定 ``<script>`` 标记，则浏览器会尝试将HTML解析为JavaScript。"
+msgstr ""

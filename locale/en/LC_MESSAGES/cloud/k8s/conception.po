@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/cloud/k8s/conception.rst:2
+msgid "k8s概念"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:3
+msgid ""
+"Kubernetes 在希腊语意为“舵手”或“驾驶员”，和 Docker 对应，常简称为K8s。Kubernetes 由 Google 的 "
+"Borg 演化而来，是用于自动部署、扩展和管理容器的开源系统。"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:6
+msgid "组成"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:7
+msgid "Kubernetes 由控制面 (Master) 与数据面 (Worker Node) 组成。 Master 的核心组件："
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:10
+msgid "API Server"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:11
+msgid "Controller-Mananger"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:12
+msgid "Scheduler"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:13
+msgid "etcd"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:15
+msgid "Worker Node 则由以下节点组成："
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:17
+msgid "Kubelet"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:18
+msgid "Kube-Proxy"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:19
+msgid "容器运行时"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:22
+msgid "核心设计"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:25
+msgid "Pod"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:26
+msgid ""
+"Pod 是 Kubernetes 的基本调度单元，一个 Pod 一般包含一个或多个容器。 Kubernetes 中的每个 Pod "
+"都被分配一个集群内唯一的IP地址，使得应用程序可以使用同一端口。 Pod "
+"可以定义一个卷，例如本地磁盘目录或网络磁盘，并将其暴露在pod中的一个容器之中。 Pod 可以通过 Kubernetes API "
+"手动管理，也可以委托给控制器来实现自动管理。"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:32
+msgid "Service"
+msgstr ""
+
+#: ../../source/cloud/k8s/conception.rst:33
+msgid "Service是为一组具有相同功能的容器应用提供一个统一的入口地址，本质是一组协同工作的Pod。"
+msgstr ""

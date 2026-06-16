@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/persistence.rst:2
+msgid "持久化"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:5
+msgid "隐藏文件"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:6
+msgid "创建系统隐藏文件"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:7
+msgid "``attrib +s +a +r +h filename`` / ``attrib +s +h filename``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:8
+msgid "利用NTFS ADS (Alternate　Data　Streams) 创建隐藏文件"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:9
+msgid "利用Windows保留字"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:10
+msgid "``aux|prn|con|nul|com1|com2|com3|com4|com5|com6|com7|com8|com9|lpt1|lpt2|lpt3|lpt4|lpt5|lpt6|lpt7|lpt8|lpt9``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:13
+msgid "后门"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:16
+msgid "sethc"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:17
+msgid ""
+"``sethc.exe`` 是 Windows系统在用户按下五次shift后调用的粘滞键处理程序，当有写文件但是没有执行权限时，可以通过替换 "
+"``sethc.exe`` 的方式留下后门，在密码输入页面输入五次shift即可获得权限。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:20
+msgid "映像劫持"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:21
+msgid "在高版本的Windows中，替换程序是受到系统保护的，需要使用其他的技巧来实现替换。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:23
+msgid ""
+"具体操作为在注册表的 ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows "
+"NT\\CurrentVersion\\Image File Execution Option`` 下添加项 ``sethc.exe`` ，然后在"
+" ``sethc.exe`` 这个项中添加 ``debugger`` 键，键值为恶意程序的路径。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:26
+msgid "定时任务"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:27
+msgid "Windows下有 ``schtasks`` 和 ``at`` 两种计划任务机制。 其中 ``at`` 在较高版本的Windows中已经弃用。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:29
+msgid ""
+"设置命令为 ``schtasks /create /tn \"TEST_OnLogon\" /sc onlogon /tr \"cmd.exe "
+"/c calc.exe\"`` 、 ``schtasks /create /tn \"TEST_OnStartup\" /sc onstart "
+"/ru system /tr \"cmd.exe /c calc.exe\"`` 。删除命令为 ``schtasks /delete /tn "
+"\"TEST_OnLogon\" /f`` 。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:32
+msgid "登录脚本"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:33
+msgid ""
+"Windows可以在用户登录前执行脚本，使用 ``HKLM\\SOFTWARE\\Microsoft\\Windows "
+"NT\\CurrentVersion\\Winlogon\\Userinit`` 设置。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:35
+msgid "也可在 ``HKCU\\Environment\\`` 路径下设置 ``UserInitMprLogonScript`` 来实现。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:38
+msgid "屏幕保护程序"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:39
+msgid "Windows可以自定义屏幕保护程序，使用 ``HKEY_CURRENT_USER\\Control Panel\\Desktop`` 设置。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:42
+msgid "隐藏用户"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:43
+msgid "Windows可以使用在用户名后加入 ``$`` 来创建隐藏用户，这种帐户可在一定条件下隐藏，但是仍可以通过控制面板查看。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:45
+msgid "在创建隐藏用户的基础上，可以修改注册表的方式创建影子用户，这种方式创建的用户只能通过注册表查看。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:48
+msgid "CLR"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:49
+msgid ""
+"CLR (Common Language Runtime Compilation) "
+"公共语言运行时，是微软为.NET产品构建的运行环境，可以粗略地理解为.NET虚拟机。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:51
+msgid ".NET程序的运行离不开CLR，因此可以通过劫持CLR的方式实现后门。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:54
+msgid "Winlogon Helper DLL后门"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:55
+msgid "Winlogon是一个Windows组件，用来处理各种活动，如登录、注销、身份验证期间加载用户配置文件、关闭、锁定屏幕等。这种行为由注册表管理，该注册表定义在Windows登录期间启动哪些进程。所以可以依靠这个注册表来进行权限维持。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:57
+msgid "注册表位置如下："
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:59
+msgid ""
+"``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows "
+"NT\\CurrentVersion\\Winlogon\\Shell`` 用于执行exe程序"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:60
+msgid ""
+"``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows "
+"NT\\CurrentVersion\\Winlogon\\Userinit`` 用于执行exe程序"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:61
+msgid ""
+"``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows "
+"NT\\CurrentVersion\\Winlogon\\Notify`` 用于执行dll文件"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:64
+msgid "自启动"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:67
+msgid "基于注册表的自启动"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:68
+msgid ""
+"通过在注册表中写入相应的键值可以实现程序的开机自启动，主要是 ``Run`` 和 ``RunOnce`` "
+"，其中RunOnce和Run区别在于RunOnce的键值只作用一次，执行完毕后会自动删除。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:70
+msgid "注册表如下："
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:72
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:73
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:74
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:75
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:76
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:78
+msgid "基于策略的自启动注册表设置如下："
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:80
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:81
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:83
+msgid "设置启动文件夹注册表位置如下："
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:85
+msgid ""
+"``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User"
+" Shell Folders``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:86
+msgid ""
+"``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell"
+" Folders``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:87
+msgid ""
+"``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell"
+" Folders``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:88
+msgid ""
+"``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User"
+" Shell Folders``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:90
+msgid "设置服务启动项注册表位置如下："
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:92
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:93
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:94
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:95
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:97
+msgid ""
+"用户自启动位置 ``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows "
+"NT\\CurrentVersion\\Winlogon\\Userinit`` 、 "
+"``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows "
+"NT\\CurrentVersion\\Winlogon\\Shell`` ，其中 ``Userinit`` 键允许指定用逗号分隔的多个程序。"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:99
+msgid "如果用户启动了屏幕保护程序，也可以通过屏幕保护程序来启动后面，相关注册表键值为："
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:101
+msgid "``HKEY_CURRENT_USER\\Control Panel\\Desktop\\ScreenSaveActive``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:102
+msgid "``HKEY_CURRENT_USER\\Control Panel\\Desktop\\ScreenSaverIsSecure``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:103
+msgid "``HKEY_CURRENT_USER\\Control Panel\\Desktop\\ScreenSaveTimeOut``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:104
+msgid "``HKEY_CURRENT_USER\\Control Panel\\Desktop\\SCRNSAVE.EXE``"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:107
+msgid "基于特定目录的自启动"
+msgstr ""
+
+#: ../../source/intranet/windows/persistence.rst:108
+msgid ""
+"自启动目录， ``C:\\Users\\Username\\AppData\\Roaming\\Microsoft\\Windows\\Start"
+" Menu\\Programs\\Startup`` 目录对特定用户生效， "
+"``C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp`` "
+"对所有用户生效。在NT6以前，两个目录为 ``C:\\Documents and Settings\\Username\\Start "
+"Menu\\Programs\\StartUp`` / ``C:\\Documents and Settings\\All "
+"Users\\Start Menu\\Programs\\StartUp`` 。"
+msgstr ""

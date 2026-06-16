@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/defense/riskcontrol.rst:2
+msgid "风险控制"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:5
+msgid "常见风险"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:6
+msgid "会员"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:7
+msgid "撞库盗号"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:8
+msgid "账号分享"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:9
+msgid "批量注册"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:10
+msgid "视频"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:11
+msgid "盗播盗看"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:12
+msgid "广告屏蔽"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:13
+msgid "刷量作弊"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:14
+msgid "活动"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:15
+msgid "恶意刷"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:16
+msgid "薅羊毛"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:17
+msgid "直播"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:18
+msgid "挂站人气"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:19
+msgid "恶意图文"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:20
+msgid "电商"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:21
+#: ../../source/defense/riskcontrol.rst:26
+msgid "恶意下单"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:22
+msgid "订单欺诈"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:23
+msgid "支付"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:24
+msgid "盗号盗卡"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:25
+msgid "洗钱"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:27
+msgid "恶意提现"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:28
+msgid "其他"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:29
+msgid "钓鱼邮件"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:30
+msgid "恶意爆破"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:31
+msgid "短信轰炸"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:34
+msgid "防御策略"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:35
+msgid "核身策略"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:36
+msgid "同一收货手机号"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:37
+msgid "同一收货地址"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:38
+msgid "同一历史行为"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:39
+msgid "同一IP"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:40
+msgid "同一设备"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:41
+msgid "同一支付ID"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:42
+msgid "LBS"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:45
+msgid "异常特征"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:46
+msgid "APP用户异常特征"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:47
+msgid "IP"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:48
+msgid "设备为特定型号"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:49
+msgid "本地APP列表中有沙盒APP"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:50
+msgid "Root用户"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:51
+msgid "同设备登录过多个账号"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:54
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:55
+msgid ""
+"`支付风控模型和流程分析 "
+"<http://doc.cocolian.cn/essay/risk/2016/12/18/risk-2-database/>`_"
+msgstr ""
+
+#: ../../source/defense/riskcontrol.rst:56
+msgid ""
+"`爱奇艺业务安全风控体系的建设实践 "
+"<https://mp.weixin.qq.com/s?__biz=MzI0MjczMjM2NA==&mid=2247483836&idx=1&sn=d46875c957289d8e035345992ad7053e>`_"
+msgstr ""

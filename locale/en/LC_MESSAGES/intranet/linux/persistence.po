@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/linux/persistence.rst:2
+msgid "持久化"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:5
+msgid "权限提升"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:6
+msgid "内核漏洞利用"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:7
+msgid "攻击有root权限的服务"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:8
+msgid "利用第三方服务提权"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:9
+msgid "通过有SUID属性的可执行文件"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:10
+msgid "查找可能提权的可执行文件"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:11
+msgid "``find / -perm +4000 -ls``"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:12
+msgid "``find / -perm -u=s -type f 2>/dev/null``"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:13
+msgid "``find / -user root -perm -4000 -print 2>/dev/null``"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:14
+#, python-brace-format
+msgid "``find / -user root -perm -4000 -exec ls -ldb {} \\; 2>/dev/null``"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:15
+msgid "利用可用的root权限"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:16
+msgid "``sudo -l``"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:17
+msgid "利用误配置的 crontab 任务"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:20
+msgid "自启动"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:21
+msgid "/etc/init.d"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:22
+msgid "/etc/rc.d/rc.local"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:23
+msgid "~/.bashrc"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:24
+msgid "~/.zshrc"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:27
+msgid "后门"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:28
+msgid "ssh 后门"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:29
+msgid "``alias ssh='strace -o /tmp/.ssh.log -e read,write,connect -s 2048 ssh'``"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:30
+msgid "后门账户"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:31
+msgid "常见应用"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:32
+msgid "ICMP"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:33
+msgid "DNS"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:34
+msgid "icmp后门"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:35
+msgid "后门端口复用"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:36
+msgid "``.`` 开头隐藏文件"
+msgstr ""
+
+#: ../../source/intranet/linux/persistence.rst:37
+msgid "rootkit"
+msgstr ""

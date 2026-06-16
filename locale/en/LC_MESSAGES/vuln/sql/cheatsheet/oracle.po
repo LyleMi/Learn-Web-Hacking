@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:2
+msgid "Oracle Payload"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:5
+msgid "常见Payload"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:6
+msgid "dump"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:7
+msgid "``select * from v$tablespace;``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:8
+msgid "``select * from user_tables;``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:9
+msgid ""
+"``select column_name from user_tab_columns where table_name = "
+"'table_name';``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:10
+msgid ""
+"``select column_name, data_type from user_tab_columns where table_name = "
+"'table_name';``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:11
+msgid "``SELECT * FROM ALL_TABLES``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:12
+msgid "Comment"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:13
+msgid "``--``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:14
+msgid "``/**/``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:15
+msgid "Space"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:16
+msgid "``0x00`` ``0x09`` ``0xa-0xd`` ``0x20``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:17
+msgid "报错"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:18
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:27
+msgid "``utl_inaddr.get_host_name``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:19
+msgid "``ctxsys.drithsx.sn``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:20
+msgid "``ctxsys.CTX_REPORT.TOKEN_TYPE``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:21
+msgid "``XMLType``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:22
+msgid "``dbms_xdb_version.checkin``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:23
+msgid "``dbms_xdb_version.makeversioned``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:24
+msgid "``dbms_xdb_version.uncheckout``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:25
+msgid "``dbms_utility.sqlid_to_sqlhash``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:26
+msgid "``ordsys.ord_dicom.getmappingxpath``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:28
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:31
+msgid "``utl_inaddr.get_host_address``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:29
+msgid "OOB"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:30
+msgid "``utl_http.request``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:32
+msgid "``SYS.DBMS_LDAP.INIT``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:33
+msgid "``HTTPURITYPE``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:34
+msgid "``HTTP_URITYPE.GETCLOB``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:35
+msgid "绕过"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:36
+msgid "``rawtohex``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/oracle.rst:39
+msgid "写文件"
+msgstr ""

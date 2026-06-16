@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/trick.rst:2
+msgid "Tricks"
+msgstr ""
+
+#: ../../source/language/php/trick.rst:3
+msgid "is_numeric 前后有空格时，不会判断为true"
+msgstr ""
+
+#: ../../source/language/php/trick.rst:4
+msgid "松散比较时，两个0e开头的不同哈希会判断为相等"
+msgstr ""
+
+#: ../../source/language/php/trick.rst:5
+msgid "松散比较时，非数字的字符串序列和数字比较会自动转换"
+msgstr ""
+
+#: ../../source/language/php/trick.rst:6
+msgid "strcmp/ereg 等函数在传入参数类型为数组时会有非预期行为"
+msgstr ""

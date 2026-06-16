@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/cloud.rst:2
+msgid "云安全"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:5
+msgid "云环境自动测试"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:8
+msgid "k8s"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:9
+msgid ""
+"`checkov <https://github.com/bridgecrewio/checkov>`_ Prevent cloud "
+"misconfigurations during build-time for Terraform, Cloudformation, "
+"Kubernetes, Serverless framework and other infrastructure-as-code-"
+"languages with Checkov by Bridgecrew"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:10
+msgid ""
+"`CDK <https://github.com/cdk-team/CDK>`_ Zero Dependency Container "
+"Penetration Toolkit"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:11
+msgid "`kube bench <https://github.com/aquasecurity/kube-bench>`_"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:12
+msgid ""
+"`kube hunter <https://github.com/aquasecurity/kube-hunter>`_ Hunt for "
+"security weaknesses in Kubernetes clusters"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:13
+msgid ""
+"`KubiScan <https://github.com/cyberark/KubiScan>`_ A tool to scan "
+"Kubernetes cluster for risky permissions"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:14
+msgid ""
+"`kubescape <https://github.com/armosec/kubescape>`_ kubescape is the "
+"first tool for testing if Kubernetes is deployed securely as defined in "
+"Kubernetes Hardening Guidance by to NSA and CISA"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:15
+msgid ""
+"`kubeaudit <https://github.com/Shopify/kubeaudit>`_ kubeaudit helps you "
+"audit your Kubernetes clusters against common security controls"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:16
+msgid ""
+"`peirates <https://github.com/inguardians/peirates>`_ Kubernetes "
+"Penetration Testing tool"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:17
+msgid ""
+"`datree <https://github.com/datreeio/datree>`_ Prevent Kubernetes "
+"misconfigurations from reaching production"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:20
+msgid "容器"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:21
+msgid ""
+"`botb <https://github.com/brompwnie/botb>`_ A container analysis and "
+"exploitation tool for pentesters and engineers"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:22
+msgid ""
+"`deepce <https://github.com/stealthcopter/deepce>`_ Docker Enumeration, "
+"Escalation of Privileges and Container Escapes (DEEPCE)"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:25
+msgid "安全加固"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:26
+msgid ""
+"`falco <https://github.com/falcosecurity/falco>`_ Cloud Native Runtime "
+"Security"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:29
+msgid "云上扫描"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:30
+msgid ""
+"`Cloud Custodian <https://github.com/cloud-custodian/cloud-custodian>`_ "
+"Rules engine for cloud security, cost optimization, and governance, DSL "
+"in yaml for policies to query, filter, and take actions on resources"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:31
+msgid ""
+"`cloudquery <https://github.com/cloudquery/cloudquery>`_ cloudquery "
+"transforms your cloud infrastructure into SQL database for easy "
+"monitoring, governance and security"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:34
+msgid "靶场环境"
+msgstr ""
+
+#: ../../source/tools/cloud.rst:35
+msgid ""
+"`metarget <https://github.com/Metarget/metarget>`_ a framework providing "
+"automatic constructions of vulnerable infrastructures."
+msgstr ""
+
+#: ../../source/tools/cloud.rst:36
+msgid ""
+"`CloudGoat <https://github.com/RhinoSecurityLabs/cloudgoat>`_ Rhino "
+"Security Labs' \"Vulnerable by Design\" AWS deployment tool"
+msgstr ""

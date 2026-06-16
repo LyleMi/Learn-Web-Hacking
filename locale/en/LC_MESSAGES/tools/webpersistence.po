@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/webpersistence.rst:2
+msgid "Web持久化"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:5
+msgid "WebShell管理工具"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:6
+msgid "`菜刀 <https://github.com/Chora10/Cknife>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:7
+msgid "`antSword <https://github.com/antoor/antSword>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:8
+msgid "`冰蝎 <https://github.com/rebeyond/Behinder>`_ 动态二进制加密网站管理客户端"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:9
+msgid "`weevely3 <https://github.com/epinna/weevely3>`_ Weaponized web shell"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:10
+msgid ""
+"`Altman <https://github.com/keepwn/Altman>`_ the cross platform webshell "
+"tool in .NET"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:11
+msgid ""
+"`Webshell Sniper <https://github.com/WangYihang/Webshell-Sniper>`_ Manage"
+" your website via terminal"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:12
+msgid ""
+"`quasibot <https://github.com/Smaash/quasibot>`_ complex webshell "
+"manager, quasi-http botnet"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:15
+msgid "WebShell"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:16
+msgid "`webshell <https://github.com/tennc/webshell>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:17
+msgid "`PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:18
+msgid ""
+"`php bash - semi-interactive web shell "
+"<https://github.com/Arrexel/phpbash>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:19
+msgid "`Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:20
+msgid "`b374k - PHP WebShell Custom Tool <https://github.com/b374k/b374k>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:21
+msgid "`JSP Webshells <https://github.com/threedr3am/JSP-Webshells>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:22
+msgid "`MemShellDemo <https://github.com/jweny/MemShellDemo>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:25
+msgid "Web后门"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:26
+msgid "`pwnginx <https://github.com/t57root/pwnginx>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:27
+msgid ""
+"`Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-"
+"Module-Backdoor>`_"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:28
+msgid ""
+"`SharpGen <https://github.com/cobbr/SharpGen>`_  .NET Core console "
+"application that utilizes the Rosyln C# compiler to quickly cross-compile"
+" .NET Framework console applications or libraries"
+msgstr ""
+
+#: ../../source/tools/webpersistence.rst:29
+msgid ""
+"`IIS-Raid <https://github.com/0x09AL/IIS-Raid>`_ A native backdoor module"
+" for Microsoft IIS"
+msgstr ""

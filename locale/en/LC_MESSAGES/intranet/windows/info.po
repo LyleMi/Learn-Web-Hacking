@@ -1,0 +1,560 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/info.rst:2
+msgid "信息收集"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:5
+msgid "基本命令"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:6
+msgid "主机名 ``hostname``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:7
+msgid "查询所有计算机名称 ``dsquery computer``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:8
+msgid "查看配置及补丁信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:9
+msgid "``systeminfo``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:10
+msgid "``wmic qfe get description,installedOn /format:csv``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:11
+msgid "查看版本 ``ver``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:12
+msgid "进程信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:13
+msgid "``tasklist /svc``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:14
+msgid "``wmic process get caption,executablepath,commandline /format:csv``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:15
+msgid "``get-process``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:16
+msgid "查看所有环境变量 ``set``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:17
+msgid "查看计划任务 ``schtasks /QUERY /fo LIST /v``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:18
+msgid "查看安装驱动 ``DRIVERQUERY``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:19
+msgid "查看操作系统信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:20
+msgid "架构 ``wmic os get osarchitecture``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:21
+msgid "系统名 ``wmic os get caption``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:22
+msgid "查看逻辑盘 ``wmic logicaldisk get caption``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:23
+msgid "查看安装的软件信息 ``wmic product get name,version``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:24
+msgid "查看服务信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:25
+msgid "``wmic service list brief``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:26
+msgid "``sc query``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:27
+msgid "``Get-WmiObject win32_service | select PathName``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:30
+msgid "域信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:31
+msgid "获取当前组的计算机名 ``net view``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:32
+msgid "网络发现  ``net view /all``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:33
+msgid "查看所有域 ``net view /domain``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:34
+msgid "域森林、域树信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:35
+msgid "域信任信息 ``nltest /domain_trusts``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:36
+msgid "定位域控 ``net time /domain``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:37
+msgid "查看域中的用户名 ``dsquery user``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:38
+msgid "查询域组名称 ``net group /domain``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:39
+msgid "查询域管理员 ``net group \"Domain Admins\" /domain``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:40
+msgid "域控信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:41
+msgid "``nltest /dclist:xx``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:42
+msgid "``Get-NetDomain``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:43
+msgid "``Get-NetDomainController``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:44
+msgid "``net group \"Domain controllers\"``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:45
+msgid "组策略"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:48
+msgid "用户信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:49
+msgid "查看用户"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:50
+msgid "``net user``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:51
+msgid "``whoami`` / ``whoami /priv`` / ``whoami /all``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:52
+msgid "``wmic useraccount get /ALL /format:csv``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:53
+msgid "用户特权信息 ``whoami /priv``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:54
+msgid "查看当前权限 ``net localgroup administrators``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:55
+msgid "查看在线用户 ``quser`` / ``qwinsta`` / ``query user``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:56
+msgid "查看当前计算机名，全名，用户名，系统版本，工作 站域，登陆域 ``net config Workstation``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:57
+msgid "ACL 信息 ``get-acl``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:60
+msgid "网络信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:61
+msgid "内网网段信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:62
+msgid "网卡信息 ``ipconfig``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:63
+msgid "外网出口"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:64
+msgid "ARP表 ``arp -a``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:65
+msgid "路由表 ``route print``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:66
+msgid "监听的端口 ``netstat -ano``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:67
+msgid "连接的端口"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:68
+msgid "端口信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:69
+msgid "``Get-NetTCPConnection``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:70
+msgid "hosts文件"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:71
+msgid "主备 DNS"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:72
+msgid "DNS缓存"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:73
+msgid "``ipconfig /displaydns``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:74
+msgid ""
+"``Get-CimInstance -Namespace root/StandardCimv2 -ClassName "
+"MSFT_DNSClientCache``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:75
+msgid "探测出网情况"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:76
+#, python-brace-format
+msgid ""
+"`powershell -c \"1..65535 | % {echo ((new-object "
+"Net.Sockets.TcpClient).Connect('allports.exposed',$_)) $_ } 2>$null\"`"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:79
+msgid "防火墙"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:80
+msgid "查看防火墙状态 ``netsh advfirewall show allprofiles``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:81
+msgid "防火墙日志目录 ``netsh firewall show logging``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:82
+msgid "防火墙规则 ``netsh advfirewall firewall show rule name=all``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:83
+msgid "``netsh firewall show config``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:84
+msgid "``netsh firewall show state``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:87
+msgid "密码信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:88
+msgid "Windows RDP连接记录"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:89
+msgid "浏览器中保存的账号密码"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:90
+msgid "系统密码管理器中的各种密码"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:91
+msgid "无人值守安装文件中的密码信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:92
+msgid "``C:\\sysprep.inf``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:93
+msgid "``C:\\sysprep\\sysprep.xml``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:94
+msgid "``C:\\Windows\\Panther\\Unattend\\Unattended.xml``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:95
+msgid "``C:\\Windows\\Panther\\Unattended.xml``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:98
+msgid "票据信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:99
+msgid "``cmdkey /l``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:100
+msgid "klist"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:101
+msgid "msf meterpreter"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:104
+msgid "特殊文件"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:105
+msgid "文档"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:106
+msgid "xlsx / xls"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:107
+msgid "docx / doc"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:108
+msgid "pptx / ppt"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:109
+msgid "vsdx / vsd"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:110
+msgid "md / txt"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:111
+msgid "压缩文件"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:112
+msgid "zip / rar / 7z"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:113
+msgid "VPN配置"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:114
+msgid "ovpn"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:115
+msgid "代码"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:116
+msgid "py / php / jsp / aspx / asp / sql"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:117
+msgid "配置文件"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:118
+msgid "conf / ini / xml"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:119
+msgid "特定关键字"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:120
+msgid "账号 / 账户 / 登录 / login / user"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:121
+msgid "密码 / pass"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:122
+msgid "代码 / 文档 / 交接 / 备份 / git / svn"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:123
+msgid "邮箱 / 通讯录 / 集群 / 办公"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:124
+msgid "代理 / 内网 / VPN"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:125
+msgid "设备 / 资产"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:126
+msgid "系统 / 运维 / 拓扑 / 网络 / IT"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:127
+msgid "后台 / 管理员 / 数据库"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:128
+msgid "监控 / 隔离 / 防火墙 / 网闸 / 巡检"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:131
+msgid "局域网存活主机"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:132
+msgid "NetBIOS扫描"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:133
+msgid "OXID扫描"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:136
+msgid "其他"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:137
+msgid "启用的共享文件夹"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:138
+msgid "回收站"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:139
+msgid "最近运行的命令"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:140
+msgid "访问文件历史记录"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:141
+msgid "查看补丁安装情况"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:142
+msgid "``wmic qfe get Caption,Description,HotFixID,InstalledOn``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:143
+msgid "日志与事件信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:144
+msgid "``wevtutil``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:145
+msgid "``eventvwr``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:146
+msgid "注册表信息"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:147
+msgid "``reg``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:148
+msgid "安装的各类 agent 监控软件"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:149
+msgid "安装的杀毒软件"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:150
+msgid "查看/设置后缀关联"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:151
+msgid "``assoc``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:152
+msgid "``assoc .ext=example``"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:153
+msgid "PowerShell 版本"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:154
+msgid ".Net 版本"
+msgstr ""
+
+#: ../../source/intranet/windows/info.rst:155
+msgid "Wi-Fi 密码"
+msgstr ""

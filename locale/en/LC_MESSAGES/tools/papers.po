@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/papers.rst:2
+msgid "相关论文"
+msgstr ""
+
+#: ../../source/tools/papers.rst:5
+msgid "论文列表"
+msgstr ""
+
+#: ../../source/tools/papers.rst:6
+msgid ""
+"`PRE-list <https://github.com/techge/PRE-list>`_ List of (automatic) "
+"protocol reverse engineering tools for network protocols"
+msgstr ""
+
+#: ../../source/tools/papers.rst:9
+msgid "流量分析"
+msgstr ""
+
+#: ../../source/tools/papers.rst:10
+#, python-brace-format
+msgid ""
+"Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study "
+"of domain generating malware[C]//25th {USENIX} Security Symposium "
+"({USENIX} Security 16). 2016: 263-278."
+msgstr ""
+
+#: ../../source/tools/papers.rst:11
+msgid ""
+"Nasr M, Houmansadr A, Mazumdar A. Compressive traffic analysis: A new "
+"paradigm for scalable traffic analysis[C]//Proceedings of the 2017 ACM "
+"SIGSAC Conference on Computer and Communications Security. ACM, 2017: "
+"2053-2069."
+msgstr ""
+
+#: ../../source/tools/papers.rst:14
+msgid "漏洞自动化"
+msgstr ""
+
+#: ../../source/tools/papers.rst:15
+msgid ""
+"Staicu C A, Pradel M, Livshits B. SYNODE: Understanding and Automatically"
+" Preventing Injection Attacks on NODE. JS[C]//NDSS. 2018."
+msgstr ""
+
+#: ../../source/tools/papers.rst:16
+msgid ""
+"Atlidakis V , Godefroid P , Polishchuk M . REST-ler: Automatic "
+"Intelligent REST API Fuzzing[J]. 2018."
+msgstr ""
+
+#: ../../source/tools/papers.rst:17
+#, python-brace-format
+msgid ""
+"Alhuzali A, Gjomemo R, Eshete B, et al. {NAVEX}: Precise and Scalable "
+"Exploit Generation for Dynamic Web Applications[C]//27th {USENIX} "
+"Security Symposium ({USENIX} Security 18). 2018: 377-392."
+msgstr ""
+
+#: ../../source/tools/papers.rst:20
+msgid "攻击技巧"
+msgstr ""
+
+#: ../../source/tools/papers.rst:21
+msgid ""
+"Lekies S, Kotowicz K, Groß S, et al. Code-reuse attacks for the web: "
+"Breaking cross-site scripting mitigations via script "
+"gadgets[C]//Proceedings of the 2017 ACM SIGSAC Conference on Computer and"
+" Communications Security. ACM, 2017: 1709-1723."
+msgstr ""
+
+#: ../../source/tools/papers.rst:22
+msgid ""
+"Papadopoulos P, Ilia P, Polychronakis M, et al. Master of Web Puppets: "
+"Abusing Web Browsers for Persistent and Stealthy Computation[J]. arXiv "
+"preprint arXiv:1810.00464, 2018."
+msgstr ""
+
+#: ../../source/tools/papers.rst:25
+msgid "攻击检测"
+msgstr ""
+
+#: ../../source/tools/papers.rst:26
+msgid ""
+"Liu T, Qi Y, Shi L, et al. Locate-then-detect: real-time web attack "
+"detection via attention-based deep neural networks[C]//Proceedings of the"
+" 28th International Joint Conference on Artificial Intelligence. AAAI "
+"Press, 2019: 4725-4731."
+msgstr ""
+
+#: ../../source/tools/papers.rst:29
+msgid "隐私"
+msgstr ""
+
+#: ../../source/tools/papers.rst:30
+msgid "Klein A, Pinkas B. DNS Cache-Based User Tracking[C]//NDSS. 2019."
+msgstr ""
+
+#: ../../source/tools/papers.rst:33
+msgid "指纹"
+msgstr ""
+
+#: ../../source/tools/papers.rst:34
+#, python-brace-format
+msgid ""
+"Hayes J, Danezis G. k-fingerprinting: A robust scalable website "
+"fingerprinting technique[C]//25th {USENIX} Security Symposium ({USENIX} "
+"Security 16). 2016: 1187-1203."
+msgstr ""
+
+#: ../../source/tools/papers.rst:35
+msgid ""
+"Overdorf R, Juarez M, Acar G, et al. How unique is your. onion?: An "
+"analysis of the fingerprintability of tor onion services[C]//Proceedings "
+"of the 2017 ACM SIGSAC Conference on Computer and Communications "
+"Security. ACM, 2017: 2021-2036."
+msgstr ""
+
+#: ../../source/tools/papers.rst:38
+msgid "侧信道"
+msgstr ""
+
+#: ../../source/tools/papers.rst:39
+msgid ""
+"Rosner N, Kadron I B, Bang L, et al. Profit: Detecting and Quantifying "
+"Side Channels in Networked Applications[C]//NDSS. 2019."
+msgstr ""
+
+#: ../../source/tools/papers.rst:42
+msgid "认证"
+msgstr ""
+
+#: ../../source/tools/papers.rst:43
+#, python-brace-format
+msgid ""
+"Ghasemisharif M, Ramesh A, Checkoway S, et al. O single sign-off, where "
+"art thou? an empirical analysis of single sign-on account hijacking and "
+"session management on the web[C]//27th {USENIX} Security Symposium "
+"({USENIX} Security 18). 2018: 1475-1492."
+msgstr ""
+
+#: ../../source/tools/papers.rst:46
+msgid "防护"
+msgstr ""
+
+#: ../../source/tools/papers.rst:47
+msgid ""
+"Pellegrino G, Johns M, Koch S, et al. Deemon: Detecting CSRF with dynamic"
+" analysis and property graphs[C]//Proceedings of the 2017 ACM SIGSAC "
+"Conference on Computer and Communications Security. ACM, 2017: 1757-1771."
+msgstr ""

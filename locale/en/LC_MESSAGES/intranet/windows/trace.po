@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/trace.rst:2
+msgid "痕迹清理"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:5
+msgid "日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:6
+msgid "查看日志 ``eventvwr``"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:7
+msgid "伪造日志 ``eventcreate``"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:8
+msgid "操作日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:9
+msgid "3389登录列表"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:10
+msgid "文件打开日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:11
+msgid "文件修改日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:12
+msgid "浏览器日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:13
+msgid "系统事件"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:14
+msgid "程序安装记录"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:15
+msgid "程序删除记录"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:16
+msgid "程序更新记录"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:17
+msgid "登录日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:18
+msgid "系统安全日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:19
+msgid "日志路径"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:20
+msgid "系统日志 ``%SystemRoot%\\System32\\Winevt\\Logs\\System.evtx``"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:21
+msgid "安全日志 ``%SystemRoot%\\System32\\Winevt\\Logs\\Security.evtx``"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:22
+msgid "应用程序日志 ``%SystemRoot%\\System32\\Winevt\\Logs\\Application.evtx``"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:23
+msgid "服务日志"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:24
+msgid "IIS ``%SystemDrive%\\inetpub\\logs\\LogFiles\\W3SVC1\\``"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:27
+msgid "注册表"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:28
+msgid "AppCompatFlags"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:29
+msgid "Background Activity Moderator (BAM)"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:30
+msgid "MuiCache"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:31
+msgid "RecentApps"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:32
+msgid "RunMRU"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:33
+msgid "ShimCache (AppCompatCache)"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:36
+msgid "注册表键"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:37
+msgid "HKEY_LOCAL_MACHINE\\system\\CurrentControlSet\\Services\\Eventlog"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:40
+msgid "文件"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:43
+msgid "Prefetch"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:44
+msgid "预读取文件夹，用来存放系统已访问过的文件的预读信息，扩展名为PF。位置在 ``C:\\Windows\\Prefetch`` 。"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:47
+msgid "JumpLists"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:48
+msgid ""
+"记录用户最近使用的文档和应用程序，方便用户快速跳转到指定文件，位置在 "
+"``%APPDATA%\\Microsoft\\Windows\\Recent`` 。"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:51
+msgid "Amcache / RecentFileCache.bcf"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:52
+msgid "Windows中的使用这两个文件来跟踪具有不同可执行文件的应用程序兼容性问题，它可用于确定可执行文件首次运行的时间和最后修改时间。"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:54
+msgid ""
+"在Windows 7、Windows Server 2008 R2等系统中，文件保存在 "
+"``C:\\Windows\\AppCompat\\Programs\\RecentFileCache.bcf`` "
+"，包含程序的创建时间、上次修改时间、上次访问时间和文件名。"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:56
+msgid ""
+"在Windows 8、Windows 10、Windows Server 2012等系统中，文件保存在 "
+"``C:\\Windows\\AppCompat\\Programs\\Amcache.hve`` "
+"，包含文件大小、版本、sha1、二进制文件类型等信息。"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:59
+msgid "时间轴"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:60
+msgid "Windows时间轴是Windows 10在1803版中引入的一个新特性，会记录访问过的网站、编辑过的文档、运行的程序等，"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:63
+msgid "彻底删除"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:64
+msgid "多次覆写文件 ``cipher /w:<path>``"
+msgstr ""
+
+#: ../../source/intranet/windows/trace.rst:65
+msgid "格式化某磁盘count次 ``format D: /P:<count>``"
+msgstr ""

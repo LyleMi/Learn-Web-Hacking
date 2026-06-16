@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/llm/defense.rst:2
+msgid "安全防御"
+msgstr ""
+
+#: ../../source/llm/defense.rst:5
+msgid "安全设计"
+msgstr ""
+
+#: ../../source/llm/defense.rst:8
+msgid "边界划分"
+msgstr ""
+
+#: ../../source/llm/defense.rst:9
+msgid "大模型应用需要明确系统指令、用户输入、外部数据、模型输出和工具结果的边界。不可信内容只能作为数据处理，不能被当作指令直接执行。"
+msgstr ""
+
+#: ../../source/llm/defense.rst:12
+msgid "最小权限"
+msgstr ""
+
+#: ../../source/llm/defense.rst:13
+msgid "模型和 Agent 调用工具时应遵循最小权限原则。不同业务场景应使用不同凭证、不同权限范围和不同网络访问策略，避免一个模型会话拥有过大的操作能力。"
+msgstr ""
+
+#: ../../source/llm/defense.rst:16
+msgid "显式授权"
+msgstr ""
+
+#: ../../source/llm/defense.rst:17
+msgid "对高风险操作应增加人工确认或二次授权，例如转账、删除、发送邮件、修改权限、执行代码、访问敏感数据等。确认内容应包含操作对象、影响范围和关键参数。"
+msgstr ""
+
+#: ../../source/llm/defense.rst:20
+msgid "输入分级"
+msgstr ""
+
+#: ../../source/llm/defense.rst:21
+msgid "将输入来源按可信度分级处理。用户直接输入、企业内部文档、互联网网页、邮件附件、第三方 API 返回值等应采用不同的清洗、隔离和审计策略。"
+msgstr ""
+
+#: ../../source/llm/defense.rst:24
+msgid "输出隔离"
+msgstr ""
+
+#: ../../source/llm/defense.rst:25
+msgid ""
+"模型输出不应直接进入危险解释器。对 HTML、Markdown、SQL、Shell、Python、模板、JSON、YAML "
+"等输出，应按下游语义进行校验、转义或沙箱执行。"
+msgstr ""
+
+#: ../../source/llm/defense.rst:28
+msgid "记忆控制"
+msgstr ""
+
+#: ../../source/llm/defense.rst:29
+msgid "长期记忆和会话记忆需要限制写入来源、写入内容和读取范围。来自不可信内容的指令不应进入长期记忆，敏感信息不应被长期保存。"
+msgstr ""
+
+#: ../../source/llm/defense.rst:32
+msgid "可观测性"
+msgstr ""
+
+#: ../../source/llm/defense.rst:33
+msgid "应记录模型请求、检索结果、工具调用、权限决策、拦截原因和用户确认结果。日志中需要脱敏，避免把 Token、密钥、个人信息和业务敏感数据写入日志。"
+msgstr ""
+
+#: ../../source/llm/defense.rst:36
+msgid "防御策略"
+msgstr ""
+
+#: ../../source/llm/defense.rst:39
+msgid "提示词防护"
+msgstr ""
+
+#: ../../source/llm/defense.rst:40
+msgid "系统提示词中明确区分指令和数据"
+msgstr ""
+
+#: ../../source/llm/defense.rst:41
+msgid "对外部内容使用引用块、标签或结构化字段包裹"
+msgstr ""
+
+#: ../../source/llm/defense.rst:42
+msgid "降低提示词中敏感规则和密钥的暴露"
+msgstr ""
+
+#: ../../source/llm/defense.rst:43
+msgid "避免把安全策略只放在提示词中实现"
+msgstr ""
+
+#: ../../source/llm/defense.rst:44
+msgid "对高风险任务使用独立的安全判定逻辑"
+msgstr ""
+
+#: ../../source/llm/defense.rst:47
+msgid "输入校验"
+msgstr ""
+
+#: ../../source/llm/defense.rst:48
+msgid "限制输入长度、文件类型和文件大小"
+msgstr ""
+
+#: ../../source/llm/defense.rst:49
+msgid "对上传文件进行解析沙箱隔离"
+msgstr ""
+
+#: ../../source/llm/defense.rst:50
+msgid "对 URL、邮箱、域名、IP 等字段进行格式校验"
+msgstr ""
+
+#: ../../source/llm/defense.rst:51
+msgid "对来自互联网的内容增加来源标识"
+msgstr ""
+
+#: ../../source/llm/defense.rst:52
+msgid "对可疑内容进行安全分类和降权处理"
+msgstr ""
+
+#: ../../source/llm/defense.rst:55
+msgid "输出校验"
+msgstr ""
+
+#: ../../source/llm/defense.rst:56
+msgid "使用结构化输出 Schema"
+msgstr ""
+
+#: ../../source/llm/defense.rst:57
+msgid "对工具参数进行白名单校验"
+msgstr ""
+
+#: ../../source/llm/defense.rst:58
+msgid "对 HTML / Markdown 进行安全渲染"
+msgstr ""
+
+#: ../../source/llm/defense.rst:59
+msgid "对代码和命令输出进行人工确认或沙箱执行"
+msgstr ""
+
+#: ../../source/llm/defense.rst:60
+msgid "对敏感信息进行检测和脱敏"
+msgstr ""
+
+#: ../../source/llm/defense.rst:63
+msgid "工具安全"
+msgstr ""
+
+#: ../../source/llm/defense.rst:64
+msgid "为工具定义明确的权限边界"
+msgstr ""
+
+#: ../../source/llm/defense.rst:65
+msgid "将只读工具和写操作工具分离"
+msgstr ""
+
+#: ../../source/llm/defense.rst:66
+msgid "对高危工具启用人工确认"
+msgstr ""
+
+#: ../../source/llm/defense.rst:67
+msgid "限制工具可访问的网络、文件和账号范围"
+msgstr ""
+
+#: ../../source/llm/defense.rst:68
+msgid "对工具调用进行审计和限速"
+msgstr ""
+
+#: ../../source/llm/defense.rst:69
+msgid "对工具返回值标记为不可信数据"
+msgstr ""
+
+#: ../../source/llm/defense.rst:72
+msgid "RAG 安全"
+msgstr ""
+
+#: ../../source/llm/defense.rst:73
+msgid "控制知识库写入权限"
+msgstr ""
+
+#: ../../source/llm/defense.rst:74
+msgid "对文档来源进行校验和签名"
+msgstr ""
+
+#: ../../source/llm/defense.rst:75
+msgid "对入库内容进行安全扫描"
+msgstr ""
+
+#: ../../source/llm/defense.rst:76
+msgid "检索结果附带来源和时间信息"
+msgstr ""
+
+#: ../../source/llm/defense.rst:77
+msgid "限制单个文档对最终答案的影响"
+msgstr ""
+
+#: ../../source/llm/defense.rst:78
+msgid "对隐藏指令、不可见字符、混淆内容进行处理"
+msgstr ""
+
+#: ../../source/llm/defense.rst:79
+msgid "定期重建索引并清理过期数据"
+msgstr ""
+
+#: ../../source/llm/defense.rst:82
+msgid "Agent 安全"
+msgstr ""
+
+#: ../../source/llm/defense.rst:83
+msgid "限制最大执行步数"
+msgstr ""
+
+#: ../../source/llm/defense.rst:84
+msgid "限制最大工具调用次数"
+msgstr ""
+
+#: ../../source/llm/defense.rst:85
+msgid "限制单次任务预算"
+msgstr ""
+
+#: ../../source/llm/defense.rst:86
+msgid "对外部动作进行人工确认"
+msgstr ""
+
+#: ../../source/llm/defense.rst:87
+msgid "使用任务级临时凭证"
+msgstr ""
+
+#: ../../source/llm/defense.rst:88
+msgid "禁止模型自行扩大权限"
+msgstr ""
+
+#: ../../source/llm/defense.rst:89
+msgid "对计划和执行结果进行审计"
+msgstr ""
+
+#: ../../source/llm/defense.rst:92
+msgid "模型接口安全"
+msgstr ""
+
+#: ../../source/llm/defense.rst:93
+msgid "对接口进行认证和鉴权"
+msgstr ""
+
+#: ../../source/llm/defense.rst:94
+msgid "对用户、租户、模型和场景进行限速"
+msgstr ""
+
+#: ../../source/llm/defense.rst:95
+msgid "设置 Token、并发、费用和时间上限"
+msgstr ""
+
+#: ../../source/llm/defense.rst:96
+msgid "对异常请求进行熔断"
+msgstr ""
+
+#: ../../source/llm/defense.rst:97
+msgid "对模型版本和参数进行变更管理"
+msgstr ""
+
+#: ../../source/llm/defense.rst:98
+msgid "避免在客户端暴露模型密钥"
+msgstr ""
+
+#: ../../source/llm/defense.rst:101
+msgid "数据安全"
+msgstr ""
+
+#: ../../source/llm/defense.rst:102
+msgid "训练和微调数据应进行分级分类"
+msgstr ""
+
+#: ../../source/llm/defense.rst:103
+msgid "敏感数据进入模型前应脱敏或最小化"
+msgstr ""
+
+#: ../../source/llm/defense.rst:104
+msgid "日志、缓存、向量索引应设置访问控制"
+msgstr ""
+
+#: ../../source/llm/defense.rst:105
+msgid "用户数据应按租户隔离"
+msgstr ""
+
+#: ../../source/llm/defense.rst:106
+msgid "数据删除和模型记忆删除应有明确流程"
+msgstr ""
+
+#: ../../source/llm/defense.rst:107
+msgid "第三方模型调用应评估数据出境和合规要求"
+msgstr ""
+
+#: ../../source/llm/defense.rst:110
+msgid "安全基线"
+msgstr ""
+
+#: ../../source/llm/defense.rst:111
+msgid "大模型接口必须有认证、鉴权和限速"
+msgstr ""
+
+#: ../../source/llm/defense.rst:112
+msgid "不可信内容必须标记来源，不能作为系统指令执行"
+msgstr ""
+
+#: ../../source/llm/defense.rst:113
+msgid "模型输出进入下游组件前必须校验"
+msgstr ""
+
+#: ../../source/llm/defense.rst:114
+msgid "高危工具调用必须有权限控制和人工确认"
+msgstr ""
+
+#: ../../source/llm/defense.rst:115
+msgid "RAG 知识库必须控制写入权限和文档来源"
+msgstr ""
+
+#: ../../source/llm/defense.rst:116
+msgid "Agent 必须限制执行步数、预算和权限范围"
+msgstr ""
+
+#: ../../source/llm/defense.rst:117
+msgid "日志、缓存、向量库必须脱敏和访问控制"
+msgstr ""
+
+#: ../../source/llm/defense.rst:118
+msgid "模型、提示词、工具、知识库变更必须可审计"
+msgstr ""
+
+#: ../../source/llm/defense.rst:119
+msgid "应定期进行红队测试和回归测试"
+msgstr ""

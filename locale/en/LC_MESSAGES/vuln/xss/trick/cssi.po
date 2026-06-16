@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/trick/cssi.rst:2
+msgid "CSS 注入"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/cssi.rst:5
+msgid "基本介绍"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/cssi.rst:6
+msgid ""
+"CSS注入最早开始于利用CSS中的 ``expression()`` ``url()`` ``regex()`` "
+"等函数或特性来引入外部的恶意代码，但是随着浏览器的发展，这种方式被逐渐禁用，与此同时，出现了一些新的攻击方式。"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/cssi.rst:9
+msgid "CSS selectors"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/cssi.rst:22
+msgid "上图是利用CSS selectors完成攻击的一个示例"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/cssi.rst:25
+msgid "Abusing Unicode Range"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/cssi.rst:26
+msgid "当可以插入CSS的时候，可以使用 ``font-face`` 配合 ``unicode-range`` 获取目标网页对应字符集。PoC如下"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/cssi.rst:53
+msgid "当字符较多时，则可以结合 ``::first-line``  等CSS属性缩小范围，以获取更精确的内容"
+msgstr ""

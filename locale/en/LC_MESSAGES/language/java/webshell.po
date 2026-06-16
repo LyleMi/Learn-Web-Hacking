@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/java/webshell.rst:2
+msgid "WebShell"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:5
+msgid "BCEL字节码"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:12
+msgid "自定义类加载器"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:41
+msgid "执行命令变式"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:42
+msgid "java.lang.ProcessBuilder#start"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:43
+msgid "java.lang.Runtime#exec"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:44
+msgid "TemplatesImpl"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:47
+msgid "基于反射"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:48
+msgid "class.forName"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:49
+msgid "MethodAccessor.invoke"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:50
+msgid "Method.invoke"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:53
+msgid "其他Shell变式"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:54
+msgid "java.beans.Expression"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:55
+msgid "java.lang.ClassLoader"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:56
+msgid "java.net.URLClassLoader"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:57
+msgid "jdk.nashorn.internal.runtime.ScriptLoader"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:58
+msgid "ObjectInputStream.resolveClass"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:59
+msgid "ScriptEngine.eval"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:60
+msgid "ScriptEngineManager"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:61
+msgid "ToolProvider.getSystemJavaCompiler"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:64
+msgid "Tomcat 容器"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:65
+msgid "Servlet"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:66
+msgid "Filter"
+msgstr ""
+
+#: ../../source/language/java/webshell.rst:67
+msgid "Listener"
+msgstr ""

@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/fileread.rst:2
+msgid "文件读取"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:4
+msgid "考虑读取可能有敏感信息的文件"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:6
+msgid "用户目录下的敏感文件"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:7
+msgid ".bash_history"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:8
+msgid ".zsh_history"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:9
+msgid ".profile"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:10
+msgid ".bashrc"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:11
+msgid ".gitconfig"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:12
+msgid ".viminfo"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:13
+msgid "passwd"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:15
+msgid "应用的配置文件"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:16
+msgid "/etc/apache2/apache2.conf"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:17
+msgid "/etc/nginx/nginx.conf"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:19
+msgid "应用的日志文件"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:20
+msgid "/var/log/apache2/access.log"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:21
+msgid "/var/log/nginx/access.log"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:23
+msgid "站点目录下的敏感文件"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:24
+msgid ".svn/entries"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:25
+msgid ".git/HEAD"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:26
+msgid "WEB-INF/web.xml"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:27
+msgid ".htaccess"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:29
+msgid "特殊的备份文件"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:30
+msgid ".swp"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:31
+msgid ".swo"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:32
+msgid ".bak"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:33
+msgid "index.php~"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:34
+msgid "..."
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:36
+msgid "Python的Cache"
+msgstr ""
+
+#: ../../source/vuln/fileread.rst:37
+msgid "``__pycache__\\__init__.cpython-35.pyc``"
+msgstr ""

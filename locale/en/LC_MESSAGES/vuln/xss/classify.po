@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/classify.rst:2
+msgid "分类"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:6
+msgid ""
+"XSS全称为Cross Site "
+"Scripting，为了和CSS分开简写为XSS，中文名为跨站脚本。该漏洞发生在用户端，是指在渲染过程中发生了不在预期过程中的JavaScript代码执行。XSS通常被用于获取Cookie、以受攻击者的身份进行操作等行为。"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:9
+msgid "反射型XSS"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:10
+msgid ""
+"反射型XSS是比较常见和广泛的一类，举例来说，当一个网站的代码中包含类似下面的语句：``<?php echo \"<p>hello, "
+"$_GET['user']</p>\";?>`` ，那么在访问时设置 "
+"``/?user=</p><script>alert(\"hack\")</script><p>`` ，则可执行预设好的JavaScript代码。"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:12
+msgid "反射型XSS通常出现在搜索等功能中，需要被攻击者点击对应的链接才能触发，且受到XSS Auditor、NoScript等防御手段的影响较大。"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:15
+msgid "储存型XSS"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:16
+msgid "储存型XSS相比反射型来说危害较大，在这种漏洞中，攻击者能够把攻击载荷存入服务器的数据库中，造成持久化的攻击。"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:19
+msgid "DOM XSS"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:20
+msgid "DOM型XSS不同之处在于DOM型XSS一般和服务器的解析响应没有直接关系，而是在JavaScript脚本动态执行的过程中产生的。"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:22
+msgid "例如"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:44
+msgid "输入 ``x' onerror='javascript:alert(/xss/)`` 即可触发。"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:47
+msgid "Blind XSS"
+msgstr ""
+
+#: ../../source/vuln/xss/classify.rst:48
+msgid ""
+"Blind XSS是储存型XSS的一种，它保存在某些存储中，当一个“受害者”访问这个页面时执行，并且在文档对象模型(DOM)中呈现payload。"
+" 它被称为Blind的原因是因为它通常发生在通常不暴露给用户的功能上。"
+msgstr ""

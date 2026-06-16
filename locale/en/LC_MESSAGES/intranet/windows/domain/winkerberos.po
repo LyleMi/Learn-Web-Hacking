@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/domain/winkerberos.rst:2
+msgid "Kerberos的Windows实现"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/winkerberos.rst:5
+msgid "相关定义"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/winkerberos.rst:8
+msgid "SPN"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/winkerberos.rst:9
+msgid "服务主体名称 (ServicePrincipal Names, SPN) ，是服务实例(如HTTP、SMB等)的唯一标识符。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/winkerberos.rst:11
+msgid ""
+"SPN分为两种类型：一种是注册在活动目录的机器帐户下，当一个服务的权限为 Local System 或 Network "
+"Service，则SPN注册在机器帐户下。一种是注册在活动目录的域用户帐户下，当一个服务的权限为一个域用户，则SPN注册在域用户帐户下。"
+msgstr ""

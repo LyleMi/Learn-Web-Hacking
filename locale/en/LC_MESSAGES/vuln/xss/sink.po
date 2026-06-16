@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/sink.rst:2
+msgid "Sink"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:5
+msgid "执行JavaScript"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:6
+msgid "``eval(payload)``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:7
+msgid "``setTimeout(payload, 100)``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:8
+msgid "``setInterval(payload, 100)``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:9
+msgid "``Function(payload)()``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:10
+msgid "``<script>payload</script>``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:11
+msgid "``<img src=x onerror=payload>``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:14
+msgid "加载URL"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:15
+msgid "``location=javascript:alert(/xss/)``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:16
+msgid "``location.href=javascript:alert(/xss/)``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:17
+msgid "``location.assign(javascript:alert(/xss/))``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:18
+msgid "``location.replace(javascript:alert(/xss/))``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:21
+msgid "执行HTML"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:22
+msgid "``xx.innerHTML=payload``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:23
+msgid "``xx.outerHTML=payload``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:24
+msgid "``document.write(payload)``"
+msgstr ""
+
+#: ../../source/vuln/xss/sink.rst:25
+msgid "``document.writeln(payload)``"
+msgstr ""

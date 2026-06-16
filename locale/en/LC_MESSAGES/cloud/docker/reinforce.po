@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/cloud/docker/reinforce.rst:2
+msgid "安全加固"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:3
+msgid "最小安装"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:4
+msgid "删除所有开发工具（编译器等）"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:5
+msgid "更新系统源"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:6
+msgid "启用 AppArmor"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:7
+msgid "启用 SELinux"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:8
+msgid "限制运行容器的内核功能"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:9
+msgid "移除依赖构建"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:10
+msgid "配置严格的网络访问控制策略"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:11
+msgid "不使用root用户启动docker"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:12
+msgid "不以privileged特权模式运行容器"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:13
+msgid "控制资源"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:14
+msgid "CPU Share"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:15
+msgid "CPU 核数"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:16
+msgid "内存资源"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:17
+msgid "IO 资源"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:18
+msgid "磁盘资源"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:19
+msgid "硬件资源"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:20
+msgid "单位时间内进程数量上限"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:21
+msgid "使用安全的基础镜像"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:22
+msgid "定期安全扫描和更新补丁"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:23
+msgid "删除镜像中的 setuid 和 setgid 权限"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:24
+#, python-brace-format
+msgid "``RUN find / -perm +6000-type f-exec chmod a-s {} \\;|| true``"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:25
+msgid "配置Docker守护程序的TLS身份验证"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:26
+msgid "如非必要 禁止容器间通信"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:27
+msgid "rootless Docker"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:28
+msgid "https://get.docker.com/rootless"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:29
+msgid "使用 Seccomp 限制 syscall"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:30
+msgid "构建环境和在线环境分开"
+msgstr ""
+
+#: ../../source/cloud/docker/reinforce.rst:31
+msgid "证书校验"
+msgstr ""

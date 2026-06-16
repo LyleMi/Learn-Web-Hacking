@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/defense/secops.rst:2
+msgid "安全建设"
+msgstr ""
+
+#: ../../source/defense/secops.rst:5
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/defense/secops.rst:8
+msgid "安全运营"
+msgstr ""
+
+#: ../../source/defense/secops.rst:9
+msgid "`我理解的安全运营 by 职业欠钱 <https://zhuanlan.zhihu.com/p/39467201>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:10
+msgid "`再谈安全运营 by 职业欠钱 <https://zhuanlan.zhihu.com/p/84591095>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:11
+msgid ""
+"`我们谈安全运营时在谈什么 by 聂君 "
+"<https://mp.weixin.qq.com/s?__biz=MzIzMTAzNzUxMQ==&mid=2652893616&idx=1&sn=6738a4e33050ed084d1535196aec6061>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:12
+msgid "`金融行业企业安全运营之路 by 聂君 <https://36kr.com/p/1721236635649>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:13
+msgid ""
+"`秦波：大型互联网应用安全SDL体系建设实践 "
+"<https://mp.weixin.qq.com/s?__biz=MzI2MjQ1NTA4MA==&mid=2247485062&idx=1&sn=94c9fa40edef6de0ea46c453405e3687>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:14
+msgid ""
+"`谭晓生：论CISO的个人修养 "
+"<https://mp.weixin.qq.com/s?__biz=MzI2MjQ1NTA4MA==&mid=2247485405&idx=1&sn=bda9283329f6db15d69d4cdf37c609d2>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:15
+msgid "`赵彦的CISO闪电战 两年甲方安全修炼之路 <https://www.freebuf.com/articles/es/200024.html>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:16
+msgid ""
+"`胡珀谈安全运营 by lake2 "
+"<https://mp.weixin.qq.com/s?__biz=MzI2MjQ1NTA4MA==&mid=2247484735&idx=1&sn=02e06dd84ee0322dd2f9fe761b244013>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:17
+msgid "`小步快跑，快速迭代：安全运营的器术法道 <https://mp.weixin.qq.com/s/rc6X5SlsoRp6s7RCEZ67mA>`_"
+msgstr ""
+
+#: ../../source/defense/secops.rst:20
+msgid "资产管理"
+msgstr ""
+
+#: ../../source/defense/secops.rst:21
+msgid ""
+"`资产管理的难点 "
+"<https://mp.weixin.qq.com/s?__biz=MzA5MDY3MzMyOQ==&mid=2649439751&idx=1&sn=18ac49aff75ee4b1433e429df56ba44b>`_"
+msgstr ""

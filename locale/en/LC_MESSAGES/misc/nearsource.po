@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/misc/nearsource.rst:2
+msgid "近源渗透"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:5
+msgid "USB攻击"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:8
+msgid "BadUSB"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:9
+msgid "通过重新编程USB设备的内部微控制器，来执行恶意操作，例如注册为键盘设备，发送特定按键进行恶意操作。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:12
+msgid "AutoRUN"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:13
+msgid "根据主机配置的方式，一些操作系统会自动执行位于USB设备存储器上的预定文件。可以通过这种方式执行恶意软件。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:16
+msgid "USB Killer"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:17
+msgid "通过特殊的USB设备基于电气等方式来永久销毁设备。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:20
+msgid "侧信道"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:21
+msgid "通过改装USB增加一些监听/测信道传输设备。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:24
+msgid "HID攻击"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:25
+msgid ""
+"HID(human interface "
+"device)指键盘、鼠标等用于为计算机提供数据输入的人机交互设备。HID攻击指攻击者将特殊的USB设备模拟成为键盘，一旦连接上计算机就执行预定的恶意操作。HID攻击可以基于Android设备、数据线设备等实施。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:28
+msgid "Wi-Fi"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:31
+msgid "密码爆破"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:32
+msgid "基于WPA2的验证方式，Wi-Fi可以通过抓握手包的方式进行线下的密码爆破。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:35
+msgid "信号压制"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:36
+msgid "可以使用大功率的设备捕获握手包并模仿目标AP，从而实现中间人攻击。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:39
+msgid "门禁"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:42
+msgid "电磁脉冲"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:43
+msgid ""
+"部分电子门禁和电子密码锁的电子系统中集成电路对电磁脉冲比较敏感，可以通过外加电磁脉冲(Electromagnetic "
+"Pulse，EMP)的方式破坏设备，来实现打开的效果。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:46
+msgid "IC卡"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:47
+msgid "基于变色龙等设备可以使用模拟、破解、复制IC卡破解门禁。"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:50
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:51
+msgid "`近源渗透硬件指北 <https://www.secpulse.com/archives/123723.html>`_"
+msgstr ""
+
+#: ../../source/misc/nearsource.rst:52
+msgid "`红蓝对抗之近源渗透 <https://mp.weixin.qq.com/s/dmh3dDt0BaZYIcWdSTsQcg>`_"
+msgstr ""

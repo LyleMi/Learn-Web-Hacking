@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/http/ref.rst:2
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:5
+msgid "RFC"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:6
+msgid ""
+"`RFC 3253 <https://tools.ietf.org/html/rfc3253>`_ Versioning Extensions "
+"to WebDAV (Web Distributed Authoring and Versioning)"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:7
+msgid ""
+"`RFC 3648 <https://tools.ietf.org/html/rfc3648>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) Ordered Collections Protocol"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:8
+msgid ""
+"`RFC 3744 <https://tools.ietf.org/html/rfc3744>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) Access Control Protocol"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:9
+msgid ""
+"`RFC 4437 <https://tools.ietf.org/html/rfc4437>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) Redirect Reference Resources"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:10
+msgid ""
+"`RFC 4918 <https://tools.ietf.org/html/rfc4918>`_ HTTP Extensions for Web"
+" Distributed Authoring and Versioning (WebDAV)"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:11
+msgid ""
+"`RFC 5323 <https://tools.ietf.org/html/rfc5323>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) SEARCH"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:12
+msgid ""
+"`RFC 5842 <https://tools.ietf.org/html/rfc5842>`_ Binding Extensions to "
+"Web Distributed Authoring and Versioning (WebDAV)"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:13
+msgid "`The WebSocket Protocol <https://datatracker.ietf.org/doc/html/rfc6455>`_"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:14
+msgid ""
+"`Clarifying Registry Procedures for the WebSocket Subprotocol Name "
+"Registry <https://datatracker.ietf.org/doc/html/rfc7936>`_"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:17
+msgid "Blog"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:18
+msgid ""
+"`What should a hacker know about WebDav "
+"<http://2015.zeronights.org/assets/files/35-Egorov.pdf>`_"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:19
+msgid ""
+"`Cookie 的 SameSite 属性 <http://www.ruanyifeng.com/blog/2019/09/cookie-"
+"samesite.html>`_"
+msgstr ""
+
+#: ../../source/network/http/ref.rst:20
+msgid "`HTTP 协议入门 <http://www.ruanyifeng.com/blog/2016/08/http.html>`_"
+msgstr ""

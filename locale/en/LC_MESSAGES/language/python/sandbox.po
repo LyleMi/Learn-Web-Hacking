@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/python/sandbox.rst:2
+msgid "沙箱"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:5
+msgid "常用函数"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:6
+msgid "eval / exec / compile"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:7
+msgid "dir / type"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:8
+msgid "globals / locals / vars"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:9
+msgid "getattr / setattr"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:12
+msgid "导入包方式"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:13
+msgid "``import os``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:14
+msgid "``from os import *``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:15
+msgid "``__import__(\"os\")``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:16
+msgid "``importlib``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:17
+msgid "``imp``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:18
+msgid "``reload(os)``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:19
+msgid "``execfile`` 仅Python2支持"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:22
+msgid "绕过"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:23
+msgid "``dir(__builtins__)`` 查看内置模块"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:25
+msgid "最简单的思路是在已有的模块中import，如果那个模块中已经 import 可以利用的模块就可以使用了"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:27
+msgid ""
+"在父类中寻找可用的模块，最常见payload是 ``().__class__.__bases__[0].__subclasses__()`` "
+"或者用魔术方法获取全局作用域 ``__init__.__func__.__globals__``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:29
+msgid ""
+"有些网站没有过滤 pickle 模块，可以使用 pickle 实现任意代码执行，生成 payload 可以使用 "
+"``https://gist.github.com/freddyb/3360650``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:31
+msgid "有的沙箱把相关的模块代码都被删除了，则可以使用libc中的函数，Python 中调用一般可以使用 ctypes 或者 cffi。"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:33
+msgid "``\"A\"\"B\" == \"AB\"``"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:36
+msgid "防御"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:37
+msgid "Python官方给出了一些防御的建议"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:39
+msgid "使用Jython并尝试使用Java平台来锁定程序的权限"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:40
+msgid "使用fakeroot来避免"
+msgstr ""
+
+#: ../../source/language/python/sandbox.rst:41
+msgid "使用一些rootjail的技术"
+msgstr ""

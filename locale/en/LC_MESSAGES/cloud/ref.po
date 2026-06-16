@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/cloud/ref.rst:2
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:5
+msgid "文档"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:6
+msgid "`Kubernetes Documentation <https://kubernetes.io/docs/home/>`_"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:7
+msgid "`Openstack wiki <https://wiki.openstack.org/wiki/Main_Page>`_"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:8
+msgid ""
+"`NSA, CISA release Kubernetes Hardening Guidance <https://www.nsa.gov"
+"/News-Features/Feature-Stories/Article-View/Article/2716980/nsa-cisa-"
+"release-kubernetes-hardening-guidance/>`_"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:9
+msgid ""
+"`Kubernetes Hardening Guidance <https://github.com/rootsongjc/kubernetes-"
+"hardening-guidance>`_ Kubernetes 加固手册"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:12
+msgid "元数据安全"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:13
+msgid ""
+"`Exploiting SSRF in AWS Elastic Beanstalk <https://notsosecure.com"
+"/exploiting-ssrf-in-aws-elastic-beanstalk/>`_"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:16
+msgid "云存储"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:17
+msgid "`ceph <https://github.com/ceph/ceph>`_"
+msgstr ""
+
+#: ../../source/cloud/ref.rst:18
+msgid "`ceph tracker <https://tracker.ceph.com/>`_"
+msgstr ""

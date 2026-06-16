@@ -1,0 +1,575 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/defense/emergency.rst:2
+msgid "应急响应"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:5
+msgid "响应流程"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:8
+msgid "事件发生"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:9
+msgid "运维监控人员、客服审核人员等发现问题，向上通报。"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:12
+msgid "事件确认"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:13
+msgid "收集事件信息、分析网络活动相关程序，日志和数据，判断事件的严重性，评估出问题的严重等级，是否向上进行汇报等。"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:16
+msgid "事件响应"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:17
+msgid "各部门通力合作，处理安全问题，具体解决问题，避免存在漏洞未修补、后门未清除等残留问题。"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:20
+msgid "事件关闭"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:21
+msgid "处理完事件之后，需要关闭事件，并写出安全应急处理分析报告，完成整个应急过程。"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:24
+msgid "事件分类"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:25
+msgid "病毒、木马、蠕虫事件"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:26
+msgid "Web服务器入侵事件"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:27
+msgid "第三方服务入侵事件"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:28
+msgid "系统入侵事件"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:29
+msgid "利用Windows漏洞攻击操作系统"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:30
+msgid "网络攻击事件"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:31
+msgid "DDoS / ARP欺骗 / DNS劫持等"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:34
+msgid "分析方向"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:37 ../../source/defense/emergency.rst:98
+#: ../../source/defense/emergency.rst:141
+msgid "文件分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:38
+msgid "基于变化的分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:39
+msgid "日期"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:40
+msgid "文件增改"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:41 ../../source/defense/emergency.rst:99
+#: ../../source/defense/emergency.rst:142
+msgid "最近使用文件"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:42
+msgid "源码分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:43
+msgid "检查源码改动"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:44
+msgid "查杀WebShell等后门"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:45 ../../source/defense/emergency.rst:104
+#: ../../source/defense/emergency.rst:146
+msgid "系统日志分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:46
+msgid "应用日志分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:47
+msgid "分析User-Agent，e.g. ``awvs / burpsuite / w3af / nessus / openvas``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:48
+msgid "对每种攻击进行关键字匹配，e.g. ``select/alert/eval``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:49
+msgid "异常请求，连续的404或者500"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:50
+msgid "``md5sum`` 检查常用命令二进制文件的哈希，检查是否被植入rootkit"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:53 ../../source/defense/emergency.rst:127
+#: ../../source/defense/emergency.rst:159
+msgid "进程分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:54
+msgid "符合以下特征的进程"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:55
+msgid "CPU或内存资源占用长时间过高"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:56
+msgid "没有签名验证信息"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:57
+msgid "没有描述信息的进程"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:58
+msgid "进程的路径不合法"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:59
+msgid "dump系统内存进行分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:60
+msgid "正在运行的进程"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:61
+msgid "正在运行的服务"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:62
+msgid "父进程和子进程"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:63
+msgid "后台可执行文件的完整哈希"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:64
+msgid "已安装的应用程序"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:65
+msgid "运行着密钥或其他正在自动运行的持久化程序"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:66
+msgid "计划任务"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:69
+msgid "身份信息分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:70
+msgid "本地以及域账号用户"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:71
+msgid "异常的身份验证"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:72
+msgid "非标准格式的用户名"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:75 ../../source/defense/emergency.rst:186
+msgid "日志分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:76
+msgid "杀软检测记录"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:79
+msgid "网络分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:80
+msgid "防火墙配置"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:81
+msgid "DNS配置"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:82
+msgid "路由配置"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:83
+msgid "监听端口和相关服务"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:84
+msgid "最近建立的网络连接"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:85
+msgid "RDP / VPN / SSH 等会话"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:88
+msgid "配置分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:89
+msgid "查看Linux SE等配置"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:90
+msgid "查看环境变量"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:91
+msgid "查看配套的注册表信息检索，SAM文件"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:92
+msgid "内核模块"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:95
+msgid "Linux应急响应"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:100
+msgid "``find / -ctime -2``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:101
+#: ../../source/defense/emergency.rst:143
+msgid "``C:\\Documents and Settings\\Administrator\\Recent``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:102
+#: ../../source/defense/emergency.rst:144
+msgid "``C:\\Documents and Settings\\Default User\\Recent``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:103
+#: ../../source/defense/emergency.rst:145
+msgid "``%UserProfile%\\Recent``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:105
+msgid "/var/log/"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:106
+msgid "重点分析位置"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:107
+msgid "``/var/log/wtmp`` 登录进入，退出，数据交换、关机和重启纪录"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:108
+msgid "``/var/run/utmp`` 有关当前登录用户的信息记录"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:109
+msgid "``/var/log/lastlog`` 文件记录用户最后登录的信息，可用 lastlog 命令来查看。"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:110
+msgid "``/var/log/secure`` 记录登入系统存取数据的文件，例如 pop3/ssh/telnet/ftp 等都会被记录。"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:111
+msgid "``/var/log/cron`` 与定时任务相关的日志信息"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:112
+msgid "``/var/log/message`` 系统启动后的信息和错误日志"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:113
+msgid "``/var/log/apache2/access.log`` apache access log"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:114
+msgid "``/etc/passwd`` 用户列表"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:115
+msgid "``/etc/init.d/`` 开机启动项"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:116
+msgid "``/etc/cron*`` 定时任务"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:117
+msgid "``/tmp`` 临时目录"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:118
+msgid "``~/.ssh``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:121
+#: ../../source/defense/emergency.rst:150
+msgid "用户分析"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:122
+msgid "``/etc/shadow`` 密码登陆相关信息"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:123
+msgid "``uptime`` 查看用户登陆时间"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:124
+msgid "``/etc/sudoers`` sudo用户列表"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:128
+#: ../../source/defense/emergency.rst:160
+msgid "``netstat -ano`` 查看是否打开了可疑端口"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:129
+msgid "``w`` 命令，查看用户及其进程"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:130
+msgid "分析开机自启程序/脚本"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:131
+msgid "``/etc/init.d``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:132
+msgid "``~/.bashrc``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:133
+#: ../../source/defense/emergency.rst:175
+msgid "查看计划或定时任务"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:134
+msgid "``crontab -l``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:135
+msgid "``netstat -an`` / ``lsof`` 查看进程端口占用"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:138
+msgid "Windows应急响应"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:147
+msgid "事件查看器 ``eventvwr.msc``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:151
+msgid "查看是否有新增用户"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:152
+msgid "查看服务器是否有弱口令"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:153
+msgid "查看管理员对应键值"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:154
+msgid "``lusrmgr.msc`` 查看账户变化"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:155
+msgid "``net user`` 列出当前登录账户"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:156
+msgid "``wmic UserAccount get`` 列出当前系统所有账户"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:161
+msgid "``tasklist`` 查看是否有可疑进程"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:162
+msgid "分析开机自启程序"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:163
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:164
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Runonce``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:165
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:166
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:167
+msgid "``HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer\\Run``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:168
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:169
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:170
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:171
+msgid "``HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:172
+msgid "``(ProfilePath)\\Start Menu\\Programs\\Startup`` 启动项"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:173
+msgid "``msconfig`` 启动选项卡"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:174
+msgid "``gpedit.msc`` 组策略编辑器"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:176
+msgid "``C:\\Windows\\System32\\Tasks\\``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:177
+msgid "``C:\\Windows\\SysWOW64\\Tasks\\``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:178
+msgid "``C:\\Windows\\tasks\\``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:179
+msgid "``schtasks``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:180
+msgid "``taskschd.msc``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:181
+msgid "``compmgmt.msc``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:182
+msgid "查看启动服务"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:183
+msgid "``services.msc``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:187
+msgid "事件查看"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:188
+msgid "``eventvwr.msc``"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:191
+msgid "其他"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:192
+msgid "查看系统环境变量"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:195
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:196
+msgid "`黑客入侵应急分析手工排查 <https://xz.aliyun.com/t/1140>`_"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:197
+msgid "`取证入门 web篇 <http://www.freebuf.com/column/147929.html>`_"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:198
+msgid "`Windows 系统安全事件应急响应  <https://xz.aliyun.com/t/2524>`_"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:199
+msgid "`企业安全应急响应 <https://xz.aliyun.com/t/1632>`_"
+msgstr ""
+
+#: ../../source/defense/emergency.rst:200
+msgid ""
+"`Technical Approaches to Uncovering and Remediating Malicious Activity "
+"<https://us-cert.cisa.gov/ncas/alerts/aa20-245a>`_"
+msgstr ""

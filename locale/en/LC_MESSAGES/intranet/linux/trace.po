@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/linux/trace.rst:2
+msgid "痕迹清理"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:5
+msgid "历史命令"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:6
+msgid ""
+"``unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export "
+"HISTFILE=/dev/null;``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:7
+msgid "``kill -9 $$`` kill history"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:8
+msgid "``history -c``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:9
+msgid "在 ``HISTSIZE=0`` 中设置 ``HISTSIZE=0``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:12
+msgid "清除/修改日志文件"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:13
+msgid "``/var/log/btmp``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:14
+msgid "``/var/log/lastlog``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:15
+msgid "``/var/log/wtmp``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:16
+msgid "``/var/log/utmp``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:17
+msgid "``/var/log/secure``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:18
+msgid "``/var/log/message``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:21
+msgid "登录痕迹"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:22
+msgid "删除 ``~/.ssh/known_hosts`` 中记录"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:23
+msgid "修改文件时间戳"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:24
+msgid "``touch –r``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:25
+msgid "删除tmp目录临时文件"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:28
+msgid "操作痕迹"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:29
+msgid "vim 不记录历史命令 ``:set history=0``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:30
+msgid "ssh 登录痕迹"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:31
+msgid "无痕登录 ``ssh -T user@host /bin/bash -i``"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:34
+msgid "覆写文件"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:35
+msgid "shred"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:36
+msgid "dd"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:37
+msgid "wipe"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:40
+msgid "难点"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:41
+msgid "攻击和入侵很难完全删除痕迹，没有日志记录也是一种特征"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:42
+msgid "即使删除本地日志，在网络设备、安全设备、集中化日志系统中仍有记录"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:43
+msgid "留存的后门包含攻击者的信息"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:44
+msgid "使用的代理或跳板可能会被反向入侵"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:47
+msgid "注意"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:48
+msgid "在操作前检查是否有用户在线"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:49
+msgid "删除文件使用磁盘覆写的功能删除"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:50
+msgid "尽量和攻击前状态保持一致"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:53
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/intranet/linux/trace.rst:54
+msgid "`Linux 入侵痕迹清理技巧 <https://mp.weixin.qq.com/s/i2WvFmF1qQjbx-BaStXb1Q>`_"
+msgstr ""

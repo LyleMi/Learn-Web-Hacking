@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:2
+msgid "PostgresSQL Payload"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:4
+msgid "Version"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:5
+msgid "``SELECT version()``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:6
+msgid "Comment"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:7
+msgid "``SELECT 1 -- comment``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:8
+msgid "``SELECT /*comment*/1``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:9
+msgid "Current User"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:10
+msgid "``SELECT user``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:11
+msgid "``SELECT current_user``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:12
+msgid "``SELECT session_user``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:13
+msgid "``SELECT getpgusername()``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:14
+msgid "List User"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:15
+msgid "``SELECT usename FROM pg_user``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:16
+msgid "Current Database"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:17
+msgid "``SELECT current_database()``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:18
+msgid "List Database"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:19
+msgid "``SELECT datname FROM pg_database``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:20
+msgid "Ascii"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:21
+msgid "``SELECT char(0x41)``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:22
+msgid "``SELECT ascii('A')``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:23
+msgid "Delay"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/psql.rst:24
+msgid "``pg_sleep(1)``"
+msgstr ""

@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xxe.rst:2 ../../source/vuln/xxe.rst:23
+msgid "XXE"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:5
+msgid "XML基础"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:6
+msgid ""
+"XML 指可扩展标记语言（eXtensible Markup "
+"Language），是一种用于标记电子文件使其具有结构性的标记语言，被设计用来传输和存储数据。XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。目前，XML文件作为配置文件（Spring、Struts2等）、文档结构说明文件（PDF、RSS等）、图片格式文件（SVG"
+" header）应用比较广泛。 XML 的语法规范由 DTD （Document Type Definition）来进行控制。"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:9
+msgid "基本语法"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:10
+msgid ""
+"XML 文档在开头有 ``<?xml version=\"1.0\" encoding=\"UTF-8\" "
+"standalone=\"yes\"?>`` 的结构，这种结构被称为 XML prolog "
+"，用于声明XML文档的版本和编码，是可选的，但是必须放在文档开头。"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:12
+msgid "除了可选的开头外，XML 语法主要有以下的特性："
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:14
+msgid "所有 XML 元素都须有关闭标签"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:15
+msgid "XML 标签对大小写敏感"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:16
+msgid "XML 必须正确地嵌套"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:17
+msgid "XML 文档必须有根元素"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:18
+msgid "XML 的属性值需要加引号"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:20
+msgid "另外，XML也有CDATA语法，用于处理有多个字符需要转义的情况。"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:24
+msgid ""
+"当允许引用外部实体时，可通过构造恶意的XML内容，导致读取任意文件、执行系统命令、探测内网端口、攻击内网网站等后果。一般的XXE攻击，只有在服务器有回显或者报错的基础上才能使用XXE漏洞来读取服务器端文件，但是也可以通过Blind"
+" XXE的方式实现攻击。"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:27
+msgid "攻击方式"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:30
+msgid "拒绝服务攻击"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:41
+msgid "若解析过程非常缓慢，则表示测试成功，目标站点可能有拒绝服务漏洞。 具体攻击可使用更多层的迭代或递归，也可引用巨大的外部实体，以实现攻击的效果。"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:46
+msgid "文件读取"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:57
+msgid "SSRF"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:67
+msgid "RCE"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:80
+msgid "XInclude"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:87
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:88
+msgid "`XML教程 <http://www.w3school.com.cn/xml/>`_"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:89
+msgid "`未知攻焉知防 XXE漏洞攻防 <https://security.tencent.com/index.php/blog/msg/69>`_"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:90
+msgid "`XXE 攻击笔记分享 <http://www.freebuf.com/articles/web/97833.html>`_"
+msgstr ""
+
+#: ../../source/vuln/xxe.rst:91
+msgid "`从XML相关一步一步到XXE漏洞 <https://xz.aliyun.com/t/6887>`_"
+msgstr ""

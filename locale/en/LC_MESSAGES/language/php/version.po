@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/version.rst:2
+msgid "版本安全改动"
+msgstr ""
+
+#: ../../source/language/php/version.rst:5
+msgid "8.0"
+msgstr ""
+
+#: ../../source/language/php/version.rst:6
+msgid "字符串与数字弱类型比较将首先将数字转为字符串，然后比较两个字符串"
+msgstr ""
+
+#: ../../source/language/php/version.rst:7
+msgid "内部参数内省错误时抛出异常而不是警告"
+msgstr ""
+
+#: ../../source/language/php/version.rst:8
+msgid "``assert`` 不再支持执行代码"
+msgstr ""
+
+#: ../../source/language/php/version.rst:9
+msgid "移除 ``create_function``"
+msgstr ""
+
+#: ../../source/language/php/version.rst:10
+msgid "移除 ``mb_ereg_replace()`` 中的e模式"
+msgstr ""
+
+#: ../../source/language/php/version.rst:11
+msgid "Phar中的元信息不再自动进行反序列化"
+msgstr ""
+
+#: ../../source/language/php/version.rst:12
+msgid "``parse_str`` 必须传入第二个参数"
+msgstr ""
+
+#: ../../source/language/php/version.rst:13
+msgid "移除 ``php://filter`` 中的 ``string.strip_tags``"
+msgstr ""
+
+#: ../../source/language/php/version.rst:16
+msgid "7.2"
+msgstr ""
+
+#: ../../source/language/php/version.rst:17
+msgid "不带引号的字符串 会产生 E_WARNING"
+msgstr ""
+
+#: ../../source/language/php/version.rst:18
+msgid "create_function 被废弃"
+msgstr ""
+
+#: ../../source/language/php/version.rst:19
+msgid "assert 不能传入字符串表达式"
+msgstr ""
+
+#: ../../source/language/php/version.rst:20
+msgid "不带第二个参数的情况下使用 parse_str() 会产生 E_DEPRECATED 警告"
+msgstr ""
+
+#: ../../source/language/php/version.rst:21
+msgid "__autoload() 被废弃"
+msgstr ""
+
+#: ../../source/language/php/version.rst:24
+msgid "7.1"
+msgstr ""
+
+#: ../../source/language/php/version.rst:25
+msgid "调用用户定义的函数提供的参数不足会抛出错误异常而不是警告"
+msgstr ""
+
+#: ../../source/language/php/version.rst:26
+msgid "在不完整的对象上不再调用析构方法"
+msgstr ""
+
+#: ../../source/language/php/version.rst:27
+msgid "call_user_func() 不再支持对传址的函数的调用"
+msgstr ""
+
+#: ../../source/language/php/version.rst:28
+msgid "mb_ereg_replace() 和 mb_eregi_replace() 的e模式修饰符被废弃"
+msgstr ""
+
+#: ../../source/language/php/version.rst:29
+msgid "ext/mcrypt 被废弃"
+msgstr ""
+
+#: ../../source/language/php/version.rst:32
+msgid "7.0"
+msgstr ""
+
+#: ../../source/language/php/version.rst:33
+msgid "preg_replace \"\\e\" 修饰符 产生 E_WARNING 错误 且失效"
+msgstr ""
+
+#: ../../source/language/php/version.rst:34
+msgid "移除 所有 ext/mysql 函数"
+msgstr ""
+
+#: ../../source/language/php/version.rst:35
+msgid "移除 所有 ext/mssql 函数"
+msgstr ""
+
+#: ../../source/language/php/version.rst:36
+msgid "移除 call_user_method() 和 call_user_method_array()"
+msgstr ""
+
+#: ../../source/language/php/version.rst:37
+msgid "foreach 不再改变内部数组指针"
+msgstr ""
+
+#: ../../source/language/php/version.rst:38
+msgid "在之前，一个八进制字符如果含有无效数字，该无效数字将被静默删节 ( 0128 将被解析为 012)，现在这样的八进制字符将产生解析错误"
+msgstr ""
+
+#: ../../source/language/php/version.rst:39
+msgid "十六进制字符串不再被认为是数字"
+msgstr ""
+
+#: ../../source/language/php/version.rst:40
+msgid "dl() 在 PHP-FPM 不再可用，在 CLI 和 embed SAPIs 中仍可用"
+msgstr ""
+
+#: ../../source/language/php/version.rst:41
+#, python-format
+msgid ""
+"移除 ASP 和 script PHP 标签，即 ``<% %>`` / ``<%= %>`` / ``<script "
+"language=\"php\"> </script>``"
+msgstr ""
+
+#: ../../source/language/php/version.rst:42
+msgid "在数值溢出的时候，内部函数将会失败"
+msgstr ""
+
+#: ../../source/language/php/version.rst:43
+msgid "$HTTP_RAW_POST_DATA 被移除"
+msgstr ""
+
+#: ../../source/language/php/version.rst:46
+msgid "5.6"
+msgstr ""
+
+#: ../../source/language/php/version.rst:47
+msgid "$HTTP_RAW_POST_DATA 被废弃"
+msgstr ""
+
+#: ../../source/language/php/version.rst:48
+msgid "必须先设置 CURLOPT_SAFE_UPLOAD 为 FALSE 才能够使用 @file 语法来上传文件"
+msgstr ""
+
+#: ../../source/language/php/version.rst:51
+msgid "5.5"
+msgstr ""
+
+#: ../../source/language/php/version.rst:52
+msgid "preg_replace \"\\e\" 修饰符 产生 E_DEPRECATED 错误"
+msgstr ""
+
+#: ../../source/language/php/version.rst:53
+msgid "废弃 ``mysql_*`` 系列函数"
+msgstr ""
+
+#: ../../source/language/php/version.rst:56
+msgid "5.4"
+msgstr ""
+
+#: ../../source/language/php/version.rst:57
+msgid "不再支持 安全模式"
+msgstr ""
+
+#: ../../source/language/php/version.rst:58
+msgid "移除 魔术引号"
+msgstr ""
+
+#: ../../source/language/php/version.rst:59
+msgid "数组转换成字符串将产生一条 E_NOTICE 级别的错误"
+msgstr ""

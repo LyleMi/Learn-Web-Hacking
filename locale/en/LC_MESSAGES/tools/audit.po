@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/audit.rst:2
+msgid "审计工具"
+msgstr ""
+
+#: ../../source/tools/audit.rst:5
+msgid "通用"
+msgstr ""
+
+#: ../../source/tools/audit.rst:6
+msgid "`Cobra <https://github.com/FeeiCN/cobra>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:7
+msgid "`Semmle QL <https://github.com/Semmle/ql>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:8
+msgid ""
+"`Sourcetrail <https://github.com/CoatiSoftware/Sourcetrail>`_ free and "
+"open-source cross-platform source explorer"
+msgstr ""
+
+#: ../../source/tools/audit.rst:9
+msgid ""
+"`trivy <https://github.com/knqyf263/trivy>`_ A Simple and Comprehensive "
+"Vulnerability Scanner for Containers, Suitable for CI"
+msgstr ""
+
+#: ../../source/tools/audit.rst:10
+msgid "`fortify <http://www.fortify.net/>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:11
+msgid ""
+"`joern <https://github.com/joernio/joern>`_ Open-source code analysis "
+"platform for C/C++/Java/Binary/Javascript based on code property graphs"
+msgstr ""
+
+#: ../../source/tools/audit.rst:14
+msgid "PHP"
+msgstr ""
+
+#: ../../source/tools/audit.rst:15
+msgid "`RIPS <http://rips-scanner.sourceforge.net/>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:16
+msgid "`prvd <https://github.com/fate0/prvd>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:17
+msgid "`phpvulhunter <https://github.com/OneSourceCat/phpvulhunter>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:18
+msgid ""
+"`chip <https://github.com/phith0n/chip>`_ a simple tool to detect "
+"potential security threat in php code"
+msgstr ""
+
+#: ../../source/tools/audit.rst:21
+msgid "Python"
+msgstr ""
+
+#: ../../source/tools/audit.rst:22
+msgid "`pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:23
+msgid "`pyt <https://github.com/python-security/pyt>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:26
+msgid "Java"
+msgstr ""
+
+#: ../../source/tools/audit.rst:27
+msgid "`find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:28
+msgid ""
+"`Gadget Inspector <https://github.com/JackOfMostTrades/gadgetinspector>`_"
+"  A byte code analyzer for finding deserialization gadget chains in Java "
+"applications"
+msgstr ""
+
+#: ../../source/tools/audit.rst:31
+msgid "JavaScript"
+msgstr ""
+
+#: ../../source/tools/audit.rst:32
+msgid "`NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_"
+msgstr ""
+
+#: ../../source/tools/audit.rst:35
+msgid "供应链"
+msgstr ""
+
+#: ../../source/tools/audit.rst:36
+msgid ""
+"`Dependency-Track <https://github.com/DependencyTrack/dependency-track>`_"
+" is an intelligent Supply Chain Component Analysis platform that allows "
+"organizations to identify and reduce risk from the use of third-party and"
+" open source components"
+msgstr ""
+
+#: ../../source/tools/audit.rst:39
+msgid "小程序"
+msgstr ""
+
+#: ../../source/tools/audit.rst:40
+msgid "`unveilr <https://github.com/r3x5ur/unveilr>`_"
+msgstr ""

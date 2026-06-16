@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/dbident.rst:2
+msgid "数据库检测"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:5
+msgid "MySQL"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:6
+msgid "sleep ``sleep(1)``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:7
+msgid "benchmark ``BENCHMARK(5000000, MD5('test'))``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:8 ../../source/vuln/sql/dbident.rst:21
+#: ../../source/vuln/sql/dbident.rst:33
+msgid "字符串连接"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:9
+msgid "``SELECT 'a' 'b'``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:10 ../../source/vuln/sql/dbident.rst:23
+msgid "``SELECT CONCAT('some','string')``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:11 ../../source/vuln/sql/dbident.rst:24
+msgid "version"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:12
+msgid "``SELECT @@version``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:13
+msgid "``SELECT version()``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:14
+msgid "识别用函数"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:15
+msgid "``connection_id()``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:16
+msgid "``last_insert_id()``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:17
+msgid "``row_count()``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:20
+msgid "Oracle"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:22
+msgid "``'a'||'oracle' --``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:25
+msgid "``SELECT banner FROM v$version``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:26
+msgid "``SELECT banner FROM v$version WHERE rownum=1``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:29
+msgid "SQLServer"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:30
+msgid "WAITFOR ``WAITFOR DELAY '00:00:10';``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:31
+msgid "SERVERNAME ``SELECT @@SERVERNAME``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:32
+msgid "version ``SELECT @@version``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:34
+msgid "``SELECT 'some'+'string'``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:35
+msgid "常量"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:36
+msgid "``@@pack_received``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:37
+msgid "``@@rowcount``"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:40
+msgid "PostgreSQL"
+msgstr ""
+
+#: ../../source/vuln/sql/dbident.rst:41
+msgid "sleep ``pg_sleep(1)``"
+msgstr ""

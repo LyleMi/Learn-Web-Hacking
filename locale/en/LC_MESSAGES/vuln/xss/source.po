@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/source.rst:2
+msgid "XSS数据源"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:5
+msgid "URL"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:6
+msgid "``location``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:7
+msgid "``location.href``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:8
+msgid "``location.pathname``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:9
+msgid "``location.search``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:10
+msgid "``location.hash``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:11
+msgid "``document.URL``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:12
+msgid "``document.documentURI``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:13
+msgid "``document.baseURI``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:16
+msgid "Navigation"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:17
+msgid "``window.name``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:18
+msgid "``document.referrer``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:21
+msgid "Communication"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:22
+msgid "``Ajax``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:23
+msgid "``Fetch``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:24
+msgid "``WebSocket``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:25
+msgid "``PostMessage``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:28
+msgid "Storage"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:29
+msgid "``Cookie``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:30
+msgid "``LocalStorage``"
+msgstr ""
+
+#: ../../source/vuln/xss/source.rst:31
+msgid "``SessionStorage``"
+msgstr ""

@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/http/webdav.rst:2
+msgid "WebDAV"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:6
+msgid ""
+"WebDAV （Web-based Distributed Authoring and Versioning） 一种基于 HTTP "
+"1.1协议的通信协议。它扩展了HTTP 1.1，在GET、POST、HEAD等几个HTTP标准方法以外添加了一些新的方法，使应用程序可对Web "
+"Server直接读写，并支持写文件锁定、解锁，以及版本控制等功能。"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:8
+msgid "支持的方法具体为："
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:10
+msgid "OPTIONS"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:11
+msgid "获取服务器的支持"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:12
+msgid "GET / PUT / POST / DELETE"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:13
+msgid "资源操作"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:14
+msgid "TRACE"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:15
+msgid "跟踪服务器"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:16
+msgid "HEAD"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:17
+msgid "MKCOL"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:18
+msgid "创建集合"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:19
+msgid "PROPFIND / PROPPATCH"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:20
+msgid "COPY / MOVE"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:21
+msgid "LOCK / UNLOCK"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:24
+msgid "相关CVE"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:25
+msgid "CVE-2015-1833"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:26
+msgid "Apache Jacrabbit WebDav XXE"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:27
+msgid "http://www.securityfocus.com/archive/1/535582"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:28
+msgid "CVE-2015-7326"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:29
+msgid "Milton WebDav XXE"
+msgstr ""
+
+#: ../../source/network/http/webdav.rst:30
+msgid "http://www.securityfocus.com/archive/1/536813"
+msgstr ""

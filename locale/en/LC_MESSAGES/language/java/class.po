@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/java/class.rst:2
+msgid "类"
+msgstr ""
+
+#: ../../source/language/java/class.rst:5
+msgid "生命周期"
+msgstr ""
+
+#: ../../source/language/java/class.rst:6
+msgid ""
+"整体来说，Java中类的生命周期如下：加载 (Loading) -> [ 连接 (Linking) : 验证 (Verification) -> "
+"准备 (Perparation) -> 解析 (Resolutin) ] -> 初始化 (Initialization) -> 使用 "
+"(Using) -> 卸载 (Unloading) 。"
+msgstr ""
+
+#: ../../source/language/java/class.rst:8
+msgid "加载过程分为三步："
+msgstr ""
+
+#: ../../source/language/java/class.rst:10
+msgid "通过全限定类名来获取定义此类的二进制字节流"
+msgstr ""
+
+#: ../../source/language/java/class.rst:11
+msgid "将字节流所代表的静态存储结构转化为方法区的运行时数据结构"
+msgstr ""
+
+#: ../../source/language/java/class.rst:12
+msgid "在内存中生成代表这个类的 ``java.lang.Class`` 对象，作为方法区这个类的各种数据的访问入口"
+msgstr ""
+
+#: ../../source/language/java/class.rst:14
+msgid "验证阶段主要用于确保 Class 文件的字节流符合当前虚拟机的要求，分为几步："
+msgstr ""
+
+#: ../../source/language/java/class.rst:16
+msgid "判断文件格式：是否以 ``0xCAFEBABE`` 开始，主次版本号是否在处理范围内"
+msgstr ""
+
+#: ../../source/language/java/class.rst:17
+msgid "元数据验证"
+msgstr ""
+
+#: ../../source/language/java/class.rst:18
+msgid "字节码验证"
+msgstr ""
+
+#: ../../source/language/java/class.rst:19
+msgid "符号引用验证"
+msgstr ""

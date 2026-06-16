@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/defense/team.rst:2
+msgid "团队建设"
+msgstr ""
+
+#: ../../source/defense/team.rst:5
+msgid "人员分工"
+msgstr ""
+
+#: ../../source/defense/team.rst:6
+msgid "部门负责人"
+msgstr ""
+
+#: ../../source/defense/team.rst:7
+msgid "负责组织整体的信息安全规划"
+msgstr ""
+
+#: ../../source/defense/team.rst:8
+msgid "负责向高层沟通申请资源"
+msgstr ""
+
+#: ../../source/defense/team.rst:9
+msgid "负责与组织其他部门的协调沟通"
+msgstr ""
+
+#: ../../source/defense/team.rst:10
+msgid "共同推进信息安全工作"
+msgstr ""
+
+#: ../../source/defense/team.rst:11
+msgid "负责信息安全团队建设"
+msgstr ""
+
+#: ../../source/defense/team.rst:12
+msgid "负责安全事件应急工作处置"
+msgstr ""
+
+#: ../../source/defense/team.rst:13
+msgid "负责推动组织安全规划的落实"
+msgstr ""
+
+#: ../../source/defense/team.rst:14
+msgid "合规管理员"
+msgstr ""
+
+#: ../../source/defense/team.rst:15
+msgid "负责安全相关管理制度、管理流程的制定，监督实施情况，修改和改进相关的制度和流程"
+msgstr ""
+
+#: ../../source/defense/team.rst:16
+msgid "负责合规性迎检准备工作，包括联络、迎检工作推动，迎检结果汇报等所有相关工作"
+msgstr ""
+
+#: ../../source/defense/team.rst:17
+msgid "负责与外部安全相关单位联络"
+msgstr ""
+
+#: ../../source/defense/team.rst:18
+msgid "负责安全意识培训、宣传和推广"
+msgstr ""
+
+#: ../../source/defense/team.rst:19
+msgid "安全技术负责人"
+msgstr ""
+
+#: ../../source/defense/team.rst:20
+msgid "业务安全防护整体技术规划和计划"
+msgstr ""
+
+#: ../../source/defense/team.rst:21
+msgid "了解组织安全技术缺陷，并能找到方法进行防御"
+msgstr ""
+
+#: ../../source/defense/team.rst:22
+msgid "安全设备运维"
+msgstr ""
+
+#: ../../source/defense/team.rst:23
+msgid "服务器与网络基础设备的安全加固推进工作"
+msgstr ""
+
+#: ../../source/defense/team.rst:24
+msgid "安全事件排查与分析，配合定期编写安全分析报告"
+msgstr ""
+
+#: ../../source/defense/team.rst:25
+msgid "关注注业内安全事件， 跟踪最新漏洞信息，进行业务产品的安全检查"
+msgstr ""
+
+#: ../../source/defense/team.rst:26
+msgid "负责漏洞修复工作推进，跟踪解决情况，问题收集"
+msgstr ""
+
+#: ../../source/defense/team.rst:27
+msgid "了解最新安全技术趋势"
+msgstr ""
+
+#: ../../source/defense/team.rst:28
+msgid "渗透/代码审计人员"
+msgstr ""
+
+#: ../../source/defense/team.rst:29
+msgid "对组织业务网站、业务系统进行安全评估测试"
+msgstr ""
+
+#: ../../source/defense/team.rst:30
+msgid "对漏洞结果提供解决方案和修复建议"
+msgstr ""
+
+#: ../../source/defense/team.rst:31
+msgid "安全设备运维人员"
+msgstr ""
+
+#: ../../source/defense/team.rst:32
+msgid "负责设备配置和策略的修改"
+msgstr ""
+
+#: ../../source/defense/team.rst:33
+msgid "负责协助其他部门的变更导致的安全策略修改的实现"
+msgstr ""
+
+#: ../../source/defense/team.rst:34
+msgid "安全开发"
+msgstr ""
+
+#: ../../source/defense/team.rst:35
+msgid "根据组织安全的需要开发安全辅助工具或平台"
+msgstr ""
+
+#: ../../source/defense/team.rst:36
+msgid "参与安全系统的需求分析、设计、编码等开发工作"
+msgstr ""
+
+#: ../../source/defense/team.rst:37
+msgid "维护公司现有的安全程序与系统"
+msgstr ""
+
+#: ../../source/defense/team.rst:40
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/defense/team.rst:41
+msgid "`初入甲方的企业安全建设规划 <https://mp.weixin.qq.com/s/BqOFP217kiN55IWb_oQP-w>`_"
+msgstr ""
+
+#: ../../source/defense/team.rst:42
+msgid "`企业安全项目架构实践分享 <https://mp.weixin.qq.com/s/RlBTH9-xrY7Nd1ZJK3KjDQ>`_"
+msgstr ""
+
+#: ../../source/defense/team.rst:43
+msgid "`企业信息安全团队建设 <https://xz.aliyun.com/t/1965>`_"
+msgstr ""

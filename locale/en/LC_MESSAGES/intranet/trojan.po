@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/trojan.rst:2
+msgid "后门技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:5
+msgid "开发技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:6
+msgid "管控功能实现技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:7
+msgid "系统管理：查看系统基本信息，进程管理，服务管理"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:8
+msgid "文件管理：复制/粘贴文件，删除文件/目录，下载/上传文件等"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:9
+msgid "Shell管理"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:10
+msgid "击键记录监控"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:11
+msgid "屏幕截取"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:12
+msgid "音频监控"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:13
+msgid "视频监控"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:14
+msgid "隐秘信息查看"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:15
+msgid "移动磁盘的动态监控"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:16
+msgid "远程卸载"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:17
+msgid "自启动技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:18
+msgid "Windows自启动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:19
+msgid "基于Windows启动目录的自启动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:20
+msgid "基于注册表的自启动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:21
+msgid "基于服务程序的自启动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:22
+msgid "基于ActiveX控件的自启动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:23
+msgid "基于计划任务（Scheduled Tasks）的自启动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:24
+msgid "Linux自启动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:25
+msgid "用户态进程隐藏技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:26
+msgid "基于DLL插入的进程隐藏"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:27
+msgid "远程线程创建技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:28
+msgid "设置窗口挂钩（HOOK）技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:29
+msgid "基于SvcHost共享服务的进程隐藏"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:30
+msgid "进程内存替换"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:31
+msgid "数据穿透和躲避技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:32
+msgid "反弹端口"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:33
+msgid "协议隧道"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:34
+msgid "HTTP"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:35
+msgid "MSN"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:36
+msgid "Google Talk"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:37
+msgid "内核级隐藏技术（Rootkit）"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:38
+msgid "磁盘启动级隐藏技术（Bootkit）"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:39
+msgid "MBR"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:40
+msgid "BIOS"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:41
+msgid "NTLDR"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:42
+msgid "boot.ini"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:43
+msgid "还原软件对抗技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:46
+msgid "后门免杀"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:47
+msgid "传统静态代码检测"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:48
+msgid "加壳"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:49
+msgid "添加花指令"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:50
+msgid "输入表免杀"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:51
+msgid "启发式代码检测"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:52
+msgid "动态函数调用"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:53
+msgid "云查杀"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:54
+msgid "动态增大自身体积"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:55
+msgid "更改云查杀服务器域名解析地址"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:56
+msgid "断网"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:57
+msgid "利用散列碰撞绕过云端“白名单”"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:58
+msgid "攻击主防杀毒软件"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:59
+msgid "更改系统时间"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:60
+msgid "窗口消息攻击"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:61
+msgid "主动发送IRP操纵主防驱动"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:62
+msgid "利用证书信任"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:63
+msgid "盗取利用合法证书"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:64
+msgid "利用散列碰撞伪造证书"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:65
+msgid "利用合法程序 DLL劫持问题的“白加黑”"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:68
+msgid "检测技术"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:69
+msgid "基于自启动信息的检测"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:70
+msgid "基于进程信息的检测"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:71
+msgid "基于数据传输的检测"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:72
+msgid "Rootkit/Bootkit的检测"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:75
+msgid "后门分析"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:76
+msgid "动态分析"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:77
+msgid "静态分析"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:78
+msgid "反病毒引擎扫描"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:79
+msgid "文件格式识别"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:80
+msgid "文件加壳识别及脱壳"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:81
+msgid "明文字符串查找"
+msgstr ""
+
+#: ../../source/intranet/trojan.rst:82
+msgid "链接库及导入/导出函数分析"
+msgstr ""

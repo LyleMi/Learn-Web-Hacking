@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/auth/scram.rst:2
+msgid "SCRAM"
+msgstr ""
+
+#: ../../source/auth/scram.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/auth/scram.rst:6
+msgid ""
+"SCRAM (Salted Challenge Response Authentication Mechanism) "
+"是一套包含服务器和客户端双向确认的用户认证机制。"
+msgstr ""
+
+#: ../../source/auth/scram.rst:9
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/auth/scram.rst:12
+msgid "规范"
+msgstr ""
+
+#: ../../source/auth/scram.rst:13
+msgid ""
+"`RFC 4422 Simple Authentication and Security Layer (SASL) "
+"<https://tools.ietf.org/html/rfc4422>`_"
+msgstr ""
+
+#: ../../source/auth/scram.rst:14
+msgid ""
+"`RFC 5802 Salted Challenge Response Authentication Mechanism (SCRAM) SASL"
+" and GSS-API Mechanisms <https://tools.ietf.org/html/rfc5802>`_"
+msgstr ""
+
+#: ../../source/auth/scram.rst:15
+msgid ""
+"`RFC 7677 SCRAM-SHA-256 and SCRAM-SHA-256-PLUS Simple Authentication and "
+"Security Layer (SASL) Mechanisms <https://tools.ietf.org/html/rfc7677>`_"
+msgstr ""

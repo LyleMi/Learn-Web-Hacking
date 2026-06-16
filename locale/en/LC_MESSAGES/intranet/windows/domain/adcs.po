@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/domain/adcs.rst:2
+msgid "ADCS"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:5
+msgid "介绍"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:6
+msgid ""
+"Active Directory 证书服务 (Active Directory Certificate Services，AD CS) "
+"是微软用于实现 PKI 的服务。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:9
+msgid "证书"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:10
+msgid "ADCS 中的证书是 X.509 格式的数字签名文档，用于加密、签名或身份验证等。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:12
+msgid "证书常用的属性由下述字段组成"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:14
+msgid "Subject：主题"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:15
+msgid "Public Key：公钥"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:16
+msgid "Extended Key Usages (EKUs)：扩展密钥，描述证书的对象标识符 (Object identifier, OID)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:17
+msgid "..."
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:19
+msgid "常用的 EKU OID 包括："
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:21
+msgid "代码签名"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:22
+msgid "OID 1.3.6.1.5.5.7.3.3"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:23
+msgid "证书用于签署可执行代码"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:24
+msgid "加密文件系统"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:25
+msgid "OID 1.3.6.1.4.1.311.10.3.4"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:26
+msgid "证书用于加密文件系统"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:27
+msgid "安全电子邮件"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:28
+msgid "OID 1.3.6.1.5.5.7.3.4"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:29
+msgid "证书用于加密电子邮件"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:30
+msgid "客户端身份验证"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:31
+msgid "OID 1.3.6.1.5.5.7.3.2"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:32
+msgid "智能卡登录"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:33
+msgid "OID 1.3.6.1.4.1.311.20.2.2"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:34
+msgid "服务器认证"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:35
+msgid "OID 1.3.6.1.5.5.7.3.1"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:36
+msgid "证书用于识别服务器 (例如HTTPS 证书)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:39
+msgid "证书模板"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:40
+msgid "微软提供了证书模板的功能，方便在域内签发证书。证书模板是注册策略和预定义证书设置的集合，包含证书有效期、用途、申请者等信息。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:43
+msgid "证书注册"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:44
+msgid "证书可以通过以下几种方式注册："
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:46
+msgid "通过 Windows 客户端证书注册协议 (MS-WCCE)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:47
+msgid "通过 ICertPassage 远程协议 (MS-ICPR)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:48
+msgid "在 ADCS 开启了对应 Web 服务的情况下，使用 Web 服务注册"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:49
+msgid "在服务器安装了对应服务时，通过证书注册服务 (CES) 注册"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/adcs.rst:50
+msgid "在服务器安装了对应服务时，使用网络设备注册服务"
+msgstr ""

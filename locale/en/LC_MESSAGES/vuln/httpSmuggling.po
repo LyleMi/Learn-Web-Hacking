@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/httpSmuggling.rst:2
+msgid "HTTP 请求走私"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:6
+msgid ""
+"HTTP请求走私是一种干扰网站处理HTTP请求序列方式的技术，最早在 2005 年的一篇 `文章 "
+"<https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf>`_ 中被提出。"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:9
+msgid "成因"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:10
+msgid ""
+"请求走私大多发生于前端服务器和后端服务器对客户端传入的数据理解不一致的情况。这是因为HTTP规范提供了两种不同的方法来指定请求的结束位置，即 "
+"``Content-Length`` 和 ``Transfer-Encoding`` 标头。"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:13
+msgid "分类"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:14
+msgid "CLTE：前端服务器使用 ``Content-Length`` 头，后端服务器使用 ``Transfer-Encoding`` 头"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:15
+msgid "TECL：前端服务器使用 ``Transfer-Encoding`` 标头，后端服务器使用 ``Content-Length`` 标头。"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:16
+msgid "TETE：前端和后端服务器都支持 ``Transfer-Encoding`` 标头，但是可以通过以某种方式来诱导其中一个服务器不处理它。"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:19
+msgid "攻击"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:22
+msgid "CL不为0的GET请求"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:23
+msgid ""
+"当前端服务器允许GET请求携带请求体，而后端服务器不允许GET请求携带请求体，它会直接忽略掉GET请求中的 ``Content-Length`` "
+"头，不进行处理。例如下面这个例子："
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:35
+msgid ""
+"前端服务器处理了 ``Content-Length`` ，而后端服务器没有处理 ``Content-Length`` "
+"，基于pipeline机制认为这是两个独立的请求，就造成了漏洞的发生。"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:38
+msgid "CL-CL"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:39
+msgid ""
+"根据RFC 7230，当服务器收到的请求中包含两个 ``Content-Length`` "
+"，而且两者的值不同时，需要返回400错误，但是有的服务器并没有严格实现这个规范。这种情况下，当前后端各取不同的 ``Content-"
+"Length`` 值时，就会出现漏洞。例如："
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:51
+msgid "这个例子中a就会被带入下一个请求，变为 ``aGET / HTTP/1.1\\r\\n`` 。"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:54
+msgid "CL-TE"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:55
+msgid ""
+"CL-TE指前端服务器处理 ``Content-Length`` 这一请求头，而后端服务器遵守RFC2616的规定，忽略掉 ``Content-"
+"Length`` ，处理 ``Transfer-Encoding`` 。例如："
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:70
+msgid "这个例子中a同样会被带入下一个请求，变为 ``aGET / HTTP/1.1\\r\\n`` 。"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:73
+msgid "TE-CL"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:74
+msgid ""
+"TE-CL指前端服务器处理 ``Transfer-Encoding`` 请求头，而后端服务器处理 ``Content-Length`` "
+"请求头。例如："
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:91
+msgid "TE-TE"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:92
+msgid ""
+"TE-TE指前后端服务器都处理 ``Transfer-Encoding`` 请求头，但是在容错性上表现不同，例如有的服务器可能会处理 "
+"``Transfer-encoding`` ，测试例如："
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:113
+msgid "防御"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:114
+msgid "禁用后端连接重用"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:115
+msgid "确保连接中的所有服务器具有相同的配置"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:116
+msgid "拒绝有二义性的请求"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:119
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:122
+msgid "RFC"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:123
+msgid ""
+"`RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1 "
+"<https://tools.ietf.org/html/rfc2616>`_"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:124
+msgid ""
+"`RFC 7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and "
+"Routing -- HTTP/1.1 <https://tools.ietf.org/html/rfc7230>`_"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:127
+msgid "Blog / Whitepaper"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:128
+msgid ""
+"`HTTP Request Smuggling by chaiml <https://www.cgisecurity.com/lib/HTTP-"
+"Request-Smuggling.pdf>`_"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:129
+msgid ""
+"`HTTP request smuggling by portswigger <https://portswigger.net/web-"
+"security/request-smuggling>`_"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:130
+msgid "`从一道题到协议层攻击之HTTP请求走私  <https://xz.aliyun.com/t/6654>`_"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:131
+msgid ""
+"`HTTP Request Smuggling in 2020 "
+"<http://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-"
+"Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges.pdf>`_"
+msgstr ""
+
+#: ../../source/vuln/httpSmuggling.rst:132
+msgid ""
+"`h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext (h2c) "
+"<https://labs.bishopfox.com/tech-blog/h2c-smuggling-request-smuggling-"
+"via-http/2-cleartext-h2c>`_"
+msgstr ""

@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/unserialize.rst:2
+msgid "反序列化"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:5
+msgid "PHP序列化实现"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:8
+msgid "常见处理器"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:9
+msgid ""
+"PHP序列化处理共有几种，分别为php、php_serialize、php_binary和WDDX(需要编译时开启支持)，默认为php，可通过配置中的"
+" ``session.serialize_handler`` 修改。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:11
+msgid ""
+"如果 PHP 编译时加入了 WDDX 支持，则只能用 WDDX，WDDX从PHP 7.4版本后开始弃用。从 PHP 5.5.4 起可以使用 "
+"php_serialize。 php_serialize 在内部简单地直接使用 serialize/unserialize 函数，并且不会有 "
+"php 和 php_binary 所具有的限制。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:13
+msgid "其中PHP处理器的格式为：键名 + 竖线 + 经过serialize()函数序列化处理的值。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:15
+msgid "其中php_binary处理器的格式为：键名的长度对应的 ASCII 字符 + 键名 + 经过serialize()函数序列化处理的值。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:17
+msgid "其中php_serialize处理器的格式为：经过serialize()函数序列化处理的数组。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:20
+msgid "序列化格式"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:21
+msgid ""
+"其中php_serialize的实现在 ``php-src/ext/standard/var.c`` 中，主要函数为 "
+"``php_var_serialize_intern`` ，序列化后的格式如下："
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:23
+msgid "boolean"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:24
+msgid "``b:<value>;``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:25
+msgid "``b:1;`` // true"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:26
+msgid "``b:0;`` // false"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:27
+msgid "integer"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:28
+msgid "``i:<value>;``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:29
+msgid "double"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:30
+msgid "``d:<value>;``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:31
+msgid "NULL"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:32
+msgid "``N;``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:33
+msgid "string"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:34
+msgid "``s:<length>:\"<value>\";``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:35
+msgid "``s:1:\"s\";``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:36
+msgid "array"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:37
+#, python-brace-format
+msgid "``a:<length>:{key, value};``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:38
+#, python-brace-format
+msgid ""
+"``a:1:{s:4:\"key1\";s:6:\"value1\";}`` // ``array(\"key1\" => "
+"\"value1\");``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:39
+msgid "object"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:40
+#, python-brace-format
+msgid "``O:<class_name_length>:\"<class_name>\":<number_of_properties>:{<properties>};``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:41
+msgid "reference"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:42
+msgid "指针类型"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:43
+msgid "``R:reference;``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:44
+#, python-brace-format
+msgid "``O:1:\"A\":2:{s:1:\"a\";i:1;s:1:\"b\";R:2;}``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:45
+msgid "``$a = new A();$a->a=1;$a->b=&$a->a;``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:48
+msgid "private与protect"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:49
+msgid "private与protect变量和public变量不同，不能直接设置。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:51
+#, python-format
+msgid "private属性只能在其被定义的类内部访问，且不会被继承，在属性前加上类名，即 ``%00className%00`` 用于标定其是私有的。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:53
+msgid "protected属性可以在父类和子类中访问，变量前添加 ``%00*%00`` 用于标定其是受保护的。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:56
+msgid "PHP反序列化漏洞"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:57
+msgid ""
+"php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` "
+"等函数，可能会造成代码执行等问题。若没有相关函数，在析构时也会调用相关的析构函数，同样会造成代码执行。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:59
+msgid "另外 ``__toString`` / ``__call`` 两个函数也有利用的可能。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:61
+msgid ""
+"其中 ``__wakeup`` 在反序列化时被触发，``__destruct`` 在GC时被触发， ``__toString`` "
+"在echo时被触发, ``__call`` 在一个未被定义的函数调用时被触发。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:64
+msgid "下面提供一个简单的demo."
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:95
+#: ../../source/language/php/unserialize.rst:108
+#: ../../source/language/php/unserialize.rst:137
+msgid "输出"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:104
+msgid "把序列化的字符串修改一下后，执行"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:106
+#, python-brace-format
+msgid ""
+"``unserialize('O:4:\"Demo\":1:{s:4:\"data\";s:15:\"malicious "
+"value\";}');``"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:116
+msgid "这里看到，值被修改了."
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:118
+msgid ""
+"上面是一个 ``unserialize()`` 的简单应用，不难看出，如果 ``__wakeup()`` 或者  ``__desturct()``"
+" 有敏感操作，比如读写文件、操作数据库，就可以通过函数实现文件读写或者数据读取的行为。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:120
+msgid "那么，在 ``__wakeup()`` 中加入判断是否可以阻止这个漏洞呢？ 在 ``__wakeup()`` 中我们加入一行代码"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:131
+msgid ""
+"但其实还是可以绕过的，在 PHP5 < 5.6.25， PHP7 < 7.0.10 "
+"的版本都存在wakeup的漏洞。当反序列化中object的个数和之前的个数不等时，wakeup就会被绕过，于是使用下面的payload"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:144
+msgid "这里wakeup被绕过，值依旧被修改了。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:147
+msgid "利用点"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:150
+msgid "SoapClient 原生利用"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:151
+msgid "php中的SoapClient类可以创建soap数据报文，在非wsdl模式下，SoapClient的实例反序列化的时候会对第二个参数指明的url进行soap请求，该特性可用于SSRF。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:154
+msgid "ZipArchive 原生利用"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:155
+msgid ""
+"php原生类 ``ZipArchive::open()`` 中的flag参数如果设置为  ``ZipArchive::OVERWRITE`` "
+"时，会删除指定文件，该特性在一定条件下可以用于删除文件。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:158
+msgid "Session"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:159
+msgid "PHP中session默认是以文件形式存储的，文件以sess_sessionid命名，在session一定程度可控的情况下，可通过session触发反序列化。"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:162
+msgid "相关CVE"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:165
+msgid "CVE-2016-7124"
+msgstr ""
+
+#: ../../source/language/php/unserialize.rst:166
+msgid "在PHP 5.6.25 之前版本和 7.0.10 之前的版本，当对象的属性(变量)数大于实际的个数时， ``__wakeup()`` 不会被执行。"
+msgstr ""

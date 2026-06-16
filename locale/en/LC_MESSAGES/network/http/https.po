@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/http/https.rst:2
+msgid "HTTPS"
+msgstr ""
+
+#: ../../source/network/http/https.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/network/http/https.rst:6
+msgid ""
+"HTTPS (HyperText Transfer Protocol over Secure Socket "
+"Layer)可以理解为HTTP+SSL/TLS， 即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL。"
+msgstr ""
+
+#: ../../source/network/http/https.rst:9
+msgid "交互"
+msgstr ""
+
+#: ../../source/network/http/https.rst:12
+msgid "证书验证阶段"
+msgstr ""
+
+#: ../../source/network/http/https.rst:13
+msgid "浏览器发起 HTTPS 请求"
+msgstr ""
+
+#: ../../source/network/http/https.rst:14
+msgid "服务端返回 HTTPS 证书"
+msgstr ""
+
+#: ../../source/network/http/https.rst:15
+msgid "其中证书包含："
+msgstr ""
+
+#: ../../source/network/http/https.rst:16
+msgid "颁发机构信息"
+msgstr ""
+
+#: ../../source/network/http/https.rst:17
+msgid "公钥"
+msgstr ""
+
+#: ../../source/network/http/https.rst:18
+msgid "公司信息"
+msgstr ""
+
+#: ../../source/network/http/https.rst:19
+msgid "域名"
+msgstr ""
+
+#: ../../source/network/http/https.rst:20
+msgid "有效期"
+msgstr ""
+
+#: ../../source/network/http/https.rst:21
+msgid "指纹"
+msgstr ""
+
+#: ../../source/network/http/https.rst:22
+msgid "客户端验证证书是否合法，如果不合法则提示告警"
+msgstr ""
+
+#: ../../source/network/http/https.rst:25
+msgid "数据传输阶段"
+msgstr ""
+
+#: ../../source/network/http/https.rst:26
+msgid "当证书验证合法后，在本地生成随机数"
+msgstr ""
+
+#: ../../source/network/http/https.rst:27
+msgid "通过公钥加密随机数，并把加密后的随机数传输到服务端"
+msgstr ""
+
+#: ../../source/network/http/https.rst:28
+msgid "服务端通过私钥对随机数进行解密"
+msgstr ""
+
+#: ../../source/network/http/https.rst:29
+msgid "服务端通过客户端传入的随机数构造对称加密算法，对返回结果内容进行加密后传输"
+msgstr ""
+
+#: ../../source/network/http/https.rst:32
+msgid "CA"
+msgstr ""
+
+#: ../../source/network/http/https.rst:33
+msgid ""
+"CA (Certificate Authority) "
+"是颁发数字证书的机构。是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。"
+msgstr ""

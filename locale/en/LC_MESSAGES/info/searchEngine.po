@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/info/searchEngine.rst:2
+msgid "搜索引擎利用"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:3
+msgid "恰当地使用搜索引擎（Google/Bing/Yahoo/Baidu等）可以获取目标站点的较多信息。"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:6
+msgid "搜索引擎处理流程"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:7
+msgid "数据预处理"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:8
+msgid "长度截断"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:9
+msgid "大小写转化"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:10
+msgid "去标点符号"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:11
+msgid "简繁转换"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:12
+msgid "数字归一化，中文数字、阿拉伯数字、罗马字"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:13
+msgid "同义词改写"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:14
+msgid "拼音改写"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:15
+msgid "处理"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:16
+msgid "分词"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:17
+msgid "关键词抽取"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:18
+msgid "非法信息过滤"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:21
+msgid "搜索技巧"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:22
+msgid "site:www.hao123.com"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:23
+msgid "返回此目标站点被搜索引擎抓取收录的所有内容"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:24
+msgid "site:www.hao123.com keyword"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:25
+msgid "返回此目标站点被搜索引擎抓取收录的包含此关键词的所有页面"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:26
+msgid "此处可以将关键词设定为网站后台，管理后台，密码修改，密码找回等"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:27
+msgid "site:www.hao123.com inurl:admin.php"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:28
+msgid "返回目标站点的地址中包含admin.php的所有页面，可以使用admin.php/manage.php或者其他关键词来寻找关键功能页面"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:29
+msgid "link:www.hao123.com"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:30
+msgid "返回所有包含目标站点链接的页面，其中包括其开发人员的个人博客，开发日志，或者开放这个站点的第三方公司，合作伙伴等"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:31
+msgid "related:www.hao123.com"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:32
+msgid "返回所有与目标站点”相似”的页面，可能会包含一些通用程序的信息等"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:33
+msgid "intitle:\"500 Internal Server Error\" \"server at\""
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:34
+msgid "搜索出错的页面"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:35
+msgid "inurl:\"nph-proxy.cgi\" \"Start browsing\""
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:36
+msgid "查找代理服务器"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:38
+msgid ""
+"除了以上的关键字，还有allintile / allinurl / allintext / inanchor / intext  / "
+"filetype / info / numberange / cache等。"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:41
+msgid "通配符"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:42
+msgid "``*`` 代表某一个单词"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:43
+msgid "OR 或者 | 代表逻辑或"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:44
+msgid "单词前跟 ``+`` 表强制查询"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:45
+msgid "单词前跟 ``-`` 表排除对应关键字"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:46
+msgid "``\"`` 强调关键字"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:49
+msgid "tips"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:50
+msgid "查询不区分大小写"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:51
+msgid "括号会被忽略"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:52
+msgid "默认用 and 逻辑进行搜索"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:55
+msgid "快照"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:56
+msgid "搜索引擎的快照中也常包含一些关键信息，如程序报错信息可以会泄漏网站具体路径，或者一些快照中会保存一些测试用的测试信息，比如说某个网站在开发了后台功能模块的时候，还没给所有页面增加权限鉴别，此时被搜索引擎抓取了快照，即使后来网站增加了权限鉴别，但搜索引擎的快照中仍会保留这些信息。"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:58
+msgid ""
+"另外也有专门的站点快照提供快照功能，如 Wayback Machine 和 `Archive.org "
+"<https://archive.org/>`_ 等。"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:61
+msgid "Github"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:62
+msgid "在Github中，可能会存在源码泄露、AccessKey泄露、密码、服务器配置泄露等情况，常见的搜索技巧有："
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:64
+msgid "``@example.com password/pass/pwd/secret/credentials/token``"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:65
+msgid "``@example.com username/user/key/login/ftp/``"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:66
+msgid "``@example.com config/ftp/smtp/pop``"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:67
+msgid "``@example.com security_credentials/connetionstring``"
+msgstr ""
+
+#: ../../source/info/searchEngine.rst:68
+msgid "``@example.com JDBC/ssh2_auth_password/send_keys``"
+msgstr ""

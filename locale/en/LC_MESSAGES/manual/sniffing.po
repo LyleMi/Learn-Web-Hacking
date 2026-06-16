@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/manual/sniffing.rst:2
+msgid "嗅探工具"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:5
+msgid "Nmap"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:6
+#, python-brace-format
+msgid "``nmap [<扫描类型>...] [<选项>] {<扫描目标说明>}``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:9
+msgid "指定目标"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:10
+msgid "CIDR风格 ``192.168.1.0/24``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:11
+msgid "逗号分割 ``www.baidu.com,www.zhihu.com``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:12
+msgid "分割线 ``10.22-25.43.32``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:13
+msgid "来自文件 ``-iL <inputfile>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:14
+msgid ""
+"排除不需要的host ``--exclude <host1 [, host2] [, host3] ... >`` ``--excludefile"
+" <excludefile>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:17
+msgid "主机发现"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:18
+msgid "``-sL`` List Scan - simply list targets to scan"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:19
+msgid "``-sn/-sP`` Ping Scan - disable port scan"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:20
+msgid "``-Pn`` Treat all hosts as online -- skip host discovery"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:21
+msgid "``-sS/sT/sA/sW/sM`` TCP SYN/Connect()/ACK/Window/Maimon scans"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:22
+msgid "``-sU`` UDP Scan"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:23
+msgid "``-sN/sF/sX`` TCP Null, FIN, and Xmas scans"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:25
+msgid "扫描方式表"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:29
+msgid "名称"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:30
+msgid "包标记"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:31
+msgid "端口OPEN"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:32
+msgid "端口CLOSE"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:33
+msgid "特点"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:34
+msgid "TCP SYN scan"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:35 ../../source/manual/sniffing.rst:40
+msgid "SYN"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:36 ../../source/manual/sniffing.rst:41
+msgid "回复ACK+SYN"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:37 ../../source/manual/sniffing.rst:42
+#: ../../source/manual/sniffing.rst:46 ../../source/manual/sniffing.rst:52
+#: ../../source/manual/sniffing.rst:57 ../../source/manual/sniffing.rst:62
+msgid "回复RST"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:38
+msgid "应用程序无日志，但是容易被发现"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:39
+msgid "全连接扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:43
+msgid "容易被发现"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:44
+msgid "ACK扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:45
+msgid "ACK"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:47 ../../source/manual/sniffing.rst:51
+#: ../../source/manual/sniffing.rst:56 ../../source/manual/sniffing.rst:61
+msgid "包被丢弃"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:48
+msgid "."
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:49
+msgid "FIN扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:50
+msgid "FIN"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:53
+msgid "需要等待超时，效率低"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:54
+msgid "TCP Xmas扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:55
+msgid "FIN+URG+PSH"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:58 ../../source/manual/sniffing.rst:63
+msgid "需要等待超时，效率低；不适用所有操作系统"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:59
+msgid "TCP NULL扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:60
+msgid "NULL"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:66
+msgid "端口扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:67
+msgid "``--scanflags``  定制的TCP扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:68
+msgid "``-P0`` 无ping"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:69
+msgid "``PS [port list]`` (TCP SYN ping) // need root on Unix"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:70
+msgid "``PA [port list]`` (TCP ACK ping)"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:71
+msgid "``PU [port list]`` (UDP ping)"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:72
+msgid "``PR (Arp ping)``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:73
+msgid "``p <port message>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:74
+msgid "``F`` 快速扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:75
+msgid "``r`` 不使用随机顺序扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:78
+msgid "服务和版本探测"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:79
+msgid "``-sV`` 版本探测"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:80
+msgid "``--allports`` 不为版本探测排除任何端口"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:81
+msgid "``--version-intensity <intensity>``  设置 版本扫描强度"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:82
+msgid "``--version-light`` 打开轻量级模式 // 级别2"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:83
+msgid "``--version-all`` 尝试每个探测 // 级别9"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:84
+msgid "``--version-trace`` 跟踪版本扫描活动"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:85
+msgid "``-sR RPC`` 扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:88
+msgid "操作系统扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:89
+msgid "``-O`` 启用操作系统检测"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:90
+msgid "``--osscan-limit`` 针对指定的目标进行操作系统检测"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:91
+msgid "``--osscan-guess``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:92
+msgid "``--fuzzy`` 推测操作系统检测结果"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:95
+msgid "时间和性能"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:96
+msgid "调整并行扫描组的大小"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:97
+msgid "``--min-hostgroup<milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:98
+msgid "``--max-hostgroup<milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:99
+msgid "调整探测报文的并行度"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:100
+msgid "``--min-parallelism<milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:101
+msgid "``--max-parallelism<milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:102
+msgid "调整探测报文超时"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:103
+msgid "``--min_rtt_timeout <milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:104
+msgid "``--max-rtt-timeout <milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:105
+msgid "``--initial-rtt-timeout <milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:106
+msgid "放弃低速目标主机"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:107
+msgid "``--host-timeout<milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:108
+msgid "调整探测报文的时间间隔"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:109
+msgid "``--scan-delay<milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:110
+msgid "``--max_scan-delay<milliseconds>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:111
+msgid "设置时间模板"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:112
+msgid "``-T <Paranoid|Sneaky|Polite|Normal|Aggressive|Insane>``"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:113
+msgid "``-T<0-5>`` (越大越快)"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:116
+msgid "逃避检测相关"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:117
+msgid "``-f`` 报文分段"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:118
+msgid "``--mtu`` 使用指定的MTU"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:119
+msgid "``-D<decoy1[， decoy2][， ME]， ...>`` 使用诱饵隐蔽扫描"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:120
+msgid "``-S<IP_Address>`` 源地址哄骗"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:121
+msgid "``-e <interface>`` 使用指定的接口"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:122
+msgid "``--source-port<portnumber>;-g<portnumber>`` 源端口哄骗"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:123
+msgid "``--data-length<number>`` 发送报文时 附加随机数据"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:124
+msgid "``--ttl <value>`` 设置ttl"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:125
+msgid "``--randomize-hosts`` 对目标主机的顺序随机排列"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:126
+msgid "``--spoof-mac<macaddress， prefix， orvendorname>`` MAC地址哄骗"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:129
+msgid "输出"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:130
+msgid "``-oN<filespec>`` 标准输出"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:131
+msgid "``-oX<filespec>`` XML输出"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:132
+msgid "``-oS<filespec>`` ScRipTKIdd|3oUTpuT"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:133
+msgid "``-oG<filespec>`` Grep输出"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:134
+msgid "``-oA<basename>`` 输出至所有格式"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:135
+msgid "``--open`` 仅输出可能开放的端口信息"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:138
+msgid "细节和调试"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:139
+msgid "``-v`` 信息详细程度"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:140
+msgid "``-d [level]`` debug level"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:141
+msgid "``--packet-trace`` 跟踪发送和接收的报文"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:142
+msgid "``--iflist`` 列举接口和路由"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:145
+msgid "Masscan"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:148
+msgid "编译"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:157
+msgid "命令行选项"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:158
+msgid "``--ports`` 指定端口范围"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:159
+msgid "``--rate`` 指定速率"
+msgstr ""
+
+#: ../../source/manual/sniffing.rst:160
+msgid "``--source-ip`` 指定源IP"
+msgstr ""

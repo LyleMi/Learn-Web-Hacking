@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/python/ref.rst:2
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:5
+msgid "反序列化"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:6
+msgid "`Python pickle反序列化 <http://www.91ri.org/9576.html>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:7
+msgid "`Python 沙箱 官方wiki <https://wiki.python.org/moin/SandboxedPython>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:8
+#, python-format
+msgid ""
+"`Python eval的常见错误封装及利用原理 "
+"<http://xxlegend.com/2015/07/31/Python%20eval的常见错误封装及利用原理/>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:9
+msgid ""
+"`pickle Python 对象序列化 <https://docs.python.org/zh-"
+"cn/3/library/pickle.html>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:10
+msgid ""
+"`Sour Pickles A serialised exploitation guide in one part "
+"<https://media.blackhat.com/bh-"
+"us-11/Slaviero/BH_US_11_Slaviero_Sour_Pickles_Slides.pdf>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:11
+msgid ""
+"`How pickle works in Python <https://rushter.com/blog/pickle-"
+"serialization-internals/>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:14
+msgid "沙箱"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:15
+msgid "`Python 沙箱通用绕过 <https://www.anquanke.com/post/id/86366>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:16
+msgid "`一文看懂Python沙箱逃逸 <https://www.freebuf.com/articles/system/203208.html>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:19
+msgid "格式化字符串"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:20
+msgid ""
+"`Python字符串格式化漏洞 <https://www.leavesongs.com/PENETRATION/python-string-"
+"format-vulnerability.html>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:21
+msgid ""
+"`Be Careful with Python's New-Style String Format "
+"<http://lucumr.pocoo.org/2016/12/29/careful-with-str-format/>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:24
+msgid "综合"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:25
+msgid "`python security <https://github.com/vstinner/python-security.git>`_"
+msgstr ""
+
+#: ../../source/language/python/ref.rst:26
+msgid "`Python安全和代码审计相关资料收集 <https://github.com/bit4woo/python_sec>`_"
+msgstr ""

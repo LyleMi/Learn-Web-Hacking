@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/csharp/trick.rst:2
+msgid "利用技巧"
+msgstr ""
+
+#: ../../source/language/csharp/trick.rst:5
+msgid "P/Invoke"
+msgstr ""
+
+#: ../../source/language/csharp/trick.rst:6
+msgid ""
+"Platform Invoke (P/Invoke) 提供了C#访问DLL中数据结构、回调、函数的能力。基本的使用方式如官方 `Platform "
+"Invoke <https://docs.microsoft.com/en-us/dotnet/standard/native-"
+"interop/pinvoke>`_ 文档中所示。利用P/Invoke的能力，C#程序可以较为容易的调用标准的Windows API。"
+msgstr ""
+
+#: ../../source/language/csharp/trick.rst:27
+msgid "P/Invoke的缺点在于引用了的API调用会最后出现在可执行文件的IAT中，使得一些敏感的行为容易被防护软件所注意。同时一些敏感的API可能是被防护软件所监控的，通过这种方式进行的API调用也容易被防护软件拦截。"
+msgstr ""
+
+#: ../../source/language/csharp/trick.rst:30
+msgid "D/Invoke"
+msgstr ""
+
+#: ../../source/language/csharp/trick.rst:31
+msgid ""
+"在P/Invoke的基础上，有研究人员提出了基于 `Delegates <https://docs.microsoft.com/en-"
+"us/dotnet/csharp/programming-guide/delegates/>`_ "
+"机制的D/Invoke，通过更隐蔽的方式来调用所需的API。"
+msgstr ""

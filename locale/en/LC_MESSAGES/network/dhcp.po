@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/dhcp.rst:2
+msgid "DHCP协议"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:6
+msgid ""
+"动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP) "
+"是一个用于局域网的网络协议，位于OSI模型的应用层，使用UDP协议工作，主要用于自动分配IP地址给用户，方便管理员进行统一管理。"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:8
+msgid "DHCP服务器端使用67/udp，客户端使用68/udp。DHCP运行分为四个基本过程，分别为请求IP租约、提供IP租约、选择IP租约和确认IP租约。客户端在获得了一个IP地址以后，就可以发送一个ARP请求来避免由于DHCP服务器地址池重叠而引发的IP冲突。"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:11
+msgid "DCHP 报文格式"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:40
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:41
+msgid ""
+"`DHCP Wiki "
+"<https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:44
+msgid "RFC"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:45
+msgid ""
+"`RFC 2131 Dynamic Host Configuration Protocol "
+"<https://tools.ietf.org/html/rfc2131>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:46
+msgid ""
+"`RFC 2132 DHCP Options and BOOTP Vendor Extensions "
+"<https://tools.ietf.org/html/rfc2132>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:47
+msgid ""
+"`RFC 3046 DHCP Relay Agent Information Option "
+"<https://tools.ietf.org/html/rfc3046>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:48
+msgid ""
+"`RFC 3397 Dynamic Host Configuration Protocol (DHCP) Domain Search Option"
+" <https://tools.ietf.org/html/rfc3397>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:49
+msgid ""
+"`RFC 3442 Classless Static Route Option for Dynamic Host Configuration "
+"Protocol (DHCP) version 4 <https://tools.ietf.org/html/rfc3442>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:50
+msgid ""
+"`RFC 3942 Reclassifying Dynamic Host Configuration Protocol Version Four "
+"(DHCPv4) Options <https://tools.ietf.org/html/rfc3942>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:51
+msgid ""
+"`RFC 4242 Information Refresh Time Option for Dynamic Host Configuration "
+"Protocol for IPv6 <https://tools.ietf.org/html/rfc4242>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:52
+msgid ""
+"`RFC 4361 Node-specific Client Identifiers for Dynamic Host Configuration"
+" Protocol Version Four (DHCPv4) <https://tools.ietf.org/html/rfc4361>`_"
+msgstr ""
+
+#: ../../source/network/dhcp.rst:53
+msgid ""
+"`RFC 4436 Detecting Network Attachment in IPv4 (DNAv4) "
+"<https://tools.ietf.org/html/rfc4436>`_"
+msgstr ""

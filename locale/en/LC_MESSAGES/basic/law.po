@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/basic/law.rst:2
+msgid "法律与法规"
+msgstr ""
+
+#: ../../source/basic/law.rst:5
+msgid "相关链接"
+msgstr ""
+
+#: ../../source/basic/law.rst:6
+msgid ""
+"`中华人民共和国网络安全法 "
+"<http://www.npc.gov.cn/npc/xinwen/2016-11/07/content_2001605.htm>`_"
+msgstr ""
+
+#: ../../source/basic/law.rst:7
+msgid ""
+"`网络产品安全漏洞管理规定 "
+"<http://www.gov.cn/zhengce/zhengceku/2021-07/14/content_5624965.htm>`_"
+msgstr ""
+
+#: ../../source/basic/law.rst:8
+msgid ""
+"`关键信息基础设施安全保护条例 "
+"<http://www.gov.cn/zhengce/content/2021-08/17/content_5631671.htm>`_"
+msgstr ""
+
+#: ../../source/basic/law.rst:9
+msgid ""
+"`中华人民共和国个人信息保护法 "
+"<http://www.npc.gov.cn/npc/c30834/202108/a8c4e3672c74491a80b53a172bb753fe.shtml>`_"
+msgstr ""
+
+#: ../../source/basic/law.rst:10
+msgid ""
+"`中华人民共和国数据安全法 "
+"<http://www.npc.gov.cn/npc/c30834/202106/7c9af12f51334a73b56d7938f99a788a.shtml>`_"
+msgstr ""

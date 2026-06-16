@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/domain/proto.rst:2
+msgid "内网常用协议"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:4
+msgid "Windows查询名称解析的顺序为DNS、mDNS、LLMNR、NBNS。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:7
+msgid "NetBIOS"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:8
+msgid ""
+"NetBIOS（Network Basic Input/Output System）是基于网络的交互协议，通常使用UDP 137、UDP "
+"138、TCP 139等端口。Windows在安装TCP/IP协议时会默认启用该协议，可能导致未设置权限校验的网络资源被访问。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:10
+msgid ""
+"基于NetBIOS有NBNS (NetBIOS Name Service)服务，通常监听在UDP "
+"137端口，该服务提供三种功能：将NetBIOS名称解析到IP、查询某一个NetBIOS节点的状态，注册/释放一个NetBIOS名。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:12
+msgid "可以使用 ``nbtstat`` 工具利用NetBIOS协议管理网络。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:15
+msgid "LLMNR"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:16
+msgid ""
+"链路本地多播名称解析 (Link-Local Multicast Name Resolution, "
+"LLMNR)是一个基于DNS数据包格式的协议，IPv4和IPv6的主机可以通过此协议对同一本地链路上的主机执行名称解析。该协议在Windows "
+"Vista后被引入。 LLMNR监听UDP 5355端口，可以通过多播地址 224.0.0.252 (或 "
+"``FF02:0:0:0:0:0:1:3``) 访问。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:20
+msgid "mDNS"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:21
+msgid ""
+"mDNS (multicast DNS) 在Windows 10中被引入，监听UDP 5353端口，对应的多播地址为 224.0.0.251 ( "
+"``FF02::FB`` ) 。mDNS主要实现了在没有传统DNS服务器的情况下使局域网内的主机实现相互发现和通信。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:24
+msgid "WPAD"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/proto.rst:25
+msgid ""
+"网络代理自动发现协议 (Web Proxy Auto-Discovery, WPAD) "
+"是一种客户端使用DHCP和/或DNS发现方法来定位一个配置文件URL的方法。在检测和下载配置文件后，它可以执行配置文件以测定特定URL应使用的代理。"
+msgstr ""

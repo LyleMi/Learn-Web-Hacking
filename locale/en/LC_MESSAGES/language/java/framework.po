@@ -1,0 +1,425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/java/framework.rst:2
+msgid "框架"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:5
+msgid "Servlet"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:8
+#: ../../source/language/java/framework.rst:35
+#: ../../source/language/java/framework.rst:69
+#: ../../source/language/java/framework.rst:110
+msgid "简介"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:9
+msgid ""
+"Servlet(Server Applet)是Java "
+"Servlet的简称，称为小服务程序或服务连接器，是用Java编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态Web内容。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:11
+msgid "狭义的Servlet是指Java语言实现的一个接口，广义的Servlet是指任何实现了这个Servlet接口的类，一般情况下，人们将Servlet理解为后者。Servlet运行于支持Java的应用服务器中。从原理上讲，Servlet可以响应任何类型的请求，但绝大多数情况下Servlet只用来扩展基于HTTP协议的Web服务器。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:14
+msgid "生命周期为"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:15
+msgid "客户端请求该 Servlet"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:16
+msgid "加载 Servlet 类到内存"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:17
+msgid "实例化并调用init()方法初始化该 Servlet"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:18
+msgid "service()(根据请求方法不同调用 ``doGet()`` / ``doPost()`` / ... / ``destroy()``"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:21
+msgid "接口"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:23
+msgid "``init()``"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:25
+msgid "在 Servlet 的生命期中，仅执行一次 init() 方法，在服务器装入 Servlet 时执行。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:27
+msgid "``service()``"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:29
+msgid ""
+"service() 方法是 Servlet 的核心。每当一个客户请求一个HttpServlet对象，该对象的 ``service()`` "
+"方法就要被调用，而且传递给这个方法一个\"请求\"(ServletRequest)对象和一个\"响应\"(ServletResponse)对象作为参数。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:32
+msgid "Struts 2"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:36
+msgid "Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:39
+#: ../../source/language/java/framework.rst:81
+msgid "请求流程"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:40
+msgid "客户端发送请求的tomcat服务器"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:41
+msgid "请求经过一系列过滤器"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:42
+msgid "FilterDispatcher调用ActionMapper来决定这个请求是否要调用某个Action"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:43
+msgid "ActionMppaer决定调用某个ActionFilterDispatcher把请求给ActionProxy"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:44
+msgid "ActionProxy通过Configuration Manager查看structs.xml，找到对应的Action类"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:45
+msgid "ActionProxy创建一个ActionInvocation对象"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:46
+msgid "ActionInvocation对象回调Action的execute方法"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:47
+msgid "Action执行完毕后，ActionInvocation根据返回的字符串，找到相应的result，通过HttpServletResponse返回给服务器"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:50
+msgid "相关CVE"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:51
+msgid "CVE-2016-3081 (S2-032)"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:52
+msgid "CVE-2016-3687 (S2-033)"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:53
+msgid "CVE-2016-4438 (S2-037)"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:54
+msgid "`CVE-2017-5638 <https://github.com/immunio/apache-struts2-CVE-2017-5638>`_"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:55
+msgid "CVE-2017-7672"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:56
+msgid "CVE-2017-9787"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:57
+msgid "CVE-2017-9793"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:58
+msgid "CVE-2017-9804"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:59
+msgid "`CVE-2017-9805 <https://github.com/mazen160/struts-pwn_CVE-2017-9805>`_"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:60
+msgid "`CVE-2017-12611 <https://github.com/brianwrf/S2-053-CVE-2017-12611>`_"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:61
+msgid "CVE-2017-15707"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:62
+msgid "CVE-2018-1327"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:63
+msgid "CVE-2018-11776"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:66
+msgid "Spring"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:70
+msgid "Spring一般指的是Spring Framework，一个轻量级Java应用程序开源框架，提供了简易的开发方式。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:73
+msgid "Spring MVC"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:74
+msgid "Spring MVC根据Spring的模式设计的MVC框架，主要用于开发Web应用，简化开发。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:77
+msgid "Spring Boot"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:78
+msgid "Spring在推出之初方案较为繁琐，因此提供了Spring Boot作为自动化配置工具，降低项目搭建的复杂度。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:82
+msgid "用户发送请求给服务器"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:83
+msgid "服务器收到请求，使用DispatchServlet处理"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:84
+msgid "Dispatch使用HandleMapping检查url是否有对应的Controller，如果有，执行"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:85
+msgid "如果Controller返回字符串，ViewResolver将字符串转换成相应的视图对象"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:86
+msgid "DispatchServlet将视图对象中的数据，输出给服务器"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:87
+msgid "服务器将数据输出给客户端"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:90
+#: ../../source/language/java/framework.rst:114
+msgid "CVE概览"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:91
+msgid "CVE-2018-1270"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:92
+msgid "Spring Websocket 远程代码执行漏洞"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:93
+msgid "Spring Framework 5.0 - 5.0.5"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:94
+msgid "Spring Framework 4.3 - 4.3.15"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:95
+msgid "CVE-2018-1273"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:96
+msgid "Spring Data 远程代码执行漏洞"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:97
+msgid "Spring Data Commons 1.13 - 1.13.10"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:98
+msgid "Spring Data Commons 2.0 - 2.0.5"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:99
+msgid "Spring Data REST 2.6 - 2.6.10"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:100
+msgid "Spring Data REST 3.0 - 3.0.5"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:101
+msgid "CVE-2017-8046"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:102
+msgid "Spring Data REST 远程代码执行漏洞"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:103
+msgid "CVE-2017-4971"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:104
+msgid "Spring Web Flow 远程代码执行漏洞"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:107
+msgid "Shiro"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:111
+msgid "Apache Shiro是一个功能强大且易于使用的Java安全框架，功能包括身份验证，授权，加密和会话管理。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:115
+#: ../../source/language/java/framework.rst:140
+msgid "CVE-2020-13933"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:116
+msgid "Apache Shiro < 1.6.0"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:117
+#: ../../source/language/java/framework.rst:121
+#: ../../source/language/java/framework.rst:125
+#: ../../source/language/java/framework.rst:137
+msgid "身份验证绕过漏洞"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:118
+#: ../../source/language/java/framework.rst:144
+msgid "CVE-2020-11989"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:119
+msgid "SHIRO-782"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:120
+msgid "Apache Shiro < 1.5.3"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:122
+#: ../../source/language/java/framework.rst:148
+msgid "CVE-2020-1957"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:123
+msgid "SHIRO-682"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:124
+msgid "Apache Shiro < 1.5.2"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:126
+#: ../../source/language/java/framework.rst:152
+msgid "CVE-2019-12422"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:127
+msgid "SHIRO-721"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:128
+msgid "Apache Shiro < 1.4.2"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:129
+msgid "Padding Oracle Attack 远程代码执行漏洞"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:130
+#: ../../source/language/java/framework.rst:156
+msgid "CVE-2016-4437"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:131
+msgid "SHIRO-550"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:132
+msgid "Apache Shiro <= 1.2.4"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:133
+msgid "反序列化远程代码执行漏洞"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:134
+msgid "CVE-2014-0074"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:135
+msgid "SHIRO-460"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:136
+msgid "Apache Shiro < 1.2.3"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:141
+msgid ""
+"Apache Shiro "
+"1.6.0之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:145
+msgid ""
+"Apache Shiro "
+"1.5.3之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。此漏洞存在两种攻击方式。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:149
+msgid ""
+"Apache Shiro "
+"1.5.2之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:153
+msgid ""
+"Apache Shiro 1.4.2之前的版本默认使用 ``AES/CBC/PKCS5Padding`` "
+"模式加密,开启RememberMe功能的Shiro组件将允许远程攻击者构造序列化数据，通过Padding Oracle "
+"Attack进行爆破，即使在秘钥未知的条件下，也可以在目标服务器上执行任意命令。"
+msgstr ""
+
+#: ../../source/language/java/framework.rst:157
+msgid ""
+"Apache Shiro 1.2.5之前的版本在 "
+"``org.apache.shiro.mgt.AbstractRememberMeManager`` 中存在AES默认秘钥 "
+"``kPH+bIxk5D2deZiIxcaaaA==`` "
+"，开启RememberMe功能的Shiro组件将允许远程攻击者构造序列化数据，在目标服务器上执行任意命令。"
+msgstr ""

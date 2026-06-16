@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/llm/ref.rst:2
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/llm/ref.rst:4
+msgid ""
+"`OWASP Top 10 for LLM Applications <https://owasp.org/www-project-top-10"
+"-for-large-language-model-applications/>`_"
+msgstr ""
+
+#: ../../source/llm/ref.rst:5
+msgid ""
+"`OWASP Top 10 2025 for LLMs and Gen AI Apps <https://genai.owasp.org/llm-"
+"top-10/>`_"
+msgstr ""
+
+#: ../../source/llm/ref.rst:6
+msgid ""
+"`NIST AI Risk Management Framework <https://www.nist.gov/itl/ai-risk-"
+"management-framework>`_"
+msgstr ""
+
+#: ../../source/llm/ref.rst:7
+msgid ""
+"`NIST Artificial Intelligence Risk Management Framework: Generative "
+"Artificial Intelligence Profile <https://doi.org/10.6028/NIST.AI.600-1>`_"
+msgstr ""
+
+#: ../../source/llm/ref.rst:8
+msgid "`MITRE ATLAS <https://atlas.mitre.org/>`_"
+msgstr ""

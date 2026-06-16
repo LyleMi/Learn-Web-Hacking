@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/ref.rst:2
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:5
+msgid "Bypass"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:6
+msgid ""
+"`php open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-"
+"disable_functions-and-open_basedir/>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:7
+msgid ""
+"`open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-"
+"disable_functions-and-open_basedir/>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:8
+msgid ""
+"`Bypass Disable functions Shell "
+"<https://github.com/l3m0n/Bypass_Disable_functions_Shell>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:11
+msgid "Tricks"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:12
+#, python-format
+msgid ""
+"`php wrappers <https://www.ptsecurity.com/upload/corporate/ru-"
+"ru/webinars/ics/%D0%90.%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D0%BD_%D0%9E_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF_%D0%B8%D1%81%D0%BF_%D0%A0%D0%9D%D0%A0_wrappers.pdf>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:13
+msgid ""
+"`反序列化之PHP原生类的利用 "
+"<http://www.cnblogs.com/iamstudy/articles/unserialize_in_php_inner_class.html>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:14
+msgid ""
+"`php解密的数种方法 <https://www.leavesongs.com/PENETRATION/unobfuscated-"
+"phpjiami.html>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:15
+msgid ""
+"`Surprising CTF task solution using php://filter "
+"<https://gynvael.coldwind.pl/?id=671>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:16
+msgid ""
+"`主机安全 洋葱Webshell检测实践与思考  "
+"<https://mp.weixin.qq.com/s/ol70aVdvybzMJmtfxaAAZQ>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:19
+msgid "WebShell"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:20
+msgid ""
+"`PHP htaccess inject <https://github.com/sektioneins/pcc/wiki/PHP-"
+"htaccess-injection-cheat-sheet>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:21
+msgid ""
+"`php木马加密 <https://blog.manchestergreyhats.co.uk/2018/11/07/php-malware-"
+"examination/>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:22
+msgid "`PHP WebShell变形技术总结  <https://www.freebuf.com/articles/web/155891.html>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:23
+msgid ""
+"`一些不包含数字和字母的webshell <https://www.leavesongs.com/PENETRATION/webshell-"
+"without-alphanum.html>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:24
+msgid "`PHP Webshell那些事-攻击篇 <https://mp.weixin.qq.com/s/FgzIm-IK02rjEf3JvxOxrw>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:27
+msgid "Phar"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:28
+msgid ""
+"`US Black Hat 2018 Phar <https://i.blackhat.com/us-18/Thu-August-9/us-18"
+"-Thomas-Its-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-"
+"It-wp.pdf>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:29
+msgid "`利用 phar 拓展 php 反序列化漏洞攻击面 <https://paper.seebug.org/680/>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:30
+msgid "`Phar与Stream Wrapper造成PHP RCE的深入挖掘 <https://blog.zsxsoft.com/post/38>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:33
+msgid "运行"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:34
+msgid ""
+"`Learning the PHP lifecycle "
+"<http://www.phpinternalsbook.com/php7/extensions_design/php_lifecycle.html>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:35
+msgid "`PHP7内核剖析 <https://github.com/pangudashu/php7-internal>`_"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:38
+msgid "Blog"
+msgstr ""
+
+#: ../../source/language/php/ref.rst:39
+msgid ""
+"`How we broke PHP <https://www.evonide.com/how-we-broke-php-hacked-"
+"pornhub-and-earned-20000-dollar/>`_"
+msgstr ""

@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/domain/sec.rst:2
+msgid "加密方案"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:3
+msgid ""
+"作为主流的防御方案，DNS加密有五种方案，分别是 DNS-over-TLS (DoT)、DNS-over-DTLS、DNS-over-HTTPS "
+"(DoH)、DNS-over-QUIC以及DNSCrypt。"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:6
+msgid "DoT"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:7
+msgid "DoT方案在2016年发表于RFC7858，使用853端口。主要思想是Client和Server通过TCP协议建立TLS会话后再进行DNS传输，Client通过SSL证书验证服务器身份。"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:10
+msgid "DNS-over-DTLS"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:11
+msgid "DNS-over-DTLS和DoT类似，区别在于使用UDP协议而不是TCP协议。"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:14
+msgid "DoH"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:15
+#, python-brace-format
+msgid ""
+"DoH方案在发表RFC8484，使用 ``https://dns.example.com/dns-query{?dns}``  "
+"来查询服务器的IP，复用https的443端口，流量特征比较小。DoH会对DNS服务器进行加密认证，不提供fallback选项。目前Cloudflare、Google等服务商对DoH提供了支持。"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:18
+msgid "DNS-over-QUIC"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:19
+msgid "DNS-over-QUIC安全特性和DoT类似，但是性能更高，目前没有合适的软件实现。"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:22
+msgid "DNSCrypt"
+msgstr ""
+
+#: ../../source/network/domain/sec.rst:23
+msgid "DNSCrypt使用X25519-XSalsa20Poly1305而非标准的TLS，且DNSCrypt的Client需要额外的软件，Server需要的专门的证书。"
+msgstr ""

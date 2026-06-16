@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/llm/basic.rst:2
+msgid "基本概念"
+msgstr ""
+
+#: ../../source/llm/basic.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/llm/basic.rst:6
+msgid ""
+"大模型安全是指围绕大语言模型（Large Language "
+"Model，LLM）及其应用系统，在训练、部署、调用、编排、运维等环节中对模型、数据、工具和业务流程进行保护，避免模型被诱导执行非预期行为、泄露敏感信息、产生错误决策或者被用于攻击。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:8
+msgid ""
+"和传统 Web "
+"应用不同，大模型应用的输入往往同时包含指令、数据和上下文。模型本身并不能天然地区分哪些内容来自系统、哪些来自用户、哪些来自不可信外部数据，因此会产生提示词注入、越狱、工具滥用、RAG"
+" 污染等新的攻击面。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:10
+msgid ""
+"在实际系统中，大模型通常并不是单独存在，而是和向量数据库、知识库、插件、Agent、工作流、外部 "
+"API、文件解析器、浏览器、代码执行器等组件组成一个应用。因此，大模型安全既包括模型自身的安全，也包括模型应用链路中的传统应用安全、数据安全、供应链安全和业务安全。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:13
+msgid "相关概念"
+msgstr ""
+
+#: ../../source/llm/basic.rst:16
+msgid "大语言模型"
+msgstr ""
+
+#: ../../source/llm/basic.rst:17
+msgid "大语言模型是基于大规模语料训练的自然语言处理模型，常用于对话、摘要、翻译、代码生成、信息抽取、检索增强问答等场景。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:20
+msgid "提示词"
+msgstr ""
+
+#: ../../source/llm/basic.rst:21
+msgid "提示词（Prompt）是提交给模型的输入内容。提示词可以包含任务说明、上下文、示例、约束条件和用户问题。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:24
+msgid "系统提示词"
+msgstr ""
+
+#: ../../source/llm/basic.rst:25
+msgid ""
+"系统提示词（System "
+"Prompt）通常由应用开发者设置，用于约束模型的角色、能力边界、输出格式和安全策略。系统提示词泄露后，攻击者可以据此构造更有针对性的绕过方式。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:28
+msgid "上下文窗口"
+msgstr ""
+
+#: ../../source/llm/basic.rst:29
+msgid "上下文窗口是模型一次推理可以处理的 Token 范围。上下文窗口越大，模型能处理的信息越多，同时也可能扩大注入、泄露和资源消耗风险。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:32
+msgid "检索增强生成"
+msgstr ""
+
+#: ../../source/llm/basic.rst:33
+msgid ""
+"检索增强生成（Retrieval-Augmented "
+"Generation，RAG）是指先从知识库、搜索引擎、数据库等外部来源检索相关内容，再将这些内容和用户问题一起交给模型生成答案。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:36
+msgid "向量数据库"
+msgstr ""
+
+#: ../../source/llm/basic.rst:37
+msgid "向量数据库用于存储文本、图片、代码等数据的向量表示，常用于相似度检索、知识库问答和推荐场景。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:40
+msgid "Agent"
+msgstr ""
+
+#: ../../source/llm/basic.rst:41
+msgid ""
+"Agent 是具备任务规划、工具调用、状态记忆和多步执行能力的大模型应用形态。Agent "
+"可以调用浏览器、邮件、数据库、命令执行、工单系统等工具，因此通常具有更高风险。"
+msgstr ""
+
+#: ../../source/llm/basic.rst:44
+msgid "工具调用"
+msgstr ""
+
+#: ../../source/llm/basic.rst:45
+msgid ""
+"工具调用（Tool Calling / Function Calling）是模型按照约定格式调用外部函数或 API "
+"的能力。工具调用扩大了模型的影响范围，需要进行权限控制和参数校验。"
+msgstr ""

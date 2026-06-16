@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/classify.rst:2
+msgid "注入分类"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:6
+msgid ""
+"SQL注入是一种代码注入技术，用于攻击数据驱动的应用程序。 "
+"在应用程序中，如果没有做恰当的过滤，则可能使得恶意的SQL语句被插入输入字段中执行（例如将数据库内容转储给攻击者）。"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:10
+msgid "按技巧分类"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:11
+msgid "根据使用的技巧，SQL注入类型可分为"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:13
+msgid "盲注"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:14
+msgid "布尔盲注：只能从应用返回中推断语句执行后的布尔值"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:15
+msgid "时间盲注：应用没有明确的回显，只能使用特定的时间函数来判断"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:16
+msgid "报错注入：应用会显示全部或者部分的报错信息"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:17
+msgid "堆叠注入：有的应用可以加入 ``;`` 后一次执行多条语句"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:18
+msgid "其他"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:21
+msgid "按获取数据的方式分类"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:22
+msgid "另外也可以根据获取数据的方式分为3类"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:25
+msgid "inband"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:26
+msgid "利用Web应用来直接获取数据，如报错注入，这类注入都是通过站点的响应或者错误反馈来提取数据。"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:29
+msgid "inference"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:30
+msgid "通过Web的一些反映来推断数据，如布尔盲注，也就是我们通俗的盲注， 通过web应用的其他改变来推断数据。"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:34
+msgid "out of band (OOB)"
+msgstr ""
+
+#: ../../source/vuln/sql/classify.rst:35
+msgid "通过其他传输方式来获得数据，比如DNS解析协议和电子邮件。"
+msgstr ""

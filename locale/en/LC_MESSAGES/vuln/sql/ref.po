@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/ref.rst:2
+msgid "参考文章"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:5
+msgid "Tricks"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:6
+msgid "`sqlmap time based inject 分析 <http://blog.wils0n.cn/archives/178/>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:7
+msgid "`SQLInjectionWiki <https://github.com/NetSPI/SQLInjectionWiki>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:8
+msgid "`常见数据库写入Webshell汇总 <https://mp.weixin.qq.com/s/BucCNyCmyATdRENZp0AF2A>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:9
+msgid "`MSSQL数据库攻击实战指北 <https://mp.weixin.qq.com/s/uENvpPan7aVd7MbSoAT9Dg>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:12
+msgid "Bypass"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:13
+msgid "`SQL注入ByPass的一些小技巧 <https://mp.weixin.qq.com/s/fSBZPkO0-HNYfLgmYWJKCg>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:14
+msgid "`Waf Bypass之道 <https://xz.aliyun.com/t/368>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:15
+msgid "`MySQL Bypass Wiki <https://github.com/aleenzz/MYSQL_SQL_BYPASS_WIKI>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:18
+msgid "NoSQL"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:19
+msgid "`NoSQL注入的分析和缓解 <http://www.yunweipai.com/archives/14084.html>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:20
+msgid "`NoSQL注入 <https://mp.weixin.qq.com/s/tG874LNTIdiN7MPtO-hovA>`_"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:23
+msgid "Cheatsheet"
+msgstr ""
+
+#: ../../source/vuln/sql/ref.rst:24
+msgid ""
+"`MSSQL Pentest Cheatsheet <https://github.com/Ignitetechnologies/MSSQL-"
+"Pentest-Cheatsheet>`_"
+msgstr ""

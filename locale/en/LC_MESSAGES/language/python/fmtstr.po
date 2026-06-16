@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/python/fmtstr.rst:2
+msgid "格式化字符串"
+msgstr ""
+
+#: ../../source/language/python/fmtstr.rst:4
+#, python-brace-format, python-format
+msgid ""
+"在Python中，有两种格式化字符串的方式，在Python2的较低版本中，格式化字符串的方式为 ``\"this is a %s\" % "
+"\"test\"`` ，之后增加了format的方式， 语法为 ``\"this is a {}\".format('test')`` 或者 "
+"``\"this is a {test}\".format(test='test')``"
+msgstr ""
+
+#: ../../source/language/python/fmtstr.rst:6
+msgid "当格式化字符串由用户输入时，则可能会造成一些问题，下面是一个最简单的例子"
+msgstr ""
+
+#: ../../source/language/python/fmtstr.rst:13
+msgid ""
+"从上面这个简单的例子不难知道，当我们可以控制要format的字符串时，则可以使用 ``__init__`` / ``__globals__`` "
+"等属性读取一些比较敏感的值，甚至任意执行代码。"
+msgstr ""

@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/trick/gadget.rst:2
+msgid "Bypass Via Script Gadgets"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/gadget.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/gadget.rst:6
+msgid ""
+"一些网站会使用白名单或者一些基于DOM的防御方式，对这些方式，有一种被称为 ``Code Reuse`` "
+"的攻击方式可以绕过。该方式和二进制攻防中的Gadget相似，使用目标中的合法代码来达到绕过防御措施的目的。在论文 ``Code-Reuse "
+"Attacks for the Web: Breaking Cross-Site Scripting Mitigations via Script"
+" Gadgets`` 中有该方法的具体描述。"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/gadget.rst:8
+msgid ""
+"portswigger的一篇博文也表达了类似的想法 ``https://portswigger.net/blog/abusing-"
+"javascript-frameworks-to-bypass-xss-mitigations``。"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/gadget.rst:10
+msgid "下面有一个简单的例子，这个例子使用了 ``DOMPurify`` 来加固，但是因为引入了 ``jquery.mobile.js`` 导致可以被攻击。"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/gadget.rst:13
+msgid "例子"
+msgstr ""

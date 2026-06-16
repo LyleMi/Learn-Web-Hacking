@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/disablefunc.rst:2
+msgid "Disable Functions"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:5
+msgid "机制实现"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:6
+msgid ""
+"PHP中Disable Function的实现是在php-src/Zend/Zend-"
+"API.c中。PHP在启动时，读取配置文件中禁止的函数，逐一根据禁止的函数名调用 ``zend_disable_function`` "
+"来实现禁止的效果。"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:8
+msgid "这个函数根据函数名在内置函数列表中找到对应的位置并修改掉，当前版本的代码如下："
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:26
+msgid "和函数的实现方式类似，disable classes也是这样实现的"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:48
+msgid ""
+"因为这个实现机制的原因，在PHP启动后通过 ``ini_set`` 来修改 ``disable_functions`` 或 "
+"``disable_classes`` 是无效的。"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:51
+msgid "Bypass"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:52
+msgid "LD_PRELOAD绕过"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:53
+msgid "https://github.com/yangyangwithgnu/bypass_disablefunc_via_LD_PRELOAD"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:54
+msgid "``mail()`` + ``putenv``"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:55
+msgid "PHP OPcache"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:56
+msgid "Mail函数"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:57
+msgid "imap_open"
+msgstr ""
+
+#: ../../source/language/php/disablefunc.rst:58
+msgid "https://www.cvedetails.com/cve/cve-2018-19518"
+msgstr ""

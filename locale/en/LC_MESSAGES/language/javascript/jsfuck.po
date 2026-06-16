@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/javascript/jsfuck.rst:2
+msgid "jsfuck cheat sheet"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:5
+msgid "Basic values"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:6
+msgid "``undefined`` > ``[][[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:7
+msgid "``false`` > ``![]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:8
+msgid "``true`` > ``!![]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:9
+msgid "``NaN`` > ``+[![]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:10
+msgid "``0`` > ``+[]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:11
+msgid "``1`` > ``+!+[]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:12
+msgid "``2`` > ``!+[]+!+[]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:15
+msgid "Basic strings"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:16
+msgid "``''`` > ``[]+[]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:17
+msgid "``'undefined'`` > ``[]+[][[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:18
+msgid "``'false'`` > ``[]+![]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:19
+msgid "``'true'`` > ``[]+!![]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:20
+msgid "``'NaN'`` > ``[]+(+[![]])``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:21
+msgid "``'0'`` > ``[]+(+[])``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:22
+msgid "``'1'`` > ``[]+(+!+[])``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:23
+msgid "``'2'`` > ``[]+(!+[]+!+[])``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:24
+msgid "``'10'`` > ``[+!+[]]+[+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:25
+msgid "``'11'`` > ``[+!+[]]+[+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:26
+msgid "``'100'`` > ``[+!+[]]+[+[]]+(+[])``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:29
+msgid "Higher numbers"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:31
+msgid "``10`` > ``+([+!+[]]+[+[]])``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:32
+msgid "``11`` > ``+([+!+[]]+[+!+[]])``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:33
+msgid "``100`` > ``+([+!+[]]+[+[]]+(+[]))``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:36
+msgid "String alphabet"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:37
+msgid "``'a'`` > ``([]+![])[+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:38
+msgid "``'d'`` > ``([]+[][[]])[+!+[]+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:39
+msgid "``'e'`` > ``([]+!+[])[+!+[]+!+[]+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:40
+msgid "``'f'`` > ``([]+![])[+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:41
+msgid "``'i'`` > ``([]+[][[]])[+!+[]+!+[]+!+[]+!+[]+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:42
+msgid "``'l'`` > ``([]+![])[+!+[]+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:43
+msgid "``'n'`` > ``([]+[][[]])[+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:44
+msgid "``'r'`` > ``([]+!+[])[+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:45
+msgid "``'s'`` > ``([]+![])[+!+[]+!+[]+!+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:46
+msgid "``'t'`` > ``([]+!+[])[+[]]``"
+msgstr ""
+
+#: ../../source/language/javascript/jsfuck.rst:47
+msgid "``'u'`` > ``([]+!+[])[+!+[]+!+[]]``"
+msgstr ""

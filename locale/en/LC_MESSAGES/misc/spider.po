@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/misc/spider.rst:2
+msgid "爬虫"
+msgstr ""
+
+#: ../../source/misc/spider.rst:5
+msgid "反爬虫机制"
+msgstr ""
+
+#: ../../source/misc/spider.rst:6
+msgid "检测 User-Agent"
+msgstr ""
+
+#: ../../source/misc/spider.rst:7
+msgid "数据加密"
+msgstr ""
+
+#: ../../source/misc/spider.rst:8
+msgid "接口签名"
+msgstr ""
+
+#: ../../source/misc/spider.rst:9
+msgid "聚类风控"
+msgstr ""
+
+#: ../../source/misc/spider.rst:10
+msgid "浏览器指纹检测"
+msgstr ""
+
+#: ../../source/misc/spider.rst:11
+msgid "硬件特性"
+msgstr ""
+
+#: ../../source/misc/spider.rst:12
+msgid "插件 ``window.navigator.plugins``"
+msgstr ""
+
+#: ../../source/misc/spider.rst:13
+msgid "屏幕 ``window.screen``"
+msgstr ""
+
+#: ../../source/misc/spider.rst:14
+msgid "..."
+msgstr ""
+
+#: ../../source/misc/spider.rst:15
+msgid "canvas 指纹检测"
+msgstr ""
+
+#: ../../source/misc/spider.rst:18
+msgid "前端反调试"
+msgstr ""
+
+#: ../../source/misc/spider.rst:19
+msgid "hook 按键事件，禁止 F12 / 右键"
+msgstr ""
+
+#: ../../source/misc/spider.rst:20
+msgid "document.oncontextmenu"
+msgstr ""
+
+#: ../../source/misc/spider.rst:21
+msgid "document.onkeydown"
+msgstr ""
+
+#: ../../source/misc/spider.rst:22
+msgid "document.onkeyup"
+msgstr ""
+
+#: ../../source/misc/spider.rst:23
+msgid "document.onkeypress"
+msgstr ""
+
+#: ../../source/misc/spider.rst:24
+msgid "循环 debugger"
+msgstr ""
+
+#: ../../source/misc/spider.rst:25
+msgid "检测控制台打开后主动触发 OOM"
+msgstr ""

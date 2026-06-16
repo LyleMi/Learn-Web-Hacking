@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/operation.rst:2
+msgid "运维"
+msgstr ""
+
+#: ../../source/tools/operation.rst:5
+msgid "流量"
+msgstr ""
+
+#: ../../source/tools/operation.rst:6
+msgid "`Bro <https://www.bro.org/>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:7
+msgid ""
+"`Moloch <https://github.com/aol/moloch>`_  Large scale, open source, "
+"indexed packet capture and search"
+msgstr ""
+
+#: ../../source/tools/operation.rst:8
+msgid "`TCPFlow <https://github.com/simsong/tcpflow>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:9
+msgid "`TCPDump <http://www.tcpdump.org/>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:10
+msgid "`WireShark <https://www.wireshark.org>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:11
+msgid "`Argus <https://github.com/salesforce/Argus>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:12
+msgid "`PcapPlusPlus <https://github.com/seladb/PcapPlusPlus>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:13
+msgid "`ngrep <https://github.com/jpr5/ngrep>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:14
+msgid ""
+"`cisco joy <https://github.com/cisco/joy>`_  A package for capturing and "
+"analyzing network flow data and intraflow data, for network research, "
+"forensics, and security monitoring."
+msgstr ""
+
+#: ../../source/tools/operation.rst:15
+msgid ""
+"`NFStream <https://github.com/nfstream/nfstream>`_ a Flexible Network "
+"Data Analysis Framework"
+msgstr ""
+
+#: ../../source/tools/operation.rst:16
+msgid ""
+"`BruteShark <https://github.com/odedshimon/BruteShark>`_ Network Analysis"
+" Tool"
+msgstr ""
+
+#: ../../source/tools/operation.rst:19
+msgid "堡垒机"
+msgstr ""
+
+#: ../../source/tools/operation.rst:20
+msgid "`jumpserver <https://github.com/jumpserver/jumpserver>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:21
+msgid "`CrazyEye <https://github.com/triaquae/CrazyEye>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:22
+msgid "`GateOne <https://github.com/liftoff/GateOne>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:25
+msgid "蜜罐"
+msgstr ""
+
+#: ../../source/tools/operation.rst:26
+msgid "`Dionaea <https://github.com/DinoTools/dionaea>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:27
+msgid "`Modern Honey Network  <https://github.com/threatstream/mhn>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:28
+msgid "`Cowrie <https://github.com/micheloosterhof/cowrie>`_ SSH/Telnet蜜罐"
+msgstr ""
+
+#: ../../source/tools/operation.rst:29
+msgid "`honeything <https://github.com/omererdem/honeything>`_ IoT蜜罐"
+msgstr ""
+
+#: ../../source/tools/operation.rst:30
+msgid "`ConPot <http://conpot.org/>`_ 工控设施蜜罐"
+msgstr ""
+
+#: ../../source/tools/operation.rst:31
+msgid "`MongoDB HoneyProxy <https://github.com/Plazmaz/MongoDB-HoneyProxy>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:32
+msgid "`ElasticHoney <https://github.com/jordan-wright/elastichoney>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:33
+msgid "`DCEPT <https://github.com/secureworks/dcept>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:34
+msgid "`Canarytokens <https://github.com/thinkst/canarytokens>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:35
+msgid "`Honeydrive <http://bruteforcelab.com/honeydrive>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:36
+msgid ""
+"`T-Pot <https://github.com/dtag-dev-sec/tpotce/>`_ The All In One "
+"Honeypot Platform"
+msgstr ""
+
+#: ../../source/tools/operation.rst:37
+msgid "`opencanary <https://github.com/p1r06u3/opencanary_web>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:38
+msgid "`HFish <https://github.com/hacklcx/HFish>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:39
+msgid "`kippo <https://github.com/desaster/kippo>`_ SSH Honeypot"
+msgstr ""
+
+#: ../../source/tools/operation.rst:40
+msgid "`Ehoney <https://github.com/seccome/Ehoney>`_ 欺骗防御系统"
+msgstr ""
+
+#: ../../source/tools/operation.rst:43
+msgid "VPN Install"
+msgstr ""
+
+#: ../../source/tools/operation.rst:44
+msgid "`pptp <https://github.com/viljoviitanen/setup-simple-pptp-vpn>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:45
+msgid "`ipsec <https://github.com/hwdsl2/setup-ipsec-vpn>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:46
+msgid "`openvpn <https://github.com/Nyr/openvpn-install>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:49
+msgid "隧道 / 代理"
+msgstr ""
+
+#: ../../source/tools/operation.rst:50
+msgid "`ngrok <https://github.com/inconshreveable/ngrok>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:51
+msgid "`rtcp <https://github.com/knownsec/rtcp>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:52
+msgid "`Tunna <https://github.com/SECFORCE/Tunna>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:53
+msgid ""
+"`reDuh <https://github.com/sensepost/reDuh>`_ Create a TCP circuit "
+"through validly formed HTTP requests"
+msgstr ""
+
+#: ../../source/tools/operation.rst:54
+msgid ""
+"`reGeorg <https://github.com/sensepost/reGeorg>`_ pwn a bastion webserver"
+" and create SOCKS proxies through the DMZ. Pivot and pwn"
+msgstr ""
+
+#: ../../source/tools/operation.rst:55
+msgid ""
+"`Neo-reGeorg <https://github.com/L-codes/Neo-reGeorg>`_ Neo-reGeorg is a "
+"project that seeks to aggressively refactor reGeorg"
+msgstr ""
+
+#: ../../source/tools/operation.rst:56
+msgid ""
+"`ABPTTS <https://github.com/nccgroup/ABPTTS>`_ TCP tunneling over "
+"HTTP/HTTPS for web application servers"
+msgstr ""
+
+#: ../../source/tools/operation.rst:57
+msgid ""
+"`frp <https://github.com/fatedier/frp>`_ A fast reverse proxy to help you"
+" expose a local server behind a NAT or firewall to the internet"
+msgstr ""
+
+#: ../../source/tools/operation.rst:58
+msgid "`lanproxy <https://github.com/ffay/lanproxy>`_ 内网穿透工具"
+msgstr ""
+
+#: ../../source/tools/operation.rst:59
+msgid ""
+"`ligolo <https://github.com/sysdream/ligolo>`_ Reverse Tunneling made "
+"easy for pentesters"
+msgstr ""
+
+#: ../../source/tools/operation.rst:60
+msgid ""
+"`EarthWorm <https://github.com/idlefire/ew>`_ 是一款用于开启 SOCKS v5 "
+"代理服务的工具，基于标准 C 开发，可提供多平台间的转接通讯，用于复杂网络环境下的数据转发。"
+msgstr ""
+
+#: ../../source/tools/operation.rst:61
+msgid ""
+"`Tunna <https://github.com/SECFORCE/Tunna>`_  is a set of tools which "
+"will wrap and tunnel any TCP communication over HTTP"
+msgstr ""
+
+#: ../../source/tools/operation.rst:62
+msgid ""
+"`mssqlproxy <https://github.com/blackarrowsec/mssqlproxy>`_ is a toolkit "
+"aimed to perform lateral movement in restricted environments through a "
+"compromised Microsoft SQL Server via socket reuse"
+msgstr ""
+
+#: ../../source/tools/operation.rst:63
+msgid ""
+"`nps <https://github.com/ehang-io/nps>`_ a lightweight, high-performance,"
+" powerful intranet penetration proxy server, with a powerful web "
+"management terminal"
+msgstr ""
+
+#: ../../source/tools/operation.rst:66
+msgid "代理链"
+msgstr ""
+
+#: ../../source/tools/operation.rst:67
+msgid ""
+"`Netch <https://github.com/NetchX/Netch>`_ Support Socks5, Shadowsocks, "
+"ShadowsocksR, V2Ray, Trojan proxies. UDP NAT FullCone"
+msgstr ""
+
+#: ../../source/tools/operation.rst:68
+msgid ""
+"`proxychains <https://github.com/haad/proxychains>`_ a tool that forces "
+"any TCP connection made by any given application to follow through proxy "
+"like TOR or any other SOCKS4, SOCKS5 or HTTP(S) proxy"
+msgstr ""
+
+#: ../../source/tools/operation.rst:69
+msgid "`gost <https://github.com/ginuerzh/gost>`_ GO Simple Tunnel"
+msgstr ""
+
+#: ../../source/tools/operation.rst:72
+msgid "资产管理"
+msgstr ""
+
+#: ../../source/tools/operation.rst:73
+msgid "`BlueKing CMDB <https://github.com/Tencent/bk-cmdb>`_ 面向资产及应用的企业级配置管理平台"
+msgstr ""
+
+#: ../../source/tools/operation.rst:74
+msgid "`ARL <https://github.com/TophantTechnology/ARL>`_ 资产侦察灯塔系统"
+msgstr ""
+
+#: ../../source/tools/operation.rst:77
+msgid "合规"
+msgstr ""
+
+#: ../../source/tools/operation.rst:78
+msgid "`bombus <https://github.com/momosecurity/bombus>`_ 合规审计平台"
+msgstr ""
+
+#: ../../source/tools/operation.rst:81
+msgid "风控"
+msgstr ""
+
+#: ../../source/tools/operation.rst:82
+msgid "`nebula <https://github.com/threathunterX/nebula>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:83
+msgid "`Liudao <https://github.com/ysrc/Liudao>`_ “六道”实时业务风控系统"
+msgstr ""
+
+#: ../../source/tools/operation.rst:84
+msgid "`aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎"
+msgstr ""
+
+#: ../../source/tools/operation.rst:87
+msgid "SIEM"
+msgstr ""
+
+#: ../../source/tools/operation.rst:88
+msgid "`metron <https://github.com/apache/metron>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:89
+msgid "`MozDef <https://github.com/mozilla/MozDef>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:92
+msgid "安全运维"
+msgstr ""
+
+#: ../../source/tools/operation.rst:93
+msgid "`Scout <https://github.com/HandsomeOne/Scout>`_ URL 监控系统"
+msgstr ""
+
+#: ../../source/tools/operation.rst:94
+msgid "`OpenDnsdb <https://github.com/qunarcorp/open_dnsdb>`_ 基于Python的DNS管理系统"
+msgstr ""
+
+#: ../../source/tools/operation.rst:97
+msgid "系统监控"
+msgstr ""
+
+#: ../../source/tools/operation.rst:98
+msgid ""
+"`netdata <https://github.com/netdata/netdata>`_ Real-time performance "
+"monitoring"
+msgstr ""
+
+#: ../../source/tools/operation.rst:99
+msgid ""
+"`bcc <https://github.com/iovisor/bcc>`_ Tools for BPF-based Linux IO "
+"analysis, networking, monitoring, and more"
+msgstr ""
+
+#: ../../source/tools/operation.rst:102
+msgid "Windows"
+msgstr ""
+
+#: ../../source/tools/operation.rst:103
+msgid "`Windows Sysinternals <https://docs.microsoft.com/zh-cn/sysinternals>`_"
+msgstr ""
+
+#: ../../source/tools/operation.rst:106
+msgid "网络测试"
+msgstr ""
+
+#: ../../source/tools/operation.rst:107
+msgid ""
+"`Toxiproxy <https://github.com/Shopify/toxiproxy>`_ A TCP proxy to "
+"simulate network and system conditions for chaos and resiliency testing"
+msgstr ""
+
+#: ../../source/tools/operation.rst:110
+msgid "网络模拟"
+msgstr ""
+
+#: ../../source/tools/operation.rst:111
+msgid ""
+"`Internet Emulator <https://github.com/seed-labs/seed-emulator>`_ A "
+"Python framework for creating emulation of the Internet"
+msgstr ""

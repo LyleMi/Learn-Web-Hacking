@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/sink.rst:2
+msgid "Sink"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:5
+msgid "任意代码执行"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:6
+msgid "eval"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:7
+msgid "assert"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:8
+msgid "call_user_func"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:11
+msgid "执行系统命令"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:12
+msgid "pcntl_exec"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:13
+msgid "exec"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:14
+msgid "passthru"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:15
+msgid "popen"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:16
+msgid "shell_exec"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:17
+msgid "system"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:18
+msgid "proc_open"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:21
+msgid "Magic函数"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:22
+msgid "``__construct()`` 构建对象的时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:23
+msgid "``__destruct()`` 销毁对象或脚本结束时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:24
+msgid "``__call()`` 调用不可访问或不存在的方法时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:25
+msgid "``__callStatic()`` 调用不可访问或不存在的静态方法时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:26
+msgid "``__get()`` 读取不可访问或不存在属性时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:27
+msgid "``__set()`` 给不可访问或不存在属性赋值时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:28
+msgid "``__isset()`` 对不可访问或不存在的属性调用 ``isset`` 或 ``empty()`` 时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:29
+msgid "``__unset()`` 对不可访问或不存在的属性进行 ``unset`` 时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:30
+msgid "``__sleep()`` 对象序列化时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:31
+msgid "``__wakeup()`` 对象反序列化时被调用，其中序列化字符串中表示对象属性个数的值大于真实的属性个数时会跳过wakeup的执行"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:32
+msgid "``__toString()`` 当一个类被转换成字符串时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:33
+msgid "``__invoke()`` 对象被以函数方式调用时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:34
+msgid "``__set_state()`` 调用 ``var_export()`` 导出类时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:35
+msgid "``__clone()`` 进行对象clone时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:36
+msgid "``__debugInfo()`` 调用 ``var_dump()`` 打印对象时被调用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:39
+msgid "文件相关敏感函数"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:40
+msgid "``move_uploaded_file``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:41
+msgid "``file_put_contents`` / ``file_get_contents``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:42
+msgid "``unlink``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:43
+msgid "``fopen`` / ``fgets``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:46 ../../source/language/php/sink.rst:86
+msgid "SSRF"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:47
+msgid "``file_get_contents()``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:48
+msgid "``fsockopen()``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:49
+msgid "``curl_exec()``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:50
+msgid "``fopen()``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:51
+msgid "``readfile()``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:54
+msgid "phar 触发点"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:55
+msgid "fileatime / filectime / filemtime"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:56
+msgid "stat / fileinode / fileowner / filegroup / fileperms"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:57
+msgid "file / file_get_contents / readfile / fopen`"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:58
+msgid ""
+"file_exists / is_dir / is_executable / is_file / is_link / is_readable / "
+"is_writeable / is_writable"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:59
+msgid "parse_ini_file"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:60
+msgid "unlink"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:61
+msgid "copy"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:62
+msgid "exif"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:63
+msgid "exif_thumbnail"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:64
+msgid "exif_imagetype"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:65
+msgid "gd"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:66
+msgid "imageloadfont"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:67
+msgid "imagecreatefrom***"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:68
+msgid "hash"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:69
+msgid "hash_hmac_file"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:70
+msgid "hash_file"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:71
+msgid "hash_update_file"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:72
+msgid "md5_file"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:73
+msgid "sha1_file"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:74
+msgid "file / url"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:75
+msgid "get_meta_tags"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:76
+msgid "get_headers"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:77
+msgid "standard"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:78
+msgid "getimagesize"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:79
+msgid "getimagesizefromstring"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:82
+msgid "原生类利用"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:83
+msgid "XSS"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:84
+msgid "Error"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:85
+msgid "Exception"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:87
+msgid "SoapClient"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:88
+msgid "open_basedir 绕过"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:89
+msgid "DirectoryIterator 结合 ``glob://``"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:90
+msgid "XXE"
+msgstr ""
+
+#: ../../source/language/php/sink.rst:91
+msgid "SimpleXMLElement"
+msgstr ""

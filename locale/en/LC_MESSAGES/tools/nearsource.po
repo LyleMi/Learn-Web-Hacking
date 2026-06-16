@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/tools/nearsource.rst:2
+msgid "近源渗透"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:5
+msgid "Bad USB"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:6
+msgid ""
+"`WiFiDuck <https://github.com/spacehuhn/WiFiDuck>`_ Keystroke injection "
+"attack plattform"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:7
+msgid "`BadUSB code <https://github.com/Xyntax/BadUSB-code>`_ badusb的一些利用方式及代码"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:8
+msgid ""
+"`WHID <https://github.com/whid-injector/WHID>`_ WiFi HID Injector - An "
+"USB Rubberducky / BadUSB On Steroids"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:9
+msgid ""
+"`BadUSB cable <https://github.com/joelsernamoreno/BadUSB-Cable>`_ based "
+"on Attiny85 microcontroller"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:10
+msgid "`USB Rubber Ducky <https://github.com/hak5darren/USB-Rubber-Ducky>`_"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:13
+msgid "wifi"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:14
+msgid "`wifiphisher <https://github.com/wifiphisher/wifiphisher>`_"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:15
+msgid "`evilginx <https://github.com/kgretzky/evilginx>`_"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:16
+msgid "`mana <https://github.com/sensepost/mana>`_"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:17
+msgid "`pwnagotchi <https://github.com/evilsocket/pwnagotchi>`_"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:20
+msgid "无线"
+msgstr ""
+
+#: ../../source/tools/nearsource.rst:21
+msgid ""
+"`hackrf <https://github.com/mossmann/hackrf>`_ low cost software radio "
+"platform"
+msgstr ""

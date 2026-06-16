@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/llm/attack.rst:2
+msgid "常见攻击方式"
+msgstr ""
+
+#: ../../source/llm/attack.rst:5
+msgid "直接提示词注入"
+msgstr ""
+
+#: ../../source/llm/attack.rst:6
+msgid "攻击者在用户输入中加入额外指令，使模型忽略原有规则、改变输出格式、泄露上下文或调用不该调用的工具。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:9
+msgid "间接提示词注入"
+msgstr ""
+
+#: ../../source/llm/attack.rst:10
+msgid "攻击者把恶意指令隐藏在网页、文档、邮件、图片 OCR 结果、代码注释、知识库内容等外部数据中。当模型读取这些内容时，可能将其误认为需要执行的指令。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:13
+msgid "上下文覆盖"
+msgstr ""
+
+#: ../../source/llm/attack.rst:14
+msgid "通过大量文本、重复指令、格式伪装等方式，使模型更关注攻击者提供的内容而忽略原始系统约束。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:17
+msgid "规则冲突"
+msgstr ""
+
+#: ../../source/llm/attack.rst:18
+msgid "构造和系统规则冲突的任务描述，例如要求模型在安全规则和业务任务之间做选择，诱导模型优先完成用户任务而违反安全策略。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:21
+msgid "输出格式劫持"
+msgstr ""
+
+#: ../../source/llm/attack.rst:22
+msgid "通过控制模型输出格式，使下游解析器误判字段、执行错误分支或调用错误工具。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:25
+msgid "工具参数污染"
+msgstr ""
+
+#: ../../source/llm/attack.rst:26
+msgid "诱导模型生成带有危险参数的工具调用，例如删除文件、扩大查询范围、访问内部地址、修改权限、向外部地址发送数据等。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:29
+msgid "RAG 污染"
+msgstr ""
+
+#: ../../source/llm/attack.rst:30
+msgid "攻击者污染知识库或可被检索的外部内容，使模型在回答时引用被污染的数据，输出错误结论、敏感信息或隐藏指令。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:33
+msgid "多轮诱导"
+msgstr ""
+
+#: ../../source/llm/attack.rst:34
+msgid "攻击者在多轮对话中逐步建立上下文，通过逐步放宽约束、拆分任务、角色扮演等方式绕过单轮检测。"
+msgstr ""
+
+#: ../../source/llm/attack.rst:37
+msgid "资源消耗"
+msgstr ""
+
+#: ../../source/llm/attack.rst:38
+msgid "通过超长文本、复杂格式、递归任务、自动重试、批量并发等方式消耗模型上下文、推理资源、工具调用额度和费用预算。"
+msgstr ""

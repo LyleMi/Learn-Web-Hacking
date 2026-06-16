@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/domain/gp.rst:2
+msgid "组策略"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:6
+msgid "组策略 (Group Policy, GP) 用于管理网络环境中的用户和设备，定义了系统管理员管理工作所要的各种模板组件。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:8
+msgid "组策略有以下功能："
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:10
+msgid "管理注册表"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:11
+msgid "设置脚本"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:12
+msgid "重定向文件夹"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:13
+msgid "管理应用程序"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:14
+msgid "指定安全选项"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:17
+msgid "常用概念"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:18
+msgid "组策略容器 (Group Policy Container，GPC)存储在活动目录中，包含GPO属性、配置信息和版本等。可以通过GPC来查找GPT。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:20
+msgid "组策略模板 (Group Policy Template, GPT) 存储在域控中，包含所有的组策略信息。包括管理模板，安全，脚本，软件安装等。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:22
+msgid "其中GPC中的信息量少、容量小，GPT中消息量较大、容量大，因此两个部分分开存放。防止活动目录中因存储了过多的数据而被影响性能。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/gp.rst:24
+msgid "组策略对象 (Group Policy Object, GPO) 是包含多种Windows组策略设置的集合，存储在GPC和GPT中。"
+msgstr ""

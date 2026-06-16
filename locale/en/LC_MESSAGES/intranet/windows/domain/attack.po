@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/intranet/windows/domain/attack.rst:2
+msgid "攻击类型"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:5
+msgid "黄金票据利用"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:6
+msgid "在认证过程中，经过client与AS的通信会得到TGT，黄金票据（Golden Ticket）就是伪造票据授予票据（TGT），也被称为认证票据。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:8
+msgid "黄金票据利用需要与DC通信，且需要获取krbtgt的hash，但是可以获取任何Kerbose服务权限。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:11
+msgid "白银票据利用"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:12
+msgid ""
+"白银票据（Silver "
+"Tickets）伪造利用的是Kerberos认证中的第三个步骤，在第三步的时候，client会带着ticket向server的某个服务进行请求，如果验证通过就可以访问server上的指定服务了，这里的ticket是基于client"
+" info、server session key、end time、server hash。这里client info已知，end "
+"time可以构造，server session key是TGS生成的，所以只要server的NTLM "
+"hash即可。银票伪造的是TGS，只能访问指定的服务。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:15
+msgid "DCSync 攻击"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:16
+msgid ""
+"域内有多台域控服务器时，为了同步域控服务器的修改，微软提供了基于远程目录协议 `DRSR <https://docs.microsoft.com"
+"/en-us/openspecs/windows_protocols/ms-drsr/f977faaa-673e-4f66-b9bf-"
+"48c640241d47>`_ 的同步机制。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:18
+msgid ""
+"在多个域控服务器之间，每隔一段时间会有一次域数据的同步。由需要同步的域控服务器向其它服务器发送 GetNCChanges "
+"请求，请求中包含需要同步的数据。数据量较多时，则重复这个过程。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:20
+msgid ""
+"DCSync 就是使用这种机制进行域渗透的技术，由Benjamin DELPY gentilkiwi和Vincent LE "
+"TOUX共同编写，在2015年添加到 mimikatz 的一个功能，可以导出域内所有用户的hash。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:22
+msgid "这种方式需要满足以下任一一种权限："
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:24
+msgid "Administrators 组内的用户"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:25
+msgid "Domain Admins 组内的用户"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:26
+msgid "Enterprise Admins 组内的用户"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:27
+msgid "域控制器的计算机帐户"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:29
+msgid "或者拥有特定的几条 DACL:"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:31
+msgid "DS-Replication-Get-Changes"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:32
+msgid "DS-Replication-Get-Changes-All"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:33
+msgid "DS-Replication-Get-Changes-In-Filtered-Set"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:35
+msgid "当没有管理员用户，但是拥有 WriteDACL 权限时，可以写入上述 DACL 来完成 DCSync 。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:37
+msgid "对于这种攻击，可以通过检测 GetNCChanges 发起者的方式，如果由非域控机器发起对应请求，则可以认为是 DCSync 攻击。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:40
+msgid "DCShadow 攻击"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:41
+msgid ""
+"DCShadow是由来自法国的安全研究人员Benjamin Delpy和Vincent Le Toux在2018年的微软蓝帽（Blue "
+"Hat）大会上提出。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:43
+msgid "DCShadow攻击指在Active Directory环境下创建一个恶意的域控制器，并用它来推送恶意对象。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:46
+msgid "哈希传递攻击"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:47
+msgid "哈希传递攻击（Pass-the-Hash，PTH）是通过传递NTLM哈希来认证的攻击方法，常用的工具有mimikatz等。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:50
+msgid "票据传递攻击"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:51
+msgid ""
+"票据传递攻击（Pass-the-Ticket "
+"Attacks，PtT）是一种使用Kerberos票据代替明文密码或NTLM哈希的方法。PtT最常见的用途可能是使用黄金票据和白银票据，通过PtT访问主机相当简单。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:54
+msgid "Kerberoasting Attacks"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:55
+msgid ""
+"Kerberoasting攻击由Tim Medin在2014 DerbyCon conference上 `公开 "
+"<https://www.youtube.com/watch?v=PUyhlN-E5MU>`_ "
+"。指域内的任何一台主机，都可以通过查询SPN，Kerberoasting即是向域内的所有服务请求TGS，然后进行暴力破解。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:58
+msgid "Roasting AS-REP"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:59
+msgid ""
+"该攻击枚举域中不需要Kerberos预身份认证的帐户，向这些账户请求一条加密信息，并离线尝试获取到的账户哈希。该方式需要账户明确设置了 "
+"``DONT_REQ_PREAUTH`` 。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:62
+msgid "Kerberos Delegation Attacks"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:63
+msgid ""
+"在一个域中，A使用Kerberos身份验证访问服务B，B再使用A的身份去访问C，这个过程就可以理解为委派。委派主要分为非约束委派（Unconstrained"
+" delegation）和约束委派（Constrained "
+"delegation）两种，非约束委派可以访问域内任意其它服务，约束委派对认证做了限制不可以访问其他的服务。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:65
+msgid ""
+"Kerberos "
+"Delegation（Kerberos委派）攻击分为非约束委派攻击和约束委派攻击。原理都是基于域内已经配置了委派的账户来获取其它账户的权限。"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:68
+msgid "其他漏洞利用"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:69
+msgid "域用户提权 (CVE-2022-26923)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:70
+msgid "KDC bamboozling (CVE-2021-42287)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:71
+msgid "Name impersonation (CVE-2021-42278)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:72
+msgid "ProxyShell (CVE-2021-34473)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:73
+msgid "ProxyLogon (CVE-2021-26855)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:74
+msgid "PrintNightmare (CVE-2021-1675 / CVE-2021-34527)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:75
+msgid "SMBGhost (CVE-2020-0796)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:76
+msgid "Zerologon (CVE-2020-1472)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:77
+msgid "NTLM Relay (CVE-2019-1040)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:78
+msgid "永恒之蓝 (MS17-010)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:79
+msgid "域用户提权 (MS14-068)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:80
+msgid "Gpp漏洞 (MS14-025)"
+msgstr ""
+
+#: ../../source/intranet/windows/domain/attack.rst:81
+msgid "SAMR协议漏洞 (MS14-016)"
+msgstr ""

@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/cloud/docker/attack.rst:2
+msgid "攻击面分析"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:5
+msgid "供应链安全"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:6
+msgid "在构建Dockerfile的过程中，即使是使用排名靠前的来源，也可能存在CVE漏洞、后门、镜像被污染、镜像中的依赖库存在漏洞等问题。"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:9
+msgid "容器逃逸"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:12
+msgid "虚拟化风险"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:13
+msgid ""
+"虽然Docker通过命名空间进行了文件系统资源的基本隔离，但仍有 ``/sys`` 、``/proc/sys`` 、 ``/proc/bus`` "
+"、 ``/dev`` 、``time`` 、``syslog`` 等重要系统文件目录和命名空间信息未实现隔离，而是与宿主机共享相关资源。"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:16
+msgid "利用内核漏洞逃逸"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:17
+msgid "CVE-2022-0847 Dirty Pipe"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:18
+msgid "CVE-2021-4034 Polkit"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:19
+msgid "CVE-2018-18955"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:20
+msgid "CVE-2016-5195"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:23
+msgid "容器逃逸漏洞"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:24
+msgid "CVE-2021-41091"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:25
+msgid "CVE-2020-15257 Containerd 逃逸"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:26
+msgid "需要网络设置为 host 模式"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:27
+msgid "CVE-2019-14271 Docker cp"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:28
+msgid "CVE-2019-13139 Docker build code execution"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:29
+msgid "CVE-2019-5736 runC"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:30
+msgid "Docker Version < 18.09.2"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:31
+msgid "Version <= 1.0-rc6"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:34
+msgid "配置不当"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:35
+msgid "开启 privileged"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:36
+msgid "挂载宿主机敏感目录"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:37
+msgid "配置 cap 不当"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:38
+msgid "进程注入：SYS_PTRACE"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:39
+msgid "加载内核模块：SYS_MODULE"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:40
+msgid "读宿主机 shadow: DAC_READ_SEARCH"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:41
+msgid "改宿主机 shadow: DAC_READ_SEARCH + DAC_OVERRIDE"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:42
+msgid "``--cap-add=SYS_ADMIN``"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:43
+msgid "绕过namespace"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:44
+msgid "``--net=host``"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:45
+msgid "``--pid=host``"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:46
+msgid "``--ipc=host``"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:49
+msgid "危险挂载"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:50
+msgid "挂载 ``/var/run/docker.sock``"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:51
+msgid "挂载宿主机 ``/dev`` ``/proc`` 等危险目录"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:54
+msgid "逃逸技巧"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:55
+msgid "通过 ``binfmt_misc`` 逃逸"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:56
+msgid "通过 eBPF 逃逸"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:57
+msgid "可挂载宿主机目录的情况，可以挂载宿主机根目录到容器内目录"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:60
+msgid "拒绝服务"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:61
+msgid "CPU耗尽"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:62
+msgid "内存耗尽"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:63
+msgid "存储耗尽"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:64
+msgid "网络资源耗尽"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:67
+msgid "攻击 Docker 守护进程"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:68
+msgid ""
+"虽然 Docker 容器具有很强的安全保护措施，但是 Docker 守护进程本身并没有被完善的保护。Docker 守护进程本身默认由 root "
+"用户运行，并且该进程本身并没有使用 Seccomp 或者 AppArmor 等安全模块进行保护。这使得一旦攻击者成功找到漏洞控制 Docker "
+"守护进程进行任意文件写或者代码执行，就可以顺利获得宿主机的 root 权限而不会受到各种安全机制的阻碍。值得一提的是，默认情况下 Docker "
+"不会开启 User Namespace 隔离，这也意味着 Docker 内部的 root 与宿主机 root "
+"对文件的读写权限相同。这导致一旦容器内部 root 进程获取读写宿主机文件的机会，文件权限将不会成为另一个问题。这一点在 "
+"CVE-2019-5636 利用中有所体现。"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:71
+msgid "相关 CVE"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:72
+msgid "CVE-2014-5277"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:73
+msgid "CVE-2014-6408"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:74
+msgid "CVE-2014-9357"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:75
+msgid "CVE-2014-9358"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:76
+msgid "CVE-2015-3627"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:77
+msgid "CVE-2015-3630"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:78
+msgid "CVE-2019-14271"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:79
+msgid "CVE-2019-5736"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:80
+msgid "CVE-2020-15257"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:81
+msgid "CVE-2022-0847"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:82
+msgid "CVE-2024-21626"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:83
+msgid "CVE-2024-23651"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:84
+msgid "CVE-2024-23652"
+msgstr ""
+
+#: ../../source/cloud/docker/attack.rst:85
+msgid "CVE-2024-23653"
+msgstr ""

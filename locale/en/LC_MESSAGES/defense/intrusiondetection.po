@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/defense/intrusiondetection.rst:2
+msgid "入侵检测"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:5
+msgid "IDS与IPS"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:6
+msgid "IDS与IPS是常见的防护设备，IPS相对IDS的不同点在于，IPS通常具有阻断能力。"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:9
+msgid "常见入侵点"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:10
+msgid "Web入侵"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:11
+msgid "高危服务入侵"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:14
+msgid "监控实现"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:17
+msgid "客户端监控"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:18
+msgid "监控敏感配置文件"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:19
+msgid "常用命令ELF文件完整性监控"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:20
+msgid "``ps``"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:21
+msgid "``lsof``"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:22
+msgid "..."
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:23
+msgid "rootkit监控"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:24
+msgid "资源使用报警"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:25
+msgid "内存使用率"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:26
+msgid "CPU使用率"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:27
+msgid "IO使用率"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:28
+msgid "网络使用率"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:29
+msgid "新出现进程监控"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:30
+msgid "基于inotify的文件监控"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:33
+msgid "网络检测"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:34
+msgid "基于网络层面的攻击向量做检测，如Snort等。"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:37
+msgid "日志分析"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:38
+msgid "将主机系统安全日志/操作日志、网络设备流量日志、Web应用访问日志、SQL应用访问日志等日志集中到一个统一的后台，在后台中对各类日志进行综合的分析。"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:41
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:42
+msgid "`企业安全建设之HIDS <https://www.freebuf.com/articles/es/194510.html>`_"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:43
+msgid "`大型互联网企业入侵检测实战总结 <https://xz.aliyun.com/t/1626/>`_"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:44
+msgid "`同程入侵检测系统 <https://mp.weixin.qq.com/s/kzeAEvz-ejLD71fgb5t8tA>`_"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:45
+msgid "`Web日志安全分析系统实践 <https://xz.aliyun.com/t/2136>`_"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:46
+msgid "`Web日志安全分析浅谈 <https://xz.aliyun.com/t/1121>`_"
+msgstr ""
+
+#: ../../source/defense/intrusiondetection.rst:47
+msgid "`网络层绕过IDS/IPS的一些探索 <https://mp.weixin.qq.com/s/QJeW7K-KThYHggWtJ-Fh3w>`_"
+msgstr ""

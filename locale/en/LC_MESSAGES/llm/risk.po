@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/llm/risk.rst:2
+msgid "常见风险"
+msgstr ""
+
+#: ../../source/llm/risk.rst:5
+msgid "提示词注入"
+msgstr ""
+
+#: ../../source/llm/risk.rst:6
+msgid ""
+"提示词注入（Prompt "
+"Injection）是指攻击者通过构造输入内容，影响模型对原始指令的理解和执行，使模型忽略系统约束、泄露上下文、调用工具或输出攻击者期望的内容。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:8
+msgid "提示词注入可以分为直接注入和间接注入。直接注入来自用户输入，间接注入来自网页、邮件、文档、知识库、代码仓库等外部数据。当模型会读取不可信内容并继续执行任务时，间接注入的风险更高。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:11
+msgid "越狱"
+msgstr ""
+
+#: ../../source/llm/risk.rst:12
+msgid "越狱（Jailbreak）是指绕过模型或应用的安全策略，使模型输出原本不应输出的内容。越狱通常利用角色扮演、编码转换、多轮诱导、规则冲突、上下文覆盖等方式。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:15
+msgid "提示词泄露"
+msgstr ""
+
+#: ../../source/llm/risk.rst:16
+msgid ""
+"提示词泄露是指系统提示词、开发者提示词、Few-shot "
+"示例、内部规则、工具描述、链路配置等信息被模型输出给非授权用户。提示词泄露不一定直接造成入侵，但会降低攻击门槛。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:19
+msgid "敏感信息泄露"
+msgstr ""
+
+#: ../../source/llm/risk.rst:20
+msgid "敏感信息泄露包括训练数据、日志、用户输入、知识库内容、API Key、访问令牌、个人信息、商业秘密等被模型输出或者被下游组件记录、转发、暴露。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:23
+msgid "不安全输出处理"
+msgstr ""
+
+#: ../../source/llm/risk.rst:24
+msgid ""
+"当模型输出被直接交给浏览器、SQL、Shell、模板引擎、代码执行器、CI/CD、工单系统等下游组件处理时，如果缺少校验和转义，可能造成 "
+"XSS、SQL 注入、命令执行、模版注入等传统漏洞。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:27
+msgid "过度代理"
+msgstr ""
+
+#: ../../source/llm/risk.rst:28
+msgid ""
+"过度代理（Excessive "
+"Agency）是指模型被赋予了过大的自主决策和执行权限。例如模型可以自动发送邮件、删除数据、创建订单、执行代码、修改权限，而这些操作没有二次确认、权限隔离和审计。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:31
+msgid "模型拒绝服务"
+msgstr ""
+
+#: ../../source/llm/risk.rst:32
+msgid ""
+"模型拒绝服务是指通过超长输入、复杂推理、多轮循环、递归工具调用、大量并发请求等方式消耗 Token、算力、存储、外部 API "
+"配额或费用预算，造成服务不可用或成本异常。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:35
+msgid "数据投毒"
+msgstr ""
+
+#: ../../source/llm/risk.rst:36
+msgid "数据投毒是指攻击者污染训练数据、微调数据、RAG 知识库、向量索引、反馈数据或评测集，使模型在特定条件下输出错误、偏置、恶意或者攻击者预设的内容。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:39
+msgid "模型窃取"
+msgstr ""
+
+#: ../../source/llm/risk.rst:40
+msgid "模型窃取是指通过接口滥用、批量查询、权重泄露、镜像泄露、调试接口泄露等方式获取模型能力、参数、训练数据特征或商业逻辑。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:43
+msgid "模型供应链风险"
+msgstr ""
+
+#: ../../source/llm/risk.rst:44
+msgid "大模型应用依赖模型权重、数据集、推理框架、插件、提示词模板、评测集、嵌入模型、向量数据库和第三方服务。这些环节一旦被污染或失陷，可能影响最终系统行为。"
+msgstr ""
+
+#: ../../source/llm/risk.rst:47
+msgid "攻击面分析"
+msgstr ""
+
+#: ../../source/llm/risk.rst:50
+msgid "输入侧"
+msgstr ""
+
+#: ../../source/llm/risk.rst:51
+msgid "用户问题"
+msgstr ""
+
+#: ../../source/llm/risk.rst:52
+msgid "多轮对话历史"
+msgstr ""
+
+#: ../../source/llm/risk.rst:53
+msgid "上传文件"
+msgstr ""
+
+#: ../../source/llm/risk.rst:54
+msgid "网页内容"
+msgstr ""
+
+#: ../../source/llm/risk.rst:55
+msgid "邮件内容"
+msgstr ""
+
+#: ../../source/llm/risk.rst:56
+msgid "知识库文档"
+msgstr ""
+
+#: ../../source/llm/risk.rst:57
+msgid "代码仓库内容"
+msgstr ""
+
+#: ../../source/llm/risk.rst:58
+msgid "OCR / ASR 识别结果"
+msgstr ""
+
+#: ../../source/llm/risk.rst:59
+msgid "外部 API 返回内容"
+msgstr ""
+
+#: ../../source/llm/risk.rst:62
+msgid "模型侧"
+msgstr ""
+
+#: ../../source/llm/risk.rst:63
+msgid "基座模型"
+msgstr ""
+
+#: ../../source/llm/risk.rst:64
+msgid "微调模型"
+msgstr ""
+
+#: ../../source/llm/risk.rst:65
+msgid "嵌入模型"
+msgstr ""
+
+#: ../../source/llm/risk.rst:66
+msgid "重排序模型"
+msgstr ""
+
+#: ../../source/llm/risk.rst:67
+msgid "内容安全模型"
+msgstr ""
+
+#: ../../source/llm/risk.rst:68
+msgid "模型推理参数"
+msgstr ""
+
+#: ../../source/llm/risk.rst:69
+msgid "上下文拼接逻辑"
+msgstr ""
+
+#: ../../source/llm/risk.rst:70
+msgid "系统提示词"
+msgstr ""
+
+#: ../../source/llm/risk.rst:73
+msgid "数据侧"
+msgstr ""
+
+#: ../../source/llm/risk.rst:74
+msgid "训练数据"
+msgstr ""
+
+#: ../../source/llm/risk.rst:75
+msgid "微调数据"
+msgstr ""
+
+#: ../../source/llm/risk.rst:76
+msgid "评测数据"
+msgstr ""
+
+#: ../../source/llm/risk.rst:77
+msgid "RAG 知识库"
+msgstr ""
+
+#: ../../source/llm/risk.rst:78
+msgid "向量索引"
+msgstr ""
+
+#: ../../source/llm/risk.rst:79
+msgid "用户会话"
+msgstr ""
+
+#: ../../source/llm/risk.rst:80
+msgid "运行日志"
+msgstr ""
+
+#: ../../source/llm/risk.rst:81
+msgid "反馈数据"
+msgstr ""
+
+#: ../../source/llm/risk.rst:82
+msgid "缓存数据"
+msgstr ""
+
+#: ../../source/llm/risk.rst:85
+msgid "工具侧"
+msgstr ""
+
+#: ../../source/llm/risk.rst:86
+msgid "Function Calling"
+msgstr ""
+
+#: ../../source/llm/risk.rst:87
+msgid "插件"
+msgstr ""
+
+#: ../../source/llm/risk.rst:88
+msgid "浏览器"
+msgstr ""
+
+#: ../../source/llm/risk.rst:89
+msgid "代码解释器"
+msgstr ""
+
+#: ../../source/llm/risk.rst:90
+msgid "Shell"
+msgstr ""
+
+#: ../../source/llm/risk.rst:91
+msgid "数据库"
+msgstr ""
+
+#: ../../source/llm/risk.rst:92
+msgid "文件系统"
+msgstr ""
+
+#: ../../source/llm/risk.rst:93
+msgid "邮件系统"
+msgstr ""
+
+#: ../../source/llm/risk.rst:94
+msgid "工单系统"
+msgstr ""
+
+#: ../../source/llm/risk.rst:95
+msgid "云 API"
+msgstr ""
+
+#: ../../source/llm/risk.rst:98
+msgid "编排侧"
+msgstr ""
+
+#: ../../source/llm/risk.rst:99
+msgid "Agent 规划器"
+msgstr ""
+
+#: ../../source/llm/risk.rst:100
+msgid "多 Agent 协作"
+msgstr ""
+
+#: ../../source/llm/risk.rst:101
+msgid "工作流引擎"
+msgstr ""
+
+#: ../../source/llm/risk.rst:102
+msgid "任务队列"
+msgstr ""
+
+#: ../../source/llm/risk.rst:103
+msgid "记忆模块"
+msgstr ""
+
+#: ../../source/llm/risk.rst:104
+msgid "权限代理"
+msgstr ""
+
+#: ../../source/llm/risk.rst:105
+msgid "输出解析器"
+msgstr ""
+
+#: ../../source/llm/risk.rst:106
+msgid "异常重试逻辑"
+msgstr ""

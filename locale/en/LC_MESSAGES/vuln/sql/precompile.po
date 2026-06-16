@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/sql/precompile.rst:2
+msgid "预编译"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:6
+msgid "SQL注入是因为解释器将传入的数据当成命令执行而导致的，预编译是用于解决这个问题的一种方法。和普通的执行流程不同，预编译将一次查询通过两次交互完成，第一次交互发送查询语句的模板，由后端的SQL引擎进行解析为AST或Opcode，第二次交互发送数据，代入AST或Opcode中执行。因为此时语法解析已经完成，所以不会再出现混淆数据和代码的过程。"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:9
+msgid "模拟预编译"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:10
+msgid "为了防止低版本数据库不支持预编译的情况，模拟预编译会在客户端内部模拟参数绑定的过程，进行自定义的转义。"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:13
+msgid "绕过"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:16
+msgid "预编译使用错误"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:17
+msgid "预编译只是使用占位符替代的字段值的部分，如果第一次交互传入的命令使用了字符串拼接，使得命令是攻击者可控的，那么预编译不会生效。"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:20
+msgid "部分参数不可预编译"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:21
+msgid "在有的情况下，数据库处理引擎会检查数据表和数据列是否存在，因此数据表名和列名不能被占位符所替代。这种情况下如果表名和列名可控，则可能引入漏洞。"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:24
+msgid "预编译实现错误"
+msgstr ""
+
+#: ../../source/vuln/sql/precompile.rst:25
+msgid "部分语言引擎在实现上存在一定问题，可能会存在绕过漏洞。"
+msgstr ""

@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/ssh/ref.rst:2
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:5
+msgid "RFC"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:6
+msgid ""
+"`RFC 4251 The Secure Shell (SSH) Protocol Architecture <https://www.rfc-"
+"editor.org/rfc/rfc4251>`_"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:7
+msgid ""
+"`RFC 4252 The Secure Shell (SSH) Authentication Protocol <https://www"
+".rfc-editor.org/rfc/rfc4252>`_"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:8
+msgid ""
+"`RFC 4253 The Secure Shell (SSH) Transport Layer Protocol <https://www"
+".rfc-editor.org/rfc/rfc4253>`_"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:9
+msgid ""
+"`RFC 4254 The Secure Shell (SSH) Connection Protocol <https://www.rfc-"
+"editor.org/rfc/rfc4254>`_"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:10
+msgid ""
+"`RFC 8308 Extension Negotiation in the Secure Shell (SSH) Protocol "
+"<https://www.rfc-editor.org/rfc/rfc8308>`_"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:13
+msgid "漏洞相关"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:14
+msgid ""
+"`CVE-2016-20012 - Publickey Information leak - Only allow "
+"SSH_MSG_USERAUTH_REQUEST with signature <https://github.com/openssh"
+"/openssh-portable/pull/270>`_"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:17
+msgid "论文"
+msgstr ""
+
+#: ../../source/network/ssh/ref.rst:18
+msgid ""
+"Roy L, Lyakhov S, Jang Y, et al. Practical Privacy-Preserving "
+"Authentication for SSH[J]. Cryptology ePrint Archive, 2022."
+msgstr ""

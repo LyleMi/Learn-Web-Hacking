@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/vuln/xss/trick/httponly.rst:2
+msgid "httponly"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/httponly.rst:4
+msgid "在cookie为httponly的情况下，可以通过xss直接在源站完成操作，不直接获取cookie。"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/httponly.rst:5
+msgid "在有登录操作的情况下，部分站点直接发送登录请求可能会带有cookie"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/httponly.rst:6
+msgid "部分特定版本的浏览器可能会在httponly支持/处理上存在问题"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/httponly.rst:7
+msgid "低版本浏览器支持 TRACE / TRACK，可获取敏感的header字段"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/httponly.rst:8
+msgid "phpinfo 等页面可能会回显信息，这些信息中包含http头"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/httponly.rst:9
+msgid "通过xss劫持页面钓鱼"
+msgstr ""
+
+#: ../../source/vuln/xss/trick/httponly.rst:10
+msgid "通过xss伪造oauth等授权请求，远程登录"
+msgstr ""

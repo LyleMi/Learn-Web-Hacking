@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/domain/org.rst:2
+msgid "相关机构"
+msgstr ""
+
+#: ../../source/network/domain/org.rst:5
+msgid "ICANN"
+msgstr ""
+
+#: ../../source/network/domain/org.rst:6
+msgid ""
+"互联网名称与数字地址分配机构 (Internet Corporation for Assigned Names and Numbers, "
+"ICANN) 创建于1998年9月18日，职能包括管理域名和IP地址的分配等与互联网相关的任务。"
+msgstr ""
+
+#: ../../source/network/domain/org.rst:9
+msgid "IANA"
+msgstr ""
+
+#: ../../source/network/domain/org.rst:10
+msgid ""
+"互联网号码分配局 (Internet Assigned Numbers Authority, IANA) "
+"，是一家互联网地址指派机构，管理国际互联网中使用的IP地址、域名和许多其它参数的机构。"
+msgstr ""

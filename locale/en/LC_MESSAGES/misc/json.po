@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/misc/json.rst:2
+msgid "JSON"
+msgstr ""
+
+#: ../../source/misc/json.rst:3
+msgid "JSON (JavaScript Object Notation) 是许多数据格式通信的基石。"
+msgstr ""
+
+#: ../../source/misc/json.rst:6
+msgid "安全风险"
+msgstr ""
+
+#: ../../source/misc/json.rst:7
+#, python-brace-format
+msgid "重复的key ``{\"test\": 1, \"test\": 2}``"
+msgstr ""
+
+#: ../../source/misc/json.rst:8
+msgid "特殊的key值 ``\\x00`` ``\\x0d`` ``\\ud800`` ``\"`` 等"
+msgstr ""
+
+#: ../../source/misc/json.rst:9
+msgid "序列化"
+msgstr ""
+
+#: ../../source/misc/json.rst:10
+msgid "特定的数值"
+msgstr ""
+
+#: ../../source/misc/json.rst:11
+msgid "超过上限的整数"
+msgstr ""
+
+#: ../../source/misc/json.rst:12
+msgid "科学计数法"
+msgstr ""
+
+#: ../../source/misc/json.rst:13
+msgid "null值的不同表示"
+msgstr ""
+
+#: ../../source/misc/json.rst:16
+msgid "参考链接"
+msgstr ""
+
+#: ../../source/misc/json.rst:19
+msgid "相关规范"
+msgstr ""
+
+#: ../../source/misc/json.rst:20
+msgid ""
+"`RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format "
+"<https://tools.ietf.org/html/rfc8259>`_"
+msgstr ""
+
+#: ../../source/misc/json.rst:21
+msgid ""
+"`ECMA-404 The JSON data interchange syntax <https://www.ecma-"
+"international.org/publications-and-standards/standards/ecma-404/>`_"
+msgstr ""
+
+#: ../../source/misc/json.rst:22
+msgid "`json5 <https://json5.org/>`_"
+msgstr ""

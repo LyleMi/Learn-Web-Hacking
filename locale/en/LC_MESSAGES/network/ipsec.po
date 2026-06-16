@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/network/ipsec.rst:2
+msgid "IPsec"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:5
+msgid "简介"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:6
+msgid ""
+"IPsec（IP "
+"Security）是IETF制定的三层隧道加密协议，它为Internet上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。特定的通信方之间在IP层通过加密与数据源认证等方式，提供了以下的安全服务："
+msgstr ""
+
+#: ../../source/network/ipsec.rst:8
+msgid "数据机密性（Confidentiality）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:9
+msgid "IPsec发送方在通过网络传输包前对包进行加密。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:10
+msgid "数据完整性（Data Integrity）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:11
+msgid "IPsec接收方对发送方发送来的包进行认证，以确保数据在传输过程中没有被篡改。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:12
+msgid "数据来源认证（Data Authentication）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:13
+msgid "IPsec在接收端可以认证发送IPsec报文的发送端是否合法。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:14
+msgid "防重放（Anti-Replay）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:15
+msgid "IPsec接收方可检测并拒绝接收过时或重复的报文。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:18
+msgid "优点"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:19
+msgid "IPsec具有以下优点："
+msgstr ""
+
+#: ../../source/network/ipsec.rst:21
+msgid ""
+"支持IKE（Internet Key "
+"Exchange，因特网密钥交换），可实现密钥的自动协商功能，减少了密钥协商的开销。可以通过IKE建立和维护SA的服务，简化了IPsec的使用和管理。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:22
+msgid "所有使用IP协议进行数据传输的应用系统和服务都可以使用IPsec，而不必对这些应用系统和服务本身做任何修改。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:23
+msgid "对数据的加密是以数据包为单位的，而不是以整个数据流为单位，这不仅灵活而且有助于进一步提高IP数据包的安全性，可以有效防范网络攻击。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:26
+msgid "构成"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:27
+msgid "IPsec由四部分内容构成："
+msgstr ""
+
+#: ../../source/network/ipsec.rst:29
+msgid "负责密钥管理的Internet密钥交换协议IKE（Internet Key Exchange Protocol）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:30
+msgid "负责将安全服务与使用该服务的通信流相联系的安全关联SA（Security Associations）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:31
+msgid ""
+"直接操作数据包的认证头协议AH（IP Authentication Header）和安全载荷协议ESP（IP Encapsulating "
+"Security Payload）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:32
+msgid "若干用于加密和认证的算法"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:35
+msgid "安全联盟（Security Association，SA）"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:36
+msgid "IPsec在两个端点之间提供安全通信，端点被称为IPsec对等体。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:38
+msgid "SA是IPsec的基础，也是IPsec的本质。SA是通信对等体间对某些要素的约定，例如，使用哪种协议（AH、ESP还是两者结合使用）、协议的封装模式（传输模式和隧道模式）、加密算法（DES、3DES和AES）、特定流中保护数据的共享密钥以及密钥的生存周期等。建立SA的方式有手工配置和IKE自动协商两种。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:40
+msgid "SA是单向的，在两个对等体之间的双向通信，最少需要两个SA来分别对两个方向的数据流进行安全保护。同时，如果两个对等体希望同时使用AH和ESP来进行安全通信，则每个对等体都会针对每一种协议来构建一个独立的SA。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:42
+msgid ""
+"SA由一个三元组来唯一标识，这个三元组包括SPI（Security Parameter "
+"Index，安全参数索引）、目的IP地址、安全协议号（AH或ESP）。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:44
+msgid "SPI是用于唯一标识SA的一个32比特数值，它在AH和ESP头中传输。在手工配置SA时，需要手工指定SPI的取值。使用IKE协商产生SA时，SPI将随机生成。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:47
+msgid "IKE"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:48
+msgid "IKE（RFC2407，RFC2408、RFC2409）属于一种混合型协议，由Internet安全关联和密钥管理协议（ISAKMP）和两种密钥交换协议OAKLEY与SKEME组成。IKE创建在由ISAKMP定义的框架上，沿用了OAKLEY的密钥交换模式以及SKEME的共享和密钥更新技术，还定义了它自己的两种密钥交换方式。"
+msgstr ""
+
+#: ../../source/network/ipsec.rst:50
+msgid "IKE使用了两个阶段的ISAKMP："
+msgstr ""
+
+#: ../../source/network/ipsec.rst:52
+msgid ""
+"第一阶段，协商创建一个通信信道（IKE SA），并对该信道进行验证，为双方进一步的IKE通信提供机密性、消息完整性以及消息源验证服务； "
+"第二阶段，使用已建立的IKE SA建立IPsec SA（V2中叫Child SA）。"
+msgstr ""

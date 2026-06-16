@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/language/python/sink.rst:2
+msgid "Sink"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:5
+msgid "命令执行"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:6
+msgid "asyncio.new_event_loop().subprocess_exec"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:7
+msgid "asyncio.subprocess"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:8
+msgid "bdb.os"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:9
+msgid "cgi.os.system"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:10
+msgid "cgi.sys"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:11
+msgid "code.InteractiveInterpreter"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:12
+msgid "commands"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:13
+msgid "ctypes.CDLL"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:14
+msgid "eval"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:15
+msgid "exec"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:16
+msgid "execfile"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:17
+msgid "input // python2 only"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:18
+msgid "os.exec"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:19
+msgid "os.exec*"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:20
+msgid "os.fork"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:21
+msgid "os.popen"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:22
+msgid "os.spawn"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:23
+msgid "os.system"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:24
+msgid "platform.os"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:25
+msgid "platform.popen"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:26
+msgid "platform.sys"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:27
+msgid "popen2"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:28
+msgid "pty.os"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:29
+msgid "pty.spawn"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:30
+msgid "subprocess"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:31
+msgid "timeit.sys"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:32
+msgid "timeit.timeit"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:33
+msgid "typing.get_type_hints() + ``__annotations__``"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:34
+msgid "..."
+msgstr ""
+
+#: ../../source/language/python/sink.rst:37
+msgid "文件读取"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:38
+msgid "open"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:39
+msgid "os.open"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:40
+msgid "urllib.request.urlopen('file:///')"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:41
+msgid "codecs.open"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:42
+msgid "fileinput"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:43
+msgid "仅Python2"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:44
+msgid "types.FileType"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:47
+msgid "危险第三方库"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:48
+msgid "Template"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:49
+msgid "subprocess32"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:52
+msgid "反序列化"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:53
+msgid "marshal"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:54
+msgid "PyYAML"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:55
+msgid "pickle"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:56
+msgid "cPickle"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:57
+msgid "shelve"
+msgstr ""
+
+#: ../../source/language/python/sink.rst:58
+msgid "PIL"
+msgstr ""
