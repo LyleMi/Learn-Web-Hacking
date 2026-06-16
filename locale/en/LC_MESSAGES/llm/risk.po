@@ -20,298 +20,346 @@ msgstr ""
 
 #: ../../source/llm/risk.rst:2
 msgid "常见风险"
-msgstr ""
+msgstr "Common Risks"
 
 #: ../../source/llm/risk.rst:5
 msgid "提示词注入"
-msgstr ""
+msgstr "Prompt Injection"
 
 #: ../../source/llm/risk.rst:6
 msgid ""
 "提示词注入（Prompt "
 "Injection）是指攻击者通过构造输入内容，影响模型对原始指令的理解和执行，使模型忽略系统约束、泄露上下文、调用工具或输出攻击者期望的内容。"
 msgstr ""
+"Prompt Injection means that an attacker crafts input content to affect how "
+"the model understands and executes the original instructions, causing the "
+"model to ignore system constraints, leak context, call tools, or output "
+"content desired by the attacker."
 
 #: ../../source/llm/risk.rst:8
 msgid "提示词注入可以分为直接注入和间接注入。直接注入来自用户输入，间接注入来自网页、邮件、文档、知识库、代码仓库等外部数据。当模型会读取不可信内容并继续执行任务时，间接注入的风险更高。"
 msgstr ""
+"Prompt injection can be divided into direct injection and indirect injection. "
+"Direct injection comes from user input, while indirect injection comes from "
+"external data such as web pages, emails, documents, knowledge bases, and code "
+"repositories. When a model reads untrusted content and continues executing a "
+"task, indirect injection carries higher risk."
 
 #: ../../source/llm/risk.rst:11
 msgid "越狱"
-msgstr ""
+msgstr "Jailbreak"
 
 #: ../../source/llm/risk.rst:12
 msgid "越狱（Jailbreak）是指绕过模型或应用的安全策略，使模型输出原本不应输出的内容。越狱通常利用角色扮演、编码转换、多轮诱导、规则冲突、上下文覆盖等方式。"
 msgstr ""
+"A Jailbreak means bypassing the security policy of a model or application so "
+"that the model outputs content it should not output. Jailbreaks commonly use "
+"role-playing, encoding conversion, multi-turn manipulation, rule conflicts, "
+"context overriding, and similar methods."
 
 #: ../../source/llm/risk.rst:15
 msgid "提示词泄露"
-msgstr ""
+msgstr "Prompt Leakage"
 
 #: ../../source/llm/risk.rst:16
 msgid ""
 "提示词泄露是指系统提示词、开发者提示词、Few-shot "
 "示例、内部规则、工具描述、链路配置等信息被模型输出给非授权用户。提示词泄露不一定直接造成入侵，但会降低攻击门槛。"
 msgstr ""
+"Prompt leakage means that information such as system prompts, developer "
+"prompts, few-shot examples, internal rules, tool descriptions, and pipeline "
+"configuration is output by the model to unauthorized users. Prompt leakage "
+"does not necessarily cause intrusion directly, but it lowers the barrier to "
+"attack."
 
 #: ../../source/llm/risk.rst:19
 msgid "敏感信息泄露"
-msgstr ""
+msgstr "Sensitive Information Leakage"
 
 #: ../../source/llm/risk.rst:20
 msgid "敏感信息泄露包括训练数据、日志、用户输入、知识库内容、API Key、访问令牌、个人信息、商业秘密等被模型输出或者被下游组件记录、转发、暴露。"
 msgstr ""
+"Sensitive information leakage includes training data, logs, user input, "
+"knowledge-base content, API keys, access tokens, personal information, trade "
+"secrets, and similar data being output by the model or recorded, forwarded, "
+"or exposed by downstream components."
 
 #: ../../source/llm/risk.rst:23
 msgid "不安全输出处理"
-msgstr ""
+msgstr "Insecure Output Handling"
 
 #: ../../source/llm/risk.rst:24
 msgid ""
 "当模型输出被直接交给浏览器、SQL、Shell、模板引擎、代码执行器、CI/CD、工单系统等下游组件处理时，如果缺少校验和转义，可能造成 "
 "XSS、SQL 注入、命令执行、模版注入等传统漏洞。"
 msgstr ""
+"When model output is passed directly to downstream components such as "
+"browsers, SQL, Shell, template engines, code executors, CI/CD, or ticketing "
+"systems, a lack of validation and escaping may lead to traditional "
+"vulnerabilities such as XSS, SQL injection, command execution, and template "
+"injection."
 
 #: ../../source/llm/risk.rst:27
 msgid "过度代理"
-msgstr ""
+msgstr "Excessive Agency"
 
 #: ../../source/llm/risk.rst:28
 msgid ""
 "过度代理（Excessive "
 "Agency）是指模型被赋予了过大的自主决策和执行权限。例如模型可以自动发送邮件、删除数据、创建订单、执行代码、修改权限，而这些操作没有二次确认、权限隔离和审计。"
 msgstr ""
+"Excessive Agency means that a model is given excessive autonomous "
+"decision-making and execution permissions. For example, the model may be able "
+"to automatically send email, delete data, create orders, execute code, or "
+"change permissions without secondary confirmation, permission isolation, or "
+"auditing."
 
 #: ../../source/llm/risk.rst:31
 msgid "模型拒绝服务"
-msgstr ""
+msgstr "Model Denial of Service"
 
 #: ../../source/llm/risk.rst:32
 msgid ""
 "模型拒绝服务是指通过超长输入、复杂推理、多轮循环、递归工具调用、大量并发请求等方式消耗 Token、算力、存储、外部 API "
 "配额或费用预算，造成服务不可用或成本异常。"
 msgstr ""
+"Model denial of service means consuming tokens, compute, storage, external "
+"API quotas, or cost budgets through extremely long inputs, complex reasoning, "
+"multi-turn loops, recursive tool calls, large numbers of concurrent requests, "
+"and similar methods, causing service unavailability or abnormal costs."
 
 #: ../../source/llm/risk.rst:35
 msgid "数据投毒"
-msgstr ""
+msgstr "Data Poisoning"
 
 #: ../../source/llm/risk.rst:36
 msgid "数据投毒是指攻击者污染训练数据、微调数据、RAG 知识库、向量索引、反馈数据或评测集，使模型在特定条件下输出错误、偏置、恶意或者攻击者预设的内容。"
 msgstr ""
+"Data poisoning means that an attacker contaminates training data, fine-tuning "
+"data, RAG knowledge bases, vector indexes, feedback data, or evaluation sets "
+"so that the model outputs incorrect, biased, malicious, or attacker-defined "
+"content under specific conditions."
 
 #: ../../source/llm/risk.rst:39
 msgid "模型窃取"
-msgstr ""
+msgstr "Model Theft"
 
 #: ../../source/llm/risk.rst:40
 msgid "模型窃取是指通过接口滥用、批量查询、权重泄露、镜像泄露、调试接口泄露等方式获取模型能力、参数、训练数据特征或商业逻辑。"
 msgstr ""
+"Model theft means obtaining model capabilities, parameters, training-data "
+"features, or business logic through interface abuse, bulk queries, weight "
+"leakage, container image leakage, debug interface exposure, and similar "
+"methods."
 
 #: ../../source/llm/risk.rst:43
 msgid "模型供应链风险"
-msgstr ""
+msgstr "Model Supply Chain Risk"
 
 #: ../../source/llm/risk.rst:44
 msgid "大模型应用依赖模型权重、数据集、推理框架、插件、提示词模板、评测集、嵌入模型、向量数据库和第三方服务。这些环节一旦被污染或失陷，可能影响最终系统行为。"
 msgstr ""
+"LLM applications depend on model weights, datasets, inference frameworks, "
+"plugins, prompt templates, evaluation sets, embedding models, vector "
+"databases, and third-party services. If any of these links are polluted or "
+"compromised, final system behavior may be affected."
 
 #: ../../source/llm/risk.rst:47
 msgid "攻击面分析"
-msgstr ""
+msgstr "Attack Surface Analysis"
 
 #: ../../source/llm/risk.rst:50
 msgid "输入侧"
-msgstr ""
+msgstr "Input Side"
 
 #: ../../source/llm/risk.rst:51
 msgid "用户问题"
-msgstr ""
+msgstr "User questions"
 
 #: ../../source/llm/risk.rst:52
 msgid "多轮对话历史"
-msgstr ""
+msgstr "Multi-turn conversation history"
 
 #: ../../source/llm/risk.rst:53
 msgid "上传文件"
-msgstr ""
+msgstr "Uploaded files"
 
 #: ../../source/llm/risk.rst:54
 msgid "网页内容"
-msgstr ""
+msgstr "Web page content"
 
 #: ../../source/llm/risk.rst:55
 msgid "邮件内容"
-msgstr ""
+msgstr "Email content"
 
 #: ../../source/llm/risk.rst:56
 msgid "知识库文档"
-msgstr ""
+msgstr "Knowledge-base documents"
 
 #: ../../source/llm/risk.rst:57
 msgid "代码仓库内容"
-msgstr ""
+msgstr "Code repository content"
 
 #: ../../source/llm/risk.rst:58
 msgid "OCR / ASR 识别结果"
-msgstr ""
+msgstr "OCR / ASR recognition results"
 
 #: ../../source/llm/risk.rst:59
 msgid "外部 API 返回内容"
-msgstr ""
+msgstr "External API response content"
 
 #: ../../source/llm/risk.rst:62
 msgid "模型侧"
-msgstr ""
+msgstr "Model Side"
 
 #: ../../source/llm/risk.rst:63
 msgid "基座模型"
-msgstr ""
+msgstr "Base model"
 
 #: ../../source/llm/risk.rst:64
 msgid "微调模型"
-msgstr ""
+msgstr "Fine-tuned model"
 
 #: ../../source/llm/risk.rst:65
 msgid "嵌入模型"
-msgstr ""
+msgstr "Embedding model"
 
 #: ../../source/llm/risk.rst:66
 msgid "重排序模型"
-msgstr ""
+msgstr "Reranking model"
 
 #: ../../source/llm/risk.rst:67
 msgid "内容安全模型"
-msgstr ""
+msgstr "Content safety model"
 
 #: ../../source/llm/risk.rst:68
 msgid "模型推理参数"
-msgstr ""
+msgstr "Model inference parameters"
 
 #: ../../source/llm/risk.rst:69
 msgid "上下文拼接逻辑"
-msgstr ""
+msgstr "Context assembly logic"
 
 #: ../../source/llm/risk.rst:70
 msgid "系统提示词"
-msgstr ""
+msgstr "System prompt"
 
 #: ../../source/llm/risk.rst:73
 msgid "数据侧"
-msgstr ""
+msgstr "Data Side"
 
 #: ../../source/llm/risk.rst:74
 msgid "训练数据"
-msgstr ""
+msgstr "Training data"
 
 #: ../../source/llm/risk.rst:75
 msgid "微调数据"
-msgstr ""
+msgstr "Fine-tuning data"
 
 #: ../../source/llm/risk.rst:76
 msgid "评测数据"
-msgstr ""
+msgstr "Evaluation data"
 
 #: ../../source/llm/risk.rst:77
 msgid "RAG 知识库"
-msgstr ""
+msgstr "RAG knowledge base"
 
 #: ../../source/llm/risk.rst:78
 msgid "向量索引"
-msgstr ""
+msgstr "Vector index"
 
 #: ../../source/llm/risk.rst:79
 msgid "用户会话"
-msgstr ""
+msgstr "User sessions"
 
 #: ../../source/llm/risk.rst:80
 msgid "运行日志"
-msgstr ""
+msgstr "Runtime logs"
 
 #: ../../source/llm/risk.rst:81
 msgid "反馈数据"
-msgstr ""
+msgstr "Feedback data"
 
 #: ../../source/llm/risk.rst:82
 msgid "缓存数据"
-msgstr ""
+msgstr "Cached data"
 
 #: ../../source/llm/risk.rst:85
 msgid "工具侧"
-msgstr ""
+msgstr "Tool Side"
 
 #: ../../source/llm/risk.rst:86
 msgid "Function Calling"
-msgstr ""
+msgstr "Function Calling"
 
 #: ../../source/llm/risk.rst:87
 msgid "插件"
-msgstr ""
+msgstr "Plugins"
 
 #: ../../source/llm/risk.rst:88
 msgid "浏览器"
-msgstr ""
+msgstr "Browser"
 
 #: ../../source/llm/risk.rst:89
 msgid "代码解释器"
-msgstr ""
+msgstr "Code interpreter"
 
 #: ../../source/llm/risk.rst:90
 msgid "Shell"
-msgstr ""
+msgstr "Shell"
 
 #: ../../source/llm/risk.rst:91
 msgid "数据库"
-msgstr ""
+msgstr "Database"
 
 #: ../../source/llm/risk.rst:92
 msgid "文件系统"
-msgstr ""
+msgstr "File system"
 
 #: ../../source/llm/risk.rst:93
 msgid "邮件系统"
-msgstr ""
+msgstr "Email system"
 
 #: ../../source/llm/risk.rst:94
 msgid "工单系统"
-msgstr ""
+msgstr "Ticketing system"
 
 #: ../../source/llm/risk.rst:95
 msgid "云 API"
-msgstr ""
+msgstr "Cloud API"
 
 #: ../../source/llm/risk.rst:98
 msgid "编排侧"
-msgstr ""
+msgstr "Orchestration Side"
 
 #: ../../source/llm/risk.rst:99
 msgid "Agent 规划器"
-msgstr ""
+msgstr "Agent planner"
 
 #: ../../source/llm/risk.rst:100
 msgid "多 Agent 协作"
-msgstr ""
+msgstr "Multi-Agent collaboration"
 
 #: ../../source/llm/risk.rst:101
 msgid "工作流引擎"
-msgstr ""
+msgstr "Workflow engine"
 
 #: ../../source/llm/risk.rst:102
 msgid "任务队列"
-msgstr ""
+msgstr "Task queue"
 
 #: ../../source/llm/risk.rst:103
 msgid "记忆模块"
-msgstr ""
+msgstr "Memory module"
 
 #: ../../source/llm/risk.rst:104
 msgid "权限代理"
-msgstr ""
+msgstr "Permission broker"
 
 #: ../../source/llm/risk.rst:105
 msgid "输出解析器"
-msgstr ""
+msgstr "Output parser"
 
 #: ../../source/llm/risk.rst:106
 msgid "异常重试逻辑"
-msgstr ""
+msgstr "Exception retry logic"

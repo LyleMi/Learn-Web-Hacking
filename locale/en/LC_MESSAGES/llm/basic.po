@@ -20,17 +20,22 @@ msgstr ""
 
 #: ../../source/llm/basic.rst:2
 msgid "基本概念"
-msgstr ""
+msgstr "Basic Concepts"
 
 #: ../../source/llm/basic.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/llm/basic.rst:6
 msgid ""
 "大模型安全是指围绕大语言模型（Large Language "
 "Model，LLM）及其应用系统，在训练、部署、调用、编排、运维等环节中对模型、数据、工具和业务流程进行保护，避免模型被诱导执行非预期行为、泄露敏感信息、产生错误决策或者被用于攻击。"
 msgstr ""
+"LLM security refers to protecting models, data, tools, and business "
+"processes around large language models (LLMs) and their application systems "
+"across training, deployment, invocation, orchestration, and operations. Its "
+"goal is to prevent models from being induced to perform unintended actions, "
+"leak sensitive information, make incorrect decisions, or be used for attacks."
 
 #: ../../source/llm/basic.rst:8
 msgid ""
@@ -38,85 +43,123 @@ msgid ""
 "应用不同，大模型应用的输入往往同时包含指令、数据和上下文。模型本身并不能天然地区分哪些内容来自系统、哪些来自用户、哪些来自不可信外部数据，因此会产生提示词注入、越狱、工具滥用、RAG"
 " 污染等新的攻击面。"
 msgstr ""
+"Unlike traditional Web applications, LLM application inputs often contain "
+"instructions, data, and context at the same time. The model itself cannot "
+"naturally distinguish which content comes from the system, the user, or "
+"untrusted external data, creating new attack surfaces such as prompt "
+"injection, jailbreaks, tool abuse, and RAG poisoning."
 
 #: ../../source/llm/basic.rst:10
 msgid ""
 "在实际系统中，大模型通常并不是单独存在，而是和向量数据库、知识库、插件、Agent、工作流、外部 "
 "API、文件解析器、浏览器、代码执行器等组件组成一个应用。因此，大模型安全既包括模型自身的安全，也包括模型应用链路中的传统应用安全、数据安全、供应链安全和业务安全。"
 msgstr ""
+"In real systems, an LLM usually does not operate alone. It is often part of "
+"an application that also includes vector databases, knowledge bases, plugins, "
+"Agents, workflows, external APIs, file parsers, browsers, code executors, and "
+"other components. Therefore, LLM security covers both the security of the "
+"model itself and traditional application security, data security, supply "
+"chain security, and business security across the model application path."
 
 #: ../../source/llm/basic.rst:13
 msgid "相关概念"
-msgstr ""
+msgstr "Related Concepts"
 
 #: ../../source/llm/basic.rst:16
 msgid "大语言模型"
-msgstr ""
+msgstr "Large Language Model"
 
 #: ../../source/llm/basic.rst:17
 msgid "大语言模型是基于大规模语料训练的自然语言处理模型，常用于对话、摘要、翻译、代码生成、信息抽取、检索增强问答等场景。"
 msgstr ""
+"A large language model is a natural language processing model trained on "
+"large-scale corpora. It is commonly used for dialogue, summarization, "
+"translation, code generation, information extraction, and retrieval-augmented "
+"question answering."
 
 #: ../../source/llm/basic.rst:20
 msgid "提示词"
-msgstr ""
+msgstr "Prompt"
 
 #: ../../source/llm/basic.rst:21
 msgid "提示词（Prompt）是提交给模型的输入内容。提示词可以包含任务说明、上下文、示例、约束条件和用户问题。"
 msgstr ""
+"A prompt is the input submitted to the model. A prompt may contain task "
+"instructions, context, examples, constraints, and user questions."
 
 #: ../../source/llm/basic.rst:24
 msgid "系统提示词"
-msgstr ""
+msgstr "System Prompt"
 
 #: ../../source/llm/basic.rst:25
 msgid ""
 "系统提示词（System "
 "Prompt）通常由应用开发者设置，用于约束模型的角色、能力边界、输出格式和安全策略。系统提示词泄露后，攻击者可以据此构造更有针对性的绕过方式。"
 msgstr ""
+"A system prompt is usually set by the application developer to constrain the "
+"model's role, capability boundaries, output format, and security policies. If "
+"the system prompt is leaked, attackers can use it to craft more targeted "
+"bypass techniques."
 
 #: ../../source/llm/basic.rst:28
 msgid "上下文窗口"
-msgstr ""
+msgstr "Context Window"
 
 #: ../../source/llm/basic.rst:29
 msgid "上下文窗口是模型一次推理可以处理的 Token 范围。上下文窗口越大，模型能处理的信息越多，同时也可能扩大注入、泄露和资源消耗风险。"
 msgstr ""
+"The context window is the range of tokens a model can process in a single "
+"inference. A larger context window lets the model process more information, "
+"but it can also increase injection, leakage, and resource-consumption risks."
 
 #: ../../source/llm/basic.rst:32
 msgid "检索增强生成"
-msgstr ""
+msgstr "Retrieval-Augmented Generation"
 
 #: ../../source/llm/basic.rst:33
 msgid ""
 "检索增强生成（Retrieval-Augmented "
 "Generation，RAG）是指先从知识库、搜索引擎、数据库等外部来源检索相关内容，再将这些内容和用户问题一起交给模型生成答案。"
 msgstr ""
+"Retrieval-Augmented Generation (RAG) first retrieves relevant content from "
+"external sources such as knowledge bases, search engines, and databases, then "
+"passes that content together with the user's question to the model to "
+"generate an answer."
 
 #: ../../source/llm/basic.rst:36
 msgid "向量数据库"
-msgstr ""
+msgstr "Vector Database"
 
 #: ../../source/llm/basic.rst:37
 msgid "向量数据库用于存储文本、图片、代码等数据的向量表示，常用于相似度检索、知识库问答和推荐场景。"
 msgstr ""
+"A vector database stores vector representations of data such as text, images, "
+"and code. It is commonly used for similarity search, knowledge-base question "
+"answering, and recommendation scenarios."
 
 #: ../../source/llm/basic.rst:40
 msgid "Agent"
-msgstr ""
+msgstr "Agent"
 
 #: ../../source/llm/basic.rst:41
 msgid ""
 "Agent 是具备任务规划、工具调用、状态记忆和多步执行能力的大模型应用形态。Agent "
 "可以调用浏览器、邮件、数据库、命令执行、工单系统等工具，因此通常具有更高风险。"
 msgstr ""
+"An Agent is a form of LLM application with task planning, tool calling, state "
+"memory, and multi-step execution capabilities. Because an Agent can call "
+"tools such as browsers, email, databases, command execution, and ticketing "
+"systems, it usually carries higher risk."
 
 #: ../../source/llm/basic.rst:44
 msgid "工具调用"
-msgstr ""
+msgstr "Tool Calling"
 
 #: ../../source/llm/basic.rst:45
 msgid ""
 "工具调用（Tool Calling / Function Calling）是模型按照约定格式调用外部函数或 API "
 "的能力。工具调用扩大了模型的影响范围，需要进行权限控制和参数校验。"
 msgstr ""
+"Tool Calling / Function Calling is the model's ability to call external "
+"functions or APIs in an agreed format. Tool calling expands the model's scope "
+"of influence and requires permission control and parameter validation."

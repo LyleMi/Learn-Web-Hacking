@@ -20,330 +20,358 @@ msgstr ""
 
 #: ../../source/llm/defense.rst:2
 msgid "安全防御"
-msgstr ""
+msgstr "Security Defenses"
 
 #: ../../source/llm/defense.rst:5
 msgid "安全设计"
-msgstr ""
+msgstr "Security Design"
 
 #: ../../source/llm/defense.rst:8
 msgid "边界划分"
-msgstr ""
+msgstr "Boundary Separation"
 
 #: ../../source/llm/defense.rst:9
 msgid "大模型应用需要明确系统指令、用户输入、外部数据、模型输出和工具结果的边界。不可信内容只能作为数据处理，不能被当作指令直接执行。"
 msgstr ""
+"LLM applications need clear boundaries between system instructions, user "
+"input, external data, model output, and tool results. Untrusted content can "
+"only be processed as data and must not be directly executed as instructions."
 
 #: ../../source/llm/defense.rst:12
 msgid "最小权限"
-msgstr ""
+msgstr "Least Privilege"
 
 #: ../../source/llm/defense.rst:13
 msgid "模型和 Agent 调用工具时应遵循最小权限原则。不同业务场景应使用不同凭证、不同权限范围和不同网络访问策略，避免一个模型会话拥有过大的操作能力。"
 msgstr ""
+"Models and Agents should follow the principle of least privilege when calling "
+"tools. Different business scenarios should use different credentials, "
+"permission scopes, and network access policies to avoid giving a single model "
+"session excessive operational capability."
 
 #: ../../source/llm/defense.rst:16
 msgid "显式授权"
-msgstr ""
+msgstr "Explicit Authorization"
 
 #: ../../source/llm/defense.rst:17
 msgid "对高风险操作应增加人工确认或二次授权，例如转账、删除、发送邮件、修改权限、执行代码、访问敏感数据等。确认内容应包含操作对象、影响范围和关键参数。"
 msgstr ""
+"High-risk operations should require human confirmation or secondary "
+"authorization, such as transfers, deletions, sending email, changing "
+"permissions, executing code, or accessing sensitive data. The confirmation "
+"should include the operation target, scope of impact, and key parameters."
 
 #: ../../source/llm/defense.rst:20
 msgid "输入分级"
-msgstr ""
+msgstr "Input Classification"
 
 #: ../../source/llm/defense.rst:21
 msgid "将输入来源按可信度分级处理。用户直接输入、企业内部文档、互联网网页、邮件附件、第三方 API 返回值等应采用不同的清洗、隔离和审计策略。"
 msgstr ""
+"Input sources should be handled by trust level. Direct user input, internal "
+"enterprise documents, Internet web pages, email attachments, and third-party "
+"API responses should use different sanitization, isolation, and audit "
+"strategies."
 
 #: ../../source/llm/defense.rst:24
 msgid "输出隔离"
-msgstr ""
+msgstr "Output Isolation"
 
 #: ../../source/llm/defense.rst:25
 msgid ""
 "模型输出不应直接进入危险解释器。对 HTML、Markdown、SQL、Shell、Python、模板、JSON、YAML "
 "等输出，应按下游语义进行校验、转义或沙箱执行。"
 msgstr ""
+"Model output should not be passed directly into dangerous interpreters. For "
+"outputs such as HTML, Markdown, SQL, Shell, Python, templates, JSON, and "
+"YAML, validate, escape, or execute them in a sandbox according to downstream "
+"semantics."
 
 #: ../../source/llm/defense.rst:28
 msgid "记忆控制"
-msgstr ""
+msgstr "Memory Control"
 
 #: ../../source/llm/defense.rst:29
 msgid "长期记忆和会话记忆需要限制写入来源、写入内容和读取范围。来自不可信内容的指令不应进入长期记忆，敏感信息不应被长期保存。"
 msgstr ""
+"Long-term memory and session memory need restrictions on write sources, write "
+"content, and read scope. Instructions from untrusted content should not enter "
+"long-term memory, and sensitive information should not be stored long term."
 
 #: ../../source/llm/defense.rst:32
 msgid "可观测性"
-msgstr ""
+msgstr "Observability"
 
 #: ../../source/llm/defense.rst:33
 msgid "应记录模型请求、检索结果、工具调用、权限决策、拦截原因和用户确认结果。日志中需要脱敏，避免把 Token、密钥、个人信息和业务敏感数据写入日志。"
 msgstr ""
+"Record model requests, retrieval results, tool calls, permission decisions, "
+"blocking reasons, and user confirmation results. Logs need redaction to avoid "
+"writing tokens, keys, personal information, and business-sensitive data to "
+"logs."
 
 #: ../../source/llm/defense.rst:36
 msgid "防御策略"
-msgstr ""
+msgstr "Defense Strategies"
 
 #: ../../source/llm/defense.rst:39
 msgid "提示词防护"
-msgstr ""
+msgstr "Prompt Protection"
 
 #: ../../source/llm/defense.rst:40
 msgid "系统提示词中明确区分指令和数据"
-msgstr ""
+msgstr "Clearly distinguish instructions from data in system prompts"
 
 #: ../../source/llm/defense.rst:41
 msgid "对外部内容使用引用块、标签或结构化字段包裹"
-msgstr ""
+msgstr "Wrap external content in quote blocks, tags, or structured fields"
 
 #: ../../source/llm/defense.rst:42
 msgid "降低提示词中敏感规则和密钥的暴露"
-msgstr ""
+msgstr "Reduce exposure of sensitive rules and keys in prompts"
 
 #: ../../source/llm/defense.rst:43
 msgid "避免把安全策略只放在提示词中实现"
-msgstr ""
+msgstr "Avoid implementing security policies only in prompts"
 
 #: ../../source/llm/defense.rst:44
 msgid "对高风险任务使用独立的安全判定逻辑"
-msgstr ""
+msgstr "Use independent security decision logic for high-risk tasks"
 
 #: ../../source/llm/defense.rst:47
 msgid "输入校验"
-msgstr ""
+msgstr "Input Validation"
 
 #: ../../source/llm/defense.rst:48
 msgid "限制输入长度、文件类型和文件大小"
-msgstr ""
+msgstr "Limit input length, file types, and file size"
 
 #: ../../source/llm/defense.rst:49
 msgid "对上传文件进行解析沙箱隔离"
-msgstr ""
+msgstr "Parse uploaded files in sandbox isolation"
 
 #: ../../source/llm/defense.rst:50
 msgid "对 URL、邮箱、域名、IP 等字段进行格式校验"
-msgstr ""
+msgstr "Validate the format of fields such as URLs, email addresses, domains, and IPs"
 
 #: ../../source/llm/defense.rst:51
 msgid "对来自互联网的内容增加来源标识"
-msgstr ""
+msgstr "Add source labels to content from the Internet"
 
 #: ../../source/llm/defense.rst:52
 msgid "对可疑内容进行安全分类和降权处理"
-msgstr ""
+msgstr "Classify suspicious content for security and lower its weight"
 
 #: ../../source/llm/defense.rst:55
 msgid "输出校验"
-msgstr ""
+msgstr "Output Validation"
 
 #: ../../source/llm/defense.rst:56
 msgid "使用结构化输出 Schema"
-msgstr ""
+msgstr "Use structured output schemas"
 
 #: ../../source/llm/defense.rst:57
 msgid "对工具参数进行白名单校验"
-msgstr ""
+msgstr "Validate tool parameters against an allowlist"
 
 #: ../../source/llm/defense.rst:58
 msgid "对 HTML / Markdown 进行安全渲染"
-msgstr ""
+msgstr "Render HTML / Markdown safely"
 
 #: ../../source/llm/defense.rst:59
 msgid "对代码和命令输出进行人工确认或沙箱执行"
-msgstr ""
+msgstr "Require human confirmation or sandbox execution for code and command output"
 
 #: ../../source/llm/defense.rst:60
 msgid "对敏感信息进行检测和脱敏"
-msgstr ""
+msgstr "Detect and redact sensitive information"
 
 #: ../../source/llm/defense.rst:63
 msgid "工具安全"
-msgstr ""
+msgstr "Tool Security"
 
 #: ../../source/llm/defense.rst:64
 msgid "为工具定义明确的权限边界"
-msgstr ""
+msgstr "Define clear permission boundaries for tools"
 
 #: ../../source/llm/defense.rst:65
 msgid "将只读工具和写操作工具分离"
-msgstr ""
+msgstr "Separate read-only tools from write-operation tools"
 
 #: ../../source/llm/defense.rst:66
 msgid "对高危工具启用人工确认"
-msgstr ""
+msgstr "Enable human confirmation for high-risk tools"
 
 #: ../../source/llm/defense.rst:67
 msgid "限制工具可访问的网络、文件和账号范围"
-msgstr ""
+msgstr "Limit the networks, files, and accounts accessible to tools"
 
 #: ../../source/llm/defense.rst:68
 msgid "对工具调用进行审计和限速"
-msgstr ""
+msgstr "Audit and rate-limit tool calls"
 
 #: ../../source/llm/defense.rst:69
 msgid "对工具返回值标记为不可信数据"
-msgstr ""
+msgstr "Mark tool return values as untrusted data"
 
 #: ../../source/llm/defense.rst:72
 msgid "RAG 安全"
-msgstr ""
+msgstr "RAG Security"
 
 #: ../../source/llm/defense.rst:73
 msgid "控制知识库写入权限"
-msgstr ""
+msgstr "Control write permissions for knowledge bases"
 
 #: ../../source/llm/defense.rst:74
 msgid "对文档来源进行校验和签名"
-msgstr ""
+msgstr "Validate and sign document sources"
 
 #: ../../source/llm/defense.rst:75
 msgid "对入库内容进行安全扫描"
-msgstr ""
+msgstr "Security-scan content before ingestion"
 
 #: ../../source/llm/defense.rst:76
 msgid "检索结果附带来源和时间信息"
-msgstr ""
+msgstr "Attach source and time information to retrieval results"
 
 #: ../../source/llm/defense.rst:77
 msgid "限制单个文档对最终答案的影响"
-msgstr ""
+msgstr "Limit the influence of any single document on the final answer"
 
 #: ../../source/llm/defense.rst:78
 msgid "对隐藏指令、不可见字符、混淆内容进行处理"
-msgstr ""
+msgstr "Handle hidden instructions, invisible characters, and obfuscated content"
 
 #: ../../source/llm/defense.rst:79
 msgid "定期重建索引并清理过期数据"
-msgstr ""
+msgstr "Regularly rebuild indexes and clean up expired data"
 
 #: ../../source/llm/defense.rst:82
 msgid "Agent 安全"
-msgstr ""
+msgstr "Agent Security"
 
 #: ../../source/llm/defense.rst:83
 msgid "限制最大执行步数"
-msgstr ""
+msgstr "Limit the maximum number of execution steps"
 
 #: ../../source/llm/defense.rst:84
 msgid "限制最大工具调用次数"
-msgstr ""
+msgstr "Limit the maximum number of tool calls"
 
 #: ../../source/llm/defense.rst:85
 msgid "限制单次任务预算"
-msgstr ""
+msgstr "Limit the budget for a single task"
 
 #: ../../source/llm/defense.rst:86
 msgid "对外部动作进行人工确认"
-msgstr ""
+msgstr "Require human confirmation for external actions"
 
 #: ../../source/llm/defense.rst:87
 msgid "使用任务级临时凭证"
-msgstr ""
+msgstr "Use task-level temporary credentials"
 
 #: ../../source/llm/defense.rst:88
 msgid "禁止模型自行扩大权限"
-msgstr ""
+msgstr "Prevent the model from expanding its own permissions"
 
 #: ../../source/llm/defense.rst:89
 msgid "对计划和执行结果进行审计"
-msgstr ""
+msgstr "Audit plans and execution results"
 
 #: ../../source/llm/defense.rst:92
 msgid "模型接口安全"
-msgstr ""
+msgstr "Model Interface Security"
 
 #: ../../source/llm/defense.rst:93
 msgid "对接口进行认证和鉴权"
-msgstr ""
+msgstr "Authenticate and authorize interfaces"
 
 #: ../../source/llm/defense.rst:94
 msgid "对用户、租户、模型和场景进行限速"
-msgstr ""
+msgstr "Rate-limit by user, tenant, model, and scenario"
 
 #: ../../source/llm/defense.rst:95
 msgid "设置 Token、并发、费用和时间上限"
-msgstr ""
+msgstr "Set limits on tokens, concurrency, cost, and time"
 
 #: ../../source/llm/defense.rst:96
 msgid "对异常请求进行熔断"
-msgstr ""
+msgstr "Apply circuit breaking to abnormal requests"
 
 #: ../../source/llm/defense.rst:97
 msgid "对模型版本和参数进行变更管理"
-msgstr ""
+msgstr "Manage changes to model versions and parameters"
 
 #: ../../source/llm/defense.rst:98
 msgid "避免在客户端暴露模型密钥"
-msgstr ""
+msgstr "Avoid exposing model keys on the client side"
 
 #: ../../source/llm/defense.rst:101
 msgid "数据安全"
-msgstr ""
+msgstr "Data Security"
 
 #: ../../source/llm/defense.rst:102
 msgid "训练和微调数据应进行分级分类"
-msgstr ""
+msgstr "Classify training and fine-tuning data by level and category"
 
 #: ../../source/llm/defense.rst:103
 msgid "敏感数据进入模型前应脱敏或最小化"
-msgstr ""
+msgstr "Desensitize or minimize sensitive data before it enters the model"
 
 #: ../../source/llm/defense.rst:104
 msgid "日志、缓存、向量索引应设置访问控制"
-msgstr ""
+msgstr "Set access controls on logs, caches, and vector indexes"
 
 #: ../../source/llm/defense.rst:105
 msgid "用户数据应按租户隔离"
-msgstr ""
+msgstr "Isolate user data by tenant"
 
 #: ../../source/llm/defense.rst:106
 msgid "数据删除和模型记忆删除应有明确流程"
-msgstr ""
+msgstr "Define clear processes for data deletion and model memory deletion"
 
 #: ../../source/llm/defense.rst:107
 msgid "第三方模型调用应评估数据出境和合规要求"
 msgstr ""
+"Evaluate cross-border data transfer and compliance requirements for calls to "
+"third-party models"
 
 #: ../../source/llm/defense.rst:110
 msgid "安全基线"
-msgstr ""
+msgstr "Security Baseline"
 
 #: ../../source/llm/defense.rst:111
 msgid "大模型接口必须有认证、鉴权和限速"
-msgstr ""
+msgstr "LLM interfaces must have authentication, authorization, and rate limiting"
 
 #: ../../source/llm/defense.rst:112
 msgid "不可信内容必须标记来源，不能作为系统指令执行"
-msgstr ""
+msgstr "Untrusted content must be labeled with its source and must not be executed as system instructions"
 
 #: ../../source/llm/defense.rst:113
 msgid "模型输出进入下游组件前必须校验"
-msgstr ""
+msgstr "Model output must be validated before entering downstream components"
 
 #: ../../source/llm/defense.rst:114
 msgid "高危工具调用必须有权限控制和人工确认"
-msgstr ""
+msgstr "High-risk tool calls must have permission control and human confirmation"
 
 #: ../../source/llm/defense.rst:115
 msgid "RAG 知识库必须控制写入权限和文档来源"
-msgstr ""
+msgstr "RAG knowledge bases must control write permissions and document sources"
 
 #: ../../source/llm/defense.rst:116
 msgid "Agent 必须限制执行步数、预算和权限范围"
-msgstr ""
+msgstr "Agents must limit execution steps, budgets, and permission scope"
 
 #: ../../source/llm/defense.rst:117
 msgid "日志、缓存、向量库必须脱敏和访问控制"
-msgstr ""
+msgstr "Logs, caches, and vector databases must be redacted and access-controlled"
 
 #: ../../source/llm/defense.rst:118
 msgid "模型、提示词、工具、知识库变更必须可审计"
-msgstr ""
+msgstr "Changes to models, prompts, tools, and knowledge bases must be auditable"
 
 #: ../../source/llm/defense.rst:119
 msgid "应定期进行红队测试和回归测试"
-msgstr ""
+msgstr "Red-team testing and regression testing should be performed regularly"

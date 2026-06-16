@@ -20,120 +20,120 @@ msgstr ""
 
 #: ../../source/llm/test.rst:2
 msgid "检测方法"
-msgstr ""
+msgstr "Testing Methods"
 
 #: ../../source/llm/test.rst:5
 msgid "提示词注入测试"
-msgstr ""
+msgstr "Prompt Injection Testing"
 
 #: ../../source/llm/test.rst:6
 msgid "测试模型是否会忽略系统约束"
-msgstr ""
+msgstr "Test whether the model ignores system constraints"
 
 #: ../../source/llm/test.rst:7
 msgid "测试模型是否会泄露系统提示词"
-msgstr ""
+msgstr "Test whether the model leaks system prompts"
 
 #: ../../source/llm/test.rst:8
 msgid "测试外部文档中的指令是否会被执行"
-msgstr ""
+msgstr "Test whether instructions in external documents are executed"
 
 #: ../../source/llm/test.rst:9
 msgid "测试多轮对话是否能逐步绕过限制"
-msgstr ""
+msgstr "Test whether multi-turn conversations can gradually bypass restrictions"
 
 #: ../../source/llm/test.rst:10
 msgid "测试不同语言、编码、格式转换下的绕过能力"
-msgstr ""
+msgstr "Test bypass capability across different languages, encodings, and format conversions"
 
 #: ../../source/llm/test.rst:13
 msgid "工具调用测试"
-msgstr ""
+msgstr "Tool Calling Testing"
 
 #: ../../source/llm/test.rst:14
 msgid "测试模型是否会调用未授权工具"
-msgstr ""
+msgstr "Test whether the model calls unauthorized tools"
 
 #: ../../source/llm/test.rst:15
 msgid "测试工具参数是否可以被污染"
-msgstr ""
+msgstr "Test whether tool parameters can be polluted"
 
 #: ../../source/llm/test.rst:16
 msgid "测试越权访问其他用户或租户数据"
-msgstr ""
+msgstr "Test unauthorized access to data from other users or tenants"
 
 #: ../../source/llm/test.rst:17
 msgid "测试高危操作是否需要确认"
-msgstr ""
+msgstr "Test whether high-risk operations require confirmation"
 
 #: ../../source/llm/test.rst:18
 msgid "测试工具返回值中的注入指令是否会影响后续步骤"
-msgstr ""
+msgstr "Test whether injected instructions in tool return values affect later steps"
 
 #: ../../source/llm/test.rst:21
 msgid "RAG 测试"
-msgstr ""
+msgstr "RAG Testing"
 
 #: ../../source/llm/test.rst:22
 msgid "测试知识库污染后的回答变化"
-msgstr ""
+msgstr "Test answer changes after knowledge-base poisoning"
 
 #: ../../source/llm/test.rst:23
 msgid "测试相似度检索是否会召回恶意文档"
-msgstr ""
+msgstr "Test whether similarity search retrieves malicious documents"
 
 #: ../../source/llm/test.rst:24
 msgid "测试文档中的隐藏文本、注释、元数据是否会进入上下文"
-msgstr ""
+msgstr "Test whether hidden text, comments, and metadata in documents enter the context"
 
 #: ../../source/llm/test.rst:25
 msgid "测试模型是否会区分检索内容和用户指令"
-msgstr ""
+msgstr "Test whether the model distinguishes retrieved content from user instructions"
 
 #: ../../source/llm/test.rst:26
 msgid "测试引用来源是否真实可追溯"
-msgstr ""
+msgstr "Test whether cited sources are real and traceable"
 
 #: ../../source/llm/test.rst:29
 msgid "拒绝服务测试"
-msgstr ""
+msgstr "Denial-of-Service Testing"
 
 #: ../../source/llm/test.rst:30
 msgid "测试超长输入处理"
-msgstr ""
+msgstr "Test handling of extremely long inputs"
 
 #: ../../source/llm/test.rst:31
 msgid "测试并发请求处理"
-msgstr ""
+msgstr "Test concurrent request handling"
 
 #: ../../source/llm/test.rst:32
 msgid "测试递归任务和自动重试"
-msgstr ""
+msgstr "Test recursive tasks and automatic retries"
 
 #: ../../source/llm/test.rst:33
 msgid "测试工具调用次数限制"
-msgstr ""
+msgstr "Test limits on the number of tool calls"
 
 #: ../../source/llm/test.rst:34
 msgid "测试费用和 Token 预算控制"
-msgstr ""
+msgstr "Test cost and token budget controls"
 
 #: ../../source/llm/test.rst:37
 msgid "敏感信息测试"
-msgstr ""
+msgstr "Sensitive Information Testing"
 
 #: ../../source/llm/test.rst:38
 msgid "测试日志中是否记录敏感信息"
-msgstr ""
+msgstr "Test whether sensitive information is recorded in logs"
 
 #: ../../source/llm/test.rst:39
 msgid "测试模型是否输出训练样本、密钥、令牌、个人信息"
-msgstr ""
+msgstr "Test whether the model outputs training samples, keys, tokens, or personal information"
 
 #: ../../source/llm/test.rst:40
 msgid "测试不同租户之间是否存在数据串扰"
-msgstr ""
+msgstr "Test whether data crosses between different tenants"
 
 #: ../../source/llm/test.rst:41
 msgid "测试导出、缓存、调试接口是否泄露上下文"
-msgstr ""
+msgstr "Test whether export, cache, or debug interfaces leak context"

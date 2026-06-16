@@ -21,4 +21,4 @@ msgstr "Contents:"
 
 #: ../../source/llm/index.rst:2
 msgid "大模型安全"
-msgstr "Large Language Model Security"
+msgstr "LLM Security"
