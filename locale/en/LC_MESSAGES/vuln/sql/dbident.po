@@ -20,113 +20,113 @@ msgstr ""
 
 #: ../../source/vuln/sql/dbident.rst:2
 msgid "数据库检测"
-msgstr ""
+msgstr "Database Identification"
 
 #: ../../source/vuln/sql/dbident.rst:5
 msgid "MySQL"
-msgstr ""
+msgstr "MySQL"
 
 #: ../../source/vuln/sql/dbident.rst:6
 msgid "sleep ``sleep(1)``"
-msgstr ""
+msgstr "sleep ``sleep(1)``"
 
 #: ../../source/vuln/sql/dbident.rst:7
 msgid "benchmark ``BENCHMARK(5000000, MD5('test'))``"
-msgstr ""
+msgstr "benchmark ``BENCHMARK(5000000, MD5('test'))``"
 
 #: ../../source/vuln/sql/dbident.rst:8 ../../source/vuln/sql/dbident.rst:21
 #: ../../source/vuln/sql/dbident.rst:33
 msgid "字符串连接"
-msgstr ""
+msgstr "String concatenation"
 
 #: ../../source/vuln/sql/dbident.rst:9
 msgid "``SELECT 'a' 'b'``"
-msgstr ""
+msgstr "``SELECT 'a' 'b'``"
 
 #: ../../source/vuln/sql/dbident.rst:10 ../../source/vuln/sql/dbident.rst:23
 msgid "``SELECT CONCAT('some','string')``"
-msgstr ""
+msgstr "``SELECT CONCAT('some','string')``"
 
 #: ../../source/vuln/sql/dbident.rst:11 ../../source/vuln/sql/dbident.rst:24
 msgid "version"
-msgstr ""
+msgstr "version"
 
 #: ../../source/vuln/sql/dbident.rst:12
 msgid "``SELECT @@version``"
-msgstr ""
+msgstr "``SELECT @@version``"
 
 #: ../../source/vuln/sql/dbident.rst:13
 msgid "``SELECT version()``"
-msgstr ""
+msgstr "``SELECT version()``"
 
 #: ../../source/vuln/sql/dbident.rst:14
 msgid "识别用函数"
-msgstr ""
+msgstr "Identification functions"
 
 #: ../../source/vuln/sql/dbident.rst:15
 msgid "``connection_id()``"
-msgstr ""
+msgstr "``connection_id()``"
 
 #: ../../source/vuln/sql/dbident.rst:16
 msgid "``last_insert_id()``"
-msgstr ""
+msgstr "``last_insert_id()``"
 
 #: ../../source/vuln/sql/dbident.rst:17
 msgid "``row_count()``"
-msgstr ""
+msgstr "``row_count()``"
 
 #: ../../source/vuln/sql/dbident.rst:20
 msgid "Oracle"
-msgstr ""
+msgstr "Oracle"
 
 #: ../../source/vuln/sql/dbident.rst:22
 msgid "``'a'||'oracle' --``"
-msgstr ""
+msgstr "``'a'||'oracle' --``"
 
 #: ../../source/vuln/sql/dbident.rst:25
 msgid "``SELECT banner FROM v$version``"
-msgstr ""
+msgstr "``SELECT banner FROM v$version``"
 
 #: ../../source/vuln/sql/dbident.rst:26
 msgid "``SELECT banner FROM v$version WHERE rownum=1``"
-msgstr ""
+msgstr "``SELECT banner FROM v$version WHERE rownum=1``"
 
 #: ../../source/vuln/sql/dbident.rst:29
 msgid "SQLServer"
-msgstr ""
+msgstr "SQL Server"
 
 #: ../../source/vuln/sql/dbident.rst:30
 msgid "WAITFOR ``WAITFOR DELAY '00:00:10';``"
-msgstr ""
+msgstr "WAITFOR ``WAITFOR DELAY '00:00:10';``"
 
 #: ../../source/vuln/sql/dbident.rst:31
 msgid "SERVERNAME ``SELECT @@SERVERNAME``"
-msgstr ""
+msgstr "SERVERNAME ``SELECT @@SERVERNAME``"
 
 #: ../../source/vuln/sql/dbident.rst:32
 msgid "version ``SELECT @@version``"
-msgstr ""
+msgstr "version ``SELECT @@version``"
 
 #: ../../source/vuln/sql/dbident.rst:34
 msgid "``SELECT 'some'+'string'``"
-msgstr ""
+msgstr "``SELECT 'some'+'string'``"
 
 #: ../../source/vuln/sql/dbident.rst:35
 msgid "常量"
-msgstr ""
+msgstr "Constants"
 
 #: ../../source/vuln/sql/dbident.rst:36
 msgid "``@@pack_received``"
-msgstr ""
+msgstr "``@@pack_received``"
 
 #: ../../source/vuln/sql/dbident.rst:37
 msgid "``@@rowcount``"
-msgstr ""
+msgstr "``@@rowcount``"
 
 #: ../../source/vuln/sql/dbident.rst:40
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 #: ../../source/vuln/sql/dbident.rst:41
 msgid "sleep ``pg_sleep(1)``"
-msgstr ""
+msgstr "sleep ``pg_sleep(1)``"

@@ -20,18 +20,20 @@ msgstr ""
 
 #: ../../source/vuln/sql/privilege.rst:2
 msgid "权限提升"
-msgstr ""
+msgstr "Privilege Escalation"
 
 #: ../../source/vuln/sql/privilege.rst:5
 msgid "UDF提权"
-msgstr ""
+msgstr "UDF Privilege Escalation"
 
 #: ../../source/vuln/sql/privilege.rst:6
 msgid ""
 "UDF（User Defined "
 "Function，用户自定义函数）是MySQL提供的一个功能，可以通过编写DLL扩展为MySQL添加新函数，扩充其功能。"
 msgstr ""
+"UDF (User Defined Function) is a MySQL feature that allows new functions to "
+"be added to MySQL by writing DLL extensions."
 
 #: ../../source/vuln/sql/privilege.rst:8
 msgid "当获得MySQL权限之后，即可通过这种方式上传自定义的扩展文件，从MySQL中执行系统命令。"
-msgstr ""
+msgstr "After obtaining MySQL privileges, an attacker can use this method to upload a custom extension file and execute system commands from MySQL."

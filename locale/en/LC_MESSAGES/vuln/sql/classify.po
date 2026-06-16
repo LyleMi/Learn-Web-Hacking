@@ -20,78 +20,82 @@ msgstr ""
 
 #: ../../source/vuln/sql/classify.rst:2
 msgid "注入分类"
-msgstr ""
+msgstr "Injection Classification"
 
 #: ../../source/vuln/sql/classify.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/vuln/sql/classify.rst:6
 msgid ""
 "SQL注入是一种代码注入技术，用于攻击数据驱动的应用程序。 "
 "在应用程序中，如果没有做恰当的过滤，则可能使得恶意的SQL语句被插入输入字段中执行（例如将数据库内容转储给攻击者）。"
 msgstr ""
+"SQL injection is a code injection technique used to attack data-driven "
+"applications. If an application does not apply proper filtering, malicious "
+"SQL statements may be inserted into input fields and executed, for example "
+"to dump database contents to an attacker."
 
 #: ../../source/vuln/sql/classify.rst:10
 msgid "按技巧分类"
-msgstr ""
+msgstr "Classification by Technique"
 
 #: ../../source/vuln/sql/classify.rst:11
 msgid "根据使用的技巧，SQL注入类型可分为"
-msgstr ""
+msgstr "Based on the technique used, SQL injection can be classified as:"
 
 #: ../../source/vuln/sql/classify.rst:13
 msgid "盲注"
-msgstr ""
+msgstr "Blind injection"
 
 #: ../../source/vuln/sql/classify.rst:14
 msgid "布尔盲注：只能从应用返回中推断语句执行后的布尔值"
-msgstr ""
+msgstr "Boolean-based blind injection: the Boolean result of a statement can only be inferred from the application's response"
 
 #: ../../source/vuln/sql/classify.rst:15
 msgid "时间盲注：应用没有明确的回显，只能使用特定的时间函数来判断"
-msgstr ""
+msgstr "Time-based blind injection: the application has no explicit echo, so specific time functions are used for judgment"
 
 #: ../../source/vuln/sql/classify.rst:16
 msgid "报错注入：应用会显示全部或者部分的报错信息"
-msgstr ""
+msgstr "Error-based injection: the application displays all or part of the error information"
 
 #: ../../source/vuln/sql/classify.rst:17
 msgid "堆叠注入：有的应用可以加入 ``;`` 后一次执行多条语句"
-msgstr ""
+msgstr "Stacked injection: some applications allow multiple statements to be executed in one request after adding ``;``"
 
 #: ../../source/vuln/sql/classify.rst:18
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: ../../source/vuln/sql/classify.rst:21
 msgid "按获取数据的方式分类"
-msgstr ""
+msgstr "Classification by Data Retrieval Method"
 
 #: ../../source/vuln/sql/classify.rst:22
 msgid "另外也可以根据获取数据的方式分为3类"
-msgstr ""
+msgstr "SQL injection can also be divided into three categories by the way data is retrieved:"
 
 #: ../../source/vuln/sql/classify.rst:25
 msgid "inband"
-msgstr ""
+msgstr "in-band"
 
 #: ../../source/vuln/sql/classify.rst:26
 msgid "利用Web应用来直接获取数据，如报错注入，这类注入都是通过站点的响应或者错误反馈来提取数据。"
-msgstr ""
+msgstr "Use the web application to retrieve data directly, such as error-based injection. This category extracts data through site responses or error feedback."
 
 #: ../../source/vuln/sql/classify.rst:29
 msgid "inference"
-msgstr ""
+msgstr "inference"
 
 #: ../../source/vuln/sql/classify.rst:30
 msgid "通过Web的一些反映来推断数据，如布尔盲注，也就是我们通俗的盲注， 通过web应用的其他改变来推断数据。"
-msgstr ""
+msgstr "Infer data from web-side behavior, such as Boolean-based blind injection. In common usage this is blind injection, where data is inferred from other changes in the web application."
 
 #: ../../source/vuln/sql/classify.rst:34
 msgid "out of band (OOB)"
-msgstr ""
+msgstr "out-of-band (OOB)"
 
 #: ../../source/vuln/sql/classify.rst:35
 msgid "通过其他传输方式来获得数据，比如DNS解析协议和电子邮件。"
-msgstr ""
+msgstr "Retrieve data through another transport channel, such as DNS resolution or email."
