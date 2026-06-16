@@ -1,0 +1,24 @@
+# English translations for Web安全学习笔记.
+# Copyright (C) 2019-2026, Lyle
+# This file is distributed under the same license as the Web安全学习笔记 package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 07:02+0800\n"
+"PO-Revision-Date: 2026-06-17 07:04+0800\n"
+"Last-Translator: Web安全学习笔记 contributors\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/index.rst:4
+msgid "内容索引:"
+msgstr "Contents:"
+
+#: ../../source/index.rst:2
+msgid "Web安全学习笔记"
+msgstr "Web Security Study Notes"
