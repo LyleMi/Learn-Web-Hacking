@@ -20,80 +20,100 @@ msgstr ""
 
 #: ../../source/network/http/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/network/http/ref.rst:5
 msgid "RFC"
-msgstr ""
+msgstr "RFC"
 
 #: ../../source/network/http/ref.rst:6
 msgid ""
 "`RFC 3253 <https://tools.ietf.org/html/rfc3253>`_ Versioning Extensions "
 "to WebDAV (Web Distributed Authoring and Versioning)"
 msgstr ""
+"`RFC 3253 <https://tools.ietf.org/html/rfc3253>`_ Versioning Extensions "
+"to WebDAV (Web Distributed Authoring and Versioning)"
 
 #: ../../source/network/http/ref.rst:7
 msgid ""
 "`RFC 3648 <https://tools.ietf.org/html/rfc3648>`_ Web Distributed "
 "Authoring and Versioning (WebDAV) Ordered Collections Protocol"
 msgstr ""
+"`RFC 3648 <https://tools.ietf.org/html/rfc3648>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) Ordered Collections Protocol"
 
 #: ../../source/network/http/ref.rst:8
 msgid ""
 "`RFC 3744 <https://tools.ietf.org/html/rfc3744>`_ Web Distributed "
 "Authoring and Versioning (WebDAV) Access Control Protocol"
 msgstr ""
+"`RFC 3744 <https://tools.ietf.org/html/rfc3744>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) Access Control Protocol"
 
 #: ../../source/network/http/ref.rst:9
 msgid ""
 "`RFC 4437 <https://tools.ietf.org/html/rfc4437>`_ Web Distributed "
 "Authoring and Versioning (WebDAV) Redirect Reference Resources"
 msgstr ""
+"`RFC 4437 <https://tools.ietf.org/html/rfc4437>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) Redirect Reference Resources"
 
 #: ../../source/network/http/ref.rst:10
 msgid ""
 "`RFC 4918 <https://tools.ietf.org/html/rfc4918>`_ HTTP Extensions for Web"
 " Distributed Authoring and Versioning (WebDAV)"
 msgstr ""
+"`RFC 4918 <https://tools.ietf.org/html/rfc4918>`_ HTTP Extensions for Web"
+" Distributed Authoring and Versioning (WebDAV)"
 
 #: ../../source/network/http/ref.rst:11
 msgid ""
 "`RFC 5323 <https://tools.ietf.org/html/rfc5323>`_ Web Distributed "
 "Authoring and Versioning (WebDAV) SEARCH"
 msgstr ""
+"`RFC 5323 <https://tools.ietf.org/html/rfc5323>`_ Web Distributed "
+"Authoring and Versioning (WebDAV) SEARCH"
 
 #: ../../source/network/http/ref.rst:12
 msgid ""
 "`RFC 5842 <https://tools.ietf.org/html/rfc5842>`_ Binding Extensions to "
 "Web Distributed Authoring and Versioning (WebDAV)"
 msgstr ""
+"`RFC 5842 <https://tools.ietf.org/html/rfc5842>`_ Binding Extensions to "
+"Web Distributed Authoring and Versioning (WebDAV)"
 
 #: ../../source/network/http/ref.rst:13
 msgid "`The WebSocket Protocol <https://datatracker.ietf.org/doc/html/rfc6455>`_"
-msgstr ""
+msgstr "`The WebSocket Protocol <https://datatracker.ietf.org/doc/html/rfc6455>`_"
 
 #: ../../source/network/http/ref.rst:14
 msgid ""
 "`Clarifying Registry Procedures for the WebSocket Subprotocol Name "
 "Registry <https://datatracker.ietf.org/doc/html/rfc7936>`_"
 msgstr ""
+"`Clarifying Registry Procedures for the WebSocket Subprotocol Name "
+"Registry <https://datatracker.ietf.org/doc/html/rfc7936>`_"
 
 #: ../../source/network/http/ref.rst:17
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: ../../source/network/http/ref.rst:18
 msgid ""
 "`What should a hacker know about WebDav "
 "<http://2015.zeronights.org/assets/files/35-Egorov.pdf>`_"
 msgstr ""
+"`What should a hacker know about WebDav "
+"<http://2015.zeronights.org/assets/files/35-Egorov.pdf>`_"
 
 #: ../../source/network/http/ref.rst:19
 msgid ""
 "`Cookie 的 SameSite 属性 <http://www.ruanyifeng.com/blog/2019/09/cookie-"
 "samesite.html>`_"
 msgstr ""
+"`The SameSite Attribute of Cookies <http://www.ruanyifeng.com/blog/2019/09/cookie-"
+"samesite.html>`_"
 
 #: ../../source/network/http/ref.rst:20
 msgid "`HTTP 协议入门 <http://www.ruanyifeng.com/blog/2016/08/http.html>`_"
-msgstr ""
+msgstr "`Introduction to the HTTP Protocol <http://www.ruanyifeng.com/blog/2016/08/http.html>`_"

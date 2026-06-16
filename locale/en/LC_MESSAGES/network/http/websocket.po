@@ -20,35 +20,42 @@ msgstr ""
 
 #: ../../source/network/http/websocket.rst:2
 msgid "WebSocket"
-msgstr ""
+msgstr "WebSocket"
 
 #: ../../source/network/http/websocket.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/http/websocket.rst:6
 msgid ""
 "WebSocket是一种网络传输协议，可在单个TCP连接上进行全双工通信，位于OSI模型的应用层。WebSocket协议在2011年由IETF标准化为RFC"
 " 6455，后由RFC 7936补充规范。"
 msgstr ""
+"WebSocket is a network transport protocol that enables full-duplex "
+"communication over a single TCP connection. It sits at the application "
+"layer of the OSI model. The WebSocket protocol was standardized by the "
+"IETF as RFC 6455 in 2011 and was later supplemented by RFC 7936."
 
 #: ../../source/network/http/websocket.rst:9
 msgid "交互"
-msgstr ""
+msgstr "Interaction"
 
 #: ../../source/network/http/websocket.rst:12
 msgid "握手"
-msgstr ""
+msgstr "Handshake"
 
 #: ../../source/network/http/websocket.rst:13
 msgid "握手阶段和 HTTP 协议较为类似，RFC 文档中给出的握手示例如下："
-msgstr ""
+msgstr "The handshake phase is relatively similar to the HTTP protocol. The handshake example given in the RFC is as follows:"
 
 #: ../../source/network/http/websocket.rst:34
 msgid ""
 "其中 Upgrade 的值必须为 websocket ，Connection 的值必须为 Upgrade ，合起来表示客户端喜欢连接升级到 "
 "Websocket 协议。"
 msgstr ""
+"The value of Upgrade must be websocket, and the value of Connection must "
+"be Upgrade. Together, they indicate that the client wants to upgrade the "
+"connection to the WebSocket protocol."
 
 #: ../../source/network/http/websocket.rst:36
 msgid ""
@@ -58,3 +65,9 @@ msgid ""
 "``dGhlIHNhbXBsZSBub25jZQ==258EAFA5-E914-47DA-95CA-C5AB0DC85B11`` "
 "对应的SHA1摘要。"
 msgstr ""
+"Sec-WebSocket-Key is a random value. Sec-WebSocket-Accept is the Base64-"
+"encoded value of the SHA1 digest calculated after concatenating Sec-"
+"WebSocket-Key with the fixed string "
+"``258EAFA5-E914-47DA-95CA-C5AB0DC85B11``. In the example, "
+"``s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`` is the SHA1 digest corresponding to "
+"``dGhlIHNhbXBsZSBub25jZQ==258EAFA5-E914-47DA-95CA-C5AB0DC85B11``."

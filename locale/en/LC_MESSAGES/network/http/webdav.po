@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/network/http/webdav.rst:2
 msgid "WebDAV"
-msgstr ""
+msgstr "WebDAV"
 
 #: ../../source/network/http/webdav.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/http/webdav.rst:6
 msgid ""
@@ -32,83 +32,89 @@ msgid ""
 "1.1协议的通信协议。它扩展了HTTP 1.1，在GET、POST、HEAD等几个HTTP标准方法以外添加了一些新的方法，使应用程序可对Web "
 "Server直接读写，并支持写文件锁定、解锁，以及版本控制等功能。"
 msgstr ""
+"WebDAV (Web-based Distributed Authoring and Versioning) is a communication "
+"protocol based on HTTP 1.1. It extends HTTP 1.1 by adding new methods "
+"beyond standard HTTP methods such as GET, POST, and HEAD. These methods "
+"allow applications to read from and write to a web server directly, and "
+"support file write locking, unlocking, version control, and related "
+"features."
 
 #: ../../source/network/http/webdav.rst:8
 msgid "支持的方法具体为："
-msgstr ""
+msgstr "The supported methods are:"
 
 #: ../../source/network/http/webdav.rst:10
 msgid "OPTIONS"
-msgstr ""
+msgstr "OPTIONS"
 
 #: ../../source/network/http/webdav.rst:11
 msgid "获取服务器的支持"
-msgstr ""
+msgstr "Query server support"
 
 #: ../../source/network/http/webdav.rst:12
 msgid "GET / PUT / POST / DELETE"
-msgstr ""
+msgstr "GET / PUT / POST / DELETE"
 
 #: ../../source/network/http/webdav.rst:13
 msgid "资源操作"
-msgstr ""
+msgstr "Resource operations"
 
 #: ../../source/network/http/webdav.rst:14
 msgid "TRACE"
-msgstr ""
+msgstr "TRACE"
 
 #: ../../source/network/http/webdav.rst:15
 msgid "跟踪服务器"
-msgstr ""
+msgstr "Trace the server"
 
 #: ../../source/network/http/webdav.rst:16
 msgid "HEAD"
-msgstr ""
+msgstr "HEAD"
 
 #: ../../source/network/http/webdav.rst:17
 msgid "MKCOL"
-msgstr ""
+msgstr "MKCOL"
 
 #: ../../source/network/http/webdav.rst:18
 msgid "创建集合"
-msgstr ""
+msgstr "Create a collection"
 
 #: ../../source/network/http/webdav.rst:19
 msgid "PROPFIND / PROPPATCH"
-msgstr ""
+msgstr "PROPFIND / PROPPATCH"
 
 #: ../../source/network/http/webdav.rst:20
 msgid "COPY / MOVE"
-msgstr ""
+msgstr "COPY / MOVE"
 
 #: ../../source/network/http/webdav.rst:21
 msgid "LOCK / UNLOCK"
-msgstr ""
+msgstr "LOCK / UNLOCK"
 
 #: ../../source/network/http/webdav.rst:24
 msgid "相关CVE"
-msgstr ""
+msgstr "Related CVEs"
 
 #: ../../source/network/http/webdav.rst:25
 msgid "CVE-2015-1833"
-msgstr ""
+msgstr "CVE-2015-1833"
 
 #: ../../source/network/http/webdav.rst:26
 msgid "Apache Jacrabbit WebDav XXE"
-msgstr ""
+msgstr "Apache Jacrabbit WebDav XXE"
 
 #: ../../source/network/http/webdav.rst:27
 msgid "http://www.securityfocus.com/archive/1/535582"
-msgstr ""
+msgstr "http://www.securityfocus.com/archive/1/535582"
 
 #: ../../source/network/http/webdav.rst:28
 msgid "CVE-2015-7326"
-msgstr ""
+msgstr "CVE-2015-7326"
 
 #: ../../source/network/http/webdav.rst:29
 msgid "Milton WebDav XXE"
-msgstr ""
+msgstr "Milton WebDav XXE"
 
 #: ../../source/network/http/webdav.rst:30
 msgid "http://www.securityfocus.com/archive/1/536813"
-msgstr ""
+msgstr "http://www.securityfocus.com/archive/1/536813"

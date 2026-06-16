@@ -20,29 +20,32 @@ msgstr ""
 
 #: ../../source/network/http/httpver.rst:2
 msgid "HTTP 版本"
-msgstr ""
+msgstr "HTTP Versions"
 
 #: ../../source/network/http/httpver.rst:5
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: ../../source/network/http/httpver.rst:6
 msgid "HTTP 是基于 TCP/IP 协议的应用层协议，主要规定了客户端和服务器之间的通信格式，默认使用80端口。"
-msgstr ""
+msgstr "HTTP is an application-layer protocol based on TCP/IP. It mainly defines the communication format between clients and servers and uses port 80 by default."
 
 #: ../../source/network/http/httpver.rst:9
 msgid "HTTP 0.9"
-msgstr ""
+msgstr "HTTP 0.9"
 
 #: ../../source/network/http/httpver.rst:10
 msgid ""
 "HTTP 0.9最早在1991年发布，仅支持GET命令，请求格式只有简单的 ``GET /url`` "
 "，服务端仅响应HTML，响应完毕后关闭TCP连接。"
 msgstr ""
+"HTTP 0.9 was first released in 1991. It only supported the GET command, "
+"and the request format was simply ``GET /url``. The server only returned "
+"HTML and closed the TCP connection after the response was complete."
 
 #: ../../source/network/http/httpver.rst:13
 msgid "HTTP 1.0"
-msgstr ""
+msgstr "HTTP 1.0"
 
 #: ../../source/network/http/httpver.rst:14
 msgid ""
@@ -51,18 +54,24 @@ msgid ""
 " code)、多字符集支持、多部分发送(multi-part "
 "type)、权限(authorization)、缓存(cache)、内容编码(content encoding)等内容。"
 msgstr ""
+"HTTP/1.0 was released in May 1996. It expanded the formats and content "
+"that could be transmitted and introduced the POST and HEAD methods. "
+"Starting with 1.0, the protocol version had to be appended at the end. "
+"HTTP/1.0 also introduced status codes, multi-character-set support, "
+"multi-part type delivery, authorization, cache, content encoding, and "
+"other features."
 
 #: ../../source/network/http/httpver.rst:16
 msgid "HTTP 1.0 版的主要缺点是，每个TCP连接只能发送一个请求。发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接。"
-msgstr ""
+msgstr "The main drawback of HTTP 1.0 is that each TCP connection can send only one request. After the data is sent, the connection is closed. If other resources need to be requested, a new connection must be created."
 
 #: ../../source/network/http/httpver.rst:18
 msgid "TCP连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢(slow start)，所以，HTTP 1.0版本的性能比较差。"
-msgstr ""
+msgstr "Creating a new TCP connection is costly because it requires a three-way handshake between the client and server, and the initial sending rate is slow due to slow start. As a result, HTTP 1.0 has relatively poor performance."
 
 #: ../../source/network/http/httpver.rst:21
 msgid "HTTP 1.1"
-msgstr ""
+msgstr "HTTP 1.1"
 
 #: ../../source/network/http/httpver.rst:22
 msgid ""
@@ -71,22 +80,30 @@ msgid ""
 " OPTIONS、DELETE等动词方法也是在HTTP "
 "1.1版本引入的。另外1.1版本新增了Host字段，用于指定服务器的域名，这也是后来虚拟主机得以发展的基础。"
 msgstr ""
+"HTTP/1.1 was released in January 1997 and further improved the HTTP "
+"protocol. Version 1.1 mainly introduced persistent connections, "
+"pipelining, Content-Length, chunked transfer encoding, and related "
+"features. Pipelining means that a client can send multiple requests over "
+"the same TCP connection, improving HTTP efficiency. Methods such as PUT, "
+"PATCH, HEAD, OPTIONS, and DELETE were also introduced in HTTP 1.1. In "
+"addition, version 1.1 added the Host field to specify the server's domain "
+"name, which later became the basis for virtual hosting."
 
 #: ../../source/network/http/httpver.rst:24
 msgid "虽然1.1版允许复用TCP连接，但是同一个TCP连接里面，所有的数据通信是按次序进行的。服务器只有处理完一个回应，才会进行下一个回应。如果有一个请求很慢，就会阻塞后面的请求。"
-msgstr ""
+msgstr "Although version 1.1 allows TCP connections to be reused, all data communication within the same TCP connection is still processed in order. The server only proceeds to the next response after finishing the current one. If one request is slow, it blocks the requests behind it."
 
 #: ../../source/network/http/httpver.rst:27
 msgid "SPDY"
-msgstr ""
+msgstr "SPDY"
 
 #: ../../source/network/http/httpver.rst:28
 msgid "2009年，谷歌公开了自行研发的 SPDY 协议，用于解决 HTTP/1.1 效率不高的问题，而后被当做 HTTP/2 的基础。"
-msgstr ""
+msgstr "In 2009, Google released its self-developed SPDY protocol to address the low efficiency of HTTP/1.1. It was later used as the basis for HTTP/2."
 
 #: ../../source/network/http/httpver.rst:31
 msgid "HTTP/2"
-msgstr ""
+msgstr "HTTP/2"
 
 #: ../../source/network/http/httpver.rst:32
 msgid ""
@@ -94,3 +111,9 @@ msgid ""
 "发布，HTTP/2是一个二进制协议，头信息和数据体都是二进制，统称为帧(frame)，帧分为头信息帧和数据帧。HTTP/2 "
 "复用TCP连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序回应。"
 msgstr ""
+"HTTP/2 was released in 2015. HTTP/2 is a binary protocol: both header "
+"information and data bodies are binary and are collectively called frames. "
+"Frames are divided into header frames and data frames. HTTP/2 reuses TCP "
+"connections; within a single connection, the client and browser can send "
+"multiple requests or responses at the same time, and responses do not "
+"have to be returned in order."

@@ -20,92 +20,100 @@ msgstr ""
 
 #: ../../source/network/http/https.rst:2
 msgid "HTTPS"
-msgstr ""
+msgstr "HTTPS"
 
 #: ../../source/network/http/https.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/http/https.rst:6
 msgid ""
 "HTTPS (HyperText Transfer Protocol over Secure Socket "
 "Layer)可以理解为HTTP+SSL/TLS， 即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL。"
 msgstr ""
+"HTTPS (HyperText Transfer Protocol over Secure Socket Layer) can be "
+"understood as HTTP plus SSL/TLS, that is, HTTP with an SSL layer added. "
+"The security foundation of HTTPS is SSL."
 
 #: ../../source/network/http/https.rst:9
 msgid "交互"
-msgstr ""
+msgstr "Interaction"
 
 #: ../../source/network/http/https.rst:12
 msgid "证书验证阶段"
-msgstr ""
+msgstr "Certificate Validation Phase"
 
 #: ../../source/network/http/https.rst:13
 msgid "浏览器发起 HTTPS 请求"
-msgstr ""
+msgstr "The browser initiates an HTTPS request"
 
 #: ../../source/network/http/https.rst:14
 msgid "服务端返回 HTTPS 证书"
-msgstr ""
+msgstr "The server returns the HTTPS certificate"
 
 #: ../../source/network/http/https.rst:15
 msgid "其中证书包含："
-msgstr ""
+msgstr "The certificate contains:"
 
 #: ../../source/network/http/https.rst:16
 msgid "颁发机构信息"
-msgstr ""
+msgstr "Certificate authority information"
 
 #: ../../source/network/http/https.rst:17
 msgid "公钥"
-msgstr ""
+msgstr "Public key"
 
 #: ../../source/network/http/https.rst:18
 msgid "公司信息"
-msgstr ""
+msgstr "Company information"
 
 #: ../../source/network/http/https.rst:19
 msgid "域名"
-msgstr ""
+msgstr "Domain name"
 
 #: ../../source/network/http/https.rst:20
 msgid "有效期"
-msgstr ""
+msgstr "Validity period"
 
 #: ../../source/network/http/https.rst:21
 msgid "指纹"
-msgstr ""
+msgstr "Fingerprint"
 
 #: ../../source/network/http/https.rst:22
 msgid "客户端验证证书是否合法，如果不合法则提示告警"
-msgstr ""
+msgstr "The client validates whether the certificate is legitimate and shows a warning if it is not"
 
 #: ../../source/network/http/https.rst:25
 msgid "数据传输阶段"
-msgstr ""
+msgstr "Data Transmission Phase"
 
 #: ../../source/network/http/https.rst:26
 msgid "当证书验证合法后，在本地生成随机数"
-msgstr ""
+msgstr "After the certificate is validated, a random number is generated locally"
 
 #: ../../source/network/http/https.rst:27
 msgid "通过公钥加密随机数，并把加密后的随机数传输到服务端"
-msgstr ""
+msgstr "The random number is encrypted with the public key and sent to the server"
 
 #: ../../source/network/http/https.rst:28
 msgid "服务端通过私钥对随机数进行解密"
-msgstr ""
+msgstr "The server decrypts the random number with the private key"
 
 #: ../../source/network/http/https.rst:29
 msgid "服务端通过客户端传入的随机数构造对称加密算法，对返回结果内容进行加密后传输"
-msgstr ""
+msgstr "The server uses the random number provided by the client to construct a symmetric encryption algorithm, encrypts the response content, and sends it back"
 
 #: ../../source/network/http/https.rst:32
 msgid "CA"
-msgstr ""
+msgstr "CA"
 
 #: ../../source/network/http/https.rst:33
 msgid ""
 "CA (Certificate Authority) "
 "是颁发数字证书的机构。是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。"
 msgstr ""
+"A CA (Certificate Authority) is an organization that issues digital "
+"certificates. It is an authority responsible for issuing and managing "
+"digital certificates. As a trusted third party in e-commerce transactions, "
+"it is responsible for validating the legitimacy of public keys in the "
+"public-key system."
