@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,32 +20,32 @@ msgstr ""
 
 #: ../../source/network/udp.rst:2
 msgid "UDP协议"
-msgstr ""
+msgstr "UDP Protocol"
 
 #: ../../source/network/udp.rst:5
 msgid "主要特点"
-msgstr ""
+msgstr "Key Characteristics"
 
 #: ../../source/network/udp.rst:6
 msgid "协议开销小、效率高。"
-msgstr ""
+msgstr "The protocol has low overhead and high efficiency."
 
 #: ../../source/network/udp.rst:7
 msgid "UDP是无连接的，即发送数据之前不需要建立连接。"
-msgstr ""
+msgstr "UDP is connectionless, meaning no connection needs to be established before data is sent."
 
 #: ../../source/network/udp.rst:8
 msgid "UDP使用尽最大努力交付，即不保证可靠交付。"
-msgstr ""
+msgstr "UDP uses best-effort delivery and does not guarantee reliable delivery."
 
 #: ../../source/network/udp.rst:9
 msgid "UDP没有拥塞控制。"
-msgstr ""
+msgstr "UDP has no congestion control."
 
 #: ../../source/network/udp.rst:10
 msgid "UDP支持一对一、一对多、多对一和多对多交互通信。"
-msgstr ""
+msgstr "UDP supports one-to-one, one-to-many, many-to-one, and many-to-many communication."
 
 #: ../../source/network/udp.rst:11
 msgid "UDP的首部开销小，只有8个字节。"
-msgstr ""
+msgstr "UDP has a small header overhead of only 8 bytes."

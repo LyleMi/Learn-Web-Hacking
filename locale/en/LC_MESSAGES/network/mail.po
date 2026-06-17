@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,159 +20,159 @@ msgstr ""
 
 #: ../../source/network/mail.rst:2
 msgid "邮件协议族"
-msgstr ""
+msgstr "Email Protocol Suite"
 
 #: ../../source/network/mail.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/mail.rst:8
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: ../../source/network/mail.rst:9
 msgid ""
 "SMTP (Simple Mail Transfer Protocol) "
 "是一种电子邮件传输的协议，是一组用于从源地址到目的地址传输邮件的规范。不启用SSL时端口号为25，启用SSL时端口号多为465或994。"
-msgstr ""
+msgstr "SMTP (Simple Mail Transfer Protocol) is an email transfer protocol, a set of specifications for sending mail from a source address to a destination address. When SSL is not enabled, it uses port 25; when SSL is enabled, it commonly uses port 465 or 994."
 
 #: ../../source/network/mail.rst:12
 msgid "POP3"
-msgstr ""
+msgstr "POP3"
 
 #: ../../source/network/mail.rst:13
 msgid ""
 "POP3 (Post Office Protocol 3) "
 "用于支持使用客户端远程管理在服务器上的电子邮件。不启用SSL时端口号为110，启用SSL时端口号多为995。"
-msgstr ""
+msgstr "POP3 (Post Office Protocol 3) supports remote management of email stored on a server from a client. When SSL is not enabled, it uses port 110; when SSL is enabled, it commonly uses port 995."
 
 #: ../../source/network/mail.rst:16
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: ../../source/network/mail.rst:17
 msgid ""
 "IMAP (Internet Mail Access "
 "Protocol)，即交互式邮件存取协议，它是跟POP3类似邮件访问标准协议之一。不同的是，开启了IMAP后，您在电子邮件客户端收取的邮件仍然保留在服务器上，同时在客户端上的操作都会反馈到服务器上，如：删除邮件，标记已读等，服务器上的邮件也会做相应的动作。不启用SSL时端口号为143，启用SSL时端口号多为993。"
-msgstr ""
+msgstr "IMAP (Internet Mail Access Protocol) is a standard mail access protocol similar to POP3. The difference is that after IMAP is enabled, messages retrieved by an email client remain on the server, and client-side actions such as deleting messages or marking them as read are synchronized back to the server. When SSL is not enabled, it uses port 143; when SSL is enabled, it commonly uses port 993."
 
 #: ../../source/network/mail.rst:20
 msgid "防护策略"
-msgstr ""
+msgstr "Protection Strategies"
 
 #: ../../source/network/mail.rst:23
 msgid "SPF"
-msgstr ""
+msgstr "SPF"
 
 #: ../../source/network/mail.rst:24
 msgid ""
 "发件人策略框架 (Sender Policy Framework, SPF) "
 "是一套电子邮件认证机制，用于确认电子邮件是否由网域授权的邮件服务器寄出，防止有人伪冒身份网络钓鱼或寄出垃圾邮件。SPF允许管理员设定一个DNS "
 "TXT记录或SPF记录设定发送邮件服务器的IP范围，如有任何邮件并非从上述指明授权的IP地址寄出，则很可能该邮件并非确实由真正的寄件者寄出。"
-msgstr ""
+msgstr "Sender Policy Framework (SPF) is an email authentication mechanism used to confirm whether an email was sent by a mail server authorized by the domain, helping prevent phishing and spam sent under a forged identity. SPF allows administrators to configure a DNS TXT record or SPF record that defines the IP ranges of authorized sending mail servers. If a message is not sent from one of those authorized IP addresses, it is likely not truly from the claimed sender."
 
 #: ../../source/network/mail.rst:27
 msgid "DKIM"
-msgstr ""
+msgstr "DKIM"
 
 #: ../../source/network/mail.rst:28
 msgid ""
 "域名密钥识别邮件 (DomainKeys Identified Mail, DKIM) 是一种检测电子邮件发件人地址伪造的方法"
 "。发送方会在邮件的头中插入DKIM-Signature，收件方通过查询DNS记录中的公钥来验证发件人的信息。"
-msgstr ""
+msgstr "DomainKeys Identified Mail (DKIM) is a method for detecting forged email sender addresses. The sender inserts a DKIM-Signature into the message header, and the recipient verifies the sender information by querying the public key in DNS records."
 
 #: ../../source/network/mail.rst:31
 msgid "DMARC"
-msgstr ""
+msgstr "DMARC"
 
 #: ../../source/network/mail.rst:32
 msgid ""
 "基于网域的消息认证、报告和一致性 (Domain-based Message Authentication, Reporting and "
 "Conformance, DMARC) 是电子邮件身份验证协议，用于解决在邮件栏中显示的域名和验证的域名不一致的问题。要通过 DMARC "
 "检查，必须通过 SPF 或/和 DKIM 的身份验证，且需要标头地址中的域名必须与经过身份验证的域名一致。"
-msgstr ""
+msgstr "Domain-based Message Authentication, Reporting, and Conformance (DMARC) is an email authentication protocol used to address mismatches between the domain displayed in the message header and the authenticated domain. To pass a DMARC check, a message must pass SPF and/or DKIM authentication, and the domain in the header address must align with the authenticated domain."
 
 #: ../../source/network/mail.rst:35
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/network/mail.rst:38
 msgid "RFC"
-msgstr ""
+msgstr "RFC"
 
 #: ../../source/network/mail.rst:39
 msgid ""
 "`RFC 4408 Sender Policy Framework (SPF) for Authorizing Use of Domains in"
 " E-Mail, Version 1 <https://tools.ietf.org/html/rfc4408>`_"
-msgstr ""
+msgstr "`RFC 4408 Sender Policy Framework (SPF) for Authorizing Use of Domains in E-Mail, Version 1 <https://tools.ietf.org/html/rfc4408>`_"
 
 #: ../../source/network/mail.rst:40
 msgid ""
 "`RFC 6376 DomainKeys Identified Mail (DKIM) Signatures "
 "<https://tools.ietf.org/html/rfc6376>`_"
-msgstr ""
+msgstr "`RFC 6376 DomainKeys Identified Mail (DKIM) Signatures <https://tools.ietf.org/html/rfc6376>`_"
 
 #: ../../source/network/mail.rst:41
 msgid ""
 "`RFC 7208 Sender Policy Framework (SPF) for Authorizing Use of Domains in"
 " Email, Version 1 <https://tools.ietf.org/html/rfc7208>`_"
-msgstr ""
+msgstr "`RFC 7208 Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1 <https://tools.ietf.org/html/rfc7208>`_"
 
 #: ../../source/network/mail.rst:42
 msgid ""
 "`RFC 7489 Domain-based Message Authentication, Reporting, and Conformance"
 " (DMARC) <https://tools.ietf.org/html/rfc7489>`_"
-msgstr ""
+msgstr "`RFC 7489 Domain-based Message Authentication, Reporting, and Conformance (DMARC) <https://tools.ietf.org/html/rfc7489>`_"
 
 #: ../../source/network/mail.rst:43
 msgid ""
 "`RFC 8301 Cryptographic Algorithm and Key Usage Update to DomainKeys "
 "Identified Mail (DKIM) <https://tools.ietf.org/html/rfc8301>`_"
-msgstr ""
+msgstr "`RFC 8301 Cryptographic Algorithm and Key Usage Update to DomainKeys Identified Mail (DKIM) <https://tools.ietf.org/html/rfc8301>`_"
 
 #: ../../source/network/mail.rst:44
 msgid ""
 "`RFC 8463 A New Cryptographic Signature Method for DomainKeys Identified "
 "Mail (DKIM) <https://tools.ietf.org/html/rfc8463>`_"
-msgstr ""
+msgstr "`RFC 8463 A New Cryptographic Signature Method for DomainKeys Identified Mail (DKIM) <https://tools.ietf.org/html/rfc8463>`_"
 
 #: ../../source/network/mail.rst:45
 msgid ""
 "`RFC 8616 Email Authentication for Internationalized Mail "
 "<https://tools.ietf.org/html/rfc8616>`_"
-msgstr ""
+msgstr "`RFC 8616 Email Authentication for Internationalized Mail <https://tools.ietf.org/html/rfc8616>`_"
 
 #: ../../source/network/mail.rst:46
 msgid "`RFC 8611 Mail <https://tools.ietf.org/html/rfc8611>`_"
-msgstr ""
+msgstr "`RFC 8611 Mail <https://tools.ietf.org/html/rfc8611>`_"
 
 #: ../../source/network/mail.rst:49
 msgid "相关文档"
-msgstr ""
+msgstr "Related Documents"
 
 #: ../../source/network/mail.rst:50
 msgid ""
 "`Sender Policy Framework wikipedia "
 "<https://en.wikipedia.org/wiki/Sender_Policy_Framework>`_"
-msgstr ""
+msgstr "`Sender Policy Framework wikipedia <https://en.wikipedia.org/wiki/Sender_Policy_Framework>`_"
 
 #: ../../source/network/mail.rst:51
 msgid ""
 "`DomainKeys Identified Mail wikipedia "
 "<https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_"
-msgstr ""
+msgstr "`DomainKeys Identified Mail wikipedia <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_"
 
 #: ../../source/network/mail.rst:52
 msgid "`DMARC wikipedia <https://en.wikipedia.org/wiki/DMARC>`_"
-msgstr ""
+msgstr "`DMARC wikipedia <https://en.wikipedia.org/wiki/DMARC>`_"
 
 #: ../../source/network/mail.rst:55
 msgid "研究文章"
-msgstr ""
+msgstr "Research Articles"
 
 #: ../../source/network/mail.rst:56
 msgid ""
 "`Composition Kills:A Case Study of Email Sender Authentication "
 "<http://i.blackhat.com/USA-20/Thursday/us-20-Chen-You-Have-No-Idea-Who-"
 "Sent-That-Email-18-Attacks-On-Email-Sender-Authentication-wp.pdf>`_"
-msgstr ""
+msgstr "`Composition Kills:A Case Study of Email Sender Authentication <http://i.blackhat.com/USA-20/Thursday/us-20-Chen-You-Have-No-Idea-Who-Sent-That-Email-18-Attacks-On-Email-Sender-Authentication-wp.pdf>`_"

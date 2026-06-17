@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,202 +20,202 @@ msgstr ""
 
 #: ../../source/network/basic.rst:2
 msgid "网络基础"
-msgstr ""
+msgstr "Network Basics"
 
 #: ../../source/network/basic.rst:5
 msgid "计算机通信网的组成"
-msgstr ""
+msgstr "Components of a Computer Communication Network"
 
 #: ../../source/network/basic.rst:6
 msgid "计算机网络由通信子网和资源子网组成。其中通信子网负责数据的无差错和有序传递，其处理功能包括差错控制、流量控制、路由选择、网络互连等。"
-msgstr ""
+msgstr "A computer network consists of a communication subnet and a resource subnet. The communication subnet is responsible for error-free and ordered data delivery, and its processing functions include error control, flow control, routing, and network interconnection."
 
 #: ../../source/network/basic.rst:8
 msgid ""
 "其中资源子网是计算机通信的本地系统环境，包括主机、终端和应用程序等， 资源子网的主要功能是用户资源配置、数据的处理和管理、软件和硬件共享以及负载 "
 "均衡等。"
-msgstr ""
+msgstr "The resource subnet is the local system environment for computer communication, including hosts, terminals, and applications. Its main functions include user resource allocation, data processing and management, software and hardware sharing, and load balancing."
 
 #: ../../source/network/basic.rst:10
 msgid "总的来说，计算机通信网就是一个由通信子网承载的、传输和共享资源子网的各类信息的系统。"
-msgstr ""
+msgstr "In general, a computer communication network is a system carried by the communication subnet for transmitting and sharing different kinds of information from the resource subnet."
 
 #: ../../source/network/basic.rst:13
 msgid "通信协议"
-msgstr ""
+msgstr "Communication Protocols"
 
 #: ../../source/network/basic.rst:14
 msgid "为了完成计算机之间有序的信息交换，提出了通信协议的概念，其定义是相互通信的双方（或多方）对如何进行信息交换所必须遵守的一整套规则。"
-msgstr ""
+msgstr "To enable orderly information exchange between computers, the concept of a communication protocol was introduced. It is defined as the complete set of rules that two or more communicating parties must follow when exchanging information."
 
 #: ../../source/network/basic.rst:16
 msgid "协议涉及到三个要素，分别为："
-msgstr ""
+msgstr "A protocol involves three elements:"
 
 #: ../../source/network/basic.rst:18
 msgid "语法：语法是用户数据与控制信息的结构与格式，以及数据出现顺序的意义"
-msgstr ""
+msgstr "Syntax: the structure and format of user data and control information, and the meaning of the order in which data appears"
 
 #: ../../source/network/basic.rst:19
 msgid "语义：用于解释比特流的每一部分的意义"
-msgstr ""
+msgstr "Semantics: used to interpret the meaning of each part of the bit stream"
 
 #: ../../source/network/basic.rst:20
 msgid "时序：事件实现顺序的详细说明"
-msgstr ""
+msgstr "Timing: a detailed description of the order in which events occur"
 
 #: ../../source/network/basic.rst:23
 msgid "OSI七层模型"
-msgstr ""
+msgstr "OSI Seven-Layer Model"
 
 #: ../../source/network/basic.rst:26
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/basic.rst:27
 msgid ""
 "OSI（Open System "
 "Interconnection）共分为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层七层，其具体的功能如下。"
-msgstr ""
+msgstr "OSI (Open System Interconnection) is divided into seven layers: physical, data link, network, transport, session, presentation, and application. Their functions are described below."
 
 #: ../../source/network/basic.rst:30
 msgid "物理层"
-msgstr ""
+msgstr "Physical Layer"
 
 #: ../../source/network/basic.rst:31
 msgid "提供建立、维护和释放物理链路所需的机械、电气功能和规程等特性"
-msgstr ""
+msgstr "Provides the mechanical, electrical, functional, and procedural characteristics needed to establish, maintain, and release physical links"
 
 #: ../../source/network/basic.rst:32
 msgid "通过传输介质进行数据流(比特流)的物理传输、故障监测和物理层管理"
-msgstr ""
+msgstr "Performs physical transmission of data streams (bit streams) over transmission media, fault monitoring, and physical-layer management"
 
 #: ../../source/network/basic.rst:33
 msgid "从数据链路层接收帧，将比特流转换成底层物理介质上的信号"
-msgstr ""
+msgstr "Receives frames from the data link layer and converts bit streams into signals on the underlying physical medium"
 
 #: ../../source/network/basic.rst:36
 msgid "数据链路层"
-msgstr ""
+msgstr "Data Link Layer"
 
 #: ../../source/network/basic.rst:37
 msgid "在物理链路的两端之间传输数据"
-msgstr ""
+msgstr "Transmits data between the two ends of a physical link"
 
 #: ../../source/network/basic.rst:38
 msgid "在网络层实体间提供数据传输功能和控制"
-msgstr ""
+msgstr "Provides data transfer functions and control between network-layer entities"
 
 #: ../../source/network/basic.rst:39
 msgid "提供数据的流量控制"
-msgstr ""
+msgstr "Provides data flow control"
 
 #: ../../source/network/basic.rst:40
 msgid "检测和纠正物理链路产生的差错"
-msgstr ""
+msgstr "Detects and corrects errors generated on the physical link"
 
 #: ../../source/network/basic.rst:41
 msgid "格式化的消息称为帧"
-msgstr ""
+msgstr "Formatted messages are called frames"
 
 #: ../../source/network/basic.rst:44
 msgid "网络层"
-msgstr ""
+msgstr "Network Layer"
 
 #: ../../source/network/basic.rst:45
 msgid "负责端到端的数据的路由或交换，为透明地传输数据建立连接"
-msgstr ""
+msgstr "Handles routing or switching of end-to-end data and establishes connections for transparent data transmission"
 
 #: ../../source/network/basic.rst:46
 msgid "寻址并解决与数据在异构网络间传输相关的所有问题"
-msgstr ""
+msgstr "Performs addressing and resolves issues related to data transmission across heterogeneous networks"
 
 #: ../../source/network/basic.rst:47
 msgid "使用上面的传输层和下面的数据链路层的功能"
-msgstr ""
+msgstr "Uses the functions of the transport layer above and the data link layer below"
 
 #: ../../source/network/basic.rst:48
 msgid "格式化的消息称为分组"
-msgstr ""
+msgstr "Formatted messages are called packets"
 
 #: ../../source/network/basic.rst:51
 msgid "传输层"
-msgstr ""
+msgstr "Transport Layer"
 
 #: ../../source/network/basic.rst:52
 msgid "提供无差错的数据传输"
-msgstr ""
+msgstr "Provides error-free data transmission"
 
 #: ../../source/network/basic.rst:53
 msgid "接收来自会话层的数据，如果需要，将数据分割成更小的分组，向网络层传送分组并确保分组完整和正确到达它们的目的地"
-msgstr ""
+msgstr "Receives data from the session layer, divides it into smaller packets when needed, passes packets to the network layer, and ensures that packets arrive at their destination completely and correctly"
 
 #: ../../source/network/basic.rst:54
 msgid "在系统之间提供可靠的透明的数据传输,提供端到端的错误恢复和流量控制"
-msgstr ""
+msgstr "Provides reliable and transparent data transmission between systems, including end-to-end error recovery and flow control"
 
 #: ../../source/network/basic.rst:57
 msgid "会话层"
-msgstr ""
+msgstr "Session Layer"
 
 #: ../../source/network/basic.rst:58
 msgid "提供节点之间通信过程的协调"
-msgstr ""
+msgstr "Coordinates the communication process between nodes"
 
 #: ../../source/network/basic.rst:59
 msgid "负责执行会话规则（如：连接是否允许半双工或全双工通信）、同步数据流以及当故障发生时重新建立连接"
-msgstr ""
+msgstr "Enforces session rules, such as whether a connection allows half-duplex or full-duplex communication, synchronizes data streams, and reestablishes connections when failures occur"
 
 #: ../../source/network/basic.rst:60
 msgid "使用上面的表示层和下面的传输层的功能"
-msgstr ""
+msgstr "Uses the functions of the presentation layer above and the transport layer below"
 
 #: ../../source/network/basic.rst:63
 msgid "表示层"
-msgstr ""
+msgstr "Presentation Layer"
 
 #: ../../source/network/basic.rst:64
 msgid "提供数据格式、变换和编码转换"
-msgstr ""
+msgstr "Provides data formatting, transformation, and encoding conversion"
 
 #: ../../source/network/basic.rst:65
 msgid "涉及正在传输数据的语法和语义"
-msgstr ""
+msgstr "Handles the syntax and semantics of data being transmitted"
 
 #: ../../source/network/basic.rst:66
 msgid "将消息以合适电子传输的格式编码"
-msgstr ""
+msgstr "Encodes messages into a format suitable for electronic transmission"
 
 #: ../../source/network/basic.rst:67
 msgid "执行该层的数据压缩和加密"
-msgstr ""
+msgstr "Performs data compression and encryption at this layer"
 
 #: ../../source/network/basic.rst:68
 msgid "从应用层接收消息，转换格式，并传送到会话层，该层常合并在应用层中"
-msgstr ""
+msgstr "Receives messages from the application layer, converts their format, and passes them to the session layer; this layer is often merged into the application layer"
 
 #: ../../source/network/basic.rst:71
 msgid "应用层"
-msgstr ""
+msgstr "Application Layer"
 
 #: ../../source/network/basic.rst:72
 msgid "包括各种协议，它们定义了具体的面向用户的应用：如电子邮件、文件传输等"
-msgstr ""
+msgstr "Includes various protocols that define specific user-facing applications, such as email and file transfer"
 
 #: ../../source/network/basic.rst:75
 msgid "总结"
-msgstr ""
+msgstr "Summary"
 
 #: ../../source/network/basic.rst:76
 msgid ""
 "低三层模型属于通信子网，涉及为用户间提供透明连接，操作主要以每条链路（ hop-by-"
 "hop）为基础，在节点间的各条数据链路上进行通信。由网络层来控制各条链路上的通信，但要依赖于其他节点的协调操作。"
-msgstr ""
+msgstr "The lower three layers belong to the communication subnet and provide transparent connections between users. Operations are mainly performed link by link (hop-by-hop), with communication occurring over each data link between nodes. The network layer controls communication on each link, but it depends on coordination with other nodes."
 
 #: ../../source/network/basic.rst:78
 msgid "高三层属于资源子网，主要涉及保证信息以正确可理解形式传送。"
-msgstr ""
+msgstr "The upper three layers belong to the resource subnet and mainly ensure that information is delivered in a correct and understandable form."
 
 #: ../../source/network/basic.rst:80
 msgid "传输层是高三层和低三层之间的接口，它是第一个端到端的层次，保证透明的端到端连接，满足用户的服务质量（QoS）要求，并向高三层提供合适的信息形式。"
-msgstr ""
+msgstr "The transport layer is the interface between the upper three layers and the lower three layers. It is the first end-to-end layer, provides transparent end-to-end connections, meets users' quality of service (QoS) requirements, and provides an appropriate information form to the upper three layers."

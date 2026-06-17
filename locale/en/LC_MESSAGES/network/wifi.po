@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,84 +20,92 @@ msgstr ""
 
 #: ../../source/network/wifi.rst:2
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: ../../source/network/wifi.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/wifi.rst:6
 msgid "Wi-Fi又称“无线热点”或“无线网络”，是Wi-Fi联盟的商标，一个基于IEEE 802.11标准的无线局域网技术。"
-msgstr ""
+msgstr "Wi-Fi, also known as a wireless hotspot or wireless network, is a trademark of the Wi-Fi Alliance and a wireless LAN technology based on the IEEE 802.11 standard."
 
 #: ../../source/network/wifi.rst:9
 msgid "攻击"
-msgstr ""
+msgstr "Attacks"
 
 #: ../../source/network/wifi.rst:12
 msgid "暴力破解"
-msgstr ""
+msgstr "Brute Force"
 
 #: ../../source/network/wifi.rst:13
 msgid "WiFi密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。"
-msgstr ""
+msgstr "Wi-Fi passwords are based on pre-shared keys. After capturing packets, an attacker can quickly perform bulk password brute-force attempts locally."
 
 #: ../../source/network/wifi.rst:16
 msgid "伪造热点"
-msgstr ""
+msgstr "Fake Hotspots"
 
 #: ../../source/network/wifi.rst:17
 msgid "AP可以动态的广播自己，客户也可以主动发送探针请求。可以伪造AP发送对探针请求的响应包，来让客户端错误的识别。"
-msgstr ""
+msgstr "An AP can dynamically broadcast itself, and clients can also actively send probe requests. A forged AP can send responses to those probe requests and cause clients to identify it incorrectly."
 
 #: ../../source/network/wifi.rst:20
 msgid "秘钥重装攻击"
-msgstr ""
+msgstr "Key Reinstallation Attacks"
 
 #: ../../source/network/wifi.rst:21
 msgid "该漏洞由Vanhoef发现。Wi-Fi在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。"
-msgstr ""
+msgstr "This vulnerability was discovered by Vanhoef. During a Wi-Fi handshake, both sides update keys; this attack replays handshake messages so that the client reinstalls the same key."
 
 #: ../../source/network/wifi.rst:24
 msgid "Dragonblood"
-msgstr ""
+msgstr "Dragonblood"
 
 #: ../../source/network/wifi.rst:25
 msgid "最新版的WPA3标准在实现上存在一些问题，同样由Vanhoef发现。包含拒绝服务攻击、降级攻击、侧信道泄露等。"
-msgstr ""
+msgstr "The latest WPA3 standard had several implementation issues, also discovered by Vanhoef, including denial-of-service attacks, downgrade attacks, and side-channel leaks."
 
 #: ../../source/network/wifi.rst:28
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/network/wifi.rst:29
 msgid "`Wi-Fi Alliance <https://www.wi-fi.org/>`_"
-msgstr ""
+msgstr "`Wi-Fi Alliance <https://www.wi-fi.org/>`_"
 
 #: ../../source/network/wifi.rst:30
 msgid ""
 "`Dragonblood <https://papers.mathyvanhoef.com/dragonblood.pdf>`_ : "
 "Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd"
 msgstr ""
+"`Dragonblood <https://papers.mathyvanhoef.com/dragonblood.pdf>`_ : "
+"Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd"
 
 #: ../../source/network/wifi.rst:31
 msgid ""
 "`Improving Privacy through Fast Passive Wi-Fi Scanning "
 "<https://papers.mathyvanhoef.com/nordsec2019.pdf>`_"
 msgstr ""
+"`Improving Privacy through Fast Passive Wi-Fi Scanning "
+"<https://papers.mathyvanhoef.com/nordsec2019.pdf>`_"
 
 #: ../../source/network/wifi.rst:32
 msgid ""
 "`Practical Side-Channel Attacks against WPA-TKIP "
 "<https://papers.mathyvanhoef.com/asiaccs2019.pdf>`_"
 msgstr ""
+"`Practical Side-Channel Attacks against WPA-TKIP "
+"<https://papers.mathyvanhoef.com/asiaccs2019.pdf>`_"
 
 #: ../../source/network/wifi.rst:33
 msgid ""
 "`Key Reinstallation Attacks: Breaking the WPA2 Protocol "
 "<https://papers.mathyvanhoef.com/blackhat-eu2017.pdf>`_"
 msgstr ""
+"`Key Reinstallation Attacks: Breaking the WPA2 Protocol "
+"<https://papers.mathyvanhoef.com/blackhat-eu2017.pdf>`_"
 
 #: ../../source/network/wifi.rst:34
 msgid "`RFC 7664 Dragonfly Key Exchange <https://tools.ietf.org/html/rfc7664>`_"
-msgstr ""
+msgstr "`RFC 7664 Dragonfly Key Exchange <https://tools.ietf.org/html/rfc7664>`_"

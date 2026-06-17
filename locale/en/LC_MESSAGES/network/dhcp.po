@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,90 +20,114 @@ msgstr ""
 
 #: ../../source/network/dhcp.rst:2
 msgid "DHCP协议"
-msgstr ""
+msgstr "DHCP Protocol"
 
 #: ../../source/network/dhcp.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/dhcp.rst:6
 msgid ""
 "动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP) "
 "是一个用于局域网的网络协议，位于OSI模型的应用层，使用UDP协议工作，主要用于自动分配IP地址给用户，方便管理员进行统一管理。"
 msgstr ""
+"Dynamic Host Configuration Protocol (DHCP) is a network protocol used on "
+"local area networks. It operates at the application layer of the OSI model, "
+"uses UDP, and is mainly used to automatically assign IP addresses to users so "
+"administrators can manage them centrally."
 
 #: ../../source/network/dhcp.rst:8
 msgid "DHCP服务器端使用67/udp，客户端使用68/udp。DHCP运行分为四个基本过程，分别为请求IP租约、提供IP租约、选择IP租约和确认IP租约。客户端在获得了一个IP地址以后，就可以发送一个ARP请求来避免由于DHCP服务器地址池重叠而引发的IP冲突。"
-msgstr ""
+msgstr "A DHCP server uses 67/udp, while the client uses 68/udp. DHCP operation is divided into four basic steps: requesting an IP lease, offering an IP lease, selecting an IP lease, and acknowledging the IP lease. After a client obtains an IP address, it can send an ARP request to avoid IP conflicts caused by overlapping DHCP server address pools."
 
 #: ../../source/network/dhcp.rst:11
 msgid "DCHP 报文格式"
-msgstr ""
+msgstr "DHCP Message Format"
 
 #: ../../source/network/dhcp.rst:40
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/network/dhcp.rst:41
 msgid ""
 "`DHCP Wiki "
 "<https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol>`_"
 msgstr ""
+"`DHCP Wiki "
+"<https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol>`_"
 
 #: ../../source/network/dhcp.rst:44
 msgid "RFC"
-msgstr ""
+msgstr "RFC"
 
 #: ../../source/network/dhcp.rst:45
 msgid ""
 "`RFC 2131 Dynamic Host Configuration Protocol "
 "<https://tools.ietf.org/html/rfc2131>`_"
 msgstr ""
+"`RFC 2131 Dynamic Host Configuration Protocol "
+"<https://tools.ietf.org/html/rfc2131>`_"
 
 #: ../../source/network/dhcp.rst:46
 msgid ""
 "`RFC 2132 DHCP Options and BOOTP Vendor Extensions "
 "<https://tools.ietf.org/html/rfc2132>`_"
 msgstr ""
+"`RFC 2132 DHCP Options and BOOTP Vendor Extensions "
+"<https://tools.ietf.org/html/rfc2132>`_"
 
 #: ../../source/network/dhcp.rst:47
 msgid ""
 "`RFC 3046 DHCP Relay Agent Information Option "
 "<https://tools.ietf.org/html/rfc3046>`_"
 msgstr ""
+"`RFC 3046 DHCP Relay Agent Information Option "
+"<https://tools.ietf.org/html/rfc3046>`_"
 
 #: ../../source/network/dhcp.rst:48
 msgid ""
 "`RFC 3397 Dynamic Host Configuration Protocol (DHCP) Domain Search Option"
 " <https://tools.ietf.org/html/rfc3397>`_"
 msgstr ""
+"`RFC 3397 Dynamic Host Configuration Protocol (DHCP) Domain Search Option"
+" <https://tools.ietf.org/html/rfc3397>`_"
 
 #: ../../source/network/dhcp.rst:49
 msgid ""
 "`RFC 3442 Classless Static Route Option for Dynamic Host Configuration "
 "Protocol (DHCP) version 4 <https://tools.ietf.org/html/rfc3442>`_"
 msgstr ""
+"`RFC 3442 Classless Static Route Option for Dynamic Host Configuration "
+"Protocol (DHCP) version 4 <https://tools.ietf.org/html/rfc3442>`_"
 
 #: ../../source/network/dhcp.rst:50
 msgid ""
 "`RFC 3942 Reclassifying Dynamic Host Configuration Protocol Version Four "
 "(DHCPv4) Options <https://tools.ietf.org/html/rfc3942>`_"
 msgstr ""
+"`RFC 3942 Reclassifying Dynamic Host Configuration Protocol Version Four "
+"(DHCPv4) Options <https://tools.ietf.org/html/rfc3942>`_"
 
 #: ../../source/network/dhcp.rst:51
 msgid ""
 "`RFC 4242 Information Refresh Time Option for Dynamic Host Configuration "
 "Protocol for IPv6 <https://tools.ietf.org/html/rfc4242>`_"
 msgstr ""
+"`RFC 4242 Information Refresh Time Option for Dynamic Host Configuration "
+"Protocol for IPv6 <https://tools.ietf.org/html/rfc4242>`_"
 
 #: ../../source/network/dhcp.rst:52
 msgid ""
 "`RFC 4361 Node-specific Client Identifiers for Dynamic Host Configuration"
 " Protocol Version Four (DHCPv4) <https://tools.ietf.org/html/rfc4361>`_"
 msgstr ""
+"`RFC 4361 Node-specific Client Identifiers for Dynamic Host Configuration"
+" Protocol Version Four (DHCPv4) <https://tools.ietf.org/html/rfc4361>`_"
 
 #: ../../source/network/dhcp.rst:53
 msgid ""
 "`RFC 4436 Detecting Network Attachment in IPv4 (DNAv4) "
 "<https://tools.ietf.org/html/rfc4436>`_"
 msgstr ""
+"`RFC 4436 Detecting Network Attachment in IPv4 (DNAv4) "
+"<https://tools.ietf.org/html/rfc4436>`_"
