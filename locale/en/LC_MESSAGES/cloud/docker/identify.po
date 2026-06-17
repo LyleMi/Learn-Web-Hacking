@@ -20,76 +20,76 @@ msgstr ""
 
 #: ../../source/cloud/docker/identify.rst:2
 msgid "Docker 环境识别"
-msgstr ""
+msgstr "Docker Environment Identification"
 
 #: ../../source/cloud/docker/identify.rst:5
 msgid "Docker内"
-msgstr ""
+msgstr "Inside Docker"
 
 #: ../../source/cloud/docker/identify.rst:6
 msgid "MAC地址为 ``02:42:ac:11:00:00`` - ``02:42:ac:11:ff:ff``"
-msgstr ""
+msgstr "The MAC address is in the range ``02:42:ac:11:00:00`` - ``02:42:ac:11:ff:ff``"
 
 #: ../../source/cloud/docker/identify.rst:7
 msgid "``ps aux`` 大部分运行的程序 pid 都很小"
-msgstr ""
+msgstr "In ``ps aux``, most running programs have small pids"
 
 #: ../../source/cloud/docker/identify.rst:8
 msgid "``cat /proc/1/cgroup`` docker的进程"
-msgstr ""
+msgstr "``cat /proc/1/cgroup`` shows docker-related processes"
 
 #: ../../source/cloud/docker/identify.rst:9
 msgid "docker 环境下存在 ``.dockerenv``"
-msgstr ""
+msgstr "``.dockerenv`` exists in a docker environment"
 
 #: ../../source/cloud/docker/identify.rst:10
 msgid "部分容器中缺少许多常用的命令如 ``ping`` 等"
-msgstr ""
+msgstr "Some containers lack many common commands, such as ``ping``"
 
 #: ../../source/cloud/docker/identify.rst:13
 msgid "Docker外"
-msgstr ""
+msgstr "Outside Docker"
 
 #: ../../source/cloud/docker/identify.rst:14
 msgid "``/var/run/docker.sock`` 文件存在"
-msgstr ""
+msgstr "The ``/var/run/docker.sock`` file exists"
 
 #: ../../source/cloud/docker/identify.rst:15
 msgid "``2375`` / ``2376`` 端口开启"
-msgstr ""
+msgstr "Ports ``2375`` / ``2376`` are open"
 
 #: ../../source/cloud/docker/identify.rst:18
 msgid "容器内信息收集"
-msgstr ""
+msgstr "Information Gathering Inside Containers"
 
 #: ../../source/cloud/docker/identify.rst:19
 msgid "用户信息 (当前用户、用户列表)"
-msgstr ""
+msgstr "User information (current user and user list)"
 
 #: ../../source/cloud/docker/identify.rst:20
 msgid "操作系统与内核版本"
-msgstr ""
+msgstr "Operating system and kernel version"
 
 #: ../../source/cloud/docker/identify.rst:21
 msgid "运行进程信息 (进程名、权限等)"
-msgstr ""
+msgstr "Running process information (process names, privileges, and so on)"
 
 #: ../../source/cloud/docker/identify.rst:22
 msgid "容器是否为特权容器"
-msgstr ""
+msgstr "Whether the container is a privileged container"
 
 #: ../../source/cloud/docker/identify.rst:23
 msgid "环境变量"
-msgstr ""
+msgstr "Environment variables"
 
 #: ../../source/cloud/docker/identify.rst:24
 msgid "判断容器挂载信息，尝试挂载Docker Socket"
-msgstr ""
+msgstr "Check container mount information and try to mount the Docker Socket"
 
 #: ../../source/cloud/docker/identify.rst:25
 msgid "网络环境，判断可以到达的网段"
-msgstr ""
+msgstr "Network environment and reachable network segments"
 
 #: ../../source/cloud/docker/identify.rst:26
 msgid "在云环境中，尝试获取元数据信息"
-msgstr ""
+msgstr "In cloud environments, try to obtain metadata information"

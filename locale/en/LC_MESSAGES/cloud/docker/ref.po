@@ -20,86 +20,86 @@ msgstr ""
 
 #: ../../source/cloud/docker/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/cloud/docker/ref.rst:5
 msgid "安全分析"
-msgstr ""
+msgstr "Security Analysis"
 
 #: ../../source/cloud/docker/ref.rst:6
 msgid ""
 "`A House of Cards An Exploration of Security When Building Docker "
 "Containers <https://blog.heroku.com/exploration-of-security-when-"
 "building-docker-containers>`_"
-msgstr ""
+msgstr "`A House of Cards An Exploration of Security When Building Docker Containers <https://blog.heroku.com/exploration-of-security-when-building-docker-containers>`_"
 
 #: ../../source/cloud/docker/ref.rst:7
 msgid ""
 "`Privileged Docker Containers <http://obrown.io/2016/02/15/privileged-"
 "containers.html>`_"
-msgstr ""
+msgstr "`Privileged Docker Containers <http://obrown.io/2016/02/15/privileged-containers.html>`_"
 
 #: ../../source/cloud/docker/ref.rst:8
 msgid "`32c3 docker writeup <https://kitctf.de/writeups/32c3ctf/docker>`_"
-msgstr ""
+msgstr "`32c3 docker writeup <https://kitctf.de/writeups/32c3ctf/docker>`_"
 
 #: ../../source/cloud/docker/ref.rst:9
 msgid "`打造安全的容器云平台 <https://blog.qiniu.com/archives/7743>`_"
-msgstr ""
+msgstr "`Building a Secure Container Cloud Platform <https://blog.qiniu.com/archives/7743>`_"
 
 #: ../../source/cloud/docker/ref.rst:10
 msgid "`Docker security <https://docs.docker.com/engine/security/security/>`_"
-msgstr ""
+msgstr "`Docker security <https://docs.docker.com/engine/security/security/>`_"
 
 #: ../../source/cloud/docker/ref.rst:11
 msgid "`容器安全 <http://blog.nsfocus.net/docker-mirror-security/>`_"
-msgstr ""
+msgstr "`Container Security <http://blog.nsfocus.net/docker-mirror-security/>`_"
 
 #: ../../source/cloud/docker/ref.rst:12
 msgid ""
 "`CVE-2017-7494 Docker沙箱逃逸 <https://strm.sh/post/abusing-insecure-docker-"
 "deployments/>`_"
-msgstr ""
+msgstr "`CVE-2017-7494 Docker Sandbox Escape <https://strm.sh/post/abusing-insecure-docker-deployments/>`_"
 
 #: ../../source/cloud/docker/ref.rst:13
 msgid "`Docker容器安全性分析 <https://www.freebuf.com/articles/system/221319.html>`_"
-msgstr ""
+msgstr "`Docker Container Security Analysis <https://www.freebuf.com/articles/system/221319.html>`_"
 
 #: ../../source/cloud/docker/ref.rst:14
 msgid ""
 "`AppArmor security profiles for Docker "
 "<https://docs.docker.com/engine/security/apparmor/>`_"
-msgstr ""
+msgstr "`AppArmor security profiles for Docker <https://docs.docker.com/engine/security/apparmor/>`_"
 
 #: ../../source/cloud/docker/ref.rst:15
 msgid ""
 "`Docker Bench for Security <https://github.com/docker/docker-bench-"
 "security>`_"
-msgstr ""
+msgstr "`Docker Bench for Security <https://github.com/docker/docker-bench-security>`_"
 
 #: ../../source/cloud/docker/ref.rst:16
 msgid "`Docker安全性与攻击面分析 <https://mp.weixin.qq.com/s/d9D3z13uCOJoJzplpu3WJQ>`_"
-msgstr ""
+msgstr "`Docker Security and Attack Surface Analysis <https://mp.weixin.qq.com/s/d9D3z13uCOJoJzplpu3WJQ>`_"
 
 #: ../../source/cloud/docker/ref.rst:17
 msgid ""
 "Pfleeger C P , Pfleeger S L , Theofanos M F . A methodology for "
 "penetration testing[J]. Computers & Security, 1989, 8(7):613-620."
-msgstr ""
+msgstr "Pfleeger C P , Pfleeger S L , Theofanos M F . A methodology for penetration testing[J]. Computers & Security, 1989, 8(7):613-620."
 
 #: ../../source/cloud/docker/ref.rst:18
 msgid ""
 "`7 Ways to Escape a Container <https://www.panoptica.app/research/7-ways-"
 "to-escape-a-container>`"
-msgstr ""
+msgstr "`7 Ways to Escape a Container <https://www.panoptica.app/research/7-ways-to-escape-a-container>`"
 
 #: ../../source/cloud/docker/ref.rst:21
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../source/cloud/docker/ref.rst:22
 msgid ""
 "`Container Base Images <https://learn.microsoft.com/en-"
 "us/virtualization/windowscontainers/manage-containers/container-base-"
 "images>`_"
-msgstr ""
+msgstr "`Container Base Images <https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/container-base-images>`_"

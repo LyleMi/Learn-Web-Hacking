@@ -20,223 +20,223 @@ msgstr ""
 
 #: ../../source/cloud/docker/basic.rst:2
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: ../../source/cloud/docker/basic.rst:3
 msgid "Docker是目前最具代表性的容器平台之一，具有持续部署与测试、跨云平台支持等优点。在基于Kubernetes等容器编排工具实现的容器云环境中，通过对跨主机集群资源的调度，容器云可提供资源共享与隔离、容器编排与部署、应用支撑等功能。"
-msgstr ""
+msgstr "Docker is one of today's most representative container platforms. It provides advantages such as continuous deployment and testing, as well as cross-cloud platform support. In a container cloud environment built on container orchestration tools such as Kubernetes, container clouds can schedule resources across host clusters and provide resource sharing and isolation, container orchestration and deployment, and application support."
 
 #: ../../source/cloud/docker/basic.rst:6
 msgid "基本概念"
-msgstr ""
+msgstr "Basic Concepts"
 
 #: ../../source/cloud/docker/basic.rst:7
 msgid ""
 "Docker有三个基本概念，镜像（Image）、容器（Container）、仓库（Repository）。镜像是一个只读的模版，由一组文件系统通过Union"
 " FS技术组成。"
-msgstr ""
+msgstr "Docker has three basic concepts: Image, Container, and Repository. An image is a read-only template composed of a set of file systems through Union FS."
 
 #: ../../source/cloud/docker/basic.rst:9
 msgid "镜像是静态的定义，容器是从镜像创建的运行实例。容器的本质是进程，拥有自己独立的命名空间。"
-msgstr ""
+msgstr "An image is a static definition, while a container is a running instance created from an image. A container is essentially a process with its own independent namespace."
 
 #: ../../source/cloud/docker/basic.rst:11
 msgid "仓库（Repository） 是集中存放镜像文件的场所，用于存储、分发镜像。"
-msgstr ""
+msgstr "A Repository is a centralized place for image files, used to store and distribute images."
 
 #: ../../source/cloud/docker/basic.rst:13
 msgid ""
 "容器可以被启动、开始、停止、删除，每个容器都是相互隔离的，可以把容器看做是一个简易版的 Linux "
 "环境（包括root用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。"
-msgstr ""
+msgstr "Containers can be started, run, stopped, and deleted. Each container is isolated from the others. A container can be viewed as a lightweight Linux environment, including root privileges, process space, user space, and network space, together with the application running inside it."
 
 #: ../../source/cloud/docker/basic.rst:16
 msgid "组成"
-msgstr ""
+msgstr "Components"
 
 #: ../../source/cloud/docker/basic.rst:17
 msgid ""
 "Docker引擎由如下主要组件构成：Docker客户端（Docker Client）、Docker守护进程（Docker "
 "daemon）、containerd以及RunC，它们共同负责容器的创建和运行。"
-msgstr ""
+msgstr "The Docker Engine consists of the following main components: Docker Client, Docker daemon, containerd, and RunC. Together they are responsible for creating and running containers."
 
 #: ../../source/cloud/docker/basic.rst:19
 msgid ""
 "Docker Client是和Docker Daemon建立通信客户端，Docker Client可以通过http/unix "
 "socket等方式Daemon建立通信。"
-msgstr ""
+msgstr "Docker Client is the client that communicates with Docker Daemon. Docker Client can communicate with the daemon over HTTP, Unix socket, and other mechanisms."
 
 #: ../../source/cloud/docker/basic.rst:21
 msgid ""
 "Docker Daemon是容器管理的守护进程，在宿主机运行，作为服务端接受来自客户端的请求，主要功能包括镜像管理、镜像构建、REST "
 "API、身份验证、安全、核心网络以及编排。Docker daemon通过位于 ``/var/run/docker.sock`` 的本地 "
 "IPC/Unix socket 来实现Docker远程API，默认非TLS网络端口为2375，TLS默认端口为2376。"
-msgstr ""
+msgstr "Docker Daemon is the container management daemon running on the host. As the server side, it accepts requests from clients. Its main functions include image management, image building, the REST API, authentication, security, core networking, and orchestration. Docker daemon exposes the Docker remote API through the local IPC/Unix socket at ``/var/run/docker.sock``. The default non-TLS network port is 2375, and the default TLS port is 2376."
 
 #: ../../source/cloud/docker/basic.rst:23
 msgid ""
 "containerd 是容器技术标准化之后出现的，用于将容器运行时从 Docker Daemon 剥离。containerd "
 "主要职责是镜像管理、容器执行。"
-msgstr ""
+msgstr "containerd emerged after container technology was standardized, and is used to separate the container runtime from Docker Daemon. The main responsibilities of containerd are image management and container execution."
 
 #: ../../source/cloud/docker/basic.rst:25
 msgid "RunC 是 Docker 按照OCF标准制定的一种具体实现，实现了容器启动与停止、资源隔离等功能。"
-msgstr ""
+msgstr "RunC is a concrete implementation developed by Docker according to the OCF standard. It implements functions such as container startup and shutdown, and resource isolation."
 
 #: ../../source/cloud/docker/basic.rst:28
 msgid "数据"
-msgstr ""
+msgstr "Data"
 
 #: ../../source/cloud/docker/basic.rst:29
 msgid ""
 "Docker的数据主要分为持久化和非持久化数据，默认情况下非持久化存储是自动创建生命周期与容器相同，删除容器也会删除非持久化数据，在Linux环境下，非持久化数据默认存储于"
 " ``/var/lib/docker/`` 下。"
-msgstr ""
+msgstr "Docker data is mainly divided into persistent and non-persistent data. By default, non-persistent storage is created automatically and has the same lifecycle as the container. Deleting the container also deletes its non-persistent data. On Linux, non-persistent data is stored under ``/var/lib/docker/`` by default."
 
 #: ../../source/cloud/docker/basic.rst:32
 msgid "网络"
-msgstr ""
+msgstr "Networking"
 
 #: ../../source/cloud/docker/basic.rst:33
 msgid "Docker网络架构源自一种叫作容器网络模型的方案，主要由CNM、Libnetwork、网络驱动构程。"
-msgstr ""
+msgstr "Docker's network architecture is derived from a design called the Container Network Model. It mainly consists of CNM, Libnetwork, and network drivers."
 
 #: ../../source/cloud/docker/basic.rst:36
 msgid "安全风险与安全机制"
-msgstr ""
+msgstr "Security Risks and Security Mechanisms"
 
 #: ../../source/cloud/docker/basic.rst:37
 msgid "在考虑Docker安全性的时候主要考虑以下几点"
-msgstr ""
+msgstr "When considering Docker security, focus mainly on the following points:"
 
 #: ../../source/cloud/docker/basic.rst:39
 msgid "内核本身的安全性及其对命名空间和cgroups的支持"
-msgstr ""
+msgstr "The security of the kernel itself and its support for namespaces and cgroups"
 
 #: ../../source/cloud/docker/basic.rst:40
 msgid "Docker守护进程本身的攻击面"
-msgstr ""
+msgstr "The attack surface of the Docker daemon itself"
 
 #: ../../source/cloud/docker/basic.rst:41
 msgid "内核的“强化”安全功能以及它们如何与容器进行交互"
-msgstr ""
+msgstr "The kernel's hardening security features and how they interact with containers"
 
 #: ../../source/cloud/docker/basic.rst:44
 msgid "Docker安全基线"
-msgstr ""
+msgstr "Docker Security Baseline"
 
 #: ../../source/cloud/docker/basic.rst:45
 msgid "|benchsec|"
-msgstr ""
+msgstr "|benchsec|"
 
 #: ../../source/cloud/docker/basic.rst:95
 msgid "benchsec"
-msgstr ""
+msgstr "benchsec"
 
 #: ../../source/cloud/docker/basic.rst:48
 msgid "内核命名空间/namespace"
-msgstr ""
+msgstr "Kernel Namespace"
 
 #: ../../source/cloud/docker/basic.rst:49
 msgid "Docker容器与LXC容器非常相似，并且具有相似的安全特性。当使用docker运行启动容器时，Docker会在后台为容器创建一组命名空间和控制组。"
-msgstr ""
+msgstr "Docker containers are very similar to LXC containers and have similar security properties. When a container is started with docker run, Docker creates a set of namespaces and control groups for the container in the background."
 
 #: ../../source/cloud/docker/basic.rst:51
 msgid "命名空间提供了一个最直接的隔离形式：在容器中运行的进程看不到或者无法影响在另一个容器或主机系统中运行的进程。"
-msgstr ""
+msgstr "Namespaces provide the most direct form of isolation: processes running in one container cannot see or affect processes running in another container or on the host system."
 
 #: ../../source/cloud/docker/basic.rst:53
 msgid "每个容器也有自己的网络堆栈，这意味着一个容器不能获得对另一个容器的套接字或接口的特权访问。当然，如果主机系统相应设置，容器可以通过各自的网络接口交互。如果为容器指定公共端口或使用链接时，容器之间允许IP通信。"
-msgstr ""
+msgstr "Each container also has its own network stack, which means one container cannot obtain privileged access to another container's sockets or interfaces. Of course, if the host system is configured accordingly, containers can interact through their respective network interfaces. IP communication is allowed between containers when public ports are assigned or links are used."
 
 #: ../../source/cloud/docker/basic.rst:55
 msgid "它们可以相互ping通，发送/接收UDP数据包，并建立TCP连接，但是如果需要可以限制它们。从网络体系结构的角度来看，给定Docker主机上的所有容器都位于网桥接口上。这意味着它们就像通过普通的以太网交换机连接的物理机器一样。"
-msgstr ""
+msgstr "They can ping each other, send and receive UDP packets, and establish TCP connections, although these capabilities can be restricted if needed. From a network architecture perspective, all containers on a given Docker host are connected to a bridge interface. This means they behave like physical machines connected through a normal Ethernet switch."
 
 #: ../../source/cloud/docker/basic.rst:58
 msgid "Control Group"
-msgstr ""
+msgstr "Control Group"
 
 #: ../../source/cloud/docker/basic.rst:59
 msgid "控制组是Linux容器的另一个关键组件，主要作用是实施资源核算和限制。"
-msgstr ""
+msgstr "Control groups are another key component of Linux containers. Their main role is to enforce resource accounting and limits."
 
 #: ../../source/cloud/docker/basic.rst:61
 msgid ""
 "Cgroup 提供了许多有用的度量标准，但也有助于确保每个容器都能获得公平的内存，CPU和磁盘I/O; "
 "更重要的是单个容器不能通过耗尽资源的方式来降低系统的性能。"
-msgstr ""
+msgstr "Cgroup provides many useful metrics and also helps ensure that each container receives a fair share of memory, CPU, and disk I/O. More importantly, a single container cannot degrade system performance by exhausting resources."
 
 #: ../../source/cloud/docker/basic.rst:63
 msgid ""
 "因此，尽管 Cgroup "
 "不能阻止一个容器访问或影响另一个容器的数据和进程，但它们对于抵御一些拒绝服务攻击是至关重要的。它们对于多租户平台尤其重要，例如公共和私人PaaS，即使在某些应用程序开始行为不当时也能保证一致的正常运行时间（和性能）。"
-msgstr ""
+msgstr "Therefore, although Cgroup cannot prevent one container from accessing or affecting another container's data and processes, it is essential for defending against some denial-of-service attacks. It is especially important for multi-tenant platforms, such as public and private PaaS environments, where consistent uptime and performance must be maintained even when some applications start behaving badly."
 
 #: ../../source/cloud/docker/basic.rst:66
 msgid "守护进程的攻击面"
-msgstr ""
+msgstr "Daemon Attack Surface"
 
 #: ../../source/cloud/docker/basic.rst:67
 msgid "使用Docker运行容器意味着运行Docker守护进程，而这个守护进程当前需要root权限，因此，守护进程是需要考虑的一个地方。"
-msgstr ""
+msgstr "Running containers with Docker means running the Docker daemon, and this daemon currently requires root privileges. Therefore, the daemon is an important area to consider."
 
 #: ../../source/cloud/docker/basic.rst:69
 msgid "首先，只有受信任的用户才能被允许控制Docker守护进程。具体来说，Docker允许您在Docker主机和访客容器之间共享一个目录;它允许你这样做而不限制容器的访问权限。这意味着可以启动一个容器，其中/host目录将成为主机上的/目录，容器将能够不受任何限制地改变主机文件系统。"
-msgstr ""
+msgstr "First, only trusted users should be allowed to control the Docker daemon. Specifically, Docker allows a directory to be shared between the Docker host and a guest container, and it does so without restricting the container's access permissions. This means a container can be started where the /host directory maps to / on the host, allowing the container to modify the host file system without restriction."
 
 #: ../../source/cloud/docker/basic.rst:71
 msgid "这具有很强的安全意义：例如，如果通过Web服务器测试Docker以通过API配置容器，则应该更加仔细地进行参数检查，以确保恶意用户无法传递制作的参数，从而导致Docker创建任意容器。"
-msgstr ""
+msgstr "This has significant security implications. For example, if Docker is exposed through a web server so containers can be configured via an API, parameter validation should be performed very carefully to ensure malicious users cannot pass crafted parameters that cause Docker to create arbitrary containers."
 
 #: ../../source/cloud/docker/basic.rst:73
 msgid "守护进程也可能容易受到其他输入的影响，例如从具有docker负载的磁盘或从具有docker pull的网络加载映像。"
-msgstr ""
+msgstr "The daemon may also be affected by other inputs, such as images loaded from disk with docker load or pulled from the network with docker pull."
 
 #: ../../source/cloud/docker/basic.rst:75
 msgid "最终，预计Docker守护进程将运行受限特权，将操作委托给审核良好的子进程，每个子进程都有自己的（非常有限的）Linux功能范围，虚拟网络设置，文件系统管理等。也就是说，很可能，Docker引擎本身的部分将在容器中运行。"
-msgstr ""
+msgstr "Eventually, the Docker daemon is expected to run with limited privileges and delegate operations to well-audited subprocesses, each with its own very limited set of Linux capabilities, virtual network setup, file system management, and so on. In other words, parts of the Docker Engine itself may run inside containers."
 
 #: ../../source/cloud/docker/basic.rst:78
 msgid "Capability"
-msgstr ""
+msgstr "Capability"
 
 #: ../../source/cloud/docker/basic.rst:79
 msgid "默认情况下，Docker采用Capability机制来实现用户在以root身份运行容器的同时，限制部分root的操作。"
-msgstr ""
+msgstr "By default, Docker uses the capability mechanism to allow users to run containers as root while restricting some root operations."
 
 #: ../../source/cloud/docker/basic.rst:81
 msgid "在大多数情况下，容器不需要真正的root权限。因此，Docker可以运行一个Capability较低的集合，这意味着容器中的root比真正的root要少得多。例如："
-msgstr ""
+msgstr "In most cases, containers do not need true root privileges. Therefore, Docker can run with a reduced set of capabilities, which means root inside a container has far less power than real root. For example:"
 
 #: ../../source/cloud/docker/basic.rst:83
 msgid "否认所有挂载操作"
-msgstr ""
+msgstr "Deny all mount operations"
 
 #: ../../source/cloud/docker/basic.rst:84
 msgid "拒绝访问原始套接字（防止数据包欺骗）"
-msgstr ""
+msgstr "Deny access to raw sockets to prevent packet spoofing"
 
 #: ../../source/cloud/docker/basic.rst:85
 msgid "拒绝访问某些文件系统操作，如创建新的设备节点，更改文件的所有者或修改属性（包括不可变标志）"
-msgstr ""
+msgstr "Deny certain file system operations, such as creating new device nodes, changing file owners, or modifying attributes, including the immutable flag"
 
 #: ../../source/cloud/docker/basic.rst:86
 msgid "拒绝模块加载"
-msgstr ""
+msgstr "Deny module loading"
 
 #: ../../source/cloud/docker/basic.rst:87
 msgid "其他"
-msgstr ""
+msgstr "Others"
 
 #: ../../source/cloud/docker/basic.rst:89
 msgid "这意味着，即使入侵者在容器内获取root权限，进一步攻击也会困难很多。默认情况下，Docker使用白名单而不是黑名单，去除了所有非必要的功能。"
-msgstr ""
+msgstr "This means that even if an intruder obtains root privileges inside a container, further attacks become much more difficult. By default, Docker uses a whitelist rather than a blacklist and removes all unnecessary capabilities."
 
 #: ../../source/cloud/docker/basic.rst:92
 msgid "Seccomp"
-msgstr ""
+msgstr "Seccomp"
 
 #: ../../source/cloud/docker/basic.rst:93
 msgid "Docker使用Seccomp来限制容器对宿主机内核发起的系统调用。"
-msgstr ""
+msgstr "Docker uses Seccomp to restrict the system calls that containers can make to the host kernel."

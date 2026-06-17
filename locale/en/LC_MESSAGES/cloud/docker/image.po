@@ -20,54 +20,54 @@ msgstr ""
 
 #: ../../source/cloud/docker/image.rst:2
 msgid "镜像"
-msgstr ""
+msgstr "Images"
 
 #: ../../source/cloud/docker/image.rst:5
 msgid "基本概念"
-msgstr ""
+msgstr "Basic Concepts"
 
 #: ../../source/cloud/docker/image.rst:6
 msgid "Docker 镜像可以看作是一个特殊的文件系统，用于提供容器运行时所需的文件，同时镜像还包含了一些为运行时准备的一些信息（环境变量、用户等）。"
-msgstr ""
+msgstr "A Docker image can be regarded as a special file system that provides the files required at container runtime. The image also contains runtime preparation information such as environment variables and users."
 
 #: ../../source/cloud/docker/image.rst:8
 msgid "在构建之后镜像不会被改变，即是说镜像中不会包含动态的数据。"
-msgstr ""
+msgstr "After an image is built, it is not changed. In other words, images do not contain dynamic data."
 
 #: ../../source/cloud/docker/image.rst:11
 msgid "Windows 镜像"
-msgstr ""
+msgstr "Windows Images"
 
 #: ../../source/cloud/docker/image.rst:12
 msgid ""
 "由于 Windows 并不直接开放 syscall ，所有的 Windows 程序都必须通过 sys dll 与内核沟通，这就导致 Windows"
 " 镜像并不能直接通过 scratch 来构建，只能基于微软提供的几个基础镜像来构建。"
-msgstr ""
+msgstr "Because Windows does not expose syscalls directly, all Windows programs must communicate with the kernel through system DLLs. As a result, Windows images cannot be built directly from scratch and can only be built on top of several base images provided by Microsoft."
 
 #: ../../source/cloud/docker/image.rst:14
 msgid "镜像包括："
-msgstr ""
+msgstr "The images include:"
 
 #: ../../source/cloud/docker/image.rst:16
 msgid ""
 "`windows servercore <https://hub.docker.com/_/microsoft-windows-"
 "servercore>`_ 功能最完整，包含传统的 .net framework 环境"
-msgstr ""
+msgstr "`windows servercore <https://hub.docker.com/_/microsoft-windows-servercore>`_ has the most complete functionality and includes the traditional .NET Framework environment"
 
 #: ../../source/cloud/docker/image.rst:17
 msgid ""
 "`windows nanoserver <https://hub.docker.com/_/microsoft-windows-"
 "nanoserver>`_ 包含 .net core 运行环境"
-msgstr ""
+msgstr "`windows nanoserver <https://hub.docker.com/_/microsoft-windows-nanoserver>`_ includes the .NET Core runtime environment"
 
 #: ../../source/cloud/docker/image.rst:18
 msgid ""
 "`windows <https://hub.docker.com/_/microsoft-windows>`_ 提供完整的 windows "
 "server api，正在被 windows server 替代"
-msgstr ""
+msgstr "`windows <https://hub.docker.com/_/microsoft-windows>`_ provides the full Windows Server API and is being replaced by windows server"
 
 #: ../../source/cloud/docker/image.rst:19
 msgid ""
 "`windows server <https://hub.docker.com/_/microsoft-windows-server/>`_ "
 "提供完整的 windows server api"
-msgstr ""
+msgstr "`windows server <https://hub.docker.com/_/microsoft-windows-server/>`_ provides the full Windows Server API"
