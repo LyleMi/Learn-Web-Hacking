@@ -20,12 +20,12 @@ msgstr ""
 
 #: ../../source/defense/zt.rst:2
 msgid "零信任安全"
-msgstr ""
+msgstr "Zero Trust Security"
 
 #: ../../source/defense/zt.rst:5
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/zt.rst:6
 msgid "`美国国防部零信任的支柱 <https://mp.weixin.qq.com/s/Fd0iKkGgE6Y1e81tP3MJFQ>`_"
-msgstr ""
+msgstr "`Pillars of Zero Trust in the U.S. Department of Defense <https://mp.weixin.qq.com/s/Fd0iKkGgE6Y1e81tP3MJFQ>`_"

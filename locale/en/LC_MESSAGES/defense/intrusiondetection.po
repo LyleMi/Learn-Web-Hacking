@@ -20,128 +20,128 @@ msgstr ""
 
 #: ../../source/defense/intrusiondetection.rst:2
 msgid "入侵检测"
-msgstr ""
+msgstr "Intrusion Detection"
 
 #: ../../source/defense/intrusiondetection.rst:5
 msgid "IDS与IPS"
-msgstr ""
+msgstr "IDS and IPS"
 
 #: ../../source/defense/intrusiondetection.rst:6
 msgid "IDS与IPS是常见的防护设备，IPS相对IDS的不同点在于，IPS通常具有阻断能力。"
-msgstr ""
+msgstr "IDS and IPS are common defensive devices. Compared with IDS, IPS usually differs in that it has blocking capabilities."
 
 #: ../../source/defense/intrusiondetection.rst:9
 msgid "常见入侵点"
-msgstr ""
+msgstr "Common Intrusion Points"
 
 #: ../../source/defense/intrusiondetection.rst:10
 msgid "Web入侵"
-msgstr ""
+msgstr "Web Intrusion"
 
 #: ../../source/defense/intrusiondetection.rst:11
 msgid "高危服务入侵"
-msgstr ""
+msgstr "Intrusion Through High-Risk Services"
 
 #: ../../source/defense/intrusiondetection.rst:14
 msgid "监控实现"
-msgstr ""
+msgstr "Monitoring Implementation"
 
 #: ../../source/defense/intrusiondetection.rst:17
 msgid "客户端监控"
-msgstr ""
+msgstr "Client-Side Monitoring"
 
 #: ../../source/defense/intrusiondetection.rst:18
 msgid "监控敏感配置文件"
-msgstr ""
+msgstr "Monitor Sensitive Configuration Files"
 
 #: ../../source/defense/intrusiondetection.rst:19
 msgid "常用命令ELF文件完整性监控"
-msgstr ""
+msgstr "Integrity Monitoring for ELF Files of Common Commands"
 
 #: ../../source/defense/intrusiondetection.rst:20
 msgid "``ps``"
-msgstr ""
+msgstr "``ps``"
 
 #: ../../source/defense/intrusiondetection.rst:21
 msgid "``lsof``"
-msgstr ""
+msgstr "``lsof``"
 
 #: ../../source/defense/intrusiondetection.rst:22
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../../source/defense/intrusiondetection.rst:23
 msgid "rootkit监控"
-msgstr ""
+msgstr "Rootkit Monitoring"
 
 #: ../../source/defense/intrusiondetection.rst:24
 msgid "资源使用报警"
-msgstr ""
+msgstr "Resource Usage Alerts"
 
 #: ../../source/defense/intrusiondetection.rst:25
 msgid "内存使用率"
-msgstr ""
+msgstr "Memory Usage"
 
 #: ../../source/defense/intrusiondetection.rst:26
 msgid "CPU使用率"
-msgstr ""
+msgstr "CPU Usage"
 
 #: ../../source/defense/intrusiondetection.rst:27
 msgid "IO使用率"
-msgstr ""
+msgstr "IO Usage"
 
 #: ../../source/defense/intrusiondetection.rst:28
 msgid "网络使用率"
-msgstr ""
+msgstr "Network Usage"
 
 #: ../../source/defense/intrusiondetection.rst:29
 msgid "新出现进程监控"
-msgstr ""
+msgstr "Monitoring Newly Appearing Processes"
 
 #: ../../source/defense/intrusiondetection.rst:30
 msgid "基于inotify的文件监控"
-msgstr ""
+msgstr "inotify-Based File Monitoring"
 
 #: ../../source/defense/intrusiondetection.rst:33
 msgid "网络检测"
-msgstr ""
+msgstr "Network Detection"
 
 #: ../../source/defense/intrusiondetection.rst:34
 msgid "基于网络层面的攻击向量做检测，如Snort等。"
-msgstr ""
+msgstr "Detect network-layer attack vectors, for example with Snort."
 
 #: ../../source/defense/intrusiondetection.rst:37
 msgid "日志分析"
-msgstr ""
+msgstr "Log Analysis"
 
 #: ../../source/defense/intrusiondetection.rst:38
 msgid "将主机系统安全日志/操作日志、网络设备流量日志、Web应用访问日志、SQL应用访问日志等日志集中到一个统一的后台，在后台中对各类日志进行综合的分析。"
-msgstr ""
+msgstr "Centralize host system security logs and operation logs, network device traffic logs, Web application access logs, SQL application access logs, and other logs into a unified backend, then perform comprehensive analysis of each type of log there."
 
 #: ../../source/defense/intrusiondetection.rst:41
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/intrusiondetection.rst:42
 msgid "`企业安全建设之HIDS <https://www.freebuf.com/articles/es/194510.html>`_"
-msgstr ""
+msgstr "`HIDS in Enterprise Security Programs <https://www.freebuf.com/articles/es/194510.html>`_"
 
 #: ../../source/defense/intrusiondetection.rst:43
 msgid "`大型互联网企业入侵检测实战总结 <https://xz.aliyun.com/t/1626/>`_"
-msgstr ""
+msgstr "`Practical Summary of Intrusion Detection in Large Internet Enterprises <https://xz.aliyun.com/t/1626/>`_"
 
 #: ../../source/defense/intrusiondetection.rst:44
 msgid "`同程入侵检测系统 <https://mp.weixin.qq.com/s/kzeAEvz-ejLD71fgb5t8tA>`_"
-msgstr ""
+msgstr "`Tongcheng Intrusion Detection System <https://mp.weixin.qq.com/s/kzeAEvz-ejLD71fgb5t8tA>`_"
 
 #: ../../source/defense/intrusiondetection.rst:45
 msgid "`Web日志安全分析系统实践 <https://xz.aliyun.com/t/2136>`_"
-msgstr ""
+msgstr "`Practice With a Web Log Security Analysis System <https://xz.aliyun.com/t/2136>`_"
 
 #: ../../source/defense/intrusiondetection.rst:46
 msgid "`Web日志安全分析浅谈 <https://xz.aliyun.com/t/1121>`_"
-msgstr ""
+msgstr "`A Brief Discussion of Web Log Security Analysis <https://xz.aliyun.com/t/1121>`_"
 
 #: ../../source/defense/intrusiondetection.rst:47
 msgid "`网络层绕过IDS/IPS的一些探索 <https://mp.weixin.qq.com/s/QJeW7K-KThYHggWtJ-Fh3w>`_"
-msgstr ""
+msgstr "`Exploring Network-Layer IDS/IPS Bypass <https://mp.weixin.qq.com/s/QJeW7K-KThYHggWtJ-Fh3w>`_"

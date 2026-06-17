@@ -20,113 +20,113 @@ msgstr ""
 
 #: ../../source/defense/threat.rst:2
 msgid "威胁情报"
-msgstr ""
+msgstr "Threat Intelligence"
 
 #: ../../source/defense/threat.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/defense/threat.rst:8
 msgid "产生原因"
-msgstr ""
+msgstr "Why It Emerged"
 
 #: ../../source/defense/threat.rst:9
 msgid ""
 "新一代的攻击者常常向企业和组织发起针对性的网络攻击，这种针对性强的攻击，一般经过了精心的策划，攻击方法、途径复杂，后果严重。在面对这种攻击时，攻防存在着严重的不对等，为了尽可能消除这种不对等，威胁情报"
 " (Threat Intelligence) 应运而生。"
-msgstr ""
+msgstr "A new generation of attackers often launches targeted cyberattacks against enterprises and organizations. These highly targeted attacks are usually carefully planned, use complex methods and paths, and have serious consequences. When facing this kind of attack, defenders and attackers operate under a severe asymmetry. Threat Intelligence emerged to reduce that asymmetry as much as possible."
 
 #: ../../source/defense/threat.rst:12
 msgid "定义"
-msgstr ""
+msgstr "Definition"
 
 #: ../../source/defense/threat.rst:13
 msgid ""
 "威胁情报(Threat Intelligence)，也被称作安全情报(Security Intelligence)、安全威胁情报(Security"
 " Threat Intelligence)。"
-msgstr ""
+msgstr "Threat Intelligence is also known as Security Intelligence or Security Threat Intelligence."
 
 #: ../../source/defense/threat.rst:15
 msgid "关于威胁情报的定义有很多，一般是指从安全数据中提炼的，与网络空间威胁相关的信息，包括威胁来源、攻击意图、攻击手法、攻击目标信息，以及可用于解决威胁或应对危害的知识。广义的威胁情报也包括情报的加工生产、分析应用及协同共享机制。相关的概念有资产、威胁、脆弱性等，具体定义如下。"
-msgstr ""
+msgstr "Threat intelligence has many definitions. It generally refers to information extracted from security data that is related to cyberspace threats, including threat sources, attack intent, attack methods, attack target information, and knowledge that can be used to resolve threats or respond to harm. In a broad sense, threat intelligence also includes intelligence processing and production, analytical application, and collaborative sharing mechanisms. Related concepts include assets, threats, and vulnerabilities, as defined below."
 
 #: ../../source/defense/threat.rst:17
 msgid "一般威胁情报需要包含威胁源、攻击目的、攻击对象、攻击手法、漏洞、攻击特征、防御措施等。威胁情报在事前可以起到预警的作用，在威胁发生时可以协助进行检测和响应，在事后可以用于分析和溯源。"
-msgstr ""
+msgstr "Threat intelligence generally needs to include the threat source, attack objective, attack target, attack methods, vulnerabilities, attack characteristics, defensive measures, and related information. Before an incident, threat intelligence can provide early warning. While a threat is occurring, it can assist detection and response. Afterward, it can be used for analysis and attribution."
 
 #: ../../source/defense/threat.rst:19
 msgid "常见的网络威胁情报服务有黑客或欺诈团体分析、社会媒体和开源信息监控、定向漏洞研究、定制的人工分析、实时事件通知、凭据恢复、事故调查、伪造域名检测等。"
-msgstr ""
+msgstr "Common cyber threat intelligence services include analysis of hacker or fraud groups, social media and open source information monitoring, targeted vulnerability research, customized human analysis, real-time incident notifications, credential recovery, incident investigation, and fraudulent domain detection."
 
 #: ../../source/defense/threat.rst:21
 msgid ""
 "在威胁情报方面，比较有代表性的厂商有BAE Systems Applied Intelligence、Booz "
 "Allen、RSA、IBM、McAfee、赛门铁克、FireEye等。"
-msgstr ""
+msgstr "Representative vendors in threat intelligence include BAE Systems Applied Intelligence, Booz Allen, RSA, IBM, McAfee, Symantec, and FireEye."
 
 #: ../../source/defense/threat.rst:24
 msgid "相关概念"
-msgstr ""
+msgstr "Related Concepts"
 
 #: ../../source/defense/threat.rst:27
 msgid "资产(Asset)"
-msgstr ""
+msgstr "Asset"
 
 #: ../../source/defense/threat.rst:28
 msgid "对组织具有价值的信息或资源，属于内部情报，通过资产测绘等方式发现。"
-msgstr ""
+msgstr "Information or resources that have value to an organization. Assets belong to internal intelligence and are discovered through methods such as asset mapping."
 
 #: ../../source/defense/threat.rst:31
 msgid "威胁(Threat)"
-msgstr ""
+msgstr "Threat"
 
 #: ../../source/defense/threat.rst:32
 msgid "能够通过未授权访问、毁坏、揭露、数据修改和或拒绝服务对系统造成潜在危害的起因，威胁可由威胁的主体(威胁源)、能力、资源、动机、途径、可能性和后果等多种属性来刻画"
-msgstr ""
+msgstr "A cause that can potentially harm a system through unauthorized access, destruction, disclosure, data modification, or denial of service. A threat can be characterized by multiple attributes such as the threat actor (threat source), capabilities, resources, motivation, path, likelihood, and consequences."
 
 #: ../../source/defense/threat.rst:35
 msgid "脆弱性 / 漏洞(Vulnerability)"
-msgstr ""
+msgstr "Weakness / Vulnerability"
 
 #: ../../source/defense/threat.rst:36
 msgid "可能被威胁如攻击者利用的资产或若干资产薄弱环节。"
-msgstr ""
+msgstr "A weak point in an asset or group of assets that may be exploited by threats such as attackers."
 
 #: ../../source/defense/threat.rst:38
 msgid "漏洞存在多个周期，最开始由安全研究员或者攻击者发现，而后出现在社区公告/官方邮件/博客中。随着信息的不断地传递，漏洞情报出现在开源社区等地方，并带有PoC和漏洞细节分析。再之后出现自动化工具开始大规模传播，部分漏洞会造成社会影响并被媒体报道，最后漏洞基本修复。"
-msgstr ""
+msgstr "A vulnerability goes through several stages. It is first discovered by security researchers or attackers, then appears in community advisories, official emails, or blogs. As information continues to spread, vulnerability intelligence appears in places such as open source communities, along with PoCs and detailed vulnerability analysis. Later, automated tools emerge and begin to spread at scale. Some vulnerabilities create social impact and are reported by the media. Finally, the vulnerability is largely fixed."
 
 #: ../../source/defense/threat.rst:41
 msgid "风险(Risk)"
-msgstr ""
+msgstr "Risk"
 
 #: ../../source/defense/threat.rst:42
 msgid "威胁利用资产或一组资产的脆弱性对组织机构造成伤害的潜在可能。"
-msgstr ""
+msgstr "The potential for a threat to exploit vulnerabilities in an asset or group of assets and cause harm to an organization."
 
 #: ../../source/defense/threat.rst:45
 msgid "安全事件(Event)"
-msgstr ""
+msgstr "Security Event"
 
 #: ../../source/defense/threat.rst:46
 msgid "威胁利用资产的脆弱性后实际产生危害的情景。"
-msgstr ""
+msgstr "A situation in which actual harm occurs after a threat exploits an asset's vulnerability."
 
 #: ../../source/defense/threat.rst:49
 msgid "情报来源"
-msgstr ""
+msgstr "Intelligence Sources"
 
 #: ../../source/defense/threat.rst:50
 msgid "为了实现情报的同步和交换，各组织都制定了相应的标准和规范。主要有国标，美国联邦政府标准等。"
-msgstr ""
+msgstr "To synchronize and exchange intelligence, organizations have developed corresponding standards and specifications. Major examples include national standards and U.S. federal government standards."
 
 #: ../../source/defense/threat.rst:52
 msgid "除了国家外，企业也有各自的情报来源，例如厂商、CERT、开发者社区、安全媒体、漏洞作者或团队、公众号、个人博客、代码仓库等。"
-msgstr ""
+msgstr "Beyond national sources, enterprises also have their own intelligence sources, such as vendors, CERTs, developer communities, security media, vulnerability authors or teams, public accounts, personal blogs, and code repositories."
 
 #: ../../source/defense/threat.rst:55
 msgid "威胁框架"
-msgstr ""
+msgstr "Threat Frameworks"
 
 #: ../../source/defense/threat.rst:56
 msgid ""
@@ -135,26 +135,26 @@ msgid ""
 "Techniques)、ODNI的CCTF框架(Common Cyber Threat "
 "Framework，公共网空威胁框架)，以及NSA的TCTF框架(Technical Cyber Threat "
 "Framework，技术性网空威胁框架)。"
-msgstr ""
+msgstr "Influential threat frameworks mainly include Lockheed Martin's Cyber Kill Chain Framework, MITRE's ATT&CK framework (Common Knowledge base of Adversary Tactics and Techniques), ODNI's CCTF framework (Common Cyber Threat Framework), and NSA's TCTF framework (Technical Cyber Threat Framework)."
 
 #: ../../source/defense/threat.rst:59
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/threat.rst:60
 #, python-format
 msgid ""
 "`Executive Perspectives on Cyber Threat Intelligence "
 "<https://scadahacker.com/library/Documents/Threat_Intelligence/iSight%20Partners%20-%20Executive%20Perspectives%20on%20Cyber%20Threat%20Intelligence.pdf>`_"
-msgstr ""
+msgstr "`Executive Perspectives on Cyber Threat Intelligence <https://scadahacker.com/library/Documents/Threat_Intelligence/iSight%20Partners%20-%20Executive%20Perspectives%20on%20Cyber%20Threat%20Intelligence.pdf>`_"
 
 #: ../../source/defense/threat.rst:61
 msgid ""
 "`Cyber Threats: Information vs. Intelligence "
 "<https://www.darkreading.com/analytics/threat-intelligence/cyber-threats-"
 "information-vs-intelligence/a/d-id/1316851>`_"
-msgstr ""
+msgstr "`Cyber Threats: Information vs. Intelligence <https://www.darkreading.com/analytics/threat-intelligence/cyber-threats-information-vs-intelligence/a/d-id/1316851>`_"
 
 #: ../../source/defense/threat.rst:62
 msgid "`威胁情报简介及市场浅析 <https://www.freebuf.com/column/136763.html>`_"
-msgstr ""
+msgstr "`Introduction to Threat Intelligence and Brief Market Analysis <https://www.freebuf.com/column/136763.html>`_"

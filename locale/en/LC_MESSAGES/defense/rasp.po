@@ -20,80 +20,80 @@ msgstr ""
 
 #: ../../source/defense/rasp.rst:2
 msgid "RASP"
-msgstr ""
+msgstr "RASP"
 
 #: ../../source/defense/rasp.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/defense/rasp.rst:6
 msgid "RASP（Runtime Application Self-Protection）由Gartner在2014年引入，是一种应用层的安全保护技术。"
-msgstr ""
+msgstr "RASP (Runtime Application Self-Protection) was introduced by Gartner in 2014. It is an application-layer security protection technology."
 
 #: ../../source/defense/rasp.rst:9
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/rasp.rst:12
 msgid "厂商"
-msgstr ""
+msgstr "Vendors"
 
 #: ../../source/defense/rasp.rst:13
 msgid "`OpenRASP <https://rasp.baidu.com/>`_"
-msgstr ""
+msgstr "`OpenRASP <https://rasp.baidu.com/>`_"
 
 #: ../../source/defense/rasp.rst:14
 msgid ""
 "`Micro Focus <https://www.microfocus.com/en-us/products/application-"
 "defender/features>`_"
-msgstr ""
+msgstr "`Micro Focus <https://www.microfocus.com/en-us/products/application-defender/features>`_"
 
 #: ../../source/defense/rasp.rst:15
 msgid "`Prevoty <https://www.prevoty.com/>`_"
-msgstr ""
+msgstr "`Prevoty <https://www.prevoty.com/>`_"
 
 #: ../../source/defense/rasp.rst:16
 msgid "`waratek <https://www.waratek.com/application-security-platform/>`_"
-msgstr ""
+msgstr "`waratek <https://www.waratek.com/application-security-platform/>`_"
 
 #: ../../source/defense/rasp.rst:17
 msgid "`OWASP AppSensor <http://appsensor.org/>`_"
-msgstr ""
+msgstr "`OWASP AppSensor <http://appsensor.org/>`_"
 
 #: ../../source/defense/rasp.rst:18
 msgid "`Shadowd <https://shadowd.zecure.org/overview/introduction/>`_"
-msgstr ""
+msgstr "`Shadowd <https://shadowd.zecure.org/overview/introduction/>`_"
 
 #: ../../source/defense/rasp.rst:19
 msgid "`immun <https://www.immun.io/features>`_"
-msgstr ""
+msgstr "`immun <https://www.immun.io/features>`_"
 
 #: ../../source/defense/rasp.rst:20
 msgid ""
 "`Contrast Security <https://www.contrastsecurity.com/runtime-application-"
 "self-protection-rasp>`_"
-msgstr ""
+msgstr "`Contrast Security <https://www.contrastsecurity.com/runtime-application-self-protection-rasp>`_"
 
 #: ../../source/defense/rasp.rst:21
 msgid ""
 "`Signal Sciences <https://www.signalsciences.com/rasp-runtime-"
 "application-self-protection/>`_"
-msgstr ""
+msgstr "`Signal Sciences <https://www.signalsciences.com/rasp-runtime-application-self-protection/>`_"
 
 #: ../../source/defense/rasp.rst:22
 msgid "`BrixBits <http://www.brixbits.com/security-analyzer.html>`_"
-msgstr ""
+msgstr "`BrixBits <http://www.brixbits.com/security-analyzer.html>`_"
 
 #: ../../source/defense/rasp.rst:25
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: ../../source/defense/rasp.rst:26
 msgid ""
 "`Python RASP 工程化 一次入侵的思考 "
 "<https://mp.weixin.qq.com/s/icWaHsC6dzlclxfLhvQjYA>`_"
-msgstr ""
+msgstr "`Python RASP Engineering: Reflections on an Intrusion <https://mp.weixin.qq.com/s/icWaHsC6dzlclxfLhvQjYA>`_"
 
 #: ../../source/defense/rasp.rst:27
 msgid "`浅谈RASP技术攻防之基础篇 <https://www.freebuf.com/articles/web/197823.html>`_"
-msgstr ""
+msgstr "`A Brief Introduction to RASP Attack and Defense: Basics <https://www.freebuf.com/articles/web/197823.html>`_"

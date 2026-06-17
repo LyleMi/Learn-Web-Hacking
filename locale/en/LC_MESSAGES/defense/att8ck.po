@@ -20,32 +20,32 @@ msgstr ""
 
 #: ../../source/defense/att8ck.rst:2
 msgid "ATT&CK"
-msgstr ""
+msgstr "ATT&CK"
 
 #: ../../source/defense/att8ck.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/defense/att8ck.rst:6
 msgid "MITRE是美国政府资助的一家研究机构，该公司于1958年从MIT分离出来，并参与了许多商业和最高机密项目。其中包括开发FAA空中交通管制系统和AWACS机载雷达系统。MITRE在美国国家标准技术研究所(NIST)的资助下从事了大量的网络安全实践。"
-msgstr ""
+msgstr "MITRE is a U.S. government-funded research organization. It was spun out of MIT in 1958 and has participated in many commercial and top-secret projects, including development of the FAA air traffic control system and the AWACS airborne radar system. With funding from the National Institute of Standards and Technology (NIST), MITRE has carried out extensive cybersecurity work."
 
 #: ../../source/defense/att8ck.rst:8
 msgid ""
 "MITRE在2013年推出了ATT&CK™ 模型，它的全称是 Adversarial Tactics, Techniques, and "
 "Common Knowledge "
 "(ATT&CK)，它是一个站在攻击者的视角来描述攻击中各阶段用到的技术的模型。将已知攻击者行为转换为结构化列表，将这些已知的行为汇总成战术和技术，并通过几个矩阵以及结构化威胁信息表达式(STIX)、指标信息的可信自动化交换(TAXII)来表示。由于此列表相当全面地呈现了攻击者在攻击网络时所采用的行为，因此对于各种进攻性和防御性度量、表示和其他机制都非常有用。多用于模拟攻击、评估和提高防御能力、威胁情报提取和建模、威胁评估和分析。"
-msgstr ""
+msgstr "MITRE released the ATT&CK model in 2013. Its full name is Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK). It is a model that describes the techniques used at each stage of an attack from the attacker's perspective. It converts known attacker behavior into structured lists, groups those known behaviors into tactics and techniques, and represents them through several matrices as well as Structured Threat Information Expression (STIX) and Trusted Automated Exchange of Indicator Information (TAXII). Because this list presents the behaviors attackers use when attacking networks in a fairly comprehensive way, it is useful for a variety of offensive and defensive metrics, representations, and other mechanisms. It is often used for attack simulation, evaluating and improving defensive capabilities, threat intelligence extraction and modeling, and threat assessment and analysis."
 
 #: ../../source/defense/att8ck.rst:10
 msgid "官方对 ATT&CK的描述是："
-msgstr ""
+msgstr "The official description of ATT&CK is:"
 
 #: ../../source/defense/att8ck.rst:17
 msgid ""
 "和Kill Chain等模型相比，ATT&CK的抽象程度会低一些，但是又比普通的利用和漏洞数据库更高。MITRE公司认为，Kill "
 "Chain在高维度理解攻击过程有帮助，但是无法有效描述对手在单个漏洞的行为。"
-msgstr ""
+msgstr "Compared with models such as the Kill Chain, ATT&CK is less abstract, but it is still higher-level than ordinary exploit and vulnerability databases. MITRE believes that the Kill Chain helps with high-level understanding of the attack process, but cannot effectively describe adversary behavior around an individual vulnerability."
 
 #: ../../source/defense/att8ck.rst:19
 msgid ""
@@ -54,73 +54,73 @@ msgid ""
 "ATT&CK覆盖攻击链模型的前两个阶段(侦察跟踪、武器构建)，ATT&CK for "
 "Enterprise覆盖攻击链的后五个阶段(载荷传递、漏洞利用、安装植入、命令与控制、目标达成)，ATT&CK Matrix for "
 "Mobile主要针对移动平台。"
-msgstr ""
+msgstr "The ATT&CK model is currently divided into three parts: PRE-ATT&CK, ATT&CK for Enterprise (covering Linux, macOS, and Windows), and ATT&CK for Mobile (covering iOS and Android). PRE-ATT&CK covers the first two stages of the attack chain model, reconnaissance and weaponization. ATT&CK for Enterprise covers the last five stages of the attack chain: delivery, exploitation, installation, command and control, and actions on objectives. ATT&CK Matrix for Mobile focuses on mobile platforms."
 
 #: ../../source/defense/att8ck.rst:21
 msgid ""
 "PRE-"
 "ATT&CK包括的战术有优先级定义、选择目标、信息收集、发现脆弱点、攻击性利用开发平台、建立和维护基础设施、人员的开发、建立能力、测试能力、分段能力。"
-msgstr ""
+msgstr "The tactics included in PRE-ATT&CK include priority definition, target selection, information gathering, vulnerability discovery, adversary OPSEC, establishment and maintenance of infrastructure, persona development, capability development, capability testing, and capability staging."
 
 #: ../../source/defense/att8ck.rst:23
 msgid "ATT&CK for Enterprise包括的战术有访问初始化、执行、常驻、提权、防御规避、访问凭证、发现、横向移动、收集、数据获取、命令和控制。"
-msgstr ""
+msgstr "The tactics included in ATT&CK for Enterprise include initial access, execution, persistence, privilege escalation, defense evasion, credential access, discovery, lateral movement, collection, exfiltration, and command and control."
 
 #: ../../source/defense/att8ck.rst:26
 msgid "TTP"
-msgstr ""
+msgstr "TTP"
 
 #: ../../source/defense/att8ck.rst:27
 msgid ""
 "MITRE在定义ATT&CK时，定义了一些关键对象：组织 (Groups)、软件 (Software)、技术 (Techniques)、战术 "
 "(Tactics)。"
-msgstr ""
+msgstr "When defining ATT&CK, MITRE defined several key objects: Groups, Software, Techniques, and Tactics."
 
 #: ../../source/defense/att8ck.rst:29
 msgid "其中组织使用战术和软件，软件实现技术，技术实现战术。例如APT28(组织)使用Mimikatz(软件)达到了获得登录凭证的效果(技术)实现了以用户权限登录的目的(战术)。整个攻击行为又被称为TTP，是战术、技术、过程的集合。"
-msgstr ""
+msgstr "Groups use tactics and software, software implements techniques, and techniques implement tactics. For example, APT28 (a group) uses Mimikatz (software) to obtain login credentials (a technique), achieving the objective of logging in with user privileges (a tactic). The overall attack behavior is also called TTP: the collection of tactics, techniques, and procedures."
 
 #: ../../source/defense/att8ck.rst:32
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/att8ck.rst:33
 msgid "`Mitre ATT&CK <https://attack.mitre.org/>`_"
-msgstr ""
+msgstr "`Mitre ATT&CK <https://attack.mitre.org/>`_"
 
 #: ../../source/defense/att8ck.rst:34
 msgid "`Adversarial Threat Matrix <https://github.com/mitre/advmlthreatmatrix>`_"
-msgstr ""
+msgstr "`Adversarial Threat Matrix <https://github.com/mitre/advmlthreatmatrix>`_"
 
 #: ../../source/defense/att8ck.rst:35
 msgid ""
 "`MITRE ATT&CK：Design and Philosophy "
 "<https://www.mitre.org/sites/default/files/publications/pr-18-0944-11"
 "-mitre-attack-design-and-philosophy.pdf>`_"
-msgstr ""
+msgstr "`MITRE ATT&CK: Design and Philosophy <https://www.mitre.org/sites/default/files/publications/pr-18-0944-11-mitre-attack-design-and-philosophy.pdf>`_"
 
 #: ../../source/defense/att8ck.rst:36
 msgid "`ATT&CK一般性学习笔记 <https://bbs.pediy.com/thread-254825.htm>`_"
-msgstr ""
+msgstr "`General ATT&CK Study Notes <https://bbs.pediy.com/thread-254825.htm>`_"
 
 #: ../../source/defense/att8ck.rst:37
 msgid ""
 "`Cyber Threat Intelligence Repository expressed in STIX 2.0 "
 "<https://github.com/mitre/cti>`_"
-msgstr ""
+msgstr "`Cyber Threat Intelligence Repository expressed in STIX 2.0 <https://github.com/mitre/cti>`_"
 
 #: ../../source/defense/att8ck.rst:38
 msgid ""
 "`sigma <https://github.com/Neo23x0/sigma>`_ Generic Signature Format for "
 "SIEM Systems"
-msgstr ""
+msgstr "`sigma <https://github.com/Neo23x0/sigma>`_ Generic Signature Format for SIEM Systems"
 
 #: ../../source/defense/att8ck.rst:39
 msgid ""
 "`caldera <https://github.com/mitre/caldera>`_  Automated Adversary "
 "Emulation"
-msgstr ""
+msgstr "`caldera <https://github.com/mitre/caldera>`_  Automated Adversary Emulation"
 
 #: ../../source/defense/att8ck.rst:40
 msgid "`RTA <https://github.com/endgameinc/RTA>`_ Red Team Automation"
-msgstr ""
+msgstr "`RTA <https://github.com/endgameinc/RTA>`_ Red Team Automation"
