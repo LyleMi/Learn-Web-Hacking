@@ -20,113 +20,127 @@ msgstr ""
 
 #: ../../source/vuln/xss/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/vuln/xss/ref.rst:5
 msgid "wiki"
-msgstr ""
+msgstr "Wiki"
 
 #: ../../source/vuln/xss/ref.rst:6
 msgid "`AwesomeXSS <https://github.com/UltimateHackers/AwesomeXSS>`_"
-msgstr ""
+msgstr "`AwesomeXSS <https://github.com/UltimateHackers/AwesomeXSS>`_"
 
 #: ../../source/vuln/xss/ref.rst:7
 msgid "`w3c <https://w3c.github.io/webappsec-csp/>`_"
-msgstr ""
+msgstr "`W3C <https://w3c.github.io/webappsec-csp/>`_"
 
 #: ../../source/vuln/xss/ref.rst:8
 msgid "`dom xss wiki <https://github.com/wisec/domxsswiki/wiki>`_"
-msgstr ""
+msgstr "`DOM XSS Wiki <https://github.com/wisec/domxsswiki/wiki>`_"
 
 #: ../../source/vuln/xss/ref.rst:9
 msgid "`content-security-policy.com <https://content-security-policy.com/>`_"
-msgstr ""
+msgstr "`content-security-policy.com <https://content-security-policy.com/>`_"
 
 #: ../../source/vuln/xss/ref.rst:10
 msgid ""
 "`markdwon xss <https://shubs.io/exploiting-markdown-syntax-and-telescope-"
 "persistent-xss-through-markdown-cve-2014-5144/>`_"
 msgstr ""
+"`Markdown XSS <https://shubs.io/exploiting-markdown-syntax-and-telescope-"
+"persistent-xss-through-markdown-cve-2014-5144/>`_"
 
 #: ../../source/vuln/xss/ref.rst:11
 msgid "`xss cheat sheet <https://brutelogic.com.br/blog/cheat-sheet/>`_"
-msgstr ""
+msgstr "`XSS Cheat Sheet <https://brutelogic.com.br/blog/cheat-sheet/>`_"
 
 #: ../../source/vuln/xss/ref.rst:12
 msgid "`html5 security cheatsheet <https://html5sec.org/>`_"
-msgstr ""
+msgstr "`HTML5 Security Cheatsheet <https://html5sec.org/>`_"
 
 #: ../../source/vuln/xss/ref.rst:13
 msgid ""
 "`http security headers <https://www.netsparker.com/whitepaper-http-"
 "security-headers/>`_"
 msgstr ""
+"`HTTP Security Headers <https://www.netsparker.com/whitepaper-http-"
+"security-headers/>`_"
 
 #: ../../source/vuln/xss/ref.rst:14
 msgid "`XSSChallengeWiki <https://github.com/cure53/XSSChallengeWiki/wiki>`_"
-msgstr ""
+msgstr "`XSSChallengeWiki <https://github.com/cure53/XSSChallengeWiki/wiki>`_"
 
 #: ../../source/vuln/xss/ref.rst:17
 msgid "Challenges"
-msgstr ""
+msgstr "Challenges"
 
 #: ../../source/vuln/xss/ref.rst:18
 msgid "`XSS Challenge By Google <https://xss-game.appspot.com>`_"
-msgstr ""
+msgstr "`XSS Challenge By Google <https://xss-game.appspot.com>`_"
 
 #: ../../source/vuln/xss/ref.rst:19
 msgid "`prompt to win <http://prompt.ml/0>`_"
-msgstr ""
+msgstr "`Prompt to Win <http://prompt.ml/0>`_"
 
 #: ../../source/vuln/xss/ref.rst:22
 msgid "CSS"
-msgstr ""
+msgstr "CSS"
 
 #: ../../source/vuln/xss/ref.rst:23
 msgid "`rpo <http://www.thespanner.co.uk/2014/03/21/rpo/>`_"
-msgstr ""
+msgstr "`RPO <http://www.thespanner.co.uk/2014/03/21/rpo/>`_"
 
 #: ../../source/vuln/xss/ref.rst:24
 msgid "`rpo攻击初探 <http://www.zjicmisa.org/index.php/archives/127/>`_"
-msgstr ""
+msgstr "`An Initial Look at RPO Attacks <http://www.zjicmisa.org/index.php/archives/127/>`_"
 
 #: ../../source/vuln/xss/ref.rst:25
 msgid ""
 "`Reading Data via CSS <https://curesec.com/blog/article/blog/Reading-"
 "Data-via-CSS-Injection-180.html>`_"
 msgstr ""
+"`Reading Data via CSS <https://curesec.com/blog/article/blog/Reading-"
+"Data-via-CSS-Injection-180.html>`_"
 
 #: ../../source/vuln/xss/ref.rst:26
 msgid ""
 "`css based attack abusing unicode range <http://mksben.l0.cm/2015/10/css-"
 "based-attack-abusing-unicode-range.html>`_"
 msgstr ""
+"`CSS-Based Attack Abusing Unicode Range <http://mksben.l0.cm/2015/10/css-"
+"based-attack-abusing-unicode-range.html>`_"
 
 #: ../../source/vuln/xss/ref.rst:27
 msgid ""
 "`css injection <https://speakerdeck.com/lmt_swallow/css-injection-plus-"
 "plus-ji-cun-shou-fa-falsegai-guan-todui-ce>`_"
 msgstr ""
+"`CSS Injection <https://speakerdeck.com/lmt_swallow/css-injection-plus-"
+"plus-ji-cun-shou-fa-falsegai-guan-todui-ce>`_"
 
 #: ../../source/vuln/xss/ref.rst:28
 msgid "`css timing attack <https://blog.sheddow.xyz/css-timing-attack/>`_"
-msgstr ""
+msgstr "`CSS Timing Attack <https://blog.sheddow.xyz/css-timing-attack/>`_"
 
 #: ../../source/vuln/xss/ref.rst:31
 msgid "同源策略"
-msgstr ""
+msgstr "Same-Origin Policy"
 
 #: ../../source/vuln/xss/ref.rst:32
 msgid ""
 "`Same origin policy <https://developer.mozilla.org/en-"
 "US/docs/Web/Security/Same-origin_policy>`_"
 msgstr ""
+"`Same-Origin Policy <https://developer.mozilla.org/en-"
+"US/docs/Web/Security/Same-origin_policy>`_"
 
 #: ../../source/vuln/xss/ref.rst:33
 msgid ""
 "`cors security guide <https://www.bedefended.com/papers/cors-security-"
 "guide>`_"
 msgstr ""
+"`CORS Security Guide <https://www.bedefended.com/papers/cors-security-"
+"guide>`_"
 
 #: ../../source/vuln/xss/ref.rst:34
 msgid ""
@@ -134,32 +148,41 @@ msgid ""
 "<https://speakerdeck.com/shhnjk/logically-bypassing-browser-security-"
 "boundaries>`_"
 msgstr ""
+"`Logically Bypassing Browser Security Boundaries "
+"<https://speakerdeck.com/shhnjk/logically-bypassing-browser-security-"
+"boundaries>`_"
 
 #: ../../source/vuln/xss/ref.rst:37
 msgid "bypass"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/vuln/xss/ref.rst:38
 msgid ""
 "`666 lines of xss payload "
 "<https://gist.github.com/JohannesHoppe/5612274>`_"
 msgstr ""
+"`666 Lines of XSS Payload "
+"<https://gist.github.com/JohannesHoppe/5612274>`_"
 
 #: ../../source/vuln/xss/ref.rst:39
 msgid "`xss auditor bypass <https://github.com/masatokinugawa/filterbypass>`_"
-msgstr ""
+msgstr "`XSS Auditor Bypass <https://github.com/masatokinugawa/filterbypass>`_"
 
 #: ../../source/vuln/xss/ref.rst:40
 msgid ""
 "`xss auditor bypass writeup <https://www.leavesongs.com/HTML/chrome-xss-"
 "auditor-bypass-collection.html>`_"
 msgstr ""
+"`XSS Auditor Bypass Writeup <https://www.leavesongs.com/HTML/chrome-xss-"
+"auditor-bypass-collection.html>`_"
 
 #: ../../source/vuln/xss/ref.rst:41
 msgid ""
 "`bypassing csp using polyglot jpegs <https://portswigger.net/blog"
 "/bypassing-csp-using-polyglot-jpegs>`_"
 msgstr ""
+"`Bypassing CSP Using Polyglot JPEGs <https://portswigger.net/blog"
+"/bypassing-csp-using-polyglot-jpegs>`_"
 
 #: ../../source/vuln/xss/ref.rst:42
 msgid ""
@@ -167,35 +190,42 @@ msgid ""
 "<https://www.secjuice.com/bypass-xss-filters-using-javascript-global-"
 "variables/>`_"
 msgstr ""
+"`Bypass XSS Filters Using JavaScript Global Variables "
+"<https://www.secjuice.com/bypass-xss-filters-using-javascript-global-"
+"variables/>`_"
 
 #: ../../source/vuln/xss/ref.rst:45
 msgid "持久化"
-msgstr ""
+msgstr "Persistence"
 
 #: ../../source/vuln/xss/ref.rst:46
 msgid "`变种XSS 持久控制 by tig3r <http://drops.wooyun.org/web/10798>`_"
-msgstr ""
+msgstr "`Variant XSS Persistent Control by tig3r <http://drops.wooyun.org/web/10798>`_"
 
 #: ../../source/vuln/xss/ref.rst:47
 msgid ""
 "`Using Appcache and ServiceWorker for Evil "
 "<https://sakurity.com/blog/2015/08/13/middlekit.html>`_"
 msgstr ""
+"`Using Appcache and ServiceWorker for Evil "
+"<https://sakurity.com/blog/2015/08/13/middlekit.html>`_"
 
 #: ../../source/vuln/xss/ref.rst:50
 msgid "Tricks"
-msgstr ""
+msgstr "Tricks"
 
 #: ../../source/vuln/xss/ref.rst:51
 msgid "`Service Worker 安全探索 <https://github.com/etherdream/sw-sec>`_"
-msgstr ""
+msgstr "`Service Worker Security Exploration <https://github.com/etherdream/sw-sec>`_"
 
 #: ../../source/vuln/xss/ref.rst:52
 msgid "`前端黑魔法 <https://github.com/EtherDream/web-frontend-magic>`_"
-msgstr ""
+msgstr "`Web Front-End Magic <https://github.com/EtherDream/web-frontend-magic>`_"
 
 #: ../../source/vuln/xss/ref.rst:53
 msgid ""
 "`Unicode XSS via Combining Characters "
 "<https://gist.github.com/paj28/86c7b8f37371d89c9a36ed0280fcf450>`_"
 msgstr ""
+"`Unicode XSS via Combining Characters "
+"<https://gist.github.com/paj28/86c7b8f37371d89c9a36ed0280fcf450>`_"

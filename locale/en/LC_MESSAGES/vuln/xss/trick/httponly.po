@@ -20,32 +20,34 @@ msgstr ""
 
 #: ../../source/vuln/xss/trick/httponly.rst:2
 msgid "httponly"
-msgstr ""
+msgstr "HttpOnly"
 
 #: ../../source/vuln/xss/trick/httponly.rst:4
 msgid "在cookie为httponly的情况下，可以通过xss直接在源站完成操作，不直接获取cookie。"
 msgstr ""
+"When a cookie is HttpOnly, XSS can still perform actions directly on the "
+"origin site without directly obtaining the cookie."
 
 #: ../../source/vuln/xss/trick/httponly.rst:5
 msgid "在有登录操作的情况下，部分站点直接发送登录请求可能会带有cookie"
-msgstr ""
+msgstr "For login operations, some sites may include cookies when login requests are sent directly"
 
 #: ../../source/vuln/xss/trick/httponly.rst:6
 msgid "部分特定版本的浏览器可能会在httponly支持/处理上存在问题"
-msgstr ""
+msgstr "Some specific browser versions may have issues with HttpOnly support or handling"
 
 #: ../../source/vuln/xss/trick/httponly.rst:7
 msgid "低版本浏览器支持 TRACE / TRACK，可获取敏感的header字段"
-msgstr ""
+msgstr "Older browsers support TRACE / TRACK, which can expose sensitive header fields"
 
 #: ../../source/vuln/xss/trick/httponly.rst:8
 msgid "phpinfo 等页面可能会回显信息，这些信息中包含http头"
-msgstr ""
+msgstr "Pages such as phpinfo may echo information that contains HTTP headers"
 
 #: ../../source/vuln/xss/trick/httponly.rst:9
 msgid "通过xss劫持页面钓鱼"
-msgstr ""
+msgstr "Use XSS to hijack the page for phishing"
 
 #: ../../source/vuln/xss/trick/httponly.rst:10
 msgid "通过xss伪造oauth等授权请求，远程登录"
-msgstr ""
+msgstr "Use XSS to forge OAuth and similar authorization requests for remote login"

@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/vuln/xss/trick/gadget.rst:2
 msgid "Bypass Via Script Gadgets"
-msgstr ""
+msgstr "Bypass via Script Gadgets"
 
 #: ../../source/vuln/xss/trick/gadget.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/vuln/xss/trick/gadget.rst:6
 msgid ""
@@ -33,17 +33,28 @@ msgid ""
 "Attacks for the Web: Breaking Cross-Site Scripting Mitigations via Script"
 " Gadgets`` 中有该方法的具体描述。"
 msgstr ""
+"Some websites use allowlists or DOM-based defenses. These defenses can be "
+"bypassed with an attack technique called ``Code Reuse``. Similar to gadgets "
+"in binary attack and defense, this method uses legitimate code in the target "
+"to bypass defenses. The paper ``Code-Reuse Attacks for the Web: Breaking "
+"Cross-Site Scripting Mitigations via Script Gadgets`` describes this method "
+"in detail."
 
 #: ../../source/vuln/xss/trick/gadget.rst:8
 msgid ""
 "portswigger的一篇博文也表达了类似的想法 ``https://portswigger.net/blog/abusing-"
 "javascript-frameworks-to-bypass-xss-mitigations``。"
 msgstr ""
+"A PortSwigger blog post expresses a similar idea: "
+"``https://portswigger.net/blog/abusing-javascript-frameworks-to-bypass-xss-"
+"mitigations``."
 
 #: ../../source/vuln/xss/trick/gadget.rst:10
 msgid "下面有一个简单的例子，这个例子使用了 ``DOMPurify`` 来加固，但是因为引入了 ``jquery.mobile.js`` 导致可以被攻击。"
 msgstr ""
+"The following is a simple example. It uses ``DOMPurify`` for hardening, but "
+"it can still be attacked because ``jquery.mobile.js`` is included."
 
 #: ../../source/vuln/xss/trick/gadget.rst:13
 msgid "例子"
-msgstr ""
+msgstr "Example"

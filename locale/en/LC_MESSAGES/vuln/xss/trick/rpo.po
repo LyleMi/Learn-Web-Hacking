@@ -20,10 +20,13 @@ msgstr ""
 
 #: ../../source/vuln/xss/trick/rpo.rst:2
 msgid "RPO(Relative Path Overwrite)"
-msgstr ""
+msgstr "RPO (Relative Path Overwrite)"
 
 #: ../../source/vuln/xss/trick/rpo.rst:4
 msgid ""
 "RPO(Relative Path Overwrite) 攻击又称为相对路径覆盖攻击，依赖于浏览器和网络服务器的反应，利用服务器的 Web "
 "缓存技术和配置差异。"
 msgstr ""
+"An RPO (Relative Path Overwrite) attack, also known as a relative path "
+"overwrite attack, depends on browser and web server behavior and exploits web "
+"cache techniques and configuration differences on the server."

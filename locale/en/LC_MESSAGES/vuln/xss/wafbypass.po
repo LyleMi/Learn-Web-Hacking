@@ -20,160 +20,160 @@ msgstr ""
 
 #: ../../source/vuln/xss/wafbypass.rst:2
 msgid "WAF Bypass"
-msgstr ""
+msgstr "WAF Bypass"
 
 #: ../../source/vuln/xss/wafbypass.rst:4
 msgid "利用<>标记"
-msgstr ""
+msgstr "Using <> Tags"
 
 #: ../../source/vuln/xss/wafbypass.rst:5
 msgid "利用html属性"
-msgstr ""
+msgstr "Using HTML Attributes"
 
 #: ../../source/vuln/xss/wafbypass.rst:6
 msgid "href"
-msgstr ""
+msgstr "href"
 
 #: ../../source/vuln/xss/wafbypass.rst:7
 msgid "lowsrc"
-msgstr ""
+msgstr "lowsrc"
 
 #: ../../source/vuln/xss/wafbypass.rst:8
 msgid "bgsound"
-msgstr ""
+msgstr "bgsound"
 
 #: ../../source/vuln/xss/wafbypass.rst:9
 msgid "background"
-msgstr ""
+msgstr "background"
 
 #: ../../source/vuln/xss/wafbypass.rst:10
 msgid "value"
-msgstr ""
+msgstr "value"
 
 #: ../../source/vuln/xss/wafbypass.rst:11
 msgid "action"
-msgstr ""
+msgstr "action"
 
 #: ../../source/vuln/xss/wafbypass.rst:12
 msgid "dynsrc"
-msgstr ""
+msgstr "dynsrc"
 
 #: ../../source/vuln/xss/wafbypass.rst:13
 msgid "关键字"
-msgstr ""
+msgstr "Keywords"
 
 #: ../../source/vuln/xss/wafbypass.rst:14
 msgid "利用回车拆分"
-msgstr ""
+msgstr "Using Carriage Returns for Splitting"
 
 #: ../../source/vuln/xss/wafbypass.rst:15
 msgid "字符串拼接"
-msgstr ""
+msgstr "String Concatenation"
 
 #: ../../source/vuln/xss/wafbypass.rst:16
 msgid "``window[\"al\" + \"ert\"]``"
-msgstr ""
+msgstr "``window[\"al\" + \"ert\"]``"
 
 #: ../../source/vuln/xss/wafbypass.rst:17
 msgid "利用编码绕过"
-msgstr ""
+msgstr "Using Encoding for Bypass"
 
 #: ../../source/vuln/xss/wafbypass.rst:18
 msgid "base64"
-msgstr ""
+msgstr "base64"
 
 #: ../../source/vuln/xss/wafbypass.rst:19
 msgid "jsfuck"
-msgstr ""
+msgstr "jsfuck"
 
 #: ../../source/vuln/xss/wafbypass.rst:20
 msgid "String.fromCharCode"
-msgstr ""
+msgstr "String.fromCharCode"
 
 #: ../../source/vuln/xss/wafbypass.rst:21
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: ../../source/vuln/xss/wafbypass.rst:22
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../../source/vuln/xss/wafbypass.rst:23
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: ../../source/vuln/xss/wafbypass.rst:24
 msgid "``window[\"\\x61\\x6c\\x65\\x72\\x74\"]``"
-msgstr ""
+msgstr "``window[\"\\x61\\x6c\\x65\\x72\\x74\"]``"
 
 #: ../../source/vuln/xss/wafbypass.rst:25
 msgid "unicode"
-msgstr ""
+msgstr "unicode"
 
 #: ../../source/vuln/xss/wafbypass.rst:26
 msgid "utf7"
-msgstr ""
+msgstr "utf7"
 
 #: ../../source/vuln/xss/wafbypass.rst:27
 msgid "``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``"
-msgstr ""
+msgstr "``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``"
 
 #: ../../source/vuln/xss/wafbypass.rst:28
 msgid "utf16"
-msgstr ""
+msgstr "utf16"
 
 #: ../../source/vuln/xss/wafbypass.rst:29
 msgid "大小写混淆"
-msgstr ""
+msgstr "Case Obfuscation"
 
 #: ../../source/vuln/xss/wafbypass.rst:30
 msgid "对标签属性值转码"
-msgstr ""
+msgstr "Encoding Tag Attribute Values"
 
 #: ../../source/vuln/xss/wafbypass.rst:31
 msgid "产生事件"
-msgstr ""
+msgstr "Triggering Events"
 
 #: ../../source/vuln/xss/wafbypass.rst:32
 msgid "css跨站解析"
-msgstr ""
+msgstr "CSS Cross-Site Parsing"
 
 #: ../../source/vuln/xss/wafbypass.rst:33
 msgid "长度限制bypass"
-msgstr ""
+msgstr "Length-Limit Bypass"
 
 #: ../../source/vuln/xss/wafbypass.rst:34
 msgid "``eval(name)``"
-msgstr ""
+msgstr "``eval(name)``"
 
 #: ../../source/vuln/xss/wafbypass.rst:35
 msgid "``eval(hash)``"
-msgstr ""
+msgstr "``eval(hash)``"
 
 #: ../../source/vuln/xss/wafbypass.rst:36
 msgid "``import``"
-msgstr ""
+msgstr "``import``"
 
 #: ../../source/vuln/xss/wafbypass.rst:37
 msgid "``$.getScript``"
-msgstr ""
+msgstr "``$.getScript``"
 
 #: ../../source/vuln/xss/wafbypass.rst:38
 msgid "``$.get``"
-msgstr ""
+msgstr "``$.get``"
 
 #: ../../source/vuln/xss/wafbypass.rst:39
 msgid "``.``"
-msgstr ""
+msgstr "``.``"
 
 #: ../../source/vuln/xss/wafbypass.rst:40
 msgid "使用 ``。`` 绕过IP/域名"
-msgstr ""
+msgstr "Use ``。`` to bypass IP/domain checks"
 
 #: ../../source/vuln/xss/wafbypass.rst:41
 msgid "``document['cookie']`` 绕过属性取值"
-msgstr ""
+msgstr "Use ``document['cookie']`` to bypass property access checks"
 
 #: ../../source/vuln/xss/wafbypass.rst:42
 msgid "过滤引号用 `` ` `` 绕过"
-msgstr ""
+msgstr "Use `` ` `` to bypass quote filtering"

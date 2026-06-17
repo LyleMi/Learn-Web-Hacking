@@ -20,34 +20,43 @@ msgstr ""
 
 #: ../../source/vuln/xss/trick/cssi.rst:2
 msgid "CSS 注入"
-msgstr ""
+msgstr "CSS Injection"
 
 #: ../../source/vuln/xss/trick/cssi.rst:5
 msgid "基本介绍"
-msgstr ""
+msgstr "Basic Introduction"
 
 #: ../../source/vuln/xss/trick/cssi.rst:6
 msgid ""
 "CSS注入最早开始于利用CSS中的 ``expression()`` ``url()`` ``regex()`` "
 "等函数或特性来引入外部的恶意代码，但是随着浏览器的发展，这种方式被逐渐禁用，与此同时，出现了一些新的攻击方式。"
 msgstr ""
+"CSS injection originally involved using CSS functions or features such as "
+"``expression()``, ``url()``, and ``regex()`` to introduce external malicious "
+"code. As browsers evolved, this approach was gradually disabled, while some "
+"new attack methods appeared."
 
 #: ../../source/vuln/xss/trick/cssi.rst:9
 msgid "CSS selectors"
-msgstr ""
+msgstr "CSS Selectors"
 
 #: ../../source/vuln/xss/trick/cssi.rst:22
 msgid "上图是利用CSS selectors完成攻击的一个示例"
-msgstr ""
+msgstr "The figure above is an example of an attack using CSS selectors"
 
 #: ../../source/vuln/xss/trick/cssi.rst:25
 msgid "Abusing Unicode Range"
-msgstr ""
+msgstr "Abusing Unicode Range"
 
 #: ../../source/vuln/xss/trick/cssi.rst:26
 msgid "当可以插入CSS的时候，可以使用 ``font-face`` 配合 ``unicode-range`` 获取目标网页对应字符集。PoC如下"
 msgstr ""
+"When CSS can be inserted, ``font-face`` can be combined with "
+"``unicode-range`` to obtain the character set used by the target page. The "
+"PoC is as follows:"
 
 #: ../../source/vuln/xss/trick/cssi.rst:53
 msgid "当字符较多时，则可以结合 ``::first-line``  等CSS属性缩小范围，以获取更精确的内容"
 msgstr ""
+"When there are many characters, CSS features such as ``::first-line`` can be "
+"used to narrow the range and obtain more precise content"
