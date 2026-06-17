@@ -20,76 +20,76 @@ msgstr ""
 
 #: ../../source/info/network.rst:2
 msgid "网络入口/信息"
-msgstr ""
+msgstr "Network Entry Points / Information"
 
 #: ../../source/info/network.rst:4
 msgid "网络拓扑信息"
-msgstr ""
+msgstr "Network Topology Information"
 
 #: ../../source/info/network.rst:5
 msgid "外网出口"
-msgstr ""
+msgstr "Internet egress"
 
 #: ../../source/info/network.rst:6
 msgid "IP信息"
-msgstr ""
+msgstr "IP information"
 
 #: ../../source/info/network.rst:7
 msgid "C段"
-msgstr ""
+msgstr "Class C network segment"
 
 #: ../../source/info/network.rst:8
 msgid "线下网络"
-msgstr ""
+msgstr "Offline network"
 
 #: ../../source/info/network.rst:9
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: ../../source/info/network.rst:10
 msgid "SSID"
-msgstr ""
+msgstr "SSID"
 
 #: ../../source/info/network.rst:11
 msgid "认证信息"
-msgstr ""
+msgstr "Authentication information"
 
 #: ../../source/info/network.rst:12
 msgid "VPN"
-msgstr ""
+msgstr "VPN"
 
 #: ../../source/info/network.rst:13
 msgid "厂商"
-msgstr ""
+msgstr "Vendor"
 
 #: ../../source/info/network.rst:14
 msgid "登录方式"
-msgstr ""
+msgstr "Login method"
 
 #: ../../source/info/network.rst:15
 msgid "邮件网关"
-msgstr ""
+msgstr "Email gateway"
 
 #: ../../source/info/network.rst:16
 msgid "手机APP"
-msgstr ""
+msgstr "Mobile app"
 
 #: ../../source/info/network.rst:17
 msgid "小程序后台"
-msgstr ""
+msgstr "Mini program backend"
 
 #: ../../source/info/network.rst:18
 msgid "OA"
-msgstr ""
+msgstr "OA"
 
 #: ../../source/info/network.rst:19
 msgid "SSO"
-msgstr ""
+msgstr "SSO"
 
 #: ../../source/info/network.rst:20
 msgid "边界网络设备"
-msgstr ""
+msgstr "Perimeter network devices"
 
 #: ../../source/info/network.rst:21
 msgid "上游运营商"
-msgstr ""
+msgstr "Upstream ISP"

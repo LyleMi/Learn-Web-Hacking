@@ -20,172 +20,175 @@ msgstr ""
 
 #: ../../source/info/site.rst:2
 msgid "站点信息"
-msgstr ""
+msgstr "Site Information"
 
 #: ../../source/info/site.rst:4
 msgid "判断网站操作系统"
-msgstr ""
+msgstr "Identify the website operating system"
 
 #: ../../source/info/site.rst:5
 msgid "Linux大小写敏感"
-msgstr ""
+msgstr "Linux is case-sensitive"
 
 #: ../../source/info/site.rst:6
 msgid "Windows大小写不敏感"
-msgstr ""
+msgstr "Windows is case-insensitive"
 
 #: ../../source/info/site.rst:7
 msgid "扫描敏感文件"
-msgstr ""
+msgstr "Scan for sensitive files"
 
 #: ../../source/info/site.rst:8
 msgid "robots.txt"
-msgstr ""
+msgstr "robots.txt"
 
 #: ../../source/info/site.rst:9
 msgid "crossdomain.xml"
-msgstr ""
+msgstr "crossdomain.xml"
 
 #: ../../source/info/site.rst:10
 msgid "sitemap.xml"
-msgstr ""
+msgstr "sitemap.xml"
 
 #: ../../source/info/site.rst:11
 msgid "xx.tar.gz"
-msgstr ""
+msgstr "xx.tar.gz"
 
 #: ../../source/info/site.rst:12
 msgid "xx.bak"
-msgstr ""
+msgstr "xx.bak"
 
 #: ../../source/info/site.rst:13
 msgid "等"
-msgstr ""
+msgstr "and others"
 
 #: ../../source/info/site.rst:14
 msgid "确定网站采用的语言"
-msgstr ""
+msgstr "Identify the language used by the website"
 
 #: ../../source/info/site.rst:15
 msgid "如PHP / Java / Python等"
-msgstr ""
+msgstr "Such as PHP / Java / Python"
 
 #: ../../source/info/site.rst:16
 msgid "找后缀，比如php/asp/jsp"
-msgstr ""
+msgstr "Look for extensions, such as php/asp/jsp"
 
 #: ../../source/info/site.rst:17
 msgid "前端框架"
-msgstr ""
+msgstr "Frontend framework"
 
 #: ../../source/info/site.rst:18
 msgid "如jQuery / BootStrap / Vue / React / Angular等"
-msgstr ""
+msgstr "Such as jQuery / Bootstrap / Vue / React / Angular"
 
 #: ../../source/info/site.rst:19
 msgid "查看源代码"
-msgstr ""
+msgstr "View source code"
 
 #: ../../source/info/site.rst:20
 msgid "中间服务器"
-msgstr ""
+msgstr "Intermediate server"
 
 #: ../../source/info/site.rst:21
 msgid "如 Apache / Nginx / IIS 等"
-msgstr ""
+msgstr "Such as Apache / Nginx / IIS"
 
 #: ../../source/info/site.rst:22
 msgid "查看header中的信息"
-msgstr ""
+msgstr "Check information in headers"
 
 #: ../../source/info/site.rst:23
 msgid "根据报错信息判断"
-msgstr ""
+msgstr "Infer from error messages"
 
 #: ../../source/info/site.rst:24
 msgid "根据默认页面判断"
-msgstr ""
+msgstr "Infer from default pages"
 
 #: ../../source/info/site.rst:25
 msgid "Web容器服务器"
-msgstr ""
+msgstr "Web container server"
 
 #: ../../source/info/site.rst:26
 msgid "如Tomcat / Jboss / Weblogic等"
-msgstr ""
+msgstr "Such as Tomcat / JBoss / WebLogic"
 
 #: ../../source/info/site.rst:27
 msgid "后端框架"
-msgstr ""
+msgstr "Backend framework"
 
 #: ../../source/info/site.rst:28
 msgid "根据Cookie判断"
-msgstr ""
+msgstr "Infer from cookies"
 
 #: ../../source/info/site.rst:29
 msgid "根据CSS / 图片等资源的hash值判断"
-msgstr ""
+msgstr "Infer from hash values of resources such as CSS and images"
 
 #: ../../source/info/site.rst:30
 msgid "根据URL路由判断"
-msgstr ""
+msgstr "Infer from URL routing"
 
 #: ../../source/info/site.rst:31
 msgid "如wp-admin"
-msgstr ""
+msgstr "Such as wp-admin"
 
 #: ../../source/info/site.rst:32
 msgid "根据网页中的关键字判断"
-msgstr ""
+msgstr "Infer from keywords in web pages"
 
 #: ../../source/info/site.rst:33
 msgid "根据响应头中的X-Powered-By"
-msgstr ""
+msgstr "Infer from X-Powered-By in response headers"
 
 #: ../../source/info/site.rst:34
 msgid "CDN信息"
-msgstr ""
+msgstr "CDN information"
 
 #: ../../source/info/site.rst:35
 msgid "常见的有Cloudflare、yunjiasu"
-msgstr ""
+msgstr "Common examples include Cloudflare and yunjiasu"
 
 #: ../../source/info/site.rst:36
 msgid "探测有没有WAF，如果有，什么类型的"
-msgstr ""
+msgstr "Detect whether a WAF exists and, if so, identify its type"
 
 #: ../../source/info/site.rst:37
 msgid "有WAF，找绕过方式"
-msgstr ""
+msgstr "If a WAF exists, look for bypass methods"
 
 #: ../../source/info/site.rst:38
 msgid "没有，进入下一步"
-msgstr ""
+msgstr "If not, proceed to the next step"
 
 #: ../../source/info/site.rst:39
 msgid "扫描敏感目录，看是否存在信息泄漏"
-msgstr ""
+msgstr "Scan sensitive directories to check for information disclosure"
 
 #: ../../source/info/site.rst:40
 msgid "扫描之前先自己尝试几个的url，人为看看反应"
-msgstr ""
+msgstr "Before scanning, manually try several URLs and observe the responses"
 
 #: ../../source/info/site.rst:41
 msgid "使用爬虫爬取网站信息"
-msgstr ""
+msgstr "Use a crawler to collect website information"
 
 #: ../../source/info/site.rst:42
 msgid "拿到一定信息后，通过拿到的目录名称，文件名称及文件扩展名了解网站开发人员的命名思路，确定其命名规则，推测出更多的目录及文件名"
 msgstr ""
+"After collecting some information, use the discovered directory names, file "
+"names, and file extensions to understand the developers' naming patterns, "
+"derive naming rules, and infer additional directories and file names."
 
 #: ../../source/info/site.rst:43
 msgid "常见入口目标"
-msgstr ""
+msgstr "Common Entry Targets"
 
 #: ../../source/info/site.rst:44
 msgid "关注度低的系统"
-msgstr ""
+msgstr "Systems that receive less attention"
 
 #: ../../source/info/site.rst:45
 msgid "业务线较长的系统"
-msgstr ""
+msgstr "Systems with long business workflows"

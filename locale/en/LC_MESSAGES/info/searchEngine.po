@@ -20,212 +20,233 @@ msgstr ""
 
 #: ../../source/info/searchEngine.rst:2
 msgid "搜索引擎利用"
-msgstr ""
+msgstr "Search Engine Usage"
 
 #: ../../source/info/searchEngine.rst:3
 msgid "恰当地使用搜索引擎（Google/Bing/Yahoo/Baidu等）可以获取目标站点的较多信息。"
 msgstr ""
+"Using search engines properly, such as Google, Bing, Yahoo, and Baidu, can "
+"reveal substantial information about a target site."
 
 #: ../../source/info/searchEngine.rst:6
 msgid "搜索引擎处理流程"
-msgstr ""
+msgstr "Search Engine Processing Flow"
 
 #: ../../source/info/searchEngine.rst:7
 msgid "数据预处理"
-msgstr ""
+msgstr "Data preprocessing"
 
 #: ../../source/info/searchEngine.rst:8
 msgid "长度截断"
-msgstr ""
+msgstr "Length truncation"
 
 #: ../../source/info/searchEngine.rst:9
 msgid "大小写转化"
-msgstr ""
+msgstr "Case conversion"
 
 #: ../../source/info/searchEngine.rst:10
 msgid "去标点符号"
-msgstr ""
+msgstr "Punctuation removal"
 
 #: ../../source/info/searchEngine.rst:11
 msgid "简繁转换"
-msgstr ""
+msgstr "Simplified/traditional Chinese conversion"
 
 #: ../../source/info/searchEngine.rst:12
 msgid "数字归一化，中文数字、阿拉伯数字、罗马字"
-msgstr ""
+msgstr "Number normalization, including Chinese numerals, Arabic numerals, and Roman numerals"
 
 #: ../../source/info/searchEngine.rst:13
 msgid "同义词改写"
-msgstr ""
+msgstr "Synonym rewriting"
 
 #: ../../source/info/searchEngine.rst:14
 msgid "拼音改写"
-msgstr ""
+msgstr "Pinyin rewriting"
 
 #: ../../source/info/searchEngine.rst:15
 msgid "处理"
-msgstr ""
+msgstr "Processing"
 
 #: ../../source/info/searchEngine.rst:16
 msgid "分词"
-msgstr ""
+msgstr "Tokenization"
 
 #: ../../source/info/searchEngine.rst:17
 msgid "关键词抽取"
-msgstr ""
+msgstr "Keyword extraction"
 
 #: ../../source/info/searchEngine.rst:18
 msgid "非法信息过滤"
-msgstr ""
+msgstr "Illegal content filtering"
 
 #: ../../source/info/searchEngine.rst:21
 msgid "搜索技巧"
-msgstr ""
+msgstr "Search Techniques"
 
 #: ../../source/info/searchEngine.rst:22
 msgid "site:www.hao123.com"
-msgstr ""
+msgstr "site:www.hao123.com"
 
 #: ../../source/info/searchEngine.rst:23
 msgid "返回此目标站点被搜索引擎抓取收录的所有内容"
-msgstr ""
+msgstr "Return all content from the target site that has been crawled and indexed by the search engine"
 
 #: ../../source/info/searchEngine.rst:24
 msgid "site:www.hao123.com keyword"
-msgstr ""
+msgstr "site:www.hao123.com keyword"
 
 #: ../../source/info/searchEngine.rst:25
 msgid "返回此目标站点被搜索引擎抓取收录的包含此关键词的所有页面"
-msgstr ""
+msgstr "Return all indexed pages on the target site that contain the keyword"
 
 #: ../../source/info/searchEngine.rst:26
 msgid "此处可以将关键词设定为网站后台，管理后台，密码修改，密码找回等"
-msgstr ""
+msgstr "The keyword can be set to terms such as website backend, admin panel, password change, or password recovery"
 
 #: ../../source/info/searchEngine.rst:27
 msgid "site:www.hao123.com inurl:admin.php"
-msgstr ""
+msgstr "site:www.hao123.com inurl:admin.php"
 
 #: ../../source/info/searchEngine.rst:28
 msgid "返回目标站点的地址中包含admin.php的所有页面，可以使用admin.php/manage.php或者其他关键词来寻找关键功能页面"
 msgstr ""
+"Return all pages on the target site whose URLs contain admin.php. Keywords "
+"such as admin.php, manage.php, or other terms can be used to find important "
+"function pages."
 
 #: ../../source/info/searchEngine.rst:29
 msgid "link:www.hao123.com"
-msgstr ""
+msgstr "link:www.hao123.com"
 
 #: ../../source/info/searchEngine.rst:30
 msgid "返回所有包含目标站点链接的页面，其中包括其开发人员的个人博客，开发日志，或者开放这个站点的第三方公司，合作伙伴等"
 msgstr ""
+"Return pages that contain links to the target site, including developers' "
+"personal blogs, development logs, third-party companies involved in the site,"
+" partners, and similar sources."
 
 #: ../../source/info/searchEngine.rst:31
 msgid "related:www.hao123.com"
-msgstr ""
+msgstr "related:www.hao123.com"
 
 #: ../../source/info/searchEngine.rst:32
 msgid "返回所有与目标站点”相似”的页面，可能会包含一些通用程序的信息等"
-msgstr ""
+msgstr "Return pages that are \"similar\" to the target site, which may include information about common applications or frameworks"
 
 #: ../../source/info/searchEngine.rst:33
 msgid "intitle:\"500 Internal Server Error\" \"server at\""
-msgstr ""
+msgstr "intitle:\"500 Internal Server Error\" \"server at\""
 
 #: ../../source/info/searchEngine.rst:34
 msgid "搜索出错的页面"
-msgstr ""
+msgstr "Search for error pages"
 
 #: ../../source/info/searchEngine.rst:35
 msgid "inurl:\"nph-proxy.cgi\" \"Start browsing\""
-msgstr ""
+msgstr "inurl:\"nph-proxy.cgi\" \"Start browsing\""
 
 #: ../../source/info/searchEngine.rst:36
 msgid "查找代理服务器"
-msgstr ""
+msgstr "Find proxy servers"
 
 #: ../../source/info/searchEngine.rst:38
 msgid ""
 "除了以上的关键字，还有allintile / allinurl / allintext / inanchor / intext  / "
 "filetype / info / numberange / cache等。"
 msgstr ""
+"In addition to the keywords above, there are also allintile / allinurl / "
+"allintext / inanchor / intext / filetype / info / numberange / cache, and "
+"others."
 
 #: ../../source/info/searchEngine.rst:41
 msgid "通配符"
-msgstr ""
+msgstr "Wildcards"
 
 #: ../../source/info/searchEngine.rst:42
 msgid "``*`` 代表某一个单词"
-msgstr ""
+msgstr "``*`` represents a single word"
 
 #: ../../source/info/searchEngine.rst:43
 msgid "OR 或者 | 代表逻辑或"
-msgstr ""
+msgstr "OR or | represents logical OR"
 
 #: ../../source/info/searchEngine.rst:44
 msgid "单词前跟 ``+`` 表强制查询"
-msgstr ""
+msgstr "A ``+`` before a word forces that term to be included in the query"
 
 #: ../../source/info/searchEngine.rst:45
 msgid "单词前跟 ``-`` 表排除对应关键字"
-msgstr ""
+msgstr "A ``-`` before a word excludes the corresponding keyword"
 
 #: ../../source/info/searchEngine.rst:46
 msgid "``\"`` 强调关键字"
-msgstr ""
+msgstr "``\"`` emphasizes a keyword"
 
 #: ../../source/info/searchEngine.rst:49
 msgid "tips"
-msgstr ""
+msgstr "Tips"
 
 #: ../../source/info/searchEngine.rst:50
 msgid "查询不区分大小写"
-msgstr ""
+msgstr "Queries are case-insensitive"
 
 #: ../../source/info/searchEngine.rst:51
 msgid "括号会被忽略"
-msgstr ""
+msgstr "Parentheses are ignored"
 
 #: ../../source/info/searchEngine.rst:52
 msgid "默认用 and 逻辑进行搜索"
-msgstr ""
+msgstr "Searches use AND logic by default"
 
 #: ../../source/info/searchEngine.rst:55
 msgid "快照"
-msgstr ""
+msgstr "Snapshots"
 
 #: ../../source/info/searchEngine.rst:56
 msgid "搜索引擎的快照中也常包含一些关键信息，如程序报错信息可以会泄漏网站具体路径，或者一些快照中会保存一些测试用的测试信息，比如说某个网站在开发了后台功能模块的时候，还没给所有页面增加权限鉴别，此时被搜索引擎抓取了快照，即使后来网站增加了权限鉴别，但搜索引擎的快照中仍会保留这些信息。"
 msgstr ""
+"Search engine snapshots often contain key information. For example, program "
+"error messages may leak specific website paths, and some snapshots may "
+"preserve test data. If a website was crawled while backend modules were still"
+" being developed and not all pages had authorization checks, the search "
+"engine snapshot may retain that information even after authorization checks "
+"are added later."
 
 #: ../../source/info/searchEngine.rst:58
 msgid ""
 "另外也有专门的站点快照提供快照功能，如 Wayback Machine 和 `Archive.org "
 "<https://archive.org/>`_ 等。"
 msgstr ""
+"There are also dedicated site snapshot services, such as Wayback Machine and "
+"`Archive.org <https://archive.org/>`_."
 
 #: ../../source/info/searchEngine.rst:61
 msgid "Github"
-msgstr ""
+msgstr "GitHub"
 
 #: ../../source/info/searchEngine.rst:62
 msgid "在Github中，可能会存在源码泄露、AccessKey泄露、密码、服务器配置泄露等情况，常见的搜索技巧有："
 msgstr ""
+"GitHub may contain leaked source code, AccessKeys, passwords, server "
+"configuration, and similar information. Common search techniques include:"
 
 #: ../../source/info/searchEngine.rst:64
 msgid "``@example.com password/pass/pwd/secret/credentials/token``"
-msgstr ""
+msgstr "``@example.com password/pass/pwd/secret/credentials/token``"
 
 #: ../../source/info/searchEngine.rst:65
 msgid "``@example.com username/user/key/login/ftp/``"
-msgstr ""
+msgstr "``@example.com username/user/key/login/ftp/``"
 
 #: ../../source/info/searchEngine.rst:66
 msgid "``@example.com config/ftp/smtp/pop``"
-msgstr ""
+msgstr "``@example.com config/ftp/smtp/pop``"
 
 #: ../../source/info/searchEngine.rst:67
 msgid "``@example.com security_credentials/connetionstring``"
-msgstr ""
+msgstr "``@example.com security_credentials/connetionstring``"
 
 #: ../../source/info/searchEngine.rst:68
 msgid "``@example.com JDBC/ssh2_auth_password/send_keys``"
-msgstr ""
+msgstr "``@example.com JDBC/ssh2_auth_password/send_keys``"

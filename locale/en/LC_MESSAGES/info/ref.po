@@ -20,20 +20,20 @@ msgstr ""
 
 #: ../../source/info/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/info/ref.rst:4
 msgid "`端口渗透总结 <http://www.91ri.org/15441.html>`_"
-msgstr ""
+msgstr "`Port Penetration Testing Summary <http://www.91ri.org/15441.html>`_"
 
 #: ../../source/info/ref.rst:5
 msgid "`未授权访问总结 <https://paper.seebug.org/409>`_"
-msgstr ""
+msgstr "`Unauthorized Access Summary <https://paper.seebug.org/409>`_"
 
 #: ../../source/info/ref.rst:6
 msgid "`红队测试之邮箱打点 <https://mp.weixin.qq.com/s/aatNjey3swZz7T4Yw_LqsQ>`_"
-msgstr ""
+msgstr "`Email Reconnaissance in Red Team Testing <https://mp.weixin.qq.com/s/aatNjey3swZz7T4Yw_LqsQ>`_"
 
 #: ../../source/info/ref.rst:7
 msgid "`邮件伪造之SPF绕过的5种思路  <https://mp.weixin.qq.com/s/dqntjRLgcOD3D2bi1oDFAw>`_"
-msgstr ""
+msgstr "`Five Approaches to Bypassing SPF in Email Spoofing <https://mp.weixin.qq.com/s/dqntjRLgcOD3D2bi1oDFAw>`_"

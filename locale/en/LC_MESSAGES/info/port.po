@@ -20,483 +20,501 @@ msgstr ""
 
 #: ../../source/info/port.rst:2
 msgid "端口信息"
-msgstr ""
+msgstr "Port Information"
 
 #: ../../source/info/port.rst:5
 msgid "常见端口及其脆弱点"
-msgstr ""
+msgstr "Common Ports and Weak Points"
 
 #: ../../source/info/port.rst:6
 msgid "FTP (21/TCP)"
-msgstr ""
+msgstr "FTP (21/TCP)"
 
 #: ../../source/info/port.rst:7
 msgid "默认用户名密码 ``anonymous:anonymous``"
-msgstr ""
+msgstr "Default username and password: ``anonymous:anonymous``"
 
 #: ../../source/info/port.rst:8 ../../source/info/port.rst:12
 #: ../../source/info/port.rst:14
 msgid "暴力破解密码"
-msgstr ""
+msgstr "Password brute forcing"
 
 #: ../../source/info/port.rst:9
 msgid "VSFTP某版本后门"
-msgstr ""
+msgstr "Backdoor in certain VSFTP versions"
 
 #: ../../source/info/port.rst:10
 msgid "SSH (22/TCP)"
-msgstr ""
+msgstr "SSH (22/TCP)"
 
 #: ../../source/info/port.rst:11
 msgid "部分版本SSH存在漏洞可枚举用户名"
-msgstr ""
+msgstr "Some SSH versions have vulnerabilities that allow username enumeration"
 
 #: ../../source/info/port.rst:13
 msgid "Telent (23/TCP)"
-msgstr ""
+msgstr "Telnet (23/TCP)"
 
 #: ../../source/info/port.rst:15
 msgid "嗅探抓取明文密码"
-msgstr ""
+msgstr "Sniff and capture plaintext passwords"
 
 #: ../../source/info/port.rst:16
 msgid "SMTP (25/TCP)"
-msgstr ""
+msgstr "SMTP (25/TCP)"
 
 #: ../../source/info/port.rst:17
 msgid "无认证时可伪造发件人"
-msgstr ""
+msgstr "Sender spoofing when authentication is absent"
 
 #: ../../source/info/port.rst:18
 msgid "DNS (53/UDP & 53/TCP)"
-msgstr ""
+msgstr "DNS (53/UDP & 53/TCP)"
 
 #: ../../source/info/port.rst:19
 msgid "域传送漏洞"
-msgstr ""
+msgstr "Zone transfer vulnerability"
 
 #: ../../source/info/port.rst:20
 msgid "DNS劫持"
-msgstr ""
+msgstr "DNS hijacking"
 
 #: ../../source/info/port.rst:21
 msgid "DNS缓存投毒"
-msgstr ""
+msgstr "DNS cache poisoning"
 
 #: ../../source/info/port.rst:22
 msgid "DNS欺骗"
-msgstr ""
+msgstr "DNS spoofing"
 
 #: ../../source/info/port.rst:23
 msgid "SPF / DMARC Check"
-msgstr ""
+msgstr "SPF / DMARC Check"
 
 #: ../../source/info/port.rst:24
 msgid "DDoS"
-msgstr ""
+msgstr "DDoS"
 
 #: ../../source/info/port.rst:25
 msgid "DNS Query Flood"
-msgstr ""
+msgstr "DNS Query Flood"
 
 #: ../../source/info/port.rst:26
 msgid "DNS 反弹"
-msgstr ""
+msgstr "DNS reflection"
 
 #: ../../source/info/port.rst:27
 msgid "DNS 隧道"
-msgstr ""
+msgstr "DNS tunneling"
 
 #: ../../source/info/port.rst:28
 msgid "DHCP 67/68"
-msgstr ""
+msgstr "DHCP 67/68"
 
 #: ../../source/info/port.rst:29
 msgid "劫持/欺骗"
-msgstr ""
+msgstr "Hijacking/spoofing"
 
 #: ../../source/info/port.rst:30
 msgid "TFTP (69/TCP)"
-msgstr ""
+msgstr "TFTP (69/TCP)"
 
 #: ../../source/info/port.rst:31
 msgid "HTTP (80/TCP)"
-msgstr ""
+msgstr "HTTP (80/TCP)"
 
 #: ../../source/info/port.rst:32
 msgid "Kerberos (88/TCP)"
-msgstr ""
+msgstr "Kerberos (88/TCP)"
 
 #: ../../source/info/port.rst:33
 msgid "主要用于监听KDC的票据请求"
-msgstr ""
+msgstr "Mainly used to listen for ticket requests to the KDC"
 
 #: ../../source/info/port.rst:34
 msgid "用于进行黄金票据和白银票据的伪造"
-msgstr ""
+msgstr "Used to forge Golden Tickets and Silver Tickets"
 
 #: ../../source/info/port.rst:35
 msgid "POP3 (110/TCP & 995/TCP)"
-msgstr ""
+msgstr "POP3 (110/TCP & 995/TCP)"
 
 #: ../../source/info/port.rst:36
 msgid "爆破"
-msgstr ""
+msgstr "Brute forcing"
 
 #: ../../source/info/port.rst:37
 msgid "RPC (135/TCP)"
-msgstr ""
+msgstr "RPC (135/TCP)"
 
 #: ../../source/info/port.rst:38
 msgid "wmic 服务利用"
-msgstr ""
+msgstr "wmic service exploitation"
 
 #: ../../source/info/port.rst:39
 msgid "NetBIOS (137/UDP & 138/UDP)"
-msgstr ""
+msgstr "NetBIOS (137/UDP & 138/UDP)"
 
 #: ../../source/info/port.rst:40 ../../source/info/port.rst:43
 #: ../../source/info/port.rst:59 ../../source/info/port.rst:91
 #: ../../source/info/port.rst:108 ../../source/info/port.rst:114
 #: ../../source/info/port.rst:119 ../../source/info/port.rst:145
 msgid "未授权访问"
-msgstr ""
+msgstr "Unauthorized access"
 
 #: ../../source/info/port.rst:41 ../../source/info/port.rst:44
 #: ../../source/info/port.rst:57
 msgid "弱口令"
-msgstr ""
+msgstr "Weak credentials"
 
 #: ../../source/info/port.rst:42
 msgid "NetBIOS / Samba (139/TCP)"
-msgstr ""
+msgstr "NetBIOS / Samba (139/TCP)"
 
 #: ../../source/info/port.rst:45
 msgid "IMAP (143/TCP & 993/TCP)"
-msgstr ""
+msgstr "IMAP (143/TCP & 993/TCP)"
 
 #: ../../source/info/port.rst:46
 msgid "SNMP (161/TCP & 161/UDP)"
-msgstr ""
+msgstr "SNMP (161/TCP & 161/UDP)"
 
 #: ../../source/info/port.rst:47
 msgid "Public 弱口令"
-msgstr ""
+msgstr "Weak ``public`` community string"
 
 #: ../../source/info/port.rst:48
 msgid "LDAP (389/TCP)"
-msgstr ""
+msgstr "LDAP (389/TCP)"
 
 #: ../../source/info/port.rst:49
 msgid "用于域上的权限验证服务"
-msgstr ""
+msgstr "Used for authorization and authentication services in a domain"
 
 #: ../../source/info/port.rst:50
 msgid "匿名访问"
-msgstr ""
+msgstr "Anonymous access"
 
 #: ../../source/info/port.rst:51
 msgid "注入"
-msgstr ""
+msgstr "Injection"
 
 #: ../../source/info/port.rst:52
 msgid "HTTPS (443/TCP)"
-msgstr ""
+msgstr "HTTPS (443/TCP)"
 
 #: ../../source/info/port.rst:53
 msgid "SMB (445/TCP)"
-msgstr ""
+msgstr "SMB (445/TCP)"
 
 #: ../../source/info/port.rst:54
 msgid "Windows 协议簇，主要功能为文件共享服务"
-msgstr ""
+msgstr "A Windows protocol family mainly used for file sharing services"
 
 #: ../../source/info/port.rst:55
 msgid "``net use \\\\192.168.1.1 /user:xxx\\username password``"
-msgstr ""
+msgstr "``net use \\\\192.168.1.1 /user:xxx\\username password``"
 
 #: ../../source/info/port.rst:56
 msgid "Linux Rexec (512/TCP & 513/TCP & 514/TCP)"
-msgstr ""
+msgstr "Linux Rexec (512/TCP & 513/TCP & 514/TCP)"
 
 #: ../../source/info/port.rst:58
 msgid "Rsync (873/TCP)"
-msgstr ""
+msgstr "Rsync (873/TCP)"
 
 #: ../../source/info/port.rst:60
 msgid "RPC (1025/TCP)"
-msgstr ""
+msgstr "RPC (1025/TCP)"
 
 #: ../../source/info/port.rst:61
 msgid "NFS匿名访问"
-msgstr ""
+msgstr "NFS anonymous access"
 
 #: ../../source/info/port.rst:62
 msgid "Java RMI (1090/TCP & 1099/TCP)"
-msgstr ""
+msgstr "Java RMI (1090/TCP & 1099/TCP)"
 
 #: ../../source/info/port.rst:63
 msgid "反序列化远程命令执行漏洞"
-msgstr ""
+msgstr "Deserialization remote command execution vulnerability"
 
 #: ../../source/info/port.rst:64
 msgid "MSSQL (1433/TCP)"
-msgstr ""
+msgstr "MSSQL (1433/TCP)"
 
 #: ../../source/info/port.rst:65 ../../source/info/port.rst:69
 #: ../../source/info/port.rst:79 ../../source/info/port.rst:84
 #: ../../source/info/port.rst:86 ../../source/info/port.rst:89
 msgid "弱密码"
-msgstr ""
+msgstr "Weak passwords"
 
 #: ../../source/info/port.rst:66
 msgid "差异备份 GetShell"
-msgstr ""
+msgstr "GetShell through differential backup"
 
 #: ../../source/info/port.rst:67
 msgid "SA 提权"
-msgstr ""
+msgstr "Privilege escalation through SA"
 
 #: ../../source/info/port.rst:68
 msgid "Oracle (1521/TCP)"
-msgstr ""
+msgstr "Oracle (1521/TCP)"
 
 #: ../../source/info/port.rst:70
 msgid "NFS (2049/TCP)"
-msgstr ""
+msgstr "NFS (2049/TCP)"
 
 #: ../../source/info/port.rst:71 ../../source/info/port.rst:149
 msgid "权限设置不当"
-msgstr ""
+msgstr "Improper permission settings"
 
 #: ../../source/info/port.rst:72
 msgid "``showmount <host>``"
-msgstr ""
+msgstr "``showmount <host>``"
 
 #: ../../source/info/port.rst:73
 msgid "ZooKeeper (2171/TCP & 2375/TCP)"
-msgstr ""
+msgstr "ZooKeeper (2171/TCP & 2375/TCP)"
 
 #: ../../source/info/port.rst:74
 msgid "无身份认证"
-msgstr ""
+msgstr "No authentication"
 
 #: ../../source/info/port.rst:75
 msgid "Docker Remote API (2375/TCP)"
-msgstr ""
+msgstr "Docker Remote API (2375/TCP)"
 
 #: ../../source/info/port.rst:76
 msgid "未限制IP / 未启用TLS身份认证"
-msgstr ""
+msgstr "IP access not restricted / TLS authentication not enabled"
 
 #: ../../source/info/port.rst:77
 msgid "``http://docker.addr:2375/version``"
-msgstr ""
+msgstr "``http://docker.addr:2375/version``"
 
 #: ../../source/info/port.rst:78
 msgid "MySQL (3306/TCP)"
-msgstr ""
+msgstr "MySQL (3306/TCP)"
 
 #: ../../source/info/port.rst:80
 msgid "日志写WebShell"
-msgstr ""
+msgstr "Write a WebShell through logs"
 
 #: ../../source/info/port.rst:81
 msgid "UDF提权"
-msgstr ""
+msgstr "Privilege escalation through UDF"
 
 #: ../../source/info/port.rst:82
 msgid "MOF提权"
-msgstr ""
+msgstr "Privilege escalation through MOF"
 
 #: ../../source/info/port.rst:83
 msgid "RDP / Terminal Services (3389/TCP)"
-msgstr ""
+msgstr "RDP / Terminal Services (3389/TCP)"
 
 #: ../../source/info/port.rst:85
 msgid "Postgres (5432/TCP)"
-msgstr ""
+msgstr "PostgreSQL (5432/TCP)"
 
 #: ../../source/info/port.rst:87
 msgid "执行系统命令"
-msgstr ""
+msgstr "Execute system commands"
 
 #: ../../source/info/port.rst:88
 msgid "VNC (5900/TCP)"
-msgstr ""
+msgstr "VNC (5900/TCP)"
 
 #: ../../source/info/port.rst:90
 msgid "CouchDB (5984/TCP)"
-msgstr ""
+msgstr "CouchDB (5984/TCP)"
 
 #: ../../source/info/port.rst:92
 msgid "WinRM (5985/TCP)"
-msgstr ""
+msgstr "WinRM (5985/TCP)"
 
 #: ../../source/info/port.rst:93
 msgid "Windows对WS-Management的实现"
-msgstr ""
+msgstr "Windows implementation of WS-Management"
 
 #: ../../source/info/port.rst:94
 msgid "在Vista上需要手动启动，在Windows Server 2008中服务是默认开启的"
 msgstr ""
+"On Vista it must be started manually; on Windows Server 2008 the service is "
+"enabled by default"
 
 #: ../../source/info/port.rst:95
 msgid "Redis (6379/TCP)"
-msgstr ""
+msgstr "Redis (6379/TCP)"
 
 #: ../../source/info/port.rst:96 ../../source/info/port.rst:117
 msgid "无密码或弱密码"
-msgstr ""
+msgstr "No password or weak password"
 
 #: ../../source/info/port.rst:97
 msgid "绝对路径写 WebShell"
-msgstr ""
+msgstr "Write a WebShell through an absolute path"
 
 #: ../../source/info/port.rst:98
 msgid "计划任务反弹 Shell"
-msgstr ""
+msgstr "Reverse shell through scheduled tasks"
 
 #: ../../source/info/port.rst:99
 msgid "写 SSH 公钥"
-msgstr ""
+msgstr "Write an SSH public key"
 
 #: ../../source/info/port.rst:100
 msgid "主从复制 RCE"
-msgstr ""
+msgstr "RCE through master-replica replication"
 
 #: ../../source/info/port.rst:101
 msgid "Windows 写启动项"
-msgstr ""
+msgstr "Write a Windows startup item"
 
 #: ../../source/info/port.rst:102
 msgid "Kubernetes API Server (6443/TCP && 10250/TCP)"
-msgstr ""
+msgstr "Kubernetes API Server (6443/TCP && 10250/TCP)"
 
 #: ../../source/info/port.rst:103
 msgid "``https://Kubernetes:10250/pods``"
-msgstr ""
+msgstr "``https://Kubernetes:10250/pods``"
 
 #: ../../source/info/port.rst:104
 msgid "JDWP (8000/TCP)"
-msgstr ""
+msgstr "JDWP (8000/TCP)"
 
 #: ../../source/info/port.rst:105
 msgid "远程命令执行"
-msgstr ""
+msgstr "Remote command execution"
 
 #: ../../source/info/port.rst:106
 msgid "ActiveMQ (8061/TCP)"
-msgstr ""
+msgstr "ActiveMQ (8061/TCP)"
 
 #: ../../source/info/port.rst:107
 msgid "Jenkin (8080/TCP)"
-msgstr ""
+msgstr "Jenkins (8080/TCP)"
 
 #: ../../source/info/port.rst:109
 msgid "Elasticsearch (9200/TCP)"
-msgstr ""
+msgstr "Elasticsearch (9200/TCP)"
 
 #: ../../source/info/port.rst:110
 msgid "代码执行"
-msgstr ""
+msgstr "Code execution"
 
 #: ../../source/info/port.rst:111
 msgid "``http://es.addr:9200/_plugin/head/``"
-msgstr ""
+msgstr "``http://es.addr:9200/_plugin/head/``"
 
 #: ../../source/info/port.rst:112
 msgid "``http://es.addr:9200/_nodes``"
-msgstr ""
+msgstr "``http://es.addr:9200/_nodes``"
 
 #: ../../source/info/port.rst:113
 msgid "Memcached (11211/TCP & 11211/UDP)"
-msgstr ""
+msgstr "Memcached (11211/TCP & 11211/UDP)"
 
 #: ../../source/info/port.rst:115
 msgid "RabbitMQ (15672/TCP & 15692/TCP & 25672/TCP)"
-msgstr ""
+msgstr "RabbitMQ (15672/TCP & 15692/TCP & 25672/TCP)"
 
 #: ../../source/info/port.rst:116
 msgid "MongoDB (27017/TCP)"
-msgstr ""
+msgstr "MongoDB (27017/TCP)"
 
 #: ../../source/info/port.rst:118
 msgid "Hadoop (50070/TCP & 50075/TCP)"
-msgstr ""
+msgstr "Hadoop (50070/TCP & 50075/TCP)"
 
 #: ../../source/info/port.rst:121
 msgid "除了以上列出的可能出现的问题，暴露在公网上的服务若不是最新版，都可能存在已经公开的漏洞"
 msgstr ""
+"In addition to the issues listed above, Internet-exposed services may have "
+"publicly disclosed vulnerabilities if they are not up to date."
 
 #: ../../source/info/port.rst:124
 msgid "常见端口扫描技术"
-msgstr ""
+msgstr "Common Port Scanning Techniques"
 
 #: ../../source/info/port.rst:127
 msgid "全扫描"
-msgstr ""
+msgstr "Full Scan"
 
 #: ../../source/info/port.rst:128
 msgid "扫描主机尝试使用三次握手与目标主机的某个端口建立正规的连接，若成功建立连接，则端口处于开放状态，反之处于关闭状态。"
 msgstr ""
+"The scanning host attempts to establish a normal connection to a target port "
+"through the TCP three-way handshake. If the connection is established, the "
+"port is open; otherwise, it is closed."
 
 #: ../../source/info/port.rst:130
 msgid "全扫描实现简单，且以较低的权限就可以进行该操作。但是在流量日志中会有大量明显的记录。"
 msgstr ""
+"A full scan is easy to implement and can be performed with relatively low "
+"privileges, but it leaves a large number of obvious records in traffic logs."
 
 #: ../../source/info/port.rst:133
 msgid "半扫描"
-msgstr ""
+msgstr "Half-open Scan"
 
 #: ../../source/info/port.rst:134
 msgid "半扫描也称SYN扫描，在半扫描中，仅发送SYN数据段，如果应答为RST，则端口处于关闭状态，若应答为SYN/ACK，则端口处于监听状态。不过这种方式需要较高的权限，而且现在的大部分防火墙已经开始对这种扫描方式做处理。"
 msgstr ""
+"A half-open scan is also called a SYN scan. It sends only a SYN segment. If "
+"the response is RST, the port is closed; if the response is SYN/ACK, the port"
+" is listening. This method requires higher privileges, and most modern "
+"firewalls already handle this type of scan."
 
 #: ../../source/info/port.rst:137
 msgid "FIN扫描"
-msgstr ""
+msgstr "FIN Scan"
 
 #: ../../source/info/port.rst:138
 msgid "FIN扫描是向目标发送一个FIN数据包，如果是开放的端口，会返回RST数据包，关闭的端口则不会返回数据包，可以通过这种方式来判断端口是否打开。"
 msgstr ""
+"A FIN scan sends a FIN packet to the target. An open port returns an RST "
+"packet, while a closed port returns no packet. This behavior can be used to "
+"determine whether a port is open."
 
 #: ../../source/info/port.rst:140
 msgid "这种方式并不在TCP三次握手的状态中，所以不会被记录，相对SYN扫描要更隐蔽一些。"
 msgstr ""
+"This method is outside the TCP three-way handshake state flow, so it is not "
+"recorded in the same way and is somewhat stealthier than a SYN scan."
 
 #: ../../source/info/port.rst:143
 msgid "Web服务"
-msgstr ""
+msgstr "Web Services"
 
 #: ../../source/info/port.rst:144
 msgid "Jenkins"
-msgstr ""
+msgstr "Jenkins"
 
 #: ../../source/info/port.rst:146
 msgid "Gitlab"
-msgstr ""
+msgstr "GitLab"
 
 #: ../../source/info/port.rst:147
 msgid "对应版本CVE"
-msgstr ""
+msgstr "CVEs for the corresponding version"
 
 #: ../../source/info/port.rst:148
 msgid "Zabbix"
-msgstr ""
+msgstr "Zabbix"
 
 #: ../../source/info/port.rst:152
 msgid "批量搜索"
-msgstr ""
+msgstr "Bulk Search"
 
 #: ../../source/info/port.rst:153
 msgid "Censys"
-msgstr ""
+msgstr "Censys"
 
 #: ../../source/info/port.rst:154
 msgid "Shodan"
-msgstr ""
+msgstr "Shodan"
 
 #: ../../source/info/port.rst:155
 msgid "ZoomEye"
-msgstr ""
+msgstr "ZoomEye"
