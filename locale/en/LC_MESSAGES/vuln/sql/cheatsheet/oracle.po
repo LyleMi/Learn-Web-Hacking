@@ -20,134 +20,138 @@ msgstr ""
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:2
 msgid "Oracle Payload"
-msgstr ""
+msgstr "Oracle Payload"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:5
 msgid "常见Payload"
-msgstr ""
+msgstr "Common Payloads"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:6
 msgid "dump"
-msgstr ""
+msgstr "Dump"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:7
 msgid "``select * from v$tablespace;``"
-msgstr ""
+msgstr "``select * from v$tablespace;``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:8
 msgid "``select * from user_tables;``"
-msgstr ""
+msgstr "``select * from user_tables;``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:9
 msgid ""
 "``select column_name from user_tab_columns where table_name = "
 "'table_name';``"
 msgstr ""
+"``select column_name from user_tab_columns where table_name = "
+"'table_name';``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:10
 msgid ""
 "``select column_name, data_type from user_tab_columns where table_name = "
 "'table_name';``"
 msgstr ""
+"``select column_name, data_type from user_tab_columns where table_name = "
+"'table_name';``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:11
 msgid "``SELECT * FROM ALL_TABLES``"
-msgstr ""
+msgstr "``SELECT * FROM ALL_TABLES``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:12
 msgid "Comment"
-msgstr ""
+msgstr "Comment"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:13
 msgid "``--``"
-msgstr ""
+msgstr "``--``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:14
 msgid "``/**/``"
-msgstr ""
+msgstr "``/**/``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:15
 msgid "Space"
-msgstr ""
+msgstr "Space"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:16
 msgid "``0x00`` ``0x09`` ``0xa-0xd`` ``0x20``"
-msgstr ""
+msgstr "``0x00`` ``0x09`` ``0xa-0xd`` ``0x20``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:17
 msgid "报错"
-msgstr ""
+msgstr "Error-Based"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:18
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:27
 msgid "``utl_inaddr.get_host_name``"
-msgstr ""
+msgstr "``utl_inaddr.get_host_name``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:19
 msgid "``ctxsys.drithsx.sn``"
-msgstr ""
+msgstr "``ctxsys.drithsx.sn``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:20
 msgid "``ctxsys.CTX_REPORT.TOKEN_TYPE``"
-msgstr ""
+msgstr "``ctxsys.CTX_REPORT.TOKEN_TYPE``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:21
 msgid "``XMLType``"
-msgstr ""
+msgstr "``XMLType``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:22
 msgid "``dbms_xdb_version.checkin``"
-msgstr ""
+msgstr "``dbms_xdb_version.checkin``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:23
 msgid "``dbms_xdb_version.makeversioned``"
-msgstr ""
+msgstr "``dbms_xdb_version.makeversioned``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:24
 msgid "``dbms_xdb_version.uncheckout``"
-msgstr ""
+msgstr "``dbms_xdb_version.uncheckout``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:25
 msgid "``dbms_utility.sqlid_to_sqlhash``"
-msgstr ""
+msgstr "``dbms_utility.sqlid_to_sqlhash``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:26
 msgid "``ordsys.ord_dicom.getmappingxpath``"
-msgstr ""
+msgstr "``ordsys.ord_dicom.getmappingxpath``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:28
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:31
 msgid "``utl_inaddr.get_host_address``"
-msgstr ""
+msgstr "``utl_inaddr.get_host_address``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:29
 msgid "OOB"
-msgstr ""
+msgstr "OOB"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:30
 msgid "``utl_http.request``"
-msgstr ""
+msgstr "``utl_http.request``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:32
 msgid "``SYS.DBMS_LDAP.INIT``"
-msgstr ""
+msgstr "``SYS.DBMS_LDAP.INIT``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:33
 msgid "``HTTPURITYPE``"
-msgstr ""
+msgstr "``HTTPURITYPE``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:34
 msgid "``HTTP_URITYPE.GETCLOB``"
-msgstr ""
+msgstr "``HTTP_URITYPE.GETCLOB``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:35
 msgid "绕过"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:36
 msgid "``rawtohex``"
-msgstr ""
+msgstr "``rawtohex``"
 
 #: ../../source/vuln/sql/cheatsheet/oracle.rst:39
 msgid "写文件"
-msgstr ""
+msgstr "Write Files"

