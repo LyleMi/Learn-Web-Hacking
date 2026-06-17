@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/language/php/obfuscate.rst:2
 msgid "代码混淆"
-msgstr ""
+msgstr "Code Obfuscation"
 
 #: ../../source/language/php/obfuscate.rst:4
 msgid "PHP代码混淆有多种方案，包括加密文件、混淆、基于虚拟机加密、基于opcode加密、基于扩展加密等。"
-msgstr ""
+msgstr "PHP code obfuscation has several approaches, including encrypted files, obfuscation, VM-based encryption, opcode-based encryption, and extension-based encryption."
 
 #: ../../source/language/php/obfuscate.rst:6
 msgid ""
@@ -32,3 +32,14 @@ msgid ""
 " "
 "guard等工具使用的方法，将代码编译为opcode后再执行。基于扩展的加密需要引入额外的扩展，实现增加垃圾代码、修改控制流、加密明文字符串等操作。"
 msgstr ""
+"Encrypted files means directly encrypting all PHP files, decrypting them in a "
+"specific way, and then executing them through mechanisms such as eval; this "
+"approach is the easiest to restore. Obfuscation removes variable names and "
+"uses the AST to change code organization to some extent, reducing readability; "
+"it can be partially restored through corresponding reverse substitutions. "
+"VM-based approaches implement a custom virtual machine and convert PHP into "
+"specific code; this is generally hard to restore but has very poor execution "
+"performance. Opcode-based encryption is used by tools such as zend guard, "
+"which compile code to opcode before execution. Extension-based encryption "
+"requires an additional extension and can add junk code, modify control flow, "
+"encrypt plaintext strings, and perform similar operations."

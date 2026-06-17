@@ -20,58 +20,68 @@ msgstr ""
 
 #: ../../source/language/php/config.rst:2
 msgid "安全相关配置"
-msgstr ""
+msgstr "Security-Related Configuration"
 
 #: ../../source/language/php/config.rst:5
 msgid "函数与类限制"
-msgstr ""
+msgstr "Function and Class Restrictions"
 
 #: ../../source/language/php/config.rst:6
 msgid "可通过 ``disable_functions`` / ``disable_classes`` 限制PHP可调用的函数和类。"
-msgstr ""
+msgstr "Use ``disable_functions`` / ``disable_classes`` to restrict the functions and classes PHP can call."
 
 #: ../../source/language/php/config.rst:9
 msgid "目录访问限制"
-msgstr ""
+msgstr "Directory Access Restrictions"
 
 #: ../../source/language/php/config.rst:10
 msgid "可通过 ``open_basedir`` 限制PHP可访问的目录。"
-msgstr ""
+msgstr "Use ``open_basedir`` to restrict the directories PHP can access."
 
 #: ../../source/language/php/config.rst:13
 msgid "远程引用限制"
-msgstr ""
+msgstr "Remote Reference Restrictions"
 
 #: ../../source/language/php/config.rst:14
 msgid ""
 "可通过 ``all_url_include`` 限制远程文件包含，默认关闭。 可通过 ``allow_url_fopen`` "
 "限制打开远程文件，默认开启。"
 msgstr ""
+"Use ``all_url_include`` to restrict remote file inclusion; it is disabled by "
+"default. Use ``allow_url_fopen`` to restrict opening remote files; it is "
+"enabled by default."
 
 #: ../../source/language/php/config.rst:18
 msgid "Session"
-msgstr ""
+msgstr "Session"
 
 #: ../../source/language/php/config.rst:21
 msgid "Session.Save"
-msgstr ""
+msgstr "Session.Save"
 
 #: ../../source/language/php/config.rst:22
 msgid ""
 "PHP的Session默认handler为文件，存储在 php.ini 的 ``session.save_path`` "
 "中，若有任意读写文件的权限，则可修改或读取session。从phpinfo中可获得session位置。"
 msgstr ""
+"PHP's default Session handler is file-based and stores data under "
+"``session.save_path`` in php.ini. If arbitrary file read or write access is "
+"available, the session can be read or modified. The session location can be "
+"obtained from phpinfo."
 
 #: ../../source/language/php/config.rst:25
 msgid "Session.Upload"
-msgstr ""
+msgstr "Session.Upload"
 
 #: ../../source/language/php/config.rst:26
 msgid ""
 "PHP默认开启了 ``session.upload_progress.enabled`` ， "
 "该选项会导致生成上传进度文件，其存储路径可以在phpinfo中获取。"
 msgstr ""
+"PHP enables ``session.upload_progress.enabled`` by default. This option "
+"causes upload progress files to be generated, and their storage path can be "
+"obtained from phpinfo."
 
 #: ../../source/language/php/config.rst:28
 msgid "那么可以构造特别的报文向服务器发送，在有LFI的情况下即可利用。"
-msgstr ""
+msgstr "A specially crafted message can then be sent to the server and exploited when LFI is present."

@@ -20,21 +20,21 @@ msgstr ""
 
 #: ../../source/language/php/htaccess.rst:2
 msgid "htaccess injection payload"
-msgstr ""
+msgstr "htaccess Injection Payload"
 
 #: ../../source/language/php/htaccess.rst:5
 #: ../../source/language/php/htaccess.rst:18
 msgid "file inclusion"
-msgstr ""
+msgstr "File Inclusion"
 
 #: ../../source/language/php/htaccess.rst:11
 msgid "code execution"
-msgstr ""
+msgstr "Code Execution"
 
 #: ../../source/language/php/htaccess.rst:27
 msgid "code execution with UTF-7"
-msgstr ""
+msgstr "Code Execution with UTF-7"
 
 #: ../../source/language/php/htaccess.rst:36
 msgid "Source code disclosure"
-msgstr ""
+msgstr "Source Code Disclosure"

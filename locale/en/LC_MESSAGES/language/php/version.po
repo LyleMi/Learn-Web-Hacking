@@ -20,127 +20,127 @@ msgstr ""
 
 #: ../../source/language/php/version.rst:2
 msgid "版本安全改动"
-msgstr ""
+msgstr "Version Security Changes"
 
 #: ../../source/language/php/version.rst:5
 msgid "8.0"
-msgstr ""
+msgstr "8.0"
 
 #: ../../source/language/php/version.rst:6
 msgid "字符串与数字弱类型比较将首先将数字转为字符串，然后比较两个字符串"
-msgstr ""
+msgstr "Weakly typed comparisons between strings and numbers first convert the number to a string, then compare the two strings."
 
 #: ../../source/language/php/version.rst:7
 msgid "内部参数内省错误时抛出异常而不是警告"
-msgstr ""
+msgstr "Internal parameter introspection errors throw exceptions instead of warnings."
 
 #: ../../source/language/php/version.rst:8
 msgid "``assert`` 不再支持执行代码"
-msgstr ""
+msgstr "``assert`` no longer supports code execution."
 
 #: ../../source/language/php/version.rst:9
 msgid "移除 ``create_function``"
-msgstr ""
+msgstr "``create_function`` was removed."
 
 #: ../../source/language/php/version.rst:10
 msgid "移除 ``mb_ereg_replace()`` 中的e模式"
-msgstr ""
+msgstr "The e mode in ``mb_ereg_replace()`` was removed."
 
 #: ../../source/language/php/version.rst:11
 msgid "Phar中的元信息不再自动进行反序列化"
-msgstr ""
+msgstr "Metadata in Phar is no longer automatically unserialized."
 
 #: ../../source/language/php/version.rst:12
 msgid "``parse_str`` 必须传入第二个参数"
-msgstr ""
+msgstr "``parse_str`` must be passed a second parameter."
 
 #: ../../source/language/php/version.rst:13
 msgid "移除 ``php://filter`` 中的 ``string.strip_tags``"
-msgstr ""
+msgstr "``string.strip_tags`` was removed from ``php://filter``."
 
 #: ../../source/language/php/version.rst:16
 msgid "7.2"
-msgstr ""
+msgstr "7.2"
 
 #: ../../source/language/php/version.rst:17
 msgid "不带引号的字符串 会产生 E_WARNING"
-msgstr ""
+msgstr "Unquoted strings generate E_WARNING."
 
 #: ../../source/language/php/version.rst:18
 msgid "create_function 被废弃"
-msgstr ""
+msgstr "create_function was deprecated."
 
 #: ../../source/language/php/version.rst:19
 msgid "assert 不能传入字符串表达式"
-msgstr ""
+msgstr "assert cannot be passed a string expression."
 
 #: ../../source/language/php/version.rst:20
 msgid "不带第二个参数的情况下使用 parse_str() 会产生 E_DEPRECATED 警告"
-msgstr ""
+msgstr "Using parse_str() without the second parameter generates an E_DEPRECATED warning."
 
 #: ../../source/language/php/version.rst:21
 msgid "__autoload() 被废弃"
-msgstr ""
+msgstr "__autoload() was deprecated."
 
 #: ../../source/language/php/version.rst:24
 msgid "7.1"
-msgstr ""
+msgstr "7.1"
 
 #: ../../source/language/php/version.rst:25
 msgid "调用用户定义的函数提供的参数不足会抛出错误异常而不是警告"
-msgstr ""
+msgstr "Calling user-defined functions with too few arguments throws an error exception instead of a warning."
 
 #: ../../source/language/php/version.rst:26
 msgid "在不完整的对象上不再调用析构方法"
-msgstr ""
+msgstr "Destructors are no longer called on incomplete objects."
 
 #: ../../source/language/php/version.rst:27
 msgid "call_user_func() 不再支持对传址的函数的调用"
-msgstr ""
+msgstr "call_user_func() no longer supports calls to functions that require by-reference parameters."
 
 #: ../../source/language/php/version.rst:28
 msgid "mb_ereg_replace() 和 mb_eregi_replace() 的e模式修饰符被废弃"
-msgstr ""
+msgstr "The e mode modifier of mb_ereg_replace() and mb_eregi_replace() was deprecated."
 
 #: ../../source/language/php/version.rst:29
 msgid "ext/mcrypt 被废弃"
-msgstr ""
+msgstr "ext/mcrypt was deprecated."
 
 #: ../../source/language/php/version.rst:32
 msgid "7.0"
-msgstr ""
+msgstr "7.0"
 
 #: ../../source/language/php/version.rst:33
 msgid "preg_replace \"\\e\" 修饰符 产生 E_WARNING 错误 且失效"
-msgstr ""
+msgstr "The preg_replace \"\\e\" modifier generates an E_WARNING error and no longer works."
 
 #: ../../source/language/php/version.rst:34
 msgid "移除 所有 ext/mysql 函数"
-msgstr ""
+msgstr "All ext/mysql functions were removed."
 
 #: ../../source/language/php/version.rst:35
 msgid "移除 所有 ext/mssql 函数"
-msgstr ""
+msgstr "All ext/mssql functions were removed."
 
 #: ../../source/language/php/version.rst:36
 msgid "移除 call_user_method() 和 call_user_method_array()"
-msgstr ""
+msgstr "call_user_method() and call_user_method_array() were removed."
 
 #: ../../source/language/php/version.rst:37
 msgid "foreach 不再改变内部数组指针"
-msgstr ""
+msgstr "foreach no longer changes the internal array pointer."
 
 #: ../../source/language/php/version.rst:38
 msgid "在之前，一个八进制字符如果含有无效数字，该无效数字将被静默删节 ( 0128 将被解析为 012)，现在这样的八进制字符将产生解析错误"
-msgstr ""
+msgstr "Previously, if an octal literal contained an invalid digit, that digit was silently truncated (0128 was parsed as 012). Now such octal literals produce a parse error."
 
 #: ../../source/language/php/version.rst:39
 msgid "十六进制字符串不再被认为是数字"
-msgstr ""
+msgstr "Hexadecimal strings are no longer considered numeric."
 
 #: ../../source/language/php/version.rst:40
 msgid "dl() 在 PHP-FPM 不再可用，在 CLI 和 embed SAPIs 中仍可用"
-msgstr ""
+msgstr "dl() is no longer available in PHP-FPM, but remains available in CLI and embed SAPIs."
 
 #: ../../source/language/php/version.rst:41
 #, python-format
@@ -148,51 +148,53 @@ msgid ""
 "移除 ASP 和 script PHP 标签，即 ``<% %>`` / ``<%= %>`` / ``<script "
 "language=\"php\"> </script>``"
 msgstr ""
+"ASP and script PHP tags were removed: ``<% %>`` / ``<%= %>`` / ``<script "
+"language=\"php\"> </script>``."
 
 #: ../../source/language/php/version.rst:42
 msgid "在数值溢出的时候，内部函数将会失败"
-msgstr ""
+msgstr "Internal functions fail on numeric overflow."
 
 #: ../../source/language/php/version.rst:43
 msgid "$HTTP_RAW_POST_DATA 被移除"
-msgstr ""
+msgstr "$HTTP_RAW_POST_DATA was removed."
 
 #: ../../source/language/php/version.rst:46
 msgid "5.6"
-msgstr ""
+msgstr "5.6"
 
 #: ../../source/language/php/version.rst:47
 msgid "$HTTP_RAW_POST_DATA 被废弃"
-msgstr ""
+msgstr "$HTTP_RAW_POST_DATA was deprecated."
 
 #: ../../source/language/php/version.rst:48
 msgid "必须先设置 CURLOPT_SAFE_UPLOAD 为 FALSE 才能够使用 @file 语法来上传文件"
-msgstr ""
+msgstr "CURLOPT_SAFE_UPLOAD must be set to FALSE before the @file syntax can be used to upload files."
 
 #: ../../source/language/php/version.rst:51
 msgid "5.5"
-msgstr ""
+msgstr "5.5"
 
 #: ../../source/language/php/version.rst:52
 msgid "preg_replace \"\\e\" 修饰符 产生 E_DEPRECATED 错误"
-msgstr ""
+msgstr "The preg_replace \"\\e\" modifier generates an E_DEPRECATED error."
 
 #: ../../source/language/php/version.rst:53
 msgid "废弃 ``mysql_*`` 系列函数"
-msgstr ""
+msgstr "The ``mysql_*`` function family was deprecated."
 
 #: ../../source/language/php/version.rst:56
 msgid "5.4"
-msgstr ""
+msgstr "5.4"
 
 #: ../../source/language/php/version.rst:57
 msgid "不再支持 安全模式"
-msgstr ""
+msgstr "Safe mode is no longer supported."
 
 #: ../../source/language/php/version.rst:58
 msgid "移除 魔术引号"
-msgstr ""
+msgstr "Magic quotes were removed."
 
 #: ../../source/language/php/version.rst:59
 msgid "数组转换成字符串将产生一条 E_NOTICE 级别的错误"
-msgstr ""
+msgstr "Converting an array to a string generates an E_NOTICE-level error."

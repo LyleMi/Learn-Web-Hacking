@@ -20,20 +20,20 @@ msgstr ""
 
 #: ../../source/language/php/backdoor.rst:2
 msgid "后门"
-msgstr ""
+msgstr "Backdoors"
 
 #: ../../source/language/php/backdoor.rst:5
 msgid "php.ini构成的后门"
-msgstr ""
+msgstr "Backdoors Built with php.ini"
 
 #: ../../source/language/php/backdoor.rst:6
 msgid "利用 auto_prepend_file 和 include_path"
-msgstr ""
+msgstr "Using auto_prepend_file and include_path"
 
 #: ../../source/language/php/backdoor.rst:9
 msgid ".user.ini文件构成的PHP后门"
-msgstr ""
+msgstr "PHP Backdoors Built with .user.ini Files"
 
 #: ../../source/language/php/backdoor.rst:10
 msgid ".user.ini可运行于所有以fastcgi运行的server。 利用方式同php.ini"
-msgstr ""
+msgstr ".user.ini can run on any server that runs PHP through FastCGI. The exploitation method is the same as php.ini."

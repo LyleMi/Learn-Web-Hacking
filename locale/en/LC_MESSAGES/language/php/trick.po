@@ -20,20 +20,20 @@ msgstr ""
 
 #: ../../source/language/php/trick.rst:2
 msgid "Tricks"
-msgstr ""
+msgstr "Tricks"
 
 #: ../../source/language/php/trick.rst:3
 msgid "is_numeric 前后有空格时，不会判断为true"
-msgstr ""
+msgstr "When is_numeric has leading or trailing spaces, it is not evaluated as true."
 
 #: ../../source/language/php/trick.rst:4
 msgid "松散比较时，两个0e开头的不同哈希会判断为相等"
-msgstr ""
+msgstr "In loose comparisons, two different hashes beginning with 0e are considered equal."
 
 #: ../../source/language/php/trick.rst:5
 msgid "松散比较时，非数字的字符串序列和数字比较会自动转换"
-msgstr ""
+msgstr "In loose comparisons, nonnumeric string sequences are automatically converted when compared with numbers."
 
 #: ../../source/language/php/trick.rst:6
 msgid "strcmp/ereg 等函数在传入参数类型为数组时会有非预期行为"
-msgstr ""
+msgstr "Functions such as strcmp/ereg may behave unexpectedly when the argument type is an array."

@@ -20,33 +20,39 @@ msgstr ""
 
 #: ../../source/language/php/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "Reference Links"
 
 #: ../../source/language/php/ref.rst:5
 msgid "Bypass"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/language/php/ref.rst:6
 msgid ""
 "`php open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-"
 "disable_functions-and-open_basedir/>`_"
 msgstr ""
+"`php open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-"
+"disable_functions-and-open_basedir/>`_"
 
 #: ../../source/language/php/ref.rst:7
 msgid ""
 "`open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-"
 "disable_functions-and-open_basedir/>`_"
 msgstr ""
+"`open basedir bypass <https://www.tarlogic.com/en/blog/how-to-bypass-"
+"disable_functions-and-open_basedir/>`_"
 
 #: ../../source/language/php/ref.rst:8
 msgid ""
 "`Bypass Disable functions Shell "
 "<https://github.com/l3m0n/Bypass_Disable_functions_Shell>`_"
 msgstr ""
+"`Bypass Disable functions Shell "
+"<https://github.com/l3m0n/Bypass_Disable_functions_Shell>`_"
 
 #: ../../source/language/php/ref.rst:11
 msgid "Tricks"
-msgstr ""
+msgstr "Tricks"
 
 #: ../../source/language/php/ref.rst:12
 #, python-format
@@ -54,64 +60,80 @@ msgid ""
 "`php wrappers <https://www.ptsecurity.com/upload/corporate/ru-"
 "ru/webinars/ics/%D0%90.%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D0%BD_%D0%9E_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF_%D0%B8%D1%81%D0%BF_%D0%A0%D0%9D%D0%A0_wrappers.pdf>`_"
 msgstr ""
+"`php wrappers <https://www.ptsecurity.com/upload/corporate/ru-"
+"ru/webinars/ics/%D0%90.%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D0%BD_%D0%9E_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF_%D0%B8%D1%81%D0%BF_%D0%A0%D0%9D%D0%A0_wrappers.pdf>`_"
 
 #: ../../source/language/php/ref.rst:13
 msgid ""
 "`反序列化之PHP原生类的利用 "
 "<http://www.cnblogs.com/iamstudy/articles/unserialize_in_php_inner_class.html>`_"
 msgstr ""
+"`Exploiting PHP Native Classes Through Unserialization "
+"<http://www.cnblogs.com/iamstudy/articles/unserialize_in_php_inner_class.html>`_"
 
 #: ../../source/language/php/ref.rst:14
 msgid ""
 "`php解密的数种方法 <https://www.leavesongs.com/PENETRATION/unobfuscated-"
 "phpjiami.html>`_"
 msgstr ""
+"`Several PHP Deobfuscation Methods <https://www.leavesongs.com/PENETRATION"
+"/unobfuscated-phpjiami.html>`_"
 
 #: ../../source/language/php/ref.rst:15
 msgid ""
 "`Surprising CTF task solution using php://filter "
 "<https://gynvael.coldwind.pl/?id=671>`_"
 msgstr ""
+"`Surprising CTF task solution using php://filter "
+"<https://gynvael.coldwind.pl/?id=671>`_"
 
 #: ../../source/language/php/ref.rst:16
 msgid ""
 "`主机安全 洋葱Webshell检测实践与思考  "
 "<https://mp.weixin.qq.com/s/ol70aVdvybzMJmtfxaAAZQ>`_"
 msgstr ""
+"`Host Security: Onion Webshell Detection Practice and Reflections "
+"<https://mp.weixin.qq.com/s/ol70aVdvybzMJmtfxaAAZQ>`_"
 
 #: ../../source/language/php/ref.rst:19
 msgid "WebShell"
-msgstr ""
+msgstr "WebShell"
 
 #: ../../source/language/php/ref.rst:20
 msgid ""
 "`PHP htaccess inject <https://github.com/sektioneins/pcc/wiki/PHP-"
 "htaccess-injection-cheat-sheet>`_"
 msgstr ""
+"`PHP htaccess inject <https://github.com/sektioneins/pcc/wiki/PHP-"
+"htaccess-injection-cheat-sheet>`_"
 
 #: ../../source/language/php/ref.rst:21
 msgid ""
 "`php木马加密 <https://blog.manchestergreyhats.co.uk/2018/11/07/php-malware-"
 "examination/>`_"
 msgstr ""
+"`PHP Trojan Encryption <https://blog.manchestergreyhats.co.uk/2018/11/07"
+"/php-malware-examination/>`_"
 
 #: ../../source/language/php/ref.rst:22
 msgid "`PHP WebShell变形技术总结  <https://www.freebuf.com/articles/web/155891.html>`_"
-msgstr ""
+msgstr "`Summary of PHP WebShell Transformation Techniques <https://www.freebuf.com/articles/web/155891.html>`_"
 
 #: ../../source/language/php/ref.rst:23
 msgid ""
 "`一些不包含数字和字母的webshell <https://www.leavesongs.com/PENETRATION/webshell-"
 "without-alphanum.html>`_"
 msgstr ""
+"`Webshells Without Digits or Letters <https://www.leavesongs.com/PENETRATION"
+"/webshell-without-alphanum.html>`_"
 
 #: ../../source/language/php/ref.rst:24
 msgid "`PHP Webshell那些事-攻击篇 <https://mp.weixin.qq.com/s/FgzIm-IK02rjEf3JvxOxrw>`_"
-msgstr ""
+msgstr "`PHP Webshell Notes: Attack Edition <https://mp.weixin.qq.com/s/FgzIm-IK02rjEf3JvxOxrw>`_"
 
 #: ../../source/language/php/ref.rst:27
 msgid "Phar"
-msgstr ""
+msgstr "Phar"
 
 #: ../../source/language/php/ref.rst:28
 msgid ""
@@ -119,35 +141,42 @@ msgid ""
 "-Thomas-Its-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-"
 "It-wp.pdf>`_"
 msgstr ""
+"`US Black Hat 2018 Phar <https://i.blackhat.com/us-18/Thu-August-9/us-18"
+"-Thomas-Its-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-"
+"It-wp.pdf>`_"
 
 #: ../../source/language/php/ref.rst:29
 msgid "`利用 phar 拓展 php 反序列化漏洞攻击面 <https://paper.seebug.org/680/>`_"
-msgstr ""
+msgstr "`Using phar to Expand the Attack Surface of PHP Unserialization Vulnerabilities <https://paper.seebug.org/680/>`_"
 
 #: ../../source/language/php/ref.rst:30
 msgid "`Phar与Stream Wrapper造成PHP RCE的深入挖掘 <https://blog.zsxsoft.com/post/38>`_"
-msgstr ""
+msgstr "`In-Depth Research on PHP RCE Caused by Phar and Stream Wrapper <https://blog.zsxsoft.com/post/38>`_"
 
 #: ../../source/language/php/ref.rst:33
 msgid "运行"
-msgstr ""
+msgstr "Runtime"
 
 #: ../../source/language/php/ref.rst:34
 msgid ""
 "`Learning the PHP lifecycle "
 "<http://www.phpinternalsbook.com/php7/extensions_design/php_lifecycle.html>`_"
 msgstr ""
+"`Learning the PHP lifecycle "
+"<http://www.phpinternalsbook.com/php7/extensions_design/php_lifecycle.html>`_"
 
 #: ../../source/language/php/ref.rst:35
 msgid "`PHP7内核剖析 <https://github.com/pangudashu/php7-internal>`_"
-msgstr ""
+msgstr "`PHP7 Internals Analysis <https://github.com/pangudashu/php7-internal>`_"
 
 #: ../../source/language/php/ref.rst:38
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: ../../source/language/php/ref.rst:39
 msgid ""
 "`How we broke PHP <https://www.evonide.com/how-we-broke-php-hacked-"
 "pornhub-and-earned-20000-dollar/>`_"
 msgstr ""
+"`How we broke PHP <https://www.evonide.com/how-we-broke-php-hacked-"
+"pornhub-and-earned-20000-dollar/>`_"

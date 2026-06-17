@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/language/php/disablefunc.rst:2
 msgid "Disable Functions"
-msgstr ""
+msgstr "Disable Functions"
 
 #: ../../source/language/php/disablefunc.rst:5
 msgid "机制实现"
-msgstr ""
+msgstr "Implementation Mechanism"
 
 #: ../../source/language/php/disablefunc.rst:6
 msgid ""
@@ -32,49 +32,55 @@ msgid ""
 "API.c中。PHP在启动时，读取配置文件中禁止的函数，逐一根据禁止的函数名调用 ``zend_disable_function`` "
 "来实现禁止的效果。"
 msgstr ""
+"PHP implements Disable Function in php-src/Zend/Zend-API.c. During startup, "
+"PHP reads the disabled functions from the configuration file and calls "
+"``zend_disable_function`` for each disabled function name to enforce the "
+"restriction."
 
 #: ../../source/language/php/disablefunc.rst:8
 msgid "这个函数根据函数名在内置函数列表中找到对应的位置并修改掉，当前版本的代码如下："
-msgstr ""
+msgstr "This function finds the corresponding entry in the built-in function list by function name and modifies it. The current version of the code is shown below:"
 
 #: ../../source/language/php/disablefunc.rst:26
 msgid "和函数的实现方式类似，disable classes也是这样实现的"
-msgstr ""
+msgstr "Similar to the function implementation, disable classes is implemented in the same way."
 
 #: ../../source/language/php/disablefunc.rst:48
 msgid ""
 "因为这个实现机制的原因，在PHP启动后通过 ``ini_set`` 来修改 ``disable_functions`` 或 "
 "``disable_classes`` 是无效的。"
 msgstr ""
+"Because of this implementation mechanism, changing ``disable_functions`` or "
+"``disable_classes`` with ``ini_set`` after PHP has started is ineffective."
 
 #: ../../source/language/php/disablefunc.rst:51
 msgid "Bypass"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/language/php/disablefunc.rst:52
 msgid "LD_PRELOAD绕过"
-msgstr ""
+msgstr "LD_PRELOAD Bypass"
 
 #: ../../source/language/php/disablefunc.rst:53
 msgid "https://github.com/yangyangwithgnu/bypass_disablefunc_via_LD_PRELOAD"
-msgstr ""
+msgstr "https://github.com/yangyangwithgnu/bypass_disablefunc_via_LD_PRELOAD"
 
 #: ../../source/language/php/disablefunc.rst:54
 msgid "``mail()`` + ``putenv``"
-msgstr ""
+msgstr "``mail()`` + ``putenv``"
 
 #: ../../source/language/php/disablefunc.rst:55
 msgid "PHP OPcache"
-msgstr ""
+msgstr "PHP OPcache"
 
 #: ../../source/language/php/disablefunc.rst:56
 msgid "Mail函数"
-msgstr ""
+msgstr "Mail Function"
 
 #: ../../source/language/php/disablefunc.rst:57
 msgid "imap_open"
-msgstr ""
+msgstr "imap_open"
 
 #: ../../source/language/php/disablefunc.rst:58
 msgid "https://www.cvedetails.com/cve/cve-2018-19518"
-msgstr ""
+msgstr "https://www.cvedetails.com/cve/cve-2018-19518"

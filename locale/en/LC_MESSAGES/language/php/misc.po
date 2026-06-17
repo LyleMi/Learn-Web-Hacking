@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/language/php/misc.rst:2
 msgid "其它"
-msgstr ""
+msgstr "Miscellaneous"
 
 #: ../../source/language/php/misc.rst:5
 msgid "低精度"
-msgstr ""
+msgstr "Low Precision"
 
 #: ../../source/language/php/misc.rst:6
 msgid ""
@@ -32,10 +32,15 @@ msgid ""
 "``php -r \"var_dump(0.2+0.7==0.9);\"`` 这行代码的输出是 ``bool(false)`` 而不是 "
 "``bool(true)``。这在一些情况下可能出现问题。"
 msgstr ""
+"PHP does not store floating-point numbers with high precision; it uses the "
+"IEEE 754 double-precision format. This can cause unexpected errors when "
+"floating-point values are compared. For example, ``php -r "
+"\"var_dump(0.2+0.7==0.9);\"`` outputs ``bool(false)`` instead of "
+"``bool(true)``. This may cause problems in some situations."
 
 #: ../../source/language/php/misc.rst:10
 msgid "弱类型"
-msgstr ""
+msgstr "Weak Typing"
 
 #: ../../source/language/php/misc.rst:11
 #, python-brace-format
@@ -44,59 +49,70 @@ msgid ""
 "``0e[0-9]{30}`` 的时候，就会认为两个hash值相等。 另外在判断字符串和数字的时候，PHP会自动做类型转换，那么 "
 "``1==\"1a.php\"`` 的结果会是true"
 msgstr ""
+"When ``==`` is used for equality checks, type inference may produce "
+"unexpected behavior. One example is a magic hash: when two MD5 values both "
+"match ``0e[0-9]{30}``, the two hash values are considered equal. In addition, "
+"when comparing strings and numbers, PHP automatically performs type "
+"conversion, so ``1==\"1a.php\"`` evaluates to true."
 
 #: ../../source/language/php/misc.rst:14
 msgid "另外在判断一些hash时，如果传入的是数组，返回值会为 ``NULL``, 因此在判断来自网络请求的数据的哈希值时需要先判断数据类型。"
-msgstr ""
+msgstr "Also, when some hash functions receive an array, they return ``NULL``. Therefore, when checking the hash of data from a network request, validate the data type first."
 
 #: ../../source/language/php/misc.rst:16
 msgid "同样的， ``strcmp()`` ``ereg()`` ``strpos()`` 这些函数在处理数组的时候也会异常，返回NULL。"
-msgstr ""
+msgstr "Similarly, functions such as ``strcmp()``, ``ereg()``, and ``strpos()`` behave abnormally when handling arrays and return NULL."
 
 #: ../../source/language/php/misc.rst:19
 msgid "命令执行"
-msgstr ""
+msgstr "Command Execution"
 
 #: ../../source/language/php/misc.rst:20
 msgid "preg_replace 第一个参数是//e的时候，第二个参数会被当作命令执行"
-msgstr ""
+msgstr "When the first argument of preg_replace uses //e, the second argument is executed as code."
 
 #: ../../source/language/php/misc.rst:23
 msgid "截断"
-msgstr ""
+msgstr "Truncation"
 
 #: ../../source/language/php/misc.rst:24
 msgid "PHP字符存在截断行为，可以使用 ``ereg`` / ``%00`` / ``iconv`` 等实现php字符截断的操作，从而触发漏洞。"
-msgstr ""
+msgstr "PHP characters can be truncated. Techniques such as ``ereg`` / ``%00`` / ``iconv`` can be used to perform PHP character truncation and trigger vulnerabilities."
 
 #: ../../source/language/php/misc.rst:27
 msgid "变量覆盖"
-msgstr ""
+msgstr "Variable Overwrite"
 
 #: ../../source/language/php/misc.rst:28
 msgid ""
 "当使用 ``extract`` / ``parse_str`` 等函数时，或者使用php的 ``$$`` "
 "特性时，如果没有正确的调用，则可能使得用户可以任意修改变量。"
 msgstr ""
+"When functions such as ``extract`` / ``parse_str`` are used, or when PHP's "
+"``$$`` feature is used, incorrect invocation may allow users to modify "
+"variables arbitrarily."
 
 #: ../../source/language/php/misc.rst:31
 msgid "php特性"
-msgstr ""
+msgstr "PHP Characteristics"
 
 #: ../../source/language/php/misc.rst:32
 msgid "php自身在解析请求的时候，如果参数名字中包含\" \"、\".\"、\"[\"这几个字符，会将他们转换成下划线"
-msgstr ""
+msgstr "When PHP parses a request, if a parameter name contains \" \", \".\", or \"[\", PHP converts those characters to underscores."
 
 #: ../../source/language/php/misc.rst:33
 msgid ""
 "由于历史原因， ``urlencode`` 和RFC3896存在一定的不同，PHP另外提供了 ``rawurlencode`` "
 "对RFC3896完成标准的实现"
 msgstr ""
+"For historical reasons, ``urlencode`` differs from RFC3896 in some ways. PHP "
+"also provides ``rawurlencode`` as a standard-compliant implementation of "
+"RFC3896."
 
 #: ../../source/language/php/misc.rst:36
 msgid "/tmp临时文件竞争"
-msgstr ""
+msgstr "/tmp Temporary File Race"
 
 #: ../../source/language/php/misc.rst:37
 msgid "phpinfo可访问时，可以看到上传的临时文件的路径，从而实现LFI。"
-msgstr ""
+msgstr "When phpinfo is accessible, the path of uploaded temporary files can be observed and used to achieve LFI."

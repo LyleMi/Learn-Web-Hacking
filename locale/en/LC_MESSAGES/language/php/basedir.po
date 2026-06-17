@@ -20,14 +20,18 @@ msgstr ""
 
 #: ../../source/language/php/basedir.rst:2
 msgid "Open Basedir"
-msgstr ""
+msgstr "Open Basedir"
 
 #: ../../source/language/php/basedir.rst:5
 msgid "机制实现"
-msgstr ""
+msgstr "Implementation Mechanism"
 
 #: ../../source/language/php/basedir.rst:6
 msgid ""
 "PHP中Disable Function的实现是在php-src/main/fopen-"
 "wrappers.c中，实现方式是在调用文件等相关操作时调用函数根据路径来检查是否在basedir内，其中一部分实现代码如下："
 msgstr ""
+"PHP implements Disable Function in php-src/main/fopen-wrappers.c. The "
+"implementation calls a function during file and related operations to check "
+"whether the path is inside basedir. Part of the implementation is shown "
+"below:"

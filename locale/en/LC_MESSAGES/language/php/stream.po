@@ -20,97 +20,107 @@ msgstr ""
 
 #: ../../source/language/php/stream.rst:2
 msgid "PHP流"
-msgstr ""
+msgstr "PHP Streams"
 
 #: ../../source/language/php/stream.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/php/stream.rst:6
 msgid "流（Streams）的概念是在php 4.3引入的，是对流式数据的抽象，用于统一数据操作，比如文件数据、网络数据、压缩数据等。"
-msgstr ""
+msgstr "The concept of Streams was introduced in PHP 4.3. It is an abstraction for streaming data that unifies data operations, such as file data, network data, and compressed data."
 
 #: ../../source/language/php/stream.rst:8
 msgid "流可以通过file、open、fwrite、fclose、file_get_contents、 file_put_contents等函数操作。"
-msgstr ""
+msgstr "Streams can be operated through functions such as file, open, fwrite, fclose, file_get_contents, and file_put_contents."
 
 #: ../../source/language/php/stream.rst:12
 msgid "封装协议"
-msgstr ""
+msgstr "Wrapper Protocols"
 
 #: ../../source/language/php/stream.rst:13
 msgid ""
 "PHP 带有很多内置 URL 风格的封装协议，可用于类似 fopen()、 copy()、 file_exists() 和 filesize() "
 "的文件系统函数。支持的协议可用 ``stream_get_wrappers()`` 查看。"
 msgstr ""
+"PHP includes many built-in URL-style wrapper protocols that can be used with "
+"filesystem functions such as fopen(), copy(), file_exists(), and filesize(). "
+"Supported protocols can be viewed with ``stream_get_wrappers()``."
 
 #: ../../source/language/php/stream.rst:15
 msgid "``file://`` 访问本地文件系统"
-msgstr ""
+msgstr "``file://`` accesses the local filesystem."
 
 #: ../../source/language/php/stream.rst:16
 msgid "``http://`` 访问 HTTP(s) 网址"
-msgstr ""
+msgstr "``http://`` accesses HTTP(s) URLs."
 
 #: ../../source/language/php/stream.rst:17
 msgid "``ftp://`` 访问 FTP(s) URLs"
-msgstr ""
+msgstr "``ftp://`` accesses FTP(s) URLs."
 
 #: ../../source/language/php/stream.rst:18
 msgid "``php://`` 访问各个输入/输出流（I/O streams）"
-msgstr ""
+msgstr "``php://`` accesses various input/output streams (I/O streams)."
 
 #: ../../source/language/php/stream.rst:19
 msgid "``zlib://`` 压缩流"
-msgstr ""
+msgstr "``zlib://`` compressed streams."
 
 #: ../../source/language/php/stream.rst:20
 msgid "``data://`` 数据（RFC 2397）"
-msgstr ""
+msgstr "``data://`` data (RFC 2397)."
 
 #: ../../source/language/php/stream.rst:21
 msgid "``glob://`` 查找匹配的文件路径模式"
-msgstr ""
+msgstr "``glob://`` finds matching file path patterns."
 
 #: ../../source/language/php/stream.rst:22
 msgid "``phar://`` PHP 归档"
-msgstr ""
+msgstr "``phar://`` PHP archives."
 
 #: ../../source/language/php/stream.rst:23
 msgid "``ssh2://`` Secure Shell 2"
-msgstr ""
+msgstr "``ssh2://`` Secure Shell 2."
 
 #: ../../source/language/php/stream.rst:24
 msgid "``rar://`` RAR"
-msgstr ""
+msgstr "``rar://`` RAR."
 
 #: ../../source/language/php/stream.rst:25
 msgid "``ogg://`` 音频流"
-msgstr ""
+msgstr "``ogg://`` audio streams."
 
 #: ../../source/language/php/stream.rst:26
 msgid "``expect://`` 处理交互式的流"
-msgstr ""
+msgstr "``expect://`` handles interactive streams."
 
 #: ../../source/language/php/stream.rst:29
 msgid "PHP支持流"
-msgstr ""
+msgstr "PHP Supported Streams"
 
 #: ../../source/language/php/stream.rst:30
 msgid ""
 "PHP 提供了一些输入/输出（IO）流，允许访问 PHP "
 "的输入输出流、标准输入输出和错误描述符，内存中、磁盘备份的临时文件流以及可以操作其他读取写入文件资源的过滤器。"
 msgstr ""
+"PHP provides several input/output (IO) streams that allow access to PHP input "
+"and output streams, standard input/output and error descriptors, in-memory and "
+"disk-backed temporary file streams, and filters that can operate on other "
+"read/write file resources."
 
 #: ../../source/language/php/stream.rst:32
 msgid ""
 "需要注意的是，流不受 ``allow_url_fopen`` 限制，但是 ``php://input``、 ``php://stdin``、 "
 "``php://memory`` 和 ``php://temp`` 受限于 ``allow_url_include`` 。"
 msgstr ""
+"Note that streams are not restricted by ``allow_url_fopen``, but "
+"``php://input``, ``php://stdin``, ``php://memory``, and ``php://temp`` are "
+"restricted by ``allow_url_include``."
 
 #: ../../source/language/php/stream.rst:35
 msgid "输入输出流"
-msgstr ""
+msgstr "Input and Output Streams"
 
 #: ../../source/language/php/stream.rst:36
 msgid ""
@@ -118,22 +128,27 @@ msgid ""
 "进程相应的输入或者输出流。数据流引用了复制的文件描述符，所以如果在打开 ``php://stdin`` "
 "并在之后关了它，仅是关闭了复制品，真正被引用的 STDIN 并不受影响。"
 msgstr ""
+"``php://stdin``, ``php://stdout``, and ``php://stderr`` allow direct access "
+"to the corresponding input or output streams of the PHP process. The data "
+"stream references a duplicated file descriptor, so if ``php://stdin`` is "
+"opened and later closed, only the duplicate is closed; the real referenced "
+"STDIN is not affected."
 
 #: ../../source/language/php/stream.rst:38
 msgid "其中 ``php://stdin`` 是只读的， ``php://stdout`` 和 ``php://stderr`` 是只写的。"
-msgstr ""
+msgstr "``php://stdin`` is read-only, while ``php://stdout`` and ``php://stderr`` are write-only."
 
 #: ../../source/language/php/stream.rst:41
 msgid "fd"
-msgstr ""
+msgstr "fd"
 
 #: ../../source/language/php/stream.rst:42
 msgid "php://fd 允许直接访问指定的文件描述符。例如 ``php://fd/3`` 引用了文件描述符 3。"
-msgstr ""
+msgstr "php://fd allows direct access to a specified file descriptor. For example, ``php://fd/3`` references file descriptor 3."
 
 #: ../../source/language/php/stream.rst:45
 msgid "memory与temp"
-msgstr ""
+msgstr "memory and temp"
 
 #: ../../source/language/php/stream.rst:46
 msgid ""
@@ -141,16 +156,25 @@ msgid ""
 "``php://memory`` 总是把数据储存在内存中，而 ``php://temp`` 会在内存量达到预定义的限制后（默认是 "
 "2MB）存入临时文件中。临时文件位置的决定和 ``sys_get_temp_dir()`` 的方式一致。"
 msgstr ""
+"``php://memory`` and ``php://temp`` are file-like wrapper streams that allow "
+"temporary data to be read and written. The only difference is that "
+"``php://memory`` always stores data in memory, while ``php://temp`` stores "
+"data in a temporary file after the amount of memory reaches a predefined "
+"limit (2MB by default). The temporary file location is determined in the same "
+"way as ``sys_get_temp_dir()``."
 
 #: ../../source/language/php/stream.rst:48
 msgid ""
 "``php://temp`` 的内存限制可通过添加 ``/maxmemory:NN`` 来控制，NN "
 "是以字节为单位、保留在内存的最大数据量，超过则使用临时文件。"
 msgstr ""
+"The memory limit for ``php://temp`` can be controlled by adding "
+"``/maxmemory:NN``. NN is the maximum amount of data, in bytes, to keep in "
+"memory; data beyond that uses a temporary file."
 
 #: ../../source/language/php/stream.rst:51
 msgid "input"
-msgstr ""
+msgstr "input"
 
 #: ../../source/language/php/stream.rst:52
 msgid ""
@@ -159,131 +183,145 @@ msgid ""
 "``$HTTP_RAW_POST_DATA`` 默认没有填充，比激活 ``always_populate_raw_post_data`` "
 "潜在需要更少的内存。 ``enctype=\"multipart/form-data\"`` 的时候 ``php://input`` 是无效的。"
 msgstr ""
+"``php://input`` is a read-only stream that can access the raw data of a "
+"request. For POST requests, it is preferable to use ``php://input`` instead "
+"of ``$HTTP_RAW_POST_DATA`` because it does not depend on a specific php.ini "
+"directive. In this case, ``$HTTP_RAW_POST_DATA`` is not populated by default, "
+"which may require less memory than enabling ``always_populate_raw_post_data``. "
+"``php://input`` is unavailable when ``enctype=\"multipart/form-data\"`` is "
+"used."
 
 #: ../../source/language/php/stream.rst:55
 msgid "filter"
-msgstr ""
+msgstr "filter"
 
 #: ../../source/language/php/stream.rst:56
 msgid ""
 "``php://filter`` "
 "是一种元封装器，设计用于数据流打开时的筛选过滤应用。PHP默认提供了一些流过滤器，除此之外，还可以使用各种自定义过滤器。"
 msgstr ""
+"``php://filter`` is a meta-wrapper designed to apply filters when a data "
+"stream is opened. PHP provides several stream filters by default, and various "
+"custom filters can also be used."
 
 #: ../../source/language/php/stream.rst:58
 msgid ""
 "filter有resource, read, write三个参数，resource参数是必须的。它指定了你要筛选过滤的数据流。 "
 "read和write是可选参数，可以设定一个或多个过滤器名称，以管道符（|）分隔。"
 msgstr ""
+"filter has three parameters: resource, read, and write. The resource "
+"parameter is required and specifies the data stream to filter. read and write "
+"are optional parameters that can set one or more filter names separated by "
+"pipes (|)."
 
 #: ../../source/language/php/stream.rst:61
 msgid "过滤器列表"
-msgstr ""
+msgstr "Filter List"
 
 #: ../../source/language/php/stream.rst:62
 msgid "可以通过 ``stream_get_filters()`` 获取已经注册的过滤器列表。其中PHP内置的过滤器如下："
-msgstr ""
+msgstr "Use ``stream_get_filters()`` to obtain the list of registered filters. PHP's built-in filters include:"
 
 #: ../../source/language/php/stream.rst:64
 msgid "字符串过滤器"
-msgstr ""
+msgstr "String Filters"
 
 #: ../../source/language/php/stream.rst:65
 msgid "string.rot13"
-msgstr ""
+msgstr "string.rot13"
 
 #: ../../source/language/php/stream.rst:66
 msgid "string.toupper"
-msgstr ""
+msgstr "string.toupper"
 
 #: ../../source/language/php/stream.rst:67
 msgid "string.tolower"
-msgstr ""
+msgstr "string.tolower"
 
 #: ../../source/language/php/stream.rst:68
 msgid "string.strip_tags"
-msgstr ""
+msgstr "string.strip_tags"
 
 #: ../../source/language/php/stream.rst:69
 msgid "转换过滤器"
-msgstr ""
+msgstr "Conversion Filters"
 
 #: ../../source/language/php/stream.rst:70
 msgid "convert.base64-encode"
-msgstr ""
+msgstr "convert.base64-encode"
 
 #: ../../source/language/php/stream.rst:71
 msgid "convert.base64-decode"
-msgstr ""
+msgstr "convert.base64-decode"
 
 #: ../../source/language/php/stream.rst:72
 msgid "convert.quoted-printable-encode"
-msgstr ""
+msgstr "convert.quoted-printable-encode"
 
 #: ../../source/language/php/stream.rst:73
 msgid "convert.quoted-printable-decode"
-msgstr ""
+msgstr "convert.quoted-printable-decode"
 
 #: ../../source/language/php/stream.rst:74
 msgid "convert.iconv.*"
-msgstr ""
+msgstr "convert.iconv.*"
 
 #: ../../source/language/php/stream.rst:75
 msgid "压缩过滤器"
-msgstr ""
+msgstr "Compression Filters"
 
 #: ../../source/language/php/stream.rst:76
 msgid "zlib.deflate"
-msgstr ""
+msgstr "zlib.deflate"
 
 #: ../../source/language/php/stream.rst:77
 msgid "zlib.inflate"
-msgstr ""
+msgstr "zlib.inflate"
 
 #: ../../source/language/php/stream.rst:78
 msgid "bzip2.compress"
-msgstr ""
+msgstr "bzip2.compress"
 
 #: ../../source/language/php/stream.rst:79
 msgid "bzip2.decompress"
-msgstr ""
+msgstr "bzip2.decompress"
 
 #: ../../source/language/php/stream.rst:80
 msgid "加密过滤器"
-msgstr ""
+msgstr "Encryption Filters"
 
 #: ../../source/language/php/stream.rst:81
 msgid "mcrypt.``ciphername``"
-msgstr ""
+msgstr "mcrypt.``ciphername``"
 
 #: ../../source/language/php/stream.rst:82
 msgid "mdecrypt.``ciphername``"
-msgstr ""
+msgstr "mdecrypt.``ciphername``"
 
 #: ../../source/language/php/stream.rst:85
 msgid "过滤器利用tricks"
-msgstr ""
+msgstr "Filter Exploitation Tricks"
 
 #: ../../source/language/php/stream.rst:86
 msgid "LFI"
-msgstr ""
+msgstr "LFI"
 
 #: ../../source/language/php/stream.rst:87
 msgid "``php://filter/convert.base64-encode/resource=index.php``"
-msgstr ""
+msgstr "``php://filter/convert.base64-encode/resource=index.php``"
 
 #: ../../source/language/php/stream.rst:88
 msgid "XXE读取文件时会因而解析报错，可用base64编码"
-msgstr ""
+msgstr "When XXE reads files, parsing errors may occur, so base64 encoding can be used."
 
 #: ../../source/language/php/stream.rst:89
 msgid "base64编码会弃掉未在码表内的字符，可用于绕过一些文件格式"
-msgstr ""
+msgstr "Base64 encoding discards characters that are not in the alphabet, which can be used to bypass some file formats."
 
 #: ../../source/language/php/stream.rst:90
 msgid "部分 convert 会有大量的资源消耗，可用作DoS"
-msgstr ""
+msgstr "Some convert filters consume many resources and can be used for DoS."
 
 #: ../../source/language/php/stream.rst:91
 msgid "rot13 / convert 转换 过WAF"
-msgstr ""
+msgstr "rot13 / convert transformations can bypass WAFs."
