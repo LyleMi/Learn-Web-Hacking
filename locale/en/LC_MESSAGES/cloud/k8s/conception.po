@@ -20,61 +20,67 @@ msgstr ""
 
 #: ../../source/cloud/k8s/conception.rst:2
 msgid "k8s概念"
-msgstr ""
+msgstr "K8s Concepts"
 
 #: ../../source/cloud/k8s/conception.rst:3
 msgid ""
 "Kubernetes 在希腊语意为“舵手”或“驾驶员”，和 Docker 对应，常简称为K8s。Kubernetes 由 Google 的 "
 "Borg 演化而来，是用于自动部署、扩展和管理容器的开源系统。"
 msgstr ""
+"Kubernetes means \"helmsman\" or \"pilot\" in Greek. It is commonly "
+"abbreviated as K8s, in the same ecosystem as Docker. Kubernetes evolved from "
+"Google's Borg and is an open source system for automatically deploying, "
+"scaling, and managing containers."
 
 #: ../../source/cloud/k8s/conception.rst:6
 msgid "组成"
-msgstr ""
+msgstr "Components"
 
 #: ../../source/cloud/k8s/conception.rst:7
 msgid "Kubernetes 由控制面 (Master) 与数据面 (Worker Node) 组成。 Master 的核心组件："
 msgstr ""
+"Kubernetes consists of the control plane (Master) and the data plane (Worker "
+"Node). Core Master components include:"
 
 #: ../../source/cloud/k8s/conception.rst:10
 msgid "API Server"
-msgstr ""
+msgstr "API Server"
 
 #: ../../source/cloud/k8s/conception.rst:11
 msgid "Controller-Mananger"
-msgstr ""
+msgstr "Controller-Manager"
 
 #: ../../source/cloud/k8s/conception.rst:12
 msgid "Scheduler"
-msgstr ""
+msgstr "Scheduler"
 
 #: ../../source/cloud/k8s/conception.rst:13
 msgid "etcd"
-msgstr ""
+msgstr "etcd"
 
 #: ../../source/cloud/k8s/conception.rst:15
 msgid "Worker Node 则由以下节点组成："
-msgstr ""
+msgstr "A Worker Node consists of the following components:"
 
 #: ../../source/cloud/k8s/conception.rst:17
 msgid "Kubelet"
-msgstr ""
+msgstr "Kubelet"
 
 #: ../../source/cloud/k8s/conception.rst:18
 msgid "Kube-Proxy"
-msgstr ""
+msgstr "Kube-Proxy"
 
 #: ../../source/cloud/k8s/conception.rst:19
 msgid "容器运行时"
-msgstr ""
+msgstr "Container runtime"
 
 #: ../../source/cloud/k8s/conception.rst:22
 msgid "核心设计"
-msgstr ""
+msgstr "Core Design"
 
 #: ../../source/cloud/k8s/conception.rst:25
 msgid "Pod"
-msgstr ""
+msgstr "Pod"
 
 #: ../../source/cloud/k8s/conception.rst:26
 msgid ""
@@ -83,11 +89,21 @@ msgid ""
 "可以定义一个卷，例如本地磁盘目录或网络磁盘，并将其暴露在pod中的一个容器之中。 Pod 可以通过 Kubernetes API "
 "手动管理，也可以委托给控制器来实现自动管理。"
 msgstr ""
+"A Pod is the basic scheduling unit in Kubernetes. A Pod usually contains one "
+"or more containers. Each Pod in Kubernetes is assigned an IP address that is "
+"unique within the cluster, allowing applications to use the same port. A Pod "
+"can define a volume, such as a local disk directory or a network disk, and "
+"expose it to one of the containers in the Pod. Pods can be managed manually "
+"through the Kubernetes API or delegated to a controller for automatic "
+"management."
 
 #: ../../source/cloud/k8s/conception.rst:32
 msgid "Service"
-msgstr ""
+msgstr "Service"
 
 #: ../../source/cloud/k8s/conception.rst:33
 msgid "Service是为一组具有相同功能的容器应用提供一个统一的入口地址，本质是一组协同工作的Pod。"
 msgstr ""
+"A Service provides a unified entry address for a group of containerized "
+"applications with the same function. In essence, it represents a set of Pods "
+"working together."

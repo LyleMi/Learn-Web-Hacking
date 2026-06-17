@@ -20,68 +20,68 @@ msgstr ""
 
 #: ../../source/cloud/k8s/security.rst:2
 msgid "安全"
-msgstr ""
+msgstr "Security"
 
 #: ../../source/cloud/k8s/security.rst:3
 msgid "集群安全性考虑几个目标："
-msgstr ""
+msgstr "Cluster security considers several goals:"
 
 #: ../../source/cloud/k8s/security.rst:5
 msgid "保证容器与宿主机隔离"
-msgstr ""
+msgstr "Ensure isolation between containers and the host"
 
 #: ../../source/cloud/k8s/security.rst:6
 msgid "限制容器给基础设施/其他容器带来的干扰"
-msgstr ""
+msgstr "Limit the impact that containers can have on the infrastructure or other containers"
 
 #: ../../source/cloud/k8s/security.rst:7
 msgid "最小权限原则"
-msgstr ""
+msgstr "Follow the principle of least privilege"
 
 #: ../../source/cloud/k8s/security.rst:8
 msgid "明确组件边界划分"
-msgstr ""
+msgstr "Clearly define component boundaries"
 
 #: ../../source/cloud/k8s/security.rst:9
 msgid "划分普通用户和管理员的角色"
-msgstr ""
+msgstr "Separate the roles of regular users and administrators"
 
 #: ../../source/cloud/k8s/security.rst:10
 msgid "必要时将管理员权限赋予用户"
-msgstr ""
+msgstr "Grant administrative privileges to users only when necessary"
 
 #: ../../source/cloud/k8s/security.rst:11
 msgid "允许拥有Secret数据的应用在集群中运行"
-msgstr ""
+msgstr "Allow applications that hold Secret data to run in the cluster"
 
 #: ../../source/cloud/k8s/security.rst:14
 msgid "常见安全问题"
-msgstr ""
+msgstr "Common Security Issues"
 
 #: ../../source/cloud/k8s/security.rst:15
 msgid "K8s API Server未授权访问"
-msgstr ""
+msgstr "Unauthorized access to the K8s API Server"
 
 #: ../../source/cloud/k8s/security.rst:16
 msgid "k8s 配置文件泄露 ``$HOME/.kube/config``"
-msgstr ""
+msgstr "K8s configuration file disclosure: ``$HOME/.kube/config``"
 
 #: ../../source/cloud/k8s/security.rst:17
 msgid "权限提升"
-msgstr ""
+msgstr "Privilege escalation"
 
 #: ../../source/cloud/k8s/security.rst:18
 msgid "Pod 内权限提升"
-msgstr ""
+msgstr "Privilege escalation inside a Pod"
 
 #: ../../source/cloud/k8s/security.rst:19
 msgid "K8s 权限提升"
-msgstr ""
+msgstr "K8s privilege escalation"
 
 #: ../../source/cloud/k8s/security.rst:20
 msgid "容器逃逸"
-msgstr ""
+msgstr "Container escape"
 
 #: ../../source/cloud/k8s/security.rst:21
 msgid "拒绝服务"
-msgstr ""
+msgstr "Denial of service"

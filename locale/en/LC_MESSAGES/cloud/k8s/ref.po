@@ -20,14 +20,16 @@ msgstr ""
 
 #: ../../source/cloud/k8s/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/cloud/k8s/ref.rst:5
 msgid "靶场"
-msgstr ""
+msgstr "Practice Labs"
 
 #: ../../source/cloud/k8s/ref.rst:6
 msgid ""
 "`kubernetes goat <https://katacoda.com/madhuakula/scenarios/kubernetes-"
 "goat>`_"
 msgstr ""
+"`kubernetes goat <https://katacoda.com/madhuakula/scenarios/kubernetes-"
+"goat>`_"
