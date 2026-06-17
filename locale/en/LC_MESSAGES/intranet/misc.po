@@ -20,184 +20,184 @@ msgstr ""
 
 #: ../../source/intranet/misc.rst:2
 msgid "综合技巧"
-msgstr ""
+msgstr "General Techniques"
 
 #: ../../source/intranet/misc.rst:5 ../../source/intranet/misc.rst:19
 msgid "端口转发"
-msgstr ""
+msgstr "Port Forwarding"
 
 #: ../../source/intranet/misc.rst:6
 msgid "windows"
-msgstr ""
+msgstr "windows"
 
 #: ../../source/intranet/misc.rst:7
 msgid "lcx"
-msgstr ""
+msgstr "lcx"
 
 #: ../../source/intranet/misc.rst:8
 msgid "netsh"
-msgstr ""
+msgstr "netsh"
 
 #: ../../source/intranet/misc.rst:9
 msgid "linux"
-msgstr ""
+msgstr "linux"
 
 #: ../../source/intranet/misc.rst:10
 msgid "portmap"
-msgstr ""
+msgstr "portmap"
 
 #: ../../source/intranet/misc.rst:11
 msgid "iptables"
-msgstr ""
+msgstr "iptables"
 
 #: ../../source/intranet/misc.rst:12
 msgid "socket代理"
-msgstr ""
+msgstr "socket proxy"
 
 #: ../../source/intranet/misc.rst:13
 msgid "Win: xsocks"
-msgstr ""
+msgstr "Win: xsocks"
 
 #: ../../source/intranet/misc.rst:14
 msgid "Linux: proxychains"
-msgstr ""
+msgstr "Linux: proxychains"
 
 #: ../../source/intranet/misc.rst:15
 msgid "基于http的转发与socket代理(低权限下的渗透)"
-msgstr ""
+msgstr "HTTP-based forwarding and socket proxying (penetration with low privileges)"
 
 #: ../../source/intranet/misc.rst:16
 msgid "端口转发: tunna"
-msgstr ""
+msgstr "Port forwarding: tunna"
 
 #: ../../source/intranet/misc.rst:17
 msgid "socks代理: reGeorg"
-msgstr ""
+msgstr "socks proxy: reGeorg"
 
 #: ../../source/intranet/misc.rst:18
 msgid "ssh通道"
-msgstr ""
+msgstr "ssh tunnel"
 
 #: ../../source/intranet/misc.rst:20
 msgid "socks"
-msgstr ""
+msgstr "socks"
 
 #: ../../source/intranet/misc.rst:23
 msgid "获取shell"
-msgstr ""
+msgstr "Obtaining a Shell"
 
 #: ../../source/intranet/misc.rst:24
 msgid "常规shell反弹"
-msgstr ""
+msgstr "Conventional reverse shell"
 
 #: ../../source/intranet/misc.rst:34
 msgid "突破防火墙的imcp_shell反弹"
-msgstr ""
+msgstr "imcp_shell reverse shell for bypassing firewalls"
 
 #: ../../source/intranet/misc.rst:35
 msgid "正向shell"
-msgstr ""
+msgstr "Bind shell"
 
 #: ../../source/intranet/misc.rst:43
 msgid "内网文件传输"
-msgstr ""
+msgstr "Internal Network File Transfer"
 
 #: ../../source/intranet/misc.rst:44
 msgid "windows下文件传输"
-msgstr ""
+msgstr "File transfer on Windows"
 
 #: ../../source/intranet/misc.rst:45
 msgid "powershell"
-msgstr ""
+msgstr "powershell"
 
 #: ../../source/intranet/misc.rst:46
 msgid "vbs脚本文件"
-msgstr ""
+msgstr "vbs script file"
 
 #: ../../source/intranet/misc.rst:47
 msgid "bitsadmin"
-msgstr ""
+msgstr "bitsadmin"
 
 #: ../../source/intranet/misc.rst:48
 msgid "文件共享"
-msgstr ""
+msgstr "File sharing"
 
 #: ../../source/intranet/misc.rst:49
 msgid "使用telnet接收数据"
-msgstr ""
+msgstr "Use telnet to receive data"
 
 #: ../../source/intranet/misc.rst:50
 msgid "hta"
-msgstr ""
+msgstr "hta"
 
 #: ../../source/intranet/misc.rst:51
 msgid "linux下文件传输"
-msgstr ""
+msgstr "File transfer on Linux"
 
 #: ../../source/intranet/misc.rst:52
 msgid "python"
-msgstr ""
+msgstr "python"
 
 #: ../../source/intranet/misc.rst:53
 msgid "wget"
-msgstr ""
+msgstr "wget"
 
 #: ../../source/intranet/misc.rst:54
 msgid "tar + ssh"
-msgstr ""
+msgstr "tar + ssh"
 
 #: ../../source/intranet/misc.rst:55
 msgid "利用dns传输数据"
-msgstr ""
+msgstr "Use DNS to transfer data"
 
 #: ../../source/intranet/misc.rst:56
 msgid "文件编译"
-msgstr ""
+msgstr "File compilation"
 
 #: ../../source/intranet/misc.rst:57
 msgid "powershell将exe转为txt，再txt转为exe"
-msgstr ""
+msgstr "Use powershell to convert an exe to txt, then convert the txt back to exe"
 
 #: ../../source/intranet/misc.rst:60
 msgid "远程连接 && 执行程序"
-msgstr ""
+msgstr "Remote Connection && Program Execution"
 
 #: ../../source/intranet/misc.rst:61
 msgid "at&schtasks"
-msgstr ""
+msgstr "at&schtasks"
 
 #: ../../source/intranet/misc.rst:62
 msgid "psexec"
-msgstr ""
+msgstr "psexec"
 
 #: ../../source/intranet/misc.rst:63
 msgid "wmic"
-msgstr ""
+msgstr "wmic"
 
 #: ../../source/intranet/misc.rst:64
 msgid "wmiexec.vbs"
-msgstr ""
+msgstr "wmiexec.vbs"
 
 #: ../../source/intranet/misc.rst:65
 msgid "smbexec"
-msgstr ""
+msgstr "smbexec"
 
 #: ../../source/intranet/misc.rst:66
 msgid "powershell remoting"
-msgstr ""
+msgstr "powershell remoting"
 
 #: ../../source/intranet/misc.rst:67
 msgid "SC创建服务执行"
-msgstr ""
+msgstr "Use SC to create a service for execution"
 
 #: ../../source/intranet/misc.rst:68
 msgid "schtasks"
-msgstr ""
+msgstr "schtasks"
 
 #: ../../source/intranet/misc.rst:69
 msgid "SMB+MOF || DLL Hijacks"
-msgstr ""
+msgstr "SMB+MOF || DLL Hijacks"
 
 #: ../../source/intranet/misc.rst:70
 msgid "PTH + compmgmt.msc"
-msgstr ""
+msgstr "PTH + compmgmt.msc"

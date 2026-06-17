@@ -20,292 +20,292 @@ msgstr ""
 
 #: ../../source/intranet/trojan.rst:2
 msgid "后门技术"
-msgstr ""
+msgstr "Backdoor Techniques"
 
 #: ../../source/intranet/trojan.rst:5
 msgid "开发技术"
-msgstr ""
+msgstr "Development Techniques"
 
 #: ../../source/intranet/trojan.rst:6
 msgid "管控功能实现技术"
-msgstr ""
+msgstr "Techniques for Implementing Control Functions"
 
 #: ../../source/intranet/trojan.rst:7
 msgid "系统管理：查看系统基本信息，进程管理，服务管理"
-msgstr ""
+msgstr "System management: view basic system information, process management, service management"
 
 #: ../../source/intranet/trojan.rst:8
 msgid "文件管理：复制/粘贴文件，删除文件/目录，下载/上传文件等"
-msgstr ""
+msgstr "File management: copy/paste files, delete files/directories, download/upload files, and so on"
 
 #: ../../source/intranet/trojan.rst:9
 msgid "Shell管理"
-msgstr ""
+msgstr "Shell management"
 
 #: ../../source/intranet/trojan.rst:10
 msgid "击键记录监控"
-msgstr ""
+msgstr "Keystroke logging and monitoring"
 
 #: ../../source/intranet/trojan.rst:11
 msgid "屏幕截取"
-msgstr ""
+msgstr "Screen capture"
 
 #: ../../source/intranet/trojan.rst:12
 msgid "音频监控"
-msgstr ""
+msgstr "Audio monitoring"
 
 #: ../../source/intranet/trojan.rst:13
 msgid "视频监控"
-msgstr ""
+msgstr "Video monitoring"
 
 #: ../../source/intranet/trojan.rst:14
 msgid "隐秘信息查看"
-msgstr ""
+msgstr "Viewing sensitive hidden information"
 
 #: ../../source/intranet/trojan.rst:15
 msgid "移动磁盘的动态监控"
-msgstr ""
+msgstr "Dynamic monitoring of removable disks"
 
 #: ../../source/intranet/trojan.rst:16
 msgid "远程卸载"
-msgstr ""
+msgstr "Remote uninstall"
 
 #: ../../source/intranet/trojan.rst:17
 msgid "自启动技术"
-msgstr ""
+msgstr "Autostart Techniques"
 
 #: ../../source/intranet/trojan.rst:18
 msgid "Windows自启动"
-msgstr ""
+msgstr "Windows autostart"
 
 #: ../../source/intranet/trojan.rst:19
 msgid "基于Windows启动目录的自启动"
-msgstr ""
+msgstr "Autostart based on the Windows Startup directory"
 
 #: ../../source/intranet/trojan.rst:20
 msgid "基于注册表的自启动"
-msgstr ""
+msgstr "Registry-based autostart"
 
 #: ../../source/intranet/trojan.rst:21
 msgid "基于服务程序的自启动"
-msgstr ""
+msgstr "Service-based autostart"
 
 #: ../../source/intranet/trojan.rst:22
 msgid "基于ActiveX控件的自启动"
-msgstr ""
+msgstr "Autostart based on ActiveX controls"
 
 #: ../../source/intranet/trojan.rst:23
 msgid "基于计划任务（Scheduled Tasks）的自启动"
-msgstr ""
+msgstr "Autostart based on Scheduled Tasks"
 
 #: ../../source/intranet/trojan.rst:24
 msgid "Linux自启动"
-msgstr ""
+msgstr "Linux autostart"
 
 #: ../../source/intranet/trojan.rst:25
 msgid "用户态进程隐藏技术"
-msgstr ""
+msgstr "User-Mode Process Hiding Techniques"
 
 #: ../../source/intranet/trojan.rst:26
 msgid "基于DLL插入的进程隐藏"
-msgstr ""
+msgstr "Process hiding based on DLL injection"
 
 #: ../../source/intranet/trojan.rst:27
 msgid "远程线程创建技术"
-msgstr ""
+msgstr "Remote thread creation technique"
 
 #: ../../source/intranet/trojan.rst:28
 msgid "设置窗口挂钩（HOOK）技术"
-msgstr ""
+msgstr "Window hook (HOOK) technique"
 
 #: ../../source/intranet/trojan.rst:29
 msgid "基于SvcHost共享服务的进程隐藏"
-msgstr ""
+msgstr "Process hiding based on SvcHost shared services"
 
 #: ../../source/intranet/trojan.rst:30
 msgid "进程内存替换"
-msgstr ""
+msgstr "Process memory replacement"
 
 #: ../../source/intranet/trojan.rst:31
 msgid "数据穿透和躲避技术"
-msgstr ""
+msgstr "Data Traversal and Evasion Techniques"
 
 #: ../../source/intranet/trojan.rst:32
 msgid "反弹端口"
-msgstr ""
+msgstr "Reverse port"
 
 #: ../../source/intranet/trojan.rst:33
 msgid "协议隧道"
-msgstr ""
+msgstr "Protocol tunnel"
 
 #: ../../source/intranet/trojan.rst:34
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: ../../source/intranet/trojan.rst:35
 msgid "MSN"
-msgstr ""
+msgstr "MSN"
 
 #: ../../source/intranet/trojan.rst:36
 msgid "Google Talk"
-msgstr ""
+msgstr "Google Talk"
 
 #: ../../source/intranet/trojan.rst:37
 msgid "内核级隐藏技术（Rootkit）"
-msgstr ""
+msgstr "Kernel-level hiding technique (Rootkit)"
 
 #: ../../source/intranet/trojan.rst:38
 msgid "磁盘启动级隐藏技术（Bootkit）"
-msgstr ""
+msgstr "Disk boot-level hiding technique (Bootkit)"
 
 #: ../../source/intranet/trojan.rst:39
 msgid "MBR"
-msgstr ""
+msgstr "MBR"
 
 #: ../../source/intranet/trojan.rst:40
 msgid "BIOS"
-msgstr ""
+msgstr "BIOS"
 
 #: ../../source/intranet/trojan.rst:41
 msgid "NTLDR"
-msgstr ""
+msgstr "NTLDR"
 
 #: ../../source/intranet/trojan.rst:42
 msgid "boot.ini"
-msgstr ""
+msgstr "boot.ini"
 
 #: ../../source/intranet/trojan.rst:43
 msgid "还原软件对抗技术"
-msgstr ""
+msgstr "Techniques for countering restore software"
 
 #: ../../source/intranet/trojan.rst:46
 msgid "后门免杀"
-msgstr ""
+msgstr "Backdoor AV Evasion"
 
 #: ../../source/intranet/trojan.rst:47
 msgid "传统静态代码检测"
-msgstr ""
+msgstr "Traditional static code detection"
 
 #: ../../source/intranet/trojan.rst:48
 msgid "加壳"
-msgstr ""
+msgstr "Packing"
 
 #: ../../source/intranet/trojan.rst:49
 msgid "添加花指令"
-msgstr ""
+msgstr "Adding junk instructions"
 
 #: ../../source/intranet/trojan.rst:50
 msgid "输入表免杀"
-msgstr ""
+msgstr "Import table AV evasion"
 
 #: ../../source/intranet/trojan.rst:51
 msgid "启发式代码检测"
-msgstr ""
+msgstr "Heuristic code detection"
 
 #: ../../source/intranet/trojan.rst:52
 msgid "动态函数调用"
-msgstr ""
+msgstr "Dynamic function calls"
 
 #: ../../source/intranet/trojan.rst:53
 msgid "云查杀"
-msgstr ""
+msgstr "Cloud scanning"
 
 #: ../../source/intranet/trojan.rst:54
 msgid "动态增大自身体积"
-msgstr ""
+msgstr "Dynamically increasing its own size"
 
 #: ../../source/intranet/trojan.rst:55
 msgid "更改云查杀服务器域名解析地址"
-msgstr ""
+msgstr "Change the domain resolution address of the cloud scanning server"
 
 #: ../../source/intranet/trojan.rst:56
 msgid "断网"
-msgstr ""
+msgstr "Disconnect the network"
 
 #: ../../source/intranet/trojan.rst:57
 msgid "利用散列碰撞绕过云端“白名单”"
-msgstr ""
+msgstr "Use hash collisions to bypass cloud \"whitelists\""
 
 #: ../../source/intranet/trojan.rst:58
 msgid "攻击主防杀毒软件"
-msgstr ""
+msgstr "Attack proactive defense antivirus software"
 
 #: ../../source/intranet/trojan.rst:59
 msgid "更改系统时间"
-msgstr ""
+msgstr "Change the system time"
 
 #: ../../source/intranet/trojan.rst:60
 msgid "窗口消息攻击"
-msgstr ""
+msgstr "Window message attack"
 
 #: ../../source/intranet/trojan.rst:61
 msgid "主动发送IRP操纵主防驱动"
-msgstr ""
+msgstr "Actively send IRPs to manipulate proactive defense drivers"
 
 #: ../../source/intranet/trojan.rst:62
 msgid "利用证书信任"
-msgstr ""
+msgstr "Use certificate trust"
 
 #: ../../source/intranet/trojan.rst:63
 msgid "盗取利用合法证书"
-msgstr ""
+msgstr "Steal and use legitimate certificates"
 
 #: ../../source/intranet/trojan.rst:64
 msgid "利用散列碰撞伪造证书"
-msgstr ""
+msgstr "Use hash collisions to forge certificates"
 
 #: ../../source/intranet/trojan.rst:65
 msgid "利用合法程序 DLL劫持问题的“白加黑”"
-msgstr ""
+msgstr "Use legitimate programs and DLL hijacking for a \"white plus black\" technique"
 
 #: ../../source/intranet/trojan.rst:68
 msgid "检测技术"
-msgstr ""
+msgstr "Detection Techniques"
 
 #: ../../source/intranet/trojan.rst:69
 msgid "基于自启动信息的检测"
-msgstr ""
+msgstr "Detection based on autostart information"
 
 #: ../../source/intranet/trojan.rst:70
 msgid "基于进程信息的检测"
-msgstr ""
+msgstr "Detection based on process information"
 
 #: ../../source/intranet/trojan.rst:71
 msgid "基于数据传输的检测"
-msgstr ""
+msgstr "Detection based on data transmission"
 
 #: ../../source/intranet/trojan.rst:72
 msgid "Rootkit/Bootkit的检测"
-msgstr ""
+msgstr "Rootkit/Bootkit detection"
 
 #: ../../source/intranet/trojan.rst:75
 msgid "后门分析"
-msgstr ""
+msgstr "Backdoor Analysis"
 
 #: ../../source/intranet/trojan.rst:76
 msgid "动态分析"
-msgstr ""
+msgstr "Dynamic analysis"
 
 #: ../../source/intranet/trojan.rst:77
 msgid "静态分析"
-msgstr ""
+msgstr "Static analysis"
 
 #: ../../source/intranet/trojan.rst:78
 msgid "反病毒引擎扫描"
-msgstr ""
+msgstr "Antivirus engine scanning"
 
 #: ../../source/intranet/trojan.rst:79
 msgid "文件格式识别"
-msgstr ""
+msgstr "File format identification"
 
 #: ../../source/intranet/trojan.rst:80
 msgid "文件加壳识别及脱壳"
-msgstr ""
+msgstr "File packer identification and unpacking"
 
 #: ../../source/intranet/trojan.rst:81
 msgid "明文字符串查找"
-msgstr ""
+msgstr "Plaintext string search"
 
 #: ../../source/intranet/trojan.rst:82
 msgid "链接库及导入/导出函数分析"
-msgstr ""
+msgstr "Linked library and import/export function analysis"

@@ -20,501 +20,503 @@ msgstr ""
 
 #: ../../source/intranet/linux/info.rst:2
 msgid "信息收集"
-msgstr ""
+msgstr "Information Gathering"
 
 #: ../../source/intranet/linux/info.rst:5
 msgid "获取内核，操作系统和设备信息"
-msgstr ""
+msgstr "Collect kernel, operating system, and device information"
 
 #: ../../source/intranet/linux/info.rst:6
 msgid "版本信息"
-msgstr ""
+msgstr "Version information"
 
 #: ../../source/intranet/linux/info.rst:7
 msgid "``uname -a`` 所有版本"
-msgstr ""
+msgstr "``uname -a`` all version information"
 
 #: ../../source/intranet/linux/info.rst:8
 msgid "``uname -r`` 内核版本信息"
-msgstr ""
+msgstr "``uname -r`` kernel version information"
 
 #: ../../source/intranet/linux/info.rst:9
 msgid "``uname -n`` 系统主机名字"
-msgstr ""
+msgstr "``uname -n`` system host name"
 
 #: ../../source/intranet/linux/info.rst:10
 msgid "``uname -m`` Linux内核架构"
-msgstr ""
+msgstr "``uname -m`` Linux kernel architecture"
 
 #: ../../source/intranet/linux/info.rst:11
 msgid "内核信息 ``cat /proc/version``"
-msgstr ""
+msgstr "Kernel information ``cat /proc/version``"
 
 #: ../../source/intranet/linux/info.rst:12
 msgid "CPU信息 ``cat /proc/cpuinfo``"
-msgstr ""
+msgstr "CPU information ``cat /proc/cpuinfo``"
 
 #: ../../source/intranet/linux/info.rst:13
 msgid "发布信息"
-msgstr ""
+msgstr "Release information"
 
 #: ../../source/intranet/linux/info.rst:14
 msgid "``cat /etc/*-release``"
-msgstr ""
+msgstr "``cat /etc/*-release``"
 
 #: ../../source/intranet/linux/info.rst:15
 msgid "``cat /etc/issue``"
-msgstr ""
+msgstr "``cat /etc/issue``"
 
 #: ../../source/intranet/linux/info.rst:16
 msgid "主机名 ``hostname``"
-msgstr ""
+msgstr "Host name ``hostname``"
 
 #: ../../source/intranet/linux/info.rst:17
 msgid "文件系统 ``df -a``"
-msgstr ""
+msgstr "File systems ``df -a``"
 
 #: ../../source/intranet/linux/info.rst:18
 msgid "内核日志 ``dmesg`` / ``/var/log/dmesg``"
-msgstr ""
+msgstr "Kernel logs ``dmesg`` / ``/var/log/dmesg``"
 
 #: ../../source/intranet/linux/info.rst:21
 msgid "用户和组"
-msgstr ""
+msgstr "Users and Groups"
 
 #: ../../source/intranet/linux/info.rst:22
 msgid "列出系统所有用户 ``cat /etc/passwd``"
-msgstr ""
+msgstr "List all system users ``cat /etc/passwd``"
 
 #: ../../source/intranet/linux/info.rst:23
 msgid "列出系统所有组 ``cat /etc/group``"
-msgstr ""
+msgstr "List all system groups ``cat /etc/group``"
 
 #: ../../source/intranet/linux/info.rst:24
 msgid "列出所有用户hash（root）``cat /etc/shadow``"
-msgstr ""
+msgstr "List all user hashes (root) ``cat /etc/shadow``"
 
 #: ../../source/intranet/linux/info.rst:25
 msgid "用户"
-msgstr ""
+msgstr "Users"
 
 #: ../../source/intranet/linux/info.rst:26
 msgid "查询用户的基本信息 ``finger``"
-msgstr ""
+msgstr "Query basic user information ``finger``"
 
 #: ../../source/intranet/linux/info.rst:27
 msgid "当前登录的用户 ``users`` ``who -a`` ``/var/log/utmp``"
-msgstr ""
+msgstr "Currently logged-in users ``users`` ``who -a`` ``/var/log/utmp``"
 
 #: ../../source/intranet/linux/info.rst:28
 msgid "查询无密码用户 ``grep 'x:0:' /etc/passwd``"
-msgstr ""
+msgstr "Query users without passwords ``grep 'x:0:' /etc/passwd``"
 
 #: ../../source/intranet/linux/info.rst:29
 msgid "目前登录的用户 ``w``"
-msgstr ""
+msgstr "Currently logged-in users ``w``"
 
 #: ../../source/intranet/linux/info.rst:30
 msgid "登入过的用户信息 ``last`` / ``/var/log/wtmp``"
-msgstr ""
+msgstr "Information about users who have logged in ``last`` / ``/var/log/wtmp``"
 
 #: ../../source/intranet/linux/info.rst:31
 msgid "显示系统中所有用户最近一次登录信息 ``lastlog`` / ``/var/log/lastlog``"
-msgstr ""
+msgstr "Show the most recent login information for all users on the system ``lastlog`` / ``/var/log/lastlog``"
 
 #: ../../source/intranet/linux/info.rst:32
 msgid "登录成功日志 ``/var/log/secure``"
-msgstr ""
+msgstr "Successful login log ``/var/log/secure``"
 
 #: ../../source/intranet/linux/info.rst:33
 msgid "登录失败日志 ``/var/log/faillog``"
-msgstr ""
+msgstr "Failed login log ``/var/log/faillog``"
 
 #: ../../source/intranet/linux/info.rst:34
 msgid "查看特权用户 ``grep :0 /etc/passwd``"
-msgstr ""
+msgstr "View privileged users ``grep :0 /etc/passwd``"
 
 #: ../../source/intranet/linux/info.rst:35
 msgid "查看passwd最后修改时间 ``ls -l /etc/passwd``"
-msgstr ""
+msgstr "View the last modification time of passwd ``ls -l /etc/passwd``"
 
 #: ../../source/intranet/linux/info.rst:36
 #, python-brace-format
 msgid "查看是否存在空口令用户 ``awk -F: 'length($2)==0 {print $1}' /etc/shadow``"
-msgstr ""
+msgstr "Check whether users with empty passwords exist ``awk -F: 'length($2)==0 {print $1}' /etc/shadow``"
 
 #: ../../source/intranet/linux/info.rst:37
 #, python-brace-format
 msgid "查看远程登录的账号 ``awk '/\\$1|\\$6/{print $1}' /etc/shadow``"
-msgstr ""
+msgstr "View accounts that can log in remotely ``awk '/\\$1|\\$6/{print $1}' /etc/shadow``"
 
 #: ../../source/intranet/linux/info.rst:38
 msgid "查看具有sudo权限的用户"
-msgstr ""
+msgstr "View users with sudo privileges"
 
 #: ../../source/intranet/linux/info.rst:39
 msgid "``cat /etc/sudoers | grep -v \"^#\\|^$\" | grep \"ALL=(ALL)\"``"
-msgstr ""
+msgstr "``cat /etc/sudoers | grep -v \"^#\\|^$\" | grep \"ALL=(ALL)\"``"
 
 #: ../../source/intranet/linux/info.rst:42
 msgid "用户和权限信息"
-msgstr ""
+msgstr "User and Permission Information"
 
 #: ../../source/intranet/linux/info.rst:43
 msgid "当前用户 ``whoami``"
-msgstr ""
+msgstr "Current user ``whoami``"
 
 #: ../../source/intranet/linux/info.rst:44
 msgid "当前用户信息 ``id``"
-msgstr ""
+msgstr "Current user information ``id``"
 
 #: ../../source/intranet/linux/info.rst:45
 msgid "可以使用sudo提升到root的用户（root） ``cat /etc/sudoers``"
-msgstr ""
+msgstr "Users who can elevate to root with sudo (root) ``cat /etc/sudoers``"
 
 #: ../../source/intranet/linux/info.rst:46
 msgid "列出目前用户可执行与无法执行的指令 ``sudo -l``"
-msgstr ""
+msgstr "List commands the current user can and cannot execute ``sudo -l``"
 
 #: ../../source/intranet/linux/info.rst:49
 msgid "环境信息"
-msgstr ""
+msgstr "Environment Information"
 
 #: ../../source/intranet/linux/info.rst:50
 msgid "打印系统环境信息 ``env``"
-msgstr ""
+msgstr "Print system environment information ``env``"
 
 #: ../../source/intranet/linux/info.rst:51
 msgid "打印系统环境信息 ``set``"
-msgstr ""
+msgstr "Print system environment information ``set``"
 
 #: ../../source/intranet/linux/info.rst:52
 msgid "环境变量中的路径信息 ``echo  $PATH``"
-msgstr ""
+msgstr "Path information in environment variables ``echo  $PATH``"
 
 #: ../../source/intranet/linux/info.rst:53
 msgid "打印历史命令 ``history`` / ``~/.bash_history``"
-msgstr ""
+msgstr "Print command history ``history`` / ``~/.bash_history``"
 
 #: ../../source/intranet/linux/info.rst:54
 msgid "显示当前路径 ``pwd``"
-msgstr ""
+msgstr "Show the current path ``pwd``"
 
 #: ../../source/intranet/linux/info.rst:55
 msgid "显示默认系统遍历 ``cat /etc/profile``"
-msgstr ""
+msgstr "Show default system profile ``cat /etc/profile``"
 
 #: ../../source/intranet/linux/info.rst:56
 msgid "显示可用的shell ``cat /etc/shells``"
-msgstr ""
+msgstr "Show available shells ``cat /etc/shells``"
 
 #: ../../source/intranet/linux/info.rst:59
 msgid "进程信息"
-msgstr ""
+msgstr "Process Information"
 
 #: ../../source/intranet/linux/info.rst:60
 msgid "查看进程信息 ``ps aux``"
-msgstr ""
+msgstr "View process information ``ps aux``"
 
 #: ../../source/intranet/linux/info.rst:61
 msgid "资源占有情况 ``top -c``"
-msgstr ""
+msgstr "Resource usage ``top -c``"
 
 #: ../../source/intranet/linux/info.rst:62
 msgid "查看进程关联文件 ``lsof -c $PID``"
-msgstr ""
+msgstr "View files associated with a process ``lsof -c $PID``"
 
 #: ../../source/intranet/linux/info.rst:63
 msgid "完整命令行信息 ``/proc/$PID/cmdline``"
-msgstr ""
+msgstr "Full command-line information ``/proc/$PID/cmdline``"
 
 #: ../../source/intranet/linux/info.rst:64
 msgid "进程的命令名 ``/proc/$PID/comm``"
-msgstr ""
+msgstr "Process command name ``/proc/$PID/comm``"
 
 #: ../../source/intranet/linux/info.rst:65
 msgid "进程当前工作目录的符号链接 ``/proc/$PID/cwd``"
-msgstr ""
+msgstr "Symbolic link to the process current working directory ``/proc/$PID/cwd``"
 
 #: ../../source/intranet/linux/info.rst:66
 msgid "运行程序的符号链接 ``/proc/$PID/exe``"
-msgstr ""
+msgstr "Symbolic link to the running program ``/proc/$PID/exe``"
 
 #: ../../source/intranet/linux/info.rst:67
 msgid "进程的环境变量 ``/proc/$PID/environ``"
-msgstr ""
+msgstr "Process environment variables ``/proc/$PID/environ``"
 
 #: ../../source/intranet/linux/info.rst:68
 msgid "进程打开文件的情况 ``/proc/$PID/fd``"
-msgstr ""
+msgstr "Files opened by the process ``/proc/$PID/fd``"
 
 #: ../../source/intranet/linux/info.rst:71
 msgid "服务信息"
-msgstr ""
+msgstr "Service Information"
 
 #: ../../source/intranet/linux/info.rst:72
 msgid "由inetd管理的服务列表 ``cat /etc/inetd.conf``"
-msgstr ""
+msgstr "List services managed by inetd ``cat /etc/inetd.conf``"
 
 #: ../../source/intranet/linux/info.rst:73
 msgid "由xinetd管理的服务列表 ``cat /etc/xinetd.conf``"
-msgstr ""
+msgstr "List services managed by xinetd ``cat /etc/xinetd.conf``"
 
 #: ../../source/intranet/linux/info.rst:74
 msgid "nfs服务器的配置 ``cat /etc/exports``"
-msgstr ""
+msgstr "NFS server configuration ``cat /etc/exports``"
 
 #: ../../source/intranet/linux/info.rst:75
 msgid "邮件信息 ``/var/log/mailog``"
-msgstr ""
+msgstr "Mail information ``/var/log/mailog``"
 
 #: ../../source/intranet/linux/info.rst:76
 msgid "ssh配置 ``sshd_config``"
-msgstr ""
+msgstr "ssh configuration ``sshd_config``"
 
 #: ../../source/intranet/linux/info.rst:79
 #: ../../source/intranet/linux/info.rst:81
 msgid "计划任务"
-msgstr ""
+msgstr "Scheduled Tasks"
 
 #: ../../source/intranet/linux/info.rst:80
 #, python-format
 msgid "显示指定用户的计划作业（root） ``crontab -l -u %user%``"
-msgstr ""
+msgstr "Show scheduled jobs for a specified user (root) ``crontab -l -u %user%``"
 
 #: ../../source/intranet/linux/info.rst:82
 msgid "``/var/spool/cron/*``"
-msgstr ""
+msgstr "``/var/spool/cron/*``"
 
 #: ../../source/intranet/linux/info.rst:83
 msgid "``/var/spool/anacron/*``"
-msgstr ""
+msgstr "``/var/spool/anacron/*``"
 
 #: ../../source/intranet/linux/info.rst:84
 msgid "``/etc/crontab``"
-msgstr ""
+msgstr "``/etc/crontab``"
 
 #: ../../source/intranet/linux/info.rst:85
 #: ../../source/intranet/linux/info.rst:87
 msgid "``/etc/anacrontab``"
-msgstr ""
+msgstr "``/etc/anacrontab``"
 
 #: ../../source/intranet/linux/info.rst:86
 msgid "``/etc/cron.*``"
-msgstr ""
+msgstr "``/etc/cron.*``"
 
 #: ../../source/intranet/linux/info.rst:88
 msgid "开机启动项"
-msgstr ""
+msgstr "Startup Items"
 
 #: ../../source/intranet/linux/info.rst:89
 msgid "``/etc/rc.d/init.d/``"
-msgstr ""
+msgstr "``/etc/rc.d/init.d/``"
 
 #: ../../source/intranet/linux/info.rst:92
 msgid "网络、路由和通信"
-msgstr ""
+msgstr "Network, Routing, and Communication"
 
 #: ../../source/intranet/linux/info.rst:93
 msgid "列出网络接口信息 ``/sbin/ifconfig -a`` / ``ip addr show``"
-msgstr ""
+msgstr "List network interface information ``/sbin/ifconfig -a`` / ``ip addr show``"
 
 #: ../../source/intranet/linux/info.rst:94
 msgid "列出网络接口信息 ``cat /etc/network/interfaces``"
-msgstr ""
+msgstr "List network interface information ``cat /etc/network/interfaces``"
 
 #: ../../source/intranet/linux/info.rst:95
 msgid "查看系统arp表 ``arp -a``"
-msgstr ""
+msgstr "View the system ARP table ``arp -a``"
 
 #: ../../source/intranet/linux/info.rst:96
 msgid "打印路由信息 ``route`` / ``ip ro show``"
-msgstr ""
+msgstr "Print routing information ``route`` / ``ip ro show``"
 
 #: ../../source/intranet/linux/info.rst:97
 msgid "查看dns配置信息 ``cat /etc/resolv.conf``"
-msgstr ""
+msgstr "View DNS configuration information ``cat /etc/resolv.conf``"
 
 #: ../../source/intranet/linux/info.rst:98
 msgid "打印本地端口开放信息 ``netstat -an``"
-msgstr ""
+msgstr "Print local open port information ``netstat -an``"
 
 #: ../../source/intranet/linux/info.rst:99
 msgid "列出iptable的配置规则 ``iptables -L``"
-msgstr ""
+msgstr "List iptables configuration rules ``iptables -L``"
 
 #: ../../source/intranet/linux/info.rst:100
 msgid "查看端口服务映射 ``cat /etc/services``"
-msgstr ""
+msgstr "View port-to-service mappings ``cat /etc/services``"
 
 #: ../../source/intranet/linux/info.rst:101
 msgid "Hostname ``hostname -f``"
-msgstr ""
+msgstr "Hostname ``hostname -f``"
 
 #: ../../source/intranet/linux/info.rst:102
 msgid "查看进程端口情况 ``netstat -anltp | grep $PID``"
-msgstr ""
+msgstr "View process port information ``netstat -anltp | grep $PID``"
 
 #: ../../source/intranet/linux/info.rst:105
 msgid "已安装程序"
-msgstr ""
+msgstr "Installed Programs"
 
 #: ../../source/intranet/linux/info.rst:106
 msgid "``rpm -qa --last`` Redhat"
-msgstr ""
+msgstr "``rpm -qa --last`` Redhat"
 
 #: ../../source/intranet/linux/info.rst:107
 msgid "``yum list | grep installed`` CentOS"
-msgstr ""
+msgstr "``yum list | grep installed`` CentOS"
 
 #: ../../source/intranet/linux/info.rst:108
 msgid "``ls -l /etc/yum.repos.d/``"
-msgstr ""
+msgstr "``ls -l /etc/yum.repos.d/``"
 
 #: ../../source/intranet/linux/info.rst:109
 msgid "``dpkg -l`` Debian"
-msgstr ""
+msgstr "``dpkg -l`` Debian"
 
 #: ../../source/intranet/linux/info.rst:110
 msgid "``cat /etc/apt/sources.list`` Debian APT"
-msgstr ""
+msgstr "``cat /etc/apt/sources.list`` Debian APT"
 
 #: ../../source/intranet/linux/info.rst:111
 msgid "``pkg_info`` xBSD"
-msgstr ""
+msgstr "``pkg_info`` xBSD"
 
 #: ../../source/intranet/linux/info.rst:112
 msgid "``pkginfo`` Solaris"
-msgstr ""
+msgstr "``pkginfo`` Solaris"
 
 #: ../../source/intranet/linux/info.rst:113
 msgid "``pacman -Q`` Arch Linux"
-msgstr ""
+msgstr "``pacman -Q`` Arch Linux"
 
 #: ../../source/intranet/linux/info.rst:114
 msgid "``emerge`` Gentoo"
-msgstr ""
+msgstr "``emerge`` Gentoo"
 
 #: ../../source/intranet/linux/info.rst:117
 msgid "文件"
-msgstr ""
+msgstr "Files"
 
 #: ../../source/intranet/linux/info.rst:118
 msgid "最近五天的文件 ``find / -ctime +1 -ctime -5``"
-msgstr ""
+msgstr "Files from the last five days ``find / -ctime +1 -ctime -5``"
 
 #: ../../source/intranet/linux/info.rst:119
 msgid "文件系统细节 ``debugfs``"
-msgstr ""
+msgstr "File system details ``debugfs``"
 
 #: ../../source/intranet/linux/info.rst:122
 msgid "公私钥信息"
-msgstr ""
+msgstr "Public and Private Key Information"
 
 #: ../../source/intranet/linux/info.rst:123
 msgid "``~/.ssh``"
-msgstr ""
+msgstr "``~/.ssh``"
 
 #: ../../source/intranet/linux/info.rst:124
 msgid "``/etc/ssh``"
-msgstr ""
+msgstr "``/etc/ssh``"
 
 #: ../../source/intranet/linux/info.rst:127
 msgid "日志"
-msgstr ""
+msgstr "Logs"
 
 #: ../../source/intranet/linux/info.rst:128
 msgid "``/var/log/boot.log``"
-msgstr ""
+msgstr "``/var/log/boot.log``"
 
 #: ../../source/intranet/linux/info.rst:129
 msgid "``/var/log/cron``"
-msgstr ""
+msgstr "``/var/log/cron``"
 
 #: ../../source/intranet/linux/info.rst:130
 msgid "``/var/log/faillog``"
-msgstr ""
+msgstr "``/var/log/faillog``"
 
 #: ../../source/intranet/linux/info.rst:131
 msgid "``/var/log/lastlog``"
-msgstr ""
+msgstr "``/var/log/lastlog``"
 
 #: ../../source/intranet/linux/info.rst:132
 msgid "``/var/log/messages``"
-msgstr ""
+msgstr "``/var/log/messages``"
 
 #: ../../source/intranet/linux/info.rst:133
 msgid "``/var/log/secure``"
-msgstr ""
+msgstr "``/var/log/secure``"
 
 #: ../../source/intranet/linux/info.rst:134
 #: ../../source/intranet/linux/info.rst:135
 msgid "``/var/log/syslog``"
-msgstr ""
+msgstr "``/var/log/syslog``"
 
 #: ../../source/intranet/linux/info.rst:136
 #: ../../source/intranet/linux/info.rst:137
 msgid "``/var/log/wtmp``"
-msgstr ""
+msgstr "``/var/log/wtmp``"
 
 #: ../../source/intranet/linux/info.rst:138
 msgid "``/var/run/utmp``"
-msgstr ""
+msgstr "``/var/run/utmp``"
 
 #: ../../source/intranet/linux/info.rst:141
 msgid "虚拟环境检测"
-msgstr ""
+msgstr "Virtual Environment Detection"
 
 #: ../../source/intranet/linux/info.rst:142
 msgid "``lsmod | grep -i \"vboxsf\\|vboxguest\"``"
-msgstr ""
+msgstr "``lsmod | grep -i \"vboxsf\\|vboxguest\"``"
 
 #: ../../source/intranet/linux/info.rst:143
 msgid "``lsmod | grep -i \"vmw_baloon\\|vmxnet\"``"
-msgstr ""
+msgstr "``lsmod | grep -i \"vmw_baloon\\|vmxnet\"``"
 
 #: ../../source/intranet/linux/info.rst:144
 msgid "``lsmod | grep -i \"xen-vbd\\|xen-vnif\"``"
-msgstr ""
+msgstr "``lsmod | grep -i \"xen-vbd\\|xen-vnif\"``"
 
 #: ../../source/intranet/linux/info.rst:145
 msgid "``lsmod | grep -i \"virtio_pci\\|virtio_net\"``"
-msgstr ""
+msgstr "``lsmod | grep -i \"virtio_pci\\|virtio_net\"``"
 
 #: ../../source/intranet/linux/info.rst:146
 msgid ""
 "``lsmod | grep -i "
 "\"hv_vmbus\\|hv_blkvsc\\|hv_netvsc\\|hv_utils\\|hv_storvsc\"``"
 msgstr ""
+"``lsmod | grep -i "
+"\"hv_vmbus\\|hv_blkvsc\\|hv_netvsc\\|hv_utils\\|hv_storvsc\"``"
 
 #: ../../source/intranet/linux/info.rst:149
 msgid "容器内信息收集"
-msgstr ""
+msgstr "Information Gathering Inside Containers"
 
 #: ../../source/intranet/linux/info.rst:150
 msgid "``capsh --print``"
-msgstr ""
+msgstr "``capsh --print``"
 
 #: ../../source/intranet/linux/info.rst:151
 msgid "``cat /proc/1/cgroup``"
-msgstr ""
+msgstr "``cat /proc/1/cgroup``"
 
 #: ../../source/intranet/linux/info.rst:152
 msgid "``env | grep KUBE``"
-msgstr ""
+msgstr "``env | grep KUBE``"
 
 #: ../../source/intranet/linux/info.rst:153
 msgid "``ls -l .dockerenv``"
-msgstr ""
+msgstr "``ls -l .dockerenv``"
 
 #: ../../source/intranet/linux/info.rst:154
 msgid "``ls -l /run/secrets/Kubernetes.io/``"
-msgstr ""
+msgstr "``ls -l /run/secrets/Kubernetes.io/``"
 
 #: ../../source/intranet/linux/info.rst:155
 msgid "``mount``"
-msgstr ""
+msgstr "``mount``"
 
 #: ../../source/intranet/linux/info.rst:156
 msgid "``ps aux``"
-msgstr ""
+msgstr "``ps aux``"

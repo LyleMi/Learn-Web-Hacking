@@ -20,150 +20,152 @@ msgstr ""
 
 #: ../../source/intranet/linux/trace.rst:2
 msgid "痕迹清理"
-msgstr ""
+msgstr "Trace Cleanup"
 
 #: ../../source/intranet/linux/trace.rst:5
 msgid "历史命令"
-msgstr ""
+msgstr "Command History"
 
 #: ../../source/intranet/linux/trace.rst:6
 msgid ""
 "``unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export "
 "HISTFILE=/dev/null;``"
 msgstr ""
+"``unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export "
+"HISTFILE=/dev/null;``"
 
 #: ../../source/intranet/linux/trace.rst:7
 msgid "``kill -9 $$`` kill history"
-msgstr ""
+msgstr "``kill -9 $$`` kill history"
 
 #: ../../source/intranet/linux/trace.rst:8
 msgid "``history -c``"
-msgstr ""
+msgstr "``history -c``"
 
 #: ../../source/intranet/linux/trace.rst:9
 msgid "在 ``HISTSIZE=0`` 中设置 ``HISTSIZE=0``"
-msgstr ""
+msgstr "Set ``HISTSIZE=0`` in ``HISTSIZE=0``"
 
 #: ../../source/intranet/linux/trace.rst:12
 msgid "清除/修改日志文件"
-msgstr ""
+msgstr "Clear/Modify Log Files"
 
 #: ../../source/intranet/linux/trace.rst:13
 msgid "``/var/log/btmp``"
-msgstr ""
+msgstr "``/var/log/btmp``"
 
 #: ../../source/intranet/linux/trace.rst:14
 msgid "``/var/log/lastlog``"
-msgstr ""
+msgstr "``/var/log/lastlog``"
 
 #: ../../source/intranet/linux/trace.rst:15
 msgid "``/var/log/wtmp``"
-msgstr ""
+msgstr "``/var/log/wtmp``"
 
 #: ../../source/intranet/linux/trace.rst:16
 msgid "``/var/log/utmp``"
-msgstr ""
+msgstr "``/var/log/utmp``"
 
 #: ../../source/intranet/linux/trace.rst:17
 msgid "``/var/log/secure``"
-msgstr ""
+msgstr "``/var/log/secure``"
 
 #: ../../source/intranet/linux/trace.rst:18
 msgid "``/var/log/message``"
-msgstr ""
+msgstr "``/var/log/message``"
 
 #: ../../source/intranet/linux/trace.rst:21
 msgid "登录痕迹"
-msgstr ""
+msgstr "Login Traces"
 
 #: ../../source/intranet/linux/trace.rst:22
 msgid "删除 ``~/.ssh/known_hosts`` 中记录"
-msgstr ""
+msgstr "Delete records from ``~/.ssh/known_hosts``"
 
 #: ../../source/intranet/linux/trace.rst:23
 msgid "修改文件时间戳"
-msgstr ""
+msgstr "Modify file timestamps"
 
 #: ../../source/intranet/linux/trace.rst:24
 msgid "``touch –r``"
-msgstr ""
+msgstr "``touch –r``"
 
 #: ../../source/intranet/linux/trace.rst:25
 msgid "删除tmp目录临时文件"
-msgstr ""
+msgstr "Delete temporary files in the tmp directory"
 
 #: ../../source/intranet/linux/trace.rst:28
 msgid "操作痕迹"
-msgstr ""
+msgstr "Operation Traces"
 
 #: ../../source/intranet/linux/trace.rst:29
 msgid "vim 不记录历史命令 ``:set history=0``"
-msgstr ""
+msgstr "Prevent vim from recording command history ``:set history=0``"
 
 #: ../../source/intranet/linux/trace.rst:30
 msgid "ssh 登录痕迹"
-msgstr ""
+msgstr "ssh login traces"
 
 #: ../../source/intranet/linux/trace.rst:31
 msgid "无痕登录 ``ssh -T user@host /bin/bash -i``"
-msgstr ""
+msgstr "Login without recording a TTY session ``ssh -T user@host /bin/bash -i``"
 
 #: ../../source/intranet/linux/trace.rst:34
 msgid "覆写文件"
-msgstr ""
+msgstr "Overwrite Files"
 
 #: ../../source/intranet/linux/trace.rst:35
 msgid "shred"
-msgstr ""
+msgstr "shred"
 
 #: ../../source/intranet/linux/trace.rst:36
 msgid "dd"
-msgstr ""
+msgstr "dd"
 
 #: ../../source/intranet/linux/trace.rst:37
 msgid "wipe"
-msgstr ""
+msgstr "wipe"
 
 #: ../../source/intranet/linux/trace.rst:40
 msgid "难点"
-msgstr ""
+msgstr "Difficulties"
 
 #: ../../source/intranet/linux/trace.rst:41
 msgid "攻击和入侵很难完全删除痕迹，没有日志记录也是一种特征"
-msgstr ""
+msgstr "It is difficult to completely remove traces of attacks and intrusions; the absence of logs is also a signal"
 
 #: ../../source/intranet/linux/trace.rst:42
 msgid "即使删除本地日志，在网络设备、安全设备、集中化日志系统中仍有记录"
-msgstr ""
+msgstr "Even if local logs are deleted, records may remain on network devices, security devices, and centralized logging systems"
 
 #: ../../source/intranet/linux/trace.rst:43
 msgid "留存的后门包含攻击者的信息"
-msgstr ""
+msgstr "Remaining backdoors may contain information about the attacker"
 
 #: ../../source/intranet/linux/trace.rst:44
 msgid "使用的代理或跳板可能会被反向入侵"
-msgstr ""
+msgstr "The proxy or jump host used may be compromised in return"
 
 #: ../../source/intranet/linux/trace.rst:47
 msgid "注意"
-msgstr ""
+msgstr "Notes"
 
 #: ../../source/intranet/linux/trace.rst:48
 msgid "在操作前检查是否有用户在线"
-msgstr ""
+msgstr "Check whether users are online before operating"
 
 #: ../../source/intranet/linux/trace.rst:49
 msgid "删除文件使用磁盘覆写的功能删除"
-msgstr ""
+msgstr "Use disk overwrite functionality when deleting files"
 
 #: ../../source/intranet/linux/trace.rst:50
 msgid "尽量和攻击前状态保持一致"
-msgstr ""
+msgstr "Keep the state as consistent as possible with the pre-attack state"
 
 #: ../../source/intranet/linux/trace.rst:53
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/intranet/linux/trace.rst:54
 msgid "`Linux 入侵痕迹清理技巧 <https://mp.weixin.qq.com/s/i2WvFmF1qQjbx-BaStXb1Q>`_"
-msgstr ""
+msgstr "`Linux Intrusion Trace Cleanup Techniques <https://mp.weixin.qq.com/s/i2WvFmF1qQjbx-BaStXb1Q>`_"
