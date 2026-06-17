@@ -20,368 +20,372 @@ msgstr ""
 
 #: ../../source/manual/sqlmap.rst:2
 msgid "SQLMap使用"
-msgstr ""
+msgstr "Using SQLMap"
 
 #: ../../source/manual/sqlmap.rst:4
 msgid "安装 ``git clone https://github.com/sqlmapproject/sqlmap.git sqlmap``"
-msgstr ""
+msgstr "Install ``git clone https://github.com/sqlmapproject/sqlmap.git sqlmap``"
 
 #: ../../source/manual/sqlmap.rst:7
 msgid "常用参数"
-msgstr ""
+msgstr "Common Parameters"
 
 #: ../../source/manual/sqlmap.rst:9
 msgid "``-u`` ``--url`` 指定目标url"
-msgstr ""
+msgstr "``-u`` ``--url`` Specify the target URL"
 
 #: ../../source/manual/sqlmap.rst:10
 msgid "``-m`` 从文本中获取多个目标扫描"
-msgstr ""
+msgstr "``-m`` Load multiple scan targets from a text file"
 
 #: ../../source/manual/sqlmap.rst:11
 msgid "``-r`` 从文件中加载HTTP请求"
-msgstr ""
+msgstr "``-r`` Load an HTTP request from a file"
 
 #: ../../source/manual/sqlmap.rst:12
 msgid "``--data`` 以POST方式提交数据"
-msgstr ""
+msgstr "``--data`` Submit data with POST"
 
 #: ../../source/manual/sqlmap.rst:13
 msgid "``-random-agent`` 随机ua"
-msgstr ""
+msgstr "``-random-agent`` Use a random UA"
 
 #: ../../source/manual/sqlmap.rst:14
 msgid "``--user-agent`` 指定ua"
-msgstr ""
+msgstr "``--user-agent`` Specify the UA"
 
 #: ../../source/manual/sqlmap.rst:15
 msgid "``--delay`` 设置请求间的延迟"
-msgstr ""
+msgstr "``--delay`` Set the delay between requests"
 
 #: ../../source/manual/sqlmap.rst:16
 msgid "``--timeout`` 指定超时时间"
-msgstr ""
+msgstr "``--timeout`` Specify the timeout"
 
 #: ../../source/manual/sqlmap.rst:17
 msgid ""
 "``--dbms`` 指定db，sqlmap支持的db有MySQL、Oracle、PostgreSQL、Microsoft SQL "
 "Server、Microsoft Access、SQLite等"
 msgstr ""
+"``--dbms`` Specify the DBMS. Databases supported by SQLMap include MySQL, Oracle, PostgreSQL, Microsoft SQL "
+"Server, Microsoft Access, SQLite, and others"
 
 #: ../../source/manual/sqlmap.rst:18
 msgid "``--os`` 指定数据库服务器操作系统"
-msgstr ""
+msgstr "``--os`` Specify the database server operating system"
 
 #: ../../source/manual/sqlmap.rst:19
 msgid "``--tamper`` 指定tamper"
-msgstr ""
+msgstr "``--tamper`` Specify a tamper script"
 
 #: ../../source/manual/sqlmap.rst:20
 msgid "``--level`` 指定探测等级"
-msgstr ""
+msgstr "``--level`` Specify the detection level"
 
 #: ../../source/manual/sqlmap.rst:21
 msgid "``--risk`` 指定风险等级"
-msgstr ""
+msgstr "``--risk`` Specify the risk level"
 
 #: ../../source/manual/sqlmap.rst:22
 msgid "``--technique`` 注入技术"
-msgstr ""
+msgstr "``--technique`` Injection techniques"
 
 #: ../../source/manual/sqlmap.rst:23
 msgid "B: Boolean-based blind SQL injection"
-msgstr ""
+msgstr "B: Boolean-based blind SQL injection"
 
 #: ../../source/manual/sqlmap.rst:24
 msgid "E: Error-based SQL injection"
-msgstr ""
+msgstr "E: Error-based SQL injection"
 
 #: ../../source/manual/sqlmap.rst:25
 msgid "U: UNION query SQL injection"
-msgstr ""
+msgstr "U: UNION query SQL injection"
 
 #: ../../source/manual/sqlmap.rst:26
 msgid "S: Stacked queries SQL injection"
-msgstr ""
+msgstr "S: Stacked queries SQL injection"
 
 #: ../../source/manual/sqlmap.rst:27
 msgid "T: Time-based blind SQL injection"
-msgstr ""
+msgstr "T: Time-based blind SQL injection"
 
 #: ../../source/manual/sqlmap.rst:31
 msgid "Tamper 速查"
-msgstr ""
+msgstr "Tamper Cheat Sheet"
 
 #: ../../source/manual/sqlmap.rst:34
 msgid "脚本名称"
-msgstr ""
+msgstr "Script Name"
 
 #: ../../source/manual/sqlmap.rst:34
 msgid "作用"
-msgstr ""
+msgstr "Purpose"
 
 #: ../../source/manual/sqlmap.rst:36
 msgid "apostrophemask.py"
-msgstr ""
+msgstr "apostrophemask.py"
 
 #: ../../source/manual/sqlmap.rst:36
 msgid "用utf8代替引号"
-msgstr ""
+msgstr "Replace quotes with UTF-8 encoding"
 
 #: ../../source/manual/sqlmap.rst:37
 msgid "equaltolike.py"
-msgstr ""
+msgstr "equaltolike.py"
 
 #: ../../source/manual/sqlmap.rst:37
 msgid "like 代替等号"
-msgstr ""
+msgstr "Replace the equals sign with LIKE"
 
 #: ../../source/manual/sqlmap.rst:38
 msgid "space2dash.py"
-msgstr ""
+msgstr "space2dash.py"
 
 #: ../../source/manual/sqlmap.rst:38
 msgid "绕过过滤'=' 替换空格字符(\")，('' - ')后跟一个破折号注释，一个随机字符串和一个新行('\\n')"
-msgstr ""
+msgstr "Bypass '=' filtering by replacing space characters with a dash comment, a random string, and a new line ('\\n')"
 
 #: ../../source/manual/sqlmap.rst:39
 msgid "greatest.py"
-msgstr ""
+msgstr "greatest.py"
 
 #: ../../source/manual/sqlmap.rst:39
 msgid "绕过过滤'>' ,用GREATEST替换大于号。"
-msgstr ""
+msgstr "Bypass '>' filtering by replacing the greater-than operator with GREATEST."
 
 #: ../../source/manual/sqlmap.rst:40
 msgid "space2hash.py"
-msgstr ""
+msgstr "space2hash.py"
 
 #: ../../source/manual/sqlmap.rst:40
 msgid "空格替换为#号 随机字符串 以及换行符"
-msgstr ""
+msgstr "Replace spaces with a # character, a random string, and a newline"
 
 #: ../../source/manual/sqlmap.rst:41
 msgid "apostrophenullencode.py"
-msgstr ""
+msgstr "apostrophenullencode.py"
 
 #: ../../source/manual/sqlmap.rst:41
 msgid "绕过过滤双引号，替换字符和双引号。"
-msgstr ""
+msgstr "Bypass double-quote filtering by replacing characters and double quotes."
 
 #: ../../source/manual/sqlmap.rst:42
 msgid "halfversionedmorekeywords.py"
-msgstr ""
+msgstr "halfversionedmorekeywords.py"
 
 #: ../../source/manual/sqlmap.rst:42
 msgid "当数据库为mysql时绕过防火墙，每个关键字之前添加mysql版本评论"
-msgstr ""
+msgstr "Bypass firewalls when the database is MySQL by adding a MySQL versioned comment before each keyword"
 
 #: ../../source/manual/sqlmap.rst:43
 msgid "space2morehash.py"
-msgstr ""
+msgstr "space2morehash.py"
 
 #: ../../source/manual/sqlmap.rst:43
 msgid "空格替换为 #号 以及更多随机字符串 换行符"
-msgstr ""
+msgstr "Replace spaces with a # character plus more random strings and newlines"
 
 #: ../../source/manual/sqlmap.rst:44
 msgid "appendnullbyte.py"
-msgstr ""
+msgstr "appendnullbyte.py"
 
 #: ../../source/manual/sqlmap.rst:44
 msgid "在有效负荷结束位置加载零字节字符编码"
-msgstr ""
+msgstr "Append an encoded null byte character at the end of the payload"
 
 #: ../../source/manual/sqlmap.rst:45
 msgid "ifnull2ifisnull.py"
-msgstr ""
+msgstr "ifnull2ifisnull.py"
 
 #: ../../source/manual/sqlmap.rst:45
 msgid "绕过对 IFNULL 过滤。 替换类似'IFNULL(A, B)'为'IF(ISNULL(A), B, A)'"
-msgstr ""
+msgstr "Bypass IFNULL filtering. Replace expressions like 'IFNULL(A, B)' with 'IF(ISNULL(A), B, A)'"
 
 #: ../../source/manual/sqlmap.rst:46
 msgid "space2mssqlblank.py"
-msgstr ""
+msgstr "space2mssqlblank.py"
 
 #: ../../source/manual/sqlmap.rst:46
 msgid "空格替换为其它空符号"
-msgstr ""
+msgstr "Replace spaces with other blank characters"
 
 #: ../../source/manual/sqlmap.rst:47
 msgid "base64encode.py"
-msgstr ""
+msgstr "base64encode.py"
 
 #: ../../source/manual/sqlmap.rst:47
 msgid "用base64编码替换"
-msgstr ""
+msgstr "Replace with Base64 encoding"
 
 #: ../../source/manual/sqlmap.rst:48
 msgid "space2mssqlhash.py"
-msgstr ""
+msgstr "space2mssqlhash.py"
 
 #: ../../source/manual/sqlmap.rst:48
 msgid "替换空格"
-msgstr ""
+msgstr "Replace spaces"
 
 #: ../../source/manual/sqlmap.rst:49
 msgid "modsecurityversioned.py"
-msgstr ""
+msgstr "modsecurityversioned.py"
 
 #: ../../source/manual/sqlmap.rst:49
 msgid "过滤空格，包含完整的查询版本注释"
-msgstr ""
+msgstr "Filter spaces and include a full query versioned comment"
 
 #: ../../source/manual/sqlmap.rst:50
 msgid "space2mysqlblank.py"
-msgstr ""
+msgstr "space2mysqlblank.py"
 
 #: ../../source/manual/sqlmap.rst:50
 msgid "空格替换其它空白符号(mysql)"
-msgstr ""
+msgstr "Replace spaces with other blank characters (MySQL)"
 
 #: ../../source/manual/sqlmap.rst:51
 msgid "between.py"
-msgstr ""
+msgstr "between.py"
 
 #: ../../source/manual/sqlmap.rst:51
 msgid "用between替换大于号(>)"
-msgstr ""
+msgstr "Replace the greater-than operator (>) with BETWEEN"
 
 #: ../../source/manual/sqlmap.rst:52
 msgid "space2mysqldash.py"
-msgstr ""
+msgstr "space2mysqldash.py"
 
 #: ../../source/manual/sqlmap.rst:52
 msgid "替换空格字符(\")(' - ')后跟一个破折号注释一个新行(' n')"
-msgstr ""
+msgstr "Replace space characters with a dash comment followed by a new line"
 
 #: ../../source/manual/sqlmap.rst:53
 msgid "multiplespaces.py"
-msgstr ""
+msgstr "multiplespaces.py"
 
 #: ../../source/manual/sqlmap.rst:53
 msgid "围绕SQL关键字添加多个空格"
-msgstr ""
+msgstr "Add multiple spaces around SQL keywords"
 
 #: ../../source/manual/sqlmap.rst:54
 msgid "space2plus.py"
-msgstr ""
+msgstr "space2plus.py"
 
 #: ../../source/manual/sqlmap.rst:54
 msgid "用+替换空格"
-msgstr ""
+msgstr "Replace spaces with +"
 
 #: ../../source/manual/sqlmap.rst:55
 msgid "bluecoat.py"
-msgstr ""
+msgstr "bluecoat.py"
 
 #: ../../source/manual/sqlmap.rst:55
 msgid "代替空格字符后与一个有效的随机空白字符的SQL语句。 然后替换=为like"
-msgstr ""
+msgstr "Replace spaces in SQL statements with a valid random blank character, then replace = with LIKE"
 
 #: ../../source/manual/sqlmap.rst:56
 msgid "nonrecursivereplacement.py"
-msgstr ""
+msgstr "nonrecursivereplacement.py"
 
 #: ../../source/manual/sqlmap.rst:56
 msgid ""
 "取代predefined SQL关键字with表示 suitable for替代(例如 .replace(\"SELECT\"、\"\")) "
 "filters"
 msgstr ""
+"Replace predefined SQL keywords in a way suitable for simple replacement filters "
+"such as .replace(\"SELECT\", \"\")"
 
 #: ../../source/manual/sqlmap.rst:57
 msgid "space2randomblank.py"
-msgstr ""
+msgstr "space2randomblank.py"
 
 #: ../../source/manual/sqlmap.rst:57
 msgid "代替空格字符(\"\")从一个随机的空白字符可选字符的有效集"
-msgstr ""
+msgstr "Replace space characters with a random blank character from a valid character set"
 
 #: ../../source/manual/sqlmap.rst:58
 msgid "sp_password.py"
-msgstr ""
+msgstr "sp_password.py"
 
 #: ../../source/manual/sqlmap.rst:58
 msgid "追加sp_password'从DBMS日志的自动模糊处理的有效载荷的末尾"
-msgstr ""
+msgstr "Append 'sp_password' to the end of the payload to trigger automatic obfuscation in DBMS logs"
 
 #: ../../source/manual/sqlmap.rst:59
 msgid "chardoubleencode.py"
-msgstr ""
+msgstr "chardoubleencode.py"
 
 #: ../../source/manual/sqlmap.rst:59
 msgid "双url编码(不处理以编码的)"
-msgstr ""
+msgstr "Double URL encoding (does not process already encoded characters)"
 
 #: ../../source/manual/sqlmap.rst:60
 msgid "unionalltounion.py"
-msgstr ""
+msgstr "unionalltounion.py"
 
 #: ../../source/manual/sqlmap.rst:60
 msgid "替换UNION ALL SELECT UNION SELECT"
-msgstr ""
+msgstr "Replace UNION ALL SELECT with UNION SELECT"
 
 #: ../../source/manual/sqlmap.rst:61
 msgid "charencode.py"
-msgstr ""
+msgstr "charencode.py"
 
 #: ../../source/manual/sqlmap.rst:61
 msgid "url编码"
-msgstr ""
+msgstr "URL encoding"
 
 #: ../../source/manual/sqlmap.rst:62
 msgid "randomcase.py"
-msgstr ""
+msgstr "randomcase.py"
 
 #: ../../source/manual/sqlmap.rst:62
 msgid "随机大小写"
-msgstr ""
+msgstr "Randomize letter case"
 
 #: ../../source/manual/sqlmap.rst:63
 msgid "unmagicquotes.py"
-msgstr ""
+msgstr "unmagicquotes.py"
 
 #: ../../source/manual/sqlmap.rst:63
 msgid "宽字符绕过 GPC addslashes"
-msgstr ""
+msgstr "Use wide characters to bypass GPC addslashes"
 
 #: ../../source/manual/sqlmap.rst:64
 msgid "randomcomments.py"
-msgstr ""
+msgstr "randomcomments.py"
 
 #: ../../source/manual/sqlmap.rst:64
 msgid "用 ``/**/`` 分割sql关键字"
-msgstr ""
+msgstr "Split SQL keywords with ``/**/``"
 
 #: ../../source/manual/sqlmap.rst:65
 msgid "charunicodeencode.py"
-msgstr ""
+msgstr "charunicodeencode.py"
 
 #: ../../source/manual/sqlmap.rst:65
 msgid "字符串unicode编码"
-msgstr ""
+msgstr "Unicode-encode strings"
 
 #: ../../source/manual/sqlmap.rst:66
 msgid "securesphere.py"
-msgstr ""
+msgstr "securesphere.py"
 
 #: ../../source/manual/sqlmap.rst:66
 msgid "追加特制的字符串"
-msgstr ""
+msgstr "Append a specially crafted string"
 
 #: ../../source/manual/sqlmap.rst:67
 msgid "versionedmorekeywords.py"
-msgstr ""
+msgstr "versionedmorekeywords.py"
 
 #: ../../source/manual/sqlmap.rst:67
 msgid "注释绕过"
-msgstr ""
+msgstr "Bypass with comments"
 
 #: ../../source/manual/sqlmap.rst:68
 msgid "space2comment.py"
-msgstr ""
+msgstr "space2comment.py"
 
 #: ../../source/manual/sqlmap.rst:68
 msgid "Replaces space character ``' '`` with comments ``/**/``"
-msgstr ""
+msgstr "Replaces space character ``' '`` with comments ``/**/``"

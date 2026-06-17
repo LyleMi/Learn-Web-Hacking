@@ -20,38 +20,48 @@ msgstr ""
 
 #: ../../source/basic/law.rst:2
 msgid "法律与法规"
-msgstr ""
+msgstr "Laws and Regulations"
 
 #: ../../source/basic/law.rst:5
 msgid "相关链接"
-msgstr ""
+msgstr "Related Links"
 
 #: ../../source/basic/law.rst:6
 msgid ""
 "`中华人民共和国网络安全法 "
 "<http://www.npc.gov.cn/npc/xinwen/2016-11/07/content_2001605.htm>`_"
 msgstr ""
+"`Cybersecurity Law of the People's Republic of China "
+"<http://www.npc.gov.cn/npc/xinwen/2016-11/07/content_2001605.htm>`_"
 
 #: ../../source/basic/law.rst:7
 msgid ""
 "`网络产品安全漏洞管理规定 "
 "<http://www.gov.cn/zhengce/zhengceku/2021-07/14/content_5624965.htm>`_"
 msgstr ""
+"`Provisions on the Management of Security Vulnerabilities in Network Products "
+"<http://www.gov.cn/zhengce/zhengceku/2021-07/14/content_5624965.htm>`_"
 
 #: ../../source/basic/law.rst:8
 msgid ""
 "`关键信息基础设施安全保护条例 "
 "<http://www.gov.cn/zhengce/content/2021-08/17/content_5631671.htm>`_"
 msgstr ""
+"`Regulations on the Security Protection of Critical Information Infrastructure "
+"<http://www.gov.cn/zhengce/content/2021-08/17/content_5631671.htm>`_"
 
 #: ../../source/basic/law.rst:9
 msgid ""
 "`中华人民共和国个人信息保护法 "
 "<http://www.npc.gov.cn/npc/c30834/202108/a8c4e3672c74491a80b53a172bb753fe.shtml>`_"
 msgstr ""
+"`Personal Information Protection Law of the People's Republic of China "
+"<http://www.npc.gov.cn/npc/c30834/202108/a8c4e3672c74491a80b53a172bb753fe.shtml>`_"
 
 #: ../../source/basic/law.rst:10
 msgid ""
 "`中华人民共和国数据安全法 "
 "<http://www.npc.gov.cn/npc/c30834/202106/7c9af12f51334a73b56d7938f99a788a.shtml>`_"
 msgstr ""
+"`Data Security Law of the People's Republic of China "
+"<http://www.npc.gov.cn/npc/c30834/202106/7c9af12f51334a73b56d7938f99a788a.shtml>`_"

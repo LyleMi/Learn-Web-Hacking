@@ -20,120 +20,134 @@ msgstr ""
 
 #: ../../source/manual/download.rst:2
 msgid "下载工具"
-msgstr ""
+msgstr "Download Tools"
 
 #: ../../source/manual/download.rst:5
 msgid "wget"
-msgstr ""
+msgstr "wget"
 
 #: ../../source/manual/download.rst:8 ../../source/manual/download.rst:34
 msgid "常用"
-msgstr ""
+msgstr "Common Usage"
 
 #: ../../source/manual/download.rst:9
 msgid "普通下载 ``wget http://example.com/file.iso``"
-msgstr ""
+msgstr "Normal download ``wget http://example.com/file.iso``"
 
 #: ../../source/manual/download.rst:10
 msgid "指定保存文件名 ``wget ‐‐output-document=myname.iso http://example.com/file.iso``"
-msgstr ""
+msgstr "Specify the saved file name ``wget ‐‐output-document=myname.iso http://example.com/file.iso``"
 
 #: ../../source/manual/download.rst:11
 msgid ""
 "保存到指定目录 ``wget ‐‐directory-prefix=folder/subfolder "
 "http://example.com/file.iso``"
 msgstr ""
+"Save to a specified directory ``wget ‐‐directory-prefix=folder/subfolder "
+"http://example.com/file.iso``"
 
 #: ../../source/manual/download.rst:12
 msgid "大文件断点续传 ``wget ‐‐continue http://example.com/big.file.iso``"
-msgstr ""
+msgstr "Resume a large file download ``wget ‐‐continue http://example.com/big.file.iso``"
 
 #: ../../source/manual/download.rst:13
 msgid "下载指定文件中的url列表 ``wget ‐‐input list-of-file-urls.txt``"
-msgstr ""
+msgstr "Download the URL list in a specified file ``wget ‐‐input list-of-file-urls.txt``"
 
 #: ../../source/manual/download.rst:14
 #, python-brace-format
 msgid "下载指定数字列表的多个文件 ``wget http://example.com/images/{1..20}.jpg``"
-msgstr ""
+msgstr "Download multiple files from a specified numeric range ``wget http://example.com/images/{1..20}.jpg``"
 
 #: ../../source/manual/download.rst:15
 msgid ""
 "下载web页面的所有资源 ``wget ‐‐page-requisites ‐‐span-hosts ‐‐convert-links "
 "‐‐adjust-extension http://example.com/dir/file``"
 msgstr ""
+"Download all resources for a web page ``wget ‐‐page-requisites ‐‐span-hosts ‐‐convert-links "
+"‐‐adjust-extension http://example.com/dir/file``"
 
 #: ../../source/manual/download.rst:18
 msgid "整站下载"
-msgstr ""
+msgstr "Full-Site Download"
 
 #: ../../source/manual/download.rst:19
 msgid ""
 "下载所有链接的页面和文件 ``wget ‐‐execute robots=off ‐‐recursive ‐‐no-parent "
 "‐‐continue ‐‐no-clobber http://example.com/``"
 msgstr ""
+"Download all linked pages and files ``wget ‐‐execute robots=off ‐‐recursive ‐‐no-parent "
+"‐‐continue ‐‐no-clobber http://example.com/``"
 
 #: ../../source/manual/download.rst:20
 msgid ""
 "下载指定后缀的文件 ``wget ‐‐level=1 ‐‐recursive ‐‐no-parent ‐‐accept mp3,MP3 "
 "http://example.com/mp3/``"
 msgstr ""
+"Download files with specified suffixes ``wget ‐‐level=1 ‐‐recursive ‐‐no-parent ‐‐accept mp3,MP3 "
+"http://example.com/mp3/``"
 
 #: ../../source/manual/download.rst:21
 msgid ""
 "排除指定目录下载 ``wget ‐‐recursive ‐‐no-clobber ‐‐no-parent ‐‐exclude-"
 "directories /forums,/support http://example.com``"
 msgstr ""
+"Download while excluding specified directories ``wget ‐‐recursive ‐‐no-clobber ‐‐no-parent ‐‐exclude-"
+"directories /forums,/support http://example.com``"
 
 #: ../../source/manual/download.rst:24
 msgid "指定参数"
-msgstr ""
+msgstr "Specified Parameters"
 
 #: ../../source/manual/download.rst:25
 msgid "user agent ``‐‐user-agent=\"Mozilla/5.0 Firefox/4.0.1\"``"
-msgstr ""
+msgstr "user agent ``‐‐user-agent=\"Mozilla/5.0 Firefox/4.0.1\"``"
 
 #: ../../source/manual/download.rst:26
 msgid "basic auth ``‐‐http-user=user ‐‐http-password=pwd``"
-msgstr ""
+msgstr "basic auth ``‐‐http-user=user ‐‐http-password=pwd``"
 
 #: ../../source/manual/download.rst:27
 msgid ""
 "保存cookie ``‐‐cookies=on ‐‐save-cookies cookies.txt ‐‐keep-session-"
 "cookies``"
 msgstr ""
+"Save cookies ``‐‐cookies=on ‐‐save-cookies cookies.txt ‐‐keep-session-"
+"cookies``"
 
 #: ../../source/manual/download.rst:28
 msgid ""
 "使用cookie ``‐‐cookies=on ‐‐load-cookies cookies.txt ‐‐keep-session-"
 "cookies``"
 msgstr ""
+"Use cookies ``‐‐cookies=on ‐‐load-cookies cookies.txt ‐‐keep-session-"
+"cookies``"
 
 #: ../../source/manual/download.rst:31
 msgid "curl"
-msgstr ""
+msgstr "curl"
 
 #: ../../source/manual/download.rst:35
 msgid "直接显示 ``curl www.example.com``"
-msgstr ""
+msgstr "Display directly ``curl www.example.com``"
 
 #: ../../source/manual/download.rst:36
 msgid "保存指定的名字 ``-o newname``"
-msgstr ""
+msgstr "Save with a specified name ``-o newname``"
 
 #: ../../source/manual/download.rst:37
 msgid "不指定名字 ``-O``"
-msgstr ""
+msgstr "Do not specify a name ``-O``"
 
 #: ../../source/manual/download.rst:40
 msgid "正则"
-msgstr ""
+msgstr "Patterns"
 
 #: ../../source/manual/download.rst:41
 msgid "文件名 ``curl ftp://example.com/file[1-100].txt``"
-msgstr ""
+msgstr "File names ``curl ftp://example.com/file[1-100].txt``"
 
 #: ../../source/manual/download.rst:42
 #, python-brace-format
 msgid "域名 ``curl http://site.{one,two,three}.com``"
-msgstr ""
+msgstr "Domain names ``curl http://site.{one,two,three}.com``"

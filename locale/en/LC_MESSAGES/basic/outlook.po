@@ -20,54 +20,56 @@ msgstr ""
 
 #: ../../source/basic/outlook.rst:2
 msgid "网络安全观"
-msgstr ""
+msgstr "Cybersecurity Perspective"
 
 #: ../../source/basic/outlook.rst:5
 msgid "网络安全定义"
-msgstr ""
+msgstr "Definition of Cybersecurity"
 
 #: ../../source/basic/outlook.rst:6
 msgid "网络安全的一个通用定义指网络信息系统的硬件、软件及其系统中的数据受到保护，不因偶然的或者恶意的破坏、更改、泄露，系统能连续、可靠、正常地运行，服务不中断。网络安全简单的说是在网络环境下能够识别和消除不安全因素的能力。"
-msgstr ""
+msgstr "A common definition of cybersecurity is that the hardware, software, and data in network information systems are protected from accidental or malicious damage, alteration, and disclosure, so that the systems can run continuously, reliably, and normally without service interruption. In simple terms, cybersecurity is the ability to identify and eliminate unsafe factors in a network environment."
 
 #: ../../source/basic/outlook.rst:8
 msgid "网络安全在不同环境和应用中有不同的解释，例如系统运行的安全、系统信息内容的安全、信息通信与传播的安全等。"
-msgstr ""
+msgstr "Cybersecurity can be interpreted differently across environments and applications, such as the security of system operation, the security of system information content, and the security of information communication and dissemination."
 
 #: ../../source/basic/outlook.rst:10
 msgid ""
 "网络安全的基本需求包括可靠性、可用性、保密性、完整性、不可抵赖性、可控性、可审查性、真实性等。其中三个最基本的要素是机密性 "
 "(Confidentiality)、完整性 (Integrity)、可用性 (Availability)。"
 msgstr ""
+"The basic requirements of cybersecurity include reliability, availability, confidentiality, integrity, non-repudiation, controllability, auditability, and authenticity. The three most fundamental elements are confidentiality, "
+"integrity, and availability."
 
 #: ../../source/basic/outlook.rst:12
 msgid "机密性是不将有用信息泄漏给非授权用户的特性。可以通过信息加密、身份认证、访问控制、安全通信协议等技术实现，信息加密是防止信息非法泄露的最基本手段，主要强调有用信息只被授权对象使用的特征。"
-msgstr ""
+msgstr "Confidentiality is the property of preventing useful information from being disclosed to unauthorized users. It can be implemented through technologies such as information encryption, identity authentication, access control, and secure communication protocols. Information encryption is the most basic means of preventing illegal disclosure, and it emphasizes that useful information is used only by authorized parties."
 
 #: ../../source/basic/outlook.rst:14
 msgid "完整性是指信息在传输、交换、存储和处理过程中，保持信息不被破坏或修改、不丢失和信息未经授权不能改变的特性，也是最基本的安全特征。"
-msgstr ""
+msgstr "Integrity means that information remains undamaged, unmodified, and not lost during transmission, exchange, storage, and processing, and that it cannot be changed without authorization. It is also one of the most basic security properties."
 
 #: ../../source/basic/outlook.rst:16
 msgid "可用性指信息资源可被授权实体按要求访问、正常使用或在非正常情况下能恢复使用的特性。在系统运行时正确存取所需信息，当系统遭受意外攻击或破坏时，可以迅速恢复并能投入使用。是衡量网络信息系统面向用户的一种安全性能，以保障为用户提供服务。"
-msgstr ""
+msgstr "Availability means that information resources can be accessed and used normally by authorized entities as required, or restored for use under abnormal conditions. It requires systems to access needed information correctly during operation and to recover quickly after accidental attacks or damage. It is a user-facing security property of network information systems that helps ensure service delivery."
 
 #: ../../source/basic/outlook.rst:18
 msgid "网络安全的主体是保护网络上的数据和通信的安全，数据安全性是指软硬件保护措施，用来阻止对数据进行非授权的泄漏、转移、修改和破坏等，通信安全性是通信保护措施，要求在通信中采用保密安全性、传输安全性、辐射安全性等措施。"
-msgstr ""
+msgstr "The main focus of cybersecurity is protecting the security of data and communications on networks. Data security refers to hardware and software safeguards used to prevent unauthorized disclosure, transfer, modification, and destruction of data. Communication security refers to protective measures for communications, including confidentiality, transmission security, and emission security."
 
 #: ../../source/basic/outlook.rst:21
 msgid "系统脆弱性"
-msgstr ""
+msgstr "System Vulnerability"
 
 #: ../../source/basic/outlook.rst:22
 msgid "信息系统本身是脆弱的，信息系统的硬件资源、通信资源、软件及信息资源等都可能因为可预见或不可预见甚至恶意的原因而可能导致系统受到破坏、更改、泄露和功能失效，从而使系统处于异常状态，甚至崩溃瘫痪。"
-msgstr ""
+msgstr "Information systems are inherently vulnerable. Their hardware resources, communication resources, software, and information resources may be damaged, altered, disclosed, or rendered unavailable for foreseeable, unforeseeable, or even malicious reasons, causing the system to enter an abnormal state or even collapse."
 
 #: ../../source/basic/outlook.rst:24
 msgid "硬件资源的脆弱性主要表现为物理安全方面的问题，多源于设计，采用软件程序的方法见效不大。"
-msgstr ""
+msgstr "Vulnerabilities in hardware resources mainly appear as physical security issues. They often originate in design, and software-based measures are usually not very effective against them."
 
 #: ../../source/basic/outlook.rst:26
 msgid "软件的脆弱性来源于设计和软件工程实施中遗留问题，如设计中的疏忽、内部设计的逻辑混乱，没有遵守信息系统安全原则进行设计等。"
-msgstr ""
+msgstr "Software vulnerabilities come from problems left in design and software engineering implementation, such as design oversights, chaotic internal logic, or failure to follow information system security principles during design."

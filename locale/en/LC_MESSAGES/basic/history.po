@@ -20,239 +20,247 @@ msgstr ""
 
 #: ../../source/basic/history.rst:2
 msgid "Web技术演化"
-msgstr ""
+msgstr "Evolution of Web Technologies"
 
 #: ../../source/basic/history.rst:5
 msgid "简单网站"
-msgstr ""
+msgstr "Simple Websites"
 
 #: ../../source/basic/history.rst:8
 msgid "静态页面"
-msgstr ""
+msgstr "Static Pages"
 
 #: ../../source/basic/history.rst:9
 msgid "Web技术在最初阶段，网站的主要内容是静态的，大多站点托管在ISP上，由文字和图片组成，制作和表现形式也是以表格为主。当时的用户行为也非常简单，基本只是浏览网页。"
-msgstr ""
+msgstr "In the earliest stage of web technology, website content was mainly static. Most sites were hosted by ISPs, consisted of text and images, and were built and presented primarily with tables. User behavior was also very simple at the time: users mostly just browsed pages."
 
 #: ../../source/basic/history.rst:12
 msgid "多媒体阶段"
-msgstr ""
+msgstr "Multimedia Stage"
 
 #: ../../source/basic/history.rst:13
 msgid "随着技术的不断发展，音频、视频、Flash等多媒体技术诞生了。多媒体的加入使得网页变得更加生动形象，网页上的交互也给用户带来了更好的体验。"
-msgstr ""
+msgstr "As technology continued to develop, multimedia technologies such as audio, video, and Flash emerged. Multimedia made web pages more vivid, and web page interactions gave users a better experience."
 
 #: ../../source/basic/history.rst:16
 msgid "CGI阶段"
-msgstr ""
+msgstr "CGI Stage"
 
 #: ../../source/basic/history.rst:17
 msgid ""
 "渐渐的，多媒体已经不能满足人们的请求，于是CGI (Common Gateway Interface) "
 "应运而生。CGI定义了Web服务器与外部应用程序之间的通信接口标准，因此Web服务器可以通过CGI执行外部程序，让外部程序根据Web请求内容生成动态的内容。"
 msgstr ""
+"Gradually, multimedia alone could no longer meet user needs, so CGI (Common Gateway Interface) "
+"emerged. CGI defines a standard communication interface between web servers and external applications. Through CGI, a web server can execute external programs and let them generate dynamic content based on web requests."
 
 #: ../../source/basic/history.rst:19
 msgid "在这个时候，各种编程语言如PHP/ASP/JSP也逐渐加入市场，基于这些语言可以实现更加模块化的、功能更强大的应用程序。"
-msgstr ""
+msgstr "Around this time, programming languages and technologies such as PHP, ASP, and JSP gradually entered the market. Applications built on them could be more modular and more powerful."
 
 #: ../../source/basic/history.rst:22
 msgid "MVC"
-msgstr ""
+msgstr "MVC"
 
 #: ../../source/basic/history.rst:23
 msgid "随着Web应用开发越来越标准化，出现了MVC等思想。MVC是Model/View/Control的缩写，Model用于封装数据和数据处理方法，视图View是数据的HTML展现，控制器Controller负责响应请求，协调Model和View。"
-msgstr ""
+msgstr "As web application development became more standardized, ideas such as MVC appeared. MVC stands for Model/View/Controller. The Model encapsulates data and data-processing methods, the View presents data as HTML, and the Controller responds to requests and coordinates the Model and View."
 
 #: ../../source/basic/history.rst:25
 msgid ""
 "Model，View和Controller的分开，是一种典型的关注点分离的思想，使得代码复用性和组织性更好，Web应用的配置性和灵活性也越来越好。而数据访问也逐渐通过面向对象的方式来替代直接的SQL访问，出现了ORM"
 " (Object-Relational Mapping) 的概念。"
 msgstr ""
+"Separating Model, View, and Controller is a typical separation-of-concerns approach. It improves code reuse and organization, and makes web applications more configurable and flexible. Data access also gradually moved from direct SQL access to object-oriented methods, leading to the concept of ORM "
+"(Object-Relational Mapping)."
 
 #: ../../source/basic/history.rst:27
 msgid "除了MVC，类似的设计思想还有MVP、MVVM等。"
-msgstr ""
+msgstr "In addition to MVC, similar design ideas include MVP, MVVM, and others."
 
 #: ../../source/basic/history.rst:30
 msgid "数据交互"
-msgstr ""
+msgstr "Data Interaction"
 
 #: ../../source/basic/history.rst:33
 msgid "简单数据交互"
-msgstr ""
+msgstr "Simple Data Interaction"
 
 #: ../../source/basic/history.rst:34
 msgid "在Web技术发展最初，前后端交互大部分都使用Web表单、XML、SOAP等较为简单的方式。"
-msgstr ""
+msgstr "In the early development of web technology, most frontend-backend interaction used relatively simple methods such as web forms, XML, and SOAP."
 
 #: ../../source/basic/history.rst:37
 msgid "Ajax"
-msgstr ""
+msgstr "Ajax"
 
 #: ../../source/basic/history.rst:38
 msgid ""
 "在开始的时候，用户提交整个表单后才能获取结果，用户体验极差。于是Ajax (Asynchronous Javascript And XML) "
 "技术逐渐流行起来，它使得应用在不更新整个页面的前提下也可以获得或更新数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变的信息。"
 msgstr ""
+"At first, users had to submit an entire form before receiving results, which created a poor user experience. Ajax (Asynchronous JavaScript and XML) "
+"therefore became popular. It lets applications obtain or update data without refreshing the whole page. This allows web applications to respond to user actions more quickly and avoids sending unchanged information over the network."
 
 #: ../../source/basic/history.rst:41
 msgid "RESTful"
-msgstr ""
+msgstr "RESTful"
 
 #: ../../source/basic/history.rst:42
 msgid "在CGI时期，前后端通常是没有做严格区分的，随着解耦和的需求不断增加，前后端的概念开始变得清晰。前端主要指网站前台部分，运行在PC端、移动端等浏览器上展现给用户浏览的网页，由HTML5、CSS3、JavaScript组成。后端主要指网站的逻辑部分，涉及数据的增删改查等。"
-msgstr ""
+msgstr "During the CGI era, the frontend and backend were usually not strictly separated. As the need for decoupling increased, the concepts of frontend and backend became clearer. The frontend mainly refers to the user-facing part of a website, running in browsers on PCs, mobile devices, and similar clients, and composed of HTML5, CSS3, and JavaScript. The backend mainly refers to the website's logic, including creating, reading, updating, and deleting data."
 
 #: ../../source/basic/history.rst:44
 msgid "此时，REST (Representation State Transformation) 逐渐成为一种流行的Web架构风格。"
-msgstr ""
+msgstr "At this point, REST (Representational State Transfer) gradually became a popular web architectural style."
 
 #: ../../source/basic/history.rst:46
 msgid "REST鼓励基于URL来组织系统功能，充分利用HTTP本身的语义，而不是仅仅将HTTP作为一种远程数据传输协议。一般RESTful有以下的特征："
-msgstr ""
+msgstr "REST encourages organizing system functions around URLs and fully using HTTP's own semantics, instead of treating HTTP merely as a remote data transport protocol. RESTful systems generally have the following characteristics:"
 
 #: ../../source/basic/history.rst:48
 msgid "域名和主域名分开"
-msgstr ""
+msgstr "Separate API domains from the primary domain"
 
 #: ../../source/basic/history.rst:49
 msgid "api.example.com"
-msgstr ""
+msgstr "api.example.com"
 
 #: ../../source/basic/history.rst:50
 msgid "example.com/api/"
-msgstr ""
+msgstr "example.com/api/"
 
 #: ../../source/basic/history.rst:51
 msgid "带有版本控制"
-msgstr ""
+msgstr "Include version control"
 
 #: ../../source/basic/history.rst:52
 msgid "api.example.com/v1"
-msgstr ""
+msgstr "api.example.com/v1"
 
 #: ../../source/basic/history.rst:53
 msgid "api.example.com/v2"
-msgstr ""
+msgstr "api.example.com/v2"
 
 #: ../../source/basic/history.rst:54
 msgid "使用URL定位资源"
-msgstr ""
+msgstr "Use URLs to locate resources"
 
 #: ../../source/basic/history.rst:55
 msgid "GET /users 获取所有用户"
-msgstr ""
+msgstr "GET /users Get all users"
 
 #: ../../source/basic/history.rst:56
 msgid "GET /team/:team/users 获取某团队所有用户"
-msgstr ""
+msgstr "GET /team/:team/users Get all users in a team"
 
 #: ../../source/basic/history.rst:57
 msgid "POST /users 创建用户"
-msgstr ""
+msgstr "POST /users Create a user"
 
 #: ../../source/basic/history.rst:58
 msgid "PATCH/PUT /users 修改某个用户数据"
-msgstr ""
+msgstr "PATCH/PUT /users Modify a user's data"
 
 #: ../../source/basic/history.rst:59
 msgid "DELETE /users 删除某个用户数据"
-msgstr ""
+msgstr "DELETE /users Delete a user's data"
 
 #: ../../source/basic/history.rst:60
 msgid "用 HTTP 动词描述操作"
-msgstr ""
+msgstr "Use HTTP verbs to describe operations"
 
 #: ../../source/basic/history.rst:61
 msgid "GET   获取资源，单个或多个"
-msgstr ""
+msgstr "GET   Retrieve one or more resources"
 
 #: ../../source/basic/history.rst:62
 msgid "POST  创建资源"
-msgstr ""
+msgstr "POST  Create a resource"
 
 #: ../../source/basic/history.rst:63
 msgid "PUT/PATCH 更新资源，客户端提供完整的资源数据"
-msgstr ""
+msgstr "PUT/PATCH Update a resource; the client provides complete resource data"
 
 #: ../../source/basic/history.rst:64
 msgid "DELETE    删除资源"
-msgstr ""
+msgstr "DELETE    Delete a resource"
 
 #: ../../source/basic/history.rst:65
 msgid "正确使用状态码"
-msgstr ""
+msgstr "Use status codes correctly"
 
 #: ../../source/basic/history.rst:66
 msgid "使用状态码提高返回数据的可读性"
-msgstr ""
+msgstr "Use status codes to improve the readability of returned data"
 
 #: ../../source/basic/history.rst:67
 msgid "默认使用 JSON 作为数据响应格式"
-msgstr ""
+msgstr "Use JSON as the default response data format"
 
 #: ../../source/basic/history.rst:68
 msgid "有清晰的文档"
-msgstr ""
+msgstr "Provide clear documentation"
 
 #: ../../source/basic/history.rst:71
 msgid "GraphQL"
-msgstr ""
+msgstr "GraphQL"
 
 #: ../../source/basic/history.rst:72
 msgid ""
 "部分网络服务场景的数据有复杂的依赖关系，为了应对这些场景，Facebook 推出了 GraphQL "
 "，以图状数据结构对数据进行查询存储。部分网站也应用了 GraphQL 作为 API 交互的方式。"
 msgstr ""
+"In some network service scenarios, data has complex dependencies. To address these scenarios, Facebook introduced GraphQL, "
+"which queries and stores data using a graph-like data structure. Some websites also use GraphQL as a method for API interaction."
 
 #: ../../source/basic/history.rst:75
 msgid "二进制"
-msgstr ""
+msgstr "Binary"
 
 #: ../../source/basic/history.rst:76
 msgid "随着业务对性能的要求提高，前后端开始使用HTTP/2、自定义Protocol Buffer等方式来加快数据交互。"
-msgstr ""
+msgstr "As business requirements for performance increased, frontends and backends began using HTTP/2, custom Protocol Buffers, and similar methods to accelerate data interaction."
 
 #: ../../source/basic/history.rst:79
 msgid "架构演进"
-msgstr ""
+msgstr "Architecture Evolution"
 
 #: ../../source/basic/history.rst:80
 msgid "随着业务的不断发展，业务架构也越来越复杂。传统的功能被拆分成不同的模块，出现了中间件、中台等概念。代理服务、负载均衡、数据库分表、异地容灾、缓存、CDN、消息队列、安全防护等技术应用越来越广泛，增加了Web开发和运维的复杂度。"
-msgstr ""
+msgstr "As businesses continued to develop, their architectures became increasingly complex. Traditional functions were split into different modules, and concepts such as middleware and middle platforms emerged. Technologies such as proxy services, load balancing, database sharding, off-site disaster recovery, caching, CDNs, message queues, and security protection became increasingly common, increasing the complexity of web development and operations."
 
 #: ../../source/basic/history.rst:82
 msgid "客户端的形态越来越多，除了Web之外iOS、Android等其他场景也出现在Web服务的客户端场景。"
-msgstr ""
+msgstr "Client forms also became more diverse. In addition to the web, scenarios such as iOS and Android also appeared as clients for web services."
 
 #: ../../source/basic/history.rst:84
 msgid "较早的关系型数据库MySQL、PostgreSQL等已经不能满足需求，出现了Redis/Memcached缓存数据库等一类满足特定需求的数据库。"
-msgstr ""
+msgstr "Earlier relational databases such as MySQL and PostgreSQL could no longer satisfy all requirements, so databases for specific needs, such as Redis and Memcached cache databases, appeared."
 
 #: ../../source/basic/history.rst:86
 msgid "为了满足特定的业务需求，出现了Lucene/Solr/Elasticsearch搜索应用服务器，Kafka/RabbitMQ/ZeroMQ消息系统，Spark计算引擎，Hive数据仓库平台等不同的基础架构。"
-msgstr ""
+msgstr "To meet specific business needs, different infrastructure components emerged, including Lucene/Solr/Elasticsearch search application servers, Kafka/RabbitMQ/ZeroMQ messaging systems, the Spark computing engine, and the Hive data warehouse platform."
 
 #: ../../source/basic/history.rst:89
 msgid "中间件"
-msgstr ""
+msgstr "Middleware"
 
 #: ../../source/basic/history.rst:90
 msgid "中间件是独立的软件程序，用于管理计算资源和网络通信。常用的功能有过滤IP、合并接口、合并端口、路由、权限校验、负载均衡、反向代理等。"
-msgstr ""
+msgstr "Middleware is independent software used to manage computing resources and network communications. Common functions include IP filtering, interface aggregation, port aggregation, routing, permission checks, load balancing, and reverse proxying."
 
 #: ../../source/basic/history.rst:93
 msgid "分布式"
-msgstr ""
+msgstr "Distributed Systems"
 
 #: ../../source/basic/history.rst:94
 msgid "随着数据量的不断提高，单台设备难以承载这样的访问量，同时不同功能也被拆分到不同的应用中，于是出现了提高业务复用及整合的分布式服务框架(RPC)。"
-msgstr ""
+msgstr "As data volume continued to grow, a single device could no longer handle the access load. At the same time, different functions were split into different applications, leading to distributed service frameworks (RPC) that improved business reuse and integration."
 
 #: ../../source/basic/history.rst:97
 msgid "云服务"
-msgstr ""
+msgstr "Cloud Services"
 
 #: ../../source/basic/history.rst:98
 msgid ""
@@ -260,32 +268,37 @@ msgid ""
 "网络，完成服务的提供，投入硬件基础建设和维护的成本很高。云服务出现之后，使用者可以直接购买云主机，基础设施由供应商管理，这种方式也被称作 IaaS"
 " (Infrastructure-as-a-Service) 。"
 msgstr ""
+"Before cloud computing emerged, most computing resources were physical machines running on bare metal. Operations staff selected hardware with appropriate specifications, built IDC "
+"networks in machine rooms, and provided services, which required high investment in hardware infrastructure and maintenance. After cloud services appeared, users could directly purchase cloud hosts while the provider managed the infrastructure. This model is also called IaaS "
+"(Infrastructure-as-a-Service)."
 
 #: ../../source/basic/history.rst:100
 msgid "随着架构的继续发展，应用的运行更加细粒度，部署环境容器化，各个功能拆成微服务或是Serverless的架构。"
-msgstr ""
+msgstr "As architectures continued to develop, applications ran at a finer granularity, deployment environments became containerized, and functions were split into microservices or Serverless architectures."
 
 #: ../../source/basic/history.rst:103
 msgid "Serverless"
-msgstr ""
+msgstr "Serverless"
 
 #: ../../source/basic/history.rst:104
 msgid ""
 "Serverless 架构由两部分组成，即 Faas (Function-as-a-Service)  和 BaaS (Backend-"
 "as-a-Service) 。"
 msgstr ""
+"Serverless architecture consists of two parts: FaaS (Function-as-a-Service) and BaaS (Backend-"
+"as-a-Service)."
 
 #: ../../source/basic/history.rst:106
 msgid "FaaS是运行平台，用户上传需要执行的逻辑函数如一些定时任务、数据处理任务等到云函数平台，配置执行条件触发器、路由等等，就可以通过云平台完成函数的执行。"
-msgstr ""
+msgstr "FaaS is the runtime platform. Users upload logic functions that need to be executed, such as scheduled tasks and data-processing tasks, to a cloud function platform. After configuring execution triggers, routes, and similar conditions, the cloud platform can execute the functions."
 
 #: ../../source/basic/history.rst:108
 msgid "BaaS包含了后端服务组件，它基于 API 完成第三方服务，主要是数据库、对象存储、消息队列、日志服务等等。"
-msgstr ""
+msgstr "BaaS includes backend service components. It provides third-party services through APIs, mainly databases, object storage, message queues, log services, and similar components."
 
 #: ../../source/basic/history.rst:111
 msgid "微服务"
-msgstr ""
+msgstr "Microservices"
 
 #: ../../source/basic/history.rst:112
 msgid ""
@@ -294,71 +307,82 @@ msgid ""
 "Lewis共同提出了微服务的概念，定义了微服务架构风格是一种通过一套小型服务来开发单个应用的方法，每个服务运行在自己的进程中，并通过轻量级的机制进行通讯"
 " (HTTP API) 。"
 msgstr ""
+"Microservices originated from the micro-web-service idea proposed by Dr. Peter Rodgers at a cloud computing conference in 2005. Its core idea is similar to the Unix pipe design philosophy. In 2014, Martin Fowler and James "
+"Lewis jointly introduced the concept of microservices, defining the microservice architectural style as a method of developing a single application through a set of small services. Each service runs in its own process and communicates through lightweight mechanisms "
+"(HTTP APIs)."
 
 #: ../../source/basic/history.rst:114
 msgid "微服务是一种应用于组件设计和部署架构的软件架构风格。它利用模块化的方式组合出复杂的大型应用程序："
-msgstr ""
+msgstr "Microservices are a software architectural style applied to component design and deployment architecture. They use modularity to compose complex large-scale applications:"
 
 #: ../../source/basic/history.rst:116
 msgid "各个服务功能内聚，实现与接口分离。"
-msgstr ""
+msgstr "Each service has cohesive functionality and separates implementation from interface."
 
 #: ../../source/basic/history.rst:117
 msgid "各个服务高度自治、相互解耦，可以独立进行部署、版本控制和容量伸缩。"
-msgstr ""
+msgstr "Services are highly autonomous and decoupled, and can be deployed, versioned, and scaled independently."
 
 #: ../../source/basic/history.rst:118
 msgid "各个服务之间通过 API 的方式进行通信。"
-msgstr ""
+msgstr "Services communicate with each other through APIs."
 
 #: ../../source/basic/history.rst:119
 msgid "各个服务拥有独立的状态，并且只能通过服务本身来对其进行访问。"
-msgstr ""
+msgstr "Each service has independent state, and that state can be accessed only through the service itself."
 
 #: ../../source/basic/history.rst:121
 msgid ""
 "随着微服务技术的不断发展，这种思想也被应用到了前端。2018年，第一个微前端工具single-spa出现在github"
 "。而后出现了基于single-spa的框架qiankun。"
 msgstr ""
+"As microservice technology continued to develop, this idea was also applied to the frontend. In 2018, the first micro-frontend tool, single-spa, appeared on GitHub. "
+"Later, qiankun emerged as a framework based on single-spa."
 
 #: ../../source/basic/history.rst:124
 msgid "API网关"
-msgstr ""
+msgstr "API Gateway"
 
 #: ../../source/basic/history.rst:125
 msgid "API网关是一个服务器，客户端只需要使用简单的访问方式，统一访问API网关，由API网关来代理对后端服务的访问，同时由于服务治理特性统一放到API网关上面，服务治理特性的变更可以做到对客户端透明，一定程度上实现了服务治理等基础特性和业务服务的解耦，服务治理特性的升级也比较容易实现。"
-msgstr ""
+msgstr "An API gateway is a server. Clients only need to use a simple access method to access the API gateway uniformly, and the API gateway proxies access to backend services. Because service governance capabilities are centralized on the API gateway, changes to those capabilities can be transparent to clients. This decouples basic capabilities such as service governance from business services to some extent, and also makes service governance upgrades easier."
 
 #: ../../source/basic/history.rst:128
 msgid "软件开发"
-msgstr ""
+msgstr "Software Development"
 
 #: ../../source/basic/history.rst:131
 msgid "CI/CD"
-msgstr ""
+msgstr "CI/CD"
 
 #: ../../source/basic/history.rst:132
 msgid ""
 "持续集成 (Continuous Integration, CI) "
 "是让开发人员将工作集成到共享分支中的过程。频繁的集成有助于解决隔离，减少每次提交的大小，以降低合并冲突的可能性。"
 msgstr ""
+"Continuous Integration (CI) "
+"is the process of having developers integrate their work into a shared branch. Frequent integration helps avoid isolation, reduces the size of each commit, and lowers the likelihood of merge conflicts."
 
 #: ../../source/basic/history.rst:134
 msgid ""
 "持续交付 (Continuous Deployment, CD) "
 "是持续集成的扩展，它将构建从集成测试套件部署到预生产环境。这使得它可以直接在类生产环境中评估每个构建，因此开发人员可以在无需增加任何工作量的情况下，验证bug修复或者测试新特性。"
 msgstr ""
+"Continuous Deployment (CD) "
+"is an extension of continuous integration that deploys builds from the integration test suite to a pre-production environment. This allows each build to be evaluated directly in a production-like environment, so developers can verify bug fixes or test new features without adding extra manual work."
 
 #: ../../source/basic/history.rst:137
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/basic/history.rst:138
 msgid ""
 "`Scaling webapps for newbs <https://arcentry.com/blog/scaling-webapps-"
 "for-newbs-and-non-techies/>`_"
 msgstr ""
+"`Scaling webapps for newbs <https://arcentry.com/blog/scaling-webapps-"
+"for-newbs-and-non-techies/>`_"
 
 #: ../../source/basic/history.rst:139
 msgid "`GitHub 的 Restful HTTP API 设计分解  <https://learnku.com/articles/24050>`_"
-msgstr ""
+msgstr "`Breakdown of GitHub's RESTful HTTP API Design <https://learnku.com/articles/24050>`_"
