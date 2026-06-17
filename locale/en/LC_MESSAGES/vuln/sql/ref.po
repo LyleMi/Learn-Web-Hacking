@@ -20,62 +20,64 @@ msgstr ""
 
 #: ../../source/vuln/sql/ref.rst:2
 msgid "参考文章"
-msgstr ""
+msgstr "Reference Articles"
 
 #: ../../source/vuln/sql/ref.rst:5
 msgid "Tricks"
-msgstr ""
+msgstr "Tricks"
 
 #: ../../source/vuln/sql/ref.rst:6
 msgid "`sqlmap time based inject 分析 <http://blog.wils0n.cn/archives/178/>`_"
-msgstr ""
+msgstr "`Analysis of sqlmap time-based injection <http://blog.wils0n.cn/archives/178/>`_"
 
 #: ../../source/vuln/sql/ref.rst:7
 msgid "`SQLInjectionWiki <https://github.com/NetSPI/SQLInjectionWiki>`_"
-msgstr ""
+msgstr "`SQLInjectionWiki <https://github.com/NetSPI/SQLInjectionWiki>`_"
 
 #: ../../source/vuln/sql/ref.rst:8
 msgid "`常见数据库写入Webshell汇总 <https://mp.weixin.qq.com/s/BucCNyCmyATdRENZp0AF2A>`_"
-msgstr ""
+msgstr "`Summary of common database Webshell writing techniques <https://mp.weixin.qq.com/s/BucCNyCmyATdRENZp0AF2A>`_"
 
 #: ../../source/vuln/sql/ref.rst:9
 msgid "`MSSQL数据库攻击实战指北 <https://mp.weixin.qq.com/s/uENvpPan7aVd7MbSoAT9Dg>`_"
-msgstr ""
+msgstr "`Practical guide to MSSQL database attacks <https://mp.weixin.qq.com/s/uENvpPan7aVd7MbSoAT9Dg>`_"
 
 #: ../../source/vuln/sql/ref.rst:12
 msgid "Bypass"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/vuln/sql/ref.rst:13
 msgid "`SQL注入ByPass的一些小技巧 <https://mp.weixin.qq.com/s/fSBZPkO0-HNYfLgmYWJKCg>`_"
-msgstr ""
+msgstr "`Some SQL injection bypass tricks <https://mp.weixin.qq.com/s/fSBZPkO0-HNYfLgmYWJKCg>`_"
 
 #: ../../source/vuln/sql/ref.rst:14
 msgid "`Waf Bypass之道 <https://xz.aliyun.com/t/368>`_"
-msgstr ""
+msgstr "`The way of WAF bypass <https://xz.aliyun.com/t/368>`_"
 
 #: ../../source/vuln/sql/ref.rst:15
 msgid "`MySQL Bypass Wiki <https://github.com/aleenzz/MYSQL_SQL_BYPASS_WIKI>`_"
-msgstr ""
+msgstr "`MySQL Bypass Wiki <https://github.com/aleenzz/MYSQL_SQL_BYPASS_WIKI>`_"
 
 #: ../../source/vuln/sql/ref.rst:18
 msgid "NoSQL"
-msgstr ""
+msgstr "NoSQL"
 
 #: ../../source/vuln/sql/ref.rst:19
 msgid "`NoSQL注入的分析和缓解 <http://www.yunweipai.com/archives/14084.html>`_"
-msgstr ""
+msgstr "`Analysis and mitigation of NoSQL injection <http://www.yunweipai.com/archives/14084.html>`_"
 
 #: ../../source/vuln/sql/ref.rst:20
 msgid "`NoSQL注入 <https://mp.weixin.qq.com/s/tG874LNTIdiN7MPtO-hovA>`_"
-msgstr ""
+msgstr "`NoSQL injection <https://mp.weixin.qq.com/s/tG874LNTIdiN7MPtO-hovA>`_"
 
 #: ../../source/vuln/sql/ref.rst:23
 msgid "Cheatsheet"
-msgstr ""
+msgstr "Cheatsheet"
 
 #: ../../source/vuln/sql/ref.rst:24
 msgid ""
 "`MSSQL Pentest Cheatsheet <https://github.com/Ignitetechnologies/MSSQL-"
 "Pentest-Cheatsheet>`_"
 msgstr ""
+"`MSSQL Pentest Cheatsheet <https://github.com/Ignitetechnologies/MSSQL-"
+"Pentest-Cheatsheet>`_"

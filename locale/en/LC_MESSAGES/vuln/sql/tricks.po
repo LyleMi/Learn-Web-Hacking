@@ -20,15 +20,15 @@ msgstr ""
 
 #: ../../source/vuln/sql/tricks.rst:2
 msgid "SQL注入小技巧"
-msgstr ""
+msgstr "SQL Injection Tricks"
 
 #: ../../source/vuln/sql/tricks.rst:5
 msgid "宽字节注入"
-msgstr ""
+msgstr "Wide Byte Injection"
 
 #: ../../source/vuln/sql/tricks.rst:6
 msgid "一般程序员用gbk编码做开发的时候，会用 ``set names 'gbk'`` 来设定，这句话等同于"
-msgstr ""
+msgstr "When developers use GBK encoding, they usually configure it with ``set names 'gbk'``. This statement is equivalent to"
 
 #: ../../source/vuln/sql/tricks.rst:15
 #, python-format
@@ -38,6 +38,13 @@ msgid ""
 "``set names 'gbk'`` 的话real_escape是不知道设置的数据的编码的，就会加 ``%5c`` "
 "。此时server拿到数据解码  就认为提交的字符+%5c是gbk的一个字符，这样就产生漏洞了。"
 msgstr ""
+"The vulnerability occurs because after ``set character_set_client = 'gbk';`` "
+"is executed, MySQL treats data sent by the client as GBK-encoded and decodes "
+"it as GBK, while mysql_real_escape runs before decoding. However, if ``set "
+"names 'gbk'`` is used directly, real_escape does not know the encoding of the "
+"configured data and adds ``%5c``. When the server receives and decodes the "
+"data, it treats the submitted character plus %5c as one GBK character, which "
+"creates the vulnerability."
 
 #: ../../source/vuln/sql/tricks.rst:17
 msgid ""
@@ -45,25 +52,36 @@ msgid ""
 "``mysql_set_charset('gbk')`` ，这里就会把编码的信息保存在和数据库的连接里面，就不会出现这个问题了。 "
 "第三种就是用pdo。"
 msgstr ""
+"There are three ways to fix it. The first is to set the client charset to "
+"binary so that an extra decoding operation is not performed. The second is to "
+"use ``mysql_set_charset('gbk')``, which stores the encoding information in "
+"the database connection and avoids this issue. The third is to use PDO."
 
 #: ../../source/vuln/sql/tricks.rst:20
 msgid "还有一些其他的编码技巧，比如latin会弃掉无效的unicode，那么admin%32在代码里面不等于admin，在数据库比较会等于admin。"
-msgstr ""
+msgstr "There are also other encoding tricks. For example, Latin encodings may discard invalid Unicode, so admin%32 is not equal to admin in code, but may compare equal to admin in the database."
 
 #: ../../source/vuln/sql/tricks.rst:23
 msgid "二次注入"
-msgstr ""
+msgstr "Second-Order Injection"
 
 #: ../../source/vuln/sql/tricks.rst:24
 msgid ""
 "二次SQL注入（Second-Order SQL "
 "Injection）是一种特殊类型的SQL注入攻击。与一般的SQL注入攻击类似，攻击者会通过输入恶意的SQL语句来执行非法操作。而二次SQL注入则是指攻击者在应用程序中注入恶意的数据，然后等待应用程序将这些数据存储在数据库中。当应用程序再次从数据库中读取这些数据时，恶意数据就会被读取出来，并执行恶意操作。"
 msgstr ""
+"Second-Order SQL Injection is a special type of SQL injection attack. Similar "
+"to ordinary SQL injection, an attacker inputs malicious SQL statements to "
+"perform unauthorized operations. In second-order SQL injection, the attacker "
+"injects malicious data into the application and waits for the application to "
+"store it in the database. When the application later reads this data from the "
+"database again, the malicious data is retrieved and malicious operations may "
+"be executed."
 
 #: ../../source/vuln/sql/tricks.rst:26
 msgid "例如，一个web应用程序可能会将用户输入的内容存储在数据库中，然后在后续的页面中将这些内容显示出来。如果攻击者在用户输入中注入了恶意SQL语句，那么这些语句会被存储在数据库中。当应用程序从数据库中读取这些内容并在后续的逻辑中使用时，恶意SQL语句就有可能被执行，从而导致攻击成功。"
-msgstr ""
+msgstr "For example, a web application may store user input in a database and then display that content on later pages. If an attacker injects malicious SQL statements into the user input, those statements are stored in the database. When the application reads the content from the database and uses it in later logic, the malicious SQL statements may be executed, resulting in a successful attack."
 
 #: ../../source/vuln/sql/tricks.rst:28
 msgid "与一般的SQL注入攻击相比，二次SQL注入攻击更加难以防范和检测，因为攻击者并不直接向应用程序发送恶意SQL语句，而是将其存储在数据库中等待应用程序读取。因此，防止二次SQL注入攻击需要采取一些特殊的防御措施，例如对输入数据进行更加严格的过滤和转义处理，使用预编译等。"
-msgstr ""
+msgstr "Compared with ordinary SQL injection attacks, second-order SQL injection is harder to prevent and detect because the attacker does not send malicious SQL statements directly to the application. Instead, the attacker stores them in the database and waits for the application to read them. Preventing second-order SQL injection therefore requires special defenses, such as stricter filtering and escaping of input data and the use of prepared statements."

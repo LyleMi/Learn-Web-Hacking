@@ -20,120 +20,120 @@ msgstr ""
 
 #: ../../source/vuln/sql/bypass.rst:2
 msgid "绕过技巧"
-msgstr ""
+msgstr "Bypass Techniques"
 
 #: ../../source/vuln/sql/bypass.rst:4
 msgid "编码绕过"
-msgstr ""
+msgstr "Encoding Bypass"
 
 #: ../../source/vuln/sql/bypass.rst:5
 msgid "大小写"
-msgstr ""
+msgstr "Case variation"
 
 #: ../../source/vuln/sql/bypass.rst:6
 msgid "url编码"
-msgstr ""
+msgstr "URL encoding"
 
 #: ../../source/vuln/sql/bypass.rst:7
 msgid "html编码"
-msgstr ""
+msgstr "HTML encoding"
 
 #: ../../source/vuln/sql/bypass.rst:8
 msgid "十六进制编码"
-msgstr ""
+msgstr "Hexadecimal encoding"
 
 #: ../../source/vuln/sql/bypass.rst:9
 msgid "unicode编码"
-msgstr ""
+msgstr "Unicode encoding"
 
 #: ../../source/vuln/sql/bypass.rst:10
 msgid "注释"
-msgstr ""
+msgstr "Comments"
 
 #: ../../source/vuln/sql/bypass.rst:11
 msgid "``//`` ``--`` ``-- +`` ``-- -`` ``#`` ``/**/`` ``;%00``"
-msgstr ""
+msgstr "``//`` ``--`` ``-- +`` ``-- -`` ``#`` ``/**/`` ``;%00``"
 
 #: ../../source/vuln/sql/bypass.rst:12
 msgid "内联注释用的更多，它有一个特性 ``/!**/`` 只有MySQL能识别"
-msgstr ""
+msgstr "Inline comments are used more often. They have a characteristic: ``/!**/`` can only be recognized by MySQL."
 
 #: ../../source/vuln/sql/bypass.rst:13
 msgid "e.g. ``index.php?id=-1 /*!UNION*/ /*!SELECT*/ 1,2,3``"
-msgstr ""
+msgstr "e.g. ``index.php?id=-1 /*!UNION*/ /*!SELECT*/ 1,2,3``"
 
 #: ../../source/vuln/sql/bypass.rst:14
 msgid "只过滤了一次时"
-msgstr ""
+msgstr "When filtering is applied only once"
 
 #: ../../source/vuln/sql/bypass.rst:15
 msgid "``union`` => ``ununionion``"
-msgstr ""
+msgstr "``union`` => ``ununionion``"
 
 #: ../../source/vuln/sql/bypass.rst:16
 msgid "相同功能替换"
-msgstr ""
+msgstr "Equivalent Functionality Replacement"
 
 #: ../../source/vuln/sql/bypass.rst:17
 msgid "函数替换"
-msgstr ""
+msgstr "Function replacement"
 
 #: ../../source/vuln/sql/bypass.rst:18
 msgid "``substring`` / ``mid`` / ``sub``"
-msgstr ""
+msgstr "``substring`` / ``mid`` / ``sub``"
 
 #: ../../source/vuln/sql/bypass.rst:19
 msgid "``ascii`` / ``hex`` / ``bin``"
-msgstr ""
+msgstr "``ascii`` / ``hex`` / ``bin``"
 
 #: ../../source/vuln/sql/bypass.rst:20
 msgid "``benchmark`` / ``sleep``"
-msgstr ""
+msgstr "``benchmark`` / ``sleep``"
 
 #: ../../source/vuln/sql/bypass.rst:21
 msgid "变量替换"
-msgstr ""
+msgstr "Variable replacement"
 
 #: ../../source/vuln/sql/bypass.rst:22
 msgid "``user()`` / ``@@user``"
-msgstr ""
+msgstr "``user()`` / ``@@user``"
 
 #: ../../source/vuln/sql/bypass.rst:23
 msgid "符号和关键字"
-msgstr ""
+msgstr "Symbols and Keywords"
 
 #: ../../source/vuln/sql/bypass.rst:24
 msgid "``and`` / ``&``"
-msgstr ""
+msgstr "``and`` / ``&``"
 
 #: ../../source/vuln/sql/bypass.rst:25
 msgid "``or`` / ``|``"
-msgstr ""
+msgstr "``or`` / ``|``"
 
 #: ../../source/vuln/sql/bypass.rst:26
 msgid "HTTP参数"
-msgstr ""
+msgstr "HTTP Parameters"
 
 #: ../../source/vuln/sql/bypass.rst:27
 msgid "HTTP参数污染"
-msgstr ""
+msgstr "HTTP Parameter Pollution"
 
 #: ../../source/vuln/sql/bypass.rst:28
 msgid "``id=1&id=2&id=3`` 根据容器不同会有不同的结果"
-msgstr ""
+msgstr "``id=1&id=2&id=3`` produces different results depending on the container"
 
 #: ../../source/vuln/sql/bypass.rst:29
 msgid "HTTP分割注入"
-msgstr ""
+msgstr "HTTP Splitting Injection"
 
 #: ../../source/vuln/sql/bypass.rst:30
 msgid "缓冲区溢出"
-msgstr ""
+msgstr "Buffer Overflow"
 
 #: ../../source/vuln/sql/bypass.rst:31
 msgid "一些C语言的WAF处理的字符串长度有限，超出某个长度后的payload可能不会被处理"
-msgstr ""
+msgstr "Some WAFs written in C process only a limited string length, so payloads beyond a certain length may not be processed"
 
 #: ../../source/vuln/sql/bypass.rst:32
 msgid "二次注入有长度限制时，通过多句执行的方法改掉数据库该字段的长度绕过"
-msgstr ""
+msgstr "When second-order injection is limited by field length, bypass it by using multi-statement execution to change the length of that database field"
