@@ -20,780 +20,780 @@ msgstr ""
 
 #: ../../source/network/http/http.rst:2
 msgid "HTTP标准"
-msgstr ""
+msgstr "HTTP Standard"
 
 #: ../../source/network/http/http.rst:5
 msgid "报文格式"
-msgstr ""
+msgstr "Message Format"
 
 #: ../../source/network/http/http.rst:8
 msgid "请求报文格式"
-msgstr ""
+msgstr "Request Message Format"
 
 #: ../../source/network/http/http.rst:17
 msgid "响应报文格式"
-msgstr ""
+msgstr "Response Message Format"
 
 #: ../../source/network/http/http.rst:26
 msgid "字段解释"
-msgstr ""
+msgstr "Field Descriptions"
 
 #: ../../source/network/http/http.rst:27
 msgid "method"
-msgstr ""
+msgstr "method"
 
 #: ../../source/network/http/http.rst:28
 msgid "HTTP动词"
-msgstr ""
+msgstr "HTTP Verb"
 
 #: ../../source/network/http/http.rst:29
 msgid "常见方法：HEAD / GET / POST / PUT / DELETE / PATCH / OPTIONS / TRACE"
-msgstr ""
+msgstr "Common Methods: HEAD / GET / POST / PUT / DELETE / PATCH / OPTIONS / TRACE"
 
 #: ../../source/network/http/http.rst:30
 msgid "扩展方法：LOCK / MKCOL / COPY / MOVE"
-msgstr ""
+msgstr "Extension Methods: LOCK / MKCOL / COPY / MOVE"
 
 #: ../../source/network/http/http.rst:31
 msgid "version"
-msgstr ""
+msgstr "version"
 
 #: ../../source/network/http/http.rst:32
 msgid "报文使用的HTTP版本"
-msgstr ""
+msgstr "HTTP version used by the message"
 
 #: ../../source/network/http/http.rst:33
 msgid "格式为HTTP/<major>.<minor>"
-msgstr ""
+msgstr "Format: HTTP/<major>.<minor>"
 
 #: ../../source/network/http/http.rst:34
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #: ../../source/network/http/http.rst:35
 msgid "``<scheme>://<user>:<password>@<host>:<port>/<path>;<params>?<query>#<frag>``"
-msgstr ""
+msgstr "``<scheme>://<user>:<password>@<host>:<port>/<path>;<params>?<query>#<frag>``"
 
 #: ../../source/network/http/http.rst:38
 msgid "请求头列表"
-msgstr ""
+msgstr "Request Header List"
 
 #: ../../source/network/http/http.rst:39
 msgid "Accept"
-msgstr ""
+msgstr "Accept"
 
 #: ../../source/network/http/http.rst:40
 msgid "指定客户端能够接收的内容类型"
-msgstr ""
+msgstr "Specifies the content types the client can accept"
 
 #: ../../source/network/http/http.rst:41
 msgid "Accept: text/plain, text/html"
-msgstr ""
+msgstr "Accept: text/plain, text/html"
 
 #: ../../source/network/http/http.rst:42
 msgid "Accept-Charset"
-msgstr ""
+msgstr "Accept-Charset"
 
 #: ../../source/network/http/http.rst:43
 msgid "浏览器可以接受的字符编码集"
-msgstr ""
+msgstr "Character encodings accepted by the browser"
 
 #: ../../source/network/http/http.rst:44
 msgid "Accept-Charset: iso-8859-5"
-msgstr ""
+msgstr "Accept-Charset: iso-8859-5"
 
 #: ../../source/network/http/http.rst:45
 msgid "Accept-Encoding"
-msgstr ""
+msgstr "Accept-Encoding"
 
 #: ../../source/network/http/http.rst:46
 msgid "指定浏览器可以支持的web服务器返回内容压缩编码类型"
-msgstr ""
+msgstr "Specifies response content compression encodings supported by the browser and web server"
 
 #: ../../source/network/http/http.rst:47
 msgid "Accept-Encoding: compress, gzip"
-msgstr ""
+msgstr "Accept-Encoding: compress, gzip"
 
 #: ../../source/network/http/http.rst:48
 msgid "Accept-Language"
-msgstr ""
+msgstr "Accept-Language"
 
 #: ../../source/network/http/http.rst:49
 msgid "浏览器可接受的语言"
-msgstr ""
+msgstr "Languages accepted by the browser"
 
 #: ../../source/network/http/http.rst:50
 msgid "Accept-Language: en,zh"
-msgstr ""
+msgstr "Accept-Language: en,zh"
 
 #: ../../source/network/http/http.rst:51 ../../source/network/http/http.rst:131
 msgid "Accept-Ranges"
-msgstr ""
+msgstr "Accept-Ranges"
 
 #: ../../source/network/http/http.rst:52
 msgid "可以请求网页实体的一个或者多个子范围字段"
-msgstr ""
+msgstr "Indicates that one or more subranges of the web entity can be requested"
 
 #: ../../source/network/http/http.rst:53 ../../source/network/http/http.rst:133
 msgid "Accept-Ranges: bytes"
-msgstr ""
+msgstr "Accept-Ranges: bytes"
 
 #: ../../source/network/http/http.rst:54
 msgid "Authorization"
-msgstr ""
+msgstr "Authorization"
 
 #: ../../source/network/http/http.rst:55
 msgid "HTTP授权的授权证书"
-msgstr ""
+msgstr "Credentials for HTTP authorization"
 
 #: ../../source/network/http/http.rst:56
 msgid "Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="
-msgstr ""
+msgstr "Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="
 
 #: ../../source/network/http/http.rst:57 ../../source/network/http/http.rst:143
 msgid "Cache-Control"
-msgstr ""
+msgstr "Cache-Control"
 
 #: ../../source/network/http/http.rst:58
 msgid "指定请求和响应遵循的缓存机制 Cache-Control: no-cache"
-msgstr ""
+msgstr "Specifies the caching mechanism followed by requests and responses. Cache-Control: no-cache"
 
 #: ../../source/network/http/http.rst:59
 msgid "Connection"
-msgstr ""
+msgstr "Connection"
 
 #: ../../source/network/http/http.rst:60
 msgid "表示是否需要持久连接 // HTTP 1.1默认进行持久连接"
-msgstr ""
+msgstr "Indicates whether a persistent connection is required // HTTP 1.1 uses persistent connections by default"
 
 #: ../../source/network/http/http.rst:61
 msgid "Connection: close"
-msgstr ""
+msgstr "Connection: close"
 
 #: ../../source/network/http/http.rst:62
 msgid "Cookie"
-msgstr ""
+msgstr "Cookie"
 
 #: ../../source/network/http/http.rst:63
 msgid "HTTP请求发送时，会把保存在该请求域名下的所有cookie值一起发送给web服务器"
-msgstr ""
+msgstr "When an HTTP request is sent, all cookie values stored for that request domain are sent to the web server"
 
 #: ../../source/network/http/http.rst:64
 msgid "Cookie: role=admin;ssid=1"
-msgstr ""
+msgstr "Cookie: role=admin;ssid=1"
 
 #: ../../source/network/http/http.rst:65 ../../source/network/http/http.rst:152
 msgid "Content-Length"
-msgstr ""
+msgstr "Content-Length"
 
 #: ../../source/network/http/http.rst:66
 msgid "请求的内容长度"
-msgstr ""
+msgstr "Length of the request content"
 
 #: ../../source/network/http/http.rst:67 ../../source/network/http/http.rst:154
 msgid "Content-Length: 348"
-msgstr ""
+msgstr "Content-Length: 348"
 
 #: ../../source/network/http/http.rst:68 ../../source/network/http/http.rst:164
 msgid "Content-Type"
-msgstr ""
+msgstr "Content-Type"
 
 #: ../../source/network/http/http.rst:69
 msgid "请求的与实体对应的MIME信息"
-msgstr ""
+msgstr "MIME information for the request entity"
 
 #: ../../source/network/http/http.rst:70
 msgid "Content-Type: application/x-www-form-urlencoded"
-msgstr ""
+msgstr "Content-Type: application/x-www-form-urlencoded"
 
 #: ../../source/network/http/http.rst:71 ../../source/network/http/http.rst:167
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: ../../source/network/http/http.rst:72
 msgid "请求发送的日期和时间"
-msgstr ""
+msgstr "Date and time when the request was sent"
 
 #: ../../source/network/http/http.rst:73 ../../source/network/http/http.rst:169
 msgid "Date: Tue, 15 Nov 2010 08:12:31 GMT"
-msgstr ""
+msgstr "Date: Tue, 15 Nov 2010 08:12:31 GMT"
 
 #: ../../source/network/http/http.rst:74
 msgid "Expect"
-msgstr ""
+msgstr "Expect"
 
 #: ../../source/network/http/http.rst:75
 msgid "请求的特定的服务器行为"
-msgstr ""
+msgstr "Specific server behavior requested"
 
 #: ../../source/network/http/http.rst:76
 msgid "Expect: 100-continue"
-msgstr ""
+msgstr "Expect: 100-continue"
 
 #: ../../source/network/http/http.rst:77
 msgid "From"
-msgstr ""
+msgstr "From"
 
 #: ../../source/network/http/http.rst:78
 msgid "发出请求的用户的Email"
-msgstr ""
+msgstr "Email address of the user making the request"
 
 #: ../../source/network/http/http.rst:79
 msgid "From: user@email.com"
-msgstr ""
+msgstr "From: user@email.com"
 
 #: ../../source/network/http/http.rst:80
 msgid "Host"
-msgstr ""
+msgstr "Host"
 
 #: ../../source/network/http/http.rst:81
 msgid "指定请求的服务器的域名和端口号"
-msgstr ""
+msgstr "Specifies the domain name and port number of the requested server"
 
 #: ../../source/network/http/http.rst:82
 msgid "Host: www.github.com"
-msgstr ""
+msgstr "Host: www.github.com"
 
 #: ../../source/network/http/http.rst:83
 msgid "If-Match"
-msgstr ""
+msgstr "If-Match"
 
 #: ../../source/network/http/http.rst:84
 msgid "只有请求内容与实体相匹配才有效"
-msgstr ""
+msgstr "Valid only when the request content matches the entity"
 
 #: ../../source/network/http/http.rst:85
 msgid "If-Match: \"737060cd8c284d8af7ad3082f209582d\""
-msgstr ""
+msgstr "If-Match: \"737060cd8c284d8af7ad3082f209582d\""
 
 #: ../../source/network/http/http.rst:86
 msgid "If-Modified-Since"
-msgstr ""
+msgstr "If-Modified-Since"
 
 #: ../../source/network/http/http.rst:87
 msgid "如果请求的部分在指定时间之后被修改则请求成功，未被修改则返回304代码"
-msgstr ""
+msgstr "The request succeeds if the requested part was modified after the specified time; otherwise a 304 code is returned"
 
 #: ../../source/network/http/http.rst:88
 msgid "If-Modified-Since: Sat, 29 Oct 2018 19:43:31 GMT"
-msgstr ""
+msgstr "If-Modified-Since: Sat, 29 Oct 2018 19:43:31 GMT"
 
 #: ../../source/network/http/http.rst:89
 msgid "If-None-Match"
-msgstr ""
+msgstr "If-None-Match"
 
 #: ../../source/network/http/http.rst:90
 msgid "如果内容未改变返回304代码，参数为服务器先前发送的Etag，与服务器回应的Etag比较判断是否改变"
-msgstr ""
+msgstr "Returns a 304 code if the content has not changed; the parameter is the ETag previously sent by the server and is compared with the server's ETag to determine whether it changed"
 
 #: ../../source/network/http/http.rst:91
 msgid "If-None-Match: \"737060cd8c284d8af7ad3082f209582d\""
-msgstr ""
+msgstr "If-None-Match: \"737060cd8c284d8af7ad3082f209582d\""
 
 #: ../../source/network/http/http.rst:92
 msgid "If-Range"
-msgstr ""
+msgstr "If-Range"
 
 #: ../../source/network/http/http.rst:93
 msgid "如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为Etag"
-msgstr ""
+msgstr "If the entity has not changed, the server sends the missing part to the client; otherwise it sends the entire entity. The parameter is also an ETag"
 
 #: ../../source/network/http/http.rst:94
 msgid "If-Range: \"737060cd8c284d8af7ad3082f209582d\""
-msgstr ""
+msgstr "If-Range: \"737060cd8c284d8af7ad3082f209582d\""
 
 #: ../../source/network/http/http.rst:95
 msgid "If-Unmodified-Since"
-msgstr ""
+msgstr "If-Unmodified-Since"
 
 #: ../../source/network/http/http.rst:96
 msgid "只在实体在指定时间之后未被修改才请求成功"
-msgstr ""
+msgstr "The request succeeds only if the entity has not been modified since the specified time"
 
 #: ../../source/network/http/http.rst:97
 msgid "If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT"
-msgstr ""
+msgstr "If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT"
 
 #: ../../source/network/http/http.rst:98
 msgid "Max-Forwards"
-msgstr ""
+msgstr "Max-Forwards"
 
 #: ../../source/network/http/http.rst:99
 msgid "限制信息通过代理和网关传送的时间"
-msgstr ""
+msgstr "Limits how long information can be forwarded through proxies and gateways"
 
 #: ../../source/network/http/http.rst:100
 msgid "Max-Forwards: 10"
-msgstr ""
+msgstr "Max-Forwards: 10"
 
 #: ../../source/network/http/http.rst:101
 #: ../../source/network/http/http.rst:182
 msgid "Pragma"
-msgstr ""
+msgstr "Pragma"
 
 #: ../../source/network/http/http.rst:102
 msgid "用来包含实现特定的指令"
-msgstr ""
+msgstr "Used to include implementation-specific directives"
 
 #: ../../source/network/http/http.rst:103
 #: ../../source/network/http/http.rst:184
 msgid "Pragma: no-cache"
-msgstr ""
+msgstr "Pragma: no-cache"
 
 #: ../../source/network/http/http.rst:104
 msgid "Proxy-Authorization"
-msgstr ""
+msgstr "Proxy-Authorization"
 
 #: ../../source/network/http/http.rst:105
 msgid "连接到代理的授权证书"
-msgstr ""
+msgstr "Credentials for connecting to a proxy"
 
 #: ../../source/network/http/http.rst:106
 msgid "Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="
-msgstr ""
+msgstr "Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="
 
 #: ../../source/network/http/http.rst:107
 msgid "Range"
-msgstr ""
+msgstr "Range"
 
 #: ../../source/network/http/http.rst:108
 msgid "只请求实体的一部分，指定范围"
-msgstr ""
+msgstr "Requests only part of the entity and specifies the range"
 
 #: ../../source/network/http/http.rst:109
 msgid "Range: bytes=500-999"
-msgstr ""
+msgstr "Range: bytes=500-999"
 
 #: ../../source/network/http/http.rst:110
 msgid "Referer"
-msgstr ""
+msgstr "Referer"
 
 #: ../../source/network/http/http.rst:111
 msgid "先前网页的地址，当前请求网页紧随其后,即来路"
-msgstr ""
+msgstr "Address of the previous web page followed by the current request, that is, the referrer"
 
 #: ../../source/network/http/http.rst:112
 msgid "Referer: http://www.zcmhi.com/archives/71.html"
-msgstr ""
+msgstr "Referer: http://www.zcmhi.com/archives/71.html"
 
 #: ../../source/network/http/http.rst:113
 msgid "TE"
-msgstr ""
+msgstr "TE"
 
 #: ../../source/network/http/http.rst:114
 msgid "客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息"
-msgstr ""
+msgstr "Transfer codings the client is willing to accept, and notifies the server that trailing header fields are accepted"
 
 #: ../../source/network/http/http.rst:115
 msgid "TE: trailers,deflate;q=0.5"
-msgstr ""
+msgstr "TE: trailers,deflate;q=0.5"
 
 #: ../../source/network/http/http.rst:116
 msgid "Upgrade"
-msgstr ""
+msgstr "Upgrade"
 
 #: ../../source/network/http/http.rst:117
 msgid "向服务器指定某种传输协议以便服务器进行转换（如果支持）"
-msgstr ""
+msgstr "Specifies transport protocols for the server to switch to if supported"
 
 #: ../../source/network/http/http.rst:118
 msgid "Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11"
-msgstr ""
+msgstr "Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11"
 
 #: ../../source/network/http/http.rst:119
 msgid "User-Agent"
-msgstr ""
+msgstr "User-Agent"
 
 #: ../../source/network/http/http.rst:120
 msgid "User-Agent的内容包含发出请求的用户信息"
-msgstr ""
+msgstr "The User-Agent content contains information about the user making the request"
 
 #: ../../source/network/http/http.rst:121
 msgid "User-Agent: Mozilla/5.0 (Linux; X11)"
-msgstr ""
+msgstr "User-Agent: Mozilla/5.0 (Linux; X11)"
 
 #: ../../source/network/http/http.rst:122
 #: ../../source/network/http/http.rst:212
 msgid "Via"
-msgstr ""
+msgstr "Via"
 
 #: ../../source/network/http/http.rst:123
 msgid "通知中间网关或代理服务器地址，通信协议"
-msgstr ""
+msgstr "Notifies intermediate gateways or proxies of the address and communication protocol"
 
 #: ../../source/network/http/http.rst:124
 #: ../../source/network/http/http.rst:214
 msgid "Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)"
-msgstr ""
+msgstr "Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)"
 
 #: ../../source/network/http/http.rst:125
 #: ../../source/network/http/http.rst:215
 msgid "Warning"
-msgstr ""
+msgstr "Warning"
 
 #: ../../source/network/http/http.rst:126
 msgid "关于消息实体的警告信息"
-msgstr ""
+msgstr "Warning information about the message entity"
 
 #: ../../source/network/http/http.rst:127
 msgid "Warn: 199 Miscellaneous warning"
-msgstr ""
+msgstr "Warn: 199 Miscellaneous warning"
 
 #: ../../source/network/http/http.rst:130
 msgid "响应头列表"
-msgstr ""
+msgstr "Response Header List"
 
 #: ../../source/network/http/http.rst:132
 msgid "表明服务器是否支持指定范围请求及哪种类型的分段请求"
-msgstr ""
+msgstr "Indicates whether the server supports range requests and which types of partial requests"
 
 #: ../../source/network/http/http.rst:134
 msgid "Access-Control-Allow-Origin"
-msgstr ""
+msgstr "Access-Control-Allow-Origin"
 
 #: ../../source/network/http/http.rst:135
 msgid "配置有权限访问资源的域"
-msgstr ""
+msgstr "Configures the origins permitted to access the resource"
 
 #: ../../source/network/http/http.rst:136
 msgid "Access-Control-Allow-Origin: <origin>|*"
-msgstr ""
+msgstr "Access-Control-Allow-Origin: <origin>|*"
 
 #: ../../source/network/http/http.rst:137
 msgid "Age"
-msgstr ""
+msgstr "Age"
 
 #: ../../source/network/http/http.rst:138
 msgid "从原始服务器到代理缓存形成的估算时间（以秒计，非负）"
-msgstr ""
+msgstr "Estimated time since the response was generated by the origin server or proxy cache, in non-negative seconds"
 
 #: ../../source/network/http/http.rst:139
 msgid "Age: 12"
-msgstr ""
+msgstr "Age: 12"
 
 #: ../../source/network/http/http.rst:140
 msgid "Allow"
-msgstr ""
+msgstr "Allow"
 
 #: ../../source/network/http/http.rst:141
 msgid "对某网络资源的有效的请求行为，不允许则返回405"
-msgstr ""
+msgstr "Valid request methods for a network resource; returns 405 if not allowed"
 
 #: ../../source/network/http/http.rst:142
 msgid "Allow: GET, HEAD"
-msgstr ""
+msgstr "Allow: GET, HEAD"
 
 #: ../../source/network/http/http.rst:144
 msgid "告诉所有的缓存机制是否可以缓存及哪种类型"
-msgstr ""
+msgstr "Tells all caching mechanisms whether the response can be cached and in what way"
 
 #: ../../source/network/http/http.rst:145
 msgid "Cache-Control: no-cache"
-msgstr ""
+msgstr "Cache-Control: no-cache"
 
 #: ../../source/network/http/http.rst:146
 msgid "Content-Encoding"
-msgstr ""
+msgstr "Content-Encoding"
 
 #: ../../source/network/http/http.rst:147
 msgid "web服务器支持的返回内容压缩编码类型。"
-msgstr ""
+msgstr "Response content compression encoding types supported by the web server."
 
 #: ../../source/network/http/http.rst:148
 msgid "Content-Encoding: gzip"
-msgstr ""
+msgstr "Content-Encoding: gzip"
 
 #: ../../source/network/http/http.rst:149
 msgid "Content-Language"
-msgstr ""
+msgstr "Content-Language"
 
 #: ../../source/network/http/http.rst:150
 msgid "响应体的语言"
-msgstr ""
+msgstr "Language of the response body"
 
 #: ../../source/network/http/http.rst:151
 msgid "Content-Language: en,zh"
-msgstr ""
+msgstr "Content-Language: en,zh"
 
 #: ../../source/network/http/http.rst:153
 msgid "响应体的长度"
-msgstr ""
+msgstr "Length of the response body"
 
 #: ../../source/network/http/http.rst:155
 msgid "Content-Location"
-msgstr ""
+msgstr "Content-Location"
 
 #: ../../source/network/http/http.rst:156
 msgid "请求资源可替代的备用的另一地址"
-msgstr ""
+msgstr "An alternate location for the requested resource"
 
 #: ../../source/network/http/http.rst:157
 msgid "Content-Location: /index.htm"
-msgstr ""
+msgstr "Content-Location: /index.htm"
 
 #: ../../source/network/http/http.rst:158
 msgid "Content-MD5"
-msgstr ""
+msgstr "Content-MD5"
 
 #: ../../source/network/http/http.rst:159
 msgid "返回资源的MD5校验值"
-msgstr ""
+msgstr "MD5 checksum of the returned resource"
 
 #: ../../source/network/http/http.rst:160
 msgid "Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ=="
-msgstr ""
+msgstr "Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ=="
 
 #: ../../source/network/http/http.rst:161
 msgid "Content-Range"
-msgstr ""
+msgstr "Content-Range"
 
 #: ../../source/network/http/http.rst:162
 msgid "在整个返回体中本部分的字节位置"
-msgstr ""
+msgstr "Byte position of this part within the complete response body"
 
 #: ../../source/network/http/http.rst:163
 msgid "Content-Range: bytes 21010-47021/47022"
-msgstr ""
+msgstr "Content-Range: bytes 21010-47021/47022"
 
 #: ../../source/network/http/http.rst:165
 msgid "返回内容的MIME类型"
-msgstr ""
+msgstr "MIME type of the returned content"
 
 #: ../../source/network/http/http.rst:166
 msgid "Content-Type: text/html; charset=utf-8"
-msgstr ""
+msgstr "Content-Type: text/html; charset=utf-8"
 
 #: ../../source/network/http/http.rst:168
 msgid "原始服务器消息发出的时间"
-msgstr ""
+msgstr "Time when the origin server sent the message"
 
 #: ../../source/network/http/http.rst:170
 msgid "ETag"
-msgstr ""
+msgstr "ETag"
 
 #: ../../source/network/http/http.rst:171
 msgid "请求变量的实体标签的当前值"
-msgstr ""
+msgstr "Current value of the entity tag for the requested variant"
 
 #: ../../source/network/http/http.rst:172
 msgid "ETag: \"737060cd8c284d8af7ad3082f209582d\""
-msgstr ""
+msgstr "ETag: \"737060cd8c284d8af7ad3082f209582d\""
 
 #: ../../source/network/http/http.rst:173
 msgid "Expires"
-msgstr ""
+msgstr "Expires"
 
 #: ../../source/network/http/http.rst:174
 msgid "响应过期的日期和时间"
-msgstr ""
+msgstr "Date and time when the response expires"
 
 #: ../../source/network/http/http.rst:175
 msgid "Expires: Thu, 01 Dec 2010 16:00:00 GMT"
-msgstr ""
+msgstr "Expires: Thu, 01 Dec 2010 16:00:00 GMT"
 
 #: ../../source/network/http/http.rst:176
 msgid "Last-Modified"
-msgstr ""
+msgstr "Last-Modified"
 
 #: ../../source/network/http/http.rst:177
 msgid "请求资源的最后修改时间"
-msgstr ""
+msgstr "Last modification time of the requested resource"
 
 #: ../../source/network/http/http.rst:178
 msgid "Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT"
-msgstr ""
+msgstr "Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT"
 
 #: ../../source/network/http/http.rst:179
 msgid "Location"
-msgstr ""
+msgstr "Location"
 
 #: ../../source/network/http/http.rst:180
 msgid "用来重定向接收方到非请求URL的位置来完成请求或标识新的资源"
-msgstr ""
+msgstr "Redirects the recipient to a non-request URL to complete the request or identify a new resource"
 
 #: ../../source/network/http/http.rst:181
 msgid "Location: http://www.zcmhi.com/archives/94.html"
-msgstr ""
+msgstr "Location: http://www.zcmhi.com/archives/94.html"
 
 #: ../../source/network/http/http.rst:183
 msgid "包括实现特定的指令，它可应用到响应链上的任何接收方"
-msgstr ""
+msgstr "Contains implementation-specific directives that can apply to any recipient in the response chain"
 
 #: ../../source/network/http/http.rst:185
 msgid "Proxy-Authenticate"
-msgstr ""
+msgstr "Proxy-Authenticate"
 
 #: ../../source/network/http/http.rst:186
 msgid "它指出认证方案和可应用到代理的该URL上的参数"
-msgstr ""
+msgstr "Indicates the authentication scheme and parameters applicable to the proxy for this URL"
 
 #: ../../source/network/http/http.rst:187
 msgid "Proxy-Authenticate: Basic"
-msgstr ""
+msgstr "Proxy-Authenticate: Basic"
 
 #: ../../source/network/http/http.rst:188
 msgid "Refresh"
-msgstr ""
+msgstr "Refresh"
 
 #: ../../source/network/http/http.rst:189
 msgid "应用于重定向或一个新的资源被创造，在5秒之后重定向（由网景提出，被大部分浏览器支持）"
-msgstr ""
+msgstr "Used for redirection or after a new resource is created; redirects after 5 seconds (introduced by Netscape and supported by most browsers)"
 
 #: ../../source/network/http/http.rst:190
 msgid "Refresh: 5; url=http://www.zcmhi.com/archives/94.html"
-msgstr ""
+msgstr "Refresh: 5; url=http://www.zcmhi.com/archives/94.html"
 
 #: ../../source/network/http/http.rst:191
 msgid "Retry-After"
-msgstr ""
+msgstr "Retry-After"
 
 #: ../../source/network/http/http.rst:192
 msgid "如果实体暂时不可取，通知客户端在指定时间之后再次尝试"
-msgstr ""
+msgstr "If the entity is temporarily unavailable, tells the client to try again after the specified time"
 
 #: ../../source/network/http/http.rst:193
 msgid "Retry-After: 120"
-msgstr ""
+msgstr "Retry-After: 120"
 
 #: ../../source/network/http/http.rst:194
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: ../../source/network/http/http.rst:195
 msgid "web服务器软件名称"
-msgstr ""
+msgstr "Name of the web server software"
 
 #: ../../source/network/http/http.rst:196
 msgid "Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)"
-msgstr ""
+msgstr "Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)"
 
 #: ../../source/network/http/http.rst:197
 msgid "Set-Cookie"
-msgstr ""
+msgstr "Set-Cookie"
 
 #: ../../source/network/http/http.rst:198
 msgid "设置Http Cookie Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1"
-msgstr ""
+msgstr "Sets an HTTP Cookie. Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1"
 
 #: ../../source/network/http/http.rst:199
 msgid "Strict-Transport-Security"
-msgstr ""
+msgstr "Strict-Transport-Security"
 
 #: ../../source/network/http/http.rst:200
 msgid "设置浏览器强制使用HTTPS访问"
-msgstr ""
+msgstr "Configures the browser to enforce access over HTTPS"
 
 #: ../../source/network/http/http.rst:201
 msgid "max-age: x秒的时间内 访问对应域名都使用HTTPS请求"
-msgstr ""
+msgstr "max-age: for x seconds, use HTTPS requests when accessing the corresponding domain"
 
 #: ../../source/network/http/http.rst:202
 msgid "includeSubDomains: 网站的子域名也启用规则"
-msgstr ""
+msgstr "includeSubDomains: also applies the rule to the site's subdomains"
 
 #: ../../source/network/http/http.rst:203
 msgid "Strict-Transport-Security: max-age=1000; includeSubDomains"
-msgstr ""
+msgstr "Strict-Transport-Security: max-age=1000; includeSubDomains"
 
 #: ../../source/network/http/http.rst:204
 msgid "Trailer"
-msgstr ""
+msgstr "Trailer"
 
 #: ../../source/network/http/http.rst:205
 msgid "指出头域在分块传输编码的尾部存在 Trailer: Max-Forwards"
-msgstr ""
+msgstr "Indicates that the header field appears in the trailer of chunked transfer encoding. Trailer: Max-Forwards"
 
 #: ../../source/network/http/http.rst:206
 msgid "Transfer-Encoding"
-msgstr ""
+msgstr "Transfer-Encoding"
 
 #: ../../source/network/http/http.rst:207
 msgid "文件传输编码"
-msgstr ""
+msgstr "File transfer encoding"
 
 #: ../../source/network/http/http.rst:208
 msgid "Transfer-Encoding:chunked"
-msgstr ""
+msgstr "Transfer-Encoding:chunked"
 
 #: ../../source/network/http/http.rst:209
 msgid "Vary"
-msgstr ""
+msgstr "Vary"
 
 #: ../../source/network/http/http.rst:210
 msgid "告诉下游代理是使用缓存响应还是从原始服务器请求"
-msgstr ""
+msgstr "Tells downstream proxies whether to use a cached response or request from the origin server"
 
 #: ../../source/network/http/http.rst:211
 msgid "Vary: *"
-msgstr ""
+msgstr "Vary: *"
 
 #: ../../source/network/http/http.rst:213
 msgid "告知代理客户端响应是通过哪里发送的"
-msgstr ""
+msgstr "Tells proxies where the client response was sent through"
 
 #: ../../source/network/http/http.rst:216
 msgid "警告实体可能存在的问题"
-msgstr ""
+msgstr "Warns about possible problems with the entity"
 
 #: ../../source/network/http/http.rst:217
 msgid "Warning: 199 Miscellaneous warning"
-msgstr ""
+msgstr "Warning: 199 Miscellaneous warning"
 
 #: ../../source/network/http/http.rst:218
 msgid "WWW-Authenticate"
-msgstr ""
+msgstr "WWW-Authenticate"
 
 #: ../../source/network/http/http.rst:219
 msgid "表明客户端请求实体应该使用的授权方案"
-msgstr ""
+msgstr "Indicates the authorization scheme the client should use for the requested entity"
 
 #: ../../source/network/http/http.rst:220
 msgid "WWW-Authenticate: Basic"
-msgstr ""
+msgstr "WWW-Authenticate: Basic"
 
 #: ../../source/network/http/http.rst:221
 msgid "X-Content-Type-Options"
-msgstr ""
+msgstr "X-Content-Type-Options"
 
 #: ../../source/network/http/http.rst:222
 msgid "配置禁止MIME类型嗅探"
-msgstr ""
+msgstr "Configures MIME type sniffing prevention"
 
 #: ../../source/network/http/http.rst:223
 msgid "X-Content-Type-Options: nosniff"
-msgstr ""
+msgstr "X-Content-Type-Options: nosniff"
 
 #: ../../source/network/http/http.rst:224
 msgid "X-Frame-Options"
-msgstr ""
+msgstr "X-Frame-Options"
 
 #: ../../source/network/http/http.rst:225
 msgid "配置页面是否能出现在 <frame>, <iframe>, <embed>, <object> 等标签中，防止点击劫持"
-msgstr ""
+msgstr "Configures whether the page can appear in tags such as <frame>, <iframe>, <embed>, and <object> to prevent clickjacking"
 
 #: ../../source/network/http/http.rst:226
 msgid "X-Frame-Options: deny"
-msgstr ""
+msgstr "X-Frame-Options: deny"
 
 #: ../../source/network/http/http.rst:227
 msgid "X-XSS-Protection"
-msgstr ""
+msgstr "X-XSS-Protection"
 
 #: ../../source/network/http/http.rst:228
 msgid "配置XSS防护机制"
-msgstr ""
+msgstr "Configures the XSS protection mechanism"
 
 #: ../../source/network/http/http.rst:229
 msgid "X-XSS-Protection: 1; mode=block"
-msgstr ""
+msgstr "X-XSS-Protection: 1; mode=block"
 
 #: ../../source/network/http/http.rst:232
 msgid "HTTP状态返回代码 1xx（临时响应）"
-msgstr ""
+msgstr "HTTP Status Codes 1xx (Informational Responses)"
 
 #: ../../source/network/http/http.rst:233
 msgid "表示临时响应并需要请求者继续执行操作的状态代码。"
-msgstr ""
+msgstr "Status codes that indicate a temporary response and require the requester to continue the operation."
 
 #: ../../source/network/http/http.rst:236
 #: ../../source/network/http/http.rst:247
@@ -801,7 +801,7 @@ msgstr ""
 #: ../../source/network/http/http.rst:279
 #: ../../source/network/http/http.rst:305
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #: ../../source/network/http/http.rst:236
 #: ../../source/network/http/http.rst:247
@@ -809,7 +809,7 @@ msgstr ""
 #: ../../source/network/http/http.rst:279
 #: ../../source/network/http/http.rst:305
 msgid "代码"
-msgstr ""
+msgstr "Status"
 
 #: ../../source/network/http/http.rst:236
 #: ../../source/network/http/http.rst:247
@@ -817,501 +817,501 @@ msgstr ""
 #: ../../source/network/http/http.rst:279
 #: ../../source/network/http/http.rst:305
 msgid "说明"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/network/http/http.rst:238
 msgid "100"
-msgstr ""
+msgstr "100"
 
 #: ../../source/network/http/http.rst:238
 msgid "继续"
-msgstr ""
+msgstr "Continue"
 
 #: ../../source/network/http/http.rst:238
 msgid "服务器返回此代码表示已收到请求的第一部分，正在等待其余部分"
-msgstr ""
+msgstr "The server returns this code to indicate that it has received the first part of the request and is waiting for the rest"
 
 #: ../../source/network/http/http.rst:239
 msgid "101"
-msgstr ""
+msgstr "101"
 
 #: ../../source/network/http/http.rst:239
 msgid "切换协议"
-msgstr ""
+msgstr "Switching Protocols"
 
 #: ../../source/network/http/http.rst:239
 msgid "请求者已要求服务器切换协议，服务器已确认并准备切换"
-msgstr ""
+msgstr "The requester asked the server to switch protocols, and the server has confirmed and is ready to switch"
 
 #: ../../source/network/http/http.rst:243
 msgid "HTTP状态返回代码 2xx （成功）"
-msgstr ""
+msgstr "HTTP Status Codes 2xx (Success)"
 
 #: ../../source/network/http/http.rst:244
 msgid "表示成功处理了请求的状态代码。"
-msgstr ""
+msgstr "Status codes indicating that the request was processed successfully."
 
 #: ../../source/network/http/http.rst:249
 msgid "200"
-msgstr ""
+msgstr "200"
 
 #: ../../source/network/http/http.rst:249
 msgid "成功"
-msgstr ""
+msgstr "OK"
 
 #: ../../source/network/http/http.rst:249
 msgid "服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页"
-msgstr ""
+msgstr "The server successfully processed the request. Usually, this means the server provided the requested web page"
 
 #: ../../source/network/http/http.rst:250
 msgid "201"
-msgstr ""
+msgstr "201"
 
 #: ../../source/network/http/http.rst:250
 msgid "已创建"
-msgstr ""
+msgstr "Created"
 
 #: ../../source/network/http/http.rst:250
 msgid "请求成功并且服务器创建了新的资源"
-msgstr ""
+msgstr "The request succeeded and the server created a new resource"
 
 #: ../../source/network/http/http.rst:251
 msgid "202"
-msgstr ""
+msgstr "202"
 
 #: ../../source/network/http/http.rst:251
 msgid "已接受"
-msgstr ""
+msgstr "Accepted"
 
 #: ../../source/network/http/http.rst:251
 msgid "服务器已接受请求，但尚未处理"
-msgstr ""
+msgstr "The server accepted the request but has not processed it yet"
 
 #: ../../source/network/http/http.rst:252
 msgid "203"
-msgstr ""
+msgstr "203"
 
 #: ../../source/network/http/http.rst:252
 msgid "非授权信息"
-msgstr ""
+msgstr "Non-Authoritative Information"
 
 #: ../../source/network/http/http.rst:252
 msgid "服务器已成功处理了请求，但返回的信息可能来自另一来源"
-msgstr ""
+msgstr "The server successfully processed the request, but the returned information may come from another source"
 
 #: ../../source/network/http/http.rst:253
 msgid "204"
-msgstr ""
+msgstr "204"
 
 #: ../../source/network/http/http.rst:253
 msgid "无内容"
-msgstr ""
+msgstr "No Content"
 
 #: ../../source/network/http/http.rst:253
 msgid "服务器成功处理了请求，但没有返回任何内容"
-msgstr ""
+msgstr "The server successfully processed the request but returned no content"
 
 #: ../../source/network/http/http.rst:254
 msgid "205"
-msgstr ""
+msgstr "205"
 
 #: ../../source/network/http/http.rst:254
 msgid "重置内容"
-msgstr ""
+msgstr "Reset Content"
 
 #: ../../source/network/http/http.rst:254
 msgid "m服务器成功处理了请求，但没有返回任何内容"
-msgstr ""
+msgstr "The server successfully processed the request but returned no content"
 
 #: ../../source/network/http/http.rst:255
 msgid "206"
-msgstr ""
+msgstr "206"
 
 #: ../../source/network/http/http.rst:255
 msgid "部分内容"
-msgstr ""
+msgstr "Partial Content"
 
 #: ../../source/network/http/http.rst:255
 msgid "服务器成功处理了部分GET请求"
-msgstr ""
+msgstr "The server successfully processed a partial GET request"
 
 #: ../../source/network/http/http.rst:259
 msgid "HTTP状态返回代码 3xx （重定向）"
-msgstr ""
+msgstr "HTTP Status Codes 3xx (Redirection)"
 
 #: ../../source/network/http/http.rst:260
 msgid "表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。"
-msgstr ""
+msgstr "Status codes indicating that further action is required to complete the request. These status codes are usually used for redirection."
 
 #: ../../source/network/http/http.rst:265
 msgid "300"
-msgstr ""
+msgstr "300"
 
 #: ../../source/network/http/http.rst:265
 msgid "多种选择"
-msgstr ""
+msgstr "Multiple Choices"
 
 #: ../../source/network/http/http.rst:265
 msgid "针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。"
-msgstr ""
+msgstr "For the request, the server can perform multiple actions. The server may choose an action based on the requester (user agent), or provide a list of actions for the requester to choose from."
 
 #: ../../source/network/http/http.rst:266
 msgid "301"
-msgstr ""
+msgstr "301"
 
 #: ../../source/network/http/http.rst:266
 msgid "永久移动"
-msgstr ""
+msgstr "Moved Permanently"
 
 #: ../../source/network/http/http.rst:266
 msgid "请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。"
-msgstr ""
+msgstr "The requested web page has moved permanently to a new location. When the server returns this response to a GET or HEAD request, it automatically redirects the requester to the new location."
 
 #: ../../source/network/http/http.rst:267
 msgid "302"
-msgstr ""
+msgstr "302"
 
 #: ../../source/network/http/http.rst:267
 msgid "临时移动"
-msgstr ""
+msgstr "Found"
 
 #: ../../source/network/http/http.rst:267
 #: ../../source/network/http/http.rst:271
 msgid "服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。"
-msgstr ""
+msgstr "The server is currently responding to the request with a web page from a different location, but the requester should continue using the original location for future requests."
 
 #: ../../source/network/http/http.rst:268
 msgid "303"
-msgstr ""
+msgstr "303"
 
 #: ../../source/network/http/http.rst:268
 msgid "查看其他位置"
-msgstr ""
+msgstr "See Other"
 
 #: ../../source/network/http/http.rst:268
 msgid "请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。"
-msgstr ""
+msgstr "The server returns this code when the requester should use a separate GET request to retrieve the response from a different location."
 
 #: ../../source/network/http/http.rst:269
 msgid "304"
-msgstr ""
+msgstr "304"
 
 #: ../../source/network/http/http.rst:269
 msgid "未修改"
-msgstr ""
+msgstr "Not Modified"
 
 #: ../../source/network/http/http.rst:269
 msgid "自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。"
-msgstr ""
+msgstr "The requested web page has not been modified since the last request. When the server returns this response, it does not return the page content."
 
 #: ../../source/network/http/http.rst:270
 msgid "305"
-msgstr ""
+msgstr "305"
 
 #: ../../source/network/http/http.rst:270
 msgid "使用代理"
-msgstr ""
+msgstr "Use Proxy"
 
 #: ../../source/network/http/http.rst:270
 msgid "请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。"
-msgstr ""
+msgstr "The requester can access the requested web page only through a proxy. If the server returns this response, it also indicates that the requester should use a proxy."
 
 #: ../../source/network/http/http.rst:271
 msgid "307"
-msgstr ""
+msgstr "307"
 
 #: ../../source/network/http/http.rst:271
 msgid "临时重定向"
-msgstr ""
+msgstr "Temporary Redirect"
 
 #: ../../source/network/http/http.rst:275
 msgid "HTTP状态返回代码 4xx（请求错误）"
-msgstr ""
+msgstr "HTTP Status Codes 4xx (Request Errors)"
 
 #: ../../source/network/http/http.rst:276
 msgid "这些状态代码表示请求可能出错，妨碍了服务器的处理。"
-msgstr ""
+msgstr "These status codes indicate that the request may contain an error that prevents the server from processing it."
 
 #: ../../source/network/http/http.rst:281
 msgid "400"
-msgstr ""
+msgstr "400"
 
 #: ../../source/network/http/http.rst:281
 msgid "错误请求"
-msgstr ""
+msgstr "Bad Request"
 
 #: ../../source/network/http/http.rst:281
 msgid "服务器不理解请求的语法。"
-msgstr ""
+msgstr "The server does not understand the request syntax."
 
 #: ../../source/network/http/http.rst:282
 msgid "401"
-msgstr ""
+msgstr "401"
 
 #: ../../source/network/http/http.rst:282
 msgid "未授权"
-msgstr ""
+msgstr "Unauthorized"
 
 #: ../../source/network/http/http.rst:282
 msgid "请求要求身份验证。对于需要登录的网页，服务器可能返回此响应。"
-msgstr ""
+msgstr "The request requires authentication. For pages that require login, the server may return this response."
 
 #: ../../source/network/http/http.rst:283
 msgid "403"
-msgstr ""
+msgstr "403"
 
 #: ../../source/network/http/http.rst:283
 msgid "禁止"
-msgstr ""
+msgstr "Forbidden"
 
 #: ../../source/network/http/http.rst:283
 msgid "服务器拒绝请求。"
-msgstr ""
+msgstr "The server refused the request."
 
 #: ../../source/network/http/http.rst:284
 msgid "404"
-msgstr ""
+msgstr "404"
 
 #: ../../source/network/http/http.rst:284
 msgid "未找到"
-msgstr ""
+msgstr "Not Found"
 
 #: ../../source/network/http/http.rst:284
 msgid "服务器找不到请求的网页。"
-msgstr ""
+msgstr "The server cannot find the requested web page."
 
 #: ../../source/network/http/http.rst:285
 msgid "405"
-msgstr ""
+msgstr "405"
 
 #: ../../source/network/http/http.rst:285
 msgid "方法禁用"
-msgstr ""
+msgstr "Method Not Allowed"
 
 #: ../../source/network/http/http.rst:285
 msgid "禁用请求中指定的方法。"
-msgstr ""
+msgstr "The method specified in the request is disabled."
 
 #: ../../source/network/http/http.rst:286
 msgid "406"
-msgstr ""
+msgstr "406"
 
 #: ../../source/network/http/http.rst:286
 msgid "不接受"
-msgstr ""
+msgstr "Not Acceptable"
 
 #: ../../source/network/http/http.rst:286
 msgid "无法使用请求的内容特性响应请求的网页。"
-msgstr ""
+msgstr "The requested web page cannot be returned using the content characteristics requested."
 
 #: ../../source/network/http/http.rst:287
 msgid "407"
-msgstr ""
+msgstr "407"
 
 #: ../../source/network/http/http.rst:287
 msgid "需要代理授权"
-msgstr ""
+msgstr "Proxy Authentication Required"
 
 #: ../../source/network/http/http.rst:287
 msgid "此状态代码与 401（未授权）类似，但指定请求者应当授权使用代理。"
-msgstr ""
+msgstr "This status code is similar to 401 (Unauthorized), but specifies that the requester must authenticate with a proxy."
 
 #: ../../source/network/http/http.rst:288
 msgid "408"
-msgstr ""
+msgstr "408"
 
 #: ../../source/network/http/http.rst:288
 msgid "请求超时"
-msgstr ""
+msgstr "Request Timeout"
 
 #: ../../source/network/http/http.rst:288
 msgid "服务器等候请求时发生超时。"
-msgstr ""
+msgstr "The server timed out while waiting for the request."
 
 #: ../../source/network/http/http.rst:289
 msgid "409"
-msgstr ""
+msgstr "409"
 
 #: ../../source/network/http/http.rst:289
 msgid "冲突"
-msgstr ""
+msgstr "Conflict"
 
 #: ../../source/network/http/http.rst:289
 msgid "服务器在完成请求时发生冲突。 服务器必须在响应中包含有关冲突的信息。"
-msgstr ""
+msgstr "The server encountered a conflict while completing the request. The server must include information about the conflict in the response."
 
 #: ../../source/network/http/http.rst:290
 msgid "410"
-msgstr ""
+msgstr "410"
 
 #: ../../source/network/http/http.rst:290
 msgid "已删除"
-msgstr ""
+msgstr "Gone"
 
 #: ../../source/network/http/http.rst:290
 msgid "如果请求的资源已永久删除，服务器就会返回此响应。"
-msgstr ""
+msgstr "The server returns this response if the requested resource has been permanently deleted."
 
 #: ../../source/network/http/http.rst:291
 msgid "411"
-msgstr ""
+msgstr "411"
 
 #: ../../source/network/http/http.rst:291
 msgid "需要有效长度"
-msgstr ""
+msgstr "Length Required"
 
 #: ../../source/network/http/http.rst:291
 msgid "服务器不接受不含有效内容长度标头字段的请求。"
-msgstr ""
+msgstr "The server does not accept requests without a valid Content-Length header field."
 
 #: ../../source/network/http/http.rst:292
 msgid "412"
-msgstr ""
+msgstr "412"
 
 #: ../../source/network/http/http.rst:292
 msgid "未满足前提条件"
-msgstr ""
+msgstr "Precondition Failed"
 
 #: ../../source/network/http/http.rst:292
 msgid "服务器未满足请求者在请求中设置的其中一个前提条件。"
-msgstr ""
+msgstr "The server did not meet one of the preconditions set by the requester in the request."
 
 #: ../../source/network/http/http.rst:293
 msgid "413"
-msgstr ""
+msgstr "413"
 
 #: ../../source/network/http/http.rst:293
 msgid "请求实体过大"
-msgstr ""
+msgstr "Request Entity Too Large"
 
 #: ../../source/network/http/http.rst:293
 msgid "服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。"
-msgstr ""
+msgstr "The server cannot process the request because the request entity is too large and exceeds the server's processing capacity."
 
 #: ../../source/network/http/http.rst:294
 msgid "414"
-msgstr ""
+msgstr "414"
 
 #: ../../source/network/http/http.rst:294
 msgid "请求的 URI 过长"
-msgstr ""
+msgstr "Request URI Too Long"
 
 #: ../../source/network/http/http.rst:294
 msgid "请求的 URI（通常为网址）过长，服务器无法处理。"
-msgstr ""
+msgstr "The requested URI, usually a URL, is too long for the server to process."
 
 #: ../../source/network/http/http.rst:295
 msgid "415"
-msgstr ""
+msgstr "415"
 
 #: ../../source/network/http/http.rst:295
 msgid "不支持的媒体类型"
-msgstr ""
+msgstr "Unsupported Media Type"
 
 #: ../../source/network/http/http.rst:295
 msgid "请求的格式不受请求页面的支持。"
-msgstr ""
+msgstr "The request format is not supported by the requested page."
 
 #: ../../source/network/http/http.rst:296
 msgid "416"
-msgstr ""
+msgstr "416"
 
 #: ../../source/network/http/http.rst:296
 msgid "请求范围不符合要求"
-msgstr ""
+msgstr "Requested Range Not Satisfiable"
 
 #: ../../source/network/http/http.rst:296
 msgid "如果页面无法提供请求的范围，则服务器会返回此状态代码。"
-msgstr ""
+msgstr "The server returns this status code if the page cannot provide the requested range."
 
 #: ../../source/network/http/http.rst:297
 msgid "417"
-msgstr ""
+msgstr "417"
 
 #: ../../source/network/http/http.rst:297
 msgid "未满足期望值"
-msgstr ""
+msgstr "Expectation Failed"
 
 #: ../../source/network/http/http.rst:297
 msgid "服务器未满足\"期望\"请求标头字段的要求。"
-msgstr ""
+msgstr "The server did not meet the requirements of the \"Expect\" request header field."
 
 #: ../../source/network/http/http.rst:301
 msgid "HTTP状态返回代码 5xx（服务器错误）"
-msgstr ""
+msgstr "HTTP Status Codes 5xx (Server Errors)"
 
 #: ../../source/network/http/http.rst:302
 msgid "这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。"
-msgstr ""
+msgstr "These status codes indicate that the server encountered an internal error while trying to process the request. These errors may be server-side errors rather than request errors."
 
 #: ../../source/network/http/http.rst:307
 msgid "500"
-msgstr ""
+msgstr "500"
 
 #: ../../source/network/http/http.rst:307
 msgid "服务器内部错误"
-msgstr ""
+msgstr "Internal Server Error"
 
 #: ../../source/network/http/http.rst:307
 msgid "服务器遇到错误，无法完成请求。"
-msgstr ""
+msgstr "The server encountered an error and could not complete the request."
 
 #: ../../source/network/http/http.rst:308
 msgid "501"
-msgstr ""
+msgstr "501"
 
 #: ../../source/network/http/http.rst:308
 msgid "尚未实施"
-msgstr ""
+msgstr "Not Implemented"
 
 #: ../../source/network/http/http.rst:308
 msgid "服务器不具备完成请求的功能。例如，服务器无法识别请求方法时可能会返回此代码。"
-msgstr ""
+msgstr "The server does not have the functionality required to complete the request. For example, it may return this code when it cannot recognize the request method."
 
 #: ../../source/network/http/http.rst:309
 msgid "502"
-msgstr ""
+msgstr "502"
 
 #: ../../source/network/http/http.rst:309
 msgid "错误网关"
-msgstr ""
+msgstr "Bad Gateway"
 
 #: ../../source/network/http/http.rst:309
 msgid "服务器作为网关或代理，从上游服务器收到无效响应。"
-msgstr ""
+msgstr "The server, acting as a gateway or proxy, received an invalid response from an upstream server."
 
 #: ../../source/network/http/http.rst:310
 msgid "503"
-msgstr ""
+msgstr "503"
 
 #: ../../source/network/http/http.rst:310
 msgid "服务不可用"
-msgstr ""
+msgstr "Service Unavailable"
 
 #: ../../source/network/http/http.rst:310
 msgid "服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。"
-msgstr ""
+msgstr "The server is currently unavailable because it is overloaded or down for maintenance. Usually, this is only temporary."
 
 #: ../../source/network/http/http.rst:311
 msgid "504"
-msgstr ""
+msgstr "504"
 
 #: ../../source/network/http/http.rst:311
 msgid "网关超时"
-msgstr ""
+msgstr "Gateway Timeout"
 
 #: ../../source/network/http/http.rst:311
 msgid "服务器作为网关或代理，但是没有及时从上游服务器收到请求。"
-msgstr ""
+msgstr "The server, acting as a gateway or proxy, did not receive a timely response from the upstream server."
 
 #: ../../source/network/http/http.rst:312
 msgid "505"
-msgstr ""
+msgstr "505"
 
 #: ../../source/network/http/http.rst:312
 msgid "HTTP 版本不受支持"
-msgstr ""
+msgstr "HTTP Version Not Supported"
 
 #: ../../source/network/http/http.rst:312
 msgid "服务器不支持请求中所用的 HTTP 协议版本。"
-msgstr ""
+msgstr "The server does not support the HTTP protocol version used in the request."
