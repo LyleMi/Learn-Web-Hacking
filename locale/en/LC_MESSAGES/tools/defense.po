@@ -20,41 +20,47 @@ msgstr ""
 
 #: ../../source/tools/defense.rst:2
 msgid "防御"
-msgstr ""
+msgstr "Defense"
 
 #: ../../source/tools/defense.rst:5
 msgid "日志检查"
-msgstr ""
+msgstr "Log Review"
 
 #: ../../source/tools/defense.rst:6
 msgid "`Sysmon <https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon>`_"
-msgstr ""
+msgstr "`Sysmon <https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon>`_"
 
 #: ../../source/tools/defense.rst:7
 msgid ""
 "`LastActivityView "
 "<http://www.nirsoft.net/utils/computer_activity_view.html>`_"
 msgstr ""
+"`LastActivityView "
+"<http://www.nirsoft.net/utils/computer_activity_view.html>`_"
 
 #: ../../source/tools/defense.rst:8
 msgid "`Regshot <https://sourceforge.net/projects/regshot/>`_"
-msgstr ""
+msgstr "`Regshot <https://sourceforge.net/projects/regshot/>`_"
 
 #: ../../source/tools/defense.rst:9
 msgid ""
 "`teler <https://github.com/kitabisa/teler>`_ Real-time HTTP Intrusion "
 "Detection"
 msgstr ""
+"`teler <https://github.com/kitabisa/teler>`_ Real-time HTTP intrusion "
+"detection"
 
 #: ../../source/tools/defense.rst:12
 msgid "终端监控"
-msgstr ""
+msgstr "Endpoint Monitoring"
 
 #: ../../source/tools/defense.rst:13
 msgid ""
 "`attack monitor <https://github.com/yarox24/attack_monitor>`_ Endpoint "
 "detection & Malware analysis software"
 msgstr ""
+"`attack monitor <https://github.com/yarox24/attack_monitor>`_ endpoint "
+"detection and malware analysis software"
 
 #: ../../source/tools/defense.rst:14
 msgid ""
@@ -62,44 +68,53 @@ msgid ""
 "Project is an open-source blue team tool designed to protect Linux and "
 "Windows operating systems through multiple methods."
 msgstr ""
+"`artillery <https://github.com/BinaryDefense/artillery>`_ The Artillery "
+"Project is an open-source blue-team tool designed to protect Linux and "
+"Windows operating systems through multiple methods."
 
 #: ../../source/tools/defense.rst:15
 msgid ""
 "`yurita <https://github.com/paypal/yurita>`_ Anomaly detection framework "
 "@ PayPal"
 msgstr ""
+"`yurita <https://github.com/paypal/yurita>`_ anomaly detection framework "
+"@ PayPal"
 
 #: ../../source/tools/defense.rst:16
 msgid ""
 "`crowdsec <https://github.com/crowdsecurity/crowdsec>`_ An open-source, "
 "lightweight agent to detect and respond to bad behaviours"
 msgstr ""
+"`crowdsec <https://github.com/crowdsecurity/crowdsec>`_ an open-source, "
+"lightweight agent for detecting and responding to malicious behavior"
 
 #: ../../source/tools/defense.rst:17
 msgid ""
 "`tracee <https://github.com/aquasecurity/tracee>`_ Linux Runtime Security"
 " and Forensics using eBPF"
 msgstr ""
+"`tracee <https://github.com/aquasecurity/tracee>`_ Linux runtime security"
+" and forensics using eBPF"
 
 #: ../../source/tools/defense.rst:20
 msgid "XSS防护"
-msgstr ""
+msgstr "XSS Protection"
 
 #: ../../source/tools/defense.rst:21
 msgid "`js xss <https://github.com/leizongmin/js-xss>`_"
-msgstr ""
+msgstr "`js xss <https://github.com/leizongmin/js-xss>`_"
 
 #: ../../source/tools/defense.rst:22
 msgid "`DOMPurify <https://github.com/cure53/DOMPurify>`_"
-msgstr ""
+msgstr "`DOMPurify <https://github.com/cure53/DOMPurify>`_"
 
 #: ../../source/tools/defense.rst:23
 msgid "`google csp evaluator <https://csp-evaluator.withgoogle.com/>`_"
-msgstr ""
+msgstr "`google csp evaluator <https://csp-evaluator.withgoogle.com/>`_"
 
 #: ../../source/tools/defense.rst:26
 msgid "配置检查"
-msgstr ""
+msgstr "Configuration Review"
 
 #: ../../source/tools/defense.rst:27
 msgid ""
@@ -107,56 +122,65 @@ msgid ""
 "<https://github.com/microsoft/AttackSurfaceAnalyzer>`_ analyze operating "
 "system's security configuration for changes during software installation."
 msgstr ""
+"`Attack Surface Analyzer "
+"<https://github.com/microsoft/AttackSurfaceAnalyzer>`_ analyzes operating "
+"system security configuration changes during software installation."
 
 #: ../../source/tools/defense.rst:28
 msgid "`gixy <https://github.com/yandex/gixy>`_ Nginx 配置检查工具"
-msgstr ""
+msgstr "`gixy <https://github.com/yandex/gixy>`_ Nginx configuration checker"
 
 #: ../../source/tools/defense.rst:29
 msgid ""
 "`dockerscan <https://github.com/cr0hn/dockerscan>`_ Docker security "
 "analysis & hacking tools"
 msgstr ""
+"`dockerscan <https://github.com/cr0hn/dockerscan>`_ Docker security "
+"analysis and hacking tools"
 
 #: ../../source/tools/defense.rst:32
 msgid "安全检查"
-msgstr ""
+msgstr "Security Checks"
 
 #: ../../source/tools/defense.rst:33
 msgid ""
 "`lynis <https://github.com/CISOfy/lynis>`_ Security auditing tool for "
 "Linux, macOS, and UNIX-based systems"
 msgstr ""
+"`lynis <https://github.com/CISOfy/lynis>`_ security auditing tool for "
+"Linux, macOS, and UNIX-based systems"
 
 #: ../../source/tools/defense.rst:34
 msgid "`linux malware detect <https://github.com/rfxn/linux-malware-detect>`_"
-msgstr ""
+msgstr "`linux malware detect <https://github.com/rfxn/linux-malware-detect>`_"
 
 #: ../../source/tools/defense.rst:37
 msgid "IDS"
-msgstr ""
+msgstr "IDS"
 
 #: ../../source/tools/defense.rst:38
 msgid "`ossec <https://github.com/ossec/ossec-hids>`_"
-msgstr ""
+msgstr "`ossec <https://github.com/ossec/ossec-hids>`_"
 
 #: ../../source/tools/defense.rst:39
 msgid "`yulong <https://github.com/ysrc/yulong-hids>`_"
-msgstr ""
+msgstr "`yulong <https://github.com/ysrc/yulong-hids>`_"
 
 #: ../../source/tools/defense.rst:40
 msgid "`AgentSmith <https://github.com/DianrongSecurity/AgentSmith-HIDS>`_"
-msgstr ""
+msgstr "`AgentSmith <https://github.com/DianrongSecurity/AgentSmith-HIDS>`_"
 
 #: ../../source/tools/defense.rst:41
 msgid ""
 "`ByteDance HIDS  <https://github.com/bytedance/ByteDance-HIDS>`_ Cloud-"
 "Native Host-Based Intrusion Detection"
 msgstr ""
+"`ByteDance HIDS  <https://github.com/bytedance/ByteDance-HIDS>`_ cloud-"
+"native host-based intrusion detection"
 
 #: ../../source/tools/defense.rst:44
 msgid "RASP"
-msgstr ""
+msgstr "RASP"
 
 #: ../../source/tools/defense.rst:45
 msgid ""
@@ -164,46 +188,53 @@ msgid ""
 "Intrusion Detection solution project to provide next-generation Threat "
 "Detection and Behavior Audition with modern architecture"
 msgstr ""
+"`Elkeid <https://github.com/bytedance/Elkeid>`_ cloud-native host-based "
+"intrusion detection solution for next-generation threat detection and "
+"behavior auditing with a modern architecture"
 
 #: ../../source/tools/defense.rst:46
 msgid "`openrasp <https://github.com/baidu-security/openrasp-iast>`_ IAST 灰盒扫描工具"
-msgstr ""
+msgstr "`openrasp <https://github.com/baidu-security/openrasp-iast>`_ IAST gray-box scanner"
 
 #: ../../source/tools/defense.rst:49
 msgid "SIEM"
-msgstr ""
+msgstr "SIEM"
 
 #: ../../source/tools/defense.rst:50
 msgid ""
 "`panther <https://github.com/panther-labs/panther>`_ Detect threats with "
 "log data and improve cloud security posture"
 msgstr ""
+"`panther <https://github.com/panther-labs/panther>`_ detects threats from"
+" log data and improves cloud security posture"
 
 #: ../../source/tools/defense.rst:53
 msgid "威胁情报"
-msgstr ""
+msgstr "Threat Intelligence"
 
 #: ../../source/tools/defense.rst:54
 msgid "`threatfeeds <https://threatfeeds.io/>`_"
-msgstr ""
+msgstr "`threatfeeds <https://threatfeeds.io/>`_"
 
 #: ../../source/tools/defense.rst:55
 msgid "`abuseipdb <https://www.abuseipdb.com/>`_"
-msgstr ""
+msgstr "`abuseipdb <https://www.abuseipdb.com/>`_"
 
 #: ../../source/tools/defense.rst:58
 msgid "APT"
-msgstr ""
+msgstr "APT"
 
 #: ../../source/tools/defense.rst:59
 msgid ""
 "`APT Groups and Operations "
 "<https://docs.google.com/spreadsheets/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml>`_"
 msgstr ""
+"`APT Groups and Operations "
+"<https://docs.google.com/spreadsheets/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml>`_"
 
 #: ../../source/tools/defense.rst:60
 msgid "`APTnotes <https://github.com/kbandla/APTnotes>`_"
-msgstr ""
+msgstr "`APTnotes <https://github.com/kbandla/APTnotes>`_"
 
 #: ../../source/tools/defense.rst:61
 msgid ""
@@ -212,140 +243,153 @@ msgid ""
 "detect APT movements hidden in the sea of windows event logs to decrease "
 "the time to uncover suspicious activity"
 msgstr ""
+"`APT Hunter <https://github.com/ahmedkhlief/APT-Hunter>`_ threat-hunting "
+"tool for Windows event logs, built with a purple-team mindset to detect "
+"APT activity hidden in large volumes of logs and reduce investigation time"
 
 #: ../../source/tools/defense.rst:64
 msgid "入侵检查"
-msgstr ""
+msgstr "Compromise Inspection"
 
 #: ../../source/tools/defense.rst:65
 msgid "`huorong <https://www.huorong.cn/>`_"
-msgstr ""
+msgstr "`huorong <https://www.huorong.cn/>`_"
 
 #: ../../source/tools/defense.rst:66
 msgid "`check rootkit <http://www.chkrootkit.org>`_"
-msgstr ""
+msgstr "`check rootkit <http://www.chkrootkit.org>`_"
 
 #: ../../source/tools/defense.rst:67
 msgid "`rootkit hunter <http://rkhunter.sourceforge.net/>`_"
-msgstr ""
+msgstr "`rootkit hunter <http://rkhunter.sourceforge.net/>`_"
 
 #: ../../source/tools/defense.rst:68
 msgid "`PC Hunter <http://www.xuetr.com/>`_"
-msgstr ""
+msgstr "`PC Hunter <http://www.xuetr.com/>`_"
 
 #: ../../source/tools/defense.rst:69
 msgid ""
 "`autoruns <https://docs.microsoft.com/en-"
 "us/sysinternals/downloads/autoruns>`_"
 msgstr ""
+"`autoruns <https://docs.microsoft.com/en-"
+"us/sysinternals/downloads/autoruns>`_"
 
 #: ../../source/tools/defense.rst:72
 msgid "进程查看"
-msgstr ""
+msgstr "Process Inspection"
 
 #: ../../source/tools/defense.rst:73
 msgid ""
 "`Process Explorer <https://docs.microsoft.com/zh-"
 "cn/sysinternals/downloads/process-explorer>`_"
 msgstr ""
+"`Process Explorer <https://docs.microsoft.com/zh-"
+"cn/sysinternals/downloads/process-explorer>`_"
 
 #: ../../source/tools/defense.rst:74
 msgid "`ProcessHacker <https://processhacker.sourceforge.io/>`_"
-msgstr ""
+msgstr "`ProcessHacker <https://processhacker.sourceforge.io/>`_"
 
 #: ../../source/tools/defense.rst:77
 msgid "Waf"
-msgstr ""
+msgstr "WAF"
 
 #: ../../source/tools/defense.rst:78
 msgid "`naxsi <https://github.com/nbs-system/naxsi>`_"
-msgstr ""
+msgstr "`naxsi <https://github.com/nbs-system/naxsi>`_"
 
 #: ../../source/tools/defense.rst:79
 msgid "`ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_"
-msgstr ""
+msgstr "`ModSecurity <https://github.com/SpiderLabs/ModSecurity>`_"
 
 #: ../../source/tools/defense.rst:80
 msgid "`ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_"
-msgstr ""
+msgstr "`ngx_lua_waf <https://github.com/loveshell/ngx_lua_waf>`_"
 
 #: ../../source/tools/defense.rst:81
 msgid "`OpenWAF <https://github.com/titansec/OpenWAF>`_"
-msgstr ""
+msgstr "`OpenWAF <https://github.com/titansec/OpenWAF>`_"
 
 #: ../../source/tools/defense.rst:84
 msgid "病毒在线查杀"
-msgstr ""
+msgstr "Online Virus Scanning"
 
 #: ../../source/tools/defense.rst:85
 msgid "`virustotal <https://www.virustotal.com/>`_"
-msgstr ""
+msgstr "`virustotal <https://www.virustotal.com/>`_"
 
 #: ../../source/tools/defense.rst:86
 msgid "`virscan <http://www.virscan.org>`_"
-msgstr ""
+msgstr "`virscan <http://www.virscan.org>`_"
 
 #: ../../source/tools/defense.rst:87
 msgid "`habo <https://habo.qq.com>`_"
-msgstr ""
+msgstr "`habo <https://habo.qq.com>`_"
 
 #: ../../source/tools/defense.rst:90
 msgid "WebShell查杀"
-msgstr ""
+msgstr "WebShell Scanning"
 
 #: ../../source/tools/defense.rst:91
 msgid "`D盾 <http://www.d99net.net/index.asp>`_"
-msgstr ""
+msgstr "`D Shield <http://www.d99net.net/index.asp>`_"
 
 #: ../../source/tools/defense.rst:92
 msgid "`深信服WebShell查杀 <http://edr.sangfor.com.cn/backdoor_detection.html>`_"
-msgstr ""
+msgstr "`Sangfor WebShell Scanner <http://edr.sangfor.com.cn/backdoor_detection.html>`_"
 
 #: ../../source/tools/defense.rst:93
 msgid "`php malware finder <https://github.com/nbs-system/php-malware-finder>`_"
-msgstr ""
+msgstr "`php malware finder <https://github.com/nbs-system/php-malware-finder>`_"
 
 #: ../../source/tools/defense.rst:96
 msgid "规则 / IoC"
-msgstr ""
+msgstr "Rules / IoC"
 
 #: ../../source/tools/defense.rst:97
 msgid "`malware ioc <https://github.com/eset/malware-ioc>`_"
-msgstr ""
+msgstr "`malware ioc <https://github.com/eset/malware-ioc>`_"
 
 #: ../../source/tools/defense.rst:98
 msgid "`fireeye public iocs <https://github.com/fireeye/iocs>`_"
-msgstr ""
+msgstr "`fireeye public iocs <https://github.com/fireeye/iocs>`_"
 
 #: ../../source/tools/defense.rst:99
 msgid "`signature base <https://github.com/Neo23x0/signature-base>`_"
-msgstr ""
+msgstr "`signature base <https://github.com/Neo23x0/signature-base>`_"
 
 #: ../../source/tools/defense.rst:100
 msgid "`yara rules <https://github.com/Yara-Rules/rules>`_"
-msgstr ""
+msgstr "`yara rules <https://github.com/Yara-Rules/rules>`_"
 
 #: ../../source/tools/defense.rst:101
 msgid ""
 "`capa rules <https://github.com/fireeye/capa-rules>`_ standard collection"
 " of rules for capa"
 msgstr ""
+"`capa rules <https://github.com/fireeye/capa-rules>`_ standard collection"
+" of rules for capa"
 
 #: ../../source/tools/defense.rst:102
 msgid ""
 "`AttackDetection <https://github.com/ptresearch/AttackDetection>`_ "
 "Suricata PT Open Ruleset"
 msgstr ""
+"`AttackDetection <https://github.com/ptresearch/AttackDetection>`_ "
+"Suricata PT Open Ruleset"
 
 #: ../../source/tools/defense.rst:103
 msgid ""
 "`DailyIOC <https://github.com/StrangerealIntel/DailyIOC>`_ IOC from "
 "articles, tweets for archives"
 msgstr ""
+"`DailyIOC <https://github.com/StrangerealIntel/DailyIOC>`_ IOCs collected"
+" from articles and tweets for archival use"
 
 #: ../../source/tools/defense.rst:106
 msgid "威胁检测"
-msgstr ""
+msgstr "Threat Detection"
 
 #: ../../source/tools/defense.rst:107
 msgid ""
@@ -353,22 +397,25 @@ msgid ""
 "threat intelligence framework to identify threats and malicious web "
 "traffic on the basis of IP reputation and historical data"
 msgstr ""
+"`ARTIF <https://github.com/CRED-CLUB/ARTIF>`_ an advanced real-time "
+"threat intelligence framework that identifies threats and malicious web "
+"traffic using IP reputation and historical data"
 
 #: ../../source/tools/defense.rst:110
 msgid "Security Advisories"
-msgstr ""
+msgstr "Security Advisories"
 
 #: ../../source/tools/defense.rst:111
 msgid "`Apache httpd Security Advisories  <https://httpd.apache.org/security/>`_"
-msgstr ""
+msgstr "`Apache httpd Security Advisories  <https://httpd.apache.org/security/>`_"
 
 #: ../../source/tools/defense.rst:112
 msgid "`Apache Solr <https://lucene.apache.org/solr/security.html>`_"
-msgstr ""
+msgstr "`Apache Solr <https://lucene.apache.org/solr/security.html>`_"
 
 #: ../../source/tools/defense.rst:113
 msgid "`Apache Tomcat <https://tomcat.apache.org/security-8.html>`_"
-msgstr ""
+msgstr "`Apache Tomcat <https://tomcat.apache.org/security-8.html>`_"
 
 #: ../../source/tools/defense.rst:114
 msgid ""
@@ -376,77 +423,94 @@ msgid ""
 "<https://www.eclipse.org/jetty/documentation/current/security-"
 "reports.html>`_"
 msgstr ""
+"`Jetty Security Reports "
+"<https://www.eclipse.org/jetty/documentation/current/security-"
+"reports.html>`_"
 
 #: ../../source/tools/defense.rst:115
 msgid ""
 "`Nginx Security Advisories "
 "<http://nginx.org/en/security_advisories.html>`_"
 msgstr ""
+"`Nginx Security Advisories "
+"<http://nginx.org/en/security_advisories.html>`_"
 
 #: ../../source/tools/defense.rst:116
 msgid "`OpenSSL <https://www.openssl.org/news/vulnerabilities.html>`_"
-msgstr ""
+msgstr "`OpenSSL <https://www.openssl.org/news/vulnerabilities.html>`_"
 
 #: ../../source/tools/defense.rst:119
 msgid "Security Tracker"
-msgstr ""
+msgstr "Security Tracker"
 
 #: ../../source/tools/defense.rst:120
 msgid ""
 "`Nginx Security Tracker <https://security-tracker.debian.org/tracker"
 "/source-package/nginx>`_"
 msgstr ""
+"`Nginx Security Tracker <https://security-tracker.debian.org/tracker"
+"/source-package/nginx>`_"
 
 #: ../../source/tools/defense.rst:123
 msgid "匹配工具"
-msgstr ""
+msgstr "Matching Tools"
 
 #: ../../source/tools/defense.rst:124
 msgid ""
 "`yara <https://github.com/VirusTotal/yara>`_ The pattern matching swiss "
 "knife"
 msgstr ""
+"`yara <https://github.com/VirusTotal/yara>`_ the pattern-matching Swiss "
+"army knife"
 
 #: ../../source/tools/defense.rst:125
 msgid ""
 "`capa <https://github.com/fireeye/capa>`_ The FLARE team's open-source "
 "tool to identify capabilities in executable files."
 msgstr ""
+"`capa <https://github.com/fireeye/capa>`_ the FLARE team's open-source "
+"tool for identifying capabilities in executable files"
 
 #: ../../source/tools/defense.rst:128
 msgid "DoS防护"
-msgstr ""
+msgstr "DoS Protection"
 
 #: ../../source/tools/defense.rst:129
 msgid ""
 "`Gatekeeper <https://github.com/AltraMayor/gatekeeper>`_` open-source "
 "DDoS protection system"
 msgstr ""
+"`Gatekeeper <https://github.com/AltraMayor/gatekeeper>`_` open-source "
+"DDoS protection system"
 
 #: ../../source/tools/defense.rst:132
 msgid "对手模拟 / 攻击模拟"
-msgstr ""
+msgstr "Adversary Simulation / Attack Simulation"
 
 #: ../../source/tools/defense.rst:133
 msgid ""
 "`sliver <https://github.com/BishopFox/sliver>`_ Adversary Simulation "
 "Framework"
 msgstr ""
+"`sliver <https://github.com/BishopFox/sliver>`_ adversary simulation "
+"framework"
 
 #: ../../source/tools/defense.rst:134
 msgid ""
 "`caldera <https://github.com/mitre/caldera>`_ Automated Adversary "
 "Emulation Platform"
 msgstr ""
+"`caldera <https://github.com/mitre/caldera>`_ automated adversary "
+"emulation platform"
 
 #: ../../source/tools/defense.rst:135
 msgid "`DumpsterFire <https://github.com/TryCatchHCF/DumpsterFire>`_"
-msgstr ""
+msgstr "`DumpsterFire <https://github.com/TryCatchHCF/DumpsterFire>`_"
 
 #: ../../source/tools/defense.rst:138
 msgid "入侵防护"
-msgstr ""
+msgstr "Intrusion Prevention"
 
 #: ../../source/tools/defense.rst:139
 msgid "`fail2ban <https://github.com/fail2ban/fail2ban>`_"
-msgstr ""
+msgstr "`fail2ban <https://github.com/fail2ban/fail2ban>`_"

@@ -20,48 +20,54 @@ msgstr ""
 
 #: ../../source/tools/ospersistence.rst:2
 msgid "操作系统持久化"
-msgstr ""
+msgstr "Operating System Persistence"
 
 #: ../../source/tools/ospersistence.rst:5
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../source/tools/ospersistence.rst:8
 #: ../../source/tools/ospersistence.rst:90
 msgid "凭证获取"
-msgstr ""
+msgstr "Credential Access"
 
 #: ../../source/tools/ospersistence.rst:9
 msgid "`mimikatz <https://github.com/gentilkiwi/mimikatz>`_"
-msgstr ""
+msgstr "`mimikatz <https://github.com/gentilkiwi/mimikatz>`_"
 
 #: ../../source/tools/ospersistence.rst:10
 msgid ""
 "`RdpThief <https://github.com/0x09AL/RdpThief>`_ Extracting Clear Text "
 "Passwords from mstsc.exe using API Hooking"
 msgstr ""
+"`RdpThief <https://github.com/0x09AL/RdpThief>`_ extracts clear-text "
+"passwords from mstsc.exe using API hooking"
 
 #: ../../source/tools/ospersistence.rst:11
 msgid ""
 "`quarkspwdump <https://github.com/quarkslab/quarkspwdump>`_ Dump various "
 "types of Windows credentials without injecting in any process"
 msgstr ""
+"`quarkspwdump <https://github.com/quarkslab/quarkspwdump>`_ dumps various"
+" types of Windows credentials without injecting into any process"
 
 #: ../../source/tools/ospersistence.rst:12
 msgid ""
 "`SharpDump <https://github.com/GhostPack/SharpDump>`_ C# port of "
 "PowerSploit's Out-Minidump.ps1 functionality"
 msgstr ""
+"`SharpDump <https://github.com/GhostPack/SharpDump>`_ C# port of "
+"PowerSploit's Out-Minidump.ps1 functionality"
 
 #: ../../source/tools/ospersistence.rst:15
 #: ../../source/tools/ospersistence.rst:70
 #: ../../source/tools/ospersistence.rst:97
 msgid "权限提升"
-msgstr ""
+msgstr "Privilege Escalation"
 
 #: ../../source/tools/ospersistence.rst:16
 msgid "`WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_"
-msgstr ""
+msgstr "`WindowsExploits <https://github.com/abatchy17/WindowsExploits>`_"
 
 #: ../../source/tools/ospersistence.rst:17
 msgid ""
@@ -69,55 +75,70 @@ msgid ""
 " of Unix binaries that can be exploited to bypass system security "
 "restrictions"
 msgstr ""
+"`GTFOBins <https://github.com/GTFOBins/GTFOBins.github.io>`_ curated list"
+" of Unix binaries that can be abused to bypass system security "
+"restrictions"
 
 #: ../../source/tools/ospersistence.rst:18
 msgid ""
 "`JAWS <https://github.com/411Hall/JAWS>`_ Just Another Windows (Enum) "
 "Script"
 msgstr ""
+"`JAWS <https://github.com/411Hall/JAWS>`_ Just Another Windows (Enum) "
+"Script"
 
 #: ../../source/tools/ospersistence.rst:21
 msgid "UAC Bypass"
-msgstr ""
+msgstr "UAC Bypass"
 
 #: ../../source/tools/ospersistence.rst:22
 msgid ""
 "`WinPwnage <https://github.com/rootm0s/WinPwnage>`_ UAC bypass, Elevate, "
 "Persistence and Execution methods"
 msgstr ""
+"`WinPwnage <https://github.com/rootm0s/WinPwnage>`_ UAC bypass, "
+"elevation, persistence, and execution methods"
 
 #: ../../source/tools/ospersistence.rst:23
 msgid ""
 "`UACME <https://github.com/hfiref0x/UACME>`_ Defeating Windows User "
 "Account Control"
 msgstr ""
+"`UACME <https://github.com/hfiref0x/UACME>`_ defeating Windows User "
+"Account Control"
 
 #: ../../source/tools/ospersistence.rst:24
 msgid ""
 "`UAC Bypass In The Wild "
 "<https://github.com/sailay1996/UAC_Bypass_In_The_Wild>`_"
 msgstr ""
+"`UAC Bypass In The Wild "
+"<https://github.com/sailay1996/UAC_Bypass_In_The_Wild>`_"
 
 #: ../../source/tools/ospersistence.rst:27
 msgid "免杀"
-msgstr ""
+msgstr "AV Evasion"
 
 #: ../../source/tools/ospersistence.rst:28
 msgid ""
 "`SigThief <https://github.com/secretsquirrel/SigThief>`_ Stealing "
 "Signatures and Making One Invalid Signature at a Time"
 msgstr ""
+"`SigThief <https://github.com/secretsquirrel/SigThief>`_ steals "
+"signatures and makes one invalid signature at a time"
 
 #: ../../source/tools/ospersistence.rst:31
 #: ../../source/tools/ospersistence.rst:105
 msgid "C2"
-msgstr ""
+msgstr "C2"
 
 #: ../../source/tools/ospersistence.rst:32
 msgid ""
 "`SharpSploit <https://github.com/cobbr/SharpSploit>`_ .NET post-"
 "exploitation library written in C#"
 msgstr ""
+"`SharpSploit <https://github.com/cobbr/SharpSploit>`_ .NET post-"
+"exploitation library written in C#"
 
 #: ../../source/tools/ospersistence.rst:33
 msgid ""
@@ -125,12 +146,18 @@ msgid ""
 "用.net重写了CobaltStrike "
 "stager及Beacon，其中包括正常上线、文件管理、进程管理、令牌管理、结合SysCall进行注入、原生端口转发、关ETW等一系列功能"
 msgstr ""
+"`SharpBeacon <https://github.com/mai1zhi2/SharpBeacon>`_ rewrites the "
+"CobaltStrike stager and Beacon in .NET, with check-in, file management, "
+"process management, token management, SysCall-based injection, native port"
+" forwarding, ETW disabling, and related features"
 
 #: ../../source/tools/ospersistence.rst:34
 msgid ""
 "`Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-"
 "exploitation rootkit"
 msgstr ""
+"`Koadic <https://github.com/zerosum0x0/koadic>`_ is a Windows post-"
+"exploitation rootkit"
 
 #: ../../source/tools/ospersistence.rst:35
 msgid ""
@@ -138,22 +165,28 @@ msgid ""
 "framework used to aid red teamers with post-exploitation and lateral "
 "movement"
 msgstr ""
+"`PoshC2 <https://github.com/nettitude/PoshC2>`_ proxy-aware C2 framework "
+"for red-team post-exploitation and lateral movement"
 
 #: ../../source/tools/ospersistence.rst:38
 msgid "隐藏"
-msgstr ""
+msgstr "Hiding"
 
 #: ../../source/tools/ospersistence.rst:39
 msgid ""
 "`ProcessHider <https://github.com/M00nRise/ProcessHider>`_ Post-"
 "exploitation tool for hiding processes from monitoring applications"
 msgstr ""
+"`ProcessHider <https://github.com/M00nRise/ProcessHider>`_ post-"
+"exploitation tool for hiding processes from monitoring applications"
 
 #: ../../source/tools/ospersistence.rst:40
 msgid ""
 "`Invoke Phant0m <https://github.com/hlldz/Invoke-Phant0m>`_ Windows Event"
 " Log Killer"
 msgstr ""
+"`Invoke Phant0m <https://github.com/hlldz/Invoke-Phant0m>`_ Windows event"
+" log killer"
 
 #: ../../source/tools/ospersistence.rst:41
 msgid ""
@@ -161,21 +194,26 @@ msgid ""
 "mainly to erase specified records from Windows event logs, with "
 "additional functionalities"
 msgstr ""
+"`EventCleaner <https://github.com/QAX-A-Team/EventCleaner>`_ a tool for "
+"erasing specified records from Windows event logs, with additional "
+"functionality"
 
 #: ../../source/tools/ospersistence.rst:44
 msgid "DLL注入"
-msgstr ""
+msgstr "DLL Injection"
 
 #: ../../source/tools/ospersistence.rst:45
 msgid ""
 "`sRDI <https://github.com/monoxgas/sRDI>`_ Shellcode Reflective DLL "
 "Injection"
 msgstr ""
+"`sRDI <https://github.com/monoxgas/sRDI>`_ shellcode reflective DLL "
+"injection"
 
 #: ../../source/tools/ospersistence.rst:48
 #: ../../source/tools/ospersistence.rst:77
 msgid "rootkit"
-msgstr ""
+msgstr "rootkit"
 
 #: ../../source/tools/ospersistence.rst:49
 msgid ""
@@ -183,16 +221,21 @@ msgid ""
 " with single file installer and fileless persistence that hides "
 "processes, files, network connections, etc"
 msgstr ""
+"`r77-rootkit <https://github.com/bytecode77/r77-rootkit>`_ Ring 3 rootkit"
+" with a single-file installer and fileless persistence for hiding "
+"processes, files, network connections, and more"
 
 #: ../../source/tools/ospersistence.rst:52
 msgid "伪造"
-msgstr ""
+msgstr "Spoofing"
 
 #: ../../source/tools/ospersistence.rst:53
 msgid ""
 "`parent PID spoofing <https://github.com/countercept/ppid-spoofing>`_ "
 "Scripts for performing and detecting parent PID spoofing"
 msgstr ""
+"`parent PID spoofing <https://github.com/countercept/ppid-spoofing>`_ "
+"scripts for performing and detecting parent PID spoofing"
 
 #: ../../source/tools/ospersistence.rst:54
 msgid ""
@@ -201,16 +244,21 @@ msgid ""
 " This is achieved through parent ID spoofing of almost any SYSTEM "
 "process."
 msgstr ""
+"`GetSystem <https://github.com/py7hagoras/GetSystem>`_ C# implementation"
+" for running a process or executable as NT AUTHORITY/SYSTEM through parent"
+" ID spoofing of almost any SYSTEM process."
 
 #: ../../source/tools/ospersistence.rst:57
 msgid "MiTM"
-msgstr ""
+msgstr "MiTM"
 
 #: ../../source/tools/ospersistence.rst:58
 msgid ""
 "`Seth <https://github.com/SySS-Research/Seth>`_ Perform a MitM attack and"
 " extract clear text credentials from RDP connections"
 msgstr ""
+"`Seth <https://github.com/SySS-Research/Seth>`_ performs a MitM attack "
+"and extracts clear-text credentials from RDP connections"
 
 #: ../../source/tools/ospersistence.rst:59
 msgid ""
@@ -218,44 +266,57 @@ msgid ""
 " and library for Python with the ability to watch connections live or "
 "after the fact"
 msgstr ""
+"`pyrdp <https://github.com/GoSecure/pyrdp>`_ RDP man-in-the-middle (mitm)"
+" tool and Python library with the ability to watch connections live or "
+"after the fact"
 
 #: ../../source/tools/ospersistence.rst:62
 msgid "综合工具"
-msgstr ""
+msgstr "General-Purpose Tools"
 
 #: ../../source/tools/ospersistence.rst:63
 msgid ""
 "`Nishang <https://github.com/samratashok/nishang>`_ Offensive PowerShell "
 "for red team, penetration testing and offensive security"
 msgstr ""
+"`Nishang <https://github.com/samratashok/nishang>`_ offensive PowerShell "
+"for red teams, penetration testing, and offensive security"
 
 #: ../../source/tools/ospersistence.rst:64
 msgid ""
 "`SharPersist <https://github.com/fireeye/SharPersist>`_ Windows "
 "persistence toolkit written in C#"
 msgstr ""
+"`SharPersist <https://github.com/fireeye/SharPersist>`_ Windows "
+"persistence toolkit written in C#"
 
 #: ../../source/tools/ospersistence.rst:67
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../source/tools/ospersistence.rst:71
 msgid ""
 "`linux exploit suggester <https://github.com/mzet-/linux-exploit-"
 "suggester>`_"
 msgstr ""
+"`linux exploit suggester <https://github.com/mzet-/linux-exploit-"
+"suggester>`_"
 
 #: ../../source/tools/ospersistence.rst:72
 msgid ""
 "`LinEnum <https://github.com/rebootuser/LinEnum>`_ Scripted Local Linux "
 "Enumeration & Privilege Escalation Checks"
 msgstr ""
+"`LinEnum <https://github.com/rebootuser/LinEnum>`_ scripted local Linux "
+"enumeration and privilege escalation checks"
 
 #: ../../source/tools/ospersistence.rst:73
 msgid ""
 "`AutoLocalPrivilegeEscalation "
 "<https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_"
 msgstr ""
+"`AutoLocalPrivilegeEscalation "
+"<https://github.com/ngalongc/AutoLocalPrivilegeEscalation>`_"
 
 #: ../../source/tools/ospersistence.rst:74
 msgid ""
@@ -263,86 +324,105 @@ msgid ""
 " exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w "
 "docker.sock"
 msgstr ""
+"`traitor <https://github.com/liamg/traitor>`_ automatic Linux privesc via"
+" low-hanging issues such as gtfobins, pwnkit, dirty pipe, and +w "
+"docker.sock"
 
 #: ../../source/tools/ospersistence.rst:78
 msgid "`rootkit <https://github.com/nurupo/rootkit>`_"
-msgstr ""
+msgstr "`rootkit <https://github.com/nurupo/rootkit>`_"
 
 #: ../../source/tools/ospersistence.rst:79
 msgid ""
 "`Diamorphine <https://github.com/m0nad/Diamorphine>`_ LKM rootkit for "
 "Linux Kernels 2.6.x/3.x/4.x/5.x (x86/x86_64 and ARM64)"
 msgstr ""
+"`Diamorphine <https://github.com/m0nad/Diamorphine>`_ LKM rootkit for "
+"Linux Kernels 2.6.x/3.x/4.x/5.x (x86/x86_64 and ARM64)"
 
 #: ../../source/tools/ospersistence.rst:82
 msgid "后门"
-msgstr ""
+msgstr "Backdoors"
 
 #: ../../source/tools/ospersistence.rst:83
 msgid ""
 "`prism <https://github.com/andreafabrizi/prism>`_ is an user space "
 "stealth reverse shell backdoor"
 msgstr ""
+"`prism <https://github.com/andreafabrizi/prism>`_ is a user-space stealth"
+" reverse shell backdoor"
 
 #: ../../source/tools/ospersistence.rst:84
 msgid "`icmpsh <https://github.com/inquisb/icmpsh>`_ Simple reverse ICMP shell"
-msgstr ""
+msgstr "`icmpsh <https://github.com/inquisb/icmpsh>`_ simple reverse ICMP shell"
 
 #: ../../source/tools/ospersistence.rst:87
 msgid "综合"
-msgstr ""
+msgstr "General"
 
 #: ../../source/tools/ospersistence.rst:91
 msgid ""
 "`sshLooterC <https://github.com/mthbernardes/sshLooterC>`_ program to "
 "steal passwords from ssh"
 msgstr ""
+"`sshLooterC <https://github.com/mthbernardes/sshLooterC>`_ program for "
+"stealing passwords from ssh"
 
 #: ../../source/tools/ospersistence.rst:92
 msgid ""
 "`keychaindump <https://github.com/juuso/keychaindump>`_ A proof-of-"
 "concept tool for reading OS X keychain passwords"
 msgstr ""
+"`keychaindump <https://github.com/juuso/keychaindump>`_ proof-of-concept "
+"tool for reading OS X keychain passwords"
 
 #: ../../source/tools/ospersistence.rst:93
 msgid ""
 "`LaZagne <https://github.com/AlessandroZ/LaZagne>`_ Credentials recovery "
 "project"
 msgstr ""
+"`LaZagne <https://github.com/AlessandroZ/LaZagne>`_ credentials recovery "
+"project"
 
 #: ../../source/tools/ospersistence.rst:94
 msgid ""
 "`SecretScanner <https://github.com/deepfence/SecretScanner>`_ Find "
 "secrets and passwords in container images and file systems"
 msgstr ""
+"`SecretScanner <https://github.com/deepfence/SecretScanner>`_ finds "
+"secrets and passwords in container images and file systems"
 
 #: ../../source/tools/ospersistence.rst:98
 msgid ""
 "`BeRoot <https://github.com/AlessandroZ/BeRoot>`_ Privilege Escalation "
 "Project - Windows / Linux / Mac"
 msgstr ""
+"`BeRoot <https://github.com/AlessandroZ/BeRoot>`_ privilege escalation "
+"project for Windows / Linux / Mac"
 
 #: ../../source/tools/ospersistence.rst:101
 msgid "RAT"
-msgstr ""
+msgstr "RAT"
 
 #: ../../source/tools/ospersistence.rst:102
 msgid "`QuasarRAT <https://github.com/quasar/QuasarRAT>`_"
-msgstr ""
+msgstr "`QuasarRAT <https://github.com/quasar/QuasarRAT>`_"
 
 #: ../../source/tools/ospersistence.rst:106
 msgid "`Empire <https://github.com/EmpireProject/Empire>`_"
-msgstr ""
+msgstr "`Empire <https://github.com/EmpireProject/Empire>`_"
 
 #: ../../source/tools/ospersistence.rst:107
 msgid "`pupy <https://github.com/n1nj4sec/pupy>`_"
-msgstr ""
+msgstr "`pupy <https://github.com/n1nj4sec/pupy>`_"
 
 #: ../../source/tools/ospersistence.rst:108
 msgid ""
 "`Covenant <https://github.com/cobbr/Covenant>`_ is a collaborative .NET "
 "C2 framework for red teamers"
 msgstr ""
+"`Covenant <https://github.com/cobbr/Covenant>`_ is a collaborative .NET "
+"C2 framework for red teamers"
 
 #: ../../source/tools/ospersistence.rst:109
 msgid ""
@@ -350,73 +430,90 @@ msgid ""
 "Payload Loader、Cobalt Strike External C2 Loader、Reflective DLL "
 "injection的代码执行工具"
 msgstr ""
+"`Cooolis-ms <https://github.com/Rvn0xsy/Cooolis-ms>`_ code execution tool"
+" that includes a Metasploit Payload Loader, Cobalt Strike External C2 "
+"Loader, and Reflective DLL injection"
 
 #: ../../source/tools/ospersistence.rst:112
 msgid "DNS Shell"
-msgstr ""
+msgstr "DNS Shell"
 
 #: ../../source/tools/ospersistence.rst:113
 msgid ""
 "`DNS Shell <https://github.com/sensepost/DNS-Shell>`_ DNS-Shell is an "
 "interactive Shell over DNS channel"
 msgstr ""
+"`DNS Shell <https://github.com/sensepost/DNS-Shell>`_ DNS-Shell is an "
+"interactive shell over a DNS channel"
 
 #: ../../source/tools/ospersistence.rst:114
 msgid ""
 "`Reverse DNS Shell <https://github.com/ahhh/Reverse_DNS_Shell>`_ A python"
 " reverse shell that uses DNS as the c2 channel"
 msgstr ""
+"`Reverse DNS Shell <https://github.com/ahhh/Reverse_DNS_Shell>`_ a Python"
+" reverse shell that uses DNS as the C2 channel"
 
 #: ../../source/tools/ospersistence.rst:117
 msgid "Cobalt Strike"
-msgstr ""
+msgstr "Cobalt Strike"
 
 #: ../../source/tools/ospersistence.rst:118
 msgid "`Cobalt Strike <https://www.cobaltstrike.com>`_"
-msgstr ""
+msgstr "`Cobalt Strike <https://www.cobaltstrike.com>`_"
 
 #: ../../source/tools/ospersistence.rst:119
 msgid ""
 "`CrossC2 <https://github.com/gloxec/CrossC2>`_ generate CobaltStrike's "
 "cross-platform payload"
 msgstr ""
+"`CrossC2 <https://github.com/gloxec/CrossC2>`_ generates CobaltStrike "
+"cross-platform payloads"
 
 #: ../../source/tools/ospersistence.rst:120
 msgid ""
 "`Cobalt Strike Aggressor Scripts <https://github.com/timwhitez/Cobalt-"
 "Strike-Aggressor-Scripts>`_"
 msgstr ""
+"`Cobalt Strike Aggressor Scripts <https://github.com/timwhitez/Cobalt-"
+"Strike-Aggressor-Scripts>`_"
 
 #: ../../source/tools/ospersistence.rst:123
 msgid "日志清除"
-msgstr ""
+msgstr "Log Clearing"
 
 #: ../../source/tools/ospersistence.rst:124
 msgid ""
 "`Log killer <https://github.com/Rizer0/Log-killer>`_ Clear all logs in "
 "[linux/windows] servers"
 msgstr ""
+"`Log killer <https://github.com/Rizer0/Log-killer>`_ clears all logs on "
+"[linux/windows] servers"
 
 #: ../../source/tools/ospersistence.rst:127
 msgid "Botnet"
-msgstr ""
+msgstr "Botnet"
 
 #: ../../source/tools/ospersistence.rst:128
 msgid "`byob <https://github.com/malwaredllc/byob>`_ Build Your Own Botnet"
-msgstr ""
+msgstr "`byob <https://github.com/malwaredllc/byob>`_ Build Your Own Botnet"
 
 #: ../../source/tools/ospersistence.rst:131
 msgid "免杀工具"
-msgstr ""
+msgstr "AV Evasion Tools"
 
 #: ../../source/tools/ospersistence.rst:132
 msgid ""
 "`AV Evasion Tool <https://github.com/1y0n/AV_Evasion_Tool>`_ 掩日 - "
 "免杀执行器生成工具"
 msgstr ""
+"`AV Evasion Tool <https://github.com/1y0n/AV_Evasion_Tool>`_ Yanyri - AV"
+" evasion executable generator"
 
 #: ../../source/tools/ospersistence.rst:133
 msgid ""
 "`DKMC <https://github.com/Mr-Un1k0d3r/DKMC>`_ Dont kill my cat - "
 "Malicious payload evasion tool"
 msgstr ""
+"`DKMC <https://github.com/Mr-Un1k0d3r/DKMC>`_ Dont kill my cat - "
+"malicious payload evasion tool"

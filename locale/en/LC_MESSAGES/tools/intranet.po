@@ -20,35 +20,43 @@ msgstr ""
 
 #: ../../source/tools/intranet.rst:2
 msgid "横向移动"
-msgstr ""
+msgstr "Lateral Movement"
 
 #: ../../source/tools/intranet.rst:5
 msgid "域"
-msgstr ""
+msgstr "Domain"
 
 #: ../../source/tools/intranet.rst:6
 msgid ""
 "`impacket <https://github.com/SecureAuthCorp/impacket>`_ is a collection "
 "of Python classes for working with network protocols"
 msgstr ""
+"`impacket <https://github.com/SecureAuthCorp/impacket>`_ is a collection "
+"of Python classes for working with network protocols"
 
 #: ../../source/tools/intranet.rst:7
 msgid ""
 "`adidnsdump <https://github.com/dirkjanm/adidnsdump>`_ Active Directory "
 "Integrated DNS dump tool"
 msgstr ""
+"`adidnsdump <https://github.com/dirkjanm/adidnsdump>`_ Active Directory "
+"Integrated DNS dump tool"
 
 #: ../../source/tools/intranet.rst:8
 msgid ""
 "`BloodHound <https://github.com/BloodHoundAD/BloodHound>`_ Six Degrees of"
 " Domain Admin"
 msgstr ""
+"`BloodHound <https://github.com/BloodHoundAD/BloodHound>`_ Six Degrees of"
+" Domain Admin"
 
 #: ../../source/tools/intranet.rst:9
 msgid ""
 "`PlumHound <https://github.com/PlumHound/PlumHound>`_ Bloodhound for Blue"
 " and Purple Teams"
 msgstr ""
+"`PlumHound <https://github.com/PlumHound/PlumHound>`_ BloodHound for blue"
+" and purple teams"
 
 #: ../../source/tools/intranet.rst:10
 msgid ""
@@ -56,30 +64,41 @@ msgid ""
 " enumerate users, groups and computers from a Windows domain through LDAP"
 " queries"
 msgstr ""
+"`windapsearch <https://github.com/ropnop/windapsearch>`_ Python script "
+"for enumerating users, groups, and computers from a Windows domain through"
+" LDAP queries"
 
 #: ../../source/tools/intranet.rst:11
 msgid ""
 "`ldapdomaindump <https://github.com/dirkjanm/ldapdomaindump>`_ Active "
 "Directory information dumper via LDAP"
 msgstr ""
+"`ldapdomaindump <https://github.com/dirkjanm/ldapdomaindump>`_ Active "
+"Directory information dumper via LDAP"
 
 #: ../../source/tools/intranet.rst:12
 msgid ""
 "`Kerberoast <https://github.com/nidem/kerberoast>`_ a series of tools for"
 " attacking MS Kerberos implementations"
 msgstr ""
+"`Kerberoast <https://github.com/nidem/kerberoast>`_ a series of tools for"
+" attacking MS Kerberos implementations"
 
 #: ../../source/tools/intranet.rst:13
 msgid ""
 "`ADRecon <https://github.com/sense-of-security/ADRecon>`_ Active "
 "Directory Recon"
 msgstr ""
+"`ADRecon <https://github.com/sense-of-security/ADRecon>`_ Active "
+"Directory reconnaissance"
 
 #: ../../source/tools/intranet.rst:14
 msgid ""
 "`Creds <https://github.com/S3cur3Th1sSh1t/Creds>`_ Some usefull Scripts "
 "and Executables for Pentest & Forensics"
 msgstr ""
+"`Creds <https://github.com/S3cur3Th1sSh1t/Creds>`_ useful scripts and "
+"executables for pentesting and forensics"
 
 #: ../../source/tools/intranet.rst:15
 msgid ""
@@ -88,6 +107,10 @@ msgid ""
 "password filter featuring breached password checking and custom "
 "complexity rules"
 msgstr ""
+"`Lithnet Password Protection for Active Directory "
+"<https://github.com/lithnet/ad-password-protection>`_ Active Directory "
+"password filter with breached-password checking and custom complexity "
+"rules"
 
 #: ../../source/tools/intranet.rst:16
 msgid ""
@@ -95,32 +118,41 @@ msgid ""
 "retrieves crackable hashes from KRB5 AS-REP responses for users without "
 "kerberoast preauthentication enabled."
 msgstr ""
+"`ASREPRoast <https://github.com/HarmJ0y/ASREPRoast>`_ retrieves crackable"
+" hashes from KRB5 AS-REP responses for users without Kerberos "
+"preauthentication enabled"
 
 #: ../../source/tools/intranet.rst:19
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: ../../source/tools/intranet.rst:20
 msgid ""
 "`SharpHound3 <https://github.com/BloodHoundAD/SharpHound3>`_ Data "
 "Collector for the BloodHound Project"
 msgstr ""
+"`SharpHound3 <https://github.com/BloodHoundAD/SharpHound3>`_ data "
+"collector for the BloodHound project"
 
 #: ../../source/tools/intranet.rst:23
 msgid "微软系产品利用"
-msgstr ""
+msgstr "Microsoft Product Exploitation"
 
 #: ../../source/tools/intranet.rst:24
 msgid ""
 "`LyncSniper <https://github.com/mdsecresearch/LyncSniper>`_ A tool for "
 "penetration testing Skype for Business and Lync deployments"
 msgstr ""
+"`LyncSniper <https://github.com/mdsecresearch/LyncSniper>`_ a tool for "
+"penetration testing Skype for Business and Lync deployments"
 
 #: ../../source/tools/intranet.rst:25
 msgid ""
 "`MSOLSpray <https://github.com/dafthack/MSOLSpray>`_ A password spraying "
 "tool for Microsoft Online accounts (Azure/O365)"
 msgstr ""
+"`MSOLSpray <https://github.com/dafthack/MSOLSpray>`_ a password-spraying "
+"tool for Microsoft Online accounts (Azure/O365)"
 
 #: ../../source/tools/intranet.rst:26
 msgid ""
@@ -128,58 +160,66 @@ msgid ""
 "penetration testing tool for searching through email in a Microsoft "
 "Exchange environment for specific terms"
 msgstr ""
+"`MailSniper <https://github.com/dafthack/MailSniper>`_ penetration "
+"testing tool for searching Microsoft Exchange email for specific terms"
 
 #: ../../source/tools/intranet.rst:29
 msgid "Azure AD"
-msgstr ""
+msgstr "Azure AD"
 
 #: ../../source/tools/intranet.rst:30
 msgid ""
 "`ROADtools <https://github.com/dirkjanm/ROADtools>`_ Azure AD exploration"
 " framework"
 msgstr ""
+"`ROADtools <https://github.com/dirkjanm/ROADtools>`_ Azure AD exploration"
+" framework"
 
 #: ../../source/tools/intranet.rst:31
 msgid ""
 "`Stormspotter <https://github.com/Azure/Stormspotter>`_ Azure Red Team "
 "tool for graphing Azure and Azure Active Directory objects"
 msgstr ""
+"`Stormspotter <https://github.com/Azure/Stormspotter>`_ Azure red-team "
+"tool for graphing Azure and Azure Active Directory objects"
 
 #: ../../source/tools/intranet.rst:34
 msgid "Exchange"
-msgstr ""
+msgstr "Exchange"
 
 #: ../../source/tools/intranet.rst:35
 msgid ""
 "`ruler <https://github.com/sensepost/ruler>`_ A tool to abuse Exchange "
 "services"
-msgstr ""
+msgstr "`ruler <https://github.com/sensepost/ruler>`_ a tool for abusing Exchange services"
 
 #: ../../source/tools/intranet.rst:36
 msgid "`MailSniper <https://github.com/dafthack/MailSniper>`_"
-msgstr ""
+msgstr "`MailSniper <https://github.com/dafthack/MailSniper>`_"
 
 #: ../../source/tools/intranet.rst:37
 msgid ""
 "`PrivExchange <https://github.com/dirkjanm/PrivExchange>`_  Exchange your"
 " privileges for Domain Admin privs by abusing Exchange"
 msgstr ""
+"`PrivExchange <https://github.com/dirkjanm/PrivExchange>`_ exchanges "
+"privileges for Domain Admin rights by abusing Exchange"
 
 #: ../../source/tools/intranet.rst:40
 msgid "PowerShell"
-msgstr ""
+msgstr "PowerShell"
 
 #: ../../source/tools/intranet.rst:41
 msgid "`PowerShellMafia <https://github.com/PowerShellMafia>`_"
-msgstr ""
+msgstr "`PowerShellMafia <https://github.com/PowerShellMafia>`_"
 
 #: ../../source/tools/intranet.rst:44
 msgid "内网信息收集"
-msgstr ""
+msgstr "Internal Network Reconnaissance"
 
 #: ../../source/tools/intranet.rst:45
 msgid "`nbtscan <https://github.com/scallywag/nbtscan>`_ NetBIOS scanning tool"
-msgstr ""
+msgstr "`nbtscan <https://github.com/scallywag/nbtscan>`_ NetBIOS scanning tool"
 
 #: ../../source/tools/intranet.rst:46
 msgid ""
@@ -187,79 +227,98 @@ msgid ""
 "dirty binary to list network share information from all machines in the "
 "current domain and if they're readable"
 msgstr ""
+"`SharpShares <https://github.com/djhohnstein/SharpShares>`_ quick utility"
+" for listing network share information from all machines in the current "
+"domain and checking whether the shares are readable"
 
 #: ../../source/tools/intranet.rst:47
 msgid ""
 "`WinShareEnum <https://github.com/nccgroup/WinShareEnum>`_ Windows Share "
 "Enumerator"
 msgstr ""
+"`WinShareEnum <https://github.com/nccgroup/WinShareEnum>`_ Windows share "
+"enumerator"
 
 #: ../../source/tools/intranet.rst:48
 msgid ""
 "`HackBrowserData <https://github.com/moonD4rk/HackBrowserData>`_ "
 "全平台的浏览器数据导出工具"
 msgstr ""
+"`HackBrowserData <https://github.com/moonD4rk/HackBrowserData>`_ cross-"
+"platform browser data export tool"
 
 #: ../../source/tools/intranet.rst:51
 msgid "Kerberos"
-msgstr ""
+msgstr "Kerberos"
 
 #: ../../source/tools/intranet.rst:52
 msgid "`Rubeus <https://github.com/GhostPack/Rubeus>`_"
-msgstr ""
+msgstr "`Rubeus <https://github.com/GhostPack/Rubeus>`_"
 
 #: ../../source/tools/intranet.rst:53
 msgid ""
 "`kerbrute <https://github.com/ropnop/kerbrute>`_ A tool to perform "
 "Kerberos pre-auth bruteforcing"
 msgstr ""
+"`kerbrute <https://github.com/ropnop/kerbrute>`_ a tool for Kerberos pre-"
+"auth bruteforcing"
 
 #: ../../source/tools/intranet.rst:54
 msgid ""
 "`kerberoast <https://github.com/nidem/kerberoast>`_ A series of tools for"
 " attacking MS Kerberos implementations"
 msgstr ""
+"`kerberoast <https://github.com/nidem/kerberoast>`_ a series of tools for"
+" attacking MS Kerberos implementations"
 
 #: ../../source/tools/intranet.rst:57
 msgid "自动化审计"
-msgstr ""
+msgstr "Automated Auditing"
 
 #: ../../source/tools/intranet.rst:58
 msgid ""
 "`Infection Monkey <https://github.com/guardicore/monkey>`_ Data center "
 "Security Testing Tool"
 msgstr ""
+"`Infection Monkey <https://github.com/guardicore/monkey>`_ data center "
+"security testing tool"
 
 #: ../../source/tools/intranet.rst:61
 msgid "绕过"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/tools/intranet.rst:62
 msgid ""
 "`SysWhispers <https://github.com/jthuraisamy/SysWhispers>`_ AV/EDR "
 "evasion via direct system calls"
 msgstr ""
+"`SysWhispers <https://github.com/jthuraisamy/SysWhispers>`_ AV/EDR "
+"evasion via direct system calls"
 
 #: ../../source/tools/intranet.rst:63
 msgid ""
 "`SysWhispers2 <https://github.com/jthuraisamy/SysWhispers2>`_ AV/EDR "
 "evasion via direct system calls"
 msgstr ""
+"`SysWhispers2 <https://github.com/jthuraisamy/SysWhispers2>`_ AV/EDR "
+"evasion via direct system calls"
 
 #: ../../source/tools/intranet.rst:64
 msgid ""
 "`Dumpert <https://github.com/outflanknl/Dumpert>`_ LSASS memory dumper "
 "using direct system calls and API unhooking"
 msgstr ""
+"`Dumpert <https://github.com/outflanknl/Dumpert>`_ LSASS memory dumper "
+"using direct system calls and API unhooking"
 
 #: ../../source/tools/intranet.rst:67
 msgid "内网扫描"
-msgstr ""
+msgstr "Internal Network Scanning"
 
 #: ../../source/tools/intranet.rst:68
 msgid "`InScan <https://github.com/inbug-team/InScan>`_ 边界打点后的自动化渗透工具"
-msgstr ""
+msgstr "`InScan <https://github.com/inbug-team/InScan>`_ automated penetration tool for post-perimeter access"
 
 #: ../../source/tools/intranet.rst:69
 msgid "`fscan <https://github.com/shadow1ng/fscan>`_ 一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。"
-msgstr ""
+msgstr "`fscan <https://github.com/shadow1ng/fscan>`_ comprehensive internal network scanner for one-click automated vulnerability scanning."
