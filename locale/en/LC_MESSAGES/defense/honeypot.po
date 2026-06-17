@@ -20,189 +20,197 @@ msgstr ""
 
 #: ../../source/defense/honeypot.rst:2
 msgid "蜜罐技术"
-msgstr ""
+msgstr "Honeypot Technology"
 
 #: ../../source/defense/honeypot.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/defense/honeypot.rst:6
 msgid "蜜罐是对攻击者的欺骗技术，用以监视、检测、分析和溯源攻击行为，其没有业务上的用途，所有流入/流出蜜罐的流量都预示着扫描或者攻击行为，因此可以比较好的聚焦于攻击流量。"
-msgstr ""
+msgstr "A honeypot is a deception technology for attackers. It is used to monitor, detect, analyze, and attribute attack behavior. It has no business purpose, and all traffic entering or leaving a honeypot indicates scanning or attack activity, making it easier to focus on attack traffic."
 
 #: ../../source/defense/honeypot.rst:8
 msgid "蜜罐可以实现对攻击者的主动诱捕，能够详细地记录攻击者攻击过程中的许多痕迹，可以收集到大量有价值的数据，如病毒或蠕虫的源码、黑客的操作等，从而便于提供丰富的溯源数据。另外蜜罐也可以消耗攻击者的时间，基于JSONP等方式来获取攻击者的画像。"
-msgstr ""
+msgstr "Honeypots can actively lure attackers and record many traces of the attack process in detail. They can collect large amounts of valuable data, such as the source code of viruses or worms and attacker operations, thereby providing rich attribution data. Honeypots can also consume attacker time and build attacker profiles through methods such as JSONP."
 
 #: ../../source/defense/honeypot.rst:10
 msgid "但是蜜罐存在安全隐患，如果没有做好隔离，可能成为新的攻击源。"
-msgstr ""
+msgstr "However, honeypots also introduce security risks. If they are not properly isolated, they may become a new attack source."
 
 #: ../../source/defense/honeypot.rst:13
 msgid "分类"
-msgstr ""
+msgstr "Classification"
 
 #: ../../source/defense/honeypot.rst:14
 msgid "按用途分类，蜜罐可以分为研究型蜜罐和产品型蜜罐。研究型蜜罐一般是用于研究各类网络威胁，寻找应对的方式，不增加特定组织的安全性。产品型蜜罐主要是用于防护的商业产品。"
-msgstr ""
+msgstr "By purpose, honeypots can be divided into research honeypots and production honeypots. Research honeypots are generally used to study various network threats and find response methods, rather than to improve the security of a specific organization. Production honeypots are mainly commercial products used for protection."
 
 #: ../../source/defense/honeypot.rst:16
 msgid "按交互方式分类，蜜罐可以分为低交互蜜罐和高交互蜜罐。低交互蜜罐模拟网络服务响应和攻击者交互，容易部署和控制攻击，但是模拟能力会相对较弱，对攻击的捕获能力不强。高交互蜜罐不是简单模拟协议或服务，而是提供真实的系统，使得被发现的概率大幅度降低。但是高交互蜜罐部署不当时存在被攻击者利用的可能性。"
-msgstr ""
+msgstr "By interaction model, honeypots can be divided into low-interaction and high-interaction honeypots. Low-interaction honeypots simulate network service responses and interact with attackers. They are easy to deploy and control, but their simulation capability is relatively weak and their ability to capture attacks is limited. High-interaction honeypots do not simply simulate protocols or services; they provide real systems, greatly reducing the likelihood of being detected. However, if deployed improperly, high-interaction honeypots may be abused by attackers."
 
 #: ../../source/defense/honeypot.rst:19
 msgid "隐藏技术"
-msgstr ""
+msgstr "Hiding Techniques"
 
 #: ../../source/defense/honeypot.rst:20
 msgid "蜜罐主要涉及到的是伪装技术，主要涉及到进程隐藏、服务伪装等技术。"
-msgstr ""
+msgstr "Honeypots mainly involve camouflage techniques, including process hiding, service disguising, and similar methods."
 
 #: ../../source/defense/honeypot.rst:22
 msgid "蜜罐之间的隐藏，要求蜜罐之间相互隐蔽。进程隐藏，蜜罐需要隐藏监控、信息收集等进程。伪服务和命令技术，需要对部分服务进行伪装，防止攻击者获取敏感信息或者入侵控制内核。数据文件伪装，需要生成合理的虚假数据的文件。"
-msgstr ""
+msgstr "Hiding among honeypots requires honeypots to conceal each other. For process hiding, the honeypot needs to hide monitoring, information collection, and similar processes. Fake service and command techniques disguise some services to prevent attackers from obtaining sensitive information or compromising the control kernel. Data file camouflage requires generating plausible files that contain false data."
 
 #: ../../source/defense/honeypot.rst:25
 msgid "牵引技术"
-msgstr ""
+msgstr "Traffic Redirection Techniques"
 
 #: ../../source/defense/honeypot.rst:26
 msgid "蜜罐牵引技术是在识别到攻击者流量后，通过在正式环境中改变路由、返回特定响应的方式将攻击者牵引到特定的蜜罐地址。 常见的牵引技术有下面几种："
-msgstr ""
+msgstr "Honeypot redirection techniques identify attacker traffic and then steer the attacker to a specific honeypot address by changing routes in the production environment or returning specific responses. Common redirection techniques include the following:"
 
 #: ../../source/defense/honeypot.rst:29
 msgid "防火墙牵引"
-msgstr ""
+msgstr "Firewall redirection"
 
 #: ../../source/defense/honeypot.rst:30
 msgid "SDN牵引"
-msgstr ""
+msgstr "SDN redirection"
 
 #: ../../source/defense/honeypot.rst:31
 msgid "ARP牵引"
-msgstr ""
+msgstr "ARP redirection"
 
 #: ../../source/defense/honeypot.rst:32
 msgid "WAF牵引"
-msgstr ""
+msgstr "WAF redirection"
 
 #: ../../source/defense/honeypot.rst:35
 msgid "诱饵技术"
-msgstr ""
+msgstr "Bait Techniques"
 
 #: ../../source/defense/honeypot.rst:36
 msgid ""
 "可以在互联网中部署一定的诱饵来吸引攻击者进入特定的蜜罐中。 常见的诱饵有域名诱饵、Github "
 "诱饵、网盘诱饵、邮件诱饵、主机诱饵、文件诱饵、漏洞诱饵等。"
 msgstr ""
+"Certain baits can be deployed on the Internet to attract attackers into specific honeypots. Common baits include domain name baits, GitHub "
+"baits, cloud drive baits, email baits, host baits, file baits, vulnerability baits, and others."
 
 #: ../../source/defense/honeypot.rst:39
 msgid "域名诱饵指使用特定的在字典中且有意义的主域名做为诱饵，比如 ``vpn.example.com`` / ``oa.example.com`` 等。"
-msgstr ""
+msgstr "Domain name bait uses specific, meaningful primary domain names from a dictionary as bait, such as ``vpn.example.com`` / ``oa.example.com``."
 
 #: ../../source/defense/honeypot.rst:41
 msgid "Github 诱饵指在 Github 中放置代码文件、失陷凭证的方式。"
-msgstr ""
+msgstr "GitHub bait refers to placing code files or compromised credentials in GitHub."
 
 #: ../../source/defense/honeypot.rst:43
 msgid "文件诱饵是在容易失陷的主机中放置虚假的拓扑图，关键系统IP的文件，从而诱导攻击者的方式。"
-msgstr ""
+msgstr "File bait places fake topology diagrams or files containing key system IP addresses on hosts that are likely to be compromised, thereby inducing attacker interaction."
 
 #: ../../source/defense/honeypot.rst:45
 msgid "漏洞诱饵通过部署存在特定漏洞特征的蜜罐站，吸引攻击者攻击。"
-msgstr ""
+msgstr "Vulnerability bait attracts attackers by deploying honeypot sites with specific vulnerability characteristics."
 
 #: ../../source/defense/honeypot.rst:48
 msgid "反制技术"
-msgstr ""
+msgstr "Countermeasure Techniques"
 
 #: ../../source/defense/honeypot.rst:49
 msgid "蜜罐可以使用一些方式对攻击者进行反制，常见的方式有Jsonp、安全工具漏洞、Client漏洞反制、文件反制等方式。"
-msgstr ""
+msgstr "Honeypots can use several methods to counter attackers. Common methods include JSONP, security tool vulnerabilities, Client vulnerability countermeasures, file-based countermeasures, and others."
 
 #: ../../source/defense/honeypot.rst:51
 msgid ""
 "Jsonp主要是使用各大网站的Jsonp获取攻击者已经登录的社交账号，用以溯源。 "
 "另外如果攻击者使用流量的方式访问蜜罐网站，可以使用运营商接口获取攻击者的手机号。"
 msgstr ""
+"JSONP mainly uses JSONP endpoints on major websites to obtain social accounts that the attacker is already logged into for attribution. "
+"In addition, if the attacker accesses the honeypot site through mobile data traffic, carrier interfaces can be used to obtain the attacker's phone number."
 
 #: ../../source/defense/honeypot.rst:54
 msgid "安全工具漏洞是指使用安全工具的漏洞进行反制，例如Git泄露工具存在的文件泄露漏洞，基于Electron的工具存在的XSS to RCE等。"
-msgstr ""
+msgstr "Security tool vulnerabilities refer to countering attackers by using vulnerabilities in security tools, such as file disclosure vulnerabilities in Git leakage tools or XSS to RCE in Electron-based tools."
 
 #: ../../source/defense/honeypot.rst:56
 msgid "Client反制，指使用虚假的Server对存在漏洞的客户端进行反制，例如通过MySQL Client读取文件，基于RDP/SMB的漏洞进行RCE。"
-msgstr ""
+msgstr "Client countermeasures use fake Servers to counter vulnerable clients, such as reading files through a MySQL Client or achieving RCE through RDP/SMB vulnerabilities."
 
 #: ../../source/defense/honeypot.rst:58
 msgid "反制文件，指在蜜罐环境中设置特定的文件，例如伪装的VPN客户端、特定插件来诱导攻击者点击。"
-msgstr ""
+msgstr "Countermeasure files are specific files placed in a honeypot environment, such as disguised VPN clients or specific plugins, to induce attackers to click them."
 
 #: ../../source/defense/honeypot.rst:60
 msgid "DoS反制，在获取到攻击者的C2样本后，可以通过批量上线的方式影响C2攻击者的控制服务器。"
-msgstr ""
+msgstr "DoS countermeasures can affect a C2 attacker's control server by bringing many clients online after obtaining the attacker's C2 sample."
 
 #: ../../source/defense/honeypot.rst:63
 msgid "识别技术"
-msgstr ""
+msgstr "Identification Techniques"
 
 #: ../../source/defense/honeypot.rst:64
 msgid "攻击者也会尝试对蜜罐进行识别。比较容易的识别的是低交互的蜜罐，尝试一些比较复杂且少见的操作能比较容易的识别低交互的蜜罐。相对困难的是高交互蜜罐的识别，因为高交互蜜罐通常以真实系统为基础来构建，和真实系统比较近似。对这种情况，通常会基于虚拟文件系统和注册表的信息、内存分配特征、硬件特征、特殊指令等来识别。"
-msgstr ""
+msgstr "Attackers also try to identify honeypots. Low-interaction honeypots are relatively easy to identify; trying more complex and uncommon operations can reveal them. High-interaction honeypots are harder to identify because they are usually built on real systems and closely resemble real environments. In such cases, identification is usually based on virtual file system and registry information, memory allocation characteristics, hardware characteristics, special instructions, and similar signals."
 
 #: ../../source/defense/honeypot.rst:67
 msgid "协议实现识别"
-msgstr ""
+msgstr "Protocol Implementation Identification"
 
 #: ../../source/defense/honeypot.rst:68
 msgid "部分蜜罐在实现的过程中，协议的部分参数固定或随机的范围有限，可以通过特定参数的范围来识别蜜罐。"
-msgstr ""
+msgstr "During implementation, some honeypots use fixed values or limited random ranges for certain protocol parameters. Honeypots can be identified through these parameter ranges."
 
 #: ../../source/defense/honeypot.rst:70
 msgid "部分蜜罐协议支持的版本范围为某一特定版本范围，可以通过对应的版本范围来推测是否为蜜罐。"
-msgstr ""
+msgstr "Some honeypot protocols support only a specific version range, so the corresponding version range can be used to infer whether the service is a honeypot."
 
 #: ../../source/defense/honeypot.rst:72
 msgid "部分蜜罐在交互过程中有探测客户端特征的交互，可以通过这些交互过程来识别蜜罐。"
-msgstr ""
+msgstr "Some honeypots include interactions that probe client characteristics during communication. These interaction processes can be used to identify honeypots."
 
 #: ../../source/defense/honeypot.rst:74
 msgid "部分蜜罐对不正确的请求也返回正常的相应，可以通过这种特征来判定蜜罐。"
-msgstr ""
+msgstr "Some honeypots return normal responses even for incorrect requests, and this behavior can be used to identify them."
 
 #: ../../source/defense/honeypot.rst:77
 msgid "环境特征"
-msgstr ""
+msgstr "Environmental Characteristics"
 
 #: ../../source/defense/honeypot.rst:78
 msgid "部分蜜罐的用户名、密码固定，或内存使用、进程占用等动态特征变化较为规律，可以通过这种方式来判断是否为蜜罐。"
-msgstr ""
+msgstr "Some honeypots use fixed usernames and passwords, or show regular changes in dynamic characteristics such as memory usage and process activity. These features can be used to determine whether a system is a honeypot."
 
 #: ../../source/defense/honeypot.rst:81
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/honeypot.rst:82
 #, python-format
 msgid ""
-"`honeypot wiki "
+"`Honeypot Wiki "
 "<https://en.wikipedia.org/wiki/Honeypot%5f%28computing%29>`_"
 msgstr ""
+"`honeypot wiki "
+"<https://en.wikipedia.org/wiki/Honeypot%5f%28computing%29>`_"
 
 #: ../../source/defense/honeypot.rst:83
 msgid "`Modern Honey Network <http://threatstream.github.io/mhn/>`_"
-msgstr ""
+msgstr "`Modern Honey Network <http://threatstream.github.io/mhn/>`_"
 
 #: ../../source/defense/honeypot.rst:84
 msgid "`默安科技：幻阵 <https://www.moresec.cn/magic-shield.html>`_"
-msgstr ""
+msgstr "`Moresec: Magic Shield <https://www.moresec.cn/magic-shield.html>`_"
 
 #: ../../source/defense/honeypot.rst:85
 msgid "`蜜罐与内网安全从0到1 <https://xz.aliyun.com/t/998>`_"
-msgstr ""
+msgstr "`Honeypots and Intranet Security from 0 to 1 <https://xz.aliyun.com/t/998>`_"
 
 #: ../../source/defense/honeypot.rst:86
 msgid ""
 "`浅析开源蜜罐识别与全网测绘 "
 "<https://mp.weixin.qq.com/s?__biz=Mzk0NzE4MDE2NA==&mid=2247483908&idx=1&sn=e6a319e22c3cd54650bdbba511e58a43>`_"
 msgstr ""
+"`A Brief Analysis of Open-Source Honeypot Identification and Internet-Wide Mapping "
+"<https://mp.weixin.qq.com/s?__biz=Mzk0NzE4MDE2NA==&mid=2247483908&idx=1&sn=e6a319e22c3cd54650bdbba511e58a43>`_"
