@@ -20,189 +20,193 @@ msgstr ""
 
 #: ../../source/defense/riskcontrol.rst:2
 msgid "风险控制"
-msgstr ""
+msgstr "Risk Control"
 
 #: ../../source/defense/riskcontrol.rst:5
 msgid "常见风险"
-msgstr ""
+msgstr "Common Risks"
 
 #: ../../source/defense/riskcontrol.rst:6
 msgid "会员"
-msgstr ""
+msgstr "Membership"
 
 #: ../../source/defense/riskcontrol.rst:7
 msgid "撞库盗号"
-msgstr ""
+msgstr "Credential stuffing and account theft"
 
 #: ../../source/defense/riskcontrol.rst:8
 msgid "账号分享"
-msgstr ""
+msgstr "Account sharing"
 
 #: ../../source/defense/riskcontrol.rst:9
 msgid "批量注册"
-msgstr ""
+msgstr "Bulk registration"
 
 #: ../../source/defense/riskcontrol.rst:10
 msgid "视频"
-msgstr ""
+msgstr "Video"
 
 #: ../../source/defense/riskcontrol.rst:11
 msgid "盗播盗看"
-msgstr ""
+msgstr "Unauthorized rebroadcasting and viewing"
 
 #: ../../source/defense/riskcontrol.rst:12
 msgid "广告屏蔽"
-msgstr ""
+msgstr "Ad blocking"
 
 #: ../../source/defense/riskcontrol.rst:13
 msgid "刷量作弊"
-msgstr ""
+msgstr "Traffic inflation and cheating"
 
 #: ../../source/defense/riskcontrol.rst:14
 msgid "活动"
-msgstr ""
+msgstr "Campaigns"
 
 #: ../../source/defense/riskcontrol.rst:15
 msgid "恶意刷"
-msgstr ""
+msgstr "Malicious farming"
 
 #: ../../source/defense/riskcontrol.rst:16
 msgid "薅羊毛"
-msgstr ""
+msgstr "Promotion abuse"
 
 #: ../../source/defense/riskcontrol.rst:17
 msgid "直播"
-msgstr ""
+msgstr "Live Streaming"
 
 #: ../../source/defense/riskcontrol.rst:18
 msgid "挂站人气"
-msgstr ""
+msgstr "Artificially boosted site popularity"
 
 #: ../../source/defense/riskcontrol.rst:19
 msgid "恶意图文"
-msgstr ""
+msgstr "Malicious images and text"
 
 #: ../../source/defense/riskcontrol.rst:20
 msgid "电商"
-msgstr ""
+msgstr "E-Commerce"
 
 #: ../../source/defense/riskcontrol.rst:21
 #: ../../source/defense/riskcontrol.rst:26
 msgid "恶意下单"
-msgstr ""
+msgstr "Malicious order placement"
 
 #: ../../source/defense/riskcontrol.rst:22
 msgid "订单欺诈"
-msgstr ""
+msgstr "Order fraud"
 
 #: ../../source/defense/riskcontrol.rst:23
 msgid "支付"
-msgstr ""
+msgstr "Payment"
 
 #: ../../source/defense/riskcontrol.rst:24
 msgid "盗号盗卡"
-msgstr ""
+msgstr "Account and card theft"
 
 #: ../../source/defense/riskcontrol.rst:25
 msgid "洗钱"
-msgstr ""
+msgstr "Money laundering"
 
 #: ../../source/defense/riskcontrol.rst:27
 msgid "恶意提现"
-msgstr ""
+msgstr "Malicious withdrawals"
 
 #: ../../source/defense/riskcontrol.rst:28
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: ../../source/defense/riskcontrol.rst:29
 msgid "钓鱼邮件"
-msgstr ""
+msgstr "Phishing emails"
 
 #: ../../source/defense/riskcontrol.rst:30
 msgid "恶意爆破"
-msgstr ""
+msgstr "Malicious brute force"
 
 #: ../../source/defense/riskcontrol.rst:31
 msgid "短信轰炸"
-msgstr ""
+msgstr "SMS bombing"
 
 #: ../../source/defense/riskcontrol.rst:34
 msgid "防御策略"
-msgstr ""
+msgstr "Defense Strategies"
 
 #: ../../source/defense/riskcontrol.rst:35
 msgid "核身策略"
-msgstr ""
+msgstr "Identity Verification Strategy"
 
 #: ../../source/defense/riskcontrol.rst:36
 msgid "同一收货手机号"
-msgstr ""
+msgstr "Same delivery phone number"
 
 #: ../../source/defense/riskcontrol.rst:37
 msgid "同一收货地址"
-msgstr ""
+msgstr "Same delivery address"
 
 #: ../../source/defense/riskcontrol.rst:38
 msgid "同一历史行为"
-msgstr ""
+msgstr "Same historical behavior"
 
 #: ../../source/defense/riskcontrol.rst:39
 msgid "同一IP"
-msgstr ""
+msgstr "Same IP"
 
 #: ../../source/defense/riskcontrol.rst:40
 msgid "同一设备"
-msgstr ""
+msgstr "Same device"
 
 #: ../../source/defense/riskcontrol.rst:41
 msgid "同一支付ID"
-msgstr ""
+msgstr "Same payment ID"
 
 #: ../../source/defense/riskcontrol.rst:42
 msgid "LBS"
-msgstr ""
+msgstr "LBS"
 
 #: ../../source/defense/riskcontrol.rst:45
 msgid "异常特征"
-msgstr ""
+msgstr "Anomalous Features"
 
 #: ../../source/defense/riskcontrol.rst:46
 msgid "APP用户异常特征"
-msgstr ""
+msgstr "APP User Anomalous Features"
 
 #: ../../source/defense/riskcontrol.rst:47
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: ../../source/defense/riskcontrol.rst:48
 msgid "设备为特定型号"
-msgstr ""
+msgstr "The device is a specific model"
 
 #: ../../source/defense/riskcontrol.rst:49
 msgid "本地APP列表中有沙盒APP"
-msgstr ""
+msgstr "A sandbox APP appears in the local APP list"
 
 #: ../../source/defense/riskcontrol.rst:50
 msgid "Root用户"
-msgstr ""
+msgstr "Root user"
 
 #: ../../source/defense/riskcontrol.rst:51
 msgid "同设备登录过多个账号"
-msgstr ""
+msgstr "Multiple accounts have logged in from the same device"
 
 #: ../../source/defense/riskcontrol.rst:54
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/riskcontrol.rst:55
 msgid ""
 "`支付风控模型和流程分析 "
 "<http://doc.cocolian.cn/essay/risk/2016/12/18/risk-2-database/>`_"
 msgstr ""
+"`Payment Risk Control Model and Process Analysis "
+"<http://doc.cocolian.cn/essay/risk/2016/12/18/risk-2-database/>`_"
 
 #: ../../source/defense/riskcontrol.rst:56
 msgid ""
 "`爱奇艺业务安全风控体系的建设实践 "
 "<https://mp.weixin.qq.com/s?__biz=MzI0MjczMjM2NA==&mid=2247483836&idx=1&sn=d46875c957289d8e035345992ad7053e>`_"
 msgstr ""
+"`iQIYI Business Security Risk Control System Construction Practice "
+"<https://mp.weixin.qq.com/s?__biz=MzI0MjczMjM2NA==&mid=2247483836&idx=1&sn=d46875c957289d8e035345992ad7053e>`_"

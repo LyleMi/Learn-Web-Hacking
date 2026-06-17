@@ -20,175 +20,175 @@ msgstr ""
 
 #: ../../source/defense/reinforce.rst:2
 msgid "加固检查"
-msgstr ""
+msgstr "Hardening Checklist"
 
 #: ../../source/defense/reinforce.rst:5
 msgid "网络设备"
-msgstr ""
+msgstr "Network Devices"
 
 #: ../../source/defense/reinforce.rst:6
 msgid "及时检查系统版本号"
-msgstr ""
+msgstr "Check system version numbers in a timely manner"
 
 #: ../../source/defense/reinforce.rst:7
 msgid "敏感服务设置访问IP/MAC白名单"
-msgstr ""
+msgstr "Configure access IP/MAC allowlists for sensitive services"
 
 #: ../../source/defense/reinforce.rst:8
 msgid "开启权限分级控制"
-msgstr ""
+msgstr "Enable tiered permission control"
 
 #: ../../source/defense/reinforce.rst:9
 msgid "关闭不必要的服务"
-msgstr ""
+msgstr "Disable unnecessary services"
 
 #: ../../source/defense/reinforce.rst:10
 msgid "打开操作日志"
-msgstr ""
+msgstr "Enable operation logs"
 
 #: ../../source/defense/reinforce.rst:11
 msgid "配置异常告警"
-msgstr ""
+msgstr "Configure anomaly alerts"
 
 #: ../../source/defense/reinforce.rst:12
 msgid "关闭ICMP回应"
-msgstr ""
+msgstr "Disable ICMP replies"
 
 #: ../../source/defense/reinforce.rst:15
 msgid "操作系统"
-msgstr ""
+msgstr "Operating Systems"
 
 #: ../../source/defense/reinforce.rst:18
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../source/defense/reinforce.rst:19
 msgid "无用用户/用户组检查"
-msgstr ""
+msgstr "Check for unused users and user groups"
 
 #: ../../source/defense/reinforce.rst:20
 msgid "空口令帐号检查"
-msgstr ""
+msgstr "Check for accounts with empty passwords"
 
 #: ../../source/defense/reinforce.rst:21
 msgid "用户密码策略"
-msgstr ""
+msgstr "User Password Policy"
 
 #: ../../source/defense/reinforce.rst:22
 msgid "/etc/login.defs"
-msgstr ""
+msgstr "/etc/login.defs"
 
 #: ../../source/defense/reinforce.rst:23
 msgid "/etc/pam.d/system-auth"
-msgstr ""
+msgstr "/etc/pam.d/system-auth"
 
 #: ../../source/defense/reinforce.rst:24
 msgid "敏感文件权限配置"
-msgstr ""
+msgstr "Sensitive File Permission Configuration"
 
 #: ../../source/defense/reinforce.rst:25
 msgid "/etc/passwd"
-msgstr ""
+msgstr "/etc/passwd"
 
 #: ../../source/defense/reinforce.rst:26
 msgid "/etc/shadow"
-msgstr ""
+msgstr "/etc/shadow"
 
 #: ../../source/defense/reinforce.rst:27
 msgid "~/.ssh/"
-msgstr ""
+msgstr "~/.ssh/"
 
 #: ../../source/defense/reinforce.rst:28
 msgid "/var/log/messages"
-msgstr ""
+msgstr "/var/log/messages"
 
 #: ../../source/defense/reinforce.rst:29
 msgid "/var/log/secure"
-msgstr ""
+msgstr "/var/log/secure"
 
 #: ../../source/defense/reinforce.rst:30
 msgid "/var/log/maillog"
-msgstr ""
+msgstr "/var/log/maillog"
 
 #: ../../source/defense/reinforce.rst:31
 msgid "/var/log/cron"
-msgstr ""
+msgstr "/var/log/cron"
 
 #: ../../source/defense/reinforce.rst:32
 msgid "/var/log/spooler"
-msgstr ""
+msgstr "/var/log/spooler"
 
 #: ../../source/defense/reinforce.rst:33
 msgid "/var/log/boot.log"
-msgstr ""
+msgstr "/var/log/boot.log"
 
 #: ../../source/defense/reinforce.rst:34
 msgid "日志是否打开"
-msgstr ""
+msgstr "Whether logging is enabled"
 
 #: ../../source/defense/reinforce.rst:35
 msgid "及时安装补丁"
-msgstr ""
+msgstr "Install patches in a timely manner"
 
 #: ../../source/defense/reinforce.rst:36
 msgid "开机自启"
-msgstr ""
+msgstr "Startup Auto-Run"
 
 #: ../../source/defense/reinforce.rst:37
 msgid "/etc/init.d"
-msgstr ""
+msgstr "/etc/init.d"
 
 #: ../../source/defense/reinforce.rst:38
 msgid "检查系统时钟"
-msgstr ""
+msgstr "Check the system clock"
 
 #: ../../source/defense/reinforce.rst:41
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../source/defense/reinforce.rst:42
 msgid "异常进程监控"
-msgstr ""
+msgstr "Monitor abnormal processes"
 
 #: ../../source/defense/reinforce.rst:43
 msgid "异常启动项监控"
-msgstr ""
+msgstr "Monitor abnormal startup items"
 
 #: ../../source/defense/reinforce.rst:44
 msgid "异常服务监控"
-msgstr ""
+msgstr "Monitor abnormal services"
 
 #: ../../source/defense/reinforce.rst:45
 msgid "配置系统日志"
-msgstr ""
+msgstr "Configure system logs"
 
 #: ../../source/defense/reinforce.rst:46
 msgid "用户账户"
-msgstr ""
+msgstr "User Accounts"
 
 #: ../../source/defense/reinforce.rst:47
 msgid "设置口令有效期"
-msgstr ""
+msgstr "Set password validity periods"
 
 #: ../../source/defense/reinforce.rst:48
 msgid "设置口令强度限制"
-msgstr ""
+msgstr "Set password strength requirements"
 
 #: ../../source/defense/reinforce.rst:49
 msgid "设置口令重试次数"
-msgstr ""
+msgstr "Set password retry limits"
 
 #: ../../source/defense/reinforce.rst:50
 msgid "安装EMET"
-msgstr ""
+msgstr "Install EMET"
 
 #: ../../source/defense/reinforce.rst:51
 msgid "启用PowerShell日志"
-msgstr ""
+msgstr "Enable PowerShell logging"
 
 #: ../../source/defense/reinforce.rst:52
 msgid "限制以下敏感文件的下载和执行"
-msgstr ""
+msgstr "Restrict downloading and execution of the following sensitive files"
 
 #: ../../source/defense/reinforce.rst:53
 msgid ""
@@ -196,228 +196,233 @@ msgid ""
 " isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, "
 "pif, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif"
 msgstr ""
+"ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins,"
+" isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, "
+"pif, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif"
 
 #: ../../source/defense/reinforce.rst:54
 msgid "限制会调起wscript的后缀"
-msgstr ""
+msgstr "Restrict extensions that invoke wscript"
 
 #: ../../source/defense/reinforce.rst:55
 msgid "bat, js, jse, vbe, vbs, wsf, wsh"
-msgstr ""
+msgstr "bat, js, jse, vbe, vbs, wsf, wsh"
 
 #: ../../source/defense/reinforce.rst:56
 msgid "域"
-msgstr ""
+msgstr "Domain"
 
 #: ../../source/defense/reinforce.rst:57
 msgid "限制将计算机加入域的权限"
-msgstr ""
+msgstr "Restrict the permission to join computers to the domain"
 
 #: ../../source/defense/reinforce.rst:58
 msgid "域账户使用最小权限原则"
-msgstr ""
+msgstr "Apply the principle of least privilege to domain accounts"
 
 #: ../../source/defense/reinforce.rst:59
 msgid "减少非必要高权限账户的数量"
-msgstr ""
+msgstr "Reduce the number of unnecessary high-privilege accounts"
 
 #: ../../source/defense/reinforce.rst:62
 msgid "应用"
-msgstr ""
+msgstr "Applications"
 
 #: ../../source/defense/reinforce.rst:65
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: ../../source/defense/reinforce.rst:66
 msgid "禁止匿名登录"
-msgstr ""
+msgstr "Disable anonymous login"
 
 #: ../../source/defense/reinforce.rst:67
 msgid "修改Banner"
-msgstr ""
+msgstr "Modify the Banner"
 
 #: ../../source/defense/reinforce.rst:70
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #: ../../source/defense/reinforce.rst:71
 msgid "是否禁用ROOT登录"
-msgstr ""
+msgstr "Whether ROOT login is disabled"
 
 #: ../../source/defense/reinforce.rst:72
 msgid "是否禁用密码连接"
-msgstr ""
+msgstr "Whether password-based connections are disabled"
 
 #: ../../source/defense/reinforce.rst:75
 msgid "MySQL"
-msgstr ""
+msgstr "MySQL"
 
 #: ../../source/defense/reinforce.rst:76
 msgid "文件写权限设置"
-msgstr ""
+msgstr "File write permission settings"
 
 #: ../../source/defense/reinforce.rst:77
 msgid "用户授权表管理"
-msgstr ""
+msgstr "User privilege table management"
 
 #: ../../source/defense/reinforce.rst:78
 msgid "日志是否启用"
-msgstr ""
+msgstr "Whether logging is enabled"
 
 #: ../../source/defense/reinforce.rst:79 ../../source/defense/reinforce.rst:87
 #: ../../source/defense/reinforce.rst:111
 msgid "版本是否最新"
-msgstr ""
+msgstr "Whether the version is up to date"
 
 #: ../../source/defense/reinforce.rst:82
 msgid "Web中间件"
-msgstr ""
+msgstr "Web Middleware"
 
 #: ../../source/defense/reinforce.rst:85
 msgid "Apache"
-msgstr ""
+msgstr "Apache"
 
 #: ../../source/defense/reinforce.rst:86
 msgid "版本号隐藏"
-msgstr ""
+msgstr "Version number hiding"
 
 #: ../../source/defense/reinforce.rst:88 ../../source/defense/reinforce.rst:104
 #: ../../source/defense/reinforce.rst:124
 msgid "禁用部分HTTP动词"
-msgstr ""
+msgstr "Disable selected HTTP methods"
 
 #: ../../source/defense/reinforce.rst:89
 msgid "关闭Trace"
-msgstr ""
+msgstr "Disable Trace"
 
 #: ../../source/defense/reinforce.rst:90
 msgid "禁止 ``server-status``"
-msgstr ""
+msgstr "Disable ``server-status``"
 
 #: ../../source/defense/reinforce.rst:91
 msgid "上传文件大小限制"
-msgstr ""
+msgstr "Upload file size limit"
 
 #: ../../source/defense/reinforce.rst:92
 msgid "目录权限设置"
-msgstr ""
+msgstr "Directory permission settings"
 
 #: ../../source/defense/reinforce.rst:93
 msgid "是否允许路由重写"
-msgstr ""
+msgstr "Whether route rewriting is allowed"
 
 #: ../../source/defense/reinforce.rst:94
 msgid "是否允许列目录"
-msgstr ""
+msgstr "Whether directory listing is allowed"
 
 #: ../../source/defense/reinforce.rst:95 ../../source/defense/reinforce.rst:112
 msgid "日志配置"
-msgstr ""
+msgstr "Log configuration"
 
 #: ../../source/defense/reinforce.rst:96 ../../source/defense/reinforce.rst:107
 #: ../../source/defense/reinforce.rst:115
 #: ../../source/defense/reinforce.rst:129
 msgid "配置超时时间防DoS"
-msgstr ""
+msgstr "Configure timeouts to prevent DoS"
 
 #: ../../source/defense/reinforce.rst:97
 msgid "非属主用户文件读写限制"
-msgstr ""
+msgstr "File read/write restrictions for non-owner users"
 
 #: ../../source/defense/reinforce.rst:98
 msgid "httpd.conf"
-msgstr ""
+msgstr "httpd.conf"
 
 #: ../../source/defense/reinforce.rst:99
 msgid "access.log"
-msgstr ""
+msgstr "access.log"
 
 #: ../../source/defense/reinforce.rst:100
 msgid "error.log"
-msgstr ""
+msgstr "error.log"
 
 #: ../../source/defense/reinforce.rst:103
 msgid "Nginx"
-msgstr ""
+msgstr "Nginx"
 
 #: ../../source/defense/reinforce.rst:105
 msgid "禁用目录遍历"
-msgstr ""
+msgstr "Disable directory traversal"
 
 #: ../../source/defense/reinforce.rst:106
 msgid "检查重定向配置"
-msgstr ""
+msgstr "Check redirect configuration"
 
 #: ../../source/defense/reinforce.rst:110
 msgid "IIS"
-msgstr ""
+msgstr "IIS"
 
 #: ../../source/defense/reinforce.rst:113
 msgid "用户口令配置"
-msgstr ""
+msgstr "User password configuration"
 
 #: ../../source/defense/reinforce.rst:114
 msgid "ASP.NET功能配置"
-msgstr ""
+msgstr "ASP.NET feature configuration"
 
 #: ../../source/defense/reinforce.rst:118
 msgid "JBoss"
-msgstr ""
+msgstr "JBoss"
 
 #: ../../source/defense/reinforce.rst:119
 msgid "jmx console配置"
-msgstr ""
+msgstr "jmx console configuration"
 
 #: ../../source/defense/reinforce.rst:120
 msgid "web console配置"
-msgstr ""
+msgstr "web console configuration"
 
 #: ../../source/defense/reinforce.rst:123
 msgid "Tomcat"
-msgstr ""
+msgstr "Tomcat"
 
 #: ../../source/defense/reinforce.rst:125
 msgid "禁止列目录"
-msgstr ""
+msgstr "Disable directory listing"
 
 #: ../../source/defense/reinforce.rst:126
 msgid "禁止manager功能"
-msgstr ""
+msgstr "Disable the manager feature"
 
 #: ../../source/defense/reinforce.rst:127
 msgid "用户密码配置"
-msgstr ""
+msgstr "User password configuration"
 
 #: ../../source/defense/reinforce.rst:128
 msgid "用户权限配置"
-msgstr ""
+msgstr "User permission configuration"
 
 #: ../../source/defense/reinforce.rst:132
 msgid "密码管理策略"
-msgstr ""
+msgstr "Password Management Policy"
 
 #: ../../source/defense/reinforce.rst:133
 msgid "长度不少于8个字符"
-msgstr ""
+msgstr "Use at least 8 characters"
 
 #: ../../source/defense/reinforce.rst:134
 msgid "不存在于已有字典之中"
-msgstr ""
+msgstr "Do not use passwords that exist in known dictionaries"
 
 #: ../../source/defense/reinforce.rst:135
 msgid "不使用基于知识的认证方式"
-msgstr ""
+msgstr "Do not use knowledge-based authentication methods"
 
 #: ../../source/defense/reinforce.rst:138
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/reinforce.rst:139
 msgid ""
 "`awesome windows domain hardening <https://github.com/PaulSec/awesome-"
 "windows-domain-hardening>`_"
 msgstr ""
+"`awesome windows domain hardening <https://github.com/PaulSec/awesome-"
+"windows-domain-hardening>`_"
 
 #: ../../source/defense/reinforce.rst:140
 msgid ""
@@ -425,3 +430,6 @@ msgid ""
 "cn/windows/security/threat-protection/microsoft-defender-atp/customize-"
 "attack-surface-reduction>`_"
 msgstr ""
+"`customize attack surface reduction <https://docs.microsoft.com/zh-"
+"cn/windows/security/threat-protection/microsoft-defender-atp/customize-"
+"attack-surface-reduction>`_"

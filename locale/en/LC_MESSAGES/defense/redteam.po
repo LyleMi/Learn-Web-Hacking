@@ -20,25 +20,41 @@ msgstr ""
 
 #: ../../source/defense/redteam.rst:2
 msgid "红蓝对抗"
-msgstr ""
+msgstr "Red-Blue Exercises"
 
 #: ../../source/defense/redteam.rst:5
 msgid "概念"
-msgstr ""
+msgstr "Concept"
 
 #: ../../source/defense/redteam.rst:6
 msgid ""
 "红蓝对抗的概念最早来源于20世纪60年代的美国演习，演习是专指军队进行大规模的实兵演习，演习中通常分为红军、蓝军，其中蓝军通常是指在部队模拟对抗演习专门扮演假想敌的部队，与红军(代表我方正面部队)进行针对性的训练，这种方式也被称作Red"
 " Teaming。"
 msgstr ""
+"The concept of red-blue exercises originated from U.S. military exercises "
+"in the 1960s. In this context, exercises refer to large-scale live-force "
+"military drills, usually divided into red and blue forces. The blue force "
+"typically plays the dedicated opposing force in simulated confrontation "
+"exercises and conducts targeted training against the red force, which "
+"represents friendly front-line units. This approach is also known as Red "
+"Teaming."
 
 #: ../../source/defense/redteam.rst:8
 msgid "网络安全红蓝对抗的概念就源自于此。红军作为企业防守方，通过安全加固、攻击监测、应急处置等手段来保障企业安全。而蓝军作为攻击方，以发现安全漏洞，获取业务权限或数据为目标，利用各种攻击手段，试图绕过红军层层防护，达成既定目标。可能会造成混淆的是，在欧美一般采用红队代表攻击方，蓝队代表防守方，颜色代表正好相反。"
 msgstr ""
+"The cybersecurity concept of red-blue exercises comes from this model. In "
+"some enterprise contexts, the red force acts as the defender and protects "
+"the organization through security hardening, attack monitoring, emergency "
+"response, and related measures. The blue force acts as the attacker, aiming "
+"to discover vulnerabilities and obtain business privileges or data by using "
+"various attack techniques to bypass layered defenses and achieve predefined "
+"objectives. One point that can cause confusion is that in Europe and the "
+"United States, the red team usually represents the attacker and the blue "
+"team represents the defender, so the color roles are the opposite."
 
 #: ../../source/defense/redteam.rst:11
 msgid "网络攻防演习"
-msgstr ""
+msgstr "Cyber Attack and Defense Exercises"
 
 #: ../../source/defense/redteam.rst:12
 msgid ""
@@ -46,311 +62,345 @@ msgid ""
 "Shields)、“网络风暴”等。其中“锁盾”由北约卓越网络防御合作中心(CCDCOE，Cooperative Cyber Defence "
 "Centre of Excellence)每年举办一次。“网络风暴”由美国国土安全部(DHS)主导，2006年开始，每两年举行一次。"
 msgstr ""
+"Influential exercises include Locked Shields and Cyber Storm. Locked "
+"Shields is held annually by NATO's Cooperative Cyber Defence Centre of "
+"Excellence (CCDCOE). Cyber Storm is led by the U.S. Department of Homeland "
+"Security (DHS). It began in 2006 and is held every two years."
 
 #: ../../source/defense/redteam.rst:14
 msgid "和APT攻击相比，攻防演习相对时长较短，只有1~4周，有个防守目标。而APT攻击目标唯一，时长可达数月至数年，更有隐蔽性。"
 msgstr ""
+"Compared with APT attacks, attack and defense exercises are relatively "
+"short, usually lasting only 1 to 4 weeks, and have defined defensive "
+"objectives. APT attacks focus on a single target, may last from months to "
+"years, and are more covert."
 
 #: ../../source/defense/redteam.rst:17
 msgid "侧重"
-msgstr ""
+msgstr "Focus"
 
 #: ../../source/defense/redteam.rst:18
 msgid "企业网络蓝军工作内容主要包括渗透测试和红蓝对抗，这两种方式所使用的技术基本相同，但是侧重点不同。"
 msgstr ""
+"Enterprise network blue-team work mainly includes penetration testing and "
+"red-blue exercises. The techniques used by the two approaches are largely "
+"the same, but their focus differs."
 
 #: ../../source/defense/redteam.rst:20
 msgid "渗透测试侧重用较短的时间去挖掘更多的安全漏洞，一般不太关注攻击行为是否被监测发现，目的是帮助业务系统暴露和收敛更多风险。"
 msgstr ""
+"Penetration testing focuses on finding more vulnerabilities within a short "
+"period of time. It usually pays less attention to whether attack activity "
+"is detected, and its purpose is to help business systems expose and reduce "
+"more risks."
 
 #: ../../source/defense/redteam.rst:22
 msgid "红蓝对抗更接近真实场景，偏向于实战，面对的场景复杂、技术繁多。侧重绕过防御体系，毫无声息达成获取业务权限或数据的目标。不求发现全部风险点，因为攻击动作越多被发现的概率越大，一旦被发现，红军就会把蓝军踢出战场。红蓝对抗的目的是检验在真实攻击中纵深防御能力、告警运营质量、应急处置能力。"
 msgstr ""
+"Red-blue exercises are closer to real-world scenarios and emphasize "
+"practical operations. The environments are complex and involve many "
+"techniques. The focus is on bypassing the defense system and silently "
+"achieving objectives such as obtaining business privileges or data. The "
+"goal is not to discover every risk point, because the more attack actions "
+"are performed, the higher the probability of detection. Once detected, the "
+"defending side will remove the attacking side from the exercise. The "
+"purpose of red-blue exercises is to evaluate defense-in-depth capability, "
+"alert operation quality, and emergency response capability under realistic "
+"attack conditions."
 
 #: ../../source/defense/redteam.rst:25
 msgid "目标"
-msgstr ""
+msgstr "Objectives"
 
 #: ../../source/defense/redteam.rst:26
 msgid "评估现有防御能力的有效性、识别防御体系的弱点并提出具体的应对方案"
 msgstr ""
+"Evaluate the effectiveness of existing defensive capabilities, identify "
+"weaknesses in the defense system, and propose specific countermeasures"
 
 #: ../../source/defense/redteam.rst:27
 msgid "利用真实有效的模拟攻击来评估因为安全问题所造成的潜在的业务影响，为安全管理提供有效的数据来量化安全投入的ROI"
 msgstr ""
+"Use realistic and effective simulated attacks to assess potential business "
+"impact caused by security issues, and provide useful data for security "
+"management to quantify the ROI of security investment"
 
 #: ../../source/defense/redteam.rst:28
 msgid "提高公司安全成熟度及其检测和响应攻击的能力"
 msgstr ""
+"Improve the organization's security maturity and its ability to detect and "
+"respond to attacks"
 
 #: ../../source/defense/redteam.rst:31
 msgid "前期准备"
-msgstr ""
+msgstr "Preparation"
 
 #: ../../source/defense/redteam.rst:32
 msgid "组织结构图"
-msgstr ""
+msgstr "Organizational Chart"
 
 #: ../../source/defense/redteam.rst:33
 msgid "全网拓扑图"
-msgstr ""
+msgstr "Full Network Topology Diagram"
 
 #: ../../source/defense/redteam.rst:34
 msgid "各系统逻辑结构图"
-msgstr ""
+msgstr "Logical Architecture Diagram for Each System"
 
 #: ../../source/defense/redteam.rst:35
 msgid "各系统之间的调用关系"
-msgstr ""
+msgstr "Call Relationships Between Systems"
 
 #: ../../source/defense/redteam.rst:36
 msgid "数据流关系"
-msgstr ""
+msgstr "Data Flow Relationships"
 
 #: ../../source/defense/redteam.rst:37
 msgid "资产梳理"
-msgstr ""
+msgstr "Asset Inventory"
 
 #: ../../source/defense/redteam.rst:38
 msgid "核心资产清单"
-msgstr ""
+msgstr "Core Asset List"
 
 #: ../../source/defense/redteam.rst:39
 msgid "业务系统资产"
-msgstr ""
+msgstr "Business System Assets"
 
 #: ../../source/defense/redteam.rst:40
 msgid "设备资产"
-msgstr ""
+msgstr "Device Assets"
 
 #: ../../source/defense/redteam.rst:41
 msgid "外包/第三方服务资产"
-msgstr ""
+msgstr "Outsourced or Third-Party Service Assets"
 
 #: ../../source/defense/redteam.rst:42
 msgid "历史遗留资产"
-msgstr ""
+msgstr "Legacy Assets"
 
 #: ../../source/defense/redteam.rst:43
 msgid "业务资产信息"
-msgstr ""
+msgstr "Business Asset Information"
 
 #: ../../source/defense/redteam.rst:44
 msgid "业务系统名称"
-msgstr ""
+msgstr "Business System Name"
 
 #: ../../source/defense/redteam.rst:45
 msgid "业务系统类型"
-msgstr ""
+msgstr "Business System Type"
 
 #: ../../source/defense/redteam.rst:46
 msgid "服务器类型"
-msgstr ""
+msgstr "Server Type"
 
 #: ../../source/defense/redteam.rst:47
 msgid "域名/IP地址"
-msgstr ""
+msgstr "Domain Name/IP Address"
 
 #: ../../source/defense/redteam.rst:48
 msgid "服务端口"
-msgstr ""
+msgstr "Service Port"
 
 #: ../../source/defense/redteam.rst:49
 msgid "版本"
-msgstr ""
+msgstr "Version"
 
 #: ../../source/defense/redteam.rst:50
 msgid "系统部署位置"
-msgstr ""
+msgstr "System Deployment Location"
 
 #: ../../source/defense/redteam.rst:51
 msgid "开发框架"
-msgstr ""
+msgstr "Development Framework"
 
 #: ../../source/defense/redteam.rst:52
 msgid "中间件"
-msgstr ""
+msgstr "Middleware"
 
 #: ../../source/defense/redteam.rst:53
 msgid "数据库"
-msgstr ""
+msgstr "Database"
 
 #: ../../source/defense/redteam.rst:54 ../../source/defense/redteam.rst:62
 #: ../../source/defense/redteam.rst:70
 msgid "责任人"
-msgstr ""
+msgstr "Owner"
 
 #: ../../source/defense/redteam.rst:55 ../../source/defense/redteam.rst:63
 #: ../../source/defense/redteam.rst:71
 msgid "维护人员"
-msgstr ""
+msgstr "Maintainer"
 
 #: ../../source/defense/redteam.rst:56
 msgid "设备资产信息"
-msgstr ""
+msgstr "Device Asset Information"
 
 #: ../../source/defense/redteam.rst:57
 msgid "设备名称"
-msgstr ""
+msgstr "Device Name"
 
 #: ../../source/defense/redteam.rst:58
 msgid "设备版本号"
-msgstr ""
+msgstr "Device Version Number"
 
 #: ../../source/defense/redteam.rst:59
 msgid "固件版本号"
-msgstr ""
+msgstr "Firmware Version Number"
 
 #: ../../source/defense/redteam.rst:60
 msgid "IP地址"
-msgstr ""
+msgstr "IP Address"
 
 #: ../../source/defense/redteam.rst:61 ../../source/defense/redteam.rst:69
 msgid "部署位置"
-msgstr ""
+msgstr "Deployment Location"
 
 #: ../../source/defense/redteam.rst:64
 msgid "外包/第三方服务资产信息"
-msgstr ""
+msgstr "Outsourced or Third-Party Service Asset Information"
 
 #: ../../source/defense/redteam.rst:65 ../../source/defense/redteam.rst:72
 msgid "厂商联系方式"
-msgstr ""
+msgstr "Vendor Contact Information"
 
 #: ../../source/defense/redteam.rst:66
 msgid "系统名称"
-msgstr ""
+msgstr "System Name"
 
 #: ../../source/defense/redteam.rst:67
 msgid "系统类型"
-msgstr ""
+msgstr "System Type"
 
 #: ../../source/defense/redteam.rst:68
 msgid "IP/URL地址"
-msgstr ""
+msgstr "IP/URL Address"
 
 #: ../../source/defense/redteam.rst:73
 msgid "第三方值班人员"
-msgstr ""
+msgstr "Third-Party On-Call Personnel"
 
 #: ../../source/defense/redteam.rst:74
 msgid "风险梳理"
-msgstr ""
+msgstr "Risk Review"
 
 #: ../../source/defense/redteam.rst:75
 msgid "基础设施风险"
-msgstr ""
+msgstr "Infrastructure Risks"
 
 #: ../../source/defense/redteam.rst:76
 msgid "帐号权限梳理"
-msgstr ""
+msgstr "Account and Permission Review"
 
 #: ../../source/defense/redteam.rst:77
 msgid "互联网风险排查"
-msgstr ""
+msgstr "Internet-Facing Risk Inspection"
 
 #: ../../source/defense/redteam.rst:78
 msgid "收敛攻击面"
-msgstr ""
+msgstr "Reduce the Attack Surface"
 
 #: ../../source/defense/redteam.rst:79
 msgid "应急响应计划"
-msgstr ""
+msgstr "Incident Response Plan"
 
 #: ../../source/defense/redteam.rst:80
 msgid "业务连续性计划"
-msgstr ""
+msgstr "Business Continuity Plan"
 
 #: ../../source/defense/redteam.rst:81
 msgid "灾难恢复计划"
-msgstr ""
+msgstr "Disaster Recovery Plan"
 
 #: ../../source/defense/redteam.rst:84
 msgid "行动流程"
-msgstr ""
+msgstr "Action Process"
 
 #: ../../source/defense/redteam.rst:85
 msgid "攻击准备"
-msgstr ""
+msgstr "Attack Preparation"
 
 #: ../../source/defense/redteam.rst:86
 msgid "明确授权范围、测试目标、限制条件等"
-msgstr ""
+msgstr "Clarify the authorization scope, test objectives, constraints, and related items"
 
 #: ../../source/defense/redteam.rst:87
 msgid "报备与授权流程"
-msgstr ""
+msgstr "Filing and Authorization Process"
 
 #: ../../source/defense/redteam.rst:88
 msgid "行动成本与预算"
-msgstr ""
+msgstr "Operation Cost and Budget"
 
 #: ../../source/defense/redteam.rst:89
 msgid "攻击执行"
-msgstr ""
+msgstr "Attack Execution"
 
 #: ../../source/defense/redteam.rst:90
 msgid "备案的时间区间内"
-msgstr ""
+msgstr "Within the Filed Time Window"
 
 #: ../../source/defense/redteam.rst:91
 msgid "备案的目标范围内"
-msgstr ""
+msgstr "Within the Filed Target Scope"
 
 #: ../../source/defense/redteam.rst:92
 msgid "备案的攻击IP与网络环境"
-msgstr ""
+msgstr "Filed Attack IP and Network Environment"
 
 #: ../../source/defense/redteam.rst:93
 msgid "攻击完成"
-msgstr ""
+msgstr "Attack Completion"
 
 #: ../../source/defense/redteam.rst:94
 msgid "恢复所有修改"
-msgstr ""
+msgstr "Restore All Changes"
 
 #: ../../source/defense/redteam.rst:95
 msgid "移除所有持久化控制"
-msgstr ""
+msgstr "Remove All Persistent Control"
 
 #: ../../source/defense/redteam.rst:96
 msgid "提交攻击报告与改进建议"
-msgstr ""
+msgstr "Submit the Attack Report and Improvement Recommendations"
 
 #: ../../source/defense/redteam.rst:99
 msgid "注意事项"
-msgstr ""
+msgstr "Notes"
 
 #: ../../source/defense/redteam.rst:100
 msgid "测试前进行报备"
-msgstr ""
+msgstr "File the test before it starts"
 
 #: ../../source/defense/redteam.rst:101
 msgid "有可能会影响到业务的操作时候提前沟通"
-msgstr ""
+msgstr "Communicate in advance when an operation may affect business services"
 
 #: ../../source/defense/redteam.rst:102
 msgid "漏洞和业务沟通确认后再发工单修复"
-msgstr ""
+msgstr "Create repair tickets only after vulnerabilities are confirmed with the business team"
 
 #: ../../source/defense/redteam.rst:103
 msgid "漏洞闭环"
-msgstr ""
+msgstr "Vulnerability Closure"
 
 #: ../../source/defense/redteam.rst:106
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/redteam.rst:107
 msgid "`以攻促防 企业蓝军建设思考 <https://mp.weixin.qq.com/s/8iJs2ON66NY1Jdbt7c-BTA>`_"
-msgstr ""
+msgstr "`Using Attack to Improve Defense: Thoughts on Enterprise Blue Team Building <https://mp.weixin.qq.com/s/8iJs2ON66NY1Jdbt7c-BTA>`_"
 
 #: ../../source/defense/redteam.rst:108
 msgid "`云上攻防：Red Teaming for Cloud <http://avfisher.win/archives/1175>`_"
-msgstr ""
+msgstr "`Cloud Attack and Defense: Red Teaming for Cloud <http://avfisher.win/archives/1175>`_"
 
 #: ../../source/defense/redteam.rst:109
 msgid ""
 "`网络攻防演练之企业蓝队建设指南 "
 "<https://www.freebuf.com/articles/neopoints/252229.html>`_"
 msgstr ""
+"`Enterprise Blue Team Building Guide for Cyber Attack and Defense Exercises "
+"<https://www.freebuf.com/articles/neopoints/252229.html>`_"

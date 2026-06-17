@@ -20,152 +20,157 @@ msgstr ""
 
 #: ../../source/defense/team.rst:2
 msgid "团队建设"
-msgstr ""
+msgstr "Team Building"
 
 #: ../../source/defense/team.rst:5
 msgid "人员分工"
-msgstr ""
+msgstr "Role Assignment"
 
 #: ../../source/defense/team.rst:6
 msgid "部门负责人"
-msgstr ""
+msgstr "Department Head"
 
 #: ../../source/defense/team.rst:7
 msgid "负责组织整体的信息安全规划"
-msgstr ""
+msgstr "Responsible for the organization's overall information security planning"
 
 #: ../../source/defense/team.rst:8
 msgid "负责向高层沟通申请资源"
-msgstr ""
+msgstr "Responsible for communicating with senior management and requesting resources"
 
 #: ../../source/defense/team.rst:9
 msgid "负责与组织其他部门的协调沟通"
-msgstr ""
+msgstr "Responsible for coordination and communication with other departments"
 
 #: ../../source/defense/team.rst:10
 msgid "共同推进信息安全工作"
-msgstr ""
+msgstr "Jointly advance information security work"
 
 #: ../../source/defense/team.rst:11
 msgid "负责信息安全团队建设"
-msgstr ""
+msgstr "Responsible for information security team building"
 
 #: ../../source/defense/team.rst:12
 msgid "负责安全事件应急工作处置"
-msgstr ""
+msgstr "Responsible for emergency handling of security incidents"
 
 #: ../../source/defense/team.rst:13
 msgid "负责推动组织安全规划的落实"
-msgstr ""
+msgstr "Responsible for driving implementation of the organization's security plan"
 
 #: ../../source/defense/team.rst:14
 msgid "合规管理员"
-msgstr ""
+msgstr "Compliance Administrator"
 
 #: ../../source/defense/team.rst:15
 msgid "负责安全相关管理制度、管理流程的制定，监督实施情况，修改和改进相关的制度和流程"
 msgstr ""
+"Responsible for creating security-related management policies and processes, "
+"supervising their implementation, and revising and improving the relevant "
+"policies and processes"
 
 #: ../../source/defense/team.rst:16
 msgid "负责合规性迎检准备工作，包括联络、迎检工作推动，迎检结果汇报等所有相关工作"
 msgstr ""
+"Responsible for compliance inspection preparation, including liaison, "
+"inspection coordination, inspection result reporting, and all related work"
 
 #: ../../source/defense/team.rst:17
 msgid "负责与外部安全相关单位联络"
-msgstr ""
+msgstr "Responsible for liaison with external security-related organizations"
 
 #: ../../source/defense/team.rst:18
 msgid "负责安全意识培训、宣传和推广"
-msgstr ""
+msgstr "Responsible for security awareness training, communication, and promotion"
 
 #: ../../source/defense/team.rst:19
 msgid "安全技术负责人"
-msgstr ""
+msgstr "Security Technical Lead"
 
 #: ../../source/defense/team.rst:20
 msgid "业务安全防护整体技术规划和计划"
-msgstr ""
+msgstr "Overall technical planning and plans for business security protection"
 
 #: ../../source/defense/team.rst:21
 msgid "了解组织安全技术缺陷，并能找到方法进行防御"
-msgstr ""
+msgstr "Understand the organization's security technology weaknesses and identify defensive methods"
 
 #: ../../source/defense/team.rst:22
 msgid "安全设备运维"
-msgstr ""
+msgstr "Security Device Operations and Maintenance"
 
 #: ../../source/defense/team.rst:23
 msgid "服务器与网络基础设备的安全加固推进工作"
-msgstr ""
+msgstr "Drive security hardening for servers and network infrastructure devices"
 
 #: ../../source/defense/team.rst:24
 msgid "安全事件排查与分析，配合定期编写安全分析报告"
-msgstr ""
+msgstr "Investigate and analyze security incidents, and help prepare regular security analysis reports"
 
 #: ../../source/defense/team.rst:25
 msgid "关注注业内安全事件， 跟踪最新漏洞信息，进行业务产品的安全检查"
-msgstr ""
+msgstr "Follow industry security incidents, track the latest vulnerability information, and perform security checks on business products"
 
 #: ../../source/defense/team.rst:26
 msgid "负责漏洞修复工作推进，跟踪解决情况，问题收集"
-msgstr ""
+msgstr "Responsible for driving vulnerability remediation, tracking resolution status, and collecting issues"
 
 #: ../../source/defense/team.rst:27
 msgid "了解最新安全技术趋势"
-msgstr ""
+msgstr "Understand the latest security technology trends"
 
 #: ../../source/defense/team.rst:28
 msgid "渗透/代码审计人员"
-msgstr ""
+msgstr "Penetration Testing and Code Audit Personnel"
 
 #: ../../source/defense/team.rst:29
 msgid "对组织业务网站、业务系统进行安全评估测试"
-msgstr ""
+msgstr "Perform security assessment testing on the organization's business websites and business systems"
 
 #: ../../source/defense/team.rst:30
 msgid "对漏洞结果提供解决方案和修复建议"
-msgstr ""
+msgstr "Provide solutions and remediation recommendations for vulnerability findings"
 
 #: ../../source/defense/team.rst:31
 msgid "安全设备运维人员"
-msgstr ""
+msgstr "Security Device Operations Personnel"
 
 #: ../../source/defense/team.rst:32
 msgid "负责设备配置和策略的修改"
-msgstr ""
+msgstr "Responsible for modifying device configurations and policies"
 
 #: ../../source/defense/team.rst:33
 msgid "负责协助其他部门的变更导致的安全策略修改的实现"
-msgstr ""
+msgstr "Responsible for helping implement security policy changes caused by changes in other departments"
 
 #: ../../source/defense/team.rst:34
 msgid "安全开发"
-msgstr ""
+msgstr "Security Development"
 
 #: ../../source/defense/team.rst:35
 msgid "根据组织安全的需要开发安全辅助工具或平台"
-msgstr ""
+msgstr "Develop security support tools or platforms based on the organization's security needs"
 
 #: ../../source/defense/team.rst:36
 msgid "参与安全系统的需求分析、设计、编码等开发工作"
-msgstr ""
+msgstr "Participate in requirements analysis, design, coding, and other development work for security systems"
 
 #: ../../source/defense/team.rst:37
 msgid "维护公司现有的安全程序与系统"
-msgstr ""
+msgstr "Maintain the company's existing security programs and systems"
 
 #: ../../source/defense/team.rst:40
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/defense/team.rst:41
 msgid "`初入甲方的企业安全建设规划 <https://mp.weixin.qq.com/s/BqOFP217kiN55IWb_oQP-w>`_"
-msgstr ""
+msgstr "`Enterprise Security Construction Planning for New Internal Security Teams <https://mp.weixin.qq.com/s/BqOFP217kiN55IWb_oQP-w>`_"
 
 #: ../../source/defense/team.rst:42
 msgid "`企业安全项目架构实践分享 <https://mp.weixin.qq.com/s/RlBTH9-xrY7Nd1ZJK3KjDQ>`_"
-msgstr ""
+msgstr "`Enterprise Security Project Architecture Practice Sharing <https://mp.weixin.qq.com/s/RlBTH9-xrY7Nd1ZJK3KjDQ>`_"
 
 #: ../../source/defense/team.rst:43
 msgid "`企业信息安全团队建设 <https://xz.aliyun.com/t/1965>`_"
-msgstr ""
+msgstr "`Enterprise Information Security Team Building <https://xz.aliyun.com/t/1965>`_"
