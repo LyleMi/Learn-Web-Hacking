@@ -613,15 +613,15 @@ msgstr "Punycode Spoofs"
 
 #: ../../source/misc/unicode.rst:145
 msgid "http://䕮䕵䕶䕱.com        http://xn--google.com"
-msgstr "http://䕮䕵䕶䕱.com        http://xn--google.com"
+msgstr "http://[U+456E U+4575 U+4576 U+4571].com        http://xn--google.com"
 
 #: ../../source/misc/unicode.rst:146
 msgid "http://䁾.com              http://xn--cnn.com"
-msgstr "http://䁾.com              http://xn--cnn.com"
+msgstr "http://[U+407E].com              http://xn--cnn.com"
 
 #: ../../source/misc/unicode.rst:147
 msgid "http://岍岊岊岅岉岎.com    http://xn--citibank.com"
-msgstr "http://岍岊岊岅岉岎.com    http://xn--citibank.com"
+msgstr "http://[U+5C8D U+5C8A U+5C8A U+5C85 U+5C89 U+5C8E].com    http://xn--citibank.com"
 
 #: ../../source/misc/unicode.rst:149
 msgid "有些浏览器会直接显示puncode，但是也可以借助这种机制实现UI Spooof。"

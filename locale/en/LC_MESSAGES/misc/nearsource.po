@@ -20,104 +20,128 @@ msgstr ""
 
 #: ../../source/misc/nearsource.rst:2
 msgid "近源渗透"
-msgstr ""
+msgstr "Proximity-Based Penetration Testing"
 
 #: ../../source/misc/nearsource.rst:5
 msgid "USB攻击"
-msgstr ""
+msgstr "USB Attacks"
 
 #: ../../source/misc/nearsource.rst:8
 msgid "BadUSB"
-msgstr ""
+msgstr "BadUSB"
 
 #: ../../source/misc/nearsource.rst:9
 msgid "通过重新编程USB设备的内部微控制器，来执行恶意操作，例如注册为键盘设备，发送特定按键进行恶意操作。"
 msgstr ""
+"BadUSB attacks reprogram the internal microcontroller of a USB device to "
+"perform malicious actions, such as registering as a keyboard device and "
+"sending specific keystrokes."
 
 #: ../../source/misc/nearsource.rst:12
 msgid "AutoRUN"
-msgstr ""
+msgstr "AutoRUN"
 
 #: ../../source/misc/nearsource.rst:13
 msgid "根据主机配置的方式，一些操作系统会自动执行位于USB设备存储器上的预定文件。可以通过这种方式执行恶意软件。"
 msgstr ""
+"Depending on the host configuration, some operating systems automatically "
+"execute predefined files stored on a USB device. Malware can be executed in "
+"this way."
 
 #: ../../source/misc/nearsource.rst:16
 msgid "USB Killer"
-msgstr ""
+msgstr "USB Killer"
 
 #: ../../source/misc/nearsource.rst:17
 msgid "通过特殊的USB设备基于电气等方式来永久销毁设备。"
 msgstr ""
+"Special USB devices can permanently damage equipment through electrical "
+"methods."
 
 #: ../../source/misc/nearsource.rst:20
 msgid "侧信道"
-msgstr ""
+msgstr "Side Channels"
 
 #: ../../source/misc/nearsource.rst:21
 msgid "通过改装USB增加一些监听/测信道传输设备。"
 msgstr ""
+"A modified USB device can add listening or side-channel transmission "
+"hardware."
 
 #: ../../source/misc/nearsource.rst:24
 msgid "HID攻击"
-msgstr ""
+msgstr "HID Attacks"
 
 #: ../../source/misc/nearsource.rst:25
 msgid ""
 "HID(human interface "
 "device)指键盘、鼠标等用于为计算机提供数据输入的人机交互设备。HID攻击指攻击者将特殊的USB设备模拟成为键盘，一旦连接上计算机就执行预定的恶意操作。HID攻击可以基于Android设备、数据线设备等实施。"
 msgstr ""
+"HID (human interface device) refers to devices such as keyboards and mice "
+"that provide data input to computers. In an HID attack, an attacker emulates "
+"a special USB device as a keyboard, then executes predefined malicious "
+"actions once it is connected to a computer. HID attacks can be carried out "
+"with Android devices, malicious cables, and similar hardware."
 
 #: ../../source/misc/nearsource.rst:28
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: ../../source/misc/nearsource.rst:31
 msgid "密码爆破"
-msgstr ""
+msgstr "Password Brute Force"
 
 #: ../../source/misc/nearsource.rst:32
 msgid "基于WPA2的验证方式，Wi-Fi可以通过抓握手包的方式进行线下的密码爆破。"
 msgstr ""
+"For WPA2-based authentication, Wi-Fi passwords can be brute-forced offline "
+"after capturing handshake packets."
 
 #: ../../source/misc/nearsource.rst:35
 msgid "信号压制"
-msgstr ""
+msgstr "Signal Suppression"
 
 #: ../../source/misc/nearsource.rst:36
 msgid "可以使用大功率的设备捕获握手包并模仿目标AP，从而实现中间人攻击。"
 msgstr ""
+"High-power equipment can be used to capture handshakes and impersonate the "
+"target AP, enabling man-in-the-middle attacks."
 
 #: ../../source/misc/nearsource.rst:39
 msgid "门禁"
-msgstr ""
+msgstr "Access Control"
 
 #: ../../source/misc/nearsource.rst:42
 msgid "电磁脉冲"
-msgstr ""
+msgstr "Electromagnetic Pulse"
 
 #: ../../source/misc/nearsource.rst:43
 msgid ""
 "部分电子门禁和电子密码锁的电子系统中集成电路对电磁脉冲比较敏感，可以通过外加电磁脉冲(Electromagnetic "
 "Pulse，EMP)的方式破坏设备，来实现打开的效果。"
 msgstr ""
+"In some electronic access-control systems and electronic password locks, "
+"integrated circuits are sensitive to electromagnetic pulses (EMP). Applying "
+"an external EMP can damage the device and cause it to open."
 
 #: ../../source/misc/nearsource.rst:46
 msgid "IC卡"
-msgstr ""
+msgstr "IC Cards"
 
 #: ../../source/misc/nearsource.rst:47
 msgid "基于变色龙等设备可以使用模拟、破解、复制IC卡破解门禁。"
 msgstr ""
+"Devices such as Chameleon can be used to emulate, crack, or clone IC cards "
+"to bypass access-control systems."
 
 #: ../../source/misc/nearsource.rst:50
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/nearsource.rst:51
 msgid "`近源渗透硬件指北 <https://www.secpulse.com/archives/123723.html>`_"
-msgstr ""
+msgstr "`Proximity Penetration Hardware Guide <https://www.secpulse.com/archives/123723.html>`_"
 
 #: ../../source/misc/nearsource.rst:52
 msgid "`红蓝对抗之近源渗透 <https://mp.weixin.qq.com/s/dmh3dDt0BaZYIcWdSTsQcg>`_"
-msgstr ""
+msgstr "`Proximity Penetration in Red-Blue Exercises <https://mp.weixin.qq.com/s/dmh3dDt0BaZYIcWdSTsQcg>`_"

@@ -20,15 +20,18 @@ msgstr ""
 
 #: ../../source/misc/ics.rst:2
 msgid "工控安全"
-msgstr ""
+msgstr "Industrial Control System Security"
 
 #: ../../source/misc/ics.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/misc/ics.rst:6
 msgid "工控安全，即工业控制系统安全，是网络安全的一个重要分支。它主要关注工业控制系统及其数据的安全，以确保正常工业生产不受影响。"
 msgstr ""
+"Industrial control system security, or ICS security, is an important branch "
+"of cybersecurity. It focuses on the security of industrial control systems "
+"and their data so that normal industrial production is not affected."
 
 #: ../../source/misc/ics.rst:8
 msgid ""
@@ -36,31 +39,51 @@ msgid ""
 "System）、监控和数据采集系统（SCADA，Supervisory Control and Data "
 "Acquisition）等，广泛应用于能源供给、制造业、科学研究、航海业和汽车自动驾驶等领域。"
 msgstr ""
+"Industrial Control Systems (ICS) include Fieldbus Control Systems (FCS), "
+"Supervisory Control and Data Acquisition (SCADA) systems, and similar "
+"systems. They are widely used in energy supply, manufacturing, scientific "
+"research, maritime operations, autonomous driving, and other fields."
 
 #: ../../source/misc/ics.rst:11
 msgid "通信协议"
-msgstr ""
+msgstr "Communication Protocols"
 
 #: ../../source/misc/ics.rst:12
 msgid "除了常用的网络协议以外，工控系统也使用MODBUS、CAN等协议进行通信。"
 msgstr ""
+"Besides common network protocols, industrial control systems also use "
+"protocols such as MODBUS and CAN for communication."
 
 #: ../../source/misc/ics.rst:14
 msgid "MODBUS是一种串行通信协议，适用于连接不同类型的设备。它采用了主从结构，每个从站设备都有独立的地址，主站可以通过读写寄存器的方式与从站进行通讯。MODBUS协议具有简单易用、可靠性高、灵活性强等特点，广泛应用于各种自动化控制系统中。"
 msgstr ""
+"MODBUS is a serial communication protocol suitable for connecting different "
+"types of devices. It uses a master-slave structure in which each slave "
+"device has an independent address, and the master communicates with slaves "
+"by reading and writing registers. MODBUS is simple, reliable, and flexible, "
+"so it is widely used in automation control systems."
 
 #: ../../source/misc/ics.rst:16
 msgid ""
 "CAN（Controller Area "
 "Network）总线是一种广泛使用的控制网络，常用于汽车和工业控制领域。它采用了多主结构，所有设备都位于同一个总线上。CAN总线通讯速度较高，且具有较好的实时性。CAN总线最初被设计作为汽车环境中的微控制器通讯，在车载各电子控制装置ECU之间交换信息，形成汽车电子控制网络。"
 msgstr ""
+"The CAN (Controller Area Network) bus is a widely used control network, "
+"commonly seen in automotive and industrial control environments. It uses a "
+"multi-master structure in which all devices share the same bus. CAN bus "
+"communication is fast and has good real-time characteristics. It was "
+"originally designed for microcontroller communication in automotive "
+"environments, where electronic control units (ECUs) exchange information to "
+"form an automotive electronic control network."
 
 #: ../../source/misc/ics.rst:19
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/ics.rst:20
 msgid ""
 "`awesome industrial control system security <https://github.com/hslatman"
 "/awesome-industrial-control-system-security>`_"
 msgstr ""
+"`awesome industrial control system security <https://github.com/hslatman"
+"/awesome-industrial-control-system-security>`_"

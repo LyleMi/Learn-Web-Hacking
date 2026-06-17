@@ -20,65 +20,71 @@ msgstr ""
 
 #: ../../source/misc/json.rst:2
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 #: ../../source/misc/json.rst:3
 msgid "JSON (JavaScript Object Notation) 是许多数据格式通信的基石。"
 msgstr ""
+"JSON (JavaScript Object Notation) is a foundation for many data exchange "
+"formats."
 
 #: ../../source/misc/json.rst:6
 msgid "安全风险"
-msgstr ""
+msgstr "Security Risks"
 
 #: ../../source/misc/json.rst:7
 #, python-brace-format
 msgid "重复的key ``{\"test\": 1, \"test\": 2}``"
-msgstr ""
+msgstr "Duplicate keys such as ``{\"test\": 1, \"test\": 2}``"
 
 #: ../../source/misc/json.rst:8
 msgid "特殊的key值 ``\\x00`` ``\\x0d`` ``\\ud800`` ``\"`` 等"
-msgstr ""
+msgstr "Special key values such as ``\\x00`` ``\\x0d`` ``\\ud800`` ``\"``"
 
 #: ../../source/misc/json.rst:9
 msgid "序列化"
-msgstr ""
+msgstr "Serialization"
 
 #: ../../source/misc/json.rst:10
 msgid "特定的数值"
-msgstr ""
+msgstr "Specific numeric values"
 
 #: ../../source/misc/json.rst:11
 msgid "超过上限的整数"
-msgstr ""
+msgstr "Integers beyond the upper limit"
 
 #: ../../source/misc/json.rst:12
 msgid "科学计数法"
-msgstr ""
+msgstr "Scientific notation"
 
 #: ../../source/misc/json.rst:13
 msgid "null值的不同表示"
-msgstr ""
+msgstr "Different representations of null values"
 
 #: ../../source/misc/json.rst:16
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/json.rst:19
 msgid "相关规范"
-msgstr ""
+msgstr "Related Specifications"
 
 #: ../../source/misc/json.rst:20
 msgid ""
 "`RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format "
 "<https://tools.ietf.org/html/rfc8259>`_"
 msgstr ""
+"`RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format "
+"<https://tools.ietf.org/html/rfc8259>`_"
 
 #: ../../source/misc/json.rst:21
 msgid ""
 "`ECMA-404 The JSON data interchange syntax <https://www.ecma-"
 "international.org/publications-and-standards/standards/ecma-404/>`_"
 msgstr ""
+"`ECMA-404 The JSON data interchange syntax <https://www.ecma-"
+"international.org/publications-and-standards/standards/ecma-404/>`_"
 
 #: ../../source/misc/json.rst:22
 msgid "`json5 <https://json5.org/>`_"
-msgstr ""
+msgstr "`json5 <https://json5.org/>`_"

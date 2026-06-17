@@ -20,17 +20,20 @@ msgstr ""
 
 #: ../../source/misc/email.rst:2
 msgid "邮件安全"
-msgstr ""
+msgstr "Email Security"
 
 #: ../../source/misc/email.rst:5
 msgid "常用概念"
-msgstr ""
+msgstr "Common Concepts"
 
 #: ../../source/misc/email.rst:6
 msgid ""
 "邮件安全常用的概念是SPF、DKIM和DMARC。其中 SPF (Sender Policy Framework) "
 "是一条特殊的DNS记录，用于设定合法的发送邮件的IP。"
 msgstr ""
+"Common concepts in email security include SPF, DKIM, and DMARC. SPF "
+"(Sender Policy Framework) is a special DNS record used to define the IP "
+"addresses that are allowed to send mail."
 
 #: ../../source/misc/email.rst:8
 msgid ""
@@ -38,9 +41,15 @@ msgid ""
 "将数字签名添加到电子邮件消息的标题中，使邮件服务器拥有确保邮件内容没有更改的能力，同样DKIM也存在于DNS中。通过查询 "
 "``<selector>._domainkey.example.com`` 的txt记录查询。"
 msgstr ""
+"DKIM (DomainKeys Identified Mail) adds a digital signature to email message "
+"headers, allowing mail servers to verify that the message content has not "
+"been changed. DKIM records also live in DNS and can be queried through the "
+"TXT record of ``<selector>._domainkey.example.com``."
 
 #: ../../source/misc/email.rst:10
 msgid ""
 "DMARC(Domain-based Message Authentication): 通过查询 "
 "``<selector>._domainkey.example.com`` 的txt记录查询。"
 msgstr ""
+"DMARC (Domain-based Message Authentication): queried through the TXT record "
+"of ``<selector>._domainkey.example.com``."
