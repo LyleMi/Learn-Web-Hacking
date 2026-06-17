@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,126 +20,141 @@ msgstr ""
 
 #: ../../source/vuln/pathtraversal.rst:2
 msgid "目录穿越"
-msgstr ""
+msgstr "Path Traversal"
 
 #: ../../source/vuln/pathtraversal.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/vuln/pathtraversal.rst:6
 msgid ""
 "目录穿越（也被称为目录遍历/directory traversal/path traversal）是通过使用 ``../`` "
 "等目录控制序列或者文件的绝对路径来访问存储在文件系统上的任意文件和目录，特别是应用程序源代码、配置文件、重要的系统文件等。"
 msgstr ""
+"Path traversal, also known as directory traversal, accesses arbitrary files "
+"and directories stored on the file system by using directory control "
+"sequences such as ``../`` or absolute file paths, especially application "
+"source code, configuration files, and important system files."
 
 #: ../../source/vuln/pathtraversal.rst:9
 msgid "攻击载荷"
-msgstr ""
+msgstr "Attack Payloads"
 
 #: ../../source/vuln/pathtraversal.rst:12
 msgid "URL参数"
-msgstr ""
+msgstr "URL Parameters"
 
 #: ../../source/vuln/pathtraversal.rst:13
 msgid "``../``"
-msgstr ""
+msgstr "``../``"
 
 #: ../../source/vuln/pathtraversal.rst:14
 msgid "``..\\``"
-msgstr ""
+msgstr "``..\\``"
 
 #: ../../source/vuln/pathtraversal.rst:15
 msgid "``..;/``"
-msgstr ""
+msgstr "``..;/``"
 
 #: ../../source/vuln/pathtraversal.rst:18
 msgid "Nginx Off by Slash"
-msgstr ""
+msgstr "Nginx Off by Slash"
 
 #: ../../source/vuln/pathtraversal.rst:19
 msgid "``https://vuln.site.com/files../``"
-msgstr ""
+msgstr "``https://vuln.site.com/files../``"
 
 #: ../../source/vuln/pathtraversal.rst:22
 msgid "UNC Bypass"
-msgstr ""
+msgstr "UNC Bypass"
 
 #: ../../source/vuln/pathtraversal.rst:23
 msgid "``\\\\localhost\\c$\\windows\\win.ini``"
-msgstr ""
+msgstr "``\\\\localhost\\c$\\windows\\win.ini``"
 
 #: ../../source/vuln/pathtraversal.rst:26
 msgid "过滤绕过"
-msgstr ""
+msgstr "Filter Bypass"
 
 #: ../../source/vuln/pathtraversal.rst:27
 msgid "单次替换"
-msgstr ""
+msgstr "Single Replacement"
 
 #: ../../source/vuln/pathtraversal.rst:28
 msgid "``...//``"
-msgstr ""
+msgstr "``...//``"
 
 #: ../../source/vuln/pathtraversal.rst:29
 msgid "URL编码"
-msgstr ""
+msgstr "URL Encoding"
 
 #: ../../source/vuln/pathtraversal.rst:30
 msgid "16位Unicode编码"
-msgstr ""
+msgstr "16-bit Unicode Encoding"
 
 #: ../../source/vuln/pathtraversal.rst:31
 msgid "``\\u002e``"
-msgstr ""
+msgstr "``\\u002e``"
 
 #: ../../source/vuln/pathtraversal.rst:32
 msgid "超长UTF-8编码"
-msgstr ""
+msgstr "Overlong UTF-8 Encoding"
 
 #: ../../source/vuln/pathtraversal.rst:33
 #, python-format
 msgid "``\\%e0%40%ae``"
-msgstr ""
+msgstr "``\\%e0%40%ae``"
 
 #: ../../source/vuln/pathtraversal.rst:36
 msgid "防御"
-msgstr ""
+msgstr "Defense"
 
 #: ../../source/vuln/pathtraversal.rst:37
 msgid "在进行文件操作相关的API前，应该对用户输入做过滤。较强的规则下可以使用白名单，仅允许纯字母或数字字符等。"
 msgstr ""
+"Before calling file operation APIs, user input should be filtered. Under "
+"stricter rules, use a whitelist that allows only alphabetic or numeric "
+"characters."
 
 #: ../../source/vuln/pathtraversal.rst:39
 msgid "若规则允许的字符较多，最好使用当前操作系统路径规范化函数规范化路径后，进行过滤，最后再进行相关调用。"
 msgstr ""
+"If the rules allow a broader set of characters, preferably normalize the "
+"path with the current operating system's path normalization function, filter"
+" it, and only then perform the related call."
 
 #: ../../source/vuln/pathtraversal.rst:42
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/vuln/pathtraversal.rst:43
 msgid ""
 "`Directory traversal by portswigger <https://portswigger.net/web-security"
 "/file-path-traversal>`_"
 msgstr ""
+"`Directory traversal by PortSwigger <https://portswigger.net/web-security"
+"/file-path-traversal>`_"
 
 #: ../../source/vuln/pathtraversal.rst:44
-msgid ""
-"`Path Traversal by OWASP "
-"<https://www.owasp.org/index.php/Path_Traversal>`_"
-msgstr ""
+msgid "`Path Traversal by OWASP <https://www.owasp.org/index.php/Path_Traversal>`_"
+msgstr "`Path Traversal by OWASP <https://www.owasp.org/index.php/Path_Traversal>`_"
 
 #: ../../source/vuln/pathtraversal.rst:45
 msgid ""
-"`path normalization "
-"<https://blogs.msdn.microsoft.com/jeremykuhne/2016/04/21/path-"
-"normalization/>`_"
+"`path normalization <https://blogs.msdn.microsoft.com/jeremykuhne/2016/04/21"
+"/path-normalization/>`_"
 msgstr ""
+"`Path Normalization <https://blogs.msdn.microsoft.com/jeremykuhne/2016/04/21"
+"/path-normalization/>`_"
 
 #: ../../source/vuln/pathtraversal.rst:46
 msgid ""
-"`Breaking Parser Logic: Take Your Path Normalization Off and Pop 0days "
-"Out defcon <https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-"
+"`Breaking Parser Logic: Take Your Path Normalization Off and Pop 0days Out "
+"defcon <https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-"
 "Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-"
 "Out-2.pdf>`_"
 msgstr ""
+"`Breaking Parser Logic: Take Your Path Normalization Off and Pop 0days Out "
+"DEF CON <https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-"
+"Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-"
+"Out-2.pdf>`_"

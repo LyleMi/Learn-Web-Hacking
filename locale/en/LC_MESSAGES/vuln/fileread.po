@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,116 +20,116 @@ msgstr ""
 
 #: ../../source/vuln/fileread.rst:2
 msgid "文件读取"
-msgstr ""
+msgstr "File Read"
 
 #: ../../source/vuln/fileread.rst:4
 msgid "考虑读取可能有敏感信息的文件"
-msgstr ""
+msgstr "Consider reading files that may contain sensitive information."
 
 #: ../../source/vuln/fileread.rst:6
 msgid "用户目录下的敏感文件"
-msgstr ""
+msgstr "Sensitive files in user directories"
 
 #: ../../source/vuln/fileread.rst:7
 msgid ".bash_history"
-msgstr ""
+msgstr ".bash_history"
 
 #: ../../source/vuln/fileread.rst:8
 msgid ".zsh_history"
-msgstr ""
+msgstr ".zsh_history"
 
 #: ../../source/vuln/fileread.rst:9
 msgid ".profile"
-msgstr ""
+msgstr ".profile"
 
 #: ../../source/vuln/fileread.rst:10
 msgid ".bashrc"
-msgstr ""
+msgstr ".bashrc"
 
 #: ../../source/vuln/fileread.rst:11
 msgid ".gitconfig"
-msgstr ""
+msgstr ".gitconfig"
 
 #: ../../source/vuln/fileread.rst:12
 msgid ".viminfo"
-msgstr ""
+msgstr ".viminfo"
 
 #: ../../source/vuln/fileread.rst:13
 msgid "passwd"
-msgstr ""
+msgstr "passwd"
 
 #: ../../source/vuln/fileread.rst:15
 msgid "应用的配置文件"
-msgstr ""
+msgstr "Application configuration files"
 
 #: ../../source/vuln/fileread.rst:16
 msgid "/etc/apache2/apache2.conf"
-msgstr ""
+msgstr "/etc/apache2/apache2.conf"
 
 #: ../../source/vuln/fileread.rst:17
 msgid "/etc/nginx/nginx.conf"
-msgstr ""
+msgstr "/etc/nginx/nginx.conf"
 
 #: ../../source/vuln/fileread.rst:19
 msgid "应用的日志文件"
-msgstr ""
+msgstr "Application log files"
 
 #: ../../source/vuln/fileread.rst:20
 msgid "/var/log/apache2/access.log"
-msgstr ""
+msgstr "/var/log/apache2/access.log"
 
 #: ../../source/vuln/fileread.rst:21
 msgid "/var/log/nginx/access.log"
-msgstr ""
+msgstr "/var/log/nginx/access.log"
 
 #: ../../source/vuln/fileread.rst:23
 msgid "站点目录下的敏感文件"
-msgstr ""
+msgstr "Sensitive files under the site directory"
 
 #: ../../source/vuln/fileread.rst:24
 msgid ".svn/entries"
-msgstr ""
+msgstr ".svn/entries"
 
 #: ../../source/vuln/fileread.rst:25
 msgid ".git/HEAD"
-msgstr ""
+msgstr ".git/HEAD"
 
 #: ../../source/vuln/fileread.rst:26
 msgid "WEB-INF/web.xml"
-msgstr ""
+msgstr "WEB-INF/web.xml"
 
 #: ../../source/vuln/fileread.rst:27
 msgid ".htaccess"
-msgstr ""
+msgstr ".htaccess"
 
 #: ../../source/vuln/fileread.rst:29
 msgid "特殊的备份文件"
-msgstr ""
+msgstr "Special backup files"
 
 #: ../../source/vuln/fileread.rst:30
 msgid ".swp"
-msgstr ""
+msgstr ".swp"
 
 #: ../../source/vuln/fileread.rst:31
 msgid ".swo"
-msgstr ""
+msgstr ".swo"
 
 #: ../../source/vuln/fileread.rst:32
 msgid ".bak"
-msgstr ""
+msgstr ".bak"
 
 #: ../../source/vuln/fileread.rst:33
 msgid "index.php~"
-msgstr ""
+msgstr "index.php~"
 
 #: ../../source/vuln/fileread.rst:34
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../../source/vuln/fileread.rst:36
 msgid "Python的Cache"
-msgstr ""
+msgstr "Python Cache"
 
 #: ../../source/vuln/fileread.rst:37
 msgid "``__pycache__\\__init__.cpython-35.pyc``"
-msgstr ""
+msgstr "``__pycache__\\__init__.cpython-35.pyc``"

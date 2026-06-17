@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,201 +20,244 @@ msgstr ""
 
 #: ../../source/vuln/fileupload.rst:2
 msgid "文件上传"
-msgstr ""
+msgstr "File Upload"
 
 #: ../../source/vuln/fileupload.rst:5
 msgid "文件类型检测绕过"
-msgstr ""
+msgstr "File Type Detection Bypass"
 
 #: ../../source/vuln/fileupload.rst:8
 msgid "更改请求绕过"
-msgstr ""
+msgstr "Request Modification Bypass"
 
 #: ../../source/vuln/fileupload.rst:9
 msgid ""
 "有的站点仅仅在前端检测了文件类型，这种类型的检测可以直接修改网络请求绕过。 同样的，有的站点在后端仅检查了HTTP Header中的信息，比如 "
 "``Content-Type`` 等，这种检查同样可以通过修改网络请求绕过。"
 msgstr ""
+"Some sites only check file type on the frontend; this kind of check can be "
+"bypassed by directly modifying the network request. Similarly, some sites "
+"only check HTTP header information on the backend, such as ``Content-Type``;"
+" those checks can also be bypassed by modifying the network request."
 
 #: ../../source/vuln/fileupload.rst:13
 msgid "Magic检测绕过"
-msgstr ""
+msgstr "Magic Number Check Bypass"
 
 #: ../../source/vuln/fileupload.rst:14
 msgid "有的站点使用文件头来检测文件类型，这种检查可以在Shell前加入对应的字节以绕过检查。几种常见的文件类型的头字节如下表所示"
 msgstr ""
+"Some sites use file headers to detect file type. This check can be bypassed "
+"by adding the corresponding bytes before the shell. Header bytes for several"
+" common file types are shown below."
 
 #: ../../source/vuln/fileupload.rst:17
 msgid "类型"
-msgstr ""
+msgstr "Type"
 
 #: ../../source/vuln/fileupload.rst:17
 msgid "二进制值"
-msgstr ""
+msgstr "Binary Value"
 
 #: ../../source/vuln/fileupload.rst:19
 msgid "JPG"
-msgstr ""
+msgstr "JPG"
 
 #: ../../source/vuln/fileupload.rst:19
 msgid "FF D8 FF E0 00 10 4A 46 49 46"
-msgstr ""
+msgstr "FF D8 FF E0 00 10 4A 46 49 46"
 
 #: ../../source/vuln/fileupload.rst:20
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ../../source/vuln/fileupload.rst:20
 msgid "47 49 46 38 39 61"
-msgstr ""
+msgstr "47 49 46 38 39 61"
 
 #: ../../source/vuln/fileupload.rst:21
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 #: ../../source/vuln/fileupload.rst:21
 msgid "89 50 4E 47"
-msgstr ""
+msgstr "89 50 4E 47"
 
 #: ../../source/vuln/fileupload.rst:22
 msgid "TIF"
-msgstr ""
+msgstr "TIF"
 
 #: ../../source/vuln/fileupload.rst:22
 msgid "49 49 2A 00"
-msgstr ""
+msgstr "49 49 2A 00"
 
 #: ../../source/vuln/fileupload.rst:23
 msgid "BMP"
-msgstr ""
+msgstr "BMP"
 
 #: ../../source/vuln/fileupload.rst:23
 msgid "42 4D"
-msgstr ""
+msgstr "42 4D"
 
 #: ../../source/vuln/fileupload.rst:27
 msgid "后缀绕过"
-msgstr ""
+msgstr "Extension Bypass"
 
 #: ../../source/vuln/fileupload.rst:28
 msgid "部分服务仅根据后缀、上传时的信息或Magic Header来判断文件类型，此时可以绕过。"
 msgstr ""
+"Some services determine file type only from the extension, upload metadata, "
+"or Magic Header, which can be bypassed."
 
 #: ../../source/vuln/fileupload.rst:30
 msgid ""
-"php由于历史原因，部分解释器可能支持符合正则 ``/ph(p[2-7]?|t(ml)?)/`` 的后缀，如 ``php`` / ``php5``"
-" / ``pht`` / ``phtml`` / ``shtml`` / ``pwml`` / ``phtm`` 等 "
-"可在禁止上传php文件时测试该类型。"
+"php由于历史原因，部分解释器可能支持符合正则 ``/ph(p[2-7]?|t(ml)?)/`` 的后缀，如 ``php`` / ``php5`` / "
+"``pht`` / ``phtml`` / ``shtml`` / ``pwml`` / ``phtm`` 等 可在禁止上传php文件时测试该类型。"
 msgstr ""
+"For historical reasons, some PHP interpreters may support extensions that "
+"match the regex ``/ph(p[2-7]?|t(ml)?)/``, such as ``php`` / ``php5`` / "
+"``pht`` / ``phtml`` / ``shtml`` / ``pwml`` / ``phtm``. These can be tested "
+"when PHP file uploads are blocked."
 
 #: ../../source/vuln/fileupload.rst:32
 #, python-brace-format
 msgid ""
-"jsp引擎则可能会解析 ``jspx`` / ``jspf`` / ``jspa`` / ``jsw`` / ``jsv`` / ``jtml``"
-" 等后缀，asp支持 ``asa`` / ``asax`` / ``cer`` / ``cdx`` / ``aspx`` / ``ascx`` /"
-" ``ashx`` / ``asmx`` / ``asp{80-90}`` 等后缀。"
+"jsp引擎则可能会解析 ``jspx`` / ``jspf`` / ``jspa`` / ``jsw`` / ``jsv`` / ``jtml`` "
+"等后缀，asp支持 ``asa`` / ``asax`` / ``cer`` / ``cdx`` / ``aspx`` / ``ascx`` / "
+"``ashx`` / ``asmx`` / ``asp{80-90}`` 等后缀。"
 msgstr ""
+"JSP engines may parse extensions such as ``jspx`` / ``jspf`` / ``jspa`` / "
+"``jsw`` / ``jsv`` / ``jtml``. ASP supports extensions such as ``asa`` / "
+"``asax`` / ``cer`` / ``cdx`` / ``aspx`` / ``ascx`` / ``ashx`` / ``asmx`` / "
+"``asp{80-90}``."
 
 #: ../../source/vuln/fileupload.rst:34
 msgid ""
 "除了这些绕过，其他的后缀同样可能带来问题，如 ``vbs`` / ``asis`` / ``sh`` / ``reg`` / ``cgi`` / "
-"``exe`` / ``dll`` / ``com`` / ``bat`` / ``pl`` / ``cfc`` / ``cfm`` / "
-"``ini`` 等。"
+"``exe`` / ``dll`` / ``com`` / ``bat`` / ``pl`` / ``cfc`` / ``cfm`` / ``ini``"
+" 等。"
 msgstr ""
+"Beyond these bypasses, other extensions may also cause problems, such as "
+"``vbs`` / ``asis`` / ``sh`` / ``reg`` / ``cgi`` / ``exe`` / ``dll`` / "
+"``com`` / ``bat`` / ``pl`` / ``cfc`` / ``cfm`` / ``ini``."
 
 #: ../../source/vuln/fileupload.rst:37
 msgid "系统命名绕过"
-msgstr ""
+msgstr "System Naming Bypass"
 
 #: ../../source/vuln/fileupload.rst:38
 msgid ""
-"在Windows系统中，上传 ``index.php.`` 会重命名为 ``.`` ，可以绕过后缀检查。 也可尝试 "
-"``index.php%20`` ， ``index.php:1.jpg`` ``index.php::$DATA`` 等。 "
-"在Linux系统中，可以尝试上传名为 ``index.php/.`` 或 ``./aa/../index.php/.`` 的文件"
+"在Windows系统中，上传 ``index.php.`` 会重命名为 ``.`` ，可以绕过后缀检查。 也可尝试 ``index.php%20`` ，"
+" ``index.php:1.jpg`` ``index.php::$DATA`` 等。 在Linux系统中，可以尝试上传名为 "
+"``index.php/.`` 或 ``./aa/../index.php/.`` 的文件"
 msgstr ""
+"On Windows, uploading ``index.php.`` will be renamed by trimming the "
+"trailing ``.``, which can bypass extension checks. You can also try "
+"``index.php%20``, ``index.php:1.jpg``, ``index.php::$DATA``, and similar "
+"names. On Linux, try uploading files named ``index.php/.`` or "
+"``./aa/../index.php/.``."
 
 #: ../../source/vuln/fileupload.rst:43
 msgid ".user.ini"
-msgstr ""
+msgstr ".user.ini"
 
 #: ../../source/vuln/fileupload.rst:44
 msgid ""
-"在php执行的过程中，除了主 ``php.ini`` 之外，PHP 还会在每个目录下扫描 INI 文件，从被执行的 PHP "
-"文件所在目录开始一直上升到 web 根目录（$_SERVER['DOCUMENT_ROOT'] 所指定的）。如果被执行的 PHP 文件在 web "
-"根目录之外，则只扫描该目录。 ``.user.ini`` 中可以定义除了PHP_INI_SYSTEM以外的模式的选项，故可以使用 "
-"``.user.ini`` 加上非php后缀的文件构造一个shell，比如 ``auto_prepend_file=01.gif`` 。"
+"在php执行的过程中，除了主 ``php.ini`` 之外，PHP 还会在每个目录下扫描 INI 文件，从被执行的 PHP 文件所在目录开始一直上升到 "
+"web 根目录（$_SERVER['DOCUMENT_ROOT'] 所指定的）。如果被执行的 PHP 文件在 web 根目录之外，则只扫描该目录。 "
+"``.user.ini`` 中可以定义除了PHP_INI_SYSTEM以外的模式的选项，故可以使用 ``.user.ini`` "
+"加上非php后缀的文件构造一个shell，比如 ``auto_prepend_file=01.gif`` 。"
 msgstr ""
+"During PHP execution, in addition to the main ``php.ini``, PHP scans INI "
+"files in each directory, starting from the directory of the executed PHP "
+"file up to the web root specified by ``$_SERVER['DOCUMENT_ROOT']``. If the "
+"executed PHP file is outside the web root, only that directory is scanned. "
+"Options other than ``PHP_INI_SYSTEM`` mode can be defined in ``.user.ini``, "
+"so ``.user.ini`` plus a non-PHP extension file can be used to construct a "
+"shell, for example ``auto_prepend_file=01.gif``."
 
 #: ../../source/vuln/fileupload.rst:47
 msgid "WAF绕过"
-msgstr ""
+msgstr "WAF Bypass"
 
 #: ../../source/vuln/fileupload.rst:48
 msgid "有的waf在编写过程中考虑到性能原因，只处理一部分数据，这时可以通过加入大量垃圾数据来绕过其处理函数。"
 msgstr ""
+"Some WAFs process only part of the data for performance reasons. In that "
+"case, adding a large amount of junk data may bypass their processing logic."
 
 #: ../../source/vuln/fileupload.rst:50
 msgid "另外，Waf和Web系统对 ``boundary`` 的处理不一致，可以使用错误的 ``boundary`` 来完成绕过。"
 msgstr ""
+"In addition, when the WAF and web system handle ``boundary`` differently, an"
+" incorrect ``boundary`` can be used to bypass checks."
 
 #: ../../source/vuln/fileupload.rst:53
 msgid "竞争上传绕过"
-msgstr ""
+msgstr "Race Condition Upload Bypass"
 
 #: ../../source/vuln/fileupload.rst:54
-msgid ""
-"有的服务器采用了先保存，再删除不合法文件的方式，在这种服务器中，可以反复上传一个会生成Web "
-"Shell的文件并尝试访问，多次之后即可获得Shell。"
+msgid "有的服务器采用了先保存，再删除不合法文件的方式，在这种服务器中，可以反复上传一个会生成Web Shell的文件并尝试访问，多次之后即可获得Shell。"
 msgstr ""
+"Some servers save uploaded files first and delete illegal files afterward. "
+"On such servers, repeatedly uploading a file that generates a web shell and "
+"trying to access it may eventually obtain a shell."
 
 #: ../../source/vuln/fileupload.rst:57
 msgid "攻击技巧"
-msgstr ""
+msgstr "Attack Techniques"
 
 #: ../../source/vuln/fileupload.rst:60
 msgid "Apache重写GetShell"
-msgstr ""
+msgstr "Apache Rewrite GetShell"
 
 #: ../../source/vuln/fileupload.rst:61
 msgid "Apache可根据是否允许重定向考虑上传.htaccess"
 msgstr ""
+"For Apache, consider uploading ``.htaccess`` depending on whether redirects "
+"are allowed."
 
 #: ../../source/vuln/fileupload.rst:63
 msgid "内容为"
-msgstr ""
+msgstr "With content:"
 
 #: ../../source/vuln/fileupload.rst:70
 msgid "就可以用png或者其他后缀的文件做php脚本了"
-msgstr ""
+msgstr "This allows files with ``png`` or other extensions to be used as PHP scripts."
 
 #: ../../source/vuln/fileupload.rst:73
 msgid "软链接任意读文件"
-msgstr ""
+msgstr "Arbitrary File Read via Symlink"
 
 #: ../../source/vuln/fileupload.rst:74
 msgid "上传的压缩包文件会被解压的文件时，可以考虑上传含符号链接的文件 若服务器没有做好防护，可实现任意文件读取的效果"
 msgstr ""
+"When uploaded archive files are extracted, consider uploading files that "
+"contain symbolic links. If the server lacks proper protection, this can "
+"enable arbitrary file reads."
 
 #: ../../source/vuln/fileupload.rst:78
 msgid "防护技巧"
-msgstr ""
+msgstr "Protection Tips"
 
 #: ../../source/vuln/fileupload.rst:79
 msgid "使用白名单限制上传文件的类型"
-msgstr ""
+msgstr "Use a whitelist to restrict upload file types"
 
 #: ../../source/vuln/fileupload.rst:80
 msgid "使用更严格的文件类型检查方式"
-msgstr ""
+msgstr "Use stricter file type checks"
 
 #: ../../source/vuln/fileupload.rst:81
 msgid "限制Web Server对上传文件夹的解析"
-msgstr ""
+msgstr "Restrict the web server from parsing files in upload directories"
 
 #: ../../source/vuln/fileupload.rst:84
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/vuln/fileupload.rst:85
 msgid "`构造优质上传漏洞Fuzz字典 <https://www.freebuf.com/articles/web/188464.html>`_"
 msgstr ""
+"`Building a High-Quality File Upload Vulnerability Fuzz Dictionary "
+"<https://www.freebuf.com/articles/web/188464.html>`_"

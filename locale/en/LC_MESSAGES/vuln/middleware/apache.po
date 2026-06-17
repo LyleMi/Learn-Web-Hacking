@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,56 +20,66 @@ msgstr ""
 
 #: ../../source/vuln/middleware/apache.rst:2
 msgid "Apache"
-msgstr ""
+msgstr "Apache"
 
 #: ../../source/vuln/middleware/apache.rst:5
 msgid "后缀解析"
-msgstr ""
+msgstr "Extension Parsing"
 
 #: ../../source/vuln/middleware/apache.rst:6
 msgid ""
 "``test.php.x1.x2.x3`` （ x1,x2,x3 为没有在 mime.types 文件中定义的文件类型）。Apache "
 "将从右往左开始判断后缀， 若x3为非可识别后缀，则判断x2，直到找到可识别后缀为止，然后对可识别后缀进行解析"
 msgstr ""
+"``test.php.x1.x2.x3`` where ``x1``, ``x2``, and ``x3`` are file types not "
+"defined in ``mime.types``. Apache checks extensions from right to left. If "
+"``x3`` is not recognized, it checks ``x2`` until a recognized extension is "
+"found, then parses the file according to that extension."
 
 #: ../../source/vuln/middleware/apache.rst:9
 msgid ".htaccess"
-msgstr ""
+msgstr ".htaccess"
 
 #: ../../source/vuln/middleware/apache.rst:10
 msgid "当AllowOverride被启用时，上传启用解析规则的.htaccess"
 msgstr ""
+"When ``AllowOverride`` is enabled, upload an ``.htaccess`` file that enables"
+" parsing rules."
 
 #: ../../source/vuln/middleware/apache.rst:40
 msgid "目录遍历"
-msgstr ""
+msgstr "Directory Listing"
 
 #: ../../source/vuln/middleware/apache.rst:41
 msgid "配置 ``Options +Indexes`` 时Apache存在目录遍历漏洞。"
 msgstr ""
+"When ``Options +Indexes`` is configured, Apache has a directory listing "
+"vulnerability."
 
 #: ../../source/vuln/middleware/apache.rst:44
 msgid "CVE-2017-15715"
-msgstr ""
+msgstr "CVE-2017-15715"
 
 #: ../../source/vuln/middleware/apache.rst:45
 msgid "``%0A`` 绕过上传黑名单。"
-msgstr ""
+msgstr "``%0A`` bypasses upload blacklists."
 
 #: ../../source/vuln/middleware/apache.rst:48
 msgid "lighttpd"
-msgstr ""
+msgstr "lighttpd"
 
 #: ../../source/vuln/middleware/apache.rst:49
 msgid "``xx.jpg/xx.php``"
-msgstr ""
+msgstr "``xx.jpg/xx.php``"
 
 #: ../../source/vuln/middleware/apache.rst:52
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/vuln/middleware/apache.rst:53
 msgid ""
 "`Apache 上传绕过 <https://www.leavesongs.com/PENETRATION/apache-"
 "cve-2017-15715-vulnerability.html>`_"
 msgstr ""
+"`Apache Upload Bypass <https://www.leavesongs.com/PENETRATION/apache-"
+"cve-2017-15715-vulnerability.html>`_"

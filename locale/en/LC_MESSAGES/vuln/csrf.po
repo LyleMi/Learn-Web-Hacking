@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,106 +20,139 @@ msgstr ""
 
 #: ../../source/vuln/csrf.rst:2
 msgid "CSRF"
-msgstr ""
+msgstr "CSRF"
 
 #: ../../source/vuln/csrf.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/vuln/csrf.rst:6
 msgid ""
-"跨站请求伪造 (Cross-Site Request Forgery, CSRF)，也被称为 One Click Attack 或者 "
-"Session Riding "
+"跨站请求伪造 (Cross-Site Request Forgery, CSRF)，也被称为 One Click Attack 或者 Session "
+"Riding "
 "，通常缩写为CSRF，是一种对网站的恶意利用。尽管听起来像XSS，但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。"
 msgstr ""
+"Cross-Site Request Forgery (CSRF), also known as One Click Attack or Session"
+" Riding and usually abbreviated as CSRF, is a form of malicious website "
+"abuse. Although it sounds similar to XSS, it is very different: XSS abuses a"
+" site's trust in its users, while CSRF abuses a trusted website by "
+"disguising requests as coming from a trusted user."
 
 #: ../../source/vuln/csrf.rst:9
 msgid "分类"
-msgstr ""
+msgstr "Classification"
 
 #: ../../source/vuln/csrf.rst:12
 msgid "资源包含"
-msgstr ""
+msgstr "Resource Inclusion"
 
 #: ../../source/vuln/csrf.rst:13
 msgid "资源包含是在大多数介绍CSRF概念的演示或基础课程中可能看到的类型。这种类型归结为控制HTML标签（例如<image>、<audio>、<video>、<object>、<script>等）所包含的资源的攻击者。如果攻击者能够影响URL被加载的话，包含远程资源的任何标签都可以完成攻击。"
 msgstr ""
+"Resource inclusion is the type often seen in demonstrations or introductory "
+"courses that explain CSRF. It comes down to an attacker controlling "
+"resources included by HTML tags such as <image>, <audio>, <video>, <object>,"
+" and <script>. If the attacker can influence the URL being loaded, any tag "
+"that includes a remote resource can complete the attack."
 
 #: ../../source/vuln/csrf.rst:15
 msgid "由于缺少对Cookie的源点检查，如上所述，此攻击不需要XSS，可以由任何攻击者控制的站点或站点本身执行。此类型仅限于GET请求，因为这些是浏览器对资源URL唯一的请求类型。这种类型的主要限制是它需要错误地使用安全的HTTP请求方式。"
 msgstr ""
+"Because cookies are not origin-checked as described above, this attack does "
+"not require XSS and can be launched from any attacker-controlled site or "
+"from the site itself. This type is limited to GET requests because those are"
+" the only request type browsers issue for resource URLs. Its main limitation"
+" is that it depends on unsafe use of safe HTTP request methods."
 
 #: ../../source/vuln/csrf.rst:18
 msgid "基于表单"
-msgstr ""
+msgstr "Form-Based"
 
 #: ../../source/vuln/csrf.rst:19
 msgid "通常在正确使用安全的请求方式时看到。攻击者创建一个想要受害者提交的表单; 其包含一个JavaScript片段，强制受害者的浏览器提交。"
 msgstr ""
+"This is usually seen when safe request methods are used correctly. The "
+"attacker creates a form they want the victim to submit and includes a "
+"JavaScript snippet that forces the victim's browser to submit it."
 
 #: ../../source/vuln/csrf.rst:21
 msgid "该表单可以完全由隐藏的元素组成，以致受害者很难发现它。"
 msgstr ""
+"The form can consist entirely of hidden elements, making it difficult for "
+"the victim to notice."
 
 #: ../../source/vuln/csrf.rst:23
 msgid "如果处理cookies不当，攻击者可以在任何站点上发动攻击，只要受害者使用有效的cookie登录，攻击就会成功。如果请求是有目的性的，成功的攻击将使受害者回到他们平时正常的页面。该方法对于攻击者可以将受害者指向特定页面的网络钓鱼攻击特别有效。"
 msgstr ""
+"If cookies are handled improperly, an attacker can launch the attack from "
+"any site; as long as the victim is logged in with a valid cookie, the attack"
+" can succeed. If the request is targeted, a successful attack can return the"
+" victim to their normal page. This method is especially effective in "
+"phishing attacks where the attacker can direct the victim to a specific "
+"page."
 
 #: ../../source/vuln/csrf.rst:26
 msgid "XMLHttpRequest"
-msgstr ""
+msgstr "XMLHttpRequest"
 
 #: ../../source/vuln/csrf.rst:27
 msgid "XMLHttpRequest可能是最少看到的方式，由于许多现代Web应用程序依赖XHR，许多应用花费大量的时间来构建和实现这一特定的对策。"
 msgstr ""
+"XMLHttpRequest is probably the least commonly seen method. Because many "
+"modern web applications rely on XHR, many applications spend significant "
+"effort building and implementing countermeasures for it."
 
 #: ../../source/vuln/csrf.rst:29
 msgid ""
-"基于XHR的CSRF通常由于SOP而以XSS有效载荷的形式出现。没有跨域资源共享策略 (Cross-Origin Resource "
-"Sharing, CORS)，XHR仅限于攻击者托管自己的有效载荷的原始请求。"
+"基于XHR的CSRF通常由于SOP而以XSS有效载荷的形式出现。没有跨域资源共享策略 (Cross-Origin Resource Sharing, "
+"CORS)，XHR仅限于攻击者托管自己的有效载荷的原始请求。"
 msgstr ""
+"XHR-based CSRF usually appears as an XSS payload because of the Same-Origin "
+"Policy (SOP). Without a Cross-Origin Resource Sharing (CORS) policy, XHR is "
+"limited to same-origin requests where the attacker hosts their own payload."
 
 #: ../../source/vuln/csrf.rst:31
 msgid "这种类型的CSRF的攻击有效载荷基本上是一个标准的XHR，攻击者已经找到了一些注入受害者浏览器DOM的方式。"
 msgstr ""
+"The attack payload for this type of CSRF is essentially a standard XHR after"
+" the attacker has found a way to inject it into the victim browser's DOM."
 
 #: ../../source/vuln/csrf.rst:34
 msgid "防御"
-msgstr ""
+msgstr "Defense"
 
 #: ../../source/vuln/csrf.rst:35
 msgid "通过CSRF-token或者验证码来检测用户提交"
-msgstr ""
+msgstr "Use CSRF tokens or CAPTCHAs to verify user submissions"
 
 #: ../../source/vuln/csrf.rst:36
 msgid "验证 Referer/Content-Type"
-msgstr ""
+msgstr "Validate Referer and Content-Type"
 
 #: ../../source/vuln/csrf.rst:37
 msgid "对于用户修改删除等操作最好都使用POST操作"
-msgstr ""
+msgstr "Use POST for operations such as user modification and deletion"
 
 #: ../../source/vuln/csrf.rst:38
 msgid "避免全站通用的Cookie，严格设置Cookie的域"
-msgstr ""
+msgstr "Avoid site-wide shared cookies and set cookie domains strictly"
 
 #: ../../source/vuln/csrf.rst:41
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/vuln/csrf.rst:42
 msgid "`demo <https://www.github.com/jrozner/csrf-demo>`_"
-msgstr ""
+msgstr "`demo <https://www.github.com/jrozner/csrf-demo>`_"
 
 #: ../../source/vuln/csrf.rst:43
-msgid ""
-"`Wiping Out CSRF <https://medium.com/@jrozner/wiping-out-csrf-"
-"ded97ae7e83f>`_"
-msgstr ""
+msgid "`Wiping Out CSRF <https://medium.com/@jrozner/wiping-out-csrf-ded97ae7e83f>`_"
+msgstr "`Wiping Out CSRF <https://medium.com/@jrozner/wiping-out-csrf-ded97ae7e83f>`_"
 
 #: ../../source/vuln/csrf.rst:44
 msgid ""
-"`Neat tricks to bypass CSRF protection "
-"<https://www.slideshare.net/0ang3el/neat-tricks-to-bypass-"
-"csrfprotection>`_"
+"`Neat tricks to bypass CSRF protection <https://www.slideshare.net/0ang3el"
+"/neat-tricks-to-bypass-csrfprotection>`_"
 msgstr ""
+"`Neat tricks to bypass CSRF protection <https://www.slideshare.net/0ang3el"
+"/neat-tricks-to-bypass-csrfprotection>`_"

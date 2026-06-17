@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/vuln/xxe.rst:2 ../../source/vuln/xxe.rst:23
 msgid "XXE"
-msgstr ""
+msgstr "XXE"
 
 #: ../../source/vuln/xxe.rst:5
 msgid "XML基础"
-msgstr ""
+msgstr "XML Basics"
 
 #: ../../source/vuln/xxe.rst:6
 msgid ""
@@ -32,96 +32,124 @@ msgid ""
 "Language），是一种用于标记电子文件使其具有结构性的标记语言，被设计用来传输和存储数据。XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。目前，XML文件作为配置文件（Spring、Struts2等）、文档结构说明文件（PDF、RSS等）、图片格式文件（SVG"
 " header）应用比较广泛。 XML 的语法规范由 DTD （Document Type Definition）来进行控制。"
 msgstr ""
+"XML stands for eXtensible Markup Language. It is a markup language used to "
+"mark electronic documents with structure and is designed to transmit and "
+"store data. An XML document structure includes an XML declaration, an "
+"optional DTD document type definition, and document elements. XML files are "
+"widely used as configuration files such as Spring and Struts2, document "
+"structure description files such as PDF and RSS, and image format files such"
+" as SVG headers. XML syntax rules are controlled by DTD (Document Type "
+"Definition)."
 
 #: ../../source/vuln/xxe.rst:9
 msgid "基本语法"
-msgstr ""
+msgstr "Basic Syntax"
 
 #: ../../source/vuln/xxe.rst:10
 msgid ""
-"XML 文档在开头有 ``<?xml version=\"1.0\" encoding=\"UTF-8\" "
-"standalone=\"yes\"?>`` 的结构，这种结构被称为 XML prolog "
-"，用于声明XML文档的版本和编码，是可选的，但是必须放在文档开头。"
+"XML 文档在开头有 ``<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>``"
+" 的结构，这种结构被称为 XML prolog ，用于声明XML文档的版本和编码，是可选的，但是必须放在文档开头。"
 msgstr ""
+"An XML document may begin with a structure such as ``<?xml version=\"1.0\" "
+"encoding=\"UTF-8\" standalone=\"yes\"?>``. This structure is called the XML "
+"prolog. It declares the XML document version and encoding. It is optional, "
+"but if present it must appear at the beginning of the document."
 
 #: ../../source/vuln/xxe.rst:12
 msgid "除了可选的开头外，XML 语法主要有以下的特性："
 msgstr ""
+"Apart from the optional prolog, XML syntax mainly has the following "
+"characteristics:"
 
 #: ../../source/vuln/xxe.rst:14
 msgid "所有 XML 元素都须有关闭标签"
-msgstr ""
+msgstr "All XML elements must have closing tags"
 
 #: ../../source/vuln/xxe.rst:15
 msgid "XML 标签对大小写敏感"
-msgstr ""
+msgstr "XML tags are case-sensitive"
 
 #: ../../source/vuln/xxe.rst:16
 msgid "XML 必须正确地嵌套"
-msgstr ""
+msgstr "XML must be properly nested"
 
 #: ../../source/vuln/xxe.rst:17
 msgid "XML 文档必须有根元素"
-msgstr ""
+msgstr "XML documents must have a root element"
 
 #: ../../source/vuln/xxe.rst:18
 msgid "XML 的属性值需要加引号"
-msgstr ""
+msgstr "XML attribute values must be quoted"
 
 #: ../../source/vuln/xxe.rst:20
 msgid "另外，XML也有CDATA语法，用于处理有多个字符需要转义的情况。"
 msgstr ""
+"XML also has CDATA syntax for handling cases where multiple characters need "
+"to be escaped."
 
 #: ../../source/vuln/xxe.rst:24
 msgid ""
 "当允许引用外部实体时，可通过构造恶意的XML内容，导致读取任意文件、执行系统命令、探测内网端口、攻击内网网站等后果。一般的XXE攻击，只有在服务器有回显或者报错的基础上才能使用XXE漏洞来读取服务器端文件，但是也可以通过Blind"
 " XXE的方式实现攻击。"
 msgstr ""
+"When external entity references are allowed, malicious XML content can cause"
+" arbitrary file reads, system command execution, internal port probing, "
+"attacks against internal websites, and similar impact. Typical XXE attacks "
+"can read server-side files only when the server returns output or errors, "
+"but attacks can also be performed through Blind XXE."
 
 #: ../../source/vuln/xxe.rst:27
 msgid "攻击方式"
-msgstr ""
+msgstr "Attack Methods"
 
 #: ../../source/vuln/xxe.rst:30
 msgid "拒绝服务攻击"
-msgstr ""
+msgstr "Denial-of-Service Attack"
 
 #: ../../source/vuln/xxe.rst:41
 msgid "若解析过程非常缓慢，则表示测试成功，目标站点可能有拒绝服务漏洞。 具体攻击可使用更多层的迭代或递归，也可引用巨大的外部实体，以实现攻击的效果。"
 msgstr ""
+"If parsing becomes very slow, the test is successful and the target site may"
+" have a denial-of-service vulnerability. A concrete attack can use more "
+"levels of iteration or recursion, or reference huge external entities, to "
+"achieve the effect."
 
 #: ../../source/vuln/xxe.rst:46
 msgid "文件读取"
-msgstr ""
+msgstr "File Read"
 
 #: ../../source/vuln/xxe.rst:57
 msgid "SSRF"
-msgstr ""
+msgstr "SSRF"
 
 #: ../../source/vuln/xxe.rst:67
 msgid "RCE"
-msgstr ""
+msgstr "RCE"
 
 #: ../../source/vuln/xxe.rst:80
 msgid "XInclude"
-msgstr ""
+msgstr "XInclude"
 
 #: ../../source/vuln/xxe.rst:87
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/vuln/xxe.rst:88
 msgid "`XML教程 <http://www.w3school.com.cn/xml/>`_"
-msgstr ""
+msgstr "`XML Tutorial <http://www.w3school.com.cn/xml/>`_"
 
 #: ../../source/vuln/xxe.rst:89
 msgid "`未知攻焉知防 XXE漏洞攻防 <https://security.tencent.com/index.php/blog/msg/69>`_"
 msgstr ""
+"`How Can You Defend Without Knowing the Attack: XXE Vulnerability Attack and"
+" Defense <https://security.tencent.com/index.php/blog/msg/69>`_"
 
 #: ../../source/vuln/xxe.rst:90
 msgid "`XXE 攻击笔记分享 <http://www.freebuf.com/articles/web/97833.html>`_"
-msgstr ""
+msgstr "`XXE Attack Notes <http://www.freebuf.com/articles/web/97833.html>`_"
 
 #: ../../source/vuln/xxe.rst:91
 msgid "`从XML相关一步一步到XXE漏洞 <https://xz.aliyun.com/t/6887>`_"
 msgstr ""
+"`Step by Step from XML Concepts to XXE Vulnerabilities "
+"<https://xz.aliyun.com/t/6887>`_"

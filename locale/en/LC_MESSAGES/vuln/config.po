@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Web安全学习笔记 1.0\n"
+"Project-Id-Version: Web Security Study Notes 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-17 07:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -20,96 +20,98 @@ msgstr ""
 
 #: ../../source/vuln/config.rst:2
 msgid "配置与策略安全"
-msgstr ""
+msgstr "Configuration and Policy Security"
 
 #: ../../source/vuln/config.rst:5
 msgid "认证策略"
-msgstr ""
+msgstr "Authentication Policy"
 
 #: ../../source/vuln/config.rst:8
 msgid "密码策略"
-msgstr ""
+msgstr "Password Policy"
 
 #: ../../source/vuln/config.rst:9
 msgid "未限制密码最低位数"
-msgstr ""
+msgstr "No minimum password length is enforced"
 
 #: ../../source/vuln/config.rst:10
 msgid "未限制密码必须包含字符集"
-msgstr ""
+msgstr "No required character set is enforced for passwords"
 
 #: ../../source/vuln/config.rst:11
 msgid "为常用密码"
-msgstr ""
+msgstr "Common passwords are allowed"
 
 #: ../../source/vuln/config.rst:12
 msgid "个人信息相关"
-msgstr ""
+msgstr "Related to personal information"
 
 #: ../../source/vuln/config.rst:13
 msgid "手机号"
-msgstr ""
+msgstr "Phone number"
 
 #: ../../source/vuln/config.rst:14
 msgid "生日"
-msgstr ""
+msgstr "Birthday"
 
 #: ../../source/vuln/config.rst:15
 msgid "姓名"
-msgstr ""
+msgstr "Name"
 
 #: ../../source/vuln/config.rst:16
 msgid "用户名"
-msgstr ""
+msgstr "Username"
 
 #: ../../source/vuln/config.rst:17
 msgid "未检测常见弱密码"
-msgstr ""
+msgstr "Common weak passwords are not checked"
 
 #: ../../source/vuln/config.rst:18
 msgid "已泄露的常用密码"
-msgstr ""
+msgstr "Commonly leaked passwords"
 
 #: ../../source/vuln/config.rst:19
 msgid "键盘模式"
-msgstr ""
+msgstr "Keyboard patterns"
 
 #: ../../source/vuln/config.rst:22
 msgid "加密实现"
-msgstr ""
+msgstr "Cryptographic Implementation"
 
 #: ../../source/vuln/config.rst:23
 msgid "在客户端存储私钥"
-msgstr ""
+msgstr "Private keys are stored on the client"
 
 #: ../../source/vuln/config.rst:26
 msgid "权限配置"
-msgstr ""
+msgstr "Permission Configuration"
 
 #: ../../source/vuln/config.rst:27
 msgid "运维人员权限粒度过大"
-msgstr ""
+msgstr "Operations staff have overly broad permissions"
 
 #: ../../source/vuln/config.rst:28
 msgid "客服人员权限粒度过大"
-msgstr ""
+msgstr "Customer service staff have overly broad permissions"
 
 #: ../../source/vuln/config.rst:31
 msgid "供应链安全"
-msgstr ""
+msgstr "Supply Chain Security"
 
 #: ../../source/vuln/config.rst:34
 msgid "三方认证"
-msgstr ""
+msgstr "Third-Party Authentication"
 
 #: ../../source/vuln/config.rst:35
 msgid "利用被攻击的第三方服务账号登录其他平台账号"
 msgstr ""
+"Use a compromised third-party service account to log in to accounts on other"
+" platforms"
 
 #: ../../source/vuln/config.rst:38
 msgid "三方库/软件"
-msgstr ""
+msgstr "Third-Party Libraries and Software"
 
 #: ../../source/vuln/config.rst:39
 msgid "公开漏洞后没有及时更新"
-msgstr ""
+msgstr "Not updated promptly after public vulnerabilities are disclosed"
