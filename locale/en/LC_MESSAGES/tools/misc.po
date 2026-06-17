@@ -20,172 +20,184 @@ msgstr ""
 
 #: ../../source/tools/misc.rst:2 ../../source/tools/misc.rst:50
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: ../../source/tools/misc.rst:5
 msgid "综合框架"
-msgstr ""
+msgstr "Integrated Frameworks"
 
 #: ../../source/tools/misc.rst:6
 msgid "`metasploit <https://www.metasploit.com/>`_"
-msgstr ""
+msgstr "`metasploit <https://www.metasploit.com/>`_"
 
 #: ../../source/tools/misc.rst:7
 msgid "`w3af <http://w3af.org/>`_"
-msgstr ""
+msgstr "`w3af <http://w3af.org/>`_"
 
 #: ../../source/tools/misc.rst:8
 msgid "`AutoSploit <https://github.com/NullArray/AutoSploit/>`_"
-msgstr ""
+msgstr "`AutoSploit <https://github.com/NullArray/AutoSploit/>`_"
 
 #: ../../source/tools/misc.rst:9
 msgid "`Nikto <https://cirt.net/nikto2>`_"
-msgstr ""
+msgstr "`Nikto <https://cirt.net/nikto2>`_"
 
 #: ../../source/tools/misc.rst:10
 msgid "`skipfish <https://my.oschina.net/u/995648/blog/114321>`_"
-msgstr ""
+msgstr "`skipfish <https://my.oschina.net/u/995648/blog/114321>`_"
 
 #: ../../source/tools/misc.rst:11
 msgid "`Arachni <http://www.arachni-scanner.com/>`_"
-msgstr ""
+msgstr "`Arachni <http://www.arachni-scanner.com/>`_"
 
 #: ../../source/tools/misc.rst:12
 msgid "`ZAP <http://www.freebuf.com/sectool/5427.html>`_"
-msgstr ""
+msgstr "`ZAP <http://www.freebuf.com/sectool/5427.html>`_"
 
 #: ../../source/tools/misc.rst:13
 msgid "`BrupSuite <https://portswigger.net/burp/>`_"
-msgstr ""
+msgstr "`BrupSuite <https://portswigger.net/burp/>`_"
 
 #: ../../source/tools/misc.rst:14
 msgid "`Spiderfoot <https://github.com/smicallef/spiderfoot>`_"
-msgstr ""
+msgstr "`Spiderfoot <https://github.com/smicallef/spiderfoot>`_"
 
 #: ../../source/tools/misc.rst:15
 msgid "`AZScanner <https://github.com/az0ne/AZScanner>`_"
-msgstr ""
+msgstr "`AZScanner <https://github.com/az0ne/AZScanner>`_"
 
 #: ../../source/tools/misc.rst:16
 msgid "`Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_"
-msgstr ""
+msgstr "`Fuxi <https://github.com/jeffzh3ng/Fuxi-Scanner>`_"
 
 #: ../../source/tools/misc.rst:17
 msgid "`vooki <https://www.vegabird.com/vooki/>`_"
-msgstr ""
+msgstr "`vooki <https://www.vegabird.com/vooki/>`_"
 
 #: ../../source/tools/misc.rst:18
 msgid "`BadMod <https://github.com/MrSqar-Ye/BadMod>`_"
-msgstr ""
+msgstr "`BadMod <https://github.com/MrSqar-Ye/BadMod>`_"
 
 #: ../../source/tools/misc.rst:19
 msgid "`fsociety <https://github.com/Manisso/fsociety>`_ Hacking Tools Pack"
-msgstr ""
+msgstr "`fsociety <https://github.com/Manisso/fsociety>`_ Hacking Tools Pack"
 
 #: ../../source/tools/misc.rst:20
 msgid ""
 "`axiom <https://github.com/pry0cc/axiom>`_ A dynamic infrastructure "
 "toolkit for red teamers and bug bounty hunters"
 msgstr ""
+"`axiom <https://github.com/pry0cc/axiom>`_ A dynamic infrastructure "
+"toolkit for red teamers and bug bounty hunters"
 
 #: ../../source/tools/misc.rst:23
 msgid "验证码"
-msgstr ""
+msgstr "CAPTCHA"
 
 #: ../../source/tools/misc.rst:24
 msgid ""
 "`CAPTCHA22 <https://github.com/FSecureLABS/captcha22>`_ is a toolset for "
 "building, and training, CAPTCHA cracking models using neural networks."
 msgstr ""
+"`CAPTCHA22 <https://github.com/FSecureLABS/captcha22>`_ is a toolset for "
+"building, and training, CAPTCHA cracking models using neural networks."
 
 #: ../../source/tools/misc.rst:27
 msgid "WebAssembly"
-msgstr ""
+msgstr "WebAssembly"
 
 #: ../../source/tools/misc.rst:28
 msgid "`wabt <https://github.com/WebAssembly/wabt>`_"
-msgstr ""
+msgstr "`wabt <https://github.com/WebAssembly/wabt>`_"
 
 #: ../../source/tools/misc.rst:29
 msgid "`binaryen <https://github.com/WebAssembly/binaryen>`_"
-msgstr ""
+msgstr "`binaryen <https://github.com/WebAssembly/binaryen>`_"
 
 #: ../../source/tools/misc.rst:30
 msgid "`wasmdec <https://github.com/wwwg/wasmdec>`_"
-msgstr ""
+msgstr "`wasmdec <https://github.com/wwwg/wasmdec>`_"
 
 #: ../../source/tools/misc.rst:33
 msgid "混淆"
-msgstr ""
+msgstr "Obfuscation"
 
 #: ../../source/tools/misc.rst:34
 msgid "`JStillery <https://github.com/mindedsecurity/JStillery>`_"
-msgstr ""
+msgstr "`JStillery <https://github.com/mindedsecurity/JStillery>`_"
 
 #: ../../source/tools/misc.rst:35
 msgid ""
 "`javascript obfuscator <https://github.com/javascript-obfuscator"
 "/javascript-obfuscator>`_"
 msgstr ""
+"`javascript obfuscator <https://github.com/javascript-obfuscator"
+"/javascript-obfuscator>`_"
 
 #: ../../source/tools/misc.rst:36
 msgid "`基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_"
-msgstr ""
+msgstr "`Hook-based PHP obfuscation decoder <https://github.com/CaledoniaProject/php-decoder>`_"
 
 #: ../../source/tools/misc.rst:37
 msgid ""
 "`Invoke Obfuscation <https://github.com/danielbohannon/Invoke-"
 "Obfuscation>`_"
 msgstr ""
+"`Invoke Obfuscation <https://github.com/danielbohannon/Invoke-"
+"Obfuscation>`_"
 
 #: ../../source/tools/misc.rst:40
 msgid "Proxy Pool"
-msgstr ""
+msgstr "Proxy Pool"
 
 #: ../../source/tools/misc.rst:41
 msgid "`proxy pool by jhao104 <https://github.com/jhao104/proxy_pool>`_"
-msgstr ""
+msgstr "`proxy pool by jhao104 <https://github.com/jhao104/proxy_pool>`_"
 
 #: ../../source/tools/misc.rst:42
 msgid "`Proxy Pool by Germey <https://github.com/Python3WebSpider/ProxyPool>`_"
-msgstr ""
+msgstr "`Proxy Pool by Germey <https://github.com/Python3WebSpider/ProxyPool>`_"
 
 #: ../../source/tools/misc.rst:43
 msgid "`scylla <https://github.com/imWildCat/scylla>`_"
-msgstr ""
+msgstr "`scylla <https://github.com/imWildCat/scylla>`_"
 
 #: ../../source/tools/misc.rst:46
 msgid "Android"
-msgstr ""
+msgstr "Android"
 
 #: ../../source/tools/misc.rst:47
 msgid ""
 "`DroidSSLUnpinning <https://github.com/WooyunDota/DroidSSLUnpinning>`_ "
 "Android certificate pinning disable tools"
 msgstr ""
+"`DroidSSLUnpinning <https://github.com/WooyunDota/DroidSSLUnpinning>`_ "
+"Android certificate pinning disable tools"
 
 #: ../../source/tools/misc.rst:51
 msgid "`Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_"
-msgstr ""
+msgstr "`Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_"
 
 #: ../../source/tools/misc.rst:52
 msgid "`Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_"
-msgstr ""
+msgstr "`Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_"
 
 #: ../../source/tools/misc.rst:53
 msgid "`httrack <http://www.httrack.com/>`_"
-msgstr ""
+msgstr "`httrack <http://www.httrack.com/>`_"
 
 #: ../../source/tools/misc.rst:54
 msgid "`curl <https://curl.haxx.se/>`_"
-msgstr ""
+msgstr "`curl <https://curl.haxx.se/>`_"
 
 #: ../../source/tools/misc.rst:55
 msgid "`htrace <https://github.com/trimstray/htrace.sh>`_"
-msgstr ""
+msgstr "`htrace <https://github.com/trimstray/htrace.sh>`_"
 
 #: ../../source/tools/misc.rst:56
 msgid ""
 "`Microsoft Sysinternals Utilities <https://docs.microsoft.com/en-"
 "us/sysinternals/downloads/>`_"
 msgstr ""
+"`Microsoft Sysinternals Utilities <https://docs.microsoft.com/en-"
+"us/sysinternals/downloads/>`_"

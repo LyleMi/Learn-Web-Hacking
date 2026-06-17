@@ -20,35 +20,35 @@ msgstr ""
 
 #: ../../source/tools/fuzz.rst:2
 msgid "模糊测试"
-msgstr ""
+msgstr "Fuzz Testing"
 
 #: ../../source/tools/fuzz.rst:5
 msgid "Web Fuzz"
-msgstr ""
+msgstr "Web Fuzz"
 
 #: ../../source/tools/fuzz.rst:6
 msgid "`wfuzz <https://github.com/xmendez/wfuzz>`_"
-msgstr ""
+msgstr "`wfuzz <https://github.com/xmendez/wfuzz>`_"
 
 #: ../../source/tools/fuzz.rst:7
 msgid "`SecLists <https://github.com/danielmiessler/SecLists>`_"
-msgstr ""
+msgstr "`SecLists <https://github.com/danielmiessler/SecLists>`_"
 
 #: ../../source/tools/fuzz.rst:8
 msgid "`fuzzdb <https://github.com/fuzzdb-project/fuzzdb>`_"
-msgstr ""
+msgstr "`fuzzdb <https://github.com/fuzzdb-project/fuzzdb>`_"
 
 #: ../../source/tools/fuzz.rst:9
 msgid "`foospidy payloads <https://github.com/foospidy/payloads>`_"
-msgstr ""
+msgstr "`foospidy payloads <https://github.com/foospidy/payloads>`_"
 
 #: ../../source/tools/fuzz.rst:10
 msgid "`ffuf <https://github.com/ffuf/ffuf>`_ Fast web fuzzer written in Go"
-msgstr ""
+msgstr "`ffuf <https://github.com/ffuf/ffuf>`_ Fast web fuzzer written in Go"
 
 #: ../../source/tools/fuzz.rst:13
 msgid "扫描器"
-msgstr ""
+msgstr "Scanners"
 
 #: ../../source/tools/fuzz.rst:14
 msgid ""
@@ -56,101 +56,118 @@ msgid ""
 "configurable targeted vulnerability scanning based on templates offering "
 "massive extensibility and ease of use"
 msgstr ""
+"`Nuclei <https://github.com/projectdiscovery/nuclei>`_ a fast tool for "
+"configurable targeted vulnerability scanning based on templates offering "
+"massive extensibility and ease of use"
 
 #: ../../source/tools/fuzz.rst:15
 msgid "`xray <https://github.com/chaitin/xray>`_ 安全评估工具，支持常见 web 安全问题扫描和自定义 poc"
-msgstr ""
+msgstr "`xray <https://github.com/chaitin/xray>`_ Security assessment tool that supports scanning for common web security issues and custom POCs"
 
 #: ../../source/tools/fuzz.rst:18
 msgid "XSS Payloads"
-msgstr ""
+msgstr "XSS Payloads"
 
 #: ../../source/tools/fuzz.rst:19
 msgid ""
 "`PORTSWIGGER XSS cheat sheet <https://portswigger.net/web-security/cross-"
 "site-scripting/cheat-sheet>`_"
 msgstr ""
+"`PORTSWIGGER XSS cheat sheet <https://portswigger.net/web-security/cross-"
+"site-scripting/cheat-sheet>`_"
 
 #: ../../source/tools/fuzz.rst:20
 msgid "`Pgaijin66 XSS-Payloads <https://github.com/Pgaijin66/XSS-Payloads>`_"
-msgstr ""
+msgstr "`Pgaijin66 XSS-Payloads <https://github.com/Pgaijin66/XSS-Payloads>`_"
 
 #: ../../source/tools/fuzz.rst:21
 msgid ""
 "`OWASP XSS "
 "<https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet>`_"
 msgstr ""
+"`OWASP XSS "
+"<https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet>`_"
 
 #: ../../source/tools/fuzz.rst:24
 msgid "Burp插件"
-msgstr ""
+msgstr "Burp Plugins"
 
 #: ../../source/tools/fuzz.rst:25
 msgid "`BurpBounty <https://github.com/wagiro/BurpBounty>`_ Scan Check Builder"
-msgstr ""
+msgstr "`BurpBounty <https://github.com/wagiro/BurpBounty>`_ Scan Check Builder"
 
 #: ../../source/tools/fuzz.rst:26
 msgid "`BurpShiroPassiveScan <https://github.com/pmiaowu/BurpShiroPassiveScan>`_"
-msgstr ""
+msgstr "`BurpShiroPassiveScan <https://github.com/pmiaowu/BurpShiroPassiveScan>`_"
 
 #: ../../source/tools/fuzz.rst:27
 msgid ""
 "`IntruderPayloads <https://github.com/1N3/IntruderPayloads>`_ A "
 "collection of Burpsuite Intruder payloads"
 msgstr ""
+"`IntruderPayloads <https://github.com/1N3/IntruderPayloads>`_ A "
+"collection of Burp Suite Intruder payloads"
 
 #: ../../source/tools/fuzz.rst:30
 msgid "字典"
-msgstr ""
+msgstr "Dictionaries"
 
 #: ../../source/tools/fuzz.rst:31
 msgid ""
 "`Blasting dictionary "
 "<https://github.com/rootphantomer/Blasting_dictionary>`_"
 msgstr ""
+"`Blasting dictionary "
+"<https://github.com/rootphantomer/Blasting_dictionary>`_"
 
 #: ../../source/tools/fuzz.rst:32
 msgid ""
 "`pydictor <https://github.com/LandGrey/pydictor>`_ A powerful and useful "
 "hacker dictionary builder for a brute-force attack"
 msgstr ""
+"`pydictor <https://github.com/LandGrey/pydictor>`_ A powerful and useful "
+"hacker dictionary builder for a brute-force attack"
 
 #: ../../source/tools/fuzz.rst:33
 msgid ""
 "`fuzzDicts <https://github.com/TheKingOfDuck/fuzzDicts>`_ Web Pentesting "
 "Fuzz 字典"
 msgstr ""
+"`fuzzDicts <https://github.com/TheKingOfDuck/fuzzDicts>`_ Web Pentesting "
+"Fuzz dictionaries"
 
 #: ../../source/tools/fuzz.rst:34
 msgid "`bruteforce lists <https://github.com/random-robbie/bruteforce-lists>`_"
-msgstr ""
+msgstr "`bruteforce lists <https://github.com/random-robbie/bruteforce-lists>`_"
 
 #: ../../source/tools/fuzz.rst:35
 msgid "`CT subdomains <https://github.com/internetwache/CT_subdomains>`_"
-msgstr ""
+msgstr "`CT subdomains <https://github.com/internetwache/CT_subdomains>`_"
 
 #: ../../source/tools/fuzz.rst:36
 msgid ""
 "`PentesterSpecialDict <https://github.com/ppbibo/PentesterSpecialDict>`_ "
 "渗透测试人员专用精简化字典"
 msgstr ""
+"`PentesterSpecialDict <https://github.com/ppbibo/PentesterSpecialDict>`_ "
+"streamlined dictionary for penetration testers"
 
 #: ../../source/tools/fuzz.rst:39
 msgid "Unicode Fuzz"
-msgstr ""
+msgstr "Unicode Fuzz"
 
 #: ../../source/tools/fuzz.rst:40
 msgid "`utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_"
-msgstr ""
+msgstr "`utf16encode <http://www.fileformat.info/info/charset/UTF-16/list.htm>`_"
 
 #: ../../source/tools/fuzz.rst:43
 msgid "WAF Bypass"
-msgstr ""
+msgstr "WAF Bypass"
 
 #: ../../source/tools/fuzz.rst:44
 msgid "`abuse ssl bypass waf <https://github.com/LandGrey/abuse-ssl-bypass-waf>`_"
-msgstr ""
+msgstr "`abuse ssl bypass waf <https://github.com/LandGrey/abuse-ssl-bypass-waf>`_"
 
 #: ../../source/tools/fuzz.rst:45
 msgid "`wafninja <https://github.com/khalilbijjou/wafninja>`_"
-msgstr ""
+msgstr "`wafninja <https://github.com/khalilbijjou/wafninja>`_"

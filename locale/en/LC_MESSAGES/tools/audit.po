@@ -20,83 +20,91 @@ msgstr ""
 
 #: ../../source/tools/audit.rst:2
 msgid "审计工具"
-msgstr ""
+msgstr "Audit Tools"
 
 #: ../../source/tools/audit.rst:5
 msgid "通用"
-msgstr ""
+msgstr "General"
 
 #: ../../source/tools/audit.rst:6
 msgid "`Cobra <https://github.com/FeeiCN/cobra>`_"
-msgstr ""
+msgstr "`Cobra <https://github.com/FeeiCN/cobra>`_"
 
 #: ../../source/tools/audit.rst:7
 msgid "`Semmle QL <https://github.com/Semmle/ql>`_"
-msgstr ""
+msgstr "`Semmle QL <https://github.com/Semmle/ql>`_"
 
 #: ../../source/tools/audit.rst:8
 msgid ""
 "`Sourcetrail <https://github.com/CoatiSoftware/Sourcetrail>`_ free and "
 "open-source cross-platform source explorer"
 msgstr ""
+"`Sourcetrail <https://github.com/CoatiSoftware/Sourcetrail>`_ free and "
+"open-source cross-platform source explorer"
 
 #: ../../source/tools/audit.rst:9
 msgid ""
 "`trivy <https://github.com/knqyf263/trivy>`_ A Simple and Comprehensive "
 "Vulnerability Scanner for Containers, Suitable for CI"
 msgstr ""
+"`trivy <https://github.com/knqyf263/trivy>`_ A Simple and Comprehensive "
+"Vulnerability Scanner for Containers, Suitable for CI"
 
 #: ../../source/tools/audit.rst:10
 msgid "`fortify <http://www.fortify.net/>`_"
-msgstr ""
+msgstr "`fortify <http://www.fortify.net/>`_"
 
 #: ../../source/tools/audit.rst:11
 msgid ""
 "`joern <https://github.com/joernio/joern>`_ Open-source code analysis "
 "platform for C/C++/Java/Binary/Javascript based on code property graphs"
 msgstr ""
+"`joern <https://github.com/joernio/joern>`_ Open-source code analysis "
+"platform for C/C++/Java/Binary/Javascript based on code property graphs"
 
 #: ../../source/tools/audit.rst:14
 msgid "PHP"
-msgstr ""
+msgstr "PHP"
 
 #: ../../source/tools/audit.rst:15
 msgid "`RIPS <http://rips-scanner.sourceforge.net/>`_"
-msgstr ""
+msgstr "`RIPS <http://rips-scanner.sourceforge.net/>`_"
 
 #: ../../source/tools/audit.rst:16
 msgid "`prvd <https://github.com/fate0/prvd>`_"
-msgstr ""
+msgstr "`prvd <https://github.com/fate0/prvd>`_"
 
 #: ../../source/tools/audit.rst:17
 msgid "`phpvulhunter <https://github.com/OneSourceCat/phpvulhunter>`_"
-msgstr ""
+msgstr "`phpvulhunter <https://github.com/OneSourceCat/phpvulhunter>`_"
 
 #: ../../source/tools/audit.rst:18
 msgid ""
 "`chip <https://github.com/phith0n/chip>`_ a simple tool to detect "
 "potential security threat in php code"
 msgstr ""
+"`chip <https://github.com/phith0n/chip>`_ a simple tool to detect "
+"potential security threat in PHP code"
 
 #: ../../source/tools/audit.rst:21
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 #: ../../source/tools/audit.rst:22
 msgid "`pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_"
-msgstr ""
+msgstr "`pyvulhunter <https://github.com/shengqi158/pyvulhunter>`_"
 
 #: ../../source/tools/audit.rst:23
 msgid "`pyt <https://github.com/python-security/pyt>`_"
-msgstr ""
+msgstr "`pyt <https://github.com/python-security/pyt>`_"
 
 #: ../../source/tools/audit.rst:26
 msgid "Java"
-msgstr ""
+msgstr "Java"
 
 #: ../../source/tools/audit.rst:27
 msgid "`find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_"
-msgstr ""
+msgstr "`find sec bugs <https://github.com/find-sec-bugs/find-sec-bugs>`_"
 
 #: ../../source/tools/audit.rst:28
 msgid ""
@@ -104,18 +112,21 @@ msgid ""
 "  A byte code analyzer for finding deserialization gadget chains in Java "
 "applications"
 msgstr ""
+"`Gadget Inspector <https://github.com/JackOfMostTrades/gadgetinspector>`_"
+"  A byte code analyzer for finding deserialization gadget chains in Java "
+"applications"
 
 #: ../../source/tools/audit.rst:31
 msgid "JavaScript"
-msgstr ""
+msgstr "JavaScript"
 
 #: ../../source/tools/audit.rst:32
 msgid "`NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_"
-msgstr ""
+msgstr "`NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_"
 
 #: ../../source/tools/audit.rst:35
 msgid "供应链"
-msgstr ""
+msgstr "Supply Chain"
 
 #: ../../source/tools/audit.rst:36
 msgid ""
@@ -124,11 +135,15 @@ msgid ""
 "organizations to identify and reduce risk from the use of third-party and"
 " open source components"
 msgstr ""
+"`Dependency-Track <https://github.com/DependencyTrack/dependency-track>`_"
+" is an intelligent Supply Chain Component Analysis platform that allows "
+"organizations to identify and reduce risk from the use of third-party and"
+" open source components"
 
 #: ../../source/tools/audit.rst:39
 msgid "小程序"
-msgstr ""
+msgstr "Mini Programs"
 
 #: ../../source/tools/audit.rst:40
 msgid "`unveilr <https://github.com/r3x5ur/unveilr>`_"
-msgstr ""
+msgstr "`unveilr <https://github.com/r3x5ur/unveilr>`_"

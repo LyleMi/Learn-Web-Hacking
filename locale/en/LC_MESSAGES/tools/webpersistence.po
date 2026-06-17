@@ -20,93 +20,103 @@ msgstr ""
 
 #: ../../source/tools/webpersistence.rst:2
 msgid "Web持久化"
-msgstr ""
+msgstr "Web Persistence"
 
 #: ../../source/tools/webpersistence.rst:5
 msgid "WebShell管理工具"
-msgstr ""
+msgstr "WebShell Management Tools"
 
 #: ../../source/tools/webpersistence.rst:6
 msgid "`菜刀 <https://github.com/Chora10/Cknife>`_"
-msgstr ""
+msgstr "`China Chopper <https://github.com/Chora10/Cknife>`_"
 
 #: ../../source/tools/webpersistence.rst:7
 msgid "`antSword <https://github.com/antoor/antSword>`_"
-msgstr ""
+msgstr "`antSword <https://github.com/antoor/antSword>`_"
 
 #: ../../source/tools/webpersistence.rst:8
 msgid "`冰蝎 <https://github.com/rebeyond/Behinder>`_ 动态二进制加密网站管理客户端"
-msgstr ""
+msgstr "`Behinder <https://github.com/rebeyond/Behinder>`_ Dynamic binary-encrypted website management client"
 
 #: ../../source/tools/webpersistence.rst:9
 msgid "`weevely3 <https://github.com/epinna/weevely3>`_ Weaponized web shell"
-msgstr ""
+msgstr "`weevely3 <https://github.com/epinna/weevely3>`_ Weaponized web shell"
 
 #: ../../source/tools/webpersistence.rst:10
 msgid ""
 "`Altman <https://github.com/keepwn/Altman>`_ the cross platform webshell "
 "tool in .NET"
 msgstr ""
+"`Altman <https://github.com/keepwn/Altman>`_ the cross platform webshell "
+"tool in .NET"
 
 #: ../../source/tools/webpersistence.rst:11
 msgid ""
 "`Webshell Sniper <https://github.com/WangYihang/Webshell-Sniper>`_ Manage"
 " your website via terminal"
 msgstr ""
+"`Webshell Sniper <https://github.com/WangYihang/Webshell-Sniper>`_ Manage"
+" your website via terminal"
 
 #: ../../source/tools/webpersistence.rst:12
 msgid ""
 "`quasibot <https://github.com/Smaash/quasibot>`_ complex webshell "
 "manager, quasi-http botnet"
 msgstr ""
+"`quasibot <https://github.com/Smaash/quasibot>`_ complex webshell "
+"manager, quasi-HTTP botnet"
 
 #: ../../source/tools/webpersistence.rst:15
 msgid "WebShell"
-msgstr ""
+msgstr "WebShell"
 
 #: ../../source/tools/webpersistence.rst:16
 msgid "`webshell <https://github.com/tennc/webshell>`_"
-msgstr ""
+msgstr "`webshell <https://github.com/tennc/webshell>`_"
 
 #: ../../source/tools/webpersistence.rst:17
 msgid "`PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_"
-msgstr ""
+msgstr "`PHP backdoors <https://github.com/bartblaze/PHP-backdoors>`_"
 
 #: ../../source/tools/webpersistence.rst:18
 msgid ""
 "`php bash - semi-interactive web shell "
 "<https://github.com/Arrexel/phpbash>`_"
 msgstr ""
+"`php bash - semi-interactive web shell "
+"<https://github.com/Arrexel/phpbash>`_"
 
 #: ../../source/tools/webpersistence.rst:19
 msgid "`Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_"
-msgstr ""
+msgstr "`Python RSA Encrypted Shell <https://github.com/Eitenne/TopHat.git>`_"
 
 #: ../../source/tools/webpersistence.rst:20
 msgid "`b374k - PHP WebShell Custom Tool <https://github.com/b374k/b374k>`_"
-msgstr ""
+msgstr "`b374k - PHP WebShell Custom Tool <https://github.com/b374k/b374k>`_"
 
 #: ../../source/tools/webpersistence.rst:21
 msgid "`JSP Webshells <https://github.com/threedr3am/JSP-Webshells>`_"
-msgstr ""
+msgstr "`JSP Webshells <https://github.com/threedr3am/JSP-Webshells>`_"
 
 #: ../../source/tools/webpersistence.rst:22
 msgid "`MemShellDemo <https://github.com/jweny/MemShellDemo>`_"
-msgstr ""
+msgstr "`MemShellDemo <https://github.com/jweny/MemShellDemo>`_"
 
 #: ../../source/tools/webpersistence.rst:25
 msgid "Web后门"
-msgstr ""
+msgstr "Web Backdoors"
 
 #: ../../source/tools/webpersistence.rst:26
 msgid "`pwnginx <https://github.com/t57root/pwnginx>`_"
-msgstr ""
+msgstr "`pwnginx <https://github.com/t57root/pwnginx>`_"
 
 #: ../../source/tools/webpersistence.rst:27
 msgid ""
 "`Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-"
 "Module-Backdoor>`_"
 msgstr ""
+"`Apache backdoor <https://github.com/WangYihang/Apache-HTTP-Server-"
+"Module-Backdoor>`_"
 
 #: ../../source/tools/webpersistence.rst:28
 msgid ""
@@ -114,9 +124,14 @@ msgid ""
 "application that utilizes the Rosyln C# compiler to quickly cross-compile"
 " .NET Framework console applications or libraries"
 msgstr ""
+"`SharpGen <https://github.com/cobbr/SharpGen>`_  .NET Core console "
+"application that utilizes the Rosyln C# compiler to quickly cross-compile"
+" .NET Framework console applications or libraries"
 
 #: ../../source/tools/webpersistence.rst:29
 msgid ""
 "`IIS-Raid <https://github.com/0x09AL/IIS-Raid>`_ A native backdoor module"
 " for Microsoft IIS"
 msgstr ""
+"`IIS-Raid <https://github.com/0x09AL/IIS-Raid>`_ A native backdoor module"
+" for Microsoft IIS"

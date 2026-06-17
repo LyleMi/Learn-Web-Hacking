@@ -20,64 +20,72 @@ msgstr ""
 
 #: ../../source/tools/nearsource.rst:2
 msgid "近源渗透"
-msgstr ""
+msgstr "Near-Source Penetration Testing"
 
 #: ../../source/tools/nearsource.rst:5
 msgid "Bad USB"
-msgstr ""
+msgstr "Bad USB"
 
 #: ../../source/tools/nearsource.rst:6
 msgid ""
 "`WiFiDuck <https://github.com/spacehuhn/WiFiDuck>`_ Keystroke injection "
 "attack plattform"
 msgstr ""
+"`WiFiDuck <https://github.com/spacehuhn/WiFiDuck>`_ Keystroke injection "
+"attack platform"
 
 #: ../../source/tools/nearsource.rst:7
 msgid "`BadUSB code <https://github.com/Xyntax/BadUSB-code>`_ badusb的一些利用方式及代码"
-msgstr ""
+msgstr "`BadUSB code <https://github.com/Xyntax/BadUSB-code>`_ BadUSB exploitation methods and code"
 
 #: ../../source/tools/nearsource.rst:8
 msgid ""
 "`WHID <https://github.com/whid-injector/WHID>`_ WiFi HID Injector - An "
 "USB Rubberducky / BadUSB On Steroids"
 msgstr ""
+"`WHID <https://github.com/whid-injector/WHID>`_ WiFi HID Injector - An "
+"USB Rubberducky / BadUSB On Steroids"
 
 #: ../../source/tools/nearsource.rst:9
 msgid ""
 "`BadUSB cable <https://github.com/joelsernamoreno/BadUSB-Cable>`_ based "
 "on Attiny85 microcontroller"
 msgstr ""
+"`BadUSB cable <https://github.com/joelsernamoreno/BadUSB-Cable>`_ based "
+"on Attiny85 microcontroller"
 
 #: ../../source/tools/nearsource.rst:10
 msgid "`USB Rubber Ducky <https://github.com/hak5darren/USB-Rubber-Ducky>`_"
-msgstr ""
+msgstr "`USB Rubber Ducky <https://github.com/hak5darren/USB-Rubber-Ducky>`_"
 
 #: ../../source/tools/nearsource.rst:13
 msgid "wifi"
-msgstr ""
+msgstr "WiFi"
 
 #: ../../source/tools/nearsource.rst:14
 msgid "`wifiphisher <https://github.com/wifiphisher/wifiphisher>`_"
-msgstr ""
+msgstr "`wifiphisher <https://github.com/wifiphisher/wifiphisher>`_"
 
 #: ../../source/tools/nearsource.rst:15
 msgid "`evilginx <https://github.com/kgretzky/evilginx>`_"
-msgstr ""
+msgstr "`evilginx <https://github.com/kgretzky/evilginx>`_"
 
 #: ../../source/tools/nearsource.rst:16
 msgid "`mana <https://github.com/sensepost/mana>`_"
-msgstr ""
+msgstr "`mana <https://github.com/sensepost/mana>`_"
 
 #: ../../source/tools/nearsource.rst:17
 msgid "`pwnagotchi <https://github.com/evilsocket/pwnagotchi>`_"
-msgstr ""
+msgstr "`pwnagotchi <https://github.com/evilsocket/pwnagotchi>`_"
 
 #: ../../source/tools/nearsource.rst:20
 msgid "无线"
-msgstr ""
+msgstr "Wireless"
 
 #: ../../source/tools/nearsource.rst:21
 msgid ""
 "`hackrf <https://github.com/mossmann/hackrf>`_ low cost software radio "
 "platform"
 msgstr ""
+"`hackrf <https://github.com/mossmann/hackrf>`_ low cost software radio "
+"platform"

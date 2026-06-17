@@ -20,21 +20,23 @@ msgstr ""
 
 #: ../../source/tools/papers.rst:2
 msgid "相关论文"
-msgstr ""
+msgstr "Related Papers"
 
 #: ../../source/tools/papers.rst:5
 msgid "论文列表"
-msgstr ""
+msgstr "Paper Lists"
 
 #: ../../source/tools/papers.rst:6
 msgid ""
 "`PRE-list <https://github.com/techge/PRE-list>`_ List of (automatic) "
 "protocol reverse engineering tools for network protocols"
 msgstr ""
+"`PRE-list <https://github.com/techge/PRE-list>`_ List of (automatic) "
+"protocol reverse engineering tools for network protocols"
 
 #: ../../source/tools/papers.rst:9
 msgid "流量分析"
-msgstr ""
+msgstr "Traffic Analysis"
 
 #: ../../source/tools/papers.rst:10
 #, python-brace-format
@@ -43,6 +45,9 @@ msgid ""
 "of domain generating malware[C]//25th {USENIX} Security Symposium "
 "({USENIX} Security 16). 2016: 263-278."
 msgstr ""
+"Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study "
+"of domain generating malware[C]//25th {USENIX} Security Symposium "
+"({USENIX} Security 16). 2016: 263-278."
 
 #: ../../source/tools/papers.rst:11
 msgid ""
@@ -51,22 +56,30 @@ msgid ""
 "SIGSAC Conference on Computer and Communications Security. ACM, 2017: "
 "2053-2069."
 msgstr ""
+"Nasr M, Houmansadr A, Mazumdar A. Compressive traffic analysis: A new "
+"paradigm for scalable traffic analysis[C]//Proceedings of the 2017 ACM "
+"SIGSAC Conference on Computer and Communications Security. ACM, 2017: "
+"2053-2069."
 
 #: ../../source/tools/papers.rst:14
 msgid "漏洞自动化"
-msgstr ""
+msgstr "Vulnerability Automation"
 
 #: ../../source/tools/papers.rst:15
 msgid ""
 "Staicu C A, Pradel M, Livshits B. SYNODE: Understanding and Automatically"
 " Preventing Injection Attacks on NODE. JS[C]//NDSS. 2018."
 msgstr ""
+"Staicu C A, Pradel M, Livshits B. SYNODE: Understanding and Automatically"
+" Preventing Injection Attacks on NODE. JS[C]//NDSS. 2018."
 
 #: ../../source/tools/papers.rst:16
 msgid ""
 "Atlidakis V , Godefroid P , Polishchuk M . REST-ler: Automatic "
 "Intelligent REST API Fuzzing[J]. 2018."
 msgstr ""
+"Atlidakis V , Godefroid P , Polishchuk M . REST-ler: Automatic "
+"Intelligent REST API Fuzzing[J]. 2018."
 
 #: ../../source/tools/papers.rst:17
 #, python-brace-format
@@ -75,10 +88,13 @@ msgid ""
 "Exploit Generation for Dynamic Web Applications[C]//27th {USENIX} "
 "Security Symposium ({USENIX} Security 18). 2018: 377-392."
 msgstr ""
+"Alhuzali A, Gjomemo R, Eshete B, et al. {NAVEX}: Precise and Scalable "
+"Exploit Generation for Dynamic Web Applications[C]//27th {USENIX} "
+"Security Symposium ({USENIX} Security 18). 2018: 377-392."
 
 #: ../../source/tools/papers.rst:20
 msgid "攻击技巧"
-msgstr ""
+msgstr "Attack Techniques"
 
 #: ../../source/tools/papers.rst:21
 msgid ""
@@ -87,6 +103,10 @@ msgid ""
 "gadgets[C]//Proceedings of the 2017 ACM SIGSAC Conference on Computer and"
 " Communications Security. ACM, 2017: 1709-1723."
 msgstr ""
+"Lekies S, Kotowicz K, Groß S, et al. Code-reuse attacks for the web: "
+"Breaking cross-site scripting mitigations via script "
+"gadgets[C]//Proceedings of the 2017 ACM SIGSAC Conference on Computer and"
+" Communications Security. ACM, 2017: 1709-1723."
 
 #: ../../source/tools/papers.rst:22
 msgid ""
@@ -94,10 +114,13 @@ msgid ""
 "Abusing Web Browsers for Persistent and Stealthy Computation[J]. arXiv "
 "preprint arXiv:1810.00464, 2018."
 msgstr ""
+"Papadopoulos P, Ilia P, Polychronakis M, et al. Master of Web Puppets: "
+"Abusing Web Browsers for Persistent and Stealthy Computation[J]. arXiv "
+"preprint arXiv:1810.00464, 2018."
 
 #: ../../source/tools/papers.rst:25
 msgid "攻击检测"
-msgstr ""
+msgstr "Attack Detection"
 
 #: ../../source/tools/papers.rst:26
 msgid ""
@@ -106,18 +129,22 @@ msgid ""
 " 28th International Joint Conference on Artificial Intelligence. AAAI "
 "Press, 2019: 4725-4731."
 msgstr ""
+"Liu T, Qi Y, Shi L, et al. Locate-then-detect: real-time web attack "
+"detection via attention-based deep neural networks[C]//Proceedings of the"
+" 28th International Joint Conference on Artificial Intelligence. AAAI "
+"Press, 2019: 4725-4731."
 
 #: ../../source/tools/papers.rst:29
 msgid "隐私"
-msgstr ""
+msgstr "Privacy"
 
 #: ../../source/tools/papers.rst:30
 msgid "Klein A, Pinkas B. DNS Cache-Based User Tracking[C]//NDSS. 2019."
-msgstr ""
+msgstr "Klein A, Pinkas B. DNS Cache-Based User Tracking[C]//NDSS. 2019."
 
 #: ../../source/tools/papers.rst:33
 msgid "指纹"
-msgstr ""
+msgstr "Fingerprinting"
 
 #: ../../source/tools/papers.rst:34
 #, python-brace-format
@@ -126,6 +153,9 @@ msgid ""
 "fingerprinting technique[C]//25th {USENIX} Security Symposium ({USENIX} "
 "Security 16). 2016: 1187-1203."
 msgstr ""
+"Hayes J, Danezis G. k-fingerprinting: A robust scalable website "
+"fingerprinting technique[C]//25th {USENIX} Security Symposium ({USENIX} "
+"Security 16). 2016: 1187-1203."
 
 #: ../../source/tools/papers.rst:35
 msgid ""
@@ -134,20 +164,26 @@ msgid ""
 "of the 2017 ACM SIGSAC Conference on Computer and Communications "
 "Security. ACM, 2017: 2021-2036."
 msgstr ""
+"Overdorf R, Juarez M, Acar G, et al. How unique is your. onion?: An "
+"analysis of the fingerprintability of tor onion services[C]//Proceedings "
+"of the 2017 ACM SIGSAC Conference on Computer and Communications "
+"Security. ACM, 2017: 2021-2036."
 
 #: ../../source/tools/papers.rst:38
 msgid "侧信道"
-msgstr ""
+msgstr "Side Channels"
 
 #: ../../source/tools/papers.rst:39
 msgid ""
 "Rosner N, Kadron I B, Bang L, et al. Profit: Detecting and Quantifying "
 "Side Channels in Networked Applications[C]//NDSS. 2019."
 msgstr ""
+"Rosner N, Kadron I B, Bang L, et al. Profit: Detecting and Quantifying "
+"Side Channels in Networked Applications[C]//NDSS. 2019."
 
 #: ../../source/tools/papers.rst:42
 msgid "认证"
-msgstr ""
+msgstr "Authentication"
 
 #: ../../source/tools/papers.rst:43
 #, python-brace-format
@@ -157,10 +193,14 @@ msgid ""
 "session management on the web[C]//27th {USENIX} Security Symposium "
 "({USENIX} Security 18). 2018: 1475-1492."
 msgstr ""
+"Ghasemisharif M, Ramesh A, Checkoway S, et al. O single sign-off, where "
+"art thou? an empirical analysis of single sign-on account hijacking and "
+"session management on the web[C]//27th {USENIX} Security Symposium "
+"({USENIX} Security 18). 2018: 1475-1492."
 
 #: ../../source/tools/papers.rst:46
 msgid "防护"
-msgstr ""
+msgstr "Protection"
 
 #: ../../source/tools/papers.rst:47
 msgid ""
@@ -168,3 +208,6 @@ msgid ""
 " analysis and property graphs[C]//Proceedings of the 2017 ACM SIGSAC "
 "Conference on Computer and Communications Security. ACM, 2017: 1757-1771."
 msgstr ""
+"Pellegrino G, Johns M, Koch S, et al. Deemon: Detecting CSRF with dynamic"
+" analysis and property graphs[C]//Proceedings of the 2017 ACM SIGSAC "
+"Conference on Computer and Communications Security. ACM, 2017: 1757-1771."

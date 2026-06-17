@@ -20,15 +20,15 @@ msgstr ""
 
 #: ../../source/tools/cloud.rst:2
 msgid "云安全"
-msgstr ""
+msgstr "Cloud Security"
 
 #: ../../source/tools/cloud.rst:5
 msgid "云环境自动测试"
-msgstr ""
+msgstr "Automated Cloud Environment Testing"
 
 #: ../../source/tools/cloud.rst:8
 msgid "k8s"
-msgstr ""
+msgstr "k8s"
 
 #: ../../source/tools/cloud.rst:9
 msgid ""
@@ -37,28 +37,38 @@ msgid ""
 "Kubernetes, Serverless framework and other infrastructure-as-code-"
 "languages with Checkov by Bridgecrew"
 msgstr ""
+"`checkov <https://github.com/bridgecrewio/checkov>`_ Prevent cloud "
+"misconfigurations during build-time for Terraform, Cloudformation, "
+"Kubernetes, Serverless framework and other infrastructure-as-code-"
+"languages with Checkov by Bridgecrew"
 
 #: ../../source/tools/cloud.rst:10
 msgid ""
 "`CDK <https://github.com/cdk-team/CDK>`_ Zero Dependency Container "
 "Penetration Toolkit"
 msgstr ""
+"`CDK <https://github.com/cdk-team/CDK>`_ Zero Dependency Container "
+"Penetration Toolkit"
 
 #: ../../source/tools/cloud.rst:11
 msgid "`kube bench <https://github.com/aquasecurity/kube-bench>`_"
-msgstr ""
+msgstr "`kube bench <https://github.com/aquasecurity/kube-bench>`_"
 
 #: ../../source/tools/cloud.rst:12
 msgid ""
 "`kube hunter <https://github.com/aquasecurity/kube-hunter>`_ Hunt for "
 "security weaknesses in Kubernetes clusters"
 msgstr ""
+"`kube hunter <https://github.com/aquasecurity/kube-hunter>`_ Hunt for "
+"security weaknesses in Kubernetes clusters"
 
 #: ../../source/tools/cloud.rst:13
 msgid ""
 "`KubiScan <https://github.com/cyberark/KubiScan>`_ A tool to scan "
 "Kubernetes cluster for risky permissions"
 msgstr ""
+"`KubiScan <https://github.com/cyberark/KubiScan>`_ A tool to scan "
+"Kubernetes cluster for risky permissions"
 
 #: ../../source/tools/cloud.rst:14
 msgid ""
@@ -66,54 +76,69 @@ msgid ""
 "first tool for testing if Kubernetes is deployed securely as defined in "
 "Kubernetes Hardening Guidance by to NSA and CISA"
 msgstr ""
+"`kubescape <https://github.com/armosec/kubescape>`_ kubescape is the "
+"first tool for testing if Kubernetes is deployed securely as defined in "
+"Kubernetes Hardening Guidance by to NSA and CISA"
 
 #: ../../source/tools/cloud.rst:15
 msgid ""
 "`kubeaudit <https://github.com/Shopify/kubeaudit>`_ kubeaudit helps you "
 "audit your Kubernetes clusters against common security controls"
 msgstr ""
+"`kubeaudit <https://github.com/Shopify/kubeaudit>`_ kubeaudit helps you "
+"audit your Kubernetes clusters against common security controls"
 
 #: ../../source/tools/cloud.rst:16
 msgid ""
 "`peirates <https://github.com/inguardians/peirates>`_ Kubernetes "
 "Penetration Testing tool"
 msgstr ""
+"`peirates <https://github.com/inguardians/peirates>`_ Kubernetes "
+"Penetration Testing tool"
 
 #: ../../source/tools/cloud.rst:17
 msgid ""
 "`datree <https://github.com/datreeio/datree>`_ Prevent Kubernetes "
 "misconfigurations from reaching production"
 msgstr ""
+"`datree <https://github.com/datreeio/datree>`_ Prevent Kubernetes "
+"misconfigurations from reaching production"
 
 #: ../../source/tools/cloud.rst:20
 msgid "容器"
-msgstr ""
+msgstr "Containers"
 
 #: ../../source/tools/cloud.rst:21
 msgid ""
 "`botb <https://github.com/brompwnie/botb>`_ A container analysis and "
 "exploitation tool for pentesters and engineers"
 msgstr ""
+"`botb <https://github.com/brompwnie/botb>`_ A container analysis and "
+"exploitation tool for pentesters and engineers"
 
 #: ../../source/tools/cloud.rst:22
 msgid ""
 "`deepce <https://github.com/stealthcopter/deepce>`_ Docker Enumeration, "
 "Escalation of Privileges and Container Escapes (DEEPCE)"
 msgstr ""
+"`deepce <https://github.com/stealthcopter/deepce>`_ Docker Enumeration, "
+"Escalation of Privileges and Container Escapes (DEEPCE)"
 
 #: ../../source/tools/cloud.rst:25
 msgid "安全加固"
-msgstr ""
+msgstr "Security Hardening"
 
 #: ../../source/tools/cloud.rst:26
 msgid ""
 "`falco <https://github.com/falcosecurity/falco>`_ Cloud Native Runtime "
 "Security"
 msgstr ""
+"`falco <https://github.com/falcosecurity/falco>`_ Cloud Native Runtime "
+"Security"
 
 #: ../../source/tools/cloud.rst:29
 msgid "云上扫描"
-msgstr ""
+msgstr "Cloud Scanning"
 
 #: ../../source/tools/cloud.rst:30
 msgid ""
@@ -121,6 +146,9 @@ msgid ""
 "Rules engine for cloud security, cost optimization, and governance, DSL "
 "in yaml for policies to query, filter, and take actions on resources"
 msgstr ""
+"`Cloud Custodian <https://github.com/cloud-custodian/cloud-custodian>`_ "
+"Rules engine for cloud security, cost optimization, and governance, DSL "
+"in YAML for policies to query, filter, and take actions on resources"
 
 #: ../../source/tools/cloud.rst:31
 msgid ""
@@ -128,19 +156,26 @@ msgid ""
 "transforms your cloud infrastructure into SQL database for easy "
 "monitoring, governance and security"
 msgstr ""
+"`cloudquery <https://github.com/cloudquery/cloudquery>`_ cloudquery "
+"transforms your cloud infrastructure into SQL database for easy "
+"monitoring, governance and security"
 
 #: ../../source/tools/cloud.rst:34
 msgid "靶场环境"
-msgstr ""
+msgstr "Practice Range Environments"
 
 #: ../../source/tools/cloud.rst:35
 msgid ""
 "`metarget <https://github.com/Metarget/metarget>`_ a framework providing "
 "automatic constructions of vulnerable infrastructures."
 msgstr ""
+"`metarget <https://github.com/Metarget/metarget>`_ a framework providing "
+"automatic constructions of vulnerable infrastructures."
 
 #: ../../source/tools/cloud.rst:36
 msgid ""
 "`CloudGoat <https://github.com/RhinoSecurityLabs/cloudgoat>`_ Rhino "
 "Security Labs' \"Vulnerable by Design\" AWS deployment tool"
 msgstr ""
+"`CloudGoat <https://github.com/RhinoSecurityLabs/cloudgoat>`_ Rhino "
+"Security Labs' \"Vulnerable by Design\" AWS deployment tool"

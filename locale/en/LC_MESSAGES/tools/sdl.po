@@ -20,19 +20,19 @@ msgstr ""
 
 #: ../../source/tools/sdl.rst:2
 msgid "安全开发"
-msgstr ""
+msgstr "Secure Development"
 
 #: ../../source/tools/sdl.rst:5
 msgid "风险控制"
-msgstr ""
+msgstr "Risk Control"
 
 #: ../../source/tools/sdl.rst:6
 msgid "`aswan <https://github.com/momosecurity/aswan>`_ 陌陌风控系统静态规则引擎"
-msgstr ""
+msgstr "`aswan <https://github.com/momosecurity/aswan>`_ Static rule engine for Momo's risk control system"
 
 #: ../../source/tools/sdl.rst:9
 msgid "静态分析"
-msgstr ""
+msgstr "Static Analysis"
 
 #: ../../source/tools/sdl.rst:10
 msgid ""
@@ -40,36 +40,42 @@ msgid ""
 "tokenizes PHP files and detects violations of a defined set of coding "
 "standards"
 msgstr ""
+"`PHP CodeSniffer <https://github.com/squizlabs/PHP_CodeSniffer>`_ "
+"tokenizes PHP files and detects violations of a defined set of coding "
+"standards"
 
 #: ../../source/tools/sdl.rst:13
 msgid "安全编码规范"
-msgstr ""
+msgstr "Secure Coding Standards"
 
 #: ../../source/tools/sdl.rst:14
 msgid "`JAVA安全SDK及编码规范 <https://github.com/momosecurity/rhizobia_J>`_"
-msgstr ""
+msgstr "`Java Security SDK and Coding Standards <https://github.com/momosecurity/rhizobia_J>`_"
 
 #: ../../source/tools/sdl.rst:15
 msgid "`PHP安全SDK及编码规范 <https://github.com/momosecurity/rhizobia_P>`_"
-msgstr ""
+msgstr "`PHP Security SDK and Coding Standards <https://github.com/momosecurity/rhizobia_P>`_"
 
 #: ../../source/tools/sdl.rst:18
 msgid "漏洞管理"
-msgstr ""
+msgstr "Vulnerability Management"
 
 #: ../../source/tools/sdl.rst:19
 msgid "`SRCMS <https://github.com/martinzhou2015/SRCMS>`_"
-msgstr ""
+msgstr "`SRCMS <https://github.com/martinzhou2015/SRCMS>`_"
 
 #: ../../source/tools/sdl.rst:20
 msgid ""
 "`洞察 <https://github.com/creditease-sec/insight>`_ "
 "宜信集应用系统资产管理、漏洞全生命周期管理、安全知识库管理三位一体的平台"
 msgstr ""
+"`Insight <https://github.com/creditease-sec/insight>`_ CreditEase platform "
+"that combines application system asset management, full-lifecycle "
+"vulnerability management, and security knowledge base management"
 
 #: ../../source/tools/sdl.rst:21
 msgid "`xunfeng <https://github.com/ysrc/xunfeng>`_ 适用于企业内网的漏洞快速应急，巡航扫描系统"
-msgstr ""
+msgstr "`xunfeng <https://github.com/ysrc/xunfeng>`_ Fast vulnerability emergency response and patrol scanning system for enterprise intranets"
 
 #: ../../source/tools/sdl.rst:22
 msgid ""
@@ -77,23 +83,32 @@ msgid ""
 "source application vulnerability correlation and security orchestration "
 "tool"
 msgstr ""
+"`DefectDojo <https://github.com/DefectDojo/django-DefectDojo>`_ an open-"
+"source application vulnerability correlation and security orchestration "
+"tool"
 
 #: ../../source/tools/sdl.rst:23
 msgid ""
 "`Fuxi Scanner <https://github.com/jeffzh3ng/Fuxi-Scanner>`_ Penetration "
 "Testing Platform"
 msgstr ""
+"`Fuxi Scanner <https://github.com/jeffzh3ng/Fuxi-Scanner>`_ Penetration "
+"Testing Platform"
 
 #: ../../source/tools/sdl.rst:24
 msgid ""
 "`SeMF <https://gitee.com/gy071089/SecurityManageFramwork>`_ "
 "企业内网安全管理平台，包含资产管理，漏洞管理，账号管理，知识库管、安全扫描自动化功能模块"
 msgstr ""
+"`SeMF <https://gitee.com/gy071089/SecurityManageFramwork>`_ Enterprise "
+"intranet security management platform with asset management, vulnerability "
+"management, account management, knowledge base management, and automated "
+"security scanning modules"
 
 #: ../../source/tools/sdl.rst:27
 msgid "DevSecOps"
-msgstr ""
+msgstr "DevSecOps"
 
 #: ../../source/tools/sdl.rst:28
 msgid "`hunter <https://github.com/ztosec/hunter>`_ 中通DevSecOps闭环方案，被动式漏洞扫描器"
-msgstr ""
+msgstr "`hunter <https://github.com/ztosec/hunter>`_ ZTO DevSecOps closed-loop solution and passive vulnerability scanner"

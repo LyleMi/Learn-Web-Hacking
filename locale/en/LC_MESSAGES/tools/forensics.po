@@ -20,23 +20,23 @@ msgstr ""
 
 #: ../../source/tools/forensics.rst:2
 msgid "取证"
-msgstr ""
+msgstr "Forensics"
 
 #: ../../source/tools/forensics.rst:5
 msgid "内存取证"
-msgstr ""
+msgstr "Memory Forensics"
 
 #: ../../source/tools/forensics.rst:6
 msgid "`SfAntiBotPro <http://edr.sangfor.com.cn/tool/SfabAntiBot_X64.7z>`_"
-msgstr ""
+msgstr "`SfAntiBotPro <http://edr.sangfor.com.cn/tool/SfabAntiBot_X64.7z>`_"
 
 #: ../../source/tools/forensics.rst:7
 msgid "`volatility <https://github.com/volatilityfoundation/volatility>`_"
-msgstr ""
+msgstr "`volatility <https://github.com/volatilityfoundation/volatility>`_"
 
 #: ../../source/tools/forensics.rst:8
 msgid "`Rekall <https://github.com/google/rekall>`_ Memory Forensic Framework"
-msgstr ""
+msgstr "`Rekall <https://github.com/google/rekall>`_ Memory Forensic Framework"
 
 #: ../../source/tools/forensics.rst:9
 msgid ""
@@ -45,9 +45,15 @@ msgid ""
 "memory from Linux and Linux-based devices, such as those powered by "
 "Android."
 msgstr ""
+"`LiME <https://github.com/504ensicsLabs/LiME>`_ LiME (formerly DMD) is a "
+"Loadable Kernel Module (LKM), which allows the acquisition of volatile "
+"memory from Linux and Linux-based devices, such as those powered by "
+"Android."
 
 #: ../../source/tools/forensics.rst:10
 msgid ""
 "`AVML <https://github.com/microsoft/avml>`_ Acquire Volatile Memory for "
 "Linux"
 msgstr ""
+"`AVML <https://github.com/microsoft/avml>`_ Acquire Volatile Memory for "
+"Linux"
