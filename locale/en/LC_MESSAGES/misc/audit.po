@@ -20,99 +20,112 @@ msgstr ""
 
 #: ../../source/misc/audit.rst:2
 msgid "代码审计"
-msgstr ""
+msgstr "Code Audit"
 
 #: ../../source/misc/audit.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/misc/audit.rst:6
 msgid "代码审计是找到应用缺陷的过程。其通常有白盒审计、黑盒审计、灰盒审计等方式。白盒审计指通过对源代码的分析找到应用缺陷，黑盒审计通常不涉及到源代码，多使用模糊测试的方式，而灰盒审计则是黑白结合的方式。三种不同的测试方法有不同的优缺点。"
-msgstr ""
+msgstr "Code audit is the process of finding defects in an application. Common approaches include white-box auditing, black-box auditing, and gray-box auditing. White-box auditing finds application defects by analyzing source code. Black-box auditing usually does not involve source code and often relies on fuzzing. Gray-box auditing combines both approaches. These three testing methods have different advantages and disadvantages."
 
 #: ../../source/misc/audit.rst:9
 msgid "常用概念"
-msgstr ""
+msgstr "Common Concepts"
 
 #: ../../source/misc/audit.rst:12
 msgid "输入"
-msgstr ""
+msgstr "Input"
 
 #: ../../source/misc/audit.rst:13
 msgid "输入通常也称Source，Web应用的输入可以是请求的参数（GET、POST等）、上传的文件、Cookie、数据库数据等用户可控或者间接可控的地方。"
-msgstr ""
+msgstr "Input is also commonly called a Source. In a web application, input can come from request parameters such as GET and POST, uploaded files, Cookies, database data, and other locations that are directly or indirectly controllable by users."
 
 #: ../../source/misc/audit.rst:15
 msgid ""
 "例如PHP中的 ``$_GET`` / ``$_POST`` / ``$_REQUEST`` / ``$_COOKIE`` / "
 "``$_FILES``  / ``$_SERVER`` 等，都可以作为应用的输入。"
 msgstr ""
+"For example, in PHP, ``$_GET`` / ``$_POST`` / ``$_REQUEST`` / ``$_COOKIE`` "
+"/ ``$_FILES``  / ``$_SERVER`` can all be treated as application input."
 
 #: ../../source/misc/audit.rst:18
 msgid "处理函数"
-msgstr ""
+msgstr "Handler Functions"
 
 #: ../../source/misc/audit.rst:19
 msgid "处理函数是对数据进行过滤或者编解码的函数，通常被称为Clean/Filter/Sanitizer。这些函数会对输入进行安全操作或过滤，为漏洞利用带来不确定性。"
-msgstr ""
+msgstr "Handler functions are functions that filter, encode, or decode data. They are often called Clean, Filter, or Sanitizer functions. These functions perform security processing or filtering on input, which introduces uncertainty into exploitability."
 
 #: ../../source/misc/audit.rst:21
 msgid ""
 "同样以PHP为例，这样的函数可能是 ``mysqli_real_escape_string`` / ``htmlspecialchars`` / "
 "``base64_encode`` / ``str_rot13`` 等，也可能是应用自定义的过滤函数。"
 msgstr ""
+"Using PHP again as an example, such functions may include "
+"``mysqli_real_escape_string`` / ``htmlspecialchars`` / ``base64_encode`` / "
+"``str_rot13``, or application-defined filtering functions."
 
 #: ../../source/misc/audit.rst:24
 msgid "危险函数"
-msgstr ""
+msgstr "Dangerous Functions"
 
 #: ../../source/misc/audit.rst:25
 msgid "危险函数又常叫做Sink Call、漏洞点，是可能触发危险行为如文件操作、命令执行、数据库操作等行为的函数。"
-msgstr ""
+msgstr "Dangerous functions are also commonly called Sink Calls or vulnerability points. They are functions that may trigger dangerous behavior such as file operations, command execution, or database operations."
 
 #: ../../source/misc/audit.rst:27
 msgid "在PHP中，可能是 ``include`` / ``system`` / ``echo`` 等。"
-msgstr ""
+msgstr "In PHP, examples may include ``include`` / ``system`` / ``echo``."
 
 #: ../../source/misc/audit.rst:30
 msgid "自动化审计"
-msgstr ""
+msgstr "Automated Auditing"
 
 #: ../../source/misc/audit.rst:31
 msgid ""
 "一般认为一个漏洞的触发过程是从输入经过过滤到危险函数的过程(Source To "
 "Sink)，而审计就是寻找这个链条的过程。常见的自动化审计方案有危险函数匹配、控制流分析等。"
 msgstr ""
+"A vulnerability is generally considered to be triggered when data flows from"
+" input through filtering to a dangerous function, a Source To Sink path. "
+"Auditing is the process of finding this chain. Common automated audit "
+"approaches include dangerous function matching and control flow analysis."
 
 #: ../../source/misc/audit.rst:34
 msgid "危险函数匹配"
-msgstr ""
+msgstr "Dangerous Function Matching"
 
 #: ../../source/misc/audit.rst:35
 msgid "白盒审计最常见的方式是通过搜寻危险函数与危险参数定位漏洞，比较有代表性的工具是Seay开发的审计工具。这种方法误报率相当高，这是因为这种方法没有对程序的流程进行深入分析，另一方面，这种方式通常是孤立地分析每一个文件，忽略了文件之间复杂的调用关系。"
-msgstr ""
+msgstr "The most common white-box auditing method locates vulnerabilities by searching for dangerous functions and dangerous parameters. A representative example is the audit tool developed by Seay. This method has a relatively high false-positive rate because it does not deeply analyze program flow. It also usually analyzes each file in isolation and ignores complex call relationships between files."
 
 #: ../../source/misc/audit.rst:37
 msgid "具体的说，这种方式在一些环境下能做到几乎无漏报，只要审计者有耐心，可以发现大部分的漏洞，但是在高度框架化的代码中，能找到的漏洞相对有限。"
-msgstr ""
+msgstr "More specifically, in some environments this approach can achieve almost no false negatives. If the auditor is patient, most vulnerabilities can be found. However, in highly framework-driven code, the number of vulnerabilities it can find is relatively limited."
 
 #: ../../source/misc/audit.rst:40
 msgid "控制流分析"
-msgstr ""
+msgstr "Control Flow Analysis"
 
 #: ../../source/misc/audit.rst:41
 msgid "在后来的系统中，考虑到一定程度引入AST作为分析的依据，在一定程度上减少了误报，但是仍存在很多缺陷。"
-msgstr ""
+msgstr "Later systems introduced ASTs as an analysis basis to some extent, which reduced false positives, but many limitations remained."
 
 #: ../../source/misc/audit.rst:43
 msgid ""
 "而后，Dahse  "
 "J等人设计了RIPS，该工具进行数据流与控制流分析，结合过程内与过程间的分析得到审计结果，相对危险函数匹配的方式来说误报率少了很多，但是同样的也增加了开销。"
 msgstr ""
+"Later, Dahse J et al. designed RIPS, which performs data flow and control "
+"flow analysis and combines intraprocedural and interprocedural analysis to "
+"produce audit results. Compared with dangerous function matching, it has "
+"many fewer false positives, but it also increases cost."
 
 #: ../../source/misc/audit.rst:46
 msgid "基于图的分析"
-msgstr ""
+msgstr "Graph-Based Analysis"
 
 #: ../../source/misc/audit.rst:47
 msgid ""
@@ -120,286 +133,291 @@ msgid ""
 "2017年发表的文章Efficient and Flexible Discovery of PHP Application "
 "Vulnerabilities。"
 msgstr ""
+"Graph-based analysis is an improvement over control flow analysis. It uses "
+"CFG properties and graph-computation algorithms to simplify computation to "
+"some extent. Representative examples include Microsoft's Semmle QL and the "
+"NDSS 2017 paper Efficient and Flexible Discovery of PHP Application "
+"Vulnerabilities."
 
 #: ../../source/misc/audit.rst:50
 msgid "代码相似性比对"
-msgstr ""
+msgstr "Code Similarity Comparison"
 
 #: ../../source/misc/audit.rst:51
 msgid "一些开发者会复制其他框架的代码，或者使用各种框架。如果事先有建立对应的漏洞图谱，则可使用相似性方法来找到漏洞。"
-msgstr ""
+msgstr "Some developers copy code from other frameworks or use various frameworks. If a corresponding vulnerability map has been built in advance, similarity methods can be used to find vulnerabilities."
 
 #: ../../source/misc/audit.rst:54
 msgid "灰盒分析"
-msgstr ""
+msgstr "Gray-Box Analysis"
 
 #: ../../source/misc/audit.rst:55
 msgid "基于控制流的分析开销较大，于是有人提出了基于运行时的分析方式，对代码进行Hook，当执行到危险函数时自动回溯输入，找到输入并判断是否可用。"
-msgstr ""
+msgstr "Control-flow-based analysis is expensive, so runtime-based analysis has been proposed. This approach hooks the code and, when execution reaches a dangerous function, automatically traces back to the input, identifies the input, and determines whether it is usable."
 
 #: ../../source/misc/audit.rst:57
 msgid "这种方式解决了控制流分析实现复杂、计算路径开销大的问题，在判断过滤函数上也有一定的突破，但是灰盒的方式并不一定会触发所有的漏洞。fate0开发的prvd就是基于这种设计思路。"
-msgstr ""
+msgstr "This approach addresses the implementation complexity and high path-computation cost of control flow analysis, and it also improves handling of filtering functions. However, a gray-box approach does not necessarily trigger every vulnerability. prvd, developed by fate0, is based on this design."
 
 #: ../../source/misc/audit.rst:60
 msgid "手工审计流程"
-msgstr ""
+msgstr "Manual Audit Workflow"
 
 #: ../../source/misc/audit.rst:61
 msgid "获取代码，确定版本，尝试初步分析"
-msgstr ""
+msgstr "Obtain the code, determine the version, and perform initial analysis"
 
 #: ../../source/misc/audit.rst:62
 msgid "找历史漏洞信息"
-msgstr ""
+msgstr "Search for historical vulnerability information"
 
 #: ../../source/misc/audit.rst:63
 msgid "找应用该系统的实例"
-msgstr ""
+msgstr "Find instances that use this system"
 
 #: ../../source/misc/audit.rst:64
 msgid "确定依赖库是否存在漏洞"
-msgstr ""
+msgstr "Determine whether dependency libraries have vulnerabilities"
 
 #: ../../source/misc/audit.rst:65
 msgid "基于审计工具进行初步分析"
-msgstr ""
+msgstr "Perform initial analysis with audit tools"
 
 #: ../../source/misc/audit.rst:66
 msgid "了解程序运行流程"
-msgstr ""
+msgstr "Understand the program execution flow"
 
 #: ../../source/misc/audit.rst:67
 msgid "文件加载方式"
-msgstr ""
+msgstr "File loading method"
 
 #: ../../source/misc/audit.rst:68
 msgid "类库依赖"
-msgstr ""
+msgstr "Library dependencies"
 
 #: ../../source/misc/audit.rst:69
 msgid "是否加载waf"
-msgstr ""
+msgstr "Whether a WAF is loaded"
 
 #: ../../source/misc/audit.rst:70
 msgid "数据库连接方式"
-msgstr ""
+msgstr "Database connection method"
 
 #: ../../source/misc/audit.rst:71
 msgid "mysql/mysqli/pdo"
-msgstr ""
+msgstr "mysql/mysqli/pdo"
 
 #: ../../source/misc/audit.rst:72
 msgid "是否开启预编译"
-msgstr ""
+msgstr "Whether prepared statements are enabled"
 
 #: ../../source/misc/audit.rst:73 ../../source/misc/audit.rst:104
 msgid "视图渲染"
-msgstr ""
+msgstr "View rendering"
 
 #: ../../source/misc/audit.rst:74 ../../source/misc/audit.rst:102
 msgid "XSS"
-msgstr ""
+msgstr "XSS"
 
 #: ../../source/misc/audit.rst:75
 msgid "模版注入"
-msgstr ""
+msgstr "Template injection"
 
 #: ../../source/misc/audit.rst:76
 msgid "SESSION处理机制"
-msgstr ""
+msgstr "SESSION handling mechanism"
 
 #: ../../source/misc/audit.rst:77
 msgid "文件"
-msgstr ""
+msgstr "Files"
 
 #: ../../source/misc/audit.rst:78
 msgid "数据库"
-msgstr ""
+msgstr "Database"
 
 #: ../../source/misc/audit.rst:79
 msgid "内存"
-msgstr ""
+msgstr "Memory"
 
 #: ../../source/misc/audit.rst:80
 msgid "Cache处理机制"
-msgstr ""
+msgstr "Cache handling mechanism"
 
 #: ../../source/misc/audit.rst:81
 msgid "文件cache可能写shell"
-msgstr ""
+msgstr "File cache may write a shell"
 
 #: ../../source/misc/audit.rst:82
 msgid "数据库cache可能注入"
-msgstr ""
+msgstr "Database cache may be injectable"
 
 #: ../../source/misc/audit.rst:83
 msgid "memcache"
-msgstr ""
+msgstr "memcache"
 
 #: ../../source/misc/audit.rst:84
 msgid "账户体系"
-msgstr ""
+msgstr "Account system"
 
 #: ../../source/misc/audit.rst:85
 msgid "Auth方式"
-msgstr ""
+msgstr "Auth method"
 
 #: ../../source/misc/audit.rst:86
 msgid "Pre-Auth的情况下可以访问的页面"
-msgstr ""
+msgstr "Pages accessible in a Pre-Auth state"
 
 #: ../../source/misc/audit.rst:87
 msgid "普通用户的帐号"
-msgstr ""
+msgstr "Regular user accounts"
 
 #: ../../source/misc/audit.rst:88
 msgid "能否可获取普通用户权限"
-msgstr ""
+msgstr "Whether regular user privileges can be obtained"
 
 #: ../../source/misc/audit.rst:89
 msgid "管理员账户默认密码"
-msgstr ""
+msgstr "Default password for administrator accounts"
 
 #: ../../source/misc/audit.rst:90
 msgid "账号体系"
-msgstr ""
+msgstr "Account system"
 
 #: ../../source/misc/audit.rst:91
 msgid "加密方式"
-msgstr ""
+msgstr "Encryption method"
 
 #: ../../source/misc/audit.rst:92
 msgid "爆破密码"
-msgstr ""
+msgstr "Brute-force passwords"
 
 #: ../../source/misc/audit.rst:93
 msgid "重置漏洞"
-msgstr ""
+msgstr "Reset vulnerabilities"
 
 #: ../../source/misc/audit.rst:94
 msgid "修改密码漏洞"
-msgstr ""
+msgstr "Password change vulnerabilities"
 
 #: ../../source/misc/audit.rst:95
 msgid "修改其他账号密码"
-msgstr ""
+msgstr "Change passwords for other accounts"
 
 #: ../../source/misc/audit.rst:96
 msgid "根据漏洞类型查找Sink"
-msgstr ""
+msgstr "Find Sinks by vulnerability type"
 
 #: ../../source/misc/audit.rst:97
 msgid "SQLi"
-msgstr ""
+msgstr "SQLi"
 
 #: ../../source/misc/audit.rst:98
 msgid "全局过滤能否bypass"
-msgstr ""
+msgstr "Whether global filters can be bypassed"
 
 #: ../../source/misc/audit.rst:99
 msgid "是否有直接执行SQL的地方"
-msgstr ""
+msgstr "Whether SQL is executed directly anywhere"
 
 #: ../../source/misc/audit.rst:100
 msgid "SQL使用驱动，mysql/mysqli/pdo"
-msgstr ""
+msgstr "SQL driver usage, mysql/mysqli/pdo"
 
 #: ../../source/misc/audit.rst:101
 msgid "如果使用PDO，搜索是否存在直接执行的部分"
-msgstr ""
+msgstr "If PDO is used, search for directly executed portions"
 
 #: ../../source/misc/audit.rst:103
 msgid "全局bypass"
-msgstr ""
+msgstr "Global bypass"
 
 #: ../../source/misc/audit.rst:105
 msgid "FILE"
-msgstr ""
+msgstr "FILE"
 
 #: ../../source/misc/audit.rst:106
 msgid "查找上传功能点"
-msgstr ""
+msgstr "Find upload functionality"
 
 #: ../../source/misc/audit.rst:107
 msgid "上传下载覆盖删除"
-msgstr ""
+msgstr "Upload, download, overwrite, and delete"
 
 #: ../../source/misc/audit.rst:108
 msgid "包含"
-msgstr ""
+msgstr "Include"
 
 #: ../../source/misc/audit.rst:109
 msgid "LFI"
-msgstr ""
+msgstr "LFI"
 
 #: ../../source/misc/audit.rst:110
 msgid "RFI"
-msgstr ""
+msgstr "RFI"
 
 #: ../../source/misc/audit.rst:111
 msgid "全局找include, require"
-msgstr ""
+msgstr "Search globally for include and require"
 
 #: ../../source/misc/audit.rst:112
 msgid "RCE"
-msgstr ""
+msgstr "RCE"
 
 #: ../../source/misc/audit.rst:113
 msgid "XXE"
-msgstr ""
+msgstr "XXE"
 
 #: ../../source/misc/audit.rst:114
 msgid "CSRF"
-msgstr ""
+msgstr "CSRF"
 
 #: ../../source/misc/audit.rst:115
 msgid "SSRF"
-msgstr ""
+msgstr "SSRF"
 
 #: ../../source/misc/audit.rst:116
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/misc/audit.rst:117
 msgid "变量覆盖"
-msgstr ""
+msgstr "Variable overwrite"
 
 #: ../../source/misc/audit.rst:118
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: ../../source/misc/audit.rst:119
 msgid "XPath"
-msgstr ""
+msgstr "XPath"
 
 #: ../../source/misc/audit.rst:120
 msgid "Cookie伪造"
-msgstr ""
+msgstr "Cookie forgery"
 
 #: ../../source/misc/audit.rst:121
 msgid "过滤"
-msgstr ""
+msgstr "Filtering"
 
 #: ../../source/misc/audit.rst:122
 msgid "找WAF过滤方式，判断是否可以绕过"
-msgstr ""
+msgstr "Find the WAF filtering method and determine whether it can be bypassed"
 
 #: ../../source/misc/audit.rst:125
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/audit.rst:126
 msgid "`rips <https://github.com/ripsscanner/rips>`_"
-msgstr ""
+msgstr "`rips <https://github.com/ripsscanner/rips>`_"
 
 #: ../../source/misc/audit.rst:127
 msgid "`prvd <https://github.com/fate0/prvd>`_"
-msgstr ""
+msgstr "`prvd <https://github.com/fate0/prvd>`_"
 
 #: ../../source/misc/audit.rst:128
 msgid "`PHP运行时漏洞检测 <http://blog.fatezero.org/2018/11/11/prvd/>`_"
-msgstr ""
+msgstr "`PHP Runtime Vulnerability Detection <http://blog.fatezero.org/2018/11/11/prvd/>`_"
 
 #: ../../source/misc/audit.rst:129
 msgid ""
@@ -407,9 +425,14 @@ msgid ""
 " of PHP Application Vulnerabilities[C]// IEEE European Symposium on "
 "Security & Privacy. IEEE, 2017."
 msgstr ""
+"Backes M , Rieck K , Skoruppa M , et al. Efficient and Flexible Discovery"
+" of PHP Application Vulnerabilities[C]// IEEE European Symposium on "
+"Security & Privacy. IEEE, 2017."
 
 #: ../../source/misc/audit.rst:130
 msgid ""
 "Dahse J. RIPS-A static source code analyser for vulnerabilities in PHP "
 "scripts[J]. Retrieved: February, 2010, 28: 2012."
 msgstr ""
+"Dahse J. RIPS-A static source code analyser for vulnerabilities in PHP "
+"scripts[J]. Retrieved: February, 2010, 28: 2012."

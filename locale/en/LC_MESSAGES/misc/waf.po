@@ -20,393 +20,406 @@ msgstr ""
 
 #: ../../source/misc/waf.rst:2
 msgid "WAF"
-msgstr ""
+msgstr "WAF"
 
 #: ../../source/misc/waf.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/misc/waf.rst:8
 msgid "概念"
-msgstr ""
+msgstr "Concept"
 
 #: ../../source/misc/waf.rst:9
 msgid ""
 "WAF（Web Application "
 "Firewall，Web应用防火墙）是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供加固的产品。"
 msgstr ""
+"A WAF (Web Application Firewall) is a product designed to harden web "
+"applications by enforcing a set of security policies for HTTP/HTTPS."
 
 #: ../../source/misc/waf.rst:11
 msgid "在市场上，有各种价格各种功能和选项的WAF。在一定程度上，WAF能为Web应用提供安全性，但是不能保证完全的安全。"
-msgstr ""
+msgstr "The market offers WAF products at many price points and with many functions and options. To some extent, a WAF can improve security for web applications, but it cannot guarantee complete security."
 
 #: ../../source/misc/waf.rst:14
 msgid "常见功能"
-msgstr ""
+msgstr "Common Features"
 
 #: ../../source/misc/waf.rst:15
 msgid "检测异常协议，拒绝不符合HTTP标准的请求"
-msgstr ""
+msgstr "Detect abnormal protocols and reject requests that do not comply with HTTP standards"
 
 #: ../../source/misc/waf.rst:16
 msgid "对状态管理进行会话保护"
-msgstr ""
+msgstr "Provide session protection for state management"
 
 #: ../../source/misc/waf.rst:17
 msgid "Cookies保护"
-msgstr ""
+msgstr "Cookie protection"
 
 #: ../../source/misc/waf.rst:18
 msgid "信息泄露保护"
-msgstr ""
+msgstr "Information disclosure protection"
 
 #: ../../source/misc/waf.rst:19
 msgid "DDoS防护"
-msgstr ""
+msgstr "DDoS protection"
 
 #: ../../source/misc/waf.rst:20
 msgid "禁止某些IP访问"
-msgstr ""
+msgstr "Block access from certain IP addresses"
 
 #: ../../source/misc/waf.rst:21
 msgid "可疑IP检查"
-msgstr ""
+msgstr "Suspicious IP checks"
 
 #: ../../source/misc/waf.rst:22
 msgid "安全HTTP头管理"
-msgstr ""
+msgstr "Secure HTTP header management"
 
 #: ../../source/misc/waf.rst:23
 msgid "X-XSS-Protection"
-msgstr ""
+msgstr "X-XSS-Protection"
 
 #: ../../source/misc/waf.rst:24
 msgid "X-Frame-Options"
-msgstr ""
+msgstr "X-Frame-Options"
 
 #: ../../source/misc/waf.rst:25
 msgid "机制检测"
-msgstr ""
+msgstr "Mechanism detection"
 
 #: ../../source/misc/waf.rst:26
 msgid "CSRF token"
-msgstr ""
+msgstr "CSRF token"
 
 #: ../../source/misc/waf.rst:27
 msgid "HSTS"
-msgstr ""
+msgstr "HSTS"
 
 #: ../../source/misc/waf.rst:30
 msgid "布置位置"
-msgstr ""
+msgstr "Deployment Location"
 
 #: ../../source/misc/waf.rst:31
 msgid ""
 "按布置位置，WAF可以分为云WAF、主机防护软件和硬件防护。云WAF布置在云上，请求先经过云服务器而后流向主机。主机防护软件需要主机预先安装对应软件，如mod_security"
 "、ngx-lua-waf等，对主机进行防护。硬件防护指流量流向主机时，先经过设备的清洗和拦截。"
 msgstr ""
+"By deployment location, WAFs can be divided into cloud WAFs, host protection"
+" software, and hardware protection. A cloud WAF is deployed in the cloud, so"
+" requests first pass through the cloud service and then flow to the host. "
+"Host protection software requires the corresponding software, such as "
+"mod_security or ngx-lua-waf, to be installed on the host in advance. "
+"Hardware protection means traffic is cleaned and intercepted by an appliance"
+" before it reaches the host."
 
 #: ../../source/misc/waf.rst:34
 msgid "防护方式"
-msgstr ""
+msgstr "Protection Methods"
 
 #: ../../source/misc/waf.rst:35
 msgid "WAF常用的方法有关键字检测、正则表达式检测、语法分析、行为分析、声誉分析、机器学习等。"
-msgstr ""
+msgstr "Common WAF methods include keyword detection, regular-expression detection, syntax analysis, behavior analysis, reputation analysis, and machine learning."
 
 #: ../../source/misc/waf.rst:37
 msgid "基于正则的保护是最常见的保护方式。开发者用一些设定好的正则规则来检测载荷是否存在攻击性。基于正则的防护较为简单，因此存在一些缺点。例如只能应用于单次请求，而且正则很难应用到一些复杂的协议上。"
-msgstr ""
+msgstr "Regular-expression-based protection is the most common protection method. Developers use predefined regular-expression rules to detect whether a payload is malicious. Regex-based protection is relatively simple and therefore has drawbacks. For example, it can only be applied to a single request, and regular expressions are difficult to apply to some complex protocols."
 
 #: ../../source/misc/waf.rst:39
 msgid "基于语法的分析相对正则来说更快而且更准确，这种分析会把载荷按照语法解析成的符号组，然后在符号组中寻找危险的关键字。这种方式对一些载荷的变式有较好的效果，但是同样的，对解析器要求较高。"
-msgstr ""
+msgstr "Syntax-based analysis is faster and more accurate than regular expressions. This analysis parses a payload into token groups according to syntax, then searches those token groups for dangerous keywords. This method works well against some payload variants, but it also places higher requirements on the parser."
 
 #: ../../source/misc/waf.rst:41
 msgid "基于行为的分析着眼的范围更广一些，例如攻击者的端口扫描行为、目录爆破、参数测试或者一些其他自动化或者攻击的模式都会被纳入考虑之中。"
-msgstr ""
+msgstr "Behavior-based analysis has a broader scope. For example, an attacker's port scanning, directory brute forcing, parameter testing, and other automation or attack patterns can all be considered."
 
 #: ../../source/misc/waf.rst:43
 msgid "基于声誉的分析可以比较好的过滤掉一些可疑的来源，例如常用的VPN、匿名代理、Tor节点、僵尸网络节点的IP等。"
-msgstr ""
+msgstr "Reputation-based analysis can filter suspicious sources effectively, such as IP addresses from commonly used VPNs, anonymous proxies, Tor nodes, and botnet nodes."
 
 #: ../../source/misc/waf.rst:45
 msgid "基于机器学习的WAF涉及到的范围非常广，效果也因具体实现和场景而较为多样化。"
-msgstr ""
+msgstr "Machine-learning-based WAFs cover a very broad range, and their effectiveness varies significantly with the specific implementation and scenario."
 
 #: ../../source/misc/waf.rst:47
 msgid "除了按具体的方法分，也可以根据白名单和黑名单的使用来分类。基于白名单的WAF适用于稳定的Web应用，而基于黑名单则适合处理已知问题。"
-msgstr ""
+msgstr "In addition to classification by specific method, WAFs can also be classified by their use of whitelists and blacklists. Whitelist-based WAFs are suitable for stable web applications, while blacklist-based WAFs are suitable for handling known issues."
 
 #: ../../source/misc/waf.rst:50
 msgid "扫描器防御"
-msgstr ""
+msgstr "Scanner Defense"
 
 #: ../../source/misc/waf.rst:51
 msgid "基于User-Agent识别"
-msgstr ""
+msgstr "User-Agent-based identification"
 
 #: ../../source/misc/waf.rst:52
 msgid "基于攻击载荷识别"
-msgstr ""
+msgstr "Attack payload-based identification"
 
 #: ../../source/misc/waf.rst:53
 msgid "验证码"
-msgstr ""
+msgstr "CAPTCHA"
 
 #: ../../source/misc/waf.rst:56
 msgid "WAF指纹"
-msgstr ""
+msgstr "WAF Fingerprints"
 
 #: ../../source/misc/waf.rst:57
 msgid "额外的Cookie"
-msgstr ""
+msgstr "Additional Cookies"
 
 #: ../../source/misc/waf.rst:58
 msgid "额外的Header"
-msgstr ""
+msgstr "Additional Headers"
 
 #: ../../source/misc/waf.rst:59
 msgid "被拒绝请求时的返回内容"
-msgstr ""
+msgstr "Response body for denied requests"
 
 #: ../../source/misc/waf.rst:60
 msgid "被拒绝请求时的返回响应码"
-msgstr ""
+msgstr "Response status code for denied requests"
 
 #: ../../source/misc/waf.rst:61
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: ../../source/misc/waf.rst:64
 msgid "绕过方式"
-msgstr ""
+msgstr "Bypass Methods"
 
 #: ../../source/misc/waf.rst:67
 msgid "基于架构的绕过"
-msgstr ""
+msgstr "Architecture-Based Bypass"
 
 #: ../../source/misc/waf.rst:68
 msgid "站点在WAF后，但是站点可直连"
-msgstr ""
+msgstr "The site is behind a WAF, but the site can be reached directly"
 
 #: ../../source/misc/waf.rst:69
 msgid "站点在云服务器中，对同网段服务器无WAF"
-msgstr ""
+msgstr "The site is on a cloud server, but servers in the same network segment have no WAF"
 
 #: ../../source/misc/waf.rst:72
 msgid "基于资源的绕过"
-msgstr ""
+msgstr "Resource-Based Bypass"
 
 #: ../../source/misc/waf.rst:73
 msgid "使用消耗大的载荷，耗尽WAF的计算资源"
-msgstr ""
+msgstr "Use expensive payloads to exhaust WAF computing resources"
 
 #: ../../source/misc/waf.rst:74
 msgid "提供大量的无效参数"
-msgstr ""
+msgstr "Provide a large number of invalid parameters"
 
 #: ../../source/misc/waf.rst:77
 msgid "基于解析的绕过"
-msgstr ""
+msgstr "Parsing-Based Bypass"
 
 #: ../../source/misc/waf.rst:78
 msgid "字符集解析不同"
-msgstr ""
+msgstr "Different character set parsing"
 
 #: ../../source/misc/waf.rst:79
 msgid "协议覆盖不全"
-msgstr ""
+msgstr "Incomplete protocol coverage"
 
 #: ../../source/misc/waf.rst:80
 msgid "POST的JSON传参 / ``form-data`` / ``multipart/form-data``"
-msgstr ""
+msgstr "JSON parameters in POST / ``form-data`` / ``multipart/form-data``"
 
 #: ../../source/misc/waf.rst:81
 msgid "协议解析不正确"
-msgstr ""
+msgstr "Incorrect protocol parsing"
 
 #: ../../source/misc/waf.rst:82
 msgid "站点和WAF对https有部分不一致"
-msgstr ""
+msgstr "The site and WAF handle HTTPS partially differently"
 
 #: ../../source/misc/waf.rst:83
 msgid "WAF解析与Web服务解析不一致"
-msgstr ""
+msgstr "WAF parsing is inconsistent with web service parsing"
 
 #: ../../source/misc/waf.rst:84
 #, python-format
 msgid "部分ASP+IIS会转换 ``%u0065`` 格式的字符"
-msgstr ""
+msgstr "Some ASP+IIS stacks convert characters in the ``%u0065`` format"
 
 #: ../../source/misc/waf.rst:85
 msgid "Apache会解析畸形Method"
-msgstr ""
+msgstr "Apache parses malformed Method values"
 
 #: ../../source/misc/waf.rst:86
 msgid "同一个参数多次出现，取的位置不一样"
-msgstr ""
+msgstr "The same parameter appears multiple times, but different positions are used"
 
 #: ../../source/misc/waf.rst:87
 msgid "HTTP Parameter Pollution (HPP)"
-msgstr ""
+msgstr "HTTP Parameter Pollution (HPP)"
 
 #: ../../source/misc/waf.rst:88
 msgid "HTTP Parameter Fragmentation (HPF)"
-msgstr ""
+msgstr "HTTP Parameter Fragmentation (HPF)"
 
 #: ../../source/misc/waf.rst:91
 msgid "基于规则的绕过"
-msgstr ""
+msgstr "Rule-Based Bypass"
 
 #: ../../source/misc/waf.rst:92
 msgid "等价替换"
-msgstr ""
+msgstr "Equivalent substitution"
 
 #: ../../source/misc/waf.rst:93
 msgid "大小写变换"
-msgstr ""
+msgstr "Case transformation"
 
 #: ../../source/misc/waf.rst:94
 msgid "``select`` => ``sEleCt``"
-msgstr ""
+msgstr "``select`` => ``sEleCt``"
 
 #: ../../source/misc/waf.rst:95
 msgid "``<sCrIpt>alert(1)</script>``"
-msgstr ""
+msgstr "``<sCrIpt>alert(1)</script>``"
 
 #: ../../source/misc/waf.rst:96
 msgid "字符编码"
-msgstr ""
+msgstr "Character encoding"
 
 #: ../../source/misc/waf.rst:97
 msgid "URL编码"
-msgstr ""
+msgstr "URL encoding"
 
 #: ../../source/misc/waf.rst:98
 msgid "十六进制编码"
-msgstr ""
+msgstr "Hex encoding"
 
 #: ../../source/misc/waf.rst:99
 msgid "Unicode解析"
-msgstr ""
+msgstr "Unicode parsing"
 
 #: ../../source/misc/waf.rst:100
 msgid "Base64"
-msgstr ""
+msgstr "Base64"
 
 #: ../../source/misc/waf.rst:101
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: ../../source/misc/waf.rst:102
 msgid "JSFuck"
-msgstr ""
+msgstr "JSFuck"
 
 #: ../../source/misc/waf.rst:103
 msgid "其他编码格式"
-msgstr ""
+msgstr "Other encoding formats"
 
 #: ../../source/misc/waf.rst:104
 msgid "等价函数"
-msgstr ""
+msgstr "Equivalent functions"
 
 #: ../../source/misc/waf.rst:105
 msgid "等价变量"
-msgstr ""
+msgstr "Equivalent variables"
 
 #: ../../source/misc/waf.rst:106
 msgid "关键字拆分"
-msgstr ""
+msgstr "Keyword splitting"
 
 #: ../../source/misc/waf.rst:107
 msgid "字符串操作"
-msgstr ""
+msgstr "String operations"
 
 #: ../../source/misc/waf.rst:108
 msgid "字符干扰"
-msgstr ""
+msgstr "Character interference"
 
 #: ../../source/misc/waf.rst:109
 msgid "空字符"
-msgstr ""
+msgstr "Null characters"
 
 #: ../../source/misc/waf.rst:110
 msgid "NULL (\\x00)"
-msgstr ""
+msgstr "NULL (\\x00)"
 
 #: ../../source/misc/waf.rst:111
 msgid "空格"
-msgstr ""
+msgstr "Spaces"
 
 #: ../../source/misc/waf.rst:112
 msgid "回车 (\\x0d)"
-msgstr ""
+msgstr "Carriage return (\\x0d)"
 
 #: ../../source/misc/waf.rst:113
 msgid "换行 (\\x0a)"
-msgstr ""
+msgstr "Line feed (\\x0a)"
 
 #: ../../source/misc/waf.rst:114
 msgid "垂直制表 (\\x0b)"
-msgstr ""
+msgstr "Vertical tab (\\x0b)"
 
 #: ../../source/misc/waf.rst:115
 msgid "水平制表 (\\x09)"
-msgstr ""
+msgstr "Horizontal tab (\\x09)"
 
 #: ../../source/misc/waf.rst:116
 msgid "换页 (\\x0c)"
-msgstr ""
+msgstr "Form feed (\\x0c)"
 
 #: ../../source/misc/waf.rst:117
 msgid "注释"
-msgstr ""
+msgstr "Comments"
 
 #: ../../source/misc/waf.rst:118
 msgid "特殊符号"
-msgstr ""
+msgstr "Special symbols"
 
 #: ../../source/misc/waf.rst:119
 msgid "注释符"
-msgstr ""
+msgstr "Comment markers"
 
 #: ../../source/misc/waf.rst:120
 msgid "引号（反引号、单引号、双引号）"
-msgstr ""
+msgstr "Quotes (backticks, single quotes, double quotes)"
 
 #: ../../source/misc/waf.rst:121
 msgid "利用服务本身特点"
-msgstr ""
+msgstr "Use characteristics of the service itself"
 
 #: ../../source/misc/waf.rst:122
 msgid "替换可疑关键字为空"
-msgstr ""
+msgstr "Replace suspicious keywords with an empty string"
 
 #: ../../source/misc/waf.rst:123
 msgid "``selselectect`` => ``select``"
-msgstr ""
+msgstr "``selselectect`` => ``select``"
 
 #: ../../source/misc/waf.rst:124
 msgid "少见特性未在规则列表中"
-msgstr ""
+msgstr "Rare features are not in the rule list"
 
 #: ../../source/misc/waf.rst:127
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/waf.rst:128
 msgid ""
 "`WAF攻防研究之四个层次Bypass WAF "
 "<https://www.weibo.com/ttarticle/p/show?id=2309404007261092631700&sudaref=www.google.com.hk&display=0&retcode=6102>`_"
 msgstr ""
+"`WAF Attack and Defense Research: Bypass WAF at Four Levels "
+"<https://www.weibo.com/ttarticle/p/show?id=2309404007261092631700&sudaref=www.google.com.hk&display=0&retcode=6102>`_"
 
 #: ../../source/misc/waf.rst:129
 msgid "`我的WafBypass之道 SQL注入篇 <https://xz.aliyun.com/t/368>`_"
-msgstr ""
+msgstr "`My WafBypass Method: SQL Injection <https://xz.aliyun.com/t/368>`_"
 
 #: ../../source/misc/waf.rst:130
 msgid ""
 "`WAF through the eyes of hackers "
 "<https://habr.com/en/company/dsec/blog/454592/>`_"
 msgstr ""
+"`WAF through the eyes of hackers "
+"<https://habr.com/en/company/dsec/blog/454592/>`_"
