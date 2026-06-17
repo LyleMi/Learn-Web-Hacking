@@ -20,24 +20,31 @@ msgstr ""
 
 #: ../../source/network/domain/org.rst:2
 msgid "相关机构"
-msgstr ""
+msgstr "Related Organizations"
 
 #: ../../source/network/domain/org.rst:5
 msgid "ICANN"
-msgstr ""
+msgstr "ICANN"
 
 #: ../../source/network/domain/org.rst:6
 msgid ""
 "互联网名称与数字地址分配机构 (Internet Corporation for Assigned Names and Numbers, "
 "ICANN) 创建于1998年9月18日，职能包括管理域名和IP地址的分配等与互联网相关的任务。"
 msgstr ""
+"The Internet Corporation for Assigned Names and Numbers (ICANN) was "
+"established on September 18, 1998. Its responsibilities include managing "
+"domain names, IP address allocation, and other Internet-related coordination "
+"tasks."
 
 #: ../../source/network/domain/org.rst:9
 msgid "IANA"
-msgstr ""
+msgstr "IANA"
 
 #: ../../source/network/domain/org.rst:10
 msgid ""
 "互联网号码分配局 (Internet Assigned Numbers Authority, IANA) "
 "，是一家互联网地址指派机构，管理国际互联网中使用的IP地址、域名和许多其它参数的机构。"
 msgstr ""
+"The Internet Assigned Numbers Authority (IANA) is an Internet address "
+"assignment authority that manages IP addresses, domain names, and many other "
+"parameters used on the global Internet."

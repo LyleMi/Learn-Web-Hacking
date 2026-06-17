@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/network/domain/terminology.rst:2
 msgid "术语"
-msgstr ""
+msgstr "Terminology"
 
 #: ../../source/network/domain/terminology.rst:5
 msgid "mDNS"
-msgstr ""
+msgstr "mDNS"
 
 #: ../../source/network/domain/terminology.rst:6
 msgid ""
@@ -32,59 +32,79 @@ msgid ""
 "``[FF02::FB]`` "
 "。在一个没有常规DNS服务器的小型网络内可以使用mDNS来实现类似DNS的编程接口、包格式和操作语义。mDNS协议的报文与DNS的报文结构相同，但有些字段对于mDNS来说有新的含义。"
 msgstr ""
+"Multicast DNS (mDNS) uses port 5353 and the multicast address "
+"``224.0.0.251`` or ``[FF02::FB]``. In a small network without a conventional "
+"DNS server, mDNS can provide DNS-like programming interfaces, packet formats, "
+"and operational semantics. mDNS packets use the same structure as DNS "
+"packets, but some fields have new meanings in mDNS."
 
 #: ../../source/network/domain/terminology.rst:8
 msgid "启动mDNS的主机会在进入局域网后向所有主机组播消息，包含主机名、IP等信息，其他拥有相应服务的主机也会响应含有主机名和IP的信息。"
 msgstr ""
+"After a host with mDNS enabled joins a LAN, it multicasts messages to all "
+"hosts containing information such as its host name and IP address. Other "
+"hosts that provide the corresponding services also respond with information "
+"containing their host names and IP addresses."
 
 #: ../../source/network/domain/terminology.rst:10
 msgid "mDNS的域名是用 ``.local`` 和普通域名区分开的。"
-msgstr ""
+msgstr "mDNS domain names are distinguished from ordinary domain names by ``.local``."
 
 #: ../../source/network/domain/terminology.rst:13
 msgid "FQDN"
-msgstr ""
+msgstr "FQDN"
 
 #: ../../source/network/domain/terminology.rst:14
 msgid ""
 "FQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如 "
 "``www.example.com.`` 。"
 msgstr ""
+"An FQDN (Fully-Qualified Domain Name) is the complete form of a domain name. "
+"It mainly includes the zero-length root label, for example "
+"``www.example.com.``."
 
 #: ../../source/network/domain/terminology.rst:17
 msgid "TLD"
-msgstr ""
+msgstr "TLD"
 
 #: ../../source/network/domain/terminology.rst:18
 msgid "Top-Level Domain (TLD) 是属于根域的一个域，例如 ``com`` 或 ``jp`` 。"
-msgstr ""
+msgstr "A Top-Level Domain (TLD) is a domain under the root, such as ``com`` or ``jp``."
 
 #: ../../source/network/domain/terminology.rst:20
 msgid ""
 "TLD一般可以分为 Country Code Top-Level Domains (ccTLDs) 、Generic Top-Level "
 "Domains (gTLDs) 以及其它。"
 msgstr ""
+"TLDs are generally divided into Country Code Top-Level Domains (ccTLDs), "
+"Generic Top-Level Domains (gTLDs), and others."
 
 #: ../../source/network/domain/terminology.rst:23
 msgid "IDN"
-msgstr ""
+msgstr "IDN"
 
 #: ../../source/network/domain/terminology.rst:24
 msgid "Internationalized Domain Names for Applications (IDNA) 是为了处理非ASCII字符的情况。"
 msgstr ""
+"Internationalized Domain Names for Applications (IDNA) is designed to handle "
+"non-ASCII characters."
 
 #: ../../source/network/domain/terminology.rst:27
 msgid "CNAME"
-msgstr ""
+msgstr "CNAME"
 
 #: ../../source/network/domain/terminology.rst:28
 msgid "CNAME即Canonical name，又称alias，将域名指向另一个域名。"
 msgstr ""
+"CNAME stands for canonical name, also known as an alias, and points one "
+"domain name to another."
 
 #: ../../source/network/domain/terminology.rst:31
 msgid "TTL"
-msgstr ""
+msgstr "TTL"
 
 #: ../../source/network/domain/terminology.rst:32
 msgid "Time To Live，无符号整数，记录DNS记录过期的时间，最小是0，最大是2147483647 (2^31 - 1)。"
 msgstr ""
+"Time To Live is an unsigned integer that records when a DNS record expires. "
+"The minimum value is 0, and the maximum value is 2147483647 (2^31 - 1)."

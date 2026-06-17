@@ -20,190 +20,228 @@ msgstr ""
 
 #: ../../source/network/domain/basic.rst:2
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/network/domain/basic.rst:3
 msgid "DNS是一个简单的请求-响应协议，是将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用TCP和UDP协议的53端口。"
 msgstr ""
+"DNS is a simple request-response protocol and a distributed database that "
+"maps domain names and IP addresses to each other, making the Internet easier "
+"for people to use. DNS uses port 53 over both TCP and UDP."
 
 #: ../../source/network/domain/basic.rst:6
 msgid "请求响应"
-msgstr ""
+msgstr "Request and Response"
 
 #: ../../source/network/domain/basic.rst:9
 msgid "DNS记录"
-msgstr ""
+msgstr "DNS Records"
 
 #: ../../source/network/domain/basic.rst:10
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #: ../../source/network/domain/basic.rst:11
 msgid "返回域名对应的IPv4地址"
-msgstr ""
+msgstr "Returns the IPv4 address corresponding to a domain name"
 
 #: ../../source/network/domain/basic.rst:12
 msgid "AAAA"
-msgstr ""
+msgstr "AAAA"
 
 #: ../../source/network/domain/basic.rst:13
 msgid "NS"
-msgstr ""
+msgstr "NS"
 
 #: ../../source/network/domain/basic.rst:14
 msgid "域名服务器"
-msgstr ""
+msgstr "Name server"
 
 #: ../../source/network/domain/basic.rst:15
 msgid "返回该域名由哪台域名服务器解析"
-msgstr ""
+msgstr "Returns which name server resolves the domain name"
 
 #: ../../source/network/domain/basic.rst:16
 msgid "PTR"
-msgstr ""
+msgstr "PTR"
 
 #: ../../source/network/domain/basic.rst:17
 msgid "反向记录"
-msgstr ""
+msgstr "Reverse record"
 
 #: ../../source/network/domain/basic.rst:18
 msgid "从IP地址到域名的记录"
-msgstr ""
+msgstr "A record from an IP address to a domain name"
 
 #: ../../source/network/domain/basic.rst:19
 msgid "MX"
-msgstr ""
+msgstr "MX"
 
 #: ../../source/network/domain/basic.rst:20
 msgid "电子邮件交换记录"
-msgstr ""
+msgstr "Mail exchange record"
 
 #: ../../source/network/domain/basic.rst:21
 msgid "记录邮件域名对应的IP地址"
-msgstr ""
+msgstr "Records the IP address corresponding to a mail domain"
 
 #: ../../source/network/domain/basic.rst:24
 msgid "响应码"
-msgstr ""
+msgstr "Response Codes"
 
 #: ../../source/network/domain/basic.rst:25
 msgid "NOERROR"
-msgstr ""
+msgstr "NOERROR"
 
 #: ../../source/network/domain/basic.rst:31
 msgid "FORMERR"
-msgstr ""
+msgstr "FORMERR"
 
 #: ../../source/network/domain/basic.rst:37
 msgid "SERVFAIL"
-msgstr ""
+msgstr "SERVFAIL"
 
 #: ../../source/network/domain/basic.rst:43
 msgid "NXDOMAIN"
-msgstr ""
+msgstr "NXDOMAIN"
 
 #: ../../source/network/domain/basic.rst:49
 msgid "NOTIMP"
-msgstr ""
+msgstr "NOTIMP"
 
 #: ../../source/network/domain/basic.rst:55
 msgid "REFUSED"
-msgstr ""
+msgstr "REFUSED"
 
 #: ../../source/network/domain/basic.rst:61
 msgid "NODATA"
-msgstr ""
+msgstr "NODATA"
 
 #: ../../source/network/domain/basic.rst:69
 msgid "域名系统工作原理"
-msgstr ""
+msgstr "How the Domain Name System Works"
 
 #: ../../source/network/domain/basic.rst:72
 msgid "解析过程"
-msgstr ""
+msgstr "Resolution Process"
 
 #: ../../source/network/domain/basic.rst:73
 msgid "DNS解析过程是递归查询的，具体过程如下："
-msgstr ""
+msgstr "DNS resolution is a recursive query process. The detailed flow is as follows:"
 
 #: ../../source/network/domain/basic.rst:75
 msgid "用户要访问域名www.example.com时，先查看本机hosts是否有记录或者本机是否有DNS缓存，如果有，直接返回结果，否则向递归服务器查询该域名的IP地址"
 msgstr ""
+"When a user wants to access the domain name www.example.com, the local hosts "
+"file and local DNS cache are checked first. If a record exists, the result is "
+"returned directly; otherwise, the client asks a recursive server for the IP "
+"address of the domain name."
 
 #: ../../source/network/domain/basic.rst:76
 msgid "递归缓存为空时，首先向根服务器查询com顶级域的IP地址"
 msgstr ""
+"If the recursive cache is empty, the recursive server first queries a root "
+"server for the IP address of the ``com`` top-level domain."
 
 #: ../../source/network/domain/basic.rst:77
 msgid "根服务器告知递归服务器com顶级域名服务器的IP地址"
 msgstr ""
+"The root server tells the recursive server the IP address of the ``com`` "
+"top-level domain name server."
 
 #: ../../source/network/domain/basic.rst:78
 msgid "递归向com顶级域名服务器查询负责example.com的权威服务器的IP"
 msgstr ""
+"The recursive server queries the ``com`` top-level domain name server for "
+"the IP address of the authoritative server responsible for example.com."
 
 #: ../../source/network/domain/basic.rst:79
 msgid "com顶级域名服务器返回相应的IP地址"
-msgstr ""
+msgstr "The ``com`` top-level domain name server returns the corresponding IP address."
 
 #: ../../source/network/domain/basic.rst:80
 msgid "递归向example.com的权威服务器查询www.example.com的地址记录"
 msgstr ""
+"The recursive server queries the authoritative server for example.com for "
+"the address record of www.example.com."
 
 #: ../../source/network/domain/basic.rst:81
 msgid "权威服务器告知www.example.com的地址记录"
-msgstr ""
+msgstr "The authoritative server returns the address record for www.example.com."
 
 #: ../../source/network/domain/basic.rst:82
 msgid "递归服务器将查询结果返回客户端"
-msgstr ""
+msgstr "The recursive server returns the query result to the client."
 
 #: ../../source/network/domain/basic.rst:85
 msgid "域传送"
-msgstr ""
+msgstr "Zone Transfer"
 
 #: ../../source/network/domain/basic.rst:86
 msgid "DNS服务器可以分为主服务器、备份服务器和缓存服务器。域传送是指备份服务器从主服务器拷贝数据，并使用得到的数据更新自身数据库。域传送是在主备服务器之间同步数据库的机制。"
 msgstr ""
+"DNS servers can be divided into primary servers, secondary servers, and "
+"caching servers. A zone transfer is the process in which a secondary server "
+"copies data from a primary server and uses the data to update its own "
+"database. It is the mechanism used to synchronize the database between "
+"primary and secondary servers."
 
 #: ../../source/network/domain/basic.rst:89
 msgid "服务器类型"
-msgstr ""
+msgstr "Server Types"
 
 #: ../../source/network/domain/basic.rst:92
 msgid "根服务器"
-msgstr ""
+msgstr "Root Server"
 
 #: ../../source/network/domain/basic.rst:93
 msgid "根服务器是DNS的核心，负责互联网顶级域名的解析，用于维护域的权威信息，并将DNS查询引导到相应的域名服务器。"
 msgstr ""
+"Root servers are the core of DNS. They are responsible for resolving "
+"Internet top-level domains, maintaining authoritative information for the "
+"root zone, and directing DNS queries to the appropriate name servers."
 
 #: ../../source/network/domain/basic.rst:95
 msgid "根服务器在域名树中代表最顶级的 ``.`` 域， 一般省略。"
 msgstr ""
+"In the domain name tree, root servers represent the top-level ``.`` domain, "
+"which is usually omitted."
 
 #: ../../source/network/domain/basic.rst:97
 msgid ""
 "13台IPv4根服务器的域名标号为a到m，即a.root-servers.org到m.root-"
 "servers.org，所有服务器存储的数据相同，仅包含ICANN批准的TLD域名权威信息。"
 msgstr ""
+"The 13 IPv4 root servers are labeled from a to m, namely a.root-servers.org "
+"through m.root-servers.org. All of these servers store the same data, which "
+"contains only authoritative information for TLDs approved by ICANN."
 
 #: ../../source/network/domain/basic.rst:100
 msgid "权威服务器"
-msgstr ""
+msgstr "Authoritative Server"
 
 #: ../../source/network/domain/basic.rst:101
 msgid "权威服务器上存储域名Zone文件，维护域内域名的权威信息，递归服务器可以从权威服务器获得DNS查询的资源记录。"
 msgstr ""
+"Authoritative servers store domain zone files and maintain authoritative "
+"information for names within the domain. Recursive servers can obtain DNS "
+"resource records from authoritative servers."
 
 #: ../../source/network/domain/basic.rst:103
 msgid "权威服务器需要在所承载的域名所属的TLD管理局注册，同一个权威服务器可以承载不同TLD域名，同一个域也可以有多个权威服务器。"
 msgstr ""
+"An authoritative server must be registered with the TLD registry for the "
+"domain names it hosts. The same authoritative server can host domain names "
+"under different TLDs, and a single domain can also have multiple "
+"authoritative servers."
 
 #: ../../source/network/domain/basic.rst:106
 msgid "递归服务器"
-msgstr ""
+msgstr "Recursive Server"
 
 #: ../../source/network/domain/basic.rst:107
 msgid "递归服务器负责接收用户的查询请求，进行递归查询并响应用户查询请求。在初始时递归服务器仅有记录了根域名的Hint文件。"
 msgstr ""
+"Recursive servers receive user queries, perform recursive lookups, and "
+"respond to the user's requests. Initially, a recursive server only has a hint "
+"file that records the root domain names."

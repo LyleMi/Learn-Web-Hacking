@@ -20,10 +20,13 @@ msgstr ""
 
 #: ../../source/network/domain/rdap.rst:2
 msgid "RDAP"
-msgstr ""
+msgstr "RDAP"
 
 #: ../../source/network/domain/rdap.rst:4
 msgid ""
 "RDAP (Registration Data Access Protocol) 协议是Whois协议的后继，和 Whois "
 "协议类似，RDAP协议提供了域名、自治系统、IP地址的信息查询。"
 msgstr ""
+"RDAP (Registration Data Access Protocol) is the successor to the Whois "
+"protocol. Like Whois, RDAP provides lookup capabilities for domain names, "
+"autonomous systems, and IP addresses."

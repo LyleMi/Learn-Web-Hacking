@@ -20,247 +20,303 @@ msgstr ""
 
 #: ../../source/network/domain/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/network/domain/ref.rst:5
 msgid "RFC"
-msgstr ""
+msgstr "RFC"
 
 #: ../../source/network/domain/ref.rst:6
 msgid "`RFC 920 Domain Requirements <https://www.rfc-editor.org/rfc/rfc920>`_"
-msgstr ""
+msgstr "`RFC 920 Domain Requirements <https://www.rfc-editor.org/rfc/rfc920>`_"
 
 #: ../../source/network/domain/ref.rst:7
 msgid ""
 "`RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES "
 "<https://tools.ietf.org/html/rfc1034>`_"
 msgstr ""
+"`RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES "
+"<https://tools.ietf.org/html/rfc1034>`_"
 
 #: ../../source/network/domain/ref.rst:8
 msgid ""
 "`RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION "
 "<https://tools.ietf.org/html/rfc1035>`_"
 msgstr ""
+"`RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION "
+"<https://tools.ietf.org/html/rfc1035>`_"
 
 #: ../../source/network/domain/ref.rst:9
 msgid ""
 "`RFC 1123 Requirements for Internet Hosts -- Application and Support "
 "<https://tools.ietf.org/html/rfc1123>`_"
 msgstr ""
+"`RFC 1123 Requirements for Internet Hosts -- Application and Support "
+"<https://tools.ietf.org/html/rfc1123>`_"
 
 #: ../../source/network/domain/ref.rst:10
 msgid ""
 "`RFC 2535 Domain Name System Security Extensions "
 "<https://tools.ietf.org/html/rfc2535>`_"
 msgstr ""
+"`RFC 2535 Domain Name System Security Extensions "
+"<https://tools.ietf.org/html/rfc2535>`_"
 
 #: ../../source/network/domain/ref.rst:11
 msgid ""
 "`RFC 2930 Secret Key Establishment for DNS (TKEY RR) "
 "<https://tools.ietf.org/html/rfc2930>`_"
 msgstr ""
+"`RFC 2930 Secret Key Establishment for DNS (TKEY RR) "
+"<https://tools.ietf.org/html/rfc2930>`_"
 
 #: ../../source/network/domain/ref.rst:12
 msgid ""
 "`RFC 2931 DNS Request and Transaction Signatures ( SIG(0)s ) "
 "<https://tools.ietf.org/html/rfc2931>`_"
 msgstr ""
+"`RFC 2931 DNS Request and Transaction Signatures ( SIG(0)s ) "
+"<https://tools.ietf.org/html/rfc2931>`_"
 
 #: ../../source/network/domain/ref.rst:13
 msgid ""
 "`RFC 3596 Legacy Resolver Compatibility for Delegation Signer (DS) "
 "<https://tools.ietf.org/html/rfc3596>`_"
 msgstr ""
+"`RFC 3596 Legacy Resolver Compatibility for Delegation Signer (DS) "
+"<https://tools.ietf.org/html/rfc3596>`_"
 
 #: ../../source/network/domain/ref.rst:14
 msgid ""
 "`RFC 3755 DNS Extensions to Support IP Version 6 "
 "<https://tools.ietf.org/html/rfc3755>`_"
 msgstr ""
+"`RFC 3755 DNS Extensions to Support IP Version 6 "
+"<https://tools.ietf.org/html/rfc3755>`_"
 
 #: ../../source/network/domain/ref.rst:15
 msgid ""
 "`RFC 5001 Automated Updates of DNS Security (DNSSEC) Trust Anchors "
 "<https://tools.ietf.org/html/rfc5001>`_"
 msgstr ""
+"`RFC 5001 Automated Updates of DNS Security (DNSSEC) Trust Anchors "
+"<https://tools.ietf.org/html/rfc5001>`_"
 
 #: ../../source/network/domain/ref.rst:16
 msgid ""
 "`RFC 5936 DNS Zone Transfer Protocol "
 "<https://tools.ietf.org/html/rfc5936>`_"
 msgstr ""
+"`RFC 5936 DNS Zone Transfer Protocol "
+"<https://tools.ietf.org/html/rfc5936>`_"
 
 #: ../../source/network/domain/ref.rst:17
 msgid ""
 "`RFC 5966 DNS Transport over TCP - Implementation Requirements "
 "<https://tools.ietf.org/html/rfc5966>`_"
 msgstr ""
+"`RFC 5966 DNS Transport over TCP - Implementation Requirements "
+"<https://tools.ietf.org/html/rfc5966>`_"
 
 #: ../../source/network/domain/ref.rst:18
 msgid ""
 "`RFC 6376 DomainKeys Identified Mail (DKIM) Signatures "
 "<https://tools.ietf.org/html/rfc6376>`_"
 msgstr ""
+"`RFC 6376 DomainKeys Identified Mail (DKIM) Signatures "
+"<https://tools.ietf.org/html/rfc6376>`_"
 
 #: ../../source/network/domain/ref.rst:19
 msgid "`RFC 6762 Multicast DNS <https://tools.ietf.org/html/rfc6762>`_"
-msgstr ""
+msgstr "`RFC 6762 Multicast DNS <https://tools.ietf.org/html/rfc6762>`_"
 
 #: ../../source/network/domain/ref.rst:20
 msgid ""
 "`RFC 6891 Extension Mechanisms for DNS (EDNS(0)) "
 "<https://tools.ietf.org/html/rfc6891>`_"
 msgstr ""
+"`RFC 6891 Extension Mechanisms for DNS (EDNS(0)) "
+"<https://tools.ietf.org/html/rfc6891>`_"
 
 #: ../../source/network/domain/ref.rst:21
 msgid "`RFC 6895 DNS IANA Considerations <https://tools.ietf.org/html/rfc6895>`_"
-msgstr ""
+msgstr "`RFC 6895 DNS IANA Considerations <https://tools.ietf.org/html/rfc6895>`_"
 
 #: ../../source/network/domain/ref.rst:22
 msgid ""
 "`RFC 7766 DNS Transport over TCP - Implementation Requirements "
 "<https://tools.ietf.org/html/rfc7766>`_"
 msgstr ""
+"`RFC 7766 DNS Transport over TCP - Implementation Requirements "
+"<https://tools.ietf.org/html/rfc7766>`_"
 
 #: ../../source/network/domain/ref.rst:23
 msgid ""
 "`RFC 7858 Specification for DNS over Transport Layer Security (TLS) "
 "<https://tools.ietf.org/html/rfc7858>`_"
 msgstr ""
+"`RFC 7858 Specification for DNS over Transport Layer Security (TLS) "
+"<https://tools.ietf.org/html/rfc7858>`_"
 
 #: ../../source/network/domain/ref.rst:24
 msgid ""
 "`RFC 7871 Client Subnet in DNS Queries "
 "<https://tools.ietf.org/html/rfc7871>`_"
 msgstr ""
+"`RFC 7871 Client Subnet in DNS Queries "
+"<https://tools.ietf.org/html/rfc7871>`_"
 
 #: ../../source/network/domain/ref.rst:25
 msgid "`RFC 8082 NXDOMAIN <https://tools.ietf.org/html/rfc8082>`_"
-msgstr ""
+msgstr "`RFC 8082 NXDOMAIN <https://tools.ietf.org/html/rfc8082>`_"
 
 #: ../../source/network/domain/ref.rst:26
 msgid ""
 "`RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have "
 "QTYPE=ANY <https://tools.ietf.org/html/rfc8482>`_"
 msgstr ""
+"`RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have "
+"QTYPE=ANY <https://tools.ietf.org/html/rfc8482>`_"
 
 #: ../../source/network/domain/ref.rst:27
 msgid ""
 "`RFC 8484 DNS Queries over HTTPS (DoH) "
 "<https://tools.ietf.org/html/rfc8484>`_"
 msgstr ""
+"`RFC 8484 DNS Queries over HTTPS (DoH) "
+"<https://tools.ietf.org/html/rfc8484>`_"
 
 #: ../../source/network/domain/ref.rst:28
 msgid "`RFC 8490 DNS Stateful Operations <https://tools.ietf.org/html/rfc8490>`_"
-msgstr ""
+msgstr "`RFC 8490 DNS Stateful Operations <https://tools.ietf.org/html/rfc8490>`_"
 
 #: ../../source/network/domain/ref.rst:29
 msgid "`RFC 8499 DNS Terminology <https://tools.ietf.org/html/rfc8499>`_"
-msgstr ""
+msgstr "`RFC 8499 DNS Terminology <https://tools.ietf.org/html/rfc8499>`_"
 
 #: ../../source/network/domain/ref.rst:32
 msgid "Whois 相关"
-msgstr ""
+msgstr "Whois Related"
 
 #: ../../source/network/domain/ref.rst:33
 msgid "`RFC 812 NICNAME/WHOIS <https://tools.ietf.org/html/rfc812>`_"
-msgstr ""
+msgstr "`RFC 812 NICNAME/WHOIS <https://tools.ietf.org/html/rfc812>`_"
 
 #: ../../source/network/domain/ref.rst:34
 msgid "`RFC 954 NICNAME/WHOIS <https://tools.ietf.org/html/rfc954>`_"
-msgstr ""
+msgstr "`RFC 954 NICNAME/WHOIS <https://tools.ietf.org/html/rfc954>`_"
 
 #: ../../source/network/domain/ref.rst:35
 msgid ""
 "`RFC 2167 Referral Whois (RWhois) Protocol V1.5 "
 "<https://tools.ietf.org/html/rfc2167>`_"
 msgstr ""
+"`RFC 2167 Referral Whois (RWhois) Protocol V1.5 "
+"<https://tools.ietf.org/html/rfc2167>`_"
 
 #: ../../source/network/domain/ref.rst:36
 msgid ""
 "`RFC 3912 WHOIS Protocol Specification "
 "<https://tools.ietf.org/html/rfc3912>`_"
 msgstr ""
+"`RFC 3912 WHOIS Protocol Specification "
+"<https://tools.ietf.org/html/rfc3912>`_"
 
 #: ../../source/network/domain/ref.rst:37
 msgid ""
 "`RFC 7485 Inventory and Analysis of WHOIS Registration Objects "
 "<https://tools.ietf.org/html/rfc7485>`_"
 msgstr ""
+"`RFC 7485 Inventory and Analysis of WHOIS Registration Objects "
+"<https://tools.ietf.org/html/rfc7485>`_"
 
 #: ../../source/network/domain/ref.rst:40
 msgid "RDAP 相关"
-msgstr ""
+msgstr "RDAP Related"
 
 #: ../../source/network/domain/ref.rst:41
 msgid ""
 "`RFC7480 HTTP Usage in the Registration Data Access Protocol (RDAP) "
 "<https://tools.ietf.org/html/rfc7480>`_"
 msgstr ""
+"`RFC7480 HTTP Usage in the Registration Data Access Protocol (RDAP) "
+"<https://tools.ietf.org/html/rfc7480>`_"
 
 #: ../../source/network/domain/ref.rst:42
 msgid ""
 "`RFC7481 Security Services for the Registration Data Access Protocol "
 "(RDAP) <https://tools.ietf.org/html/rfc7481>`_"
 msgstr ""
+"`RFC7481 Security Services for the Registration Data Access Protocol "
+"(RDAP) <https://tools.ietf.org/html/rfc7481>`_"
 
 #: ../../source/network/domain/ref.rst:43
 msgid ""
 "`RFC7484 Finding the Authoritative Registration Data (RDAP) Service "
 "<https://tools.ietf.org/html/rfc7484>`_"
 msgstr ""
+"`RFC7484 Finding the Authoritative Registration Data (RDAP) Service "
+"<https://tools.ietf.org/html/rfc7484>`_"
 
 #: ../../source/network/domain/ref.rst:44
 msgid ""
 "`RFC8056 Registration Data Access Protocol (RDAP) Object Tagging "
 "<https://tools.ietf.org/html/rfc8056>`_"
 msgstr ""
+"`RFC8056 Registration Data Access Protocol (RDAP) Object Tagging "
+"<https://tools.ietf.org/html/rfc8056>`_"
 
 #: ../../source/network/domain/ref.rst:45
 msgid ""
 "`RFC9082 Registration Data Access Protocol (RDAP) Query Format "
 "<https://tools.ietf.org/html/rfc9082>`_"
 msgstr ""
+"`RFC9082 Registration Data Access Protocol (RDAP) Query Format "
+"<https://tools.ietf.org/html/rfc9082>`_"
 
 #: ../../source/network/domain/ref.rst:46
 msgid ""
 "`RFC9083 JSON Responses for the Registration Data Access Protocol (RDAP) "
 "<https://tools.ietf.org/html/rfc9083>`_"
 msgstr ""
+"`RFC9083 JSON Responses for the Registration Data Access Protocol (RDAP) "
+"<https://tools.ietf.org/html/rfc9083>`_"
 
 #: ../../source/network/domain/ref.rst:49
 msgid "相关标准"
-msgstr ""
+msgstr "Related Standards"
 
 #: ../../source/network/domain/ref.rst:50
 msgid "`Registration Data Access Protocol (RDAP) <https://about.rdap.org/>`_"
-msgstr ""
+msgstr "`Registration Data Access Protocol (RDAP) <https://about.rdap.org/>`_"
 
 #: ../../source/network/domain/ref.rst:53
 msgid "工具"
-msgstr ""
+msgstr "Tools"
 
 #: ../../source/network/domain/ref.rst:54
 msgid "`Unbound <https://github.com/NLnetLabs/unbound>`_"
-msgstr ""
+msgstr "`Unbound <https://github.com/NLnetLabs/unbound>`_"
 
 #: ../../source/network/domain/ref.rst:55
 msgid "`bind9 <https://github.com/isc-projects/bind9>`_"
-msgstr ""
+msgstr "`bind9 <https://github.com/isc-projects/bind9>`_"
 
 #: ../../source/network/domain/ref.rst:58
 msgid "研究文章"
-msgstr ""
+msgstr "Research Articles"
 
 #: ../../source/network/domain/ref.rst:59
 msgid ""
 "`DGA域名的今生前世：缘起、检测、与发展  "
 "<https://mp.weixin.qq.com/s/xbf0Qbppk8R0nx89Pb4YTg>`_"
 msgstr ""
+"`The Past and Present of DGA Domains: Origins, Detection, and Development  "
+"<https://mp.weixin.qq.com/s/xbf0Qbppk8R0nx89Pb4YTg>`_"
 
 #: ../../source/network/domain/ref.rst:60
 msgid "`DNSSEC原理和分析 <https://blog.thecjw.me/?p=1221>`_"
-msgstr ""
+msgstr "`DNSSEC Principles and Analysis <https://blog.thecjw.me/?p=1221>`_"
 
 #: ../../source/network/domain/ref.rst:61
 #, python-brace-format
@@ -269,16 +325,21 @@ msgid ""
 "of domain generating malware[C]//25th {USENIX} Security Symposium "
 "({USENIX} Security 16). 2016: 263-278."
 msgstr ""
+"Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study "
+"of domain generating malware[C]//25th {USENIX} Security Symposium "
+"({USENIX} Security 16). 2016: 263-278."
 
 #: ../../source/network/domain/ref.rst:62
 msgid ""
 "An End-to-End Large-Scale Measurement of DNS-over-Encryption: How Far "
 "Have We Come?"
 msgstr ""
+"An End-to-End Large-Scale Measurement of DNS-over-Encryption: How Far "
+"Have We Come?"
 
 #: ../../source/network/domain/ref.rst:65
 msgid "相关CVE"
-msgstr ""
+msgstr "Related CVEs"
 
 #: ../../source/network/domain/ref.rst:66
 msgid ""
@@ -287,3 +348,7 @@ msgid ""
 "/resolving-your-way-into-domain-admin-exploiting-a-17-year-old-bug-in-"
 "windows-dns-servers/>`_"
 msgstr ""
+"`SIGRed – Resolving Your Way into Domain Admin: Exploiting a 17 Year-old "
+"Bug in Windows DNS Servers <https://research.checkpoint.com/2020"
+"/resolving-your-way-into-domain-admin-exploiting-a-17-year-old-bug-in-"
+"windows-dns-servers/>`_"

@@ -20,33 +20,40 @@ msgstr ""
 
 #: ../../source/network/domain/sec.rst:2
 msgid "加密方案"
-msgstr ""
+msgstr "Encryption Schemes"
 
 #: ../../source/network/domain/sec.rst:3
 msgid ""
 "作为主流的防御方案，DNS加密有五种方案，分别是 DNS-over-TLS (DoT)、DNS-over-DTLS、DNS-over-HTTPS "
 "(DoH)、DNS-over-QUIC以及DNSCrypt。"
 msgstr ""
+"As mainstream defensive approaches, DNS encryption has five schemes: "
+"DNS-over-TLS (DoT), DNS-over-DTLS, DNS-over-HTTPS (DoH), DNS-over-QUIC, and "
+"DNSCrypt."
 
 #: ../../source/network/domain/sec.rst:6
 msgid "DoT"
-msgstr ""
+msgstr "DoT"
 
 #: ../../source/network/domain/sec.rst:7
 msgid "DoT方案在2016年发表于RFC7858，使用853端口。主要思想是Client和Server通过TCP协议建立TLS会话后再进行DNS传输，Client通过SSL证书验证服务器身份。"
 msgstr ""
+"The DoT scheme was published in RFC 7858 in 2016 and uses port 853. Its main "
+"idea is that the client and server establish a TLS session over TCP before "
+"transmitting DNS traffic, and the client verifies the server's identity with "
+"an SSL certificate."
 
 #: ../../source/network/domain/sec.rst:10
 msgid "DNS-over-DTLS"
-msgstr ""
+msgstr "DNS-over-DTLS"
 
 #: ../../source/network/domain/sec.rst:11
 msgid "DNS-over-DTLS和DoT类似，区别在于使用UDP协议而不是TCP协议。"
-msgstr ""
+msgstr "DNS-over-DTLS is similar to DoT, but uses UDP instead of TCP."
 
 #: ../../source/network/domain/sec.rst:14
 msgid "DoH"
-msgstr ""
+msgstr "DoH"
 
 #: ../../source/network/domain/sec.rst:15
 #, python-brace-format
@@ -54,19 +61,30 @@ msgid ""
 "DoH方案在发表RFC8484，使用 ``https://dns.example.com/dns-query{?dns}``  "
 "来查询服务器的IP，复用https的443端口，流量特征比较小。DoH会对DNS服务器进行加密认证，不提供fallback选项。目前Cloudflare、Google等服务商对DoH提供了支持。"
 msgstr ""
+"The DoH scheme was published in RFC 8484. It uses "
+"``https://dns.example.com/dns-query{?dns}`` to query the server's IP, reuses "
+"HTTPS port 443, and has relatively subtle traffic characteristics. DoH "
+"performs encrypted authentication of the DNS server and does not provide a "
+"fallback option. Cloudflare, Google, and other service providers currently "
+"support DoH."
 
 #: ../../source/network/domain/sec.rst:18
 msgid "DNS-over-QUIC"
-msgstr ""
+msgstr "DNS-over-QUIC"
 
 #: ../../source/network/domain/sec.rst:19
 msgid "DNS-over-QUIC安全特性和DoT类似，但是性能更高，目前没有合适的软件实现。"
 msgstr ""
+"DNS-over-QUIC has security properties similar to DoT, but with better "
+"performance. There is currently no suitable software implementation."
 
 #: ../../source/network/domain/sec.rst:22
 msgid "DNSCrypt"
-msgstr ""
+msgstr "DNSCrypt"
 
 #: ../../source/network/domain/sec.rst:23
 msgid "DNSCrypt使用X25519-XSalsa20Poly1305而非标准的TLS，且DNSCrypt的Client需要额外的软件，Server需要的专门的证书。"
 msgstr ""
+"DNSCrypt uses X25519-XSalsa20Poly1305 instead of standard TLS. DNSCrypt "
+"clients require additional software, and servers require dedicated "
+"certificates."

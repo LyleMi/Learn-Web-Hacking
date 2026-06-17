@@ -20,24 +20,36 @@ msgstr ""
 
 #: ../../source/network/domain/attack.rst:2
 msgid "相关漏洞"
-msgstr ""
+msgstr "Related Vulnerabilities"
 
 #: ../../source/network/domain/attack.rst:5
 msgid "DNS劫持"
-msgstr ""
+msgstr "DNS Hijacking"
 
 #: ../../source/network/domain/attack.rst:6
 msgid "DNS劫持有多种方式，比较早期的攻击方式是通过攻击域名解析服务器，或是伪造DNS响应的方法，来将域名解析到恶意的IP地址。"
 msgstr ""
+"DNS hijacking can be carried out in several ways. Earlier attacks commonly "
+"compromised domain name resolution servers or forged DNS responses to resolve "
+"a domain name to a malicious IP address."
 
 #: ../../source/network/domain/attack.rst:8
 msgid "随着互联网应用的不断发展，出现了基于废弃记录的劫持方式。这种方式发生的场景是次级域名的解析记录指向第三方资源，而第三方资源被释放后，解析记录并没有取消，在这种场景下，可以对应申请第三方资源，以获取控制解析记录的能力。"
 msgstr ""
+"As Internet applications have continued to evolve, hijacking techniques based "
+"on dangling records have appeared. This occurs when a subdomain's DNS record "
+"points to a third-party resource, the third-party resource is released, and "
+"the DNS record is not removed. In that scenario, an attacker can claim the "
+"corresponding third-party resource and gain control over where the record "
+"resolves."
 
 #: ../../source/network/domain/attack.rst:11
 msgid "拒绝服务"
-msgstr ""
+msgstr "Denial of Service"
 
 #: ../../source/network/domain/attack.rst:12
 msgid "DNS服务通常会开启UDP端口，当DNS服务器拥有大量二级域NS记录时，通过DNS的UDP反射攻击可以实现高倍的拒绝服务。"
 msgstr ""
+"DNS services usually expose a UDP port. When a DNS server has a large number "
+"of second-level domain NS records, DNS UDP reflection attacks can amplify "
+"traffic significantly and cause denial of service."
