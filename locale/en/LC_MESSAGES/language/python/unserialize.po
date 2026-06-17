@@ -20,34 +20,37 @@ msgstr ""
 
 #: ../../source/language/python/unserialize.rst:2
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/language/python/unserialize.rst:5
 msgid "pickle demo"
-msgstr ""
+msgstr "pickle Demo"
 
 #: ../../source/language/python/unserialize.rst:6
 msgid "Python Pickle在反序列化时会调用 ``__reduce__`` ，可用自定义的 ``__reduce__`` 函数来实现攻击。"
-msgstr ""
+msgstr "Python Pickle calls ``__reduce__`` during deserialization. A custom ``__reduce__`` function can be used to implement an attack."
 
 #: ../../source/language/python/unserialize.rst:23
 msgid ""
 "对于这种攻击，可以用重载 find_class 来限定范围，`参考 "
 "<https://docs.python.org/3/library/pickle.html#restricting-globals>`_"
 msgstr ""
+"For this type of attack, override find_class to restrict the allowed scope. "
+"See `Restricting Globals "
+"<https://docs.python.org/3/library/pickle.html#restricting-globals>`_."
 
 #: ../../source/language/python/unserialize.rst:54
 msgid "其他序列化库"
-msgstr ""
+msgstr "Other Serialization Libraries"
 
 #: ../../source/language/python/unserialize.rst:55
 msgid "PyYAML"
-msgstr ""
+msgstr "PyYAML"
 
 #: ../../source/language/python/unserialize.rst:56
 msgid "marshal"
-msgstr ""
+msgstr "marshal"
 
 #: ../../source/language/python/unserialize.rst:57
 msgid "shelve"
-msgstr ""
+msgstr "shelve"

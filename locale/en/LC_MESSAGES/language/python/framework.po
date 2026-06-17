@@ -20,46 +20,53 @@ msgstr ""
 
 #: ../../source/language/python/framework.rst:2
 msgid "框架"
-msgstr ""
+msgstr "Frameworks"
 
 #: ../../source/language/python/framework.rst:5
 msgid "Django"
-msgstr ""
+msgstr "Django"
 
 #: ../../source/language/python/framework.rst:8
 msgid "历史漏洞"
-msgstr ""
+msgstr "Historical Vulnerabilities"
 
 #: ../../source/language/python/framework.rst:9
 msgid "`CVE-2016-7401 CSRF Bypass <https://paper.seebug.org/58/>`_"
-msgstr ""
+msgstr "`CVE-2016-7401 CSRF Bypass <https://paper.seebug.org/58/>`_"
 
 #: ../../source/language/python/framework.rst:10
 msgid ""
 "`CVE-2017-7233/7234 Open redirect vulnerability "
 "<https://www.djangoproject.com/weblog/2017/apr/04/security-releases/>`_"
 msgstr ""
+"`CVE-2017-7233/7234 Open redirect vulnerability "
+"<https://www.djangoproject.com/weblog/2017/apr/04/security-releases/>`_"
 
 #: ../../source/language/python/framework.rst:11
 msgid ""
 "`CVE-2017-12794 debug page XSS <https://www.leavesongs.com/PENETRATION"
 "/django-debug-page-xss.html>`_"
 msgstr ""
+"`CVE-2017-12794 Debug Page XSS <https://www.leavesongs.com/PENETRATION"
+"/django-debug-page-xss.html>`_"
 
 #: ../../source/language/python/framework.rst:15
 msgid "配置相关"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../source/language/python/framework.rst:16
 msgid ""
 "Nginx 在为 Django 做反向代理时，静态文件目录配置错误会导致源码泄露。访问 /static.. 会 301 重定向到 "
 "/static../"
 msgstr ""
+"When Nginx acts as a reverse proxy for Django, an incorrect static file "
+"directory configuration can disclose source code. Accessing /static.. returns "
+"a 301 redirect to /static../."
 
 #: ../../source/language/python/framework.rst:20
 msgid "Flask"
-msgstr ""
+msgstr "Flask"
 
 #: ../../source/language/python/framework.rst:21
 msgid "Flask默认使用客户端session，使得session可以被伪造"
-msgstr ""
+msgstr "Flask uses client-side sessions by default, which means sessions can be forged."

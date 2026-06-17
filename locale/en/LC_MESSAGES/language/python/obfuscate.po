@@ -20,28 +20,28 @@ msgstr ""
 
 #: ../../source/language/python/obfuscate.rst:2
 msgid "代码混淆"
-msgstr ""
+msgstr "Code Obfuscation"
 
 #: ../../source/language/python/obfuscate.rst:5
 msgid "常见混淆方式"
-msgstr ""
+msgstr "Common Obfuscation Methods"
 
 #: ../../source/language/python/obfuscate.rst:6
 msgid "基于AST变换"
-msgstr ""
+msgstr "AST-Based Transformation"
 
 #: ../../source/language/python/obfuscate.rst:7
 msgid "编译为pyc文件"
-msgstr ""
+msgstr "Compile to pyc Files"
 
 #: ../../source/language/python/obfuscate.rst:8
 msgid "Pyinstaller"
-msgstr ""
+msgstr "PyInstaller"
 
 #: ../../source/language/python/obfuscate.rst:9
 msgid "PyArmor"
-msgstr ""
+msgstr "PyArmor"
 
 #: ../../source/language/python/obfuscate.rst:10
 msgid "通过 AES 加密为 pye 文件"
-msgstr ""
+msgstr "Encrypt as pye Files with AES"

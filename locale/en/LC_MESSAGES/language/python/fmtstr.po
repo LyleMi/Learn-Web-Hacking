@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/language/python/fmtstr.rst:2
 msgid "格式化字符串"
-msgstr ""
+msgstr "Format Strings"
 
 #: ../../source/language/python/fmtstr.rst:4
 #, python-brace-format, python-format
@@ -29,13 +29,20 @@ msgid ""
 "\"test\"`` ，之后增加了format的方式， 语法为 ``\"this is a {}\".format('test')`` 或者 "
 "``\"this is a {test}\".format(test='test')``"
 msgstr ""
+"Python has two string-formatting styles. In earlier Python 2 releases, "
+"strings were formatted with ``\"this is a %s\" % \"test\"``. The ``format`` "
+"style was added later, with syntax such as ``\"this is a {}\".format('test')`` "
+"or ``\"this is a {test}\".format(test='test')``."
 
 #: ../../source/language/python/fmtstr.rst:6
 msgid "当格式化字符串由用户输入时，则可能会造成一些问题，下面是一个最简单的例子"
-msgstr ""
+msgstr "When the format string is user controlled, it can cause issues. The following is a minimal example."
 
 #: ../../source/language/python/fmtstr.rst:13
 msgid ""
 "从上面这个简单的例子不难知道，当我们可以控制要format的字符串时，则可以使用 ``__init__`` / ``__globals__`` "
 "等属性读取一些比较敏感的值，甚至任意执行代码。"
 msgstr ""
+"This simple example shows that when the string passed to ``format`` is "
+"controllable, attributes such as ``__init__`` and ``__globals__`` can be used "
+"to read sensitive values or even execute arbitrary code."

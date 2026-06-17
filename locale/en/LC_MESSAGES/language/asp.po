@@ -20,22 +20,24 @@ msgstr ""
 
 #: ../../source/language/asp.rst:2
 msgid "ASP"
-msgstr ""
+msgstr "ASP"
 
 #: ../../source/language/asp.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/asp.rst:6
 msgid "ASP是动态服务器页面(Active Server Page)，是微软开发的类似CGI脚本程序的一种应用，其网页文件的格式是 ``.asp`` 。"
-msgstr ""
+msgstr "ASP, or Active Server Page, is an application technology developed by Microsoft that is similar to CGI scripts. Its web page file extension is ``.asp``."
 
 #: ../../source/language/asp.rst:9
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/language/asp.rst:10
 msgid ""
 "`Deformity ASP/ASPX Webshell、Webshell Hidden Learning "
 "<https://www.cnblogs.com/LittleHann/p/5016999.html>`_"
 msgstr ""
+"`Deformity ASP/ASPX Webshell and Webshell Hiding Notes "
+"<https://www.cnblogs.com/LittleHann/p/5016999.html>`_"

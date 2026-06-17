@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/language/powershell.rst:2
 msgid "PowerShell"
-msgstr ""
+msgstr "PowerShell"
 
 #: ../../source/language/powershell.rst:5
 msgid "执行策略"
-msgstr ""
+msgstr "Execution Policy"
 
 #: ../../source/language/powershell.rst:6
 msgid ""
@@ -32,180 +32,187 @@ msgid ""
 "Restricted、AllSigned、RemoteSigned、Unrestricted、Bypass、Undefined "
 "六种类型的执行策略。"
 msgstr ""
+"PowerShell provides six execution policy types: Restricted, AllSigned, "
+"RemoteSigned, Unrestricted, Bypass, and Undefined."
 
 #: ../../source/language/powershell.rst:8
 msgid "Restricted 策略可以执行单个的命令，但是不能执行脚本，Windows 8、 Windows Server 2012中默认使用该策略。"
-msgstr ""
+msgstr "The Restricted policy can execute individual commands but cannot run scripts. Windows 8 and Windows Server 2012 use this policy by default."
 
 #: ../../source/language/powershell.rst:10
 msgid "AllSigned 策略允许执行所有具有数字签名的脚本。"
-msgstr ""
+msgstr "The AllSigned policy allows all scripts with digital signatures to run."
 
 #: ../../source/language/powershell.rst:12
 msgid ""
 "RemoteSigned "
 "当执行从网络上下载的脚本时，需要脚本具有数字签名，否则不会运行这个脚本。如果是在本地创建的脚本则可以直接执行，不要求脚本具有数字签名。"
 msgstr ""
+"Under RemoteSigned, scripts downloaded from the internet must have a digital "
+"signature; otherwise, they will not run. Locally created scripts can run "
+"directly without a digital signature."
 
 #: ../../source/language/powershell.rst:14
 msgid "Unrestricted 这是一种比较宽容的策略，允许运行未签名的脚本。对于从网络上下载的脚本，在运行前会进行安全性提示。"
-msgstr ""
+msgstr "Unrestricted is a more permissive policy that allows unsigned scripts to run. Scripts downloaded from the internet trigger a security prompt before execution."
 
 #: ../../source/language/powershell.rst:16
 msgid "BypassBypass 执行策略对脚本的执行不设任何的限制，任何脚本都可以执行，并且不会有安全性提示。"
-msgstr ""
+msgstr "The Bypass execution policy places no restrictions on script execution. Any script can run, and no security prompt is shown."
 
 #: ../../source/language/powershell.rst:18
 msgid "UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的脚本策略。"
-msgstr ""
+msgstr "Undefined means no script policy is set, so PowerShell inherits or uses the default script policy."
 
 #: ../../source/language/powershell.rst:21
 msgid "混淆"
-msgstr ""
+msgstr "Obfuscation"
 
 #: ../../source/language/powershell.rst:22
 msgid "``-EC``"
-msgstr ""
+msgstr "``-EC``"
 
 #: ../../source/language/powershell.rst:23
 msgid "``-EncodedCommand``"
-msgstr ""
+msgstr "``-EncodedCommand``"
 
 #: ../../source/language/powershell.rst:24
 msgid "``-EncodedComman``"
-msgstr ""
+msgstr "``-EncodedComman``"
 
 #: ../../source/language/powershell.rst:25
 msgid "``-EncodedComma``"
-msgstr ""
+msgstr "``-EncodedComma``"
 
 #: ../../source/language/powershell.rst:26
 msgid "``-EncodedComm``"
-msgstr ""
+msgstr "``-EncodedComm``"
 
 #: ../../source/language/powershell.rst:29
 msgid "常见功能"
-msgstr ""
+msgstr "Common Functions"
 
 #: ../../source/language/powershell.rst:32
 msgid "计划任务"
-msgstr ""
+msgstr "Scheduled Tasks"
 
 #: ../../source/language/powershell.rst:44
 msgid "创建链接"
-msgstr ""
+msgstr "Create Links"
 
 #: ../../source/language/powershell.rst:56
 msgid "编码"
-msgstr ""
+msgstr "Encoding"
 
 #: ../../source/language/powershell.rst:64
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: ../../source/language/powershell.rst:65
 msgid "别名"
-msgstr ""
+msgstr "Alias"
 
 #: ../../source/language/powershell.rst:66
 msgid "``alias``"
-msgstr ""
+msgstr "``alias``"
 
 #: ../../source/language/powershell.rst:67
 msgid "下载文件"
-msgstr ""
+msgstr "Download Files"
 
 #: ../../source/language/powershell.rst:68
 msgid ""
 "``Invoke-WebRequest \"https://example.com/test.zip\" -OutFile "
 "\"$env:TEMP\\test.zip\"``"
 msgstr ""
+"``Invoke-WebRequest \"https://example.com/test.zip\" -OutFile "
+"\"$env:TEMP\\test.zip\"``"
 
 #: ../../source/language/powershell.rst:69
 msgid "解压缩"
-msgstr ""
+msgstr "Extract Archives"
 
 #: ../../source/language/powershell.rst:70
 msgid "``Expand-Archive $env:TEMP\\test.zip $env:TEMP\\test -Force``"
-msgstr ""
+msgstr "``Expand-Archive $env:TEMP\\test.zip $env:TEMP\\test -Force``"
 
 #: ../../source/language/powershell.rst:71
 msgid "进程"
-msgstr ""
+msgstr "Processes"
 
 #: ../../source/language/powershell.rst:72
 msgid "启动进程 ``Start-Process calc``"
-msgstr ""
+msgstr "Start a process with ``Start-Process calc``"
 
 #: ../../source/language/powershell.rst:73
 msgid "停止进程 ``Stop-Process -ID $pid``"
-msgstr ""
+msgstr "Stop a process with ``Stop-Process -ID $pid``"
 
 #: ../../source/language/powershell.rst:74
 msgid "文件"
-msgstr ""
+msgstr "Files"
 
 #: ../../source/language/powershell.rst:75
 #, python-brace-format
 msgid "新建文件 ``New-Item #{file_path} -Force | Out-Null``"
-msgstr ""
+msgstr "Create a file with ``New-Item #{file_path} -Force | Out-Null``"
 
 #: ../../source/language/powershell.rst:76
 #, python-brace-format
 msgid "设置文件内容 ``Set-Content -Path #{file_path} -Value \"#{Content}\"``"
-msgstr ""
+msgstr "Set file content with ``Set-Content -Path #{file_path} -Value \"#{Content}\"``"
 
 #: ../../source/language/powershell.rst:77
 #, python-brace-format
 msgid "追加文件内容 ``Add-Content -Path #{file_path} -Value \"#{Content}\"``"
-msgstr ""
+msgstr "Append file content with ``Add-Content -Path #{file_path} -Value \"#{Content}\"``"
 
 #: ../../source/language/powershell.rst:78
 msgid "复制文件 ``Copy-Item src dst``"
-msgstr ""
+msgstr "Copy a file with ``Copy-Item src dst``"
 
 #: ../../source/language/powershell.rst:79
 #, python-brace-format
 msgid "删除文件 ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``"
-msgstr ""
+msgstr "Delete a file with ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``"
 
 #: ../../source/language/powershell.rst:80
 #, python-brace-format
 msgid "子目录 ``Get-ChildItem #{file_path}``"
-msgstr ""
+msgstr "List child directories with ``Get-ChildItem #{file_path}``"
 
 #: ../../source/language/powershell.rst:81
 msgid "服务"
-msgstr ""
+msgstr "Services"
 
 #: ../../source/language/powershell.rst:82
 #, python-brace-format
 msgid "获取服务 ``Get-Service -Name \"#{service_name}\"``"
-msgstr ""
+msgstr "Get a service with ``Get-Service -Name \"#{service_name}\"``"
 
 #: ../../source/language/powershell.rst:83
 #, python-brace-format
 msgid "启动服务 ``Start-Service -Name \"#{service_name}\"``"
-msgstr ""
+msgstr "Start a service with ``Start-Service -Name \"#{service_name}\"``"
 
 #: ../../source/language/powershell.rst:84
 #, python-brace-format
 msgid "停止服务 ``Stop-Service -Name \"#{service_name}\"``"
-msgstr ""
+msgstr "Stop a service with ``Stop-Service -Name \"#{service_name}\"``"
 
 #: ../../source/language/powershell.rst:85
 #, python-brace-format
 msgid "删除服务 ``Remove-Service -Name \"#{service_name}\"``"
-msgstr ""
+msgstr "Delete a service with ``Remove-Service -Name \"#{service_name}\"``"
 
 #: ../../source/language/powershell.rst:86
 msgid "获取WMI支持 ``Get-WmiObject -list``"
-msgstr ""
+msgstr "Get WMI support with ``Get-WmiObject -list``"
 
 #: ../../source/language/powershell.rst:89
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/language/powershell.rst:90
 msgid "`PowerShell 官方文档 <https://docs.microsoft.com/zh-cn/powershell/>`_"
-msgstr ""
+msgstr "`Official PowerShell Documentation <https://docs.microsoft.com/zh-cn/powershell/>`_"

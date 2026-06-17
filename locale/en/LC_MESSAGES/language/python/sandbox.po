@@ -20,108 +20,114 @@ msgstr ""
 
 #: ../../source/language/python/sandbox.rst:2
 msgid "沙箱"
-msgstr ""
+msgstr "Sandbox"
 
 #: ../../source/language/python/sandbox.rst:5
 msgid "常用函数"
-msgstr ""
+msgstr "Common Functions"
 
 #: ../../source/language/python/sandbox.rst:6
 msgid "eval / exec / compile"
-msgstr ""
+msgstr "eval / exec / compile"
 
 #: ../../source/language/python/sandbox.rst:7
 msgid "dir / type"
-msgstr ""
+msgstr "dir / type"
 
 #: ../../source/language/python/sandbox.rst:8
 msgid "globals / locals / vars"
-msgstr ""
+msgstr "globals / locals / vars"
 
 #: ../../source/language/python/sandbox.rst:9
 msgid "getattr / setattr"
-msgstr ""
+msgstr "getattr / setattr"
 
 #: ../../source/language/python/sandbox.rst:12
 msgid "导入包方式"
-msgstr ""
+msgstr "Package Import Methods"
 
 #: ../../source/language/python/sandbox.rst:13
 msgid "``import os``"
-msgstr ""
+msgstr "``import os``"
 
 #: ../../source/language/python/sandbox.rst:14
 msgid "``from os import *``"
-msgstr ""
+msgstr "``from os import *``"
 
 #: ../../source/language/python/sandbox.rst:15
 msgid "``__import__(\"os\")``"
-msgstr ""
+msgstr "``__import__(\"os\")``"
 
 #: ../../source/language/python/sandbox.rst:16
 msgid "``importlib``"
-msgstr ""
+msgstr "``importlib``"
 
 #: ../../source/language/python/sandbox.rst:17
 msgid "``imp``"
-msgstr ""
+msgstr "``imp``"
 
 #: ../../source/language/python/sandbox.rst:18
 msgid "``reload(os)``"
-msgstr ""
+msgstr "``reload(os)``"
 
 #: ../../source/language/python/sandbox.rst:19
 msgid "``execfile`` 仅Python2支持"
-msgstr ""
+msgstr "``execfile`` is supported only in Python 2"
 
 #: ../../source/language/python/sandbox.rst:22
 msgid "绕过"
-msgstr ""
+msgstr "Bypass"
 
 #: ../../source/language/python/sandbox.rst:23
 msgid "``dir(__builtins__)`` 查看内置模块"
-msgstr ""
+msgstr "Use ``dir(__builtins__)`` to inspect built-in modules"
 
 #: ../../source/language/python/sandbox.rst:25
 msgid "最简单的思路是在已有的模块中import，如果那个模块中已经 import 可以利用的模块就可以使用了"
-msgstr ""
+msgstr "The simplest approach is to import from an existing module. If that module has already imported a usable module, it can be reused."
 
 #: ../../source/language/python/sandbox.rst:27
 msgid ""
 "在父类中寻找可用的模块，最常见payload是 ``().__class__.__bases__[0].__subclasses__()`` "
 "或者用魔术方法获取全局作用域 ``__init__.__func__.__globals__``"
 msgstr ""
+"Look for usable modules in parent classes. The most common payload is "
+"``().__class__.__bases__[0].__subclasses__()``, or use magic methods to obtain "
+"the global scope through ``__init__.__func__.__globals__``."
 
 #: ../../source/language/python/sandbox.rst:29
 msgid ""
 "有些网站没有过滤 pickle 模块，可以使用 pickle 实现任意代码执行，生成 payload 可以使用 "
 "``https://gist.github.com/freddyb/3360650``"
 msgstr ""
+"Some sites do not filter the pickle module. In that case, pickle can be used "
+"to achieve arbitrary code execution. Payloads can be generated with "
+"``https://gist.github.com/freddyb/3360650``."
 
 #: ../../source/language/python/sandbox.rst:31
 msgid "有的沙箱把相关的模块代码都被删除了，则可以使用libc中的函数，Python 中调用一般可以使用 ctypes 或者 cffi。"
-msgstr ""
+msgstr "If a sandbox removes the relevant module code, functions in libc can be used instead. In Python, they are usually called through ctypes or cffi."
 
 #: ../../source/language/python/sandbox.rst:33
 msgid "``\"A\"\"B\" == \"AB\"``"
-msgstr ""
+msgstr "``\"A\"\"B\" == \"AB\"``"
 
 #: ../../source/language/python/sandbox.rst:36
 msgid "防御"
-msgstr ""
+msgstr "Defense"
 
 #: ../../source/language/python/sandbox.rst:37
 msgid "Python官方给出了一些防御的建议"
-msgstr ""
+msgstr "The official Python documentation provides several defensive suggestions."
 
 #: ../../source/language/python/sandbox.rst:39
 msgid "使用Jython并尝试使用Java平台来锁定程序的权限"
-msgstr ""
+msgstr "Use Jython and try to restrict program permissions through the Java platform."
 
 #: ../../source/language/python/sandbox.rst:40
 msgid "使用fakeroot来避免"
-msgstr ""
+msgstr "Use fakeroot to reduce impact."
 
 #: ../../source/language/python/sandbox.rst:41
 msgid "使用一些rootjail的技术"
-msgstr ""
+msgstr "Use rootjail techniques."

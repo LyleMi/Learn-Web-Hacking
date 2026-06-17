@@ -20,24 +20,28 @@ msgstr ""
 
 #: ../../source/language/csharp/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/language/csharp/ref.rst:5
 msgid ".Net"
-msgstr ""
+msgstr ".NET"
 
 #: ../../source/language/csharp/ref.rst:6
 msgid ""
 "`.NET documentation <https://docs.microsoft.com/en-"
 "us/dotnet/fundamentals/>`_"
 msgstr ""
+"`.NET Documentation <https://docs.microsoft.com/en-"
+"us/dotnet/fundamentals/>`_"
 
 #: ../../source/language/csharp/ref.rst:9
 msgid "利用技巧"
-msgstr ""
+msgstr "Exploitation Techniques"
 
 #: ../../source/language/csharp/ref.rst:10
 msgid ""
 "`Emulating Covert Operations - Dynamic Invocation (Avoiding PInvoke & API"
 " Hooks) <https://thewover.github.io/Dynamic-Invoke/>`_"
 msgstr ""
+"`Emulating Covert Operations - Dynamic Invocation (Avoiding PInvoke & API"
+" Hooks) <https://thewover.github.io/Dynamic-Invoke/>`_"

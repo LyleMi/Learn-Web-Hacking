@@ -20,19 +20,19 @@ msgstr ""
 
 #: ../../source/language/python/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/language/python/ref.rst:5
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/language/python/ref.rst:6
 msgid "`Python pickle反序列化 <http://www.91ri.org/9576.html>`_"
-msgstr ""
+msgstr "`Python pickle Deserialization <http://www.91ri.org/9576.html>`_"
 
 #: ../../source/language/python/ref.rst:7
 msgid "`Python 沙箱 官方wiki <https://wiki.python.org/moin/SandboxedPython>`_"
-msgstr ""
+msgstr "`Python Sandbox Official Wiki <https://wiki.python.org/moin/SandboxedPython>`_"
 
 #: ../../source/language/python/ref.rst:8
 #, python-format
@@ -40,12 +40,16 @@ msgid ""
 "`Python eval的常见错误封装及利用原理 "
 "<http://xxlegend.com/2015/07/31/Python%20eval的常见错误封装及利用原理/>`_"
 msgstr ""
+"`Common Incorrect Wrappers for Python eval and Exploitation Principles "
+"<http://xxlegend.com/2015/07/31/Python%20eval%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%81%E8%A3%85%E5%8F%8A%E5%88%A9%E7%94%A8%E5%8E%9F%E7%90%86/>`_"
 
 #: ../../source/language/python/ref.rst:9
 msgid ""
 "`pickle Python 对象序列化 <https://docs.python.org/zh-"
 "cn/3/library/pickle.html>`_"
 msgstr ""
+"`pickle Python Object Serialization <https://docs.python.org/zh-"
+"cn/3/library/pickle.html>`_"
 
 #: ../../source/language/python/ref.rst:10
 msgid ""
@@ -53,49 +57,58 @@ msgid ""
 "<https://media.blackhat.com/bh-"
 "us-11/Slaviero/BH_US_11_Slaviero_Sour_Pickles_Slides.pdf>`_"
 msgstr ""
+"`Sour Pickles A Serialised Exploitation Guide in One Part "
+"<https://media.blackhat.com/bh-"
+"us-11/Slaviero/BH_US_11_Slaviero_Sour_Pickles_Slides.pdf>`_"
 
 #: ../../source/language/python/ref.rst:11
 msgid ""
 "`How pickle works in Python <https://rushter.com/blog/pickle-"
 "serialization-internals/>`_"
 msgstr ""
+"`How pickle Works in Python <https://rushter.com/blog/pickle-"
+"serialization-internals/>`_"
 
 #: ../../source/language/python/ref.rst:14
 msgid "沙箱"
-msgstr ""
+msgstr "Sandbox"
 
 #: ../../source/language/python/ref.rst:15
 msgid "`Python 沙箱通用绕过 <https://www.anquanke.com/post/id/86366>`_"
-msgstr ""
+msgstr "`General Python Sandbox Bypass <https://www.anquanke.com/post/id/86366>`_"
 
 #: ../../source/language/python/ref.rst:16
 msgid "`一文看懂Python沙箱逃逸 <https://www.freebuf.com/articles/system/203208.html>`_"
-msgstr ""
+msgstr "`Understanding Python Sandbox Escape <https://www.freebuf.com/articles/system/203208.html>`_"
 
 #: ../../source/language/python/ref.rst:19
 msgid "格式化字符串"
-msgstr ""
+msgstr "Format Strings"
 
 #: ../../source/language/python/ref.rst:20
 msgid ""
 "`Python字符串格式化漏洞 <https://www.leavesongs.com/PENETRATION/python-string-"
 "format-vulnerability.html>`_"
 msgstr ""
+"`Python String Formatting Vulnerability <https://www.leavesongs.com/PENETRATION/python-string-"
+"format-vulnerability.html>`_"
 
 #: ../../source/language/python/ref.rst:21
 msgid ""
 "`Be Careful with Python's New-Style String Format "
 "<http://lucumr.pocoo.org/2016/12/29/careful-with-str-format/>`_"
 msgstr ""
+"`Be Careful with Python's New-Style String Format "
+"<http://lucumr.pocoo.org/2016/12/29/careful-with-str-format/>`_"
 
 #: ../../source/language/python/ref.rst:24
 msgid "综合"
-msgstr ""
+msgstr "General"
 
 #: ../../source/language/python/ref.rst:25
 msgid "`python security <https://github.com/vstinner/python-security.git>`_"
-msgstr ""
+msgstr "`python security <https://github.com/vstinner/python-security.git>`_"
 
 #: ../../source/language/python/ref.rst:26
 msgid "`Python安全和代码审计相关资料收集 <https://github.com/bit4woo/python_sec>`_"
-msgstr ""
+msgstr "`Python Security and Code Audit Resources <https://github.com/bit4woo/python_sec>`_"

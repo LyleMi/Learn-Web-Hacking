@@ -20,162 +20,162 @@ msgstr ""
 
 #: ../../source/language/shell.rst:2
 msgid "Shell"
-msgstr ""
+msgstr "Shell"
 
 #: ../../source/language/shell.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/shell.rst:6
 msgid "Shell 是一个特殊的程序，是用户使用 Linux 的桥梁。Shell 既是一种命令，又是一种程序设计语言。"
-msgstr ""
+msgstr "A shell is a special program that acts as the bridge between users and Linux. Shell is both a command interface and a programming language."
 
 #: ../../source/language/shell.rst:8
 msgid "Linux 包含多种 Shell ，常见的有："
-msgstr ""
+msgstr "Linux includes multiple shells. Common examples include:"
 
 #: ../../source/language/shell.rst:10
 msgid "Bourne Shell（ATT的Bourne开发，名为sh）"
-msgstr ""
+msgstr "Bourne Shell, developed by Bourne at AT&T and named sh"
 
 #: ../../source/language/shell.rst:11
 msgid "Bourne Again Shell（/bin/bash）"
-msgstr ""
+msgstr "Bourne Again Shell, /bin/bash"
 
 #: ../../source/language/shell.rst:12
 msgid "C Shell（Bill Joy开发，名为csh）"
-msgstr ""
+msgstr "C Shell, developed by Bill Joy and named csh"
 
 #: ../../source/language/shell.rst:13
 msgid "K Shell（ATT的David G.koun开发，名为ksh）"
-msgstr ""
+msgstr "K Shell, developed by David G. Korn at AT&T and named ksh"
 
 #: ../../source/language/shell.rst:14
 msgid "Z Shell（Paul Falstad开发，名为zsh）"
-msgstr ""
+msgstr "Z Shell, developed by Paul Falstad and named zsh"
 
 #: ../../source/language/shell.rst:17
 msgid "元字符"
-msgstr ""
+msgstr "Metacharacters"
 
 #: ../../source/language/shell.rst:18
 msgid "shell一般会有一系列特殊字符，用来实现的一定的效果，这种字符被称为元字符（Meta），不同的Shell支持的元字符可能会不相同。"
-msgstr ""
+msgstr "Shells usually provide a set of special characters used to achieve specific effects. These characters are called metacharacters, and different shells may support different metacharacters."
 
 #: ../../source/language/shell.rst:20
 msgid "常见的元字符如下："
-msgstr ""
+msgstr "Common metacharacters include:"
 
 #: ../../source/language/shell.rst:22
 msgid "``IFS`` 由 <space> 或 <tab> 或 <enter> 三者之一组成"
-msgstr ""
+msgstr "``IFS`` consists of one of <space>, <tab>, or <enter>."
 
 #: ../../source/language/shell.rst:23
 msgid "``CR`` 由 <enter> 产生。"
-msgstr ""
+msgstr "``CR`` is produced by <enter>."
 
 #: ../../source/language/shell.rst:24
 msgid "``=`` 设定变量"
-msgstr ""
+msgstr "``=`` sets a variable."
 
 #: ../../source/language/shell.rst:25
 msgid "``$`` 作变量或运算替换"
-msgstr ""
+msgstr "``$`` performs variable or arithmetic substitution."
 
 #: ../../source/language/shell.rst:26
 msgid "``>`` 重定向 stdout"
-msgstr ""
+msgstr "``>`` redirects stdout."
 
 #: ../../source/language/shell.rst:27
 msgid "``>>`` 追加到文件"
-msgstr ""
+msgstr "``>>`` appends to a file."
 
 #: ../../source/language/shell.rst:28
 msgid "``<`` 重定向 stdin"
-msgstr ""
+msgstr "``<`` redirects stdin."
 
 #: ../../source/language/shell.rst:29
 msgid "``|`` 命令管道"
-msgstr ""
+msgstr "``|`` creates a command pipeline."
 
 #: ../../source/language/shell.rst:30
 msgid "``&`` 后台执行命令"
-msgstr ""
+msgstr "``&`` runs a command in the background."
 
 #: ../../source/language/shell.rst:31
 msgid "``;`` 在前一个命令结束后，执行下一个命令"
-msgstr ""
+msgstr "``;`` runs the next command after the previous command finishes."
 
 #: ../../source/language/shell.rst:32
 msgid "``&&`` 在前一个命令未报错执行后，执行下一个命令"
-msgstr ""
+msgstr "``&&`` runs the next command after the previous command succeeds without an error."
 
 #: ../../source/language/shell.rst:33
 msgid "``||`` 在前一个命令执行报错后，执行下一个命令"
-msgstr ""
+msgstr "``||`` runs the next command after the previous command exits with an error."
 
 #: ../../source/language/shell.rst:34
 msgid "``'`` 在单引号内的命令会保留原来的值"
-msgstr ""
+msgstr "``'`` preserves the original value inside single quotes."
 
 #: ../../source/language/shell.rst:35
 msgid "``\"`` 在双引号内的命令会允许变量替换"
-msgstr ""
+msgstr "``\"`` allows variable substitution inside double quotes."
 
 #: ../../source/language/shell.rst:36
 msgid "````` 在反引号内的内容会当成命令执行并替换"
-msgstr ""
+msgstr "````` treats the content inside backticks as a command, executes it, and substitutes the result."
 
 #: ../../source/language/shell.rst:37
 msgid "``()`` 在子Shell中执行命令"
-msgstr ""
+msgstr "``()`` executes commands in a subshell."
 
 #: ../../source/language/shell.rst:38
 #, python-brace-format
 msgid "``{}`` 在当前Shell中执行命令"
-msgstr ""
+msgstr "``{}`` executes commands in the current shell."
 
 #: ../../source/language/shell.rst:39
 msgid "``~`` 当前用户的主目录"
-msgstr ""
+msgstr "``~`` refers to the current user's home directory."
 
 #: ../../source/language/shell.rst:40
 msgid "``!number`` 执行历史命令，如 ``!1``"
-msgstr ""
+msgstr "``!number`` executes a command from history, such as ``!1``."
 
 #: ../../source/language/shell.rst:43
 msgid "通配符"
-msgstr ""
+msgstr "Wildcards"
 
 #: ../../source/language/shell.rst:44
 msgid "除元字符外，通配符（wildcard）也是shell中的一种特殊字符。当shell在参数中遇到了通配符时，shell会将其当作路径或文件名去在磁盘上搜寻可能的匹配：若符合要求的匹配存在，则进行替换，否则就将该通配符作为一个普通字符直接传递。"
-msgstr ""
+msgstr "In addition to metacharacters, wildcards are another kind of special shell character. When a shell encounters a wildcard in an argument, it treats it as a path or file name pattern and searches the disk for possible matches. If matching entries exist, the wildcard is replaced; otherwise, it is passed through as a normal character."
 
 #: ../../source/language/shell.rst:46
 msgid "常见的通配符如下："
-msgstr ""
+msgstr "Common wildcards include:"
 
 #: ../../source/language/shell.rst:48
 msgid "``*`` 匹配 0 或多个字符"
-msgstr ""
+msgstr "``*`` matches zero or more characters."
 
 #: ../../source/language/shell.rst:49
 msgid "``?`` 匹配任意一个字符"
-msgstr ""
+msgstr "``?`` matches any single character."
 
 #: ../../source/language/shell.rst:50
 msgid "``[list]`` 匹配 list 中的任意一个字符"
-msgstr ""
+msgstr "``[list]`` matches any one character in list."
 
 #: ../../source/language/shell.rst:51
 msgid "``[!list]`` 匹配除 list 外的任意一个字符"
-msgstr ""
+msgstr "``[!list]`` matches any one character not in list."
 
 #: ../../source/language/shell.rst:52
 msgid "``[a-c]`` 匹配 a-c 中的任意一个字符"
-msgstr ""
+msgstr "``[a-c]`` matches any one character from a through c."
 
 #: ../../source/language/shell.rst:53
 #, python-brace-format
 msgid "``{string1,string2,...}`` 分别匹配其中字符串"
-msgstr ""
+msgstr "``{string1,string2,...}`` matches each listed string separately."

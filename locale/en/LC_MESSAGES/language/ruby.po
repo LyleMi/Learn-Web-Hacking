@@ -20,18 +20,20 @@ msgstr ""
 
 #: ../../source/language/ruby.rst:2
 msgid "Ruby"
-msgstr ""
+msgstr "Ruby"
 
 #: ../../source/language/ruby.rst:5
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/language/ruby.rst:6
 msgid ""
 "`ruby deserialization <https://www.elttam.com.au/blog/ruby-"
 "deserialization/>`_"
 msgstr ""
+"`Ruby Deserialization <https://www.elttam.com.au/blog/ruby-"
+"deserialization/>`_"
 
 #: ../../source/language/ruby.rst:7
 msgid "`Ruby 安全漫谈 <https://mp.weixin.qq.com/s/ECLwMbbrf9lWXkhbUergXg>`_"
-msgstr ""
+msgstr "`A Discussion of Ruby Security <https://mp.weixin.qq.com/s/ECLwMbbrf9lWXkhbUergXg>`_"

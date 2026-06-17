@@ -20,196 +20,196 @@ msgstr ""
 
 #: ../../source/language/python/sink.rst:2
 msgid "Sink"
-msgstr ""
+msgstr "Sink"
 
 #: ../../source/language/python/sink.rst:5
 msgid "命令执行"
-msgstr ""
+msgstr "Command Execution"
 
 #: ../../source/language/python/sink.rst:6
 msgid "asyncio.new_event_loop().subprocess_exec"
-msgstr ""
+msgstr "asyncio.new_event_loop().subprocess_exec"
 
 #: ../../source/language/python/sink.rst:7
 msgid "asyncio.subprocess"
-msgstr ""
+msgstr "asyncio.subprocess"
 
 #: ../../source/language/python/sink.rst:8
 msgid "bdb.os"
-msgstr ""
+msgstr "bdb.os"
 
 #: ../../source/language/python/sink.rst:9
 msgid "cgi.os.system"
-msgstr ""
+msgstr "cgi.os.system"
 
 #: ../../source/language/python/sink.rst:10
 msgid "cgi.sys"
-msgstr ""
+msgstr "cgi.sys"
 
 #: ../../source/language/python/sink.rst:11
 msgid "code.InteractiveInterpreter"
-msgstr ""
+msgstr "code.InteractiveInterpreter"
 
 #: ../../source/language/python/sink.rst:12
 msgid "commands"
-msgstr ""
+msgstr "commands"
 
 #: ../../source/language/python/sink.rst:13
 msgid "ctypes.CDLL"
-msgstr ""
+msgstr "ctypes.CDLL"
 
 #: ../../source/language/python/sink.rst:14
 msgid "eval"
-msgstr ""
+msgstr "eval"
 
 #: ../../source/language/python/sink.rst:15
 msgid "exec"
-msgstr ""
+msgstr "exec"
 
 #: ../../source/language/python/sink.rst:16
 msgid "execfile"
-msgstr ""
+msgstr "execfile"
 
 #: ../../source/language/python/sink.rst:17
 msgid "input // python2 only"
-msgstr ""
+msgstr "input // Python 2 only"
 
 #: ../../source/language/python/sink.rst:18
 msgid "os.exec"
-msgstr ""
+msgstr "os.exec"
 
 #: ../../source/language/python/sink.rst:19
 msgid "os.exec*"
-msgstr ""
+msgstr "os.exec*"
 
 #: ../../source/language/python/sink.rst:20
 msgid "os.fork"
-msgstr ""
+msgstr "os.fork"
 
 #: ../../source/language/python/sink.rst:21
 msgid "os.popen"
-msgstr ""
+msgstr "os.popen"
 
 #: ../../source/language/python/sink.rst:22
 msgid "os.spawn"
-msgstr ""
+msgstr "os.spawn"
 
 #: ../../source/language/python/sink.rst:23
 msgid "os.system"
-msgstr ""
+msgstr "os.system"
 
 #: ../../source/language/python/sink.rst:24
 msgid "platform.os"
-msgstr ""
+msgstr "platform.os"
 
 #: ../../source/language/python/sink.rst:25
 msgid "platform.popen"
-msgstr ""
+msgstr "platform.popen"
 
 #: ../../source/language/python/sink.rst:26
 msgid "platform.sys"
-msgstr ""
+msgstr "platform.sys"
 
 #: ../../source/language/python/sink.rst:27
 msgid "popen2"
-msgstr ""
+msgstr "popen2"
 
 #: ../../source/language/python/sink.rst:28
 msgid "pty.os"
-msgstr ""
+msgstr "pty.os"
 
 #: ../../source/language/python/sink.rst:29
 msgid "pty.spawn"
-msgstr ""
+msgstr "pty.spawn"
 
 #: ../../source/language/python/sink.rst:30
 msgid "subprocess"
-msgstr ""
+msgstr "subprocess"
 
 #: ../../source/language/python/sink.rst:31
 msgid "timeit.sys"
-msgstr ""
+msgstr "timeit.sys"
 
 #: ../../source/language/python/sink.rst:32
 msgid "timeit.timeit"
-msgstr ""
+msgstr "timeit.timeit"
 
 #: ../../source/language/python/sink.rst:33
 msgid "typing.get_type_hints() + ``__annotations__``"
-msgstr ""
+msgstr "typing.get_type_hints() + ``__annotations__``"
 
 #: ../../source/language/python/sink.rst:34
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../../source/language/python/sink.rst:37
 msgid "文件读取"
-msgstr ""
+msgstr "File Read"
 
 #: ../../source/language/python/sink.rst:38
 msgid "open"
-msgstr ""
+msgstr "open"
 
 #: ../../source/language/python/sink.rst:39
 msgid "os.open"
-msgstr ""
+msgstr "os.open"
 
 #: ../../source/language/python/sink.rst:40
 msgid "urllib.request.urlopen('file:///')"
-msgstr ""
+msgstr "urllib.request.urlopen('file:///')"
 
 #: ../../source/language/python/sink.rst:41
 msgid "codecs.open"
-msgstr ""
+msgstr "codecs.open"
 
 #: ../../source/language/python/sink.rst:42
 msgid "fileinput"
-msgstr ""
+msgstr "fileinput"
 
 #: ../../source/language/python/sink.rst:43
 msgid "仅Python2"
-msgstr ""
+msgstr "Python 2 Only"
 
 #: ../../source/language/python/sink.rst:44
 msgid "types.FileType"
-msgstr ""
+msgstr "types.FileType"
 
 #: ../../source/language/python/sink.rst:47
 msgid "危险第三方库"
-msgstr ""
+msgstr "Dangerous Third-Party Libraries"
 
 #: ../../source/language/python/sink.rst:48
 msgid "Template"
-msgstr ""
+msgstr "Template"
 
 #: ../../source/language/python/sink.rst:49
 msgid "subprocess32"
-msgstr ""
+msgstr "subprocess32"
 
 #: ../../source/language/python/sink.rst:52
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/language/python/sink.rst:53
 msgid "marshal"
-msgstr ""
+msgstr "marshal"
 
 #: ../../source/language/python/sink.rst:54
 msgid "PyYAML"
-msgstr ""
+msgstr "PyYAML"
 
 #: ../../source/language/python/sink.rst:55
 msgid "pickle"
-msgstr ""
+msgstr "pickle"
 
 #: ../../source/language/python/sink.rst:56
 msgid "cPickle"
-msgstr ""
+msgstr "cPickle"
 
 #: ../../source/language/python/sink.rst:57
 msgid "shelve"
-msgstr ""
+msgstr "shelve"
 
 #: ../../source/language/python/sink.rst:58
 msgid "PIL"
-msgstr ""
+msgstr "PIL"

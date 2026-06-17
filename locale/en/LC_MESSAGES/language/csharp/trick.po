@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/language/csharp/trick.rst:2
 msgid "利用技巧"
-msgstr ""
+msgstr "Exploitation Techniques"
 
 #: ../../source/language/csharp/trick.rst:5
 msgid "P/Invoke"
-msgstr ""
+msgstr "P/Invoke"
 
 #: ../../source/language/csharp/trick.rst:6
 msgid ""
@@ -32,14 +32,19 @@ msgid ""
 "Invoke <https://docs.microsoft.com/en-us/dotnet/standard/native-"
 "interop/pinvoke>`_ 文档中所示。利用P/Invoke的能力，C#程序可以较为容易的调用标准的Windows API。"
 msgstr ""
+"Platform Invoke (P/Invoke) allows C# to access data structures, callbacks, "
+"and functions in DLLs. Basic usage is shown in the official `Platform Invoke "
+"<https://docs.microsoft.com/en-us/dotnet/standard/native-"
+"interop/pinvoke>`_ documentation. With P/Invoke, C# programs can call standard "
+"Windows APIs relatively easily."
 
 #: ../../source/language/csharp/trick.rst:27
 msgid "P/Invoke的缺点在于引用了的API调用会最后出现在可执行文件的IAT中，使得一些敏感的行为容易被防护软件所注意。同时一些敏感的API可能是被防护软件所监控的，通过这种方式进行的API调用也容易被防护软件拦截。"
-msgstr ""
+msgstr "The drawback of P/Invoke is that referenced API calls eventually appear in the executable's IAT, making sensitive behavior easier for security products to notice. Some sensitive APIs may also be monitored by security products, so calls made this way are more likely to be intercepted."
 
 #: ../../source/language/csharp/trick.rst:30
 msgid "D/Invoke"
-msgstr ""
+msgstr "D/Invoke"
 
 #: ../../source/language/csharp/trick.rst:31
 msgid ""
@@ -47,3 +52,7 @@ msgid ""
 "us/dotnet/csharp/programming-guide/delegates/>`_ "
 "机制的D/Invoke，通过更隐蔽的方式来调用所需的API。"
 msgstr ""
+"Building on P/Invoke, researchers proposed D/Invoke based on the `Delegates "
+"<https://docs.microsoft.com/en-"
+"us/dotnet/csharp/programming-guide/delegates/>`_ mechanism, allowing required "
+"APIs to be called in a stealthier way."
