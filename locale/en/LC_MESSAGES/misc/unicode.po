@@ -20,49 +20,59 @@ msgstr ""
 
 #: ../../source/misc/unicode.rst:2
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #: ../../source/misc/unicode.rst:5
 msgid "基本概念"
-msgstr ""
+msgstr "Basic Concepts"
 
 #: ../../source/misc/unicode.rst:8
 msgid "BMP"
-msgstr ""
+msgstr "BMP"
 
 #: ../../source/misc/unicode.rst:9
 msgid "BMP (Basic Multilingual Plane)，译作基本多文种平面，是Unicode中的一个编码区块。"
 msgstr ""
+"BMP (Basic Multilingual Plane) is a Unicode encoding block."
 
 #: ../../source/misc/unicode.rst:12
 msgid "码平面"
-msgstr ""
+msgstr "Plane"
 
 #: ../../source/misc/unicode.rst:13
 msgid "Unicode编码点分为17个平面（plane），每个平面包含2^16（即65536）个码位。17个平面的码位可表示为从U+xx0000到U+xxFFFF，其中xx表示十六进制值从0016到1016，共计17个平面。"
 msgstr ""
+"Unicode code points are divided into 17 planes. Each plane contains 2^16 "
+"(65536) code points. The code points in these 17 planes can be represented "
+"from U+xx0000 to U+xxFFFF, where xx is the hexadecimal value from 00 to 10."
 
 #: ../../source/misc/unicode.rst:16
 msgid "Code Point"
-msgstr ""
+msgstr "Code Point"
 
 #: ../../source/misc/unicode.rst:17
 msgid "Code Point也被称作Code Position，译作码位或编码位置，是指组成代码空间的数值。"
 msgstr ""
+"A Code Point, also called a Code Position, is a numeric value in the code "
+"space."
 
 #: ../../source/misc/unicode.rst:20
 msgid "Code Unit"
-msgstr ""
+msgstr "Code Unit"
 
 #: ../../source/misc/unicode.rst:21
 msgid ""
 "指某种 Unicode 编码方式里编码一个 Code Point 需要的最少字节数，比如 UTF-8 需要最少一个字节，UTF-16 "
 "最少两个字节，UCS-2 两个字节，UCS-4 和 UTF-32 四个字节。"
 msgstr ""
+"The minimum number of bytes required to encode a Code Point in a particular "
+"Unicode encoding. For example, UTF-8 requires at least one byte, UTF-16 "
+"requires at least two bytes, UCS-2 uses two bytes, and UCS-4 and UTF-32 use "
+"four bytes."
 
 #: ../../source/misc/unicode.rst:24
 msgid "Surrogate Pair"
-msgstr ""
+msgstr "Surrogate Pair"
 
 #: ../../source/misc/unicode.rst:25
 msgid ""
@@ -71,288 +81,358 @@ msgid ""
 "surrogate 接一个 low surrogate 拼成四个字节表示超出 BMP 的字符，两个 surrogate range 都是 1024"
 " 个码位，所以 surrogate pair 可以表达 1024 x 1024 = 1048576 = 0x100000 个字符。"
 msgstr ""
+"A Surrogate Pair is used by UTF-16 for backward compatibility with UCS-2. "
+"It takes code points in the UCS-2 ranges 0xD800~0xDBFF (called high "
+"surrogates) and 0xDC00~0xDFFF (called low surrogates). A high surrogate "
+"followed by a low surrogate forms four bytes that represent a character "
+"outside the BMP. Each surrogate range contains 1024 code points, so a "
+"surrogate pair can express 1024 x 1024 = 1048576 = 0x100000 characters."
 
 #: ../../source/misc/unicode.rst:28
 msgid "Combining Character"
-msgstr ""
+msgstr "Combining Character"
 
 #: ../../source/misc/unicode.rst:29
 msgid "例如 ``He̊llö`` 含有重音符号之类的字符，进行组合会使用大量的码位。所以这种字符多用组合的方式来实现。"
 msgstr ""
+"For example, ``He̊llö`` contains characters such as accent marks. Composition "
+"can use many code points, so these characters are often implemented through "
+"combining sequences."
 
 #: ../../source/misc/unicode.rst:32
 msgid "BOM"
-msgstr ""
+msgstr "BOM"
 
 #: ../../source/misc/unicode.rst:33
 msgid ""
 "字节顺序标记（byte-order mark，BOM）是一个有特殊含义的统一码字符，码点为 ``U+FEFF`` 。当以UTF-16或UTF-"
 "32来将UCS字符所组成的字符串编码时，这个字符被用来标示其字节序。常被用于区分是否为UTF编码。"
 msgstr ""
+"The byte-order mark (BOM) is a Unicode character with special meaning. Its "
+"code point is ``U+FEFF``. When a string made of UCS characters is encoded as "
+"UTF-16 or UTF-32, this character is used to indicate byte order. It is often "
+"used to distinguish whether content uses a UTF encoding."
 
 #: ../../source/misc/unicode.rst:36
 msgid "编码方式"
-msgstr ""
+msgstr "Encoding Forms"
 
 #: ../../source/misc/unicode.rst:39
 msgid "UCS-2"
-msgstr ""
+msgstr "UCS-2"
 
 #: ../../source/misc/unicode.rst:40
 msgid ""
 "UCS-2 (2-byte Universal Character "
 "Set)是一种定长的编码方式，UCS-2仅仅简单的使用一个16位码元来表示码位，也就是说编码范围在0到0xFFFF的码位范围内。"
 msgstr ""
+"UCS-2 (2-byte Universal Character Set) is a fixed-length encoding. UCS-2 "
+"simply uses one 16-bit code unit to represent a code point, so its encoding "
+"range covers code points from 0 to 0xFFFF."
 
 #: ../../source/misc/unicode.rst:43
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: ../../source/misc/unicode.rst:44
 msgid ""
 "UTF-8（8-bit Unicode Transformation "
 "Format）是一种针对Unicode的可变长度字符编码，也是一种前缀码。它可以用一至四个字节对Unicode字符集中的所有有效编码点进行编码，属于Unicode标准的一部分。编码方式如下"
 msgstr ""
+"UTF-8 (8-bit Unicode Transformation Format) is a variable-length character "
+"encoding for Unicode and is also a prefix code. It can encode all valid code "
+"points in the Unicode character set using one to four bytes, and it is part "
+"of the Unicode standard. The encoding form is as follows."
 
 #: ../../source/misc/unicode.rst:47
 msgid "码点的位数"
-msgstr ""
+msgstr "Code Point Bits"
 
 #: ../../source/misc/unicode.rst:47
 msgid "码点起值"
-msgstr ""
+msgstr "Code Point Start"
 
 #: ../../source/misc/unicode.rst:47
 msgid "码点终值"
-msgstr ""
+msgstr "Code Point End"
 
 #: ../../source/misc/unicode.rst:47
 msgid "字节序列"
-msgstr ""
+msgstr "Byte Sequence"
 
 #: ../../source/misc/unicode.rst:47
 msgid "Byte 1"
-msgstr ""
+msgstr "Byte 1"
 
 #: ../../source/misc/unicode.rst:47
 msgid "Byte 2"
-msgstr ""
+msgstr "Byte 2"
 
 #: ../../source/misc/unicode.rst:47
 msgid "Byte 3"
-msgstr ""
+msgstr "Byte 3"
 
 #: ../../source/misc/unicode.rst:47
 msgid "Byte 4"
-msgstr ""
+msgstr "Byte 4"
 
 #: ../../source/misc/unicode.rst:47
 msgid "Byte 5"
-msgstr ""
+msgstr "Byte 5"
 
 #: ../../source/misc/unicode.rst:47
 msgid "Byte 6"
-msgstr ""
+msgstr "Byte 6"
 
 #: ../../source/misc/unicode.rst:49
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../../source/misc/unicode.rst:49
 msgid "U+0000"
-msgstr ""
+msgstr "U+0000"
 
 #: ../../source/misc/unicode.rst:49
 msgid "U+007F"
-msgstr ""
+msgstr "U+007F"
 
 #: ../../source/misc/unicode.rst:49
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../../source/misc/unicode.rst:49
 msgid "0xxxxxxx"
-msgstr ""
+msgstr "0xxxxxxx"
 
 #: ../../source/misc/unicode.rst:51
 msgid "11"
-msgstr ""
+msgstr "11"
 
 #: ../../source/misc/unicode.rst:51
 msgid "U+0080"
-msgstr ""
+msgstr "U+0080"
 
 #: ../../source/misc/unicode.rst:51
 msgid "U+07FF"
-msgstr ""
+msgstr "U+07FF"
 
 #: ../../source/misc/unicode.rst:51
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../source/misc/unicode.rst:51
 msgid "110xxxxx"
-msgstr ""
+msgstr "110xxxxx"
 
 #: ../../source/misc/unicode.rst:51 ../../source/misc/unicode.rst:53
 #: ../../source/misc/unicode.rst:55 ../../source/misc/unicode.rst:57
 #: ../../source/misc/unicode.rst:59
 msgid "10xxxxxx"
-msgstr ""
+msgstr "10xxxxxx"
 
 #: ../../source/misc/unicode.rst:53
 msgid "16"
-msgstr ""
+msgstr "16"
 
 #: ../../source/misc/unicode.rst:53
 msgid "U+0800"
-msgstr ""
+msgstr "U+0800"
 
 #: ../../source/misc/unicode.rst:53
 msgid "U+FFFF"
-msgstr ""
+msgstr "U+FFFF"
 
 #: ../../source/misc/unicode.rst:53
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../../source/misc/unicode.rst:53
 msgid "1110xxxx"
-msgstr ""
+msgstr "1110xxxx"
 
 #: ../../source/misc/unicode.rst:55
 msgid "21"
-msgstr ""
+msgstr "21"
 
 #: ../../source/misc/unicode.rst:55
 msgid "U+10000"
-msgstr ""
+msgstr "U+10000"
 
 #: ../../source/misc/unicode.rst:55
 msgid "U+1FFFFF"
-msgstr ""
+msgstr "U+1FFFFF"
 
 #: ../../source/misc/unicode.rst:55
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../../source/misc/unicode.rst:55
 msgid "11110xxx"
-msgstr ""
+msgstr "11110xxx"
 
 #: ../../source/misc/unicode.rst:57
 msgid "26"
-msgstr ""
+msgstr "26"
 
 #: ../../source/misc/unicode.rst:57
 msgid "U+200000"
-msgstr ""
+msgstr "U+200000"
 
 #: ../../source/misc/unicode.rst:57
 msgid "U+3FFFFFF"
-msgstr ""
+msgstr "U+3FFFFFF"
 
 #: ../../source/misc/unicode.rst:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../../source/misc/unicode.rst:57
 msgid "111110xx"
-msgstr ""
+msgstr "111110xx"
 
 #: ../../source/misc/unicode.rst:59
 msgid "31"
-msgstr ""
+msgstr "31"
 
 #: ../../source/misc/unicode.rst:59
 msgid "U+4000000"
-msgstr ""
+msgstr "U+4000000"
 
 #: ../../source/misc/unicode.rst:59
 msgid "U+7FFFFFFF"
-msgstr ""
+msgstr "U+7FFFFFFF"
 
 #: ../../source/misc/unicode.rst:59
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../../source/misc/unicode.rst:59
 msgid "1111110x"
-msgstr ""
+msgstr "1111110x"
 
 #: ../../source/misc/unicode.rst:63
 msgid "UTF-16"
-msgstr ""
+msgstr "UTF-16"
 
 #: ../../source/misc/unicode.rst:64
 msgid ""
 "UTF-16 (16-bit Unicode Transformation "
 "Format)是UCS-2的拓展，用一个或者两个16位的码元来表示码位，可以对0到0x10FFFF的码位进行编码。"
 msgstr ""
+"UTF-16 (16-bit Unicode Transformation Format) is an extension of UCS-2. "
+"It uses one or two 16-bit code units to represent a code point and can encode "
+"code points from 0 to 0x10FFFF."
 
 #: ../../source/misc/unicode.rst:67
 msgid "等价性问题"
-msgstr ""
+msgstr "Equivalence Issues"
 
 #: ../../source/misc/unicode.rst:70
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/misc/unicode.rst:71
 msgid ""
 "Unicode（统一码）包含了许多特殊字符，为了使得许多现存的标准能够兼容，提出了Unicode等价性（Unicode "
 "equivalence）。在字符中，有些在功能上会和其它字符或字符序列等价。因此，Unicode将一些码位序列定义成相等的。"
 msgstr ""
+"Unicode contains many special characters. Unicode equivalence was introduced "
+"to keep many existing standards compatible. Some characters are functionally "
+"equivalent to other characters or character sequences, so Unicode defines "
+"some code point sequences as equal."
 
 #: ../../source/misc/unicode.rst:73
 msgid ""
 "Unicode提供了两种等价概念：标准等价和兼容等价。前者是后者的一个子集。例如，字符n后接着组合字符 `~` "
 "会（标准和兼容）等价于Unicode字符ñ。而合字ﬀ则只有兼容等价于两个f字符。"
 msgstr ""
+"Unicode provides two equivalence concepts: canonical equivalence and "
+"compatibility equivalence. The former is a subset of the latter. For example, "
+"the character n followed by the combining character `~` is canonically and "
+"compatibly equivalent to the Unicode character ñ. The ligature ﬀ is only "
+"compatibly equivalent to two f characters."
 
 #: ../../source/misc/unicode.rst:75
 msgid "Unicode正规化是文字正规化的一种形式，是指将彼此等价的序列转成同一列序。此序列在Unicode标准中称作正规形式。"
 msgstr ""
+"Unicode normalization is a form of text normalization. It converts sequences "
+"that are equivalent to each other into the same sequence. This sequence is "
+"called a normalization form in the Unicode standard."
 
 #: ../../source/misc/unicode.rst:77
 msgid "对于每种等价概念，Unicode又定义两种形式，一种是完全合成的，一种是完全分解的。因此，最后会有四种形式，其缩写分别为：NFC、NFD、NFKC、NFKD。对于Unicode的文字处理程序而言，正规化是很重要的。因为它影响了比较、搜索和排序的意义。"
 msgstr ""
+"For each equivalence concept, Unicode defines two forms: one fully composed "
+"and one fully decomposed. This gives four forms in total, abbreviated as NFC, "
+"NFD, NFKC, and NFKD. Normalization is important for Unicode text processing "
+"because it affects the meaning of comparison, search, and sorting."
 
 #: ../../source/misc/unicode.rst:80
 msgid "标准等价"
-msgstr ""
+msgstr "Canonical Equivalence"
 
 #: ../../source/misc/unicode.rst:81
 msgid ""
 "统一码中标准等价的基础概念为字符的组成和分解的交互使用。合成指的是将简单的字符合并成较少的预组字符的过程，如字符n和组合字符 `~` "
 "可以组成统一码ñ。分解则是反向过程，即将预组字符变回部件。"
 msgstr ""
+"The basic concept behind canonical equivalence in Unicode is the interplay "
+"between character composition and decomposition. Composition merges simple "
+"characters into fewer precomposed characters. For example, the character n "
+"and the combining character `~` can form the Unicode character ñ. "
+"Decomposition is the reverse process, turning precomposed characters back "
+"into their components."
 
 #: ../../source/misc/unicode.rst:83
 msgid ""
 "标准等价是指保持视觉上和功能上的等价。例如，含附加符号字母被视为和分解后的字母及其附加符号是标准等价。换句话说，预组字符‘ü’和由‘u’及 "
 "‘¨’所组成的序列是标准等价。相似地，统一码统合了一些希腊附加符号和外观与附加符号类似的标点符号。"
 msgstr ""
+"Canonical equivalence preserves visual and functional equivalence. For "
+"example, a letter with a diacritic is considered canonically equivalent to "
+"the decomposed letter plus its diacritic. In other words, the precomposed "
+"character ‘ü’ is canonically equivalent to the sequence made of ‘u’ and ‘¨’. "
+"Similarly, Unicode unifies some Greek diacritics with punctuation marks that "
+"look like diacritics."
 
 #: ../../source/misc/unicode.rst:86
 msgid "兼容等价"
-msgstr ""
+msgstr "Compatibility Equivalence"
 
 #: ../../source/misc/unicode.rst:87
 msgid "兼容等价的范围较标准等价来得广。如果序列是标准等价的话就会是兼容等价，反之则未必对。兼容等价更关注在于纯文字的等价，并把一些语义上的不同形式归结在一起。"
 msgstr ""
+"Compatibility equivalence is broader than canonical equivalence. If a "
+"sequence is canonically equivalent, it is also compatibly equivalent, but the "
+"reverse is not necessarily true. Compatibility equivalence focuses more on "
+"plain-text equivalence and groups together some forms that differ "
+"semantically."
 
 #: ../../source/misc/unicode.rst:89
 msgid "例如，上标数字和其所使用的数字是兼容等价，但非标准等价。其理由为下标和上标形式虽然在某些时侯属于不同意义，但若应用程序将他们视为一样也是合理的（虽然视觉上可区分）。如此，在统一码富文件中，上标和下标就可以以比较不累赘地方式出现（见下一节）。"
 msgstr ""
+"For example, superscript digits and the digits they use are compatibly "
+"equivalent, but not canonically equivalent. Although subscript and "
+"superscript forms may have different meanings in some cases, it can also be "
+"reasonable for an application to treat them as the same, even though they are "
+"visually distinguishable. This allows superscripts and subscripts to appear "
+"less awkwardly in rich Unicode text."
 
 #: ../../source/misc/unicode.rst:91
 msgid "全角和半角的片假名也是一种兼容等价但不是标准等价。如同合字和其部件序列。其只有视觉上但没有语义上的区别。换句话说，作者通常没有特别宣称使用合字是一种意思，而不使用是另一种意思。相对地，这尽限于印刷上的选择。"
 msgstr ""
+"Full-width and half-width katakana are also compatibly equivalent but not "
+"canonically equivalent, as are ligatures and their component sequences. These "
+"forms differ visually but not semantically. In other words, authors usually "
+"do not explicitly state that using a ligature has one meaning while not using "
+"it has another; it is only a typographic choice."
 
 #: ../../source/misc/unicode.rst:93
 msgid "文字处理软件在实现统一码字符串的搜索和排序时，须考虑到等价性的存在。如果没有此特性的话，用户在搜索时将无法找到在视觉上无法区分的字形。"
 msgstr ""
+"Text-processing software must account for equivalence when implementing "
+"search and sorting for Unicode strings. Without this feature, users may fail "
+"to find glyphs that are visually indistinguishable."
 
 #: ../../source/misc/unicode.rst:95
 msgid ""
@@ -361,10 +441,18 @@ msgid ""
 "统一码为每一种等价准绳分别提供两种正规形式：合成用的NFC和NFKC以及分解用的NFD和NFKD。 "
 "而不论是组合的或分解的形式，都会使用标准顺序，以此限制正规形式只有唯一形式。"
 msgstr ""
+"Unicode provides a standard normalization algorithm that can produce a unique "
+"sequence for all equivalent sequences. Its equivalence criterion can be "
+"canonical (NF) or compatible (NFK). Because any element in an equivalence "
+"class can be chosen, multiple standard forms are possible for each "
+"equivalence criterion. Unicode provides two normalization forms for each "
+"criterion: NFC and NFKC for composition, and NFD and NFKD for decomposition. "
+"Both composed and decomposed forms use canonical ordering, which constrains "
+"the normalization form to a single unique form."
 
 #: ../../source/misc/unicode.rst:98
 msgid "正规化"
-msgstr ""
+msgstr "Normalization"
 
 #: ../../source/misc/unicode.rst:99
 msgid ""
@@ -374,6 +462,17 @@ msgid ""
 "标准正规形式并不会影响这些结果。 但兼容正规形式会分解ﬃ成f、f、i。所以搜索U+0066（f）时，在NFKC中会成功，但在NFC则会失败。 "
 "同样地有在预组罗马数字Ⅸ 中搜索拉丁字母I（U+0049）。类似地，“⁵”会转成“5”。"
 msgstr ""
+"To compare or search Unicode strings, software can use either composed or "
+"decomposed form. The choice does not matter as long as the strings being "
+"compared or searched use the same form. However, the choice of equivalence "
+"concept affects search results. For example, some ligatures such as ﬃ "
+"(U+FB03), Roman numerals such as Ⅸ (U+2168), and even superscript digits such "
+"as ⁵ (U+2075) have their own Unicode code points. Canonical normalization "
+"does not affect these results, but compatibility normalization decomposes ﬃ "
+"into f, f, and i. Therefore, a search for U+0066 (f) succeeds in NFKC but "
+"fails in NFC. The same applies when searching for the Latin letter I "
+"(U+0049) inside the precomposed Roman numeral Ⅸ. Similarly, “⁵” is converted "
+"to “5”."
 
 #: ../../source/misc/unicode.rst:101
 msgid ""
@@ -381,274 +480,320 @@ msgid ""
 " ``<compat>`` ，而在上标的情况下则为 ``<super>`` "
 "。丰富文件格式如超文本置标语言则会使用兼容标签。例如，HTML使用自定义标签来将“5”放到上标位置。"
 msgstr ""
+"For browsers, converting superscripts to baseline characters is not always "
+"desirable because superscript information is lost. To allow this distinction, "
+"the Unicode Character Database contains compatibility formatting tags that "
+"provide details about compatibility conversions. For ligatures, the tag is "
+"``<compat>``; for superscripts, it is ``<super>``. Rich document formats such "
+"as HTML use compatibility tags. For example, HTML uses custom tags to place "
+"“5” in a superscript position."
 
 #: ../../source/misc/unicode.rst:104
 msgid "正规形式"
-msgstr ""
+msgstr "Normalization Forms"
 
 #: ../../source/misc/unicode.rst:105
 msgid "NFD Normalization Form Canonical Decomposition 以标准等价方式来分解"
 msgstr ""
+"NFD Normalization Form Canonical Decomposition: decomposes by canonical "
+"equivalence"
 
 #: ../../source/misc/unicode.rst:106
 msgid ""
 "NFC Normalization Form Canonical Composition "
 "以标准等价方式来分解，然后以标准等价重组之。若是singleton的话，重组结果有可能和分解前不同。"
 msgstr ""
+"NFC Normalization Form Canonical Composition: decomposes by canonical "
+"equivalence, then recomposes by canonical equivalence. For a singleton, the "
+"recomposition result may differ from the original before decomposition."
 
 #: ../../source/misc/unicode.rst:107
 msgid "NFKD Normalization Form Compatibility Decomposition  以兼容等价方式来分解NFKC"
 msgstr ""
+"NFKD Normalization Form Compatibility Decomposition: decomposes by "
+"compatibility equivalence"
 
 #: ../../source/misc/unicode.rst:108
 msgid "Normalization Form Compatibility Composition 以兼容等价方式来分解，然后以标准等价重组之"
 msgstr ""
+"NFKC Normalization Form Compatibility Composition: decomposes by "
+"compatibility equivalence, then recomposes by canonical equivalence"
 
 #: ../../source/misc/unicode.rst:111
 msgid "Tricks"
-msgstr ""
+msgstr "Tricks"
 
 #: ../../source/misc/unicode.rst:112
 msgid "部分语言的长度并不是字符的长度，一个UTF-16可能是两位。"
 msgstr ""
+"In some languages, length does not mean character count; one UTF-16 character "
+"may occupy two code units."
 
 #: ../../source/misc/unicode.rst:113
 msgid "部分语言在翻转UTF-16等多字节编码时，会处理错误。"
 msgstr ""
+"Some languages handle UTF-16 or other multibyte encodings incorrectly when "
+"reversing strings."
 
 #: ../../source/misc/unicode.rst:116
 msgid "安全问题"
-msgstr ""
+msgstr "Security Issues"
 
 #: ../../source/misc/unicode.rst:119
 msgid "Visual Spoofing"
-msgstr ""
+msgstr "Visual Spoofing"
 
 #: ../../source/misc/unicode.rst:120
 msgid "例如bаidu.com(此处的a为\\u0430)和baidu.com(此处的a为\\x61)视觉上相同，但是实际上指向两个不同的域名。"
 msgstr ""
+"For example, bаidu.com (where a is \\u0430) and baidu.com (where a is \\x61) "
+"look identical, but they actually point to two different domain names."
 
 #: ../../source/misc/unicode.rst:122
 msgid "bａidu.com(此处的a为\\uff41)和baidu.com(此处的a为\\x61)有一定的不同，但是指向两个相同的域名。"
 msgstr ""
+"bａidu.com (where a is \\uff41) and baidu.com (where a is \\x61) look somewhat "
+"different, but they point to the same domain name."
 
 #: ../../source/misc/unicode.rst:124
 msgid "这种现象可以引起一些Spoofing或者WAF Bypass的问题。"
-msgstr ""
+msgstr "This phenomenon can cause spoofing or WAF bypass issues."
 
 #: ../../source/misc/unicode.rst:127
 msgid "Best Fit"
-msgstr ""
+msgstr "Best Fit"
 
 #: ../../source/misc/unicode.rst:128
 msgid "如果两个字符前后编码不同，之前的编码在之后的编码没有对应，程序会尝试找最佳字符进行自动转换。"
 msgstr ""
+"If two characters use different encodings and a character in the original "
+"encoding has no corresponding character in the later encoding, the program "
+"may try to find the best-fit character and convert it automatically."
 
 #: ../../source/misc/unicode.rst:130
 msgid "当宽字符变成了单字节字符，字符编码会有一定的变化。"
 msgstr ""
+"When a wide character becomes a single-byte character, the character encoding "
+"changes to some extent."
 
 #: ../../source/misc/unicode.rst:132
 msgid "这种现象可能引起一些WAF Bypass。"
-msgstr ""
+msgstr "This phenomenon can cause WAF bypass issues."
 
 #: ../../source/misc/unicode.rst:135
 msgid "Syntax Spoofing"
-msgstr ""
+msgstr "Syntax Spoofing"
 
 #: ../../source/misc/unicode.rst:136
 msgid "以下四个Url在语法上看来是没问题的域名，但是用来做分割的字符并不是真正的分割字符，而是U+2044( ⁄ )，可以导致一些UI欺骗的问题。"
 msgstr ""
+"The following four URLs look syntactically like valid domain names, but the "
+"characters used as separators are not real separator characters; they are "
+"U+2044 ( ⁄ ), which can lead to UI spoofing issues."
 
 #: ../../source/misc/unicode.rst:138
 msgid "http://macchiato.com/x.bad.com  macchiato.com/x     bad.com"
-msgstr ""
+msgstr "http://macchiato.com/x.bad.com  macchiato.com/x     bad.com"
 
 #: ../../source/misc/unicode.rst:139
 msgid "http://macchiato.com?x.bad.com  macchiato.com?x     bad.com"
-msgstr ""
+msgstr "http://macchiato.com?x.bad.com  macchiato.com?x     bad.com"
 
 #: ../../source/misc/unicode.rst:140
 msgid "http://macchiato.com.x.bad.com  macchiato.com.x     bad.com"
-msgstr ""
+msgstr "http://macchiato.com.x.bad.com  macchiato.com.x     bad.com"
 
 #: ../../source/misc/unicode.rst:141
 msgid "http://macchiato.com#x.bad.com  macchiato.com#x     bad.com"
-msgstr ""
+msgstr "http://macchiato.com#x.bad.com  macchiato.com#x     bad.com"
 
 #: ../../source/misc/unicode.rst:144
 msgid "Punycode Spoofs"
-msgstr ""
+msgstr "Punycode Spoofs"
 
 #: ../../source/misc/unicode.rst:145
 msgid "http://䕮䕵䕶䕱.com        http://xn--google.com"
-msgstr ""
+msgstr "http://䕮䕵䕶䕱.com        http://xn--google.com"
 
 #: ../../source/misc/unicode.rst:146
 msgid "http://䁾.com              http://xn--cnn.com"
-msgstr ""
+msgstr "http://䁾.com              http://xn--cnn.com"
 
 #: ../../source/misc/unicode.rst:147
 msgid "http://岍岊岊岅岉岎.com    http://xn--citibank.com"
-msgstr ""
+msgstr "http://岍岊岊岅岉岎.com    http://xn--citibank.com"
 
 #: ../../source/misc/unicode.rst:149
 msgid "有些浏览器会直接显示puncode，但是也可以借助这种机制实现UI Spooof。"
 msgstr ""
+"Some browsers display punycode directly, but this mechanism can also be used "
+"for UI spoofing."
 
 #: ../../source/misc/unicode.rst:152
 msgid "Buffer Overflows"
-msgstr ""
+msgstr "Buffer Overflows"
 
 #: ../../source/misc/unicode.rst:153
 msgid "在编码转换的时候，有的字符会变成多个字符，如Fluß → FLUSS → fluss这样可能导致BOF。"
 msgstr ""
+"During encoding conversion, some characters can become multiple characters, "
+"such as Fluß → FLUSS → fluss, which may cause BOF."
 
 #: ../../source/misc/unicode.rst:156
 msgid "常见载荷"
-msgstr ""
+msgstr "Common Payloads"
 
 #: ../../source/misc/unicode.rst:159
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../../source/misc/unicode.rst:160
 msgid "``‥`` (U+2025)"
-msgstr ""
+msgstr "``‥`` (U+2025)"
 
 #: ../../source/misc/unicode.rst:161
 msgid "``︰`` (U+FE30)"
-msgstr ""
+msgstr "``︰`` (U+FE30)"
 
 #: ../../source/misc/unicode.rst:162
 msgid "``。`` (U+3002)"
-msgstr ""
+msgstr "``。`` (U+3002)"
 
 #: ../../source/misc/unicode.rst:163
 msgid "``⓪``  (U+24EA)"
-msgstr ""
+msgstr "``⓪``  (U+24EA)"
 
 #: ../../source/misc/unicode.rst:164
 msgid "``／`` (U+FF0F)"
-msgstr ""
+msgstr "``／`` (U+FF0F)"
 
 #: ../../source/misc/unicode.rst:165
 msgid "``ｐ`` (U+FF50)"
-msgstr ""
+msgstr "``ｐ`` (U+FF50)"
 
 #: ../../source/misc/unicode.rst:166
 msgid "``ʰ`` (U+02B0)"
-msgstr ""
+msgstr "``ʰ`` (U+02B0)"
 
 #: ../../source/misc/unicode.rst:167
 msgid "``ª`` (U+00AA)"
-msgstr ""
+msgstr "``ª`` (U+00AA)"
 
 #: ../../source/misc/unicode.rst:170
 msgid "SQL注入"
-msgstr ""
+msgstr "SQL Injection"
 
 #: ../../source/misc/unicode.rst:171
 msgid "``＇`` (U+FF07)"
-msgstr ""
+msgstr "``＇`` (U+FF07)"
 
 #: ../../source/misc/unicode.rst:172 ../../source/misc/unicode.rst:178
 msgid "``＂`` (U+FF02)"
-msgstr ""
+msgstr "``＂`` (U+FF02)"
 
 #: ../../source/misc/unicode.rst:173
 msgid "``﹣`` (U+FE63)"
-msgstr ""
+msgstr "``﹣`` (U+FE63)"
 
 #: ../../source/misc/unicode.rst:176
 msgid "XSS"
-msgstr ""
+msgstr "XSS"
 
 #: ../../source/misc/unicode.rst:177
 msgid "``＜`` (U+FF1C)"
-msgstr ""
+msgstr "``＜`` (U+FF1C)"
 
 #: ../../source/misc/unicode.rst:181
 msgid "命令注入"
-msgstr ""
+msgstr "Command Injection"
 
 #: ../../source/misc/unicode.rst:182
 msgid "``＆`` (U+FF06)"
-msgstr ""
+msgstr "``＆`` (U+FF06)"
 
 #: ../../source/misc/unicode.rst:183
 msgid "``｜`` (U+FF5C)"
-msgstr ""
+msgstr "``｜`` (U+FF5C)"
 
 #: ../../source/misc/unicode.rst:186
 msgid "模板注入"
-msgstr ""
+msgstr "Template Injection"
 
 #: ../../source/misc/unicode.rst:187
 msgid "``﹛`` (U+FE5B)"
-msgstr ""
+msgstr "``﹛`` (U+FE5B)"
 
 #: ../../source/misc/unicode.rst:188
 msgid "``［`` (U+FF3B)"
-msgstr ""
+msgstr "``［`` (U+FF3B)"
 
 #: ../../source/misc/unicode.rst:191
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/unicode.rst:194
 msgid "官方文档"
-msgstr ""
+msgstr "Official Documentation"
 
 #: ../../source/misc/unicode.rst:195
 msgid "`Unicode equivalence <https://en.wikipedia.org/wiki/Unicode_equivalence>`_"
-msgstr ""
+msgstr "`Unicode equivalence <https://en.wikipedia.org/wiki/Unicode_equivalence>`_"
 
 #: ../../source/misc/unicode.rst:196
 msgid "`Unicode Normalization Forms <http://unicode.org/reports/tr15/>`_"
-msgstr ""
+msgstr "`Unicode Normalization Forms <http://unicode.org/reports/tr15/>`_"
 
 #: ../../source/misc/unicode.rst:197
 msgid "`Unicode Security Considerations <http://unicode.org/reports/tr36/>`_"
-msgstr ""
+msgstr "`Unicode Security Considerations <http://unicode.org/reports/tr36/>`_"
 
 #: ../../source/misc/unicode.rst:200
 msgid "RFC"
-msgstr ""
+msgstr "RFC"
 
 #: ../../source/misc/unicode.rst:201
 msgid ""
 "`RFC 3629 <https://tools.ietf.org/html/rfc3629>`_ UTF-8, a transformation"
 " format of ISO 10646"
 msgstr ""
+"`RFC 3629 <https://tools.ietf.org/html/rfc3629>`_ UTF-8, a transformation"
+" format of ISO 10646"
 
 #: ../../source/misc/unicode.rst:202
 msgid ""
 "`RFC 2044 <https://tools.ietf.org/html/rfc2044>`_ UTF-8, a transformation"
 " format of ISO 10646"
 msgstr ""
+"`RFC 2044 <https://tools.ietf.org/html/rfc2044>`_ UTF-8, a transformation"
+" format of ISO 10646"
 
 #: ../../source/misc/unicode.rst:203
 msgid ""
 "`RFC 2279 <https://tools.ietf.org/html/rfc2279>`_ UTF-8, a transformation"
 " format of ISO 10646"
 msgstr ""
+"`RFC 2279 <https://tools.ietf.org/html/rfc2279>`_ UTF-8, a transformation"
+" format of ISO 10646"
 
 #: ../../source/misc/unicode.rst:206
 msgid "Tricks / Blogs"
-msgstr ""
+msgstr "Tricks / Blogs"
 
 #: ../../source/misc/unicode.rst:207
 msgid ""
 "`IDN homograph attack "
 "<https://en.wikipedia.org/wiki/IDN_homograph_attack>`_"
 msgstr ""
+"`IDN homograph attack "
+"<https://en.wikipedia.org/wiki/IDN_homograph_attack>`_"
 
 #: ../../source/misc/unicode.rst:208
 msgid ""
 "`Black Hat Unicode Security <https://www.blackhat.com/presentations/bh-"
 "usa-09/WEBER/BHUSA09-Weber-UnicodeSecurityPreview-PAPER.pdf>`_"
 msgstr ""
+"`Black Hat Unicode Security <https://www.blackhat.com/presentations/bh-"
+"usa-09/WEBER/BHUSA09-Weber-UnicodeSecurityPreview-PAPER.pdf>`_"
 
 #: ../../source/misc/unicode.rst:209
 msgid ""
@@ -657,6 +802,10 @@ msgid ""
 "events/blogs/2017/august/request-encoding-to-bypass-web-application-"
 "firewalls/>`_"
 msgstr ""
+"`Request encoding to bypass web application firewalls "
+"<https://www.nccgroup.trust/uk/about-us/newsroom-and-"
+"events/blogs/2017/august/request-encoding-to-bypass-web-application-"
+"firewalls/>`_"
 
 #: ../../source/misc/unicode.rst:210
 msgid ""
@@ -664,7 +813,10 @@ msgid ""
 "<https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-"
 "characters/>`_"
 msgstr ""
+"`domain hacks with unusual unicode characters "
+"<https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-"
+"characters/>`_"
 
 #: ../../source/misc/unicode.rst:211
 msgid "`其实你并不懂 Unicode <https://zhuanlan.zhihu.com/p/53714077>`_"
-msgstr ""
+msgstr "`You Do Not Really Understand Unicode <https://zhuanlan.zhihu.com/p/53714077>`_"

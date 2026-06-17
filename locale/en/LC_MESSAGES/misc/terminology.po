@@ -20,652 +20,656 @@ msgstr ""
 
 #: ../../source/misc/terminology.rst:2
 msgid "常见术语"
-msgstr ""
+msgstr "Common Terminology"
 
 #: ../../source/misc/terminology.rst:5
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../source/misc/terminology.rst:6
 msgid "WMI (Windows Management Instrumentation)"
-msgstr ""
+msgstr "WMI (Windows Management Instrumentation)"
 
 #: ../../source/misc/terminology.rst:7
 msgid "ETW (Event Tracing for Windows)"
-msgstr ""
+msgstr "ETW (Event Tracing for Windows)"
 
 #: ../../source/misc/terminology.rst:8
 msgid "WFP (Windows Filtering Platform)"
-msgstr ""
+msgstr "WFP (Windows Filtering Platform)"
 
 #: ../../source/misc/terminology.rst:9
 msgid "MS-RPC (Microsoft Remote Procedure Call)"
-msgstr ""
+msgstr "MS-RPC (Microsoft Remote Procedure Call)"
 
 #: ../../source/misc/terminology.rst:10
 msgid "MS-SAMR (Security Account Manager Remote Protocol)"
-msgstr ""
+msgstr "MS-SAMR (Security Account Manager Remote Protocol)"
 
 #: ../../source/misc/terminology.rst:11
 msgid "MS-SCMR (Service Control Manager Remote Protocol)"
-msgstr ""
+msgstr "MS-SCMR (Service Control Manager Remote Protocol)"
 
 #: ../../source/misc/terminology.rst:12
 msgid "MS-DRSR (Directory Replication Service Remote Protocol)"
-msgstr ""
+msgstr "MS-DRSR (Directory Replication Service Remote Protocol)"
 
 #: ../../source/misc/terminology.rst:13
 msgid "MS-TSCH (Task Scheduler Service Remoting Protocol)"
-msgstr ""
+msgstr "MS-TSCH (Task Scheduler Service Remoting Protocol)"
 
 #: ../../source/misc/terminology.rst:14
 msgid "DCOM (Distributed Component Object Model)"
-msgstr ""
+msgstr "DCOM (Distributed Component Object Model)"
 
 #: ../../source/misc/terminology.rst:17
 msgid "网络相关"
-msgstr ""
+msgstr "Network Related"
 
 #: ../../source/misc/terminology.rst:20
 msgid "网络协议"
-msgstr ""
+msgstr "Network Protocols"
 
 #: ../../source/misc/terminology.rst:21
 msgid "轻型目录访问协议 (Lightweight Directory Access Protocol, LDAP)"
-msgstr ""
+msgstr "Lightweight Directory Access Protocol (LDAP)"
 
 #: ../../source/misc/terminology.rst:22
 msgid "标识名 (Distinguished Name, DN)"
-msgstr ""
+msgstr "Distinguished Name (DN)"
 
 #: ../../source/misc/terminology.rst:23
 msgid "相对标识名 (Relative Distinguished Name, RDN)"
-msgstr ""
+msgstr "Relative Distinguished Name (RDN)"
 
 #: ../../source/misc/terminology.rst:24
 msgid "服务器消息块 (Server Message Block, SMB)"
-msgstr ""
+msgstr "Server Message Block (SMB)"
 
 #: ../../source/misc/terminology.rst:25
 msgid "网络文件共享系统 (Common Internet File System, CIFS)"
-msgstr ""
+msgstr "Common Internet File System (CIFS)"
 
 #: ../../source/misc/terminology.rst:26
 msgid "SMTP (Simple Mail Transfer Protocol)"
-msgstr ""
+msgstr "SMTP (Simple Mail Transfer Protocol)"
 
 #: ../../source/misc/terminology.rst:27
 msgid "简单网络管理协议 (Simple Network Management Protocol, SNMP)"
-msgstr ""
+msgstr "Simple Network Management Protocol (SNMP)"
 
 #: ../../source/misc/terminology.rst:28
 msgid "POP3 (Post Office Protocol 3)"
-msgstr ""
+msgstr "POP3 (Post Office Protocol 3)"
 
 #: ../../source/misc/terminology.rst:29
 msgid "IMAP (Internet Mail Access Protocol)"
-msgstr ""
+msgstr "IMAP (Internet Mail Access Protocol)"
 
 #: ../../source/misc/terminology.rst:30
 msgid "HTTP (HyperText Transfer Protocol)"
-msgstr ""
+msgstr "HTTP (HyperText Transfer Protocol)"
 
 #: ../../source/misc/terminology.rst:31
 msgid "HTTPS (HyperText Transfer Protocol over Secure Socket Layer)"
-msgstr ""
+msgstr "HTTPS (HyperText Transfer Protocol over Secure Socket Layer)"
 
 #: ../../source/misc/terminology.rst:32
 msgid "动态主机配置协议 (Dynamic Host Configuration Protocol, DHCP)"
-msgstr ""
+msgstr "Dynamic Host Configuration Protocol (DHCP)"
 
 #: ../../source/misc/terminology.rst:33
 msgid "远程过程调用 (Remote Procedure Call, RPC)"
-msgstr ""
+msgstr "Remote Procedure Call (RPC)"
 
 #: ../../source/misc/terminology.rst:34
 msgid "Java调试线协议 (Java Debug Wire Protocol, JDWP)"
-msgstr ""
+msgstr "Java Debug Wire Protocol (JDWP)"
 
 #: ../../source/misc/terminology.rst:35
 msgid "网络文件系统 (Network File System, NFS)"
-msgstr ""
+msgstr "Network File System (NFS)"
 
 #: ../../source/misc/terminology.rst:36
 msgid "服务主体名称 (Service Principal Names, SPN)"
-msgstr ""
+msgstr "Service Principal Name (SPN)"
 
 #: ../../source/misc/terminology.rst:37
 msgid "简单身份验证 (Simple Authentication and Security Layer, SASL)"
-msgstr ""
+msgstr "Simple Authentication and Security Layer (SASL)"
 
 #: ../../source/misc/terminology.rst:38
 msgid "链路本地多播名称解析 (Link-Local Multicast Name Resolution, LLMNR)"
-msgstr ""
+msgstr "Link-Local Multicast Name Resolution (LLMNR)"
 
 #: ../../source/misc/terminology.rst:39
 msgid ""
 "分布式运行环境 / RPC (Distributed Computing Environment / Remote Procedure "
 "Calls, DCE/RPC)"
 msgstr ""
+"Distributed Computing Environment / Remote Procedure Calls (DCE/RPC)"
 
 #: ../../source/misc/terminology.rst:42
 msgid "路由系统"
-msgstr ""
+msgstr "Routing Systems"
 
 #: ../../source/misc/terminology.rst:43
 msgid "自治系统 (Autonomous System, AS)"
-msgstr ""
+msgstr "Autonomous System (AS)"
 
 #: ../../source/misc/terminology.rst:44
 msgid "内部网关协议 (Interior Gateway Protocol, IGP)"
-msgstr ""
+msgstr "Interior Gateway Protocol (IGP)"
 
 #: ../../source/misc/terminology.rst:45
 msgid "外部网关协议 (External Gateway Protocol, EGP)"
-msgstr ""
+msgstr "External Gateway Protocol (EGP)"
 
 #: ../../source/misc/terminology.rst:46
 msgid "域内路由选择 (interdomain routing)"
-msgstr ""
+msgstr "Intradomain Routing"
 
 #: ../../source/misc/terminology.rst:47
 msgid "域间路由选择 (intradomain routing)"
-msgstr ""
+msgstr "Interdomain Routing"
 
 #: ../../source/misc/terminology.rst:48
 msgid "路由信息协议 (Routing Information Protocol, RIP)"
-msgstr ""
+msgstr "Routing Information Protocol (RIP)"
 
 #: ../../source/misc/terminology.rst:49
 msgid "开放最短路径优先 (Open Shortest Path First, OSPF)"
-msgstr ""
+msgstr "Open Shortest Path First (OSPF)"
 
 #: ../../source/misc/terminology.rst:50
 msgid "动态路由协议 (Dynamic Routing Protocols, DRP)"
-msgstr ""
+msgstr "Dynamic Routing Protocols (DRP)"
 
 #: ../../source/misc/terminology.rst:51
 msgid "首跳冗余性协议 (First Hop Redundancy Protocols, FHRP)"
-msgstr ""
+msgstr "First Hop Redundancy Protocols (FHRP)"
 
 #: ../../source/misc/terminology.rst:52
 msgid "热备份路由器协议 (Hot Standby Router Protocol, HSRP)"
-msgstr ""
+msgstr "Hot Standby Router Protocol (HSRP)"
 
 #: ../../source/misc/terminology.rst:53
 msgid "虚拟路由冗余协议 (Virtual Router Redundancy Protocol, VRRP)"
-msgstr ""
+msgstr "Virtual Router Redundancy Protocol (VRRP)"
 
 #: ../../source/misc/terminology.rst:54
 msgid "网关负载均衡协议 (Gateway Load Balancing Protocol, GLBP)"
-msgstr ""
+msgstr "Gateway Load Balancing Protocol (GLBP)"
 
 #: ../../source/misc/terminology.rst:55
 msgid "网络地址转换 (Network Address Translation, NAT)"
-msgstr ""
+msgstr "Network Address Translation (NAT)"
 
 #: ../../source/misc/terminology.rst:56
 msgid "点对点协议 (Point-to-Point Protocol, PPP)"
-msgstr ""
+msgstr "Point-to-Point Protocol (PPP)"
 
 #: ../../source/misc/terminology.rst:57
 msgid "生成树协议 (Spanning Tree Protocol, STP)"
-msgstr ""
+msgstr "Spanning Tree Protocol (STP)"
 
 #: ../../source/misc/terminology.rst:58
 msgid "QUIC (Quick UDP Internet Connections)"
-msgstr ""
+msgstr "QUIC (Quick UDP Internet Connections)"
 
 #: ../../source/misc/terminology.rst:61
 msgid "网络应用"
-msgstr ""
+msgstr "Network Applications"
 
 #: ../../source/misc/terminology.rst:62
 msgid "证书透明度 (Certificate Transparency, CT)"
-msgstr ""
+msgstr "Certificate Transparency (CT)"
 
 #: ../../source/misc/terminology.rst:63
 msgid "DNS证书颁发机构授权 (DNS Certification Authority Authorization, CAA)"
-msgstr ""
+msgstr "DNS Certification Authority Authorization (CAA)"
 
 #: ../../source/misc/terminology.rst:64
 msgid "应用级网关 (Application Level Gateway, ALG)"
-msgstr ""
+msgstr "Application-Level Gateway (ALG)"
 
 #: ../../source/misc/terminology.rst:67
 msgid "Kerberos"
-msgstr ""
+msgstr "Kerberos"
 
 #: ../../source/misc/terminology.rst:68 ../../source/misc/terminology.rst:176
 msgid "密钥分发中心 (Key Distribution Center, KDC)"
-msgstr ""
+msgstr "Key Distribution Center (KDC)"
 
 #: ../../source/misc/terminology.rst:69 ../../source/misc/terminology.rst:175
 msgid "认证服务器 (Authentication Server, AS)"
-msgstr ""
+msgstr "Authentication Server (AS)"
 
 #: ../../source/misc/terminology.rst:70 ../../source/misc/terminology.rst:178
 msgid "票据授权服务器 (Ticket Granting Server, TGS)"
-msgstr ""
+msgstr "Ticket Granting Server (TGS)"
 
 #: ../../source/misc/terminology.rst:73
 msgid "开发相关"
-msgstr ""
+msgstr "Development Related"
 
 #: ../../source/misc/terminology.rst:74
 msgid "REST (Representation State Transformation)"
-msgstr ""
+msgstr "REST (Representation State Transformation)"
 
 #: ../../source/misc/terminology.rst:77
 msgid "安全相关"
-msgstr ""
+msgstr "Security Related"
 
 #: ../../source/misc/terminology.rst:78
 msgid "缺点 (defect / mistake)"
-msgstr ""
+msgstr "Weakness (defect / mistake)"
 
 #: ../../source/misc/terminology.rst:79
 msgid "软件在实现上和设计上的弱点"
-msgstr ""
+msgstr "Weaknesses in software implementation and design"
 
 #: ../../source/misc/terminology.rst:80
 msgid "缺点是缺陷和瑕疵的统称"
-msgstr ""
+msgstr "Weakness is a general term for bugs and flaws"
 
 #: ../../source/misc/terminology.rst:81
 msgid "缺陷 (bug)"
-msgstr ""
+msgstr "Bug"
 
 #: ../../source/misc/terminology.rst:82
 msgid "实现层面的软件缺点"
-msgstr ""
+msgstr "An implementation-level software weakness"
 
 #: ../../source/misc/terminology.rst:83
 msgid "容易被发现和修复"
-msgstr ""
+msgstr "Usually easy to find and fix"
 
 #: ../../source/misc/terminology.rst:84
 msgid "例如：缓冲区溢出"
-msgstr ""
+msgstr "Example: buffer overflow"
 
 #: ../../source/misc/terminology.rst:85
 msgid "瑕疵 (flaw)"
-msgstr ""
+msgstr "Flaw"
 
 #: ../../source/misc/terminology.rst:86
 msgid "一种设计上的缺点，难以察觉"
-msgstr ""
+msgstr "A design-level weakness that is difficult to notice"
 
 #: ../../source/misc/terminology.rst:87
 msgid "瑕疵往往需要人工分析才能发现"
-msgstr ""
+msgstr "Flaws usually require manual analysis to discover"
 
 #: ../../source/misc/terminology.rst:88
 msgid "软件系统中错误处理或恢复模块，导致程序不安全或失效"
 msgstr ""
+"Error-handling or recovery modules in a software system that make a program "
+"insecure or cause it to fail"
 
 #: ../../source/misc/terminology.rst:89
 msgid "漏洞 (vulnerability)"
-msgstr ""
+msgstr "Vulnerability"
 
 #: ../../source/misc/terminology.rst:90
 msgid "可以用于违反安全策略的缺陷或瑕疵"
-msgstr ""
+msgstr "A bug or flaw that can be used to violate a security policy"
 
 #: ../../source/misc/terminology.rst:91
 msgid "交互式应用程序安全测试 (Interactive Application Security Testing, IAST)"
-msgstr ""
+msgstr "Interactive Application Security Testing (IAST)"
 
 #: ../../source/misc/terminology.rst:92
 msgid "动态应用程序安全测试 (Dynamic Application Security Testing, DAST)"
-msgstr ""
+msgstr "Dynamic Application Security Testing (DAST)"
 
 #: ../../source/misc/terminology.rst:93
 msgid "静态应用程序安全测试 (Static Application Security Testing, SAST)"
-msgstr ""
+msgstr "Static Application Security Testing (SAST)"
 
 #: ../../source/misc/terminology.rst:94
 msgid "ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge, ATT&CK)"
-msgstr ""
+msgstr "ATT&CK™ (Adversarial Tactics, Techniques, and Common Knowledge)"
 
 #: ../../source/misc/terminology.rst:95
 msgid "横向移动 (Lateral Movement)"
-msgstr ""
+msgstr "Lateral Movement"
 
 #: ../../source/misc/terminology.rst:96
 msgid "入侵和攻击模拟 (Breach and Attack Simulation, BAS)"
-msgstr ""
+msgstr "Breach and Attack Simulation (BAS)"
 
 #: ../../source/misc/terminology.rst:99
 msgid "安全开发"
-msgstr ""
+msgstr "Secure Development"
 
 #: ../../source/misc/terminology.rst:100
 msgid "安全信息和事件管理 (Security Information Event Management, SIEM)"
-msgstr ""
+msgstr "Security Information and Event Management (SIEM)"
 
 #: ../../source/misc/terminology.rst:101
 msgid "自动化响应SOAR模型 (Security Orchestration, Automation and Response, SOAR)"
-msgstr ""
+msgstr "Security Orchestration, Automation, and Response (SOAR)"
 
 #: ../../source/misc/terminology.rst:102
 msgid "SDL (Security Development Lifecycle)"
-msgstr ""
+msgstr "SDL (Security Development Lifecycle)"
 
 #: ../../source/misc/terminology.rst:105
 msgid "安全策略"
-msgstr ""
+msgstr "Security Policies"
 
 #: ../../source/misc/terminology.rst:106
 msgid "跨域资源共享策略 (Cross-Origin Resource Sharing, CORS)"
-msgstr ""
+msgstr "Cross-Origin Resource Sharing (CORS)"
 
 #: ../../source/misc/terminology.rst:107
 msgid "发件人策略框架 (Sender Policy Framework, SPF)"
-msgstr ""
+msgstr "Sender Policy Framework (SPF)"
 
 #: ../../source/misc/terminology.rst:108
 msgid "域名密钥识别邮件 (DomainKeys Identified Mail, DKIM)"
-msgstr ""
+msgstr "DomainKeys Identified Mail (DKIM)"
 
 #: ../../source/misc/terminology.rst:109
 msgid ""
 "基于域名的消息认证报告与一致性协议 (Domain-based Message Authentication, Reporting and "
 "Conformance, DMARC)"
 msgstr ""
+"Domain-based Message Authentication, Reporting, and Conformance (DMARC)"
 
 #: ../../source/misc/terminology.rst:110
 msgid "DNSSEC (The Domain Name System Security Extensions)"
-msgstr ""
+msgstr "DNSSEC (Domain Name System Security Extensions)"
 
 #: ../../source/misc/terminology.rst:111
 msgid "基于DNS的命名实体身份验证 (DNS-based Authentication of Named Entities, DANE)"
-msgstr ""
+msgstr "DNS-based Authentication of Named Entities (DANE)"
 
 #: ../../source/misc/terminology.rst:114
 msgid "安全模型"
-msgstr ""
+msgstr "Security Models"
 
 #: ../../source/misc/terminology.rst:115
 msgid "构建安全成熟度模型 (Building Security In Maturity Model, BSIMM)"
-msgstr ""
+msgstr "Building Security In Maturity Model (BSIMM)"
 
 #: ../../source/misc/terminology.rst:118
 msgid "攻击相关"
-msgstr ""
+msgstr "Attack Related"
 
 #: ../../source/misc/terminology.rst:121
 msgid "漏洞类型"
-msgstr ""
+msgstr "Vulnerability Types"
 
 #: ../../source/misc/terminology.rst:122
 msgid "跨站脚本攻击 (Cross Site Scripting, XSS)"
-msgstr ""
+msgstr "Cross-Site Scripting (XSS)"
 
 #: ../../source/misc/terminology.rst:123
 msgid "跨站请求伪造 (Cross-Site Request Forgery, CSRF)"
-msgstr ""
+msgstr "Cross-Site Request Forgery (CSRF)"
 
 #: ../../source/misc/terminology.rst:124
 msgid "中间人攻击 (Man-in-the-middle, MITM)"
-msgstr ""
+msgstr "Man-in-the-Middle Attack (MITM)"
 
 #: ../../source/misc/terminology.rst:125
 msgid "服务端请求伪造 (Server Side Request Forgery, SSRF)"
-msgstr ""
+msgstr "Server-Side Request Forgery (SSRF)"
 
 #: ../../source/misc/terminology.rst:126
 msgid "高级持续威胁 (Advanced Persistent Threat, APT)"
-msgstr ""
+msgstr "Advanced Persistent Threat (APT)"
 
 #: ../../source/misc/terminology.rst:127
 msgid "远程命令执行 (Remote Command Execute, RCE)"
-msgstr ""
+msgstr "Remote Command Execution (RCE)"
 
 #: ../../source/misc/terminology.rst:128
 msgid "远程代码执行 (Remote Code Execute, RCE)"
-msgstr ""
+msgstr "Remote Code Execution (RCE)"
 
 #: ../../source/misc/terminology.rst:129
 msgid "带外数据 (Out-Of-Band, OOB)"
-msgstr ""
+msgstr "Out-of-Band Data (OOB)"
 
 #: ../../source/misc/terminology.rst:132
 msgid "攻击方式"
-msgstr ""
+msgstr "Attack Techniques"
 
 #: ../../source/misc/terminology.rst:133
 msgid "鱼叉攻击 (Spear Phishing)"
-msgstr ""
+msgstr "Spear Phishing"
 
 #: ../../source/misc/terminology.rst:134
 msgid "水坑攻击 (Water Holing)"
-msgstr ""
+msgstr "Watering-Hole Attack"
 
 #: ../../source/misc/terminology.rst:135
 msgid "分布式拒绝服务 (Distributed Denial of Service, DDoS)"
-msgstr ""
+msgstr "Distributed Denial of Service (DDoS)"
 
 #: ../../source/misc/terminology.rst:138
 msgid "防御相关"
-msgstr ""
+msgstr "Defense Related"
 
 #: ../../source/misc/terminology.rst:139
 msgid "IoC (Indicators of Compromise)"
-msgstr ""
+msgstr "IoC (Indicators of Compromise)"
 
 #: ../../source/misc/terminology.rst:140
 msgid "IoA (Indicators of Activity)"
-msgstr ""
+msgstr "IoA (Indicators of Activity)"
 
 #: ../../source/misc/terminology.rst:143
 msgid "防御技术"
-msgstr ""
+msgstr "Defense Technologies"
 
 #: ../../source/misc/terminology.rst:144
 msgid "网络检测响应 (Network-based Detection and Response, NDR)"
-msgstr ""
+msgstr "Network Detection and Response (NDR)"
 
 #: ../../source/misc/terminology.rst:145
 msgid "终端检测响应 (Endpoint Detection and Response, EDR)"
-msgstr ""
+msgstr "Endpoint Detection and Response (EDR)"
 
 #: ../../source/misc/terminology.rst:146
 msgid "托管检测响应 (Managed Detection and Response, MDR)"
-msgstr ""
+msgstr "Managed Detection and Response (MDR)"
 
 #: ../../source/misc/terminology.rst:147
 msgid "扩展检测响应 (Extended Detection and Response, XDR)"
-msgstr ""
+msgstr "Extended Detection and Response (XDR)"
 
 #: ../../source/misc/terminology.rst:148
 msgid "自适应安全架构 (Adaptive Security Architecture, ASA)"
-msgstr ""
+msgstr "Adaptive Security Architecture (ASA)"
 
 #: ../../source/misc/terminology.rst:149
 msgid "零信任网络访问 (Zero Trust Network Access, ZTNA)"
-msgstr ""
+msgstr "Zero Trust Network Access (ZTNA)"
 
 #: ../../source/misc/terminology.rst:150
 msgid "云安全配置管理 (Cloud Security Posture Management, CSPM)"
-msgstr ""
+msgstr "Cloud Security Posture Management (CSPM)"
 
 #: ../../source/misc/terminology.rst:153
 msgid "防护设施"
-msgstr ""
+msgstr "Security Controls"
 
 #: ../../source/misc/terminology.rst:154
 msgid "入侵检测系统 (Intrusion Detection System, IDS)"
-msgstr ""
+msgstr "Intrusion Detection System (IDS)"
 
 #: ../../source/misc/terminology.rst:155
 msgid "主机型入侵检测系统 (Host-based Intrusion Detection System, HIDS)"
-msgstr ""
+msgstr "Host-based Intrusion Detection System (HIDS)"
 
 #: ../../source/misc/terminology.rst:156
 msgid "主机入侵防御系统 (Host Intrusion Prevent System, HIPS)"
-msgstr ""
+msgstr "Host Intrusion Prevention System (HIPS)"
 
 #: ../../source/misc/terminology.rst:157
 msgid "RASP (Runtime Application Self-protection)"
-msgstr ""
+msgstr "RASP (Runtime Application Self-Protection)"
 
 #: ../../source/misc/terminology.rst:158
 msgid "统一端点管理 (Unified Endpoint Management, UEM)"
-msgstr ""
+msgstr "Unified Endpoint Management (UEM)"
 
 #: ../../source/misc/terminology.rst:161
 msgid "运维"
-msgstr ""
+msgstr "Operations"
 
 #: ../../source/misc/terminology.rst:162
 msgid "智能运维 (Artificial Intelligence for IT Operations, AIOps)"
-msgstr ""
+msgstr "Artificial Intelligence for IT Operations (AIOps)"
 
 #: ../../source/misc/terminology.rst:163
 msgid "风险和脆弱性评估 (Risk and Vulnerability Assessments, RVA)"
-msgstr ""
+msgstr "Risk and Vulnerability Assessment (RVA)"
 
 #: ../../source/misc/terminology.rst:164
 msgid "计算机安全应急响应组 (Computer Emergency Response Team, CERT)"
-msgstr ""
+msgstr "Computer Emergency Response Team (CERT)"
 
 #: ../../source/misc/terminology.rst:167
 msgid "认证"
-msgstr ""
+msgstr "Authentication"
 
 #: ../../source/misc/terminology.rst:168
 msgid "单点登录 (Single Sign-On, SSO)"
-msgstr ""
+msgstr "Single Sign-On (SSO)"
 
 #: ../../source/misc/terminology.rst:169
 msgid "双因素认证 (Two-Factor Authentication, 2FA)"
-msgstr ""
+msgstr "Two-Factor Authentication (2FA)"
 
 #: ../../source/misc/terminology.rst:170
 msgid "多因素认证 (Multi-Factor Authentication, MFA)"
-msgstr ""
+msgstr "Multi-Factor Authentication (MFA)"
 
 #: ../../source/misc/terminology.rst:171
 msgid "一次性密码 (One-Time Password, OTP)"
-msgstr ""
+msgstr "One-Time Password (OTP)"
 
 #: ../../source/misc/terminology.rst:174
 msgid "Kerbose"
-msgstr ""
+msgstr "Kerberos"
 
 #: ../../source/misc/terminology.rst:177
 msgid "票据授权票据，票据的票据 (Ticket Granting Ticket, TGT)"
-msgstr ""
+msgstr "Ticket Granting Ticket (TGT)"
 
 #: ../../source/misc/terminology.rst:179
 msgid "特定服务提供端 (Service Server, SS)"
-msgstr ""
+msgstr "Service Server (SS)"
 
 #: ../../source/misc/terminology.rst:182
 msgid "可信计算"
-msgstr ""
+msgstr "Trusted Computing"
 
 #: ../../source/misc/terminology.rst:183
 msgid "可信平台模块 (Trusted Platform Module, TPM)"
-msgstr ""
+msgstr "Trusted Platform Module (TPM)"
 
 #: ../../source/misc/terminology.rst:186
 msgid "云"
-msgstr ""
+msgstr "Cloud"
 
 #: ../../source/misc/terminology.rst:189
 msgid "容器"
-msgstr ""
+msgstr "Containers"
 
 #: ../../source/misc/terminology.rst:190
 msgid "容器运行时 (Container Runtime Interface, CRI)"
-msgstr ""
+msgstr "Container Runtime Interface (CRI)"
 
 #: ../../source/misc/terminology.rst:191
 msgid "开放容器标准 (Open Container Initiative, OCI)"
-msgstr ""
+msgstr "Open Container Initiative (OCI)"
 
 #: ../../source/misc/terminology.rst:192
 msgid "开放容器格式标准 (Open Container Format, OCF)"
-msgstr ""
+msgstr "Open Container Format (OCF)"
 
 #: ../../source/misc/terminology.rst:195
 msgid "计算"
-msgstr ""
+msgstr "Compute"
 
 #: ../../source/misc/terminology.rst:196
 msgid "弹性云计算 (Elastic Compute Cloud, EC2)"
-msgstr ""
+msgstr "Elastic Compute Cloud (EC2)"
 
 #: ../../source/misc/terminology.rst:197
 msgid "阿里云弹性云计算 (Elastic Compute Service, ECS)"
-msgstr ""
+msgstr "Elastic Compute Service (ECS)"
 
 #: ../../source/misc/terminology.rst:198
 msgid "云服务器 (Cloud Virtual Machine, CVM)"
-msgstr ""
+msgstr "Cloud Virtual Machine (CVM)"
 
 #: ../../source/misc/terminology.rst:201
 msgid "存储"
-msgstr ""
+msgstr "Storage"
 
 #: ../../source/misc/terminology.rst:202
 msgid "简单存储服务 (Simple Storage Service, S3)"
-msgstr ""
+msgstr "Simple Storage Service (S3)"
 
 #: ../../source/misc/terminology.rst:203
 msgid "对象存储 (Cloud Object Storage, COS)"
-msgstr ""
+msgstr "Cloud Object Storage (COS)"
 
 #: ../../source/misc/terminology.rst:206
 msgid "XaaS"
-msgstr ""
+msgstr "XaaS"
 
 #: ../../source/misc/terminology.rst:207
 msgid "函数即服务 (Function as a Service, FaaS)"
-msgstr ""
+msgstr "Function as a Service (FaaS)"
 
 #: ../../source/misc/terminology.rst:208
 msgid "容器即服务 (Container as a Service, CaaS)"
-msgstr ""
+msgstr "Container as a Service (CaaS)"
 
 #: ../../source/misc/terminology.rst:209
 msgid "软件即服务 (Software as a Service, SaaS)"
-msgstr ""
+msgstr "Software as a Service (SaaS)"
 
 #: ../../source/misc/terminology.rst:210
 msgid "平台即服务 (Platform as a Service, PaaS)"
-msgstr ""
+msgstr "Platform as a Service (PaaS)"
 
 #: ../../source/misc/terminology.rst:211
 msgid "基础设施即服务 (Insfrastructure as a Service, IaaS)"
-msgstr ""
+msgstr "Infrastructure as a Service (IaaS)"
 
 #: ../../source/misc/terminology.rst:214
 msgid "特定平台"
-msgstr ""
+msgstr "Specific Platforms"
 
 #: ../../source/misc/terminology.rst:215
 msgid "OCI (Oracle Cloud Infrastructure)"
-msgstr ""
+msgstr "OCI (Oracle Cloud Infrastructure)"
 
 #: ../../source/misc/terminology.rst:218
 msgid "其他服务"
-msgstr ""
+msgstr "Other Services"
 
 #: ../../source/misc/terminology.rst:219
 msgid "元数据服务 (Instance Metadata Service, IMDS)"
-msgstr ""
+msgstr "Instance Metadata Service (IMDS)"
 
 #: ../../source/misc/terminology.rst:220
 msgid "持续集成 (Continuous Integration, CI)"
-msgstr ""
+msgstr "Continuous Integration (CI)"
 
 #: ../../source/misc/terminology.rst:221
 msgid "持续交付 (Continuous Deployment, CD)"
-msgstr ""
+msgstr "Continuous Delivery (CD)"
 
 #: ../../source/misc/terminology.rst:222
 msgid "边缘计算机器 (Edge Computing Machine, ECM)"
-msgstr ""
+msgstr "Edge Computing Machine (ECM)"
