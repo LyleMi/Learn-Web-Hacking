@@ -20,32 +20,36 @@ msgstr ""
 
 #: ../../source/vuln/xss/harm.rst:2
 msgid "危害"
-msgstr ""
+msgstr "Impact"
 
 #: ../../source/vuln/xss/harm.rst:3
 msgid "存在XSS漏洞时，可能会导致以下几种情况："
-msgstr ""
+msgstr "When an XSS vulnerability exists, it may lead to the following situations:"
 
 #: ../../source/vuln/xss/harm.rst:5
 msgid "用户的Cookie被获取，其中可能存在Session ID等敏感信息。若服务器端没有做相应防护，攻击者可用对应Cookie登陆服务器。"
 msgstr ""
+"User cookies may be obtained, and they may contain sensitive information "
+"such as session IDs. If the server side does not implement corresponding "
+"protections, an attacker can use the relevant cookies to log in to the "
+"server."
 
 #: ../../source/vuln/xss/harm.rst:7
 msgid "攻击者能够在一定限度内记录用户的键盘输入。"
-msgstr ""
+msgstr "An attacker can record the user's keystrokes to a certain extent."
 
 #: ../../source/vuln/xss/harm.rst:9
 msgid "攻击者通过CSRF等方式以用户身份执行危险操作。"
-msgstr ""
+msgstr "An attacker can perform dangerous actions as the user through CSRF or similar methods."
 
 #: ../../source/vuln/xss/harm.rst:11
 msgid "XSS蠕虫。"
-msgstr ""
+msgstr "XSS worms."
 
 #: ../../source/vuln/xss/harm.rst:13
 msgid "获取用户浏览器信息。"
-msgstr ""
+msgstr "Obtaining information about the user's browser."
 
 #: ../../source/vuln/xss/harm.rst:15
 msgid "利用XSS漏洞扫描用户内网。"
-msgstr ""
+msgstr "Using an XSS vulnerability to scan the user's internal network."

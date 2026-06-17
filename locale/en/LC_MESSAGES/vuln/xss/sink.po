@@ -20,72 +20,72 @@ msgstr ""
 
 #: ../../source/vuln/xss/sink.rst:2
 msgid "Sink"
-msgstr ""
+msgstr "Sink"
 
 #: ../../source/vuln/xss/sink.rst:5
 msgid "执行JavaScript"
-msgstr ""
+msgstr "Executing JavaScript"
 
 #: ../../source/vuln/xss/sink.rst:6
 msgid "``eval(payload)``"
-msgstr ""
+msgstr "``eval(payload)``"
 
 #: ../../source/vuln/xss/sink.rst:7
 msgid "``setTimeout(payload, 100)``"
-msgstr ""
+msgstr "``setTimeout(payload, 100)``"
 
 #: ../../source/vuln/xss/sink.rst:8
 msgid "``setInterval(payload, 100)``"
-msgstr ""
+msgstr "``setInterval(payload, 100)``"
 
 #: ../../source/vuln/xss/sink.rst:9
 msgid "``Function(payload)()``"
-msgstr ""
+msgstr "``Function(payload)()``"
 
 #: ../../source/vuln/xss/sink.rst:10
 msgid "``<script>payload</script>``"
-msgstr ""
+msgstr "``<script>payload</script>``"
 
 #: ../../source/vuln/xss/sink.rst:11
 msgid "``<img src=x onerror=payload>``"
-msgstr ""
+msgstr "``<img src=x onerror=payload>``"
 
 #: ../../source/vuln/xss/sink.rst:14
 msgid "加载URL"
-msgstr ""
+msgstr "Loading URLs"
 
 #: ../../source/vuln/xss/sink.rst:15
 msgid "``location=javascript:alert(/xss/)``"
-msgstr ""
+msgstr "``location=javascript:alert(/xss/)``"
 
 #: ../../source/vuln/xss/sink.rst:16
 msgid "``location.href=javascript:alert(/xss/)``"
-msgstr ""
+msgstr "``location.href=javascript:alert(/xss/)``"
 
 #: ../../source/vuln/xss/sink.rst:17
 msgid "``location.assign(javascript:alert(/xss/))``"
-msgstr ""
+msgstr "``location.assign(javascript:alert(/xss/))``"
 
 #: ../../source/vuln/xss/sink.rst:18
 msgid "``location.replace(javascript:alert(/xss/))``"
-msgstr ""
+msgstr "``location.replace(javascript:alert(/xss/))``"
 
 #: ../../source/vuln/xss/sink.rst:21
 msgid "执行HTML"
-msgstr ""
+msgstr "Executing HTML"
 
 #: ../../source/vuln/xss/sink.rst:22
 msgid "``xx.innerHTML=payload``"
-msgstr ""
+msgstr "``xx.innerHTML=payload``"
 
 #: ../../source/vuln/xss/sink.rst:23
 msgid "``xx.outerHTML=payload``"
-msgstr ""
+msgstr "``xx.outerHTML=payload``"
 
 #: ../../source/vuln/xss/sink.rst:24
 msgid "``document.write(payload)``"
-msgstr ""
+msgstr "``document.write(payload)``"
 
 #: ../../source/vuln/xss/sink.rst:25
 msgid "``document.writeln(payload)``"
-msgstr ""
+msgstr "``document.writeln(payload)``"

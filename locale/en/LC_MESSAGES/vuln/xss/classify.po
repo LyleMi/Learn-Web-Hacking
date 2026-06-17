@@ -20,21 +20,26 @@ msgstr ""
 
 #: ../../source/vuln/xss/classify.rst:2
 msgid "分类"
-msgstr ""
+msgstr "Classification"
 
 #: ../../source/vuln/xss/classify.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/vuln/xss/classify.rst:6
 msgid ""
 "XSS全称为Cross Site "
 "Scripting，为了和CSS分开简写为XSS，中文名为跨站脚本。该漏洞发生在用户端，是指在渲染过程中发生了不在预期过程中的JavaScript代码执行。XSS通常被用于获取Cookie、以受攻击者的身份进行操作等行为。"
 msgstr ""
+"XSS stands for Cross Site Scripting. It is abbreviated as XSS to "
+"distinguish it from CSS, and is known in Chinese as cross-site scripting. "
+"This vulnerability occurs on the client side and refers to unintended "
+"JavaScript code execution during rendering. XSS is often used to obtain "
+"cookies, perform actions as the victim, and carry out similar attacks."
 
 #: ../../source/vuln/xss/classify.rst:9
 msgid "反射型XSS"
-msgstr ""
+msgstr "Reflected XSS"
 
 #: ../../source/vuln/xss/classify.rst:10
 msgid ""
@@ -42,41 +47,59 @@ msgid ""
 "$_GET['user']</p>\";?>`` ，那么在访问时设置 "
 "``/?user=</p><script>alert(\"hack\")</script><p>`` ，则可执行预设好的JavaScript代码。"
 msgstr ""
+"Reflected XSS is one of the more common and widespread types. For example, "
+"if a website's code contains a statement like ``<?php echo \"<p>hello, "
+"$_GET['user']</p>\";?>``, then visiting it with "
+"``/?user=</p><script>alert(\"hack\")</script><p>`` can execute the preset "
+"JavaScript code."
 
 #: ../../source/vuln/xss/classify.rst:12
 msgid "反射型XSS通常出现在搜索等功能中，需要被攻击者点击对应的链接才能触发，且受到XSS Auditor、NoScript等防御手段的影响较大。"
 msgstr ""
+"Reflected XSS often appears in features such as search. It usually requires "
+"the victim to click the corresponding link to trigger it, and is strongly "
+"affected by defenses such as XSS Auditor and NoScript."
 
 #: ../../source/vuln/xss/classify.rst:15
 msgid "储存型XSS"
-msgstr ""
+msgstr "Stored XSS"
 
 #: ../../source/vuln/xss/classify.rst:16
 msgid "储存型XSS相比反射型来说危害较大，在这种漏洞中，攻击者能够把攻击载荷存入服务器的数据库中，造成持久化的攻击。"
 msgstr ""
+"Stored XSS is more harmful than reflected XSS. In this type of "
+"vulnerability, an attacker can store the attack payload in the server's "
+"database, resulting in a persistent attack."
 
 #: ../../source/vuln/xss/classify.rst:19
 msgid "DOM XSS"
-msgstr ""
+msgstr "DOM XSS"
 
 #: ../../source/vuln/xss/classify.rst:20
 msgid "DOM型XSS不同之处在于DOM型XSS一般和服务器的解析响应没有直接关系，而是在JavaScript脚本动态执行的过程中产生的。"
 msgstr ""
+"DOM-based XSS differs in that it generally has no direct relationship with "
+"how the server parses or responds. Instead, it is produced during the "
+"dynamic execution of JavaScript scripts."
 
 #: ../../source/vuln/xss/classify.rst:22
 msgid "例如"
-msgstr ""
+msgstr "For example"
 
 #: ../../source/vuln/xss/classify.rst:44
 msgid "输入 ``x' onerror='javascript:alert(/xss/)`` 即可触发。"
-msgstr ""
+msgstr "Entering ``x' onerror='javascript:alert(/xss/)`` triggers it."
 
 #: ../../source/vuln/xss/classify.rst:47
 msgid "Blind XSS"
-msgstr ""
+msgstr "Blind XSS"
 
 #: ../../source/vuln/xss/classify.rst:48
 msgid ""
 "Blind XSS是储存型XSS的一种，它保存在某些存储中，当一个“受害者”访问这个页面时执行，并且在文档对象模型(DOM)中呈现payload。"
 " 它被称为Blind的原因是因为它通常发生在通常不暴露给用户的功能上。"
 msgstr ""
+"Blind XSS is a type of stored XSS. It is saved in some form of storage, "
+"executes when a \"victim\" visits the page, and renders the payload in the "
+"Document Object Model (DOM). It is called blind because it usually occurs "
+"in functionality that is not normally exposed to users."

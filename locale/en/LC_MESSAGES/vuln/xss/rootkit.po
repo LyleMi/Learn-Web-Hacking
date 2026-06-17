@@ -20,42 +20,61 @@ msgstr ""
 
 #: ../../source/vuln/xss/rootkit.rst:2
 msgid "持久化"
-msgstr ""
+msgstr "Persistence"
 
 #: ../../source/vuln/xss/rootkit.rst:5
 msgid "基于存储"
-msgstr ""
+msgstr "Storage-based"
 
 #: ../../source/vuln/xss/rootkit.rst:6
 msgid ""
 "有时候网站会将信息存储在Cookie或localStorage，而因为这些数据一般是网站主动存储的，很多时候没有对Cookie或localStorage中取出的数据做过滤，会直接将其取出并展示在页面中，甚至存了JSON格式的数据时，部分站点存在"
 " ``eval(data)`` 之类的调用。因此当有一个XSS时，可以把payload写入其中，在对应条件下触发。"
 msgstr ""
+"Sometimes websites store information in Cookie or localStorage. Because "
+"this data is usually stored by the website itself, data retrieved from "
+"Cookie or localStorage is often not filtered and may be directly displayed "
+"on the page. When JSON-formatted data is stored, some sites may even have "
+"calls such as ``eval(data)``. Therefore, when an XSS issue exists, the "
+"payload can be written there and triggered under the corresponding "
+"conditions."
 
 #: ../../source/vuln/xss/rootkit.rst:8
 msgid "在一些条件下，这种利用方式可能因为一些特殊字符造成问题，可以使用 ``String.fromCharCode`` 来绕过。"
 msgstr ""
+"Under some conditions, this exploitation method may run into problems "
+"because of certain special characters. ``String.fromCharCode`` can be used "
+"to bypass them."
 
 #: ../../source/vuln/xss/rootkit.rst:11
 msgid "Service Worker"
-msgstr ""
+msgstr "Service Worker"
 
 #: ../../source/vuln/xss/rootkit.rst:12
 msgid ""
 "Service Worker可以拦截http请求，起到类似本地代理的作用，故可以使用Service Worker "
 "Hook一些请求，在请求中返回攻击代码，以实现持久化攻击的目的。"
 msgstr ""
+"A Service Worker can intercept HTTP requests and act like a local proxy. "
+"Therefore, a Service Worker can be used to hook certain requests and return "
+"attack code in the response, achieving persistence."
 
 #: ../../source/vuln/xss/rootkit.rst:14
 msgid ""
 "在Chrome中，可通过 ``chrome://inspect/#service-workers`` 来查看Service "
 "Worker的状态，并进行停止。"
 msgstr ""
+"In Chrome, the status of Service Workers can be viewed and stopped through "
+"``chrome://inspect/#service-workers``."
 
 #: ../../source/vuln/xss/rootkit.rst:17
 msgid "AppCache"
-msgstr ""
+msgstr "AppCache"
 
 #: ../../source/vuln/xss/rootkit.rst:18
 msgid "在可控的网络环境下（公共wifi），可以使用AppCache机制，来强制存储一些Payload，未清除的情况下，用户访问站点时对应的payload会一直存在。"
 msgstr ""
+"In a controllable network environment, such as public Wi-Fi, the AppCache "
+"mechanism can be used to force some payloads to be stored. If they are not "
+"cleared, the corresponding payload will continue to exist when the user "
+"visits the site."

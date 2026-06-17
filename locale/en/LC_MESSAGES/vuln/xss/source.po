@@ -20,88 +20,88 @@ msgstr ""
 
 #: ../../source/vuln/xss/source.rst:2
 msgid "XSS数据源"
-msgstr ""
+msgstr "XSS Data Sources"
 
 #: ../../source/vuln/xss/source.rst:5
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../../source/vuln/xss/source.rst:6
 msgid "``location``"
-msgstr ""
+msgstr "``location``"
 
 #: ../../source/vuln/xss/source.rst:7
 msgid "``location.href``"
-msgstr ""
+msgstr "``location.href``"
 
 #: ../../source/vuln/xss/source.rst:8
 msgid "``location.pathname``"
-msgstr ""
+msgstr "``location.pathname``"
 
 #: ../../source/vuln/xss/source.rst:9
 msgid "``location.search``"
-msgstr ""
+msgstr "``location.search``"
 
 #: ../../source/vuln/xss/source.rst:10
 msgid "``location.hash``"
-msgstr ""
+msgstr "``location.hash``"
 
 #: ../../source/vuln/xss/source.rst:11
 msgid "``document.URL``"
-msgstr ""
+msgstr "``document.URL``"
 
 #: ../../source/vuln/xss/source.rst:12
 msgid "``document.documentURI``"
-msgstr ""
+msgstr "``document.documentURI``"
 
 #: ../../source/vuln/xss/source.rst:13
 msgid "``document.baseURI``"
-msgstr ""
+msgstr "``document.baseURI``"
 
 #: ../../source/vuln/xss/source.rst:16
 msgid "Navigation"
-msgstr ""
+msgstr "Navigation"
 
 #: ../../source/vuln/xss/source.rst:17
 msgid "``window.name``"
-msgstr ""
+msgstr "``window.name``"
 
 #: ../../source/vuln/xss/source.rst:18
 msgid "``document.referrer``"
-msgstr ""
+msgstr "``document.referrer``"
 
 #: ../../source/vuln/xss/source.rst:21
 msgid "Communication"
-msgstr ""
+msgstr "Communication"
 
 #: ../../source/vuln/xss/source.rst:22
 msgid "``Ajax``"
-msgstr ""
+msgstr "``Ajax``"
 
 #: ../../source/vuln/xss/source.rst:23
 msgid "``Fetch``"
-msgstr ""
+msgstr "``Fetch``"
 
 #: ../../source/vuln/xss/source.rst:24
 msgid "``WebSocket``"
-msgstr ""
+msgstr "``WebSocket``"
 
 #: ../../source/vuln/xss/source.rst:25
 msgid "``PostMessage``"
-msgstr ""
+msgstr "``PostMessage``"
 
 #: ../../source/vuln/xss/source.rst:28
 msgid "Storage"
-msgstr ""
+msgstr "Storage"
 
 #: ../../source/vuln/xss/source.rst:29
 msgid "``Cookie``"
-msgstr ""
+msgstr "``Cookie``"
 
 #: ../../source/vuln/xss/source.rst:30
 msgid "``LocalStorage``"
-msgstr ""
+msgstr "``LocalStorage``"
 
 #: ../../source/vuln/xss/source.rst:31
 msgid "``SessionStorage``"
-msgstr ""
+msgstr "``SessionStorage``"

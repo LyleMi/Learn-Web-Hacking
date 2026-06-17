@@ -20,80 +20,90 @@ msgstr ""
 
 #: ../../source/vuln/xss/mitigation.rst:2
 msgid "XSS保护"
-msgstr ""
+msgstr "XSS Protection"
 
 #: ../../source/vuln/xss/mitigation.rst:5
 msgid "HTML过滤"
-msgstr ""
+msgstr "HTML Filtering"
 
 #: ../../source/vuln/xss/mitigation.rst:6
 msgid "使用一些白名单或者黑名单来过滤用户输入的HTML，以实现过滤的效果。例如DOMPurify等工具都是用该方式实现了XSS的保护。"
 msgstr ""
+"Use allowlists or blocklists to filter user-supplied HTML. Tools such as "
+"DOMPurify implement XSS protection in this way."
 
 #: ../../source/vuln/xss/mitigation.rst:9
 msgid "X-Frame"
-msgstr ""
+msgstr "X-Frame"
 
 #: ../../source/vuln/xss/mitigation.rst:10
 msgid "X-Frame-Options 响应头有三个可选的值："
-msgstr ""
+msgstr "The X-Frame-Options response header has three optional values:"
 
 #: ../../source/vuln/xss/mitigation.rst:12
 msgid "DENY"
-msgstr ""
+msgstr "DENY"
 
 #: ../../source/vuln/xss/mitigation.rst:13
 msgid "页面不能被嵌入到任何iframe或frame中"
-msgstr ""
+msgstr "The page cannot be embedded in any iframe or frame"
 
 #: ../../source/vuln/xss/mitigation.rst:14
 msgid "SAMEORIGIN"
-msgstr ""
+msgstr "SAMEORIGIN"
 
 #: ../../source/vuln/xss/mitigation.rst:15
 msgid "页面只能被本站页面嵌入到iframe或者frame中"
-msgstr ""
+msgstr "The page can only be embedded in an iframe or frame by pages from the same site"
 
 #: ../../source/vuln/xss/mitigation.rst:16
 msgid "ALLOW-FROM"
-msgstr ""
+msgstr "ALLOW-FROM"
 
 #: ../../source/vuln/xss/mitigation.rst:17
 msgid "页面允许frame或frame加载"
-msgstr ""
+msgstr "The page allows loading by a frame or iframe"
 
 #: ../../source/vuln/xss/mitigation.rst:20
 msgid "XSS保护头"
-msgstr ""
+msgstr "XSS Protection Header"
 
 #: ../../source/vuln/xss/mitigation.rst:21
 msgid ""
 "基于 Webkit 内核的浏览器(比如Chrome)在特定版本范围内有一个名为XSS "
 "auditor的防护机制，如果浏览器检测到了含有恶意代码的输入被呈现在HTML文档中，那么这段呈现的恶意代码要么被删除，要么被转义，恶意代码不会被正常的渲染出来。"
 msgstr ""
+"WebKit-based browsers, such as Chrome, had a protection mechanism called "
+"XSS Auditor in certain version ranges. If the browser detected input "
+"containing malicious code being reflected in an HTML document, the "
+"rendered malicious code would either be removed or escaped, preventing it "
+"from being rendered normally."
 
 #: ../../source/vuln/xss/mitigation.rst:23
 msgid "而浏览器是否要拦截这段恶意代码取决于浏览器的XSS防护设置。"
-msgstr ""
+msgstr "Whether the browser blocks this malicious code depends on the browser's XSS protection settings."
 
 #: ../../source/vuln/xss/mitigation.rst:25
 msgid "要设置浏览器的防护机制，则可使用X-XSS-Protection字段 该字段有三个可选的值"
-msgstr ""
+msgstr "The browser protection mechanism can be configured with the X-XSS-Protection header. This header has three optional values"
 
 #: ../../source/vuln/xss/mitigation.rst:28
 msgid "``0`` : 表示关闭浏览器的XSS防护机制"
-msgstr ""
+msgstr "``0``: disables the browser's XSS protection mechanism"
 
 #: ../../source/vuln/xss/mitigation.rst:29
 msgid ""
 "``1`` : 删除检测到的恶意代码， 如果响应报文中没有看到 X-XSS-Protection 字段，那么浏览器就认为X-XSS-"
 "Protection配置为1，这是浏览器的默认设置"
 msgstr ""
+"``1``: removes detected malicious code. If the X-XSS-Protection header is "
+"not present in the response, the browser treats X-XSS-Protection as being "
+"configured to 1, which is the browser's default setting"
 
 #: ../../source/vuln/xss/mitigation.rst:30
 msgid "``1; mode=block`` : 如果检测到恶意代码，在不渲染恶意代码"
-msgstr ""
+msgstr "``1; mode=block``: if malicious code is detected, the page is blocked instead of rendering the malicious code"
 
 #: ../../source/vuln/xss/mitigation.rst:32
 msgid "FireFox没有相关的保护机制，如果需要保护，可使用NoScript等相关插件。"
-msgstr ""
+msgstr "Firefox does not have a related protection mechanism. If protection is needed, plugins such as NoScript can be used."
