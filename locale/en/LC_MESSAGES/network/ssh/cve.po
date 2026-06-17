@@ -20,30 +20,40 @@ msgstr ""
 
 #: ../../source/network/ssh/cve.rst:2
 msgid "相关 CVE"
-msgstr ""
+msgstr "Related CVEs"
 
 #: ../../source/network/ssh/cve.rst:5
 msgid "CVE-2018-15473"
-msgstr ""
+msgstr "CVE-2018-15473"
 
 #: ../../source/network/ssh/cve.rst:6
 msgid "CVE-2018-15473 允许客户端通过遍历的方式获取服务端存在的用户名，该漏洞影响 OpenSSH <= 7.7 的版本。"
 msgstr ""
+"CVE-2018-15473 allows a client to enumerate usernames that exist on the "
+"server. This vulnerability affects OpenSSH versions <= 7.7."
 
 #: ../../source/network/ssh/cve.rst:9
 msgid "CVE-2016-20012"
-msgstr ""
+msgstr "CVE-2016-20012"
 
 #: ../../source/network/ssh/cve.rst:10
 msgid ""
 "CVE-2016-20012 允许客户端在只知道公钥信息的情况下通过 SSH_MSG_USERAUTH_REQUEST 遍历客户端是否可以通过某个"
 " <用户, 公钥> 对登录。"
 msgstr ""
+"CVE-2016-20012 allows a client that only knows public key information to use "
+"SSH_MSG_USERAUTH_REQUEST to enumerate whether a client can log in with a "
+"given <user, public key> pair."
 
 #: ../../source/network/ssh/cve.rst:12
 msgid "由于 OpenSSH 的开发者认为修改相关的认证方式会需要需要增加 client 读取私钥的频度，因此没有对应进行修复。"
 msgstr ""
+"Because the OpenSSH developers believed that changing the related "
+"authentication behavior would require clients to read private keys more "
+"frequently, no corresponding fix was made."
 
 #: ../../source/network/ssh/cve.rst:14
 msgid "相关的讨论可以参考这个 `PR <https://github.com/openssh/openssh-portable/pull/270>`_ 。"
 msgstr ""
+"For the related discussion, see this `PR <https://github.com/openssh"
+"/openssh-portable/pull/270>`_."

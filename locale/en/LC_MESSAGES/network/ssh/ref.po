@@ -20,45 +20,55 @@ msgstr ""
 
 #: ../../source/network/ssh/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/network/ssh/ref.rst:5
 msgid "RFC"
-msgstr ""
+msgstr "RFC"
 
 #: ../../source/network/ssh/ref.rst:6
 msgid ""
 "`RFC 4251 The Secure Shell (SSH) Protocol Architecture <https://www.rfc-"
 "editor.org/rfc/rfc4251>`_"
 msgstr ""
+"`RFC 4251 The Secure Shell (SSH) Protocol Architecture <https://www.rfc-"
+"editor.org/rfc/rfc4251>`_"
 
 #: ../../source/network/ssh/ref.rst:7
 msgid ""
 "`RFC 4252 The Secure Shell (SSH) Authentication Protocol <https://www"
 ".rfc-editor.org/rfc/rfc4252>`_"
 msgstr ""
+"`RFC 4252 The Secure Shell (SSH) Authentication Protocol <https://www"
+".rfc-editor.org/rfc/rfc4252>`_"
 
 #: ../../source/network/ssh/ref.rst:8
 msgid ""
 "`RFC 4253 The Secure Shell (SSH) Transport Layer Protocol <https://www"
 ".rfc-editor.org/rfc/rfc4253>`_"
 msgstr ""
+"`RFC 4253 The Secure Shell (SSH) Transport Layer Protocol <https://www"
+".rfc-editor.org/rfc/rfc4253>`_"
 
 #: ../../source/network/ssh/ref.rst:9
 msgid ""
 "`RFC 4254 The Secure Shell (SSH) Connection Protocol <https://www.rfc-"
 "editor.org/rfc/rfc4254>`_"
 msgstr ""
+"`RFC 4254 The Secure Shell (SSH) Connection Protocol <https://www.rfc-"
+"editor.org/rfc/rfc4254>`_"
 
 #: ../../source/network/ssh/ref.rst:10
 msgid ""
 "`RFC 8308 Extension Negotiation in the Secure Shell (SSH) Protocol "
 "<https://www.rfc-editor.org/rfc/rfc8308>`_"
 msgstr ""
+"`RFC 8308 Extension Negotiation in the Secure Shell (SSH) Protocol "
+"<https://www.rfc-editor.org/rfc/rfc8308>`_"
 
 #: ../../source/network/ssh/ref.rst:13
 msgid "漏洞相关"
-msgstr ""
+msgstr "Vulnerability-Related"
 
 #: ../../source/network/ssh/ref.rst:14
 msgid ""
@@ -66,13 +76,18 @@ msgid ""
 "SSH_MSG_USERAUTH_REQUEST with signature <https://github.com/openssh"
 "/openssh-portable/pull/270>`_"
 msgstr ""
+"`CVE-2016-20012 - Publickey Information leak - Only allow "
+"SSH_MSG_USERAUTH_REQUEST with signature <https://github.com/openssh"
+"/openssh-portable/pull/270>`_"
 
 #: ../../source/network/ssh/ref.rst:17
 msgid "论文"
-msgstr ""
+msgstr "Papers"
 
 #: ../../source/network/ssh/ref.rst:18
 msgid ""
 "Roy L, Lyakhov S, Jang Y, et al. Practical Privacy-Preserving "
 "Authentication for SSH[J]. Cryptology ePrint Archive, 2022."
 msgstr ""
+"Roy L, Lyakhov S, Jang Y, et al. Practical Privacy-Preserving "
+"Authentication for SSH[J]. Cryptology ePrint Archive, 2022."
