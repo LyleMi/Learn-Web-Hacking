@@ -20,49 +20,59 @@ msgstr ""
 
 #: ../../source/cloud/oci.rst:2
 msgid "容器标准"
-msgstr ""
+msgstr "Container Standards"
 
 #: ../../source/cloud/oci.rst:5
 msgid "OCI"
-msgstr ""
+msgstr "OCI"
 
 #: ../../source/cloud/oci.rst:6
 msgid "开放容器标准 (Open Container Initiative, OCI) 是用于规范容器格式和运行时行业标准。目前OCI提出的规范有："
 msgstr ""
+"The Open Container Initiative (OCI) is an industry standard for specifying "
+"container formats and runtimes. The specifications currently proposed by OCI "
+"include:"
 
 #: ../../source/cloud/oci.rst:8
 msgid ""
 "`OCI Runtime Specification <https://github.com/opencontainers/runtime-"
 "spec>`_"
 msgstr ""
+"`OCI Runtime Specification <https://github.com/opencontainers/runtime-"
+"spec>`_"
 
 #: ../../source/cloud/oci.rst:9
 msgid "`OCI Image Format <https://github.com/opencontainers/image-spec>`_"
-msgstr ""
+msgstr "`OCI Image Format <https://github.com/opencontainers/image-spec>`_"
 
 #: ../../source/cloud/oci.rst:10
 msgid ""
 "`OCI Distribution Specification <https://github.com/opencontainers"
 "/distribution-spec>`_"
 msgstr ""
+"`OCI Distribution Specification <https://github.com/opencontainers"
+"/distribution-spec>`_"
 
 #: ../../source/cloud/oci.rst:13
 msgid "CRI"
-msgstr ""
+msgstr "CRI"
 
 #: ../../source/cloud/oci.rst:14
 msgid ""
 "容器运行时 (Container Runtime Interface, CRI) "
 "定义了容器和镜像的接口，目前官方支持的容器运行时包括Docker、Containerd、CRI-O和frakti。"
 msgstr ""
+"The Container Runtime Interface (CRI) defines the interfaces for containers "
+"and images. The officially supported container runtimes currently include "
+"Docker, Containerd, CRI-O, and frakti."
 
 #: ../../source/cloud/oci.rst:17
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/cloud/oci.rst:20
 msgid "文档"
-msgstr ""
+msgstr "Documentation"
 
 #: ../../source/cloud/oci.rst:21
 msgid ""
@@ -70,29 +80,40 @@ msgid ""
 "<https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-"
 "kubernetes/>`_"
 msgstr ""
+"`Introducing Container Runtime Interface (CRI) in Kubernetes "
+"<https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-"
+"kubernetes/>`_"
 
 #: ../../source/cloud/oci.rst:22
 msgid "`cri-o <https://cri-o.io/>`_"
-msgstr ""
+msgstr "`cri-o <https://cri-o.io/>`_"
 
 #: ../../source/cloud/oci.rst:25
 msgid "实现"
-msgstr ""
+msgstr "Implementations"
 
 #: ../../source/cloud/oci.rst:26
 msgid "`runc <https://github.com/opencontainers/runc>`_ OCI Runtime 的参考实现"
 msgstr ""
+"`runc <https://github.com/opencontainers/runc>`_ reference implementation of"
+" the OCI Runtime"
 
 #: ../../source/cloud/oci.rst:27
 msgid ""
 "`Kata Containers <https://github.com/kata-containers/kata-containers>`_ "
 "提供高性能的硬件虚拟化容器运行时"
 msgstr ""
+"`Kata Containers <https://github.com/kata-containers/kata-containers>`_ "
+"provides a high-performance hardware-virtualized container runtime"
 
 #: ../../source/cloud/oci.rst:28
 msgid "`gvisor <https://github.com/google/gvisor>`_ Go 实现的基于用户态内核的容器运行时"
 msgstr ""
+"`gvisor <https://github.com/google/gvisor>`_ a Go implementation of a "
+"container runtime based on a user-space kernel"
 
 #: ../../source/cloud/oci.rst:29
 msgid "`buildkit <https://github.com/moby/buildkit>`_ docker build 拆分出来的build项目"
 msgstr ""
+"`buildkit <https://github.com/moby/buildkit>`_ a build project split out "
+"from docker build"

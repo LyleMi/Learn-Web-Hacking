@@ -20,19 +20,19 @@ msgstr ""
 
 #: ../../source/cloud/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/cloud/ref.rst:5
 msgid "文档"
-msgstr ""
+msgstr "Documentation"
 
 #: ../../source/cloud/ref.rst:6
 msgid "`Kubernetes Documentation <https://kubernetes.io/docs/home/>`_"
-msgstr ""
+msgstr "`Kubernetes Documentation <https://kubernetes.io/docs/home/>`_"
 
 #: ../../source/cloud/ref.rst:7
 msgid "`Openstack wiki <https://wiki.openstack.org/wiki/Main_Page>`_"
-msgstr ""
+msgstr "`Openstack wiki <https://wiki.openstack.org/wiki/Main_Page>`_"
 
 #: ../../source/cloud/ref.rst:8
 msgid ""
@@ -40,31 +40,38 @@ msgid ""
 "/News-Features/Feature-Stories/Article-View/Article/2716980/nsa-cisa-"
 "release-kubernetes-hardening-guidance/>`_"
 msgstr ""
+"`NSA, CISA release Kubernetes Hardening Guidance <https://www.nsa.gov"
+"/News-Features/Feature-Stories/Article-View/Article/2716980/nsa-cisa-"
+"release-kubernetes-hardening-guidance/>`_"
 
 #: ../../source/cloud/ref.rst:9
 msgid ""
 "`Kubernetes Hardening Guidance <https://github.com/rootsongjc/kubernetes-"
 "hardening-guidance>`_ Kubernetes 加固手册"
 msgstr ""
+"`Kubernetes Hardening Guidance <https://github.com/rootsongjc/kubernetes-"
+"hardening-guidance>`_ Kubernetes hardening guide"
 
 #: ../../source/cloud/ref.rst:12
 msgid "元数据安全"
-msgstr ""
+msgstr "Metadata Security"
 
 #: ../../source/cloud/ref.rst:13
 msgid ""
 "`Exploiting SSRF in AWS Elastic Beanstalk <https://notsosecure.com"
 "/exploiting-ssrf-in-aws-elastic-beanstalk/>`_"
 msgstr ""
+"`Exploiting SSRF in AWS Elastic Beanstalk <https://notsosecure.com"
+"/exploiting-ssrf-in-aws-elastic-beanstalk/>`_"
 
 #: ../../source/cloud/ref.rst:16
 msgid "云存储"
-msgstr ""
+msgstr "Cloud Storage"
 
 #: ../../source/cloud/ref.rst:17
 msgid "`ceph <https://github.com/ceph/ceph>`_"
-msgstr ""
+msgstr "`ceph <https://github.com/ceph/ceph>`_"
 
 #: ../../source/cloud/ref.rst:18
 msgid "`ceph tracker <https://tracker.ceph.com/>`_"
-msgstr ""
+msgstr "`ceph tracker <https://tracker.ceph.com/>`_"
