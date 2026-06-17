@@ -20,22 +20,22 @@ msgstr ""
 
 #: ../../source/intranet/windows/domain/winkerberos.rst:2
 msgid "Kerberos的Windows实现"
-msgstr ""
+msgstr "Windows Implementation of Kerberos"
 
 #: ../../source/intranet/windows/domain/winkerberos.rst:5
 msgid "相关定义"
-msgstr ""
+msgstr "Related Definitions"
 
 #: ../../source/intranet/windows/domain/winkerberos.rst:8
 msgid "SPN"
-msgstr ""
+msgstr "SPN"
 
 #: ../../source/intranet/windows/domain/winkerberos.rst:9
 msgid "服务主体名称 (ServicePrincipal Names, SPN) ，是服务实例(如HTTP、SMB等)的唯一标识符。"
-msgstr ""
+msgstr "A Service Principal Name (ServicePrincipal Names, SPN) is the unique identifier of a service instance, such as HTTP or SMB."
 
 #: ../../source/intranet/windows/domain/winkerberos.rst:11
 msgid ""
 "SPN分为两种类型：一种是注册在活动目录的机器帐户下，当一个服务的权限为 Local System 或 Network "
 "Service，则SPN注册在机器帐户下。一种是注册在活动目录的域用户帐户下，当一个服务的权限为一个域用户，则SPN注册在域用户帐户下。"
-msgstr ""
+msgstr "SPNs are divided into two types. One type is registered under a machine account in Active Directory; when a service runs with Local System or Network Service privileges, its SPN is registered under the machine account. The other type is registered under a domain user account in Active Directory; when a service runs with a domain user, its SPN is registered under that domain user account."

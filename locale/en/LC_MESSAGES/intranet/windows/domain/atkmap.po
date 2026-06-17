@@ -20,44 +20,44 @@ msgstr ""
 
 #: ../../source/intranet/windows/domain/atkmap.rst:2
 msgid "域内攻击思路"
-msgstr ""
+msgstr "Domain Attack Paths"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:3
 msgid "获取域控权限"
-msgstr ""
+msgstr "Obtain domain controller privileges"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:4
 msgid "通过域控相关漏洞"
-msgstr ""
+msgstr "Use domain controller-related vulnerabilities"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:5
 msgid "抓hash，尤其是域管理员、运维等高权限账号的哈希"
-msgstr ""
+msgstr "Capture hashes, especially hashes of high-privilege accounts such as domain administrators and operations accounts"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:6
 msgid "控制入域机器"
-msgstr ""
+msgstr "Control domain-joined machines"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:7
 msgid "下发恶意策略控制"
-msgstr ""
+msgstr "Push malicious policies for control"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:8
 msgid "获取域内用户凭证"
-msgstr ""
+msgstr "Obtain domain user credentials"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:9
 msgid "利用错误的域管理配置"
-msgstr ""
+msgstr "Exploit incorrect domain management configurations"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:10
 msgid "域内relay"
-msgstr ""
+msgstr "Relay inside the domain"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:11
 msgid "获取服务票据"
-msgstr ""
+msgstr "Obtain service tickets"
 
 #: ../../source/intranet/windows/domain/atkmap.rst:12
 msgid "攻击Exchange等服务器"
-msgstr ""
+msgstr "Attack Exchange and similar servers"

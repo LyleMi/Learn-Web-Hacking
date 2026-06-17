@@ -21,71 +21,71 @@ msgstr ""
 #: ../../source/intranet/windows/domain/user.rst:2
 #: ../../source/intranet/windows/domain/user.rst:8
 msgid "用户"
-msgstr ""
+msgstr "Users"
 
 #: ../../source/intranet/windows/domain/user.rst:5
 msgid "用户组与工作组"
-msgstr ""
+msgstr "User Groups and Workgroups"
 
 #: ../../source/intranet/windows/domain/user.rst:9
 msgid ""
 "Windows系统存在一些为了特定用途而设置的用户，分别是：SYSTEM(系统)、Trustedinstaller(信任程序模块)、Everyone(所有人)、Creator"
 " "
 "Owner(创建者)等，这些特殊用户不属于任何用户组，是完全独立的账户。其中SYSTEM拥有整台计算机管理权限的账户，一般操作无法获取与它等价的权限。"
-msgstr ""
+msgstr "Windows systems include some users created for specific purposes, including SYSTEM, Trustedinstaller, Everyone, and Creator Owner. These special users do not belong to any user group and are fully independent accounts. SYSTEM has administrative privileges over the entire computer, and ordinary operations cannot obtain equivalent privileges."
 
 #: ../../source/intranet/windows/domain/user.rst:12
 msgid "用户组"
-msgstr ""
+msgstr "User Groups"
 
 #: ../../source/intranet/windows/domain/user.rst:13
 msgid "Windows系统内置了许多本地用户组，用于管理用户权限。只要用户账户加入到对应的用户组内，则用户账户也将具备对应用户组所拥有的权限。"
-msgstr ""
+msgstr "Windows systems include many built-in local user groups for managing user permissions. When a user account is added to a corresponding user group, the account receives the permissions held by that group."
 
 #: ../../source/intranet/windows/domain/user.rst:15
 msgid ""
 "默认情况下，系统为用户分了7个组，并给每个组赋予不同的操作权限。这些组为：管理员组(Administrators)、高权限用户组(Power "
 "Users)、普通用户组(Users)、备份操作组(Backup "
 "Operators)、文件复制组(Replicator)、来宾用户组(Guests)、身份验证用户组(Authenticated Users)。"
-msgstr ""
+msgstr "By default, the system divides users into seven groups and assigns different operating permissions to each group: Administrators, Power Users, Users, Backup Operators, Replicator, Guests, and Authenticated Users."
 
 #: ../../source/intranet/windows/domain/user.rst:18
 msgid "工作组"
-msgstr ""
+msgstr "Workgroups"
 
 #: ../../source/intranet/windows/domain/user.rst:19
 msgid "工作组（Workgroup）是最常用最简单最普遍的资源管理模式，默认情况下计算机都在名为workgroup的工作组中。工作组模式比较松散，适合网络中计算机数量较少，不需要严格管理的情况。"
-msgstr ""
+msgstr "A Workgroup is the most common, simplest, and most widely used resource management model. By default, computers are in a workgroup named workgroup. The workgroup model is relatively loose and is suitable for networks with few computers that do not require strict management."
 
 #: ../../source/intranet/windows/domain/user.rst:22
 msgid "域中用户"
-msgstr ""
+msgstr "Users in a Domain"
 
 #: ../../source/intranet/windows/domain/user.rst:25
 msgid "域用户"
-msgstr ""
+msgstr "Domain Users"
 
 #: ../../source/intranet/windows/domain/user.rst:26
 msgid ""
 "域环境中的用户和本地用户的帐户不同，域用户帐户保存在活动目录中。在域环境中，一个域用户可以在域中的任何一台计算机上登录。在域中用户可以使用SID "
 "(Security Identifier) 来表明身份，用NTLM哈希或者Kerberos来验证身份。"
-msgstr ""
+msgstr "Users in a domain environment differ from local user accounts. Domain user accounts are stored in Active Directory. In a domain environment, a domain user can log on to any computer in the domain. In a domain, users can use a SID (Security Identifier) to represent identity and use NTLM hashes or Kerberos to verify identity."
 
 #: ../../source/intranet/windows/domain/user.rst:29
 msgid "机器用户"
-msgstr ""
+msgstr "Machine Users"
 
 #: ../../source/intranet/windows/domain/user.rst:30
 msgid "机器用户也被称作机器账号或计算机账号，所有加入域的主机都会有一个机器用户，机器用户的用户名以 ``$`` 结尾。"
-msgstr ""
+msgstr "Machine users are also called machine accounts or computer accounts. Every domain-joined host has a machine user, and the username of a machine user ends with ``$``."
 
 #: ../../source/intranet/windows/domain/user.rst:33
 msgid "组策略"
-msgstr ""
+msgstr "Group Policy"
 
 #: ../../source/intranet/windows/domain/user.rst:34
 msgid ""
 "组策略(Group "
 "Policy)用于控制用户帐户和计算机帐户的工作环境。组策略提供了操作系统、应用程序和活动目录中用户设置的集中化管理和配置。其中本地的组策略(LGPO或LocalGPO)，可以在独立且非域的计算机上管理组策略对象。在域环境中的组策略通常被称作GPO(Group"
 " Policy Object)。"
-msgstr ""
+msgstr "Group Policy is used to control the working environment of user accounts and computer accounts. Group Policy provides centralized management and configuration of user settings in the operating system, applications, and Active Directory. Local Group Policy (LGPO or LocalGPO) can manage Group Policy objects on standalone, non-domain computers. In a domain environment, Group Policy is usually called a GPO (Group Policy Object)."

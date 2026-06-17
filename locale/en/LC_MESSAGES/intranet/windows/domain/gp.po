@@ -20,56 +20,56 @@ msgstr ""
 
 #: ../../source/intranet/windows/domain/gp.rst:2
 msgid "组策略"
-msgstr ""
+msgstr "Group Policy"
 
 #: ../../source/intranet/windows/domain/gp.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/intranet/windows/domain/gp.rst:6
 msgid "组策略 (Group Policy, GP) 用于管理网络环境中的用户和设备，定义了系统管理员管理工作所要的各种模板组件。"
-msgstr ""
+msgstr "Group Policy (GP) is used to manage users and devices in a network environment and defines the template components needed by system administrators for management work."
 
 #: ../../source/intranet/windows/domain/gp.rst:8
 msgid "组策略有以下功能："
-msgstr ""
+msgstr "Group Policy provides the following functions:"
 
 #: ../../source/intranet/windows/domain/gp.rst:10
 msgid "管理注册表"
-msgstr ""
+msgstr "Manage the registry"
 
 #: ../../source/intranet/windows/domain/gp.rst:11
 msgid "设置脚本"
-msgstr ""
+msgstr "Configure scripts"
 
 #: ../../source/intranet/windows/domain/gp.rst:12
 msgid "重定向文件夹"
-msgstr ""
+msgstr "Redirect folders"
 
 #: ../../source/intranet/windows/domain/gp.rst:13
 msgid "管理应用程序"
-msgstr ""
+msgstr "Manage applications"
 
 #: ../../source/intranet/windows/domain/gp.rst:14
 msgid "指定安全选项"
-msgstr ""
+msgstr "Specify security options"
 
 #: ../../source/intranet/windows/domain/gp.rst:17
 msgid "常用概念"
-msgstr ""
+msgstr "Common Concepts"
 
 #: ../../source/intranet/windows/domain/gp.rst:18
 msgid "组策略容器 (Group Policy Container，GPC)存储在活动目录中，包含GPO属性、配置信息和版本等。可以通过GPC来查找GPT。"
-msgstr ""
+msgstr "The Group Policy Container (GPC) is stored in Active Directory and contains GPO attributes, configuration information, versions, and related data. The GPT can be found through the GPC."
 
 #: ../../source/intranet/windows/domain/gp.rst:20
 msgid "组策略模板 (Group Policy Template, GPT) 存储在域控中，包含所有的组策略信息。包括管理模板，安全，脚本，软件安装等。"
-msgstr ""
+msgstr "The Group Policy Template (GPT) is stored on domain controllers and contains all Group Policy information, including administrative templates, security settings, scripts, software installation, and related data."
 
 #: ../../source/intranet/windows/domain/gp.rst:22
 msgid "其中GPC中的信息量少、容量小，GPT中消息量较大、容量大，因此两个部分分开存放。防止活动目录中因存储了过多的数据而被影响性能。"
-msgstr ""
+msgstr "The GPC contains less information and is smaller, while the GPT contains more information and is larger, so the two parts are stored separately. This prevents Active Directory performance from being affected by storing too much data."
 
 #: ../../source/intranet/windows/domain/gp.rst:24
 msgid "组策略对象 (Group Policy Object, GPO) 是包含多种Windows组策略设置的集合，存储在GPC和GPT中。"
-msgstr ""
+msgstr "A Group Policy Object (GPO) is a collection containing multiple Windows Group Policy settings and is stored in the GPC and GPT."

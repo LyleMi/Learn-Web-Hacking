@@ -20,56 +20,56 @@ msgstr ""
 
 #: ../../source/intranet/windows/domain/defense.rst:2
 msgid "防护"
-msgstr ""
+msgstr "Protection"
 
 #: ../../source/intranet/windows/domain/defense.rst:3
 msgid "使用ATA等商业化防护工具"
-msgstr ""
+msgstr "Use commercial protection tools such as ATA"
 
 #: ../../source/intranet/windows/domain/defense.rst:4
 msgid "安装杀毒软件、EDR等工具"
-msgstr ""
+msgstr "Install antivirus software, EDR, and similar tools"
 
 #: ../../source/intranet/windows/domain/defense.rst:5
 msgid "关闭高危服务"
-msgstr ""
+msgstr "Disable high-risk services"
 
 #: ../../source/intranet/windows/domain/defense.rst:6
 msgid "统一配置防火墙策略"
-msgstr ""
+msgstr "Configure firewall policies consistently"
 
 #: ../../source/intranet/windows/domain/defense.rst:7
 msgid "对域控等高危账号使用白名单进行行为管理"
-msgstr ""
+msgstr "Use allowlists to manage behavior for high-risk accounts such as domain controller accounts"
 
 #: ../../source/intranet/windows/domain/defense.rst:8
 msgid "检测高危操作"
-msgstr ""
+msgstr "Detect high-risk operations"
 
 #: ../../source/intranet/windows/domain/defense.rst:9
 msgid "权限提升"
-msgstr ""
+msgstr "Privilege escalation"
 
 #: ../../source/intranet/windows/domain/defense.rst:10
 msgid "高危账号密码修改、重置"
-msgstr ""
+msgstr "Password changes and resets for high-risk accounts"
 
 #: ../../source/intranet/windows/domain/defense.rst:11
 msgid "行为频率建模"
-msgstr ""
+msgstr "Model behavior frequency"
 
 #: ../../source/intranet/windows/domain/defense.rst:12
 msgid "对大量尝试登录/信息查询进行报警"
-msgstr ""
+msgstr "Alert on large numbers of login attempts or information queries"
 
 #: ../../source/intranet/windows/domain/defense.rst:13
 msgid "及时安装补丁"
-msgstr ""
+msgstr "Install patches promptly"
 
 #: ../../source/intranet/windows/domain/defense.rst:14
 msgid "对特定攻击行为进行监控"
-msgstr ""
+msgstr "Monitor specific attack behaviors"
 
 #: ../../source/intranet/windows/domain/defense.rst:15
 msgid "通过GPO下发自启动、计划任务"
-msgstr ""
+msgstr "Deploy startup items and scheduled tasks through GPO"

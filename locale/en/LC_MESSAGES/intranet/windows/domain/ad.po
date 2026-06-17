@@ -20,66 +20,66 @@ msgstr ""
 
 #: ../../source/intranet/windows/domain/ad.rst:2
 msgid "Active Directory"
-msgstr ""
+msgstr "Active Directory"
 
 #: ../../source/intranet/windows/domain/ad.rst:3
 msgid ""
 "活动目录 (Active Directory，AD) 是面向Windows Server的目录服务。Active "
 "Directory存储了有关网络对象的信息，并且让管理员和用户能够查找和使用这些信息。"
-msgstr ""
+msgstr "Active Directory (AD) is a directory service for Windows Server. Active Directory stores information about network objects and lets administrators and users find and use that information."
 
 #: ../../source/intranet/windows/domain/ad.rst:6
 msgid "ADDS"
-msgstr ""
+msgstr "ADDS"
 
 #: ../../source/intranet/windows/domain/ad.rst:7
 msgid ""
 "Active Directory提供目录服务的组件被称作Active Directory域服务 (Active Directory Domain "
 "Services, ADDS) ，负责目录数据库的存储、增删改查等工作，可以用在多种局域网、广域网的场景中。"
-msgstr ""
+msgstr "The Active Directory component that provides directory services is called Active Directory Domain Services (AD DS). It is responsible for storing, creating, deleting, modifying, and querying the directory database, and can be used in many LAN and WAN scenarios."
 
 #: ../../source/intranet/windows/domain/ad.rst:9
 msgid "从逻辑上看，ADDS的组件可以分为Partition、Schema、Domain、Domain tree、Forest、OU、Container。"
-msgstr ""
+msgstr "Logically, AD DS components can be divided into Partition, Schema, Domain, Domain tree, Forest, OU, and Container."
 
 #: ../../source/intranet/windows/domain/ad.rst:11
 msgid ""
 "Partition也被称为naming context，是AD DS数据库的一部分。Schema是存储在 ADDS "
 "中数据的定义。Container是为ADDS提供组织框架的对象。"
-msgstr ""
+msgstr "A Partition is also called a naming context and is part of the AD DS database. The Schema defines the data stored in AD DS. A Container is an object that provides an organizational framework for AD DS."
 
 #: ../../source/intranet/windows/domain/ad.rst:13
 msgid ""
 "从实现上区分，ADDS可以分为Domain controller、Data store、Global catalog server、RODC "
 "(Read-only domain controller) 、Site、Subnet。"
-msgstr ""
+msgstr "From an implementation perspective, AD DS can be divided into Domain controller, Data store, Global catalog server, RODC (Read-only domain controller), Site, and Subnet."
 
 #: ../../source/intranet/windows/domain/ad.rst:15
 msgid "每个域控制器都有完整的ADDS数据，每个域控都可以处理数据的修改并同步至其他的域控。"
-msgstr ""
+msgstr "Each domain controller has a complete copy of AD DS data, and each domain controller can process data changes and synchronize them to other domain controllers."
 
 #: ../../source/intranet/windows/domain/ad.rst:17
 msgid "域控会有一份数据拷贝 (Data store) ，默认存储在 ``C:\\Windows\\NTDS`` 目录下。"
-msgstr ""
+msgstr "A domain controller keeps a data copy (Data store), which is stored under ``C:\\Windows\\NTDS`` by default."
 
 #: ../../source/intranet/windows/domain/ad.rst:19
 msgid ""
 "Global catalog server是存储全局catalog的域控，catlog以只读的方式存储了一个multiple-domain "
 "forest的所有对象，用于加速搜索。"
-msgstr ""
+msgstr "A Global catalog server is a domain controller that stores the global catalog. The catalog stores all objects in a multiple-domain forest in read-only form and is used to speed up searches."
 
 #: ../../source/intranet/windows/domain/ad.rst:22
 msgid "名称空间"
-msgstr ""
+msgstr "Namespace"
 
 #: ../../source/intranet/windows/domain/ad.rst:23
 msgid "名称空间 (namespace) 是一块界定好的区域，在区域内可以用名称找到与之相关的信息。"
-msgstr ""
+msgstr "A namespace is a defined area in which names can be used to find related information."
 
 #: ../../source/intranet/windows/domain/ad.rst:26
 msgid "对象与属性"
-msgstr ""
+msgstr "Objects and Attributes"
 
 #: ../../source/intranet/windows/domain/ad.rst:27
 msgid "ADDS内的资源都是以对象 (Object) 的形式存在的，对象通过属性 (Attrbute) 来描述其特征。"
-msgstr ""
+msgstr "Resources in AD DS exist as objects, and objects describe their characteristics through attributes."
