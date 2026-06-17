@@ -20,8 +20,8 @@ msgstr ""
 
 #: ../../source/language/javascript/trick.rst:2
 msgid "Trick"
-msgstr ""
+msgstr "Trick"
 
 #: ../../source/language/javascript/trick.rst:5
 msgid "通过正则表达式构造特定字符"
-msgstr ""
+msgstr "Constructing Specific Characters with Regular Expressions"

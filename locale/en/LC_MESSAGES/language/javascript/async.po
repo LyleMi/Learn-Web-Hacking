@@ -20,42 +20,42 @@ msgstr ""
 
 #: ../../source/language/javascript/async.rst:2
 msgid "异步机制"
-msgstr ""
+msgstr "Asynchronous Mechanisms"
 
 #: ../../source/language/javascript/async.rst:5
 msgid "async / await"
-msgstr ""
+msgstr "async / await"
 
 #: ../../source/language/javascript/async.rst:6
 msgid "async function 关键字用来在表达式中定义异步函数。"
-msgstr ""
+msgstr "The async function keyword is used to define an asynchronous function in an expression."
 
 #: ../../source/language/javascript/async.rst:9
 msgid "Promise"
-msgstr ""
+msgstr "Promise"
 
 #: ../../source/language/javascript/async.rst:10
 msgid ""
 "Promise "
 "对象是一个代理对象（代理一个值），被代理的值在Promise对象创建时可能是未知的。它允许你为异步操作的成功和失败分别绑定相应的处理方法（handlers）。"
 " 这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的promise对象"
-msgstr ""
+msgstr "A Promise object is a proxy object for a value that may be unknown when the Promise is created. It lets you attach handlers for both success and failure of an asynchronous operation. This allows asynchronous methods to return values in a way similar to synchronous methods, but instead of immediately returning the final result, they return a promise object that represents a future result."
 
 #: ../../source/language/javascript/async.rst:12
 msgid "一个 Promise有以下几种状态:"
-msgstr ""
+msgstr "A Promise has the following states:"
 
 #: ../../source/language/javascript/async.rst:14
 msgid "pending: 初始状态，既不是成功，也不是失败状态。"
-msgstr ""
+msgstr "pending: the initial state, neither fulfilled nor rejected."
 
 #: ../../source/language/javascript/async.rst:15
 msgid "fulfilled: 意味着操作成功完成。"
-msgstr ""
+msgstr "fulfilled: the operation completed successfully."
 
 #: ../../source/language/javascript/async.rst:16
 msgid "rejected: 意味着操作失败。"
-msgstr ""
+msgstr "rejected: the operation failed."
 
 #: ../../source/language/javascript/async.rst:18
 msgid ""
@@ -65,52 +65,52 @@ msgid ""
 " Function 类型。当Promise状态为fulfilled时，调用 then 的 onfulfilled "
 "方法，当Promise状态为rejected时，调用 then 的 onrejected 方法， "
 "所以在异步操作的完成和绑定处理方法之间不存在竞争）。"
-msgstr ""
+msgstr "A pending Promise object may become fulfilled and pass a value to the corresponding state handler, or it may become rejected and pass failure information. When either case occurs, the handlers bound through the Promise object's then method are called. The then method accepts two parameters, onfulfilled and onrejected, both of which are Function values. When the Promise state is fulfilled, then calls onfulfilled; when the Promise state is rejected, then calls onrejected. Therefore, there is no race between completion of the asynchronous operation and registration of the handlers."
 
 #: ../../source/language/javascript/async.rst:20
 msgid ""
 "因为 Promise.prototype.then 和  Promise.prototype.catch 方法返回promise 对象， "
 "所以它们可以被链式调用。"
-msgstr ""
+msgstr "Because Promise.prototype.then and Promise.prototype.catch return promise objects, they can be chained."
 
 #: ../../source/language/javascript/async.rst:23
 msgid "执行队列"
-msgstr ""
+msgstr "Execution Queue"
 
 #: ../../source/language/javascript/async.rst:24
 msgid "JavaScript中的异步运行机制如下："
-msgstr ""
+msgstr "The asynchronous execution mechanism in JavaScript works as follows:"
 
 #: ../../source/language/javascript/async.rst:26
 msgid "所有同步任务都在主线程上执行，形成一个执行栈"
-msgstr ""
+msgstr "All synchronous tasks run on the main thread and form an execution stack."
 
 #: ../../source/language/javascript/async.rst:27
 msgid "主线程之外，还存在一个任务队列。只要异步任务有了运行结果，就在任务队列之中放置一个事件。"
-msgstr ""
+msgstr "Outside the main thread, there is also a task queue. When an asynchronous task has a result, an event is placed in the task queue."
 
 #: ../../source/language/javascript/async.rst:28
 msgid "一旦执行栈中的所有同步任务执行完毕，系统就会读取任务队列，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。"
-msgstr ""
+msgstr "Once all synchronous tasks in the execution stack have finished, the system reads the task queue to see which events are present. The corresponding asynchronous tasks then leave the waiting state, enter the execution stack, and begin running."
 
 #: ../../source/language/javascript/async.rst:29
 msgid "主线程不断重复上面的第三步。"
-msgstr ""
+msgstr "The main thread continuously repeats the third step above."
 
 #: ../../source/language/javascript/async.rst:31
 msgid "其中浏览器的内核是多线程的，在浏览器的内核中不同的异步操作由不同的浏览器内核模块调度执行，异步操作会将相关回调添加到任务队列中。可以分为DOM事件、时间回调、网络回调三种："
-msgstr ""
+msgstr "The browser kernel is multithreaded. Different asynchronous operations are scheduled by different browser-kernel modules, and those operations add their callbacks to the task queue. They can be divided into DOM events, timer callbacks, and network callbacks:"
 
 #: ../../source/language/javascript/async.rst:33
 msgid "DOM事件：由浏览器内核的 DOM 模块来处理，当事件触发的时候，回调函数会被添加到任务队列中。"
-msgstr ""
+msgstr "DOM events: handled by the browser kernel's DOM module. When an event is triggered, the callback function is added to the task queue."
 
 #: ../../source/language/javascript/async.rst:34
 msgid ""
 "时间回调：setTimeout / setInterval 等函数会由浏览器内核的 timer "
 "模块来进行延时处理，当时间到达的时候，将回调函数添加到任务队列中。"
-msgstr ""
+msgstr "Timer callbacks: functions such as setTimeout / setInterval are delayed by the browser kernel's timer module. When the time is reached, the callback function is added to the task queue."
 
 #: ../../source/language/javascript/async.rst:35
 msgid "网络回调：ajax / fetch 等则由浏览器内核的 network 模块来处理，在网络请求完成返回之后，才将回调添加到任务队列中。"
-msgstr ""
+msgstr "Network callbacks: ajax / fetch and similar operations are handled by the browser kernel's network module. The callback is added to the task queue only after the network request completes and returns."

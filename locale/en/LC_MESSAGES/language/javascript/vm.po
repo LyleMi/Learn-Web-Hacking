@@ -20,33 +20,33 @@ msgstr ""
 
 #: ../../source/language/javascript/vm.rst:2
 msgid "沙箱逃逸"
-msgstr ""
+msgstr "Sandbox Escape"
 
 #: ../../source/language/javascript/vm.rst:5
 msgid "前端沙箱"
-msgstr ""
+msgstr "Front-End Sandbox"
 
 #: ../../source/language/javascript/vm.rst:6
 msgid ""
 "在前端中，可能会使用删除 ``eval`` ，重写 ``Function.prototype.constructor`` / "
 "``GeneratorFunction`` / ``AsyncFunction`` "
 "等方式来完成前端的沙箱。在这种情况下，可以使用创建一个新iframe的方式来获取新的执行环境。"
-msgstr ""
+msgstr "On the front end, a sandbox may be implemented by deleting ``eval`` and rewriting ``Function.prototype.constructor`` / ``GeneratorFunction`` / ``AsyncFunction``. In this situation, creating a new iframe can be used to obtain a fresh execution environment."
 
 #: ../../source/language/javascript/vm.rst:9
 msgid "服务端沙箱"
-msgstr ""
+msgstr "Server-Side Sandbox"
 
 #: ../../source/language/javascript/vm.rst:10
 msgid ""
 "JavaScript提供了原生的vm模块，用于隔离了代码上下文环境。但是在该环境中依然可以访问标准的JavaScript "
 "API和全局的NodeJS环境。"
-msgstr ""
+msgstr "JavaScript provides a native vm module for isolating code contexts. However, standard JavaScript APIs and the global NodeJS environment can still be accessed from that environment."
 
 #: ../../source/language/javascript/vm.rst:12
 msgid "在原生的沙箱模块中，常用的逃逸方式为："
-msgstr ""
+msgstr "In the native sandbox module, common escape techniques include:"
 
 #: ../../source/language/javascript/vm.rst:27
 msgid "考虑到JavaScript原生vm模块的缺陷，有开发者设计了vm2来提供一个更安全的隔离环境，但是在旧版本中同样存在一些逃逸方式，例如："
-msgstr ""
+msgstr "Because of the limitations of JavaScript's native vm module, developers created vm2 to provide a more secure isolation environment. However, older versions still had some escape techniques, for example:"

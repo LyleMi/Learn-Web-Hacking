@@ -20,52 +20,52 @@ msgstr ""
 
 #: ../../source/language/javascript/engine.rst:2
 msgid "引擎"
-msgstr ""
+msgstr "Engines"
 
 #: ../../source/language/javascript/engine.rst:5
 msgid "V8"
-msgstr ""
+msgstr "V8"
 
 #: ../../source/language/javascript/engine.rst:6
 msgid "V8是Chrome的JavaScript语言处理程序（VM）。其引擎由TurboFan、Ignition和Liftoff组成。其中Turbofan是其优化编译器，Ignition则是其解释器，Liftoff是WebAssembly的代码生成器。"
-msgstr ""
+msgstr "V8 is Chrome's JavaScript language processor (VM). Its engine consists of TurboFan, Ignition, and Liftoff. TurboFan is its optimizing compiler, Ignition is its interpreter, and Liftoff is its WebAssembly code generator."
 
 #: ../../source/language/javascript/engine.rst:9
 msgid "SpiderMonkey"
-msgstr ""
+msgstr "SpiderMonkey"
 
 #: ../../source/language/javascript/engine.rst:10
 msgid "SpiderMonkey是Mozilla项目的一部分，是一个用 C/C++ 实现的JavaScript脚本引擎。"
-msgstr ""
+msgstr "SpiderMonkey is part of the Mozilla project and is a JavaScript engine implemented in C/C++."
 
 #: ../../source/language/javascript/engine.rst:13
 msgid "JavaScriptCore"
-msgstr ""
+msgstr "JavaScriptCore"
 
 #: ../../source/language/javascript/engine.rst:14
 msgid "JavaScriptCore的优化执行分为四个部分，LLInt、Baseline、DFG、FTL。LLInt是最开始的解释执行部分，Baseline是暂时的JIT，DFG阶段开始做一定的优化，FTL阶段做了充分的优化。"
-msgstr ""
+msgstr "JavaScriptCore's optimized execution is divided into four tiers: LLInt, Baseline, DFG, and FTL. LLInt is the initial interpreted execution tier, Baseline is a temporary JIT tier, DFG begins applying some optimization, and FTL performs more comprehensive optimization."
 
 #: ../../source/language/javascript/engine.rst:17
 msgid "ChakraCore"
-msgstr ""
+msgstr "ChakraCore"
 
 #: ../../source/language/javascript/engine.rst:18
 msgid "ChakraCore是一个完整的JavaScript虚拟机，由微软实现，用于Edge浏览器以及IE的后期版本中。"
-msgstr ""
+msgstr "ChakraCore is a complete JavaScript virtual machine implemented by Microsoft and used in the Edge browser and later versions of IE."
 
 #: ../../source/language/javascript/engine.rst:21
 msgid "JScript"
-msgstr ""
+msgstr "JScript"
 
 #: ../../source/language/javascript/engine.rst:22
 msgid "JScript是由微软开发的脚本语言，是微软对ECMAScript规范的实现，用于IE的早期版本中。"
-msgstr ""
+msgstr "JScript is a scripting language developed by Microsoft. It is Microsoft's implementation of the ECMAScript specification and was used in earlier versions of IE."
 
 #: ../../source/language/javascript/engine.rst:25
 msgid "JerryScript"
-msgstr ""
+msgstr "JerryScript"
 
 #: ../../source/language/javascript/engine.rst:26
 msgid "JerryScript是一个适用于嵌入式设备的小型JavaScript引擎，由三星开发并维护。"
-msgstr ""
+msgstr "JerryScript is a lightweight JavaScript engine for embedded devices, developed and maintained by Samsung."

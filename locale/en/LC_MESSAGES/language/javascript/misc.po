@@ -20,69 +20,69 @@ msgstr ""
 
 #: ../../source/language/javascript/misc.rst:2
 msgid "其他"
-msgstr ""
+msgstr "Miscellaneous"
 
 #: ../../source/language/javascript/misc.rst:5
 msgid "命令执行"
-msgstr ""
+msgstr "Command Execution"
 
 #: ../../source/language/javascript/misc.rst:6
 msgid "Node.js中child_process.exec命令调用的是 ``/bin/sh`` ，故可以直接使用该命令执行shell"
-msgstr ""
+msgstr "In Node.js, the child_process.exec command invokes ``/bin/sh``, so this command can be used directly to execute shell commands."
 
 #: ../../source/language/javascript/misc.rst:9
 msgid "反调试技巧"
-msgstr ""
+msgstr "Anti-Debugging Techniques"
 
 #: ../../source/language/javascript/misc.rst:10
 #, python-brace-format
 msgid "函数重定义 ``console.log = function(a){}``"
-msgstr ""
+msgstr "Function redefinition: ``console.log = function(a){}``"
 
 #: ../../source/language/javascript/misc.rst:11
 #, python-brace-format
 msgid "定时断点 ``setInterval(function(){debugger}, 1000);``"
-msgstr ""
+msgstr "Timed breakpoint: ``setInterval(function(){debugger}, 1000);``"
 
 #: ../../source/language/javascript/misc.rst:14
 msgid "对象拷贝"
-msgstr ""
+msgstr "Object Copying"
 
 #: ../../source/language/javascript/misc.rst:15
 msgid "JavaScript中的对象拷贝分为浅拷贝和深拷贝。"
-msgstr ""
+msgstr "Object copying in JavaScript is divided into shallow copying and deep copying."
 
 #: ../../source/language/javascript/misc.rst:17
 msgid "浅拷贝对一个对象进行拷贝时，仅仅拷贝对象的引用进行拷贝，但是拷贝对象和源对象还是引用同一份实体。其中一个对象的改变都会影响到另一个对象。"
-msgstr ""
+msgstr "When a shallow copy copies an object, it only copies the object's reference. The copied object and the source object still refer to the same entity, so changes to either object affect the other."
 
 #: ../../source/language/javascript/misc.rst:19
 msgid "深拷贝拷贝一个对象时，不仅仅把对象的引用进行复制，还把该对象引用的值也一起拷贝。源对象与拷贝对象互相独立，其中任何一个对象的改动都不会对另外一个对象造成影响。"
-msgstr ""
+msgstr "When a deep copy copies an object, it copies not only the object's reference but also the values referenced by that object. The source object and copied object are independent, and changes to either one do not affect the other."
 
 #: ../../source/language/javascript/misc.rst:21
 msgid ""
 "深拷贝可以基于 ``for-in`` / ``object.assign()`` / 拓展运算符 ``...`` / "
 "``JSON.parse(JSON.stringify())`` "
 "等方式实现。其中前三种方式只对第一层做深拷贝，若对象结构较为复杂，则需要用递归的方式对更深的层次进行拷贝。"
-msgstr ""
+msgstr "Deep copying can be implemented with methods such as ``for-in`` / ``object.assign()`` / the spread operator ``...`` / ``JSON.parse(JSON.stringify())``. The first three methods only perform a deep copy of the first level. If the object structure is more complex, recursion is needed to copy deeper levels."
 
 #: ../../source/language/javascript/misc.rst:24
 msgid "常见Sink"
-msgstr ""
+msgstr "Common Sinks"
 
 #: ../../source/language/javascript/misc.rst:25
 msgid "child_process"
-msgstr ""
+msgstr "child_process"
 
 #: ../../source/language/javascript/misc.rst:26
 msgid "eval"
-msgstr ""
+msgstr "eval"
 
 #: ../../source/language/javascript/misc.rst:27
 msgid "exec"
-msgstr ""
+msgstr "exec"
 
 #: ../../source/language/javascript/misc.rst:28
 msgid "execSync"
-msgstr ""
+msgstr "execSync"

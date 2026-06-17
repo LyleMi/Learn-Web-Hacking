@@ -20,196 +20,196 @@ msgstr ""
 
 #: ../../source/language/javascript/strict.rst:2
 msgid "严格模式"
-msgstr ""
+msgstr "Strict Mode"
 
 #: ../../source/language/javascript/strict.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/javascript/strict.rst:6
 msgid ""
 "在ES5中，除了正常的运行模式之外，添加了严格模式（strict "
 "mode），这种模式使得代码显式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式在更严格的条件下运行。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。"
-msgstr ""
+msgstr "In ES5, strict mode was added alongside the normal execution mode. This mode explicitly moves code out of sloppy mode and runs it under stricter conditions. Strict mode is not merely a subset; it was created to provide semantics that differ from normal code."
 
 #: ../../source/language/javascript/strict.rst:8
 msgid "引入严格模式的目的主要是："
-msgstr ""
+msgstr "Strict mode was introduced mainly to:"
 
 #: ../../source/language/javascript/strict.rst:10
 msgid "通过抛出错误来消除了一些原有静默错误"
-msgstr ""
+msgstr "Eliminate some previous silent errors by throwing exceptions."
 
 #: ../../source/language/javascript/strict.rst:11
 msgid "消除JavaScript语法的一些不合理、不严谨之处，减少一些怪异行为"
-msgstr ""
+msgstr "Remove unreasonable or imprecise parts of JavaScript syntax and reduce unusual behavior."
 
 #: ../../source/language/javascript/strict.rst:12
 msgid "消除代码运行的一些不安全之处，保证代码运行的安全"
-msgstr ""
+msgstr "Remove unsafe aspects of code execution and improve runtime safety."
 
 #: ../../source/language/javascript/strict.rst:13
 msgid "修复了一些导致 JavaScript引擎难以执行优化的缺陷，提高编译器效率，增加运行速度"
-msgstr ""
+msgstr "Fix defects that make optimization difficult for JavaScript engines, improving compiler efficiency and execution speed."
 
 #: ../../source/language/javascript/strict.rst:14
 msgid "禁用了在ECMAScript的未来版本中可能会定义的一些语法，为未来新版本的JavaScript做铺垫"
-msgstr ""
+msgstr "Disable syntax that may be defined in future versions of ECMAScript, preparing for future JavaScript releases."
 
 #: ../../source/language/javascript/strict.rst:17
 msgid "调用"
-msgstr ""
+msgstr "Invocation"
 
 #: ../../source/language/javascript/strict.rst:18
 msgid ""
 "严格模式使用 ``\"use strict\";`` 字符串开启。对整个脚本文件而言，可以将 ``\"use strict\"`` "
 "放在脚本文件的第一行使整个脚本以严格模式运行。如果这行语句不在第一行则不会生效，会以正常模式运行。"
-msgstr ""
+msgstr "Strict mode is enabled with the ``\"use strict\";`` string. For an entire script file, place ``\"use strict\"`` on the first line of the script to run the whole script in strict mode. If this statement is not on the first line, it does not take effect and the script runs in normal mode."
 
 #: ../../source/language/javascript/strict.rst:20
 msgid "对单个函数而言，将 ``\"use strict\"`` 放在函数体的第一行，则整个函数以严格模式运行。"
-msgstr ""
+msgstr "For a single function, placing ``\"use strict\"`` on the first line of the function body makes the entire function run in strict mode."
 
 #: ../../source/language/javascript/strict.rst:23
 msgid "行为改变"
-msgstr ""
+msgstr "Behavior Changes"
 
 #: ../../source/language/javascript/strict.rst:24
 msgid "在严格模式中，主要有以下的行为更改："
-msgstr ""
+msgstr "Strict mode mainly introduces the following behavior changes:"
 
 #: ../../source/language/javascript/strict.rst:27
 msgid "全局变量显式声明"
-msgstr ""
+msgstr "Explicit Declaration of Global Variables"
 
 #: ../../source/language/javascript/strict.rst:28
 msgid "在正常模式中，如果一个变量没有声明就赋值，默认是全局变量。严格模式禁止这种用法，全局变量必须显式声明。"
-msgstr ""
+msgstr "In normal mode, assigning a value to an undeclared variable makes it a global variable by default. Strict mode forbids this usage, so global variables must be declared explicitly."
 
 #: ../../source/language/javascript/strict.rst:37
 msgid "禁止使用with语句"
-msgstr ""
+msgstr "Prohibiting the with Statement"
 
 #: ../../source/language/javascript/strict.rst:38
 msgid "with语句无法在编译时就确定，属性到底归属哪个对象，这会影响编译效率，所以在严格模式中被禁止。"
-msgstr ""
+msgstr "The with statement makes it impossible to determine at compile time which object a property belongs to. This affects compilation efficiency, so it is prohibited in strict mode."
 
 #: ../../source/language/javascript/strict.rst:41
 msgid "创设eval作用域"
-msgstr ""
+msgstr "Creating eval Scope"
 
 #: ../../source/language/javascript/strict.rst:42
 msgid "正常模式下，eval语句的作用域，取决于它处于全局作用域，还是处于函数作用域。严格模式下，eval语句本身就是一个作用域，不再能够生成全局变量了，它所生成的变量只能用于eval内部。"
-msgstr ""
+msgstr "In normal mode, the scope of an eval statement depends on whether it is in global scope or function scope. In strict mode, the eval statement itself forms a scope and can no longer create global variables; variables it creates can only be used inside eval."
 
 #: ../../source/language/javascript/strict.rst:45
 msgid "禁止删除变量"
-msgstr ""
+msgstr "Prohibiting Variable Deletion"
 
 #: ../../source/language/javascript/strict.rst:46
 msgid "严格模式下无法删除变量。只有configurable设置为true的对象属性，才能被删除。"
-msgstr ""
+msgstr "Variables cannot be deleted in strict mode. Only object properties whose configurable attribute is set to true can be deleted."
 
 #: ../../source/language/javascript/strict.rst:49
 msgid "显式报错"
-msgstr ""
+msgstr "Explicit Errors"
 
 #: ../../source/language/javascript/strict.rst:50
 msgid "正常模式下一些错误只会默默地失败，但是严格模式下将会报错，包括以下几种场景："
-msgstr ""
+msgstr "In normal mode, some errors fail silently, but in strict mode they produce errors. These scenarios include:"
 
 #: ../../source/language/javascript/strict.rst:52
 msgid "对一个对象的只读属性进行赋值"
-msgstr ""
+msgstr "Assigning to a read-only property of an object."
 
 #: ../../source/language/javascript/strict.rst:53
 msgid "对一个使用getter方法读取的属性进行赋值"
-msgstr ""
+msgstr "Assigning to a property that is read through a getter method."
 
 #: ../../source/language/javascript/strict.rst:54
 msgid "对禁止扩展的对象添加新属性"
-msgstr ""
+msgstr "Adding a new property to a non-extensible object."
 
 #: ../../source/language/javascript/strict.rst:55
 msgid "删除一个不可删除的属性"
-msgstr ""
+msgstr "Deleting a non-deletable property."
 
 #: ../../source/language/javascript/strict.rst:58
 msgid "语法错误"
-msgstr ""
+msgstr "Syntax Errors"
 
 #: ../../source/language/javascript/strict.rst:59
 msgid "严格模式新增了一些语法错误，包括："
-msgstr ""
+msgstr "Strict mode adds several syntax errors, including:"
 
 #: ../../source/language/javascript/strict.rst:61
 msgid "对象不能有重名的属性"
-msgstr ""
+msgstr "Objects cannot have duplicate property names."
 
 #: ../../source/language/javascript/strict.rst:62
 msgid "函数不能有重名的参数"
-msgstr ""
+msgstr "Functions cannot have duplicate parameter names."
 
 #: ../../source/language/javascript/strict.rst:63
 msgid "禁止八进制表示法"
-msgstr ""
+msgstr "Octal notation is prohibited."
 
 #: ../../source/language/javascript/strict.rst:64
 msgid "函数必须声明在顶层"
-msgstr ""
+msgstr "Functions must be declared at the top level."
 
 #: ../../source/language/javascript/strict.rst:65
 msgid "新增保留字"
-msgstr ""
+msgstr "New reserved words"
 
 #: ../../source/language/javascript/strict.rst:66
 msgid "class"
-msgstr ""
+msgstr "class"
 
 #: ../../source/language/javascript/strict.rst:67
 msgid "enum"
-msgstr ""
+msgstr "enum"
 
 #: ../../source/language/javascript/strict.rst:68
 msgid "export"
-msgstr ""
+msgstr "export"
 
 #: ../../source/language/javascript/strict.rst:69
 msgid "extends"
-msgstr ""
+msgstr "extends"
 
 #: ../../source/language/javascript/strict.rst:70
 msgid "import"
-msgstr ""
+msgstr "import"
 
 #: ../../source/language/javascript/strict.rst:71
 msgid "super"
-msgstr ""
+msgstr "super"
 
 #: ../../source/language/javascript/strict.rst:74
 msgid "安全增强"
-msgstr ""
+msgstr "Security Enhancements"
 
 #: ../../source/language/javascript/strict.rst:75
 msgid "禁止this关键字指向全局对象"
-msgstr ""
+msgstr "Preventing the this keyword from pointing to the global object."
 
 #: ../../source/language/javascript/strict.rst:76
 msgid "禁止在函数内部遍历调用栈"
-msgstr ""
+msgstr "Prohibiting traversal of the call stack inside functions."
 
 #: ../../source/language/javascript/strict.rst:79
 msgid "限制arguments对象"
-msgstr ""
+msgstr "Restricting the arguments Object"
 
 #: ../../source/language/javascript/strict.rst:80
 msgid "不允许对arguments赋值"
-msgstr ""
+msgstr "Assigning to arguments is not allowed."
 
 #: ../../source/language/javascript/strict.rst:81
 msgid "arguments不再追踪参数的变化"
-msgstr ""
+msgstr "arguments no longer tracks changes to parameters."
 
 #: ../../source/language/javascript/strict.rst:82
 msgid "禁止使用arguments.callee"
-msgstr ""
+msgstr "Using arguments.callee is prohibited."

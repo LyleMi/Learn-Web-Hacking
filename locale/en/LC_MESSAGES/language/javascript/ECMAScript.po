@@ -20,99 +20,99 @@ msgstr ""
 
 #: ../../source/language/javascript/ECMAScript.rst:2
 msgid "ECMAScript"
-msgstr ""
+msgstr "ECMAScript"
 
 #: ../../source/language/javascript/ECMAScript.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/javascript/ECMAScript.rst:6
 msgid "ECMAScript是一种由ECMA国际通过ECMA-262标准化的脚本程序设计语言，它往往被称为JavaScript或JScript。简单的，可以认为ECMAScript是JavaScript的一个标准，但实际上后两者是ECMA-262标准的实现和扩展。"
-msgstr ""
+msgstr "ECMAScript is a scripting language standardized by Ecma International through ECMA-262. It is often referred to as JavaScript or JScript. In simple terms, ECMAScript can be considered a standard for JavaScript, while JavaScript and JScript are implementations and extensions of the ECMA-262 standard."
 
 #: ../../source/language/javascript/ECMAScript.rst:9
 msgid "版本"
-msgstr ""
+msgstr "Versions"
 
 #: ../../source/language/javascript/ECMAScript.rst:10
 msgid "1997年6月，首版发布。1998年6月，进行了格式修正，以使得其形式与ISO/IEC16262国际标准一致。1999年12月，引入强大的正则表达式，更好的词法作用域链处理，新的控制指令，异常处理，错误定义更加明确，数据输出的格式化及其它改变。而后由于关于语言的复杂性出现分歧，第4版本被放弃，其中的部分成为了第5版本及Harmony的基础。"
-msgstr ""
+msgstr "The first edition was released in June 1997. In June 1998, formatting corrections were made to align it with the ISO/IEC 16262 international standard. In December 1999, it introduced powerful regular expressions, better lexical scope-chain handling, new control instructions, exception handling, clearer error definitions, data-output formatting, and other changes. Later, due to disagreements over language complexity, version 4 was abandoned; parts of it became the basis for version 5 and Harmony."
 
 #: ../../source/language/javascript/ECMAScript.rst:12
 msgid ""
 "2009年12月，第五版发布，新增“严格模式（strict "
 "mode）”，澄清了许多第3版本的模糊规范，并适应了与规范不一致的真实世界实现的行为。增加了部分新功能，如getters及setters，支持JSON以及在对象属性上更完整的反射。"
-msgstr ""
+msgstr "In December 2009, the fifth edition was released. It added strict mode, clarified many ambiguous parts of the third edition, and accommodated the behavior of real-world implementations that did not match the specification. It also added features such as getters and setters, JSON support, and more complete reflection over object properties."
 
 #: ../../source/language/javascript/ECMAScript.rst:14
 msgid ""
 "2015年6月，第6版发布，最早被称作是 ECMAScript "
 "6（ES6），添加了类和模块的语法，迭代器，Python风格的生成器和生成器表达式，箭头函数，二进制数据，静态类型数组，集合（maps，sets "
 "和 weak maps），promise，reflection 和 proxies。"
-msgstr ""
+msgstr "In June 2015, the sixth edition was released. It was first known as ECMAScript 6 (ES6), and added class and module syntax, iterators, Python-style generators and generator expressions, arrow functions, binary data, typed arrays, collections (maps, sets, and weak maps), promises, reflection, and proxies."
 
 #: ../../source/language/javascript/ECMAScript.rst:16
 msgid ""
 "2016年6月，ECMAScript 2016（ES2016）发布，引入 ``Array.prototype.includes`` "
 "、指数运算符、SIMD等新特性。"
-msgstr ""
+msgstr "In June 2016, ECMAScript 2016 (ES2016) was released, introducing ``Array.prototype.includes``, the exponentiation operator, SIMD, and other features."
 
 #: ../../source/language/javascript/ECMAScript.rst:18
 msgid "2017年6月，ECMAScript 2017（ES2017）发布，多个新的概念和语言特性。"
-msgstr ""
+msgstr "In June 2017, ECMAScript 2017 (ES2017) was released with several new concepts and language features."
 
 #: ../../source/language/javascript/ECMAScript.rst:20
 msgid "2018年6月，ECMAScript 2018 （ES2018）发布包含了异步循环，生成器，新的正则表达式特性和 rest/spread 语法。"
-msgstr ""
+msgstr "In June 2018, ECMAScript 2018 (ES2018) was released, including asynchronous iteration, generators, new regular-expression features, and rest/spread syntax."
 
 #: ../../source/language/javascript/ECMAScript.rst:23
 msgid "ES6 特性"
-msgstr ""
+msgstr "ES6 Features"
 
 #: ../../source/language/javascript/ECMAScript.rst:24
 msgid "``const`` / ``let``"
-msgstr ""
+msgstr "``const`` / ``let``"
 
 #: ../../source/language/javascript/ECMAScript.rst:25
 msgid "模板字面量"
-msgstr ""
+msgstr "Template literals"
 
 #: ../../source/language/javascript/ECMAScript.rst:26
 msgid "解构"
-msgstr ""
+msgstr "Destructuring"
 
 #: ../../source/language/javascript/ECMAScript.rst:27
 msgid "``[a, b] = [10, 20]``"
-msgstr ""
+msgstr "``[a, b] = [10, 20]``"
 
 #: ../../source/language/javascript/ECMAScript.rst:28
 msgid "对象字面量简写法"
-msgstr ""
+msgstr "Object literal shorthand"
 
 #: ../../source/language/javascript/ECMAScript.rst:29
 msgid "``for...of`` 循环"
-msgstr ""
+msgstr "``for...of`` loops"
 
 #: ../../source/language/javascript/ECMAScript.rst:30
 msgid "``...xxx`` 展开运算符"
-msgstr ""
+msgstr "``...xxx`` spread operator"
 
 #: ../../source/language/javascript/ECMAScript.rst:31
 msgid "可变参数"
-msgstr ""
+msgstr "Rest parameters"
 
 #: ../../source/language/javascript/ECMAScript.rst:32
 msgid "箭头函数"
-msgstr ""
+msgstr "Arrow functions"
 
 #: ../../source/language/javascript/ECMAScript.rst:33
 msgid "默认参数函数"
-msgstr ""
+msgstr "Functions with default parameters"
 
 #: ../../source/language/javascript/ECMAScript.rst:34
 msgid "默认值与解构"
-msgstr ""
+msgstr "Default values and destructuring"
 
 #: ../../source/language/javascript/ECMAScript.rst:35
 msgid "类"
-msgstr ""
+msgstr "Classes"

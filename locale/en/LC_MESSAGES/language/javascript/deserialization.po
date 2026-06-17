@@ -20,30 +20,30 @@ msgstr ""
 
 #: ../../source/language/javascript/deserialization.rst:2
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/language/javascript/deserialization.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/javascript/deserialization.rst:6
 msgid ""
 "JavaScript本身并没有反序列化的实现，但是一些库如node-serialize、serialize-to-"
 "js等支持了反序列化功能。这些库通常使用JSON形式来存储数据，但是和原生函数JSON.parse、 "
 "JSON.stringify不同，这些库支持任何对象的反序列化，特别是函数，如果使用不当，则可能会出现反序列化问题。"
-msgstr ""
+msgstr "JavaScript itself does not provide a deserialization implementation, but some libraries, such as node-serialize and serialize-to-js, support deserialization. These libraries usually store data in JSON form, but unlike the native JSON.parse and JSON.stringify functions, they support deserialization of arbitrary objects, especially functions. If they are used improperly, deserialization issues may occur."
 
 #: ../../source/language/javascript/deserialization.rst:9
 msgid "Payload构造"
-msgstr ""
+msgstr "Payload Construction"
 
 #: ../../source/language/javascript/deserialization.rst:10
 msgid "下面是一个最简单的例子，首先获得序列化后的输出"
-msgstr ""
+msgstr "The following is a minimal example. First obtain the serialized output."
 
 #: ../../source/language/javascript/deserialization.rst:22
 msgid "上面执行后会返回"
-msgstr ""
+msgstr "After the code above runs, it returns:"
 
 #: ../../source/language/javascript/deserialization.rst:28
 #, python-brace-format
@@ -51,16 +51,16 @@ msgid ""
 "不过这段payload反序列化后并不会执行，但是在JS中支持立即调用的函数表达式（Immediately Invoked Function "
 "Expression），比如 ``(function () { /* code */ } ());`` "
 "这样就会执行函数中的代码。那么可以使用这种方法修改序列化后的字符串来完成一次反序列化。最后的payload测试如下:"
-msgstr ""
+msgstr "However, this payload does not execute after deserialization. JavaScript supports Immediately Invoked Function Expressions, such as ``(function () { /* code */ } ());``, which execute the code inside the function. This technique can be used to modify the serialized string and complete a deserialization exploit. The final payload test is as follows:"
 
 #: ../../source/language/javascript/deserialization.rst:39
 msgid "Payload构造 II"
-msgstr ""
+msgstr "Payload Construction II"
 
 #: ../../source/language/javascript/deserialization.rst:40
 msgid "以上提到的是node-serialize这类反序列化库的构造方式，还有一类库如funcster，是使用直接拼接字符串构造函数的方式来执行。"
-msgstr ""
+msgstr "The technique above applies to deserialization libraries such as node-serialize. Another class of libraries, such as funcster, executes by directly concatenating strings into function constructors."
 
 #: ../../source/language/javascript/deserialization.rst:46
 msgid "这种方式可以使用相应的闭合来构造payload。"
-msgstr ""
+msgstr "With this approach, a payload can be constructed by using the corresponding closure sequence."

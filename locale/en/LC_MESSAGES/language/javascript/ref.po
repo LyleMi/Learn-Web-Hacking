@@ -20,42 +20,42 @@ msgstr ""
 
 #: ../../source/language/javascript/ref.rst:2
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/language/javascript/ref.rst:3
 msgid "`JavaScript反调试技巧 <http://www.freebuf.com/articles/system/163579.html>`_"
-msgstr ""
+msgstr "`JavaScript Anti-Debugging Techniques <http://www.freebuf.com/articles/system/163579.html>`_"
 
 #: ../../source/language/javascript/ref.rst:4
 msgid ""
 "`ECMAScript Language Specification <http://www.ecma-"
 "international.org/ecma-262/5.1/#sec-15.3.4.5>`_"
-msgstr ""
+msgstr "`ECMAScript Language Specification <http://www.ecma-international.org/ecma-262/5.1/#sec-15.3.4.5>`_"
 
 #: ../../source/language/javascript/ref.rst:5
 msgid "`js prototype <https://www.zhihu.com/question/34183746?sort=created>`_"
-msgstr ""
+msgstr "`js prototype <https://www.zhihu.com/question/34183746?sort=created>`_"
 
 #: ../../source/language/javascript/ref.rst:6
 msgid "`javascript防劫持 <https://github.com/scscms/guardJs/>`_"
-msgstr ""
+msgstr "`JavaScript Anti-Hijacking <https://github.com/scscms/guardJs/>`_"
 
 #: ../../source/language/javascript/ref.rst:7
 msgid ""
 "`XSS 前端防火墙 <http://fex.baidu.com/blog/2014/06/xss-frontend-"
 "firewall-3.html>`_"
-msgstr ""
+msgstr "`XSS Front-End Firewall <http://fex.baidu.com/blog/2014/06/xss-frontend-firewall-3.html>`_"
 
 #: ../../source/language/javascript/ref.rst:8
 msgid ""
 "`exploiting node js deserialization bug for remote code execution "
 "<https://opsecx.com/index.php/2017/02/08/exploiting-node-js-"
 "deserialization-bug-for-remote-code-execution/>`_"
-msgstr ""
+msgstr "`exploiting node js deserialization bug for remote code execution <https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-bug-for-remote-code-execution/>`_"
 
 #: ../../source/language/javascript/ref.rst:9
 msgid ""
 "`Prototype pollution attack <https://github.com/HoLyVieR/prototype-"
 "pollution-nsec18/>`_ Content released at NorthSec 2018 on prototype "
 "pollution"
-msgstr ""
+msgstr "`Prototype pollution attack <https://github.com/HoLyVieR/prototype-pollution-nsec18/>`_ Content released at NorthSec 2018 on prototype pollution"

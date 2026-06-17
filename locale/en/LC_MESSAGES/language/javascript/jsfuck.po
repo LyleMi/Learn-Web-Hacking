@@ -20,148 +20,148 @@ msgstr ""
 
 #: ../../source/language/javascript/jsfuck.rst:2
 msgid "jsfuck cheat sheet"
-msgstr ""
+msgstr "JSFuck Cheat Sheet"
 
 #: ../../source/language/javascript/jsfuck.rst:5
 msgid "Basic values"
-msgstr ""
+msgstr "Basic Values"
 
 #: ../../source/language/javascript/jsfuck.rst:6
 msgid "``undefined`` > ``[][[]]``"
-msgstr ""
+msgstr "``undefined`` > ``[][[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:7
 msgid "``false`` > ``![]``"
-msgstr ""
+msgstr "``false`` > ``![]``"
 
 #: ../../source/language/javascript/jsfuck.rst:8
 msgid "``true`` > ``!![]``"
-msgstr ""
+msgstr "``true`` > ``!![]``"
 
 #: ../../source/language/javascript/jsfuck.rst:9
 msgid "``NaN`` > ``+[![]]``"
-msgstr ""
+msgstr "``NaN`` > ``+[![]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:10
 msgid "``0`` > ``+[]``"
-msgstr ""
+msgstr "``0`` > ``+[]``"
 
 #: ../../source/language/javascript/jsfuck.rst:11
 msgid "``1`` > ``+!+[]``"
-msgstr ""
+msgstr "``1`` > ``+!+[]``"
 
 #: ../../source/language/javascript/jsfuck.rst:12
 msgid "``2`` > ``!+[]+!+[]``"
-msgstr ""
+msgstr "``2`` > ``!+[]+!+[]``"
 
 #: ../../source/language/javascript/jsfuck.rst:15
 msgid "Basic strings"
-msgstr ""
+msgstr "Basic Strings"
 
 #: ../../source/language/javascript/jsfuck.rst:16
 msgid "``''`` > ``[]+[]``"
-msgstr ""
+msgstr "``''`` > ``[]+[]``"
 
 #: ../../source/language/javascript/jsfuck.rst:17
 msgid "``'undefined'`` > ``[]+[][[]]``"
-msgstr ""
+msgstr "``'undefined'`` > ``[]+[][[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:18
 msgid "``'false'`` > ``[]+![]``"
-msgstr ""
+msgstr "``'false'`` > ``[]+![]``"
 
 #: ../../source/language/javascript/jsfuck.rst:19
 msgid "``'true'`` > ``[]+!![]``"
-msgstr ""
+msgstr "``'true'`` > ``[]+!![]``"
 
 #: ../../source/language/javascript/jsfuck.rst:20
 msgid "``'NaN'`` > ``[]+(+[![]])``"
-msgstr ""
+msgstr "``'NaN'`` > ``[]+(+[![]])``"
 
 #: ../../source/language/javascript/jsfuck.rst:21
 msgid "``'0'`` > ``[]+(+[])``"
-msgstr ""
+msgstr "``'0'`` > ``[]+(+[])``"
 
 #: ../../source/language/javascript/jsfuck.rst:22
 msgid "``'1'`` > ``[]+(+!+[])``"
-msgstr ""
+msgstr "``'1'`` > ``[]+(+!+[])``"
 
 #: ../../source/language/javascript/jsfuck.rst:23
 msgid "``'2'`` > ``[]+(!+[]+!+[])``"
-msgstr ""
+msgstr "``'2'`` > ``[]+(!+[]+!+[])``"
 
 #: ../../source/language/javascript/jsfuck.rst:24
 msgid "``'10'`` > ``[+!+[]]+[+[]]``"
-msgstr ""
+msgstr "``'10'`` > ``[+!+[]]+[+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:25
 msgid "``'11'`` > ``[+!+[]]+[+!+[]]``"
-msgstr ""
+msgstr "``'11'`` > ``[+!+[]]+[+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:26
 msgid "``'100'`` > ``[+!+[]]+[+[]]+(+[])``"
-msgstr ""
+msgstr "``'100'`` > ``[+!+[]]+[+[]]+(+[])``"
 
 #: ../../source/language/javascript/jsfuck.rst:29
 msgid "Higher numbers"
-msgstr ""
+msgstr "Higher Numbers"
 
 #: ../../source/language/javascript/jsfuck.rst:31
 msgid "``10`` > ``+([+!+[]]+[+[]])``"
-msgstr ""
+msgstr "``10`` > ``+([+!+[]]+[+[]])``"
 
 #: ../../source/language/javascript/jsfuck.rst:32
 msgid "``11`` > ``+([+!+[]]+[+!+[]])``"
-msgstr ""
+msgstr "``11`` > ``+([+!+[]]+[+!+[]])``"
 
 #: ../../source/language/javascript/jsfuck.rst:33
 msgid "``100`` > ``+([+!+[]]+[+[]]+(+[]))``"
-msgstr ""
+msgstr "``100`` > ``+([+!+[]]+[+[]]+(+[]))``"
 
 #: ../../source/language/javascript/jsfuck.rst:36
 msgid "String alphabet"
-msgstr ""
+msgstr "String Alphabet"
 
 #: ../../source/language/javascript/jsfuck.rst:37
 msgid "``'a'`` > ``([]+![])[+!+[]]``"
-msgstr ""
+msgstr "``'a'`` > ``([]+![])[+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:38
 msgid "``'d'`` > ``([]+[][[]])[+!+[]+!+[]]``"
-msgstr ""
+msgstr "``'d'`` > ``([]+[][[]])[+!+[]+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:39
 msgid "``'e'`` > ``([]+!+[])[+!+[]+!+[]+!+[]]``"
-msgstr ""
+msgstr "``'e'`` > ``([]+!+[])[+!+[]+!+[]+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:40
 msgid "``'f'`` > ``([]+![])[+[]]``"
-msgstr ""
+msgstr "``'f'`` > ``([]+![])[+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:41
 msgid "``'i'`` > ``([]+[][[]])[+!+[]+!+[]+!+[]+!+[]+!+[]]``"
-msgstr ""
+msgstr "``'i'`` > ``([]+[][[]])[+!+[]+!+[]+!+[]+!+[]+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:42
 msgid "``'l'`` > ``([]+![])[+!+[]+!+[]]``"
-msgstr ""
+msgstr "``'l'`` > ``([]+![])[+!+[]+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:43
 msgid "``'n'`` > ``([]+[][[]])[+!+[]]``"
-msgstr ""
+msgstr "``'n'`` > ``([]+[][[]])[+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:44
 msgid "``'r'`` > ``([]+!+[])[+!+[]]``"
-msgstr ""
+msgstr "``'r'`` > ``([]+!+[])[+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:45
 msgid "``'s'`` > ``([]+![])[+!+[]+!+[]+!+[]]``"
-msgstr ""
+msgstr "``'s'`` > ``([]+![])[+!+[]+!+[]+!+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:46
 msgid "``'t'`` > ``([]+!+[])[+[]]``"
-msgstr ""
+msgstr "``'t'`` > ``([]+!+[])[+[]]``"
 
 #: ../../source/language/javascript/jsfuck.rst:47
 msgid "``'u'`` > ``([]+!+[])[+!+[]+!+[]]``"
-msgstr ""
+msgstr "``'u'`` > ``([]+!+[])[+!+[]+!+[]]``"

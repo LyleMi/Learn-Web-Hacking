@@ -20,83 +20,83 @@ msgstr ""
 
 #: ../../source/language/javascript/wasm.rst:2
 msgid "WebAssembly"
-msgstr ""
+msgstr "WebAssembly"
 
 #: ../../source/language/javascript/wasm.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/javascript/wasm.rst:6
 msgid "简而言之，WASM是一种分发要在浏览器中执行的代码的新方法。它是一种二进制语言，但是无法直接在处理器上运行。在运行时，代码被编译为中间字节代码，可以在浏览器内快速转换为机器代码，然后比传统JavaScript更有效地执行。"
-msgstr ""
+msgstr "In short, WASM is a new way to distribute code that will execute in the browser. It is a binary language, but it cannot run directly on the processor. At runtime, the code is compiled into intermediate bytecode that can be quickly converted to machine code inside the browser and then executed more efficiently than traditional JavaScript."
 
 #: ../../source/language/javascript/wasm.rst:9
 msgid "执行"
-msgstr ""
+msgstr "Execution"
 
 #: ../../source/language/javascript/wasm.rst:10
 msgid "虽然浏览器可能以不同的方式来实现Wasm支持，但是使用的沙盒环境通常是JavaScript沙箱。"
-msgstr ""
+msgstr "Although browsers may implement Wasm support in different ways, the sandbox environment they use is usually the JavaScript sandbox."
 
 #: ../../source/language/javascript/wasm.rst:12
 msgid ""
 "在浏览器中运行时，Wasm应用程序需要将其代码定义为单独的文件或JavaScript块内的字节数组。 "
 "然后使用JavaScript实例化文件或代码块，目前不能在没有JavaScript包装器的情况下直接在页面中调用Wasm。"
-msgstr ""
+msgstr "When running in a browser, a Wasm application needs to define its code as a separate file or as a byte array inside a JavaScript block. JavaScript then instantiates the file or code block. At present, Wasm cannot be called directly from a page without a JavaScript wrapper."
 
 #: ../../source/language/javascript/wasm.rst:14
 msgid ""
 "虽然Wasm可以用C / "
 "C++等语言编写，但它本身不能与沙箱之外的环境进行交互。这意味着当Wasm应用程序想要进行输出文本等操作时，它需要调用浏览器提供的功能，然后使用浏览器在某处输出文本。"
-msgstr ""
+msgstr "Although Wasm can be written in languages such as C / C++, it cannot interact with the environment outside the sandbox by itself. This means that when a Wasm application wants to perform operations such as outputting text, it needs to call functionality provided by the browser and then use the browser to output the text somewhere."
 
 #: ../../source/language/javascript/wasm.rst:16
 msgid ""
 "Wasm中的内存是线性的，它在Wasm应用程序和JavaScript之间共享。 "
 "当Wasm函数将字符串返回给JavaScript时，它实际上返回一个指向Wasm应用程序内存空间内位置的指针。 "
 "Wasm应用程序本身只能访问分配给它的JavaScript内存部分，而不是整个内存空间。"
-msgstr ""
+msgstr "Memory in Wasm is linear and is shared between the Wasm application and JavaScript. When a Wasm function returns a string to JavaScript, it actually returns a pointer to a location in the Wasm application's memory space. The Wasm application itself can access only the portion of JavaScript memory allocated to it, not the entire memory space."
 
 #: ../../source/language/javascript/wasm.rst:19
 msgid "安全"
-msgstr ""
+msgstr "Security"
 
 #: ../../source/language/javascript/wasm.rst:20
 msgid "Wasm的设计从如下几个方面考虑来保证Wasm的安全性"
-msgstr ""
+msgstr "Wasm is designed to ensure security from the following perspectives:"
 
 #: ../../source/language/javascript/wasm.rst:22
 msgid "保护用户免受由于无意的错误而导致漏洞的应用程序的侵害"
-msgstr ""
+msgstr "Protect users from applications with vulnerabilities caused by unintentional bugs."
 
 #: ../../source/language/javascript/wasm.rst:23
 msgid "保护用户免受故意编写为恶意的应用程序的侵害"
-msgstr ""
+msgstr "Protect users from applications intentionally written to be malicious."
 
 #: ../../source/language/javascript/wasm.rst:24
 msgid "为开发人员提供良好的缓解措施"
-msgstr ""
+msgstr "Provide developers with effective mitigations."
 
 #: ../../source/language/javascript/wasm.rst:26
 msgid "具体的安全措施有"
-msgstr ""
+msgstr "Specific security measures include:"
 
 #: ../../source/language/javascript/wasm.rst:28
 msgid "Wasm应用程序在沙箱内运行"
-msgstr ""
+msgstr "Wasm applications run inside a sandbox."
 
 #: ../../source/language/javascript/wasm.rst:29
 msgid "Wasm无法对任意地址进行函数调用。Wasm采用对函数进行编号的方式，编号存储在函数表中"
-msgstr ""
+msgstr "Wasm cannot make function calls to arbitrary addresses. Wasm numbers functions, and the numbers are stored in a function table."
 
 #: ../../source/language/javascript/wasm.rst:30
 msgid "间接函数调用受类型签名检查的约束"
-msgstr ""
+msgstr "Indirect function calls are constrained by type-signature checks."
 
 #: ../../source/language/javascript/wasm.rst:31
 msgid "调用堆栈受到保护，这意味着无法覆盖返回指针"
-msgstr ""
+msgstr "The call stack is protected, which means return pointers cannot be overwritten."
 
 #: ../../source/language/javascript/wasm.rst:32
 msgid "实现了控制流完整性，这意味着调用意外的函数将失败"
-msgstr ""
+msgstr "Control-flow integrity is implemented, which means calls to unexpected functions will fail."
