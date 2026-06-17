@@ -20,192 +20,297 @@ msgstr ""
 
 #: ../../source/misc/apt.rst:2
 msgid "APT"
-msgstr ""
+msgstr "APT"
 
 #: ../../source/misc/apt.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/misc/apt.rst:6
 msgid ""
 "APT (Advanced Persistent "
 "Threat)，翻译为高级持续威胁。2006年，APT攻击的概念被正式提出，用来描述从20世纪90年代末到21世纪初在美国军事和政府网络中发现的隐蔽且持续的网络攻击。"
 msgstr ""
+"APT (Advanced Persistent Threat) is translated as advanced persistent "
+"threat. In 2006, the concept of APT attacks was formally proposed to "
+"describe stealthy, persistent cyberattacks found in U.S. military and "
+"government networks from the late 1990s to the early 2000s."
 
 #: ../../source/misc/apt.rst:8
 msgid "APT攻击多用于指利用互联网进行网络间谍活动，其目标大多是获取高价值的敏感情报或者控制目标系统，对目标系统有着非常严重的威胁。"
 msgstr ""
+"APT attacks are mostly used to refer to cyber espionage conducted over the "
+"Internet. Their goals are usually to obtain high-value sensitive intelligence"
+" or control target systems, posing a severe threat to those systems."
 
 #: ../../source/misc/apt.rst:10
 msgid "发起APT攻击的通常是一个组织，其团体是一个既有能力也有意向持续而有效地进行攻击的实体。个人或者小团体发起的攻击一般不会被称为APT，因为即使其团体有意图攻击特定目标，也很少拥有先进和持久的资源来完成相应的攻击行为。"
 msgstr ""
+"APT attacks are usually launched by an organization: an entity that has both"
+" the capability and the intent to attack continuously and effectively. "
+"Attacks launched by individuals or small groups are generally not called "
+"APTs, because even if such groups intend to attack a specific target, they "
+"rarely have the advanced and persistent resources needed to complete the "
+"corresponding attack activity."
 
 #: ../../source/misc/apt.rst:12
 msgid "APT的攻击手段通常包括供应链攻击、社会工程学攻击、零日攻击和僵尸网络等多种方式。其基于这些攻击手段将将自定义的恶意代码放置在一台或多台计算机上执行特定的任务，并保持在较长的时间内不被发现。"
 msgstr ""
+"APT techniques usually include supply chain attacks, social engineering, "
+"zero-day attacks, botnets, and other methods. Based on these techniques, "
+"attackers place custom malware on one or more computers to perform specific "
+"tasks while remaining undetected for an extended period."
 
 #: ../../source/misc/apt.rst:14
 msgid "和传统的大面积扫描的攻击方式不同，因为APT攻击通常只面向单一特定的目标，且多数攻击会综合一系列手段来完成一次APT攻击，使其有着非常高的隐蔽性和复杂性，让对APT攻击的检测变得相当困难。顾名思义，APT的特征主要体现在下面这三个方面。"
 msgstr ""
+"Unlike traditional large-scale scanning attacks, APT attacks usually target "
+"one specific target. Most attacks combine a series of methods to complete an"
+" APT campaign, giving them very high stealth and complexity and making APT "
+"detection quite difficult. As the name suggests, APT characteristics are "
+"mainly reflected in the following three aspects."
 
 #: ../../source/misc/apt.rst:17
 msgid "高级性（Advanced）"
-msgstr ""
+msgstr "Advanced"
 
 #: ../../source/misc/apt.rst:18
 msgid "APT攻击会结合当前所有可用的攻击手段和技术，使得攻击具有极高的隐蔽性和渗透性。"
 msgstr ""
+"APT attacks combine all currently available attack methods and technologies,"
+" giving them extremely high stealth and penetration capability."
 
 #: ../../source/misc/apt.rst:20
 msgid "网络钓鱼就是其中的一种攻击方式。攻击者通常会结合社会工程学等手段来伪造可信度非常高的电子邮件，冒充目标信任的公司或者组织来发送难以分辨真假的对目标诱惑度很高恶意电子邮件。通过这些邮件来诱使被受害者访问攻击者控制的网站或者下载恶意代码。"
 msgstr ""
+"Phishing is one such attack method. Attackers usually combine social "
+"engineering and other techniques to forge highly credible emails, impersonate"
+" companies or organizations trusted by the target, and send malicious emails "
+"that are hard to distinguish from genuine messages and highly enticing to the"
+" target. These emails lure victims into visiting attacker-controlled websites"
+" or downloading malware."
 
 #: ../../source/misc/apt.rst:22
 msgid "APT攻击通常还会采用其他的方式来伪装自己的攻击行为，从而实现规避安全系统检测的目的。比如有的恶意代码会通过伪造合法签名来逃避杀毒软件检测。以震网病毒为例，其在攻击时就使用了白加黑的模式，利用合法的证书对其代码进行了签名，这种攻击方式会使得大部分恶意代码查杀引擎会直接认为恶意代码是合法的，而不进行任何的检测。"
 msgstr ""
+"APT attacks also commonly use other methods to disguise attack behavior and "
+"evade security system detection. For example, some malware forges legitimate "
+"signatures to evade antivirus detection. Stuxnet used a white-plus-black "
+"model during its attack, signing its code with legitimate certificates. This "
+"method can cause most malware scanning engines to treat the malware as "
+"legitimate and skip detection."
 
 #: ../../source/misc/apt.rst:24
 msgid "除了利用合法签名绕过检测，APT攻击者在攻击过程中也经常利用第三方的站点作为媒介来攻击目标，而不是使用传统的点到点攻击模式。这种模式通常被称为水坑攻击。"
 msgstr ""
+"In addition to using legitimate signatures to bypass detection, APT attackers"
+" often use third-party sites as intermediaries to attack targets instead of "
+"using traditional point-to-point attack models. This pattern is commonly "
+"called a watering hole attack."
 
 #: ../../source/misc/apt.rst:26
 msgid "水坑攻击是一种入侵的手法，一般来说，是在攻击者对目标有一定了解后，确定攻击目标经常访问的网站，而后入侵其中的一个或几个网站，并对这些网站植入恶意代码，最后来实现借助该网站感染目标的能力。因为这种攻击借助了目标信任的第三方网站，攻击的成功率相对钓鱼攻击来说要高出很多。"
 msgstr ""
+"A watering hole attack is an intrusion technique. In general, after attackers"
+" understand the target to some extent, they identify websites the target "
+"frequently visits, compromise one or more of those sites, implant malicious "
+"code, and then use the sites to infect the target. Because this attack uses a"
+" third-party website trusted by the target, its success rate is much higher "
+"than phishing."
 
 #: ../../source/misc/apt.rst:28
 msgid "另外一个能体现APT攻击高级性的特征是零日漏洞，目前国际上黑市一个零日漏洞的价格在数十万到数百万不等，每一个零日漏洞的稳定利用都需要大量的资源投入。而在APT攻击中，零日漏洞的利用非常广泛。以APT28为例，据统计，仅2015年一年当中APT28在攻击中就至少使用了六个零日漏洞。"
 msgstr ""
+"Another characteristic that reflects the advanced nature of APT attacks is "
+"the use of zero-day vulnerabilities. On international black markets, a single"
+" zero-day can cost from hundreds of thousands to millions, and reliable "
+"exploitation of each zero-day requires substantial resources. Zero-days are "
+"widely used in APT attacks. For example, statistics show that in 2015 alone,"
+" APT28 used at least six zero-day vulnerabilities in its attacks."
 
 #: ../../source/misc/apt.rst:31
 msgid "持续性（Persistent）"
-msgstr ""
+msgstr "Persistent"
 
 #: ../../source/misc/apt.rst:32
 msgid "和传统的基于短期利益的网络攻击有很大的不同。APT攻击的过程通常包括多个实施阶段。攻击者很很多情况下都是使用逐层渗透的方式来突破高级的防御系统，整个攻击过程一般持续时间会达到几个月甚至数年。一般来说，APT攻击可以分为以下几个阶段。"
 msgstr ""
+"APT attacks differ greatly from traditional cyberattacks driven by short-term"
+" gain. The APT process usually includes multiple operational stages. In many "
+"cases, attackers use layer-by-layer penetration to break through advanced "
+"defense systems, and the overall attack process often lasts for months or "
+"even years. In general, APT attacks can be divided into the following stages."
 
 #: ../../source/misc/apt.rst:35
 msgid "侦查阶段"
-msgstr ""
+msgstr "Reconnaissance Phase"
 
 #: ../../source/misc/apt.rst:36
 msgid "为了能够找到目标的脆弱点，攻击者通常会做大量的准备工作。在这个阶段攻击者多会使用基于大数据分析的隐私收集或者基于社会工程学的攻击来收集目标的信息，为了之后的攻击做出充分的准备。"
 msgstr ""
+"To find weak points in the target, attackers usually do extensive "
+"preparation. In this phase, attackers often collect target information "
+"through privacy collection based on big data analysis or social engineering "
+"attacks, making full preparations for later attacks."
 
 #: ../../source/misc/apt.rst:39
 msgid "初次入侵阶段"
-msgstr ""
+msgstr "Initial Intrusion Phase"
 
 #: ../../source/misc/apt.rst:40
 msgid "基于初次侦查的信息，攻击者通常能收集到目标所使用的软件、操作系统系统版本等信息。在获取这些信息后，攻击者可以挖掘软件对应版本的零日漏洞或者使用已知漏洞来对系统做出初期的入侵行为，获取对目标一定的控制权限。"
 msgstr ""
+"Based on initial reconnaissance, attackers can usually collect information "
+"such as the software and operating system versions used by the target. After "
+"obtaining this information, attackers can research zero-day vulnerabilities "
+"for the corresponding software versions or use known vulnerabilities to "
+"perform initial intrusion and obtain some control over the target."
 
 #: ../../source/misc/apt.rst:43
 msgid "权限提升阶段"
-msgstr ""
+msgstr "Privilege Escalation Phase"
 
 #: ../../source/misc/apt.rst:44
 msgid "在复杂网络中，攻击者初次入侵所获得的权限通常是较低的权限，而为了进一步的攻击，攻击者需要获取更高的权限来完成其需要的攻击行为。在这个阶段，攻击者通常会使用权限提升漏洞或者爆破密码等行为来实现权限提升的目的，最后获得系统甚至域的管理员权限。"
 msgstr ""
+"In complex networks, the privileges obtained through initial intrusion are "
+"usually low. To continue the attack, attackers need higher privileges to "
+"complete the actions they require. In this phase, attackers usually use "
+"privilege escalation vulnerabilities, password brute forcing, or similar "
+"methods to escalate privileges and ultimately obtain system or even domain "
+"administrator privileges."
 
 #: ../../source/misc/apt.rst:47
 msgid "保持访问阶段"
-msgstr ""
+msgstr "Maintain Access Phase"
 
 #: ../../source/misc/apt.rst:48
 msgid ""
 "在成功入侵目标计算机并且有一定的权限之后，攻击者一般会使用各种方式来保持对系统的访问权限。其中一个比较常用的方式是窃取合法用户的登录凭证。当获取了用户的访问凭证之后，可以使用远程控制工具（RAT，Remote"
 " Access Tools）来建立连接，并在连接建立之后，植入特定的后门来达到持续控制的效果。"
 msgstr ""
+"After successfully compromising a target computer and obtaining certain "
+"privileges, attackers generally use various methods to maintain access to the"
+" system. One commonly used method is stealing legitimate user login "
+"credentials. After obtaining user access credentials, attackers can use a "
+"remote control tool (RAT, Remote Access Tools) to establish a connection and,"
+" after the connection is established, implant a specific backdoor to achieve "
+"persistent control."
 
 #: ../../source/misc/apt.rst:51
 msgid "横向扩展阶段"
-msgstr ""
+msgstr "Lateral Expansion Phase"
 
 #: ../../source/misc/apt.rst:52
 msgid "当攻击者掌握一定的目标之后，会以较慢且较隐蔽的方式逐渐在内网扩散。主要方式是先在内网进行一定的侦查。基于这些侦查，获得内网计算机的相关信息，并结合这些信息使用软件漏洞或者弱密码爆破等手段来进行横向的进一步渗透，获取更多的权限和信息。"
 msgstr ""
+"After attackers control some targets, they gradually spread within the "
+"internal network in a slower and more covert way. The main method is to first"
+" conduct reconnaissance inside the internal network. Based on that "
+"reconnaissance, attackers obtain information about internal computers and "
+"combine it with software vulnerabilities or weak-password brute forcing to "
+"perform further lateral penetration and acquire more privileges and "
+"information."
 
 #: ../../source/misc/apt.rst:55
 msgid "攻击收益阶段"
-msgstr ""
+msgstr "Attack Monetization Phase"
 
 #: ../../source/misc/apt.rst:56
 msgid "APT攻击的主要目的是窃取目标系统的信息或对其造成一定的破坏。在完成横向扩展控制一定的内网机器后。以收集信息为目标的攻击者会使用加密通道的方式把获取的信息逐渐回传并消除入侵痕迹。而以造成破坏为目标的攻击，则在这个阶段进行相应的攻破坏。"
 msgstr ""
+"The main purpose of an APT attack is to steal information from the target "
+"system or cause it some degree of damage. After completing lateral expansion "
+"and controlling a number of internal machines, attackers focused on "
+"information collection gradually exfiltrate the obtained information through "
+"encrypted channels and erase intrusion traces. Attacks aimed at destruction "
+"carry out the corresponding destructive actions in this phase."
 
 #: ../../source/misc/apt.rst:59
 msgid "威胁性（Threat）"
-msgstr ""
+msgstr "Threat"
 
 #: ../../source/misc/apt.rst:60
 msgid "和传统攻击不同，APT攻击的攻击手段和方案大都是针对特定的攻击对象和目的来设计。相对其他攻击，攻击者有着非常明确的目标和目的，很少会使用自动化的攻击方式，而是精确的攻击。"
 msgstr ""
+"Unlike traditional attacks, the methods and plans used in APT attacks are "
+"mostly designed for specific targets and purposes. Compared with other "
+"attacks, APT attackers have very clear targets and objectives and rarely use "
+"automated attack methods; instead, they conduct precise attacks."
 
 #: ../../source/misc/apt.rst:62
 msgid "另外APT的目标多是政府机构、金融、能源等敏感企业、部门，一旦这些目标被成功攻击，其影响往往十分巨大。据目前已知的信息，在美国、俄罗斯等国的大选中，以及欧洲一些政治事件中，都有APT攻击出现。APT攻击已经成为国家之前斗争的一种重要手段。"
 msgstr ""
+"In addition, APT targets are often sensitive enterprises and departments such"
+" as government agencies, finance, and energy. Once these targets are "
+"successfully attacked, the impact is often enormous. Based on currently known"
+" information, APT attacks have appeared in elections in the United States, "
+"Russia, and other countries, as well as in some European political events. "
+"APT attacks have become an important means of conflict between states."
 
 #: ../../source/misc/apt.rst:65
 msgid "相关事件"
-msgstr ""
+msgstr "Related Events"
 
 #: ../../source/misc/apt.rst:66
 msgid "2010年伊朗震网病毒"
-msgstr ""
+msgstr "2010 Stuxnet in Iran"
 
 #: ../../source/misc/apt.rst:67
 msgid "2013美国棱镜门事件"
-msgstr ""
+msgstr "2013 U.S. PRISM Incident"
 
 #: ../../source/misc/apt.rst:68
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../../source/misc/apt.rst:71
 msgid "IoC"
-msgstr ""
+msgstr "IoC"
 
 #: ../../source/misc/apt.rst:72
 msgid "IoC (Indicators of Compromise) 在取证领域被定义为计算机安全性被破坏的证据。"
 msgstr ""
+"IoC (Indicators of Compromise) is defined in forensics as evidence that "
+"computer security has been compromised."
 
 #: ../../source/misc/apt.rst:74
 msgid "常见的 IoC 有以下几种："
-msgstr ""
+msgstr "Common IoCs include the following:"
 
 #: ../../source/misc/apt.rst:76
 msgid "hash"
-msgstr ""
+msgstr "hash"
 
 #: ../../source/misc/apt.rst:77
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: ../../source/misc/apt.rst:78
 msgid "域名"
-msgstr ""
+msgstr "Domain Name"
 
 #: ../../source/misc/apt.rst:79
 msgid "网络"
-msgstr ""
+msgstr "Network"
 
 #: ../../source/misc/apt.rst:80
 msgid "主机特征"
-msgstr ""
+msgstr "Host Characteristics"
 
 #: ../../source/misc/apt.rst:81
 msgid "工具"
-msgstr ""
+msgstr "Tools"
 
 #: ../../source/misc/apt.rst:82
 msgid "TTPs"
-msgstr ""
+msgstr "TTPs"
 
 #: ../../source/misc/apt.rst:85
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/apt.rst:86
 msgid "`APT 分析及 TTPs 提取 <https://projectsharp.org/2020/02/23/APT 分析及 TTPs 提取>`_"
 msgstr ""
+"`APT Analysis and TTPs Extraction <https://projectsharp.org/2020/02/23/APT%20%E5%88%86%E6%9E%90%E5%8F%8A%20TTPs%20%E6%8F%90%E5%8F%96>`_"

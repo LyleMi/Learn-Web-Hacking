@@ -20,113 +20,161 @@ msgstr ""
 
 #: ../../source/misc/dos.rst:2
 msgid "拒绝服务攻击"
-msgstr ""
+msgstr "Denial of Service Attacks"
 
 #: ../../source/misc/dos.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Overview"
 
 #: ../../source/misc/dos.rst:6
 msgid "DoS（Denial of Service）指拒绝服务，是一种常用来使服务器或网络瘫痪的网络攻击手段。"
 msgstr ""
+"DoS (Denial of Service) refers to denial of service, a common cyberattack "
+"method used to cripple servers or networks."
 
 #: ../../source/misc/dos.rst:8
 msgid ""
 "在平时更多提到的是分布式拒绝服务（DDoS，Distributed Denial of Service） "
 "攻击，该攻击是指利用足够数量的傀儡计算机产生数量巨大的攻击数据包，对网络上的一台或多台目标实施DDoS攻击，成倍地提高威力，从而耗尽受害目标的资源，迫使目标失去提供正常服务的能力。"
 msgstr ""
+"The more commonly discussed form is a distributed denial of service (DDoS, "
+"Distributed Denial of Service) attack. This attack uses a sufficient number "
+"of compromised computers to generate huge volumes of attack packets and "
+"launch DDoS attacks against one or more targets on the network, multiplying "
+"the attack power, exhausting the victim's resources, and forcing the target "
+"to lose the ability to provide normal service."
 
 #: ../../source/misc/dos.rst:11
 msgid "UDP反射"
-msgstr ""
+msgstr "UDP Reflection"
 
 #: ../../source/misc/dos.rst:12
 msgid "基于UDP文的反射DDoS攻击是拒绝服务攻击的一种形式。攻击者不直接攻击目标，而是利用互联网中某些开放的服务器，伪造被攻击者的地址并向该服务器发送基于UDP服务的特殊请求报文，使得数倍于请求报文的数据被发送到被攻击IP，从而对后者间接形成DDoS攻击。"
 msgstr ""
+"UDP-based reflection DDoS attacks are a form of denial of service attack. "
+"The attacker does not attack the target directly, but instead abuses certain "
+"open servers on the Internet, spoofs the victim's address, and sends special "
+"UDP service request packets to those servers. This causes data several times "
+"larger than the request packets to be sent to the victim IP, indirectly "
+"forming a DDoS attack against it."
 
 #: ../../source/misc/dos.rst:14
 msgid "常用于DoS攻击的服务有:"
-msgstr ""
+msgstr "Services commonly used for DoS attacks include:"
 
 #: ../../source/misc/dos.rst:16
 msgid "NTP"
-msgstr ""
+msgstr "NTP"
 
 #: ../../source/misc/dos.rst:17
 msgid "DNS"
-msgstr ""
+msgstr "DNS"
 
 #: ../../source/misc/dos.rst:18
 msgid "SSDP"
-msgstr ""
+msgstr "SSDP"
 
 #: ../../source/misc/dos.rst:19
 msgid "Memcached"
-msgstr ""
+msgstr "Memcached"
 
 #: ../../source/misc/dos.rst:21
 msgid ""
 "其中DNS攻击主要是指DNS Request Flood、DNS Response Flood、虚假源+真实源DNS Query "
 "Flood、权威服务器攻击和Local服务器攻击。"
 msgstr ""
+"DNS attacks mainly refer to DNS Request Flood, DNS Response Flood, spoofed "
+"source plus real source DNS Query Flood, authoritative server attacks, and "
+"local server attacks."
 
 #: ../../source/misc/dos.rst:24
 msgid "TCP Flood"
-msgstr ""
+msgstr "TCP Flood"
 
 #: ../../source/misc/dos.rst:25
 msgid ""
 "TCP Flood是一种利用TCP协议缺陷的攻击，这种方式通过伪造IP向攻击服务器发送大量伪造的TCP "
 "SYN请求，被攻击服务器回应握手包后（SYN+ACK），因为伪造的IP不会回应之后的握手包，服务器会保持在SYN_RECV状态，并尝试重试。这会使得TCP等待连接队列资源耗尽，正常业务无法进行。"
 msgstr ""
+"TCP Flood is an attack that exploits weaknesses in the TCP protocol. It "
+"sends a large number of forged TCP SYN requests to the target server with "
+"spoofed IP addresses. After the target server responds with handshake packets"
+" (SYN+ACK), the spoofed IP addresses do not reply to the subsequent "
+"handshake packets, so the server remains in the SYN_RECV state and retries. "
+"This exhausts resources in the TCP pending connection queue and prevents "
+"normal services from operating."
 
 #: ../../source/misc/dos.rst:28
 msgid "Shrew DDoS"
-msgstr ""
+msgstr "Shrew DDoS"
 
 #: ../../source/misc/dos.rst:29
 msgid ""
 "Shrew "
 "DDoS利用了TCP的重传机制，调整攻击周期来反复触发TCP协议的RTO，达到攻击的效果。其数据包以固定的、恶意选择的慢速时间发送，这种模式能够将TCP流量限制为其理想速率的一小部分，同时以足够低的平均速率进行传输以避免检测。"
 msgstr ""
+"Shrew DDoS exploits TCP retransmission mechanisms and adjusts the attack "
+"period to repeatedly trigger TCP RTO, achieving the attack effect. Its "
+"packets are sent at fixed, maliciously chosen slow intervals. This pattern "
+"can limit TCP traffic to a small fraction of its ideal rate while "
+"transmitting at a low enough average rate to avoid detection."
 
 #: ../../source/misc/dos.rst:31
 msgid "现代操作系统已经对TCP协议进行了相应的修改，使得其不受影响。"
 msgstr ""
+"Modern operating systems have made corresponding changes to the TCP protocol,"
+" so they are not affected."
 
 #: ../../source/misc/dos.rst:34
 msgid "Ping Of Death"
-msgstr ""
+msgstr "Ping Of Death"
 
 #: ../../source/misc/dos.rst:35
 msgid "在正常情况下不会存在大于65536个字节的ICMP包，但是报文支持分片重组机制。通过这种方式可以发送大于65536字节的ICMP包并在目标主机上重组，最终会导致被攻击目标缓冲区溢出，引起拒绝服务攻击。"
 msgstr ""
+"Under normal circumstances, ICMP packets larger than 65536 bytes do not "
+"exist, but packets support fragmentation and reassembly. This mechanism can "
+"be used to send ICMP packets larger than 65536 bytes and reassemble them on "
+"the target host, ultimately causing a buffer overflow on the attacked target "
+"and triggering a denial of service attack."
 
 #: ../../source/misc/dos.rst:37
 msgid "现代操作系统已经对这种攻击方式进行检查，使得其不受影响。"
 msgstr ""
+"Modern operating systems already check for this attack method, so they are "
+"not affected."
 
 #: ../../source/misc/dos.rst:40
 msgid "Challenge Collapsar (CC)"
-msgstr ""
+msgstr "Challenge Collapsar (CC)"
 
 #: ../../source/misc/dos.rst:41
 msgid "CC攻击是一种针对资源的DoS攻击，攻击者通常会常用请求较为消耗服务器资源的方式来达到目的。"
 msgstr ""
+"CC attacks are resource-oriented DoS attacks. Attackers usually achieve their"
+" goal by frequently sending requests that consume substantial server "
+"resources."
 
 #: ../../source/misc/dos.rst:43
 msgid "CC攻击的方式有很多种，常见的攻击可以通过大量访问搜索页、物品展示页等消耗大的功能来实现。部分HTTP服务器也可通过上传超大文件、发送大量且复杂的参数的请求来实现攻击。"
 msgstr ""
+"There are many forms of CC attacks. Common attacks can be implemented by "
+"massively accessing resource-intensive functions such as search pages and "
+"item display pages. Some HTTP servers can also be attacked by uploading very "
+"large files or sending requests with many complex parameters."
 
 #: ../../source/misc/dos.rst:46
 msgid "慢速攻击"
-msgstr ""
+msgstr "Slow Attacks"
 
 #: ../../source/misc/dos.rst:47
 msgid ""
 "HTTP慢速攻击是由Wong Onn Chee 和 Tom "
 "Brennan在2012年的OWASP大会上正式披露，用低速发包来消耗服务器资源以达到拒绝服务的目的。"
 msgstr ""
+"HTTP slow attacks were formally disclosed by Wong Onn Chee and Tom Brennan "
+"at the 2012 OWASP conference. They consume server resources by sending "
+"packets at low speed to achieve denial of service."
 
 #: ../../source/misc/dos.rst:49
 msgid ""
@@ -134,70 +182,79 @@ msgid ""
 "一直不停的慢速发送HTTP头部，消耗服务器的连接和内存资源。Slow body 发送一个 Content-Length 很大的 HTTP "
 "POST请求，每次只发送很少量的数据，使该连接一直保持存活。Slow read以很低的速度读取Response。"
 msgstr ""
+"Slow attacks are divided into three methods: Slow headers / Slow body / Slow"
+" read. Slow headers continuously sends HTTP headers at low speed, consuming "
+"server connection and memory resources. Slow body sends an HTTP POST request "
+"with a very large Content-Length and only sends a very small amount of data "
+"each time, keeping the connection alive. Slow read reads the Response at a "
+"very low speed."
 
 #: ../../source/misc/dos.rst:52
 msgid "基于服务特性"
-msgstr ""
+msgstr "Based on Service Characteristics"
 
 #: ../../source/misc/dos.rst:53
 msgid "压缩包解压"
-msgstr ""
+msgstr "Archive Decompression"
 
 #: ../../source/misc/dos.rst:54
 msgid "巨大的0字节的压缩包"
-msgstr ""
+msgstr "Huge 0-byte archive files"
 
 #: ../../source/misc/dos.rst:55
 msgid "读文件"
-msgstr ""
+msgstr "File Reading"
 
 #: ../../source/misc/dos.rst:56
 msgid "读 ``/dev/urandom`` 等无限制的文件"
-msgstr ""
+msgstr "Read unlimited files such as ``/dev/urandom``"
 
 #: ../../source/misc/dos.rst:57
 msgid "高频访问特定的大文件下载链接"
-msgstr ""
+msgstr "High-frequency access to specific large-file download links"
 
 #: ../../source/misc/dos.rst:58
 msgid "受限制的反序列化"
-msgstr ""
+msgstr "Constrained Deserialization"
 
 #: ../../source/misc/dos.rst:59
 msgid "反序列化巨大的数组"
-msgstr ""
+msgstr "Deserialize huge arrays"
 
 #: ../../source/misc/dos.rst:60
 msgid "正则解析"
-msgstr ""
+msgstr "Regular Expression Parsing"
 
 #: ../../source/misc/dos.rst:61
 msgid "消耗巨大的回溯表达式"
-msgstr ""
+msgstr "Backtracking expressions with huge resource consumption"
 
 #: ../../source/misc/dos.rst:64
 msgid "常用的防护方式"
-msgstr ""
+msgstr "Common Protection Methods"
 
 #: ../../source/misc/dos.rst:65
 msgid "基于特定攻击的指纹检测攻击，对相应流量进行封禁/限速操作"
 msgstr ""
+"Detect attacks based on fingerprints of specific attacks, and block or rate-"
+"limit the corresponding traffic"
 
 #: ../../source/misc/dos.rst:66
 msgid "对正常流量进行建模，对识别出的异常流量进行封禁/限速操作"
 msgstr ""
+"Model normal traffic, and block or rate-limit identified abnormal traffic"
 
 #: ../../source/misc/dos.rst:67
 msgid "基于IP/端口进行综合限速策略"
-msgstr ""
+msgstr "Apply comprehensive rate-limiting policies based on IP and port"
 
 #: ../../source/misc/dos.rst:68
 msgid "基于地理位置进行封禁/限速操作"
-msgstr ""
+msgstr "Block or rate-limit traffic based on geographic location"
 
 #: ../../source/misc/dos.rst:71
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/dos.rst:72
 msgid ""
@@ -205,15 +262,22 @@ msgid ""
 "<https://linuxacademy.com/howtoguides/posts/show/topic/13191-denial-of-"
 "service-dos>`_"
 msgstr ""
+"`linux academy dos "
+"<https://linuxacademy.com/howtoguides/posts/show/topic/13191-denial-of-"
+"service-dos>`_"
 
 #: ../../source/misc/dos.rst:73
 msgid ""
 "`slowhttptest <https://github.com/shekyan/slowhttptest>`_ Application "
 "Layer DoS attack simulator"
 msgstr ""
+"`slowhttptest <https://github.com/shekyan/slowhttptest>`_ Application "
+"Layer DoS attack simulator"
 
 #: ../../source/misc/dos.rst:74
 msgid ""
 "`Slowloris wiki "
 "<https://en.wikipedia.org/wiki/Slowloris_(computer_security)>`_"
 msgstr ""
+"`Slowloris wiki "
+"<https://en.wikipedia.org/wiki/Slowloris_(computer_security)>`_"

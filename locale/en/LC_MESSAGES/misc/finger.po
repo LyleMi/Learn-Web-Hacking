@@ -20,125 +20,125 @@ msgstr ""
 
 #: ../../source/misc/finger.rst:2
 msgid "指纹"
-msgstr ""
+msgstr "Fingerprinting"
 
 #: ../../source/misc/finger.rst:5
 msgid "浏览器指纹"
-msgstr ""
+msgstr "Browser Fingerprinting"
 
 #: ../../source/misc/finger.rst:6
 msgid "软件细节"
-msgstr ""
+msgstr "Software Details"
 
 #: ../../source/misc/finger.rst:7
 msgid "navigator"
-msgstr ""
+msgstr "navigator"
 
 #: ../../source/misc/finger.rst:8
 msgid "安装插件"
-msgstr ""
+msgstr "Installed Plugins"
 
 #: ../../source/misc/finger.rst:9
 msgid "浏览器支持的特性"
-msgstr ""
+msgstr "Browser-Supported Features"
 
 #: ../../source/misc/finger.rst:10
 msgid "CSS支持"
-msgstr ""
+msgstr "CSS Support"
 
 #: ../../source/misc/finger.rst:11
 msgid "JavaScript特性"
-msgstr ""
+msgstr "JavaScript Features"
 
 #: ../../source/misc/finger.rst:12
 msgid "已安装字体"
-msgstr ""
+msgstr "Installed Fonts"
 
 #: ../../source/misc/finger.rst:13 ../../source/misc/finger.rst:19
 #: ../../source/misc/finger.rst:25
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../../source/misc/finger.rst:14
 msgid "WebGL信息"
-msgstr ""
+msgstr "WebGL Information"
 
 #: ../../source/misc/finger.rst:15
 msgid "GL版本"
-msgstr ""
+msgstr "GL Version"
 
 #: ../../source/misc/finger.rst:16
 msgid "纹理大小"
-msgstr ""
+msgstr "Texture Size"
 
 #: ../../source/misc/finger.rst:17
 msgid "渲染缓冲区"
-msgstr ""
+msgstr "Renderbuffer"
 
 #: ../../source/misc/finger.rst:18
 msgid "WebGL扩展"
-msgstr ""
+msgstr "WebGL Extensions"
 
 #: ../../source/misc/finger.rst:20
 msgid "硬件信息"
-msgstr ""
+msgstr "Hardware Information"
 
 #: ../../source/misc/finger.rst:21
 msgid "电池API"
-msgstr ""
+msgstr "Battery API"
 
 #: ../../source/misc/finger.rst:22
 msgid "传感器API"
-msgstr ""
+msgstr "Sensor API"
 
 #: ../../source/misc/finger.rst:23
 msgid "WebRTC获取流媒体设备"
-msgstr ""
+msgstr "WebRTC Obtains Streaming Media Devices"
 
 #: ../../source/misc/finger.rst:24
 msgid "系统性能"
-msgstr ""
+msgstr "System Performance"
 
 #: ../../source/misc/finger.rst:26
 msgid "持久化存储"
-msgstr ""
+msgstr "Persistent Storage"
 
 #: ../../source/misc/finger.rst:27
 msgid "cookie"
-msgstr ""
+msgstr "cookie"
 
 #: ../../source/misc/finger.rst:28
 msgid "localStorage"
-msgstr ""
+msgstr "localStorage"
 
 #: ../../source/misc/finger.rst:29
 msgid "indexedDB"
-msgstr ""
+msgstr "indexedDB"
 
 #: ../../source/misc/finger.rst:30
 msgid "sessionStorage"
-msgstr ""
+msgstr "sessionStorage"
 
 #: ../../source/misc/finger.rst:31
 msgid "系统设置"
-msgstr ""
+msgstr "System Settings"
 
 #: ../../source/misc/finger.rst:32
 msgid "时钟偏移"
-msgstr ""
+msgstr "Clock Skew"
 
 #: ../../source/misc/finger.rst:33
 msgid "主动探测"
-msgstr ""
+msgstr "Active Probing"
 
 #: ../../source/misc/finger.rst:34
 msgid "构造特定DNS请求并发送"
-msgstr ""
+msgstr "Construct and send specific DNS requests"
 
 #: ../../source/misc/finger.rst:37
 msgid "参考链接"
-msgstr ""
+msgstr "References"
 
 #: ../../source/misc/finger.rst:38
 msgid "`设备指纹指南 <https://mp.weixin.qq.com/s/ClG5cgv9Cu7zoyPcWOoU4A>`_"
-msgstr ""
+msgstr "`Device Fingerprinting Guide <https://mp.weixin.qq.com/s/ClG5cgv9Cu7zoyPcWOoU4A>`_"
