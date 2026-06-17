@@ -20,95 +20,95 @@ msgstr ""
 
 #: ../../source/language/java/jdk.rst:2
 msgid "JDK"
-msgstr ""
+msgstr "JDK"
 
 #: ../../source/language/java/jdk.rst:5
 msgid "JDK 8"
-msgstr ""
+msgstr "JDK 8"
 
 #: ../../source/language/java/jdk.rst:6
 msgid "``sun.net.www.protocol`` 不再支持gopher协议"
-msgstr ""
+msgstr "``sun.net.www.protocol`` no longer supports the gopher protocol"
 
 #: ../../source/language/java/jdk.rst:9
 msgid "8u251"
-msgstr ""
+msgstr "8u251"
 
 #: ../../source/language/java/jdk.rst:10
 msgid "com.sun.org.apache.bcel.internal.util.ClassLoader 类被删除"
-msgstr ""
+msgstr "The com.sun.org.apache.bcel.internal.util.ClassLoader class was removed"
 
 #: ../../source/language/java/jdk.rst:13
 msgid "8u191"
-msgstr ""
+msgstr "8u191"
 
 #: ../../source/language/java/jdk.rst:14 ../../source/language/java/jdk.rst:31
 #: ../../source/language/java/jdk.rst:47
 msgid "LDAP远程Reference代码默认不信任，影响LDAP远程Reference代码攻击方式"
-msgstr ""
+msgstr "Remote LDAP Reference code is not trusted by default, which affects LDAP remote Reference code attack techniques"
 
 #: ../../source/language/java/jdk.rst:17
 msgid "8u121"
-msgstr ""
+msgstr "8u121"
 
 #: ../../source/language/java/jdk.rst:18
 msgid "RMI加入了反序列化白名单机制"
-msgstr ""
+msgstr "RMI added a deserialization whitelist mechanism"
 
 #: ../../source/language/java/jdk.rst:19
 msgid "RMI远程Reference代码默认不信任，影响RMI远程Reference代码攻击方式"
-msgstr ""
+msgstr "Remote RMI Reference code is not trusted by default, which affects RMI remote Reference code attack techniques"
 
 #: ../../source/language/java/jdk.rst:22
 msgid "8u113"
-msgstr ""
+msgstr "8u113"
 
 #: ../../source/language/java/jdk.rst:23 ../../source/language/java/jdk.rst:35
 #: ../../source/language/java/jdk.rst:51
 msgid "``com.sun.jndi.rmi.object.trustURLCodebase`` 默认为false"
-msgstr ""
+msgstr "``com.sun.jndi.rmi.object.trustURLCodebase`` defaults to false"
 
 #: ../../source/language/java/jdk.rst:24 ../../source/language/java/jdk.rst:36
 #: ../../source/language/java/jdk.rst:52
 msgid "``com.sun.jndi.cosnaming.object.trustURLCodebase`` 默认为false"
-msgstr ""
+msgstr "``com.sun.jndi.cosnaming.object.trustURLCodebase`` defaults to false"
 
 #: ../../source/language/java/jdk.rst:27
 msgid "JDK 7"
-msgstr ""
+msgstr "JDK 7"
 
 #: ../../source/language/java/jdk.rst:30
 msgid "7u201"
-msgstr ""
+msgstr "7u201"
 
 #: ../../source/language/java/jdk.rst:34
 msgid "7u122"
-msgstr ""
+msgstr "7u122"
 
 #: ../../source/language/java/jdk.rst:39
 msgid "7u40"
-msgstr ""
+msgstr "7u40"
 
 #: ../../source/language/java/jdk.rst:40
 msgid "``java.io.File`` 类中添加了 ``isInvalid`` 方法，检测文件名中是否包含空字节"
-msgstr ""
+msgstr "The ``isInvalid`` method was added to the ``java.io.File`` class to check whether a file name contains null bytes"
 
 #: ../../source/language/java/jdk.rst:43
 msgid "JDK 6"
-msgstr ""
+msgstr "JDK 6"
 
 #: ../../source/language/java/jdk.rst:46
 msgid "6u211"
-msgstr ""
+msgstr "6u211"
 
 #: ../../source/language/java/jdk.rst:50
 msgid "6u141"
-msgstr ""
+msgstr "6u141"
 
 #: ../../source/language/java/jdk.rst:55
 msgid "6u45"
-msgstr ""
+msgstr "6u45"
 
 #: ../../source/language/java/jdk.rst:56
 msgid "java.rmi.server.useCodebaseOnly 默认为 true，禁用自动加载远程类文件"
-msgstr ""
+msgstr "java.rmi.server.useCodebaseOnly defaults to true, disabling automatic loading of remote class files"

@@ -20,109 +20,119 @@ msgstr ""
 
 #: ../../source/language/java/jndi.rst:2
 msgid "JNDI"
-msgstr ""
+msgstr "JNDI"
 
 #: ../../source/language/java/jndi.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/java/jndi.rst:6
 msgid ""
 "JNDI(Java Naming and Directory "
 "Interface，Java命名和目录接口)是为Java应用程序提供命名和目录访问服务的API，允许客户端通过名称发现和查找数据、对象，用于提供基于配置的动态调用。这些对象可以存储在不同的命名或目录服务中，例如RMI、CORBA、LDAP、DNS等。"
 msgstr ""
+"JNDI (Java Naming and Directory Interface) is an API that provides naming "
+"and directory access services for Java applications. It allows clients to "
+"discover and look up data and objects by name, enabling configuration-based "
+"dynamic invocation. These objects can be stored in different naming or "
+"directory services, such as RMI, CORBA, LDAP, and DNS."
 
 #: ../../source/language/java/jndi.rst:8
 msgid ""
 "其中Naming Service类似于哈希表的K/V对，通过名称去获取对应的服务。Directory Service是一种特殊的Naming "
 "Service，用类似目录的方式来存取服务。"
 msgstr ""
+"A Naming Service is similar to K/V pairs in a hash table: the corresponding "
+"service is obtained by name. A Directory Service is a special type of Naming "
+"Service that accesses services in a directory-like manner."
 
 #: ../../source/language/java/jndi.rst:10
 msgid "|jndiarch|"
-msgstr ""
+msgstr "|jndiarch|"
 
 #: ../../source/language/java/jndi.rst:56
 msgid "jndiarch"
-msgstr ""
+msgstr "jndiarch"
 
 #: ../../source/language/java/jndi.rst:13
 msgid "JNDI注入"
-msgstr ""
+msgstr "JNDI Injection"
 
 #: ../../source/language/java/jndi.rst:14
 msgid ""
 "JNDI注入是2016年由pentester在BlackHat USA上的 ``A Journey From JNDI LDAP "
 "Manipulation To RCE`` 议题提出的。"
 msgstr ""
+"JNDI injection was introduced by pentesters at Black Hat USA 2016 in the "
+"talk ``A Journey From JNDI LDAP Manipulation To RCE``."
 
 #: ../../source/language/java/jndi.rst:16
 msgid "其攻击过程如下"
-msgstr ""
+msgstr "The attack process is as follows"
 
 #: ../../source/language/java/jndi.rst:18
 msgid "攻击者将Payload绑定到攻击者的命名/目录服务中"
-msgstr ""
+msgstr "The attacker binds the Payload to the attacker's naming or directory service"
 
 #: ../../source/language/java/jndi.rst:19
 msgid "攻击者将绝对URL注入易受攻击的JNDI查找方法"
-msgstr ""
+msgstr "The attacker injects an absolute URL into a vulnerable JNDI lookup method"
 
 #: ../../source/language/java/jndi.rst:20
 msgid "应用程序执行查找"
-msgstr ""
+msgstr "The application performs the lookup"
 
 #: ../../source/language/java/jndi.rst:21
 msgid "应用程序连接到攻击者控制的JNDI服务并返回Payload"
-msgstr ""
+msgstr "The application connects to the attacker-controlled JNDI service and returns the Payload"
 
 #: ../../source/language/java/jndi.rst:22
 msgid "应用程序解码响应并触发有效负载"
-msgstr ""
+msgstr "The application decodes the response and triggers the payload"
 
 #: ../../source/language/java/jndi.rst:25
 msgid "攻击载荷"
-msgstr ""
+msgstr "Attack Payloads"
 
 #: ../../source/language/java/jndi.rst:26
 msgid "JDNI主要有几种攻击载荷："
-msgstr ""
+msgstr "JNDI mainly has several attack payload types:"
 
 #: ../../source/language/java/jndi.rst:28
 msgid "CORBA"
-msgstr ""
+msgstr "CORBA"
 
 #: ../../source/language/java/jndi.rst:29
 msgid "IOR"
-msgstr ""
+msgstr "IOR"
 
 #: ../../source/language/java/jndi.rst:30
 msgid "JNDI Reference"
-msgstr ""
+msgstr "JNDI Reference"
 
 #: ../../source/language/java/jndi.rst:31
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: ../../source/language/java/jndi.rst:32
 msgid "Remote Location"
-msgstr ""
+msgstr "Remote Location"
 
 #: ../../source/language/java/jndi.rst:33
 msgid "Remote Object"
-msgstr ""
+msgstr "Remote Object"
 
 #: ../../source/language/java/jndi.rst:34
 msgid "RMI"
-msgstr ""
+msgstr "RMI"
 
 #: ../../source/language/java/jndi.rst:35
 msgid "Serialized Object"
-msgstr ""
+msgstr "Serialized Object"
 
 #: ../../source/language/java/jndi.rst:38
 msgid "RMI Remote Object"
-msgstr ""
+msgstr "RMI Remote Object"
 
 #: ../../source/language/java/jndi.rst:39
 msgid ""
@@ -130,26 +140,31 @@ msgid ""
 "Registry上，将编译后的RMI远程对象类放在HTTP/FTP/SMB等服务器上。其中Codebase地址由远程服务器的 "
 "``java.rmi.server.codebase`` 属性设置，供受害者的RMI客户端远程加载。"
 msgstr ""
+"The attacker implements a malicious RMI remote object and binds it to the "
+"RMI Registry, then places the compiled RMI remote object class on a server "
+"such as HTTP, FTP, or SMB. The Codebase address is set by the remote "
+"server's ``java.rmi.server.codebase`` property for remote loading by the "
+"victim's RMI client."
 
 #: ../../source/language/java/jndi.rst:41
 msgid "利用条件如下："
-msgstr ""
+msgstr "The exploitation conditions are as follows:"
 
 #: ../../source/language/java/jndi.rst:43
 msgid "RMI客户端的上下文环境允许访问远程Codebase。"
-msgstr ""
+msgstr "The RMI client's context environment allows access to the remote Codebase."
 
 #: ../../source/language/java/jndi.rst:44
 msgid "属性 ``java.rmi.server.useCodebaseOnly`` 的值为false。"
-msgstr ""
+msgstr "The value of the ``java.rmi.server.useCodebaseOnly`` property is false."
 
 #: ../../source/language/java/jndi.rst:46
 msgid "其中JDK 6u45、7u21后，``java.rmi.server.useCodebaseOnly`` 的值默认为true。"
-msgstr ""
+msgstr "After JDK 6u45 and 7u21, the value of ``java.rmi.server.useCodebaseOnly`` defaults to true."
 
 #: ../../source/language/java/jndi.rst:49
 msgid "RMI + JNDI Reference"
-msgstr ""
+msgstr "RMI + JNDI Reference"
 
 #: ../../source/language/java/jndi.rst:50
 msgid ""
@@ -161,10 +176,22 @@ msgid ""
 "``com.sun.jndi.cosnaming.object.trustURLCodebase`` "
 "的默认值变为false，即默认不允许从远程的Codebase加载Reference工厂类。"
 msgstr ""
+"The attacker uses an RMI service to return a JNDI Naming Reference. When the "
+"victim decodes the Reference, it loads the Factory class from the remote "
+"address specified by the attacker. In principle, this method does not use "
+"the RMI Class Loading mechanism, so it is not restricted by the "
+"``java.rmi.server.useCodebaseOnly`` system property. However, after JDK "
+"6u132, JDK 7u122, and JDK 8u113, the feature that allows Naming/Directory "
+"services to remotely load Object Factory classes through JNDI Reference was "
+"restricted. The default values of the system properties "
+"``com.sun.jndi.rmi.object.trustURLCodebase`` and "
+"``com.sun.jndi.cosnaming.object.trustURLCodebase`` were changed to false, "
+"meaning Reference factory classes are not allowed to be loaded from a remote "
+"Codebase by default."
 
 #: ../../source/language/java/jndi.rst:53
 msgid "LDAP + JNDI Reference"
-msgstr ""
+msgstr "LDAP + JNDI Reference"
 
 #: ../../source/language/java/jndi.rst:54
 msgid ""
@@ -172,3 +199,8 @@ msgid ""
 "``com.sun.jndi.rmi.object.trustURLCodebase`` "
 "、``com.sun.jndi.cosnaming.object.trustURLCodebase`` 等属性的限制，适用范围更广。"
 msgstr ""
+"Java LDAP can store specific Java objects in attribute values, and remote "
+"loading of Factory classes through LDAP service References is not restricted "
+"by properties such as ``com.sun.jndi.rmi.object.trustURLCodebase`` and "
+"``com.sun.jndi.cosnaming.object.trustURLCodebase``, so it applies in a "
+"broader range of cases."

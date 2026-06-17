@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/language/java/unserialize.rst:2
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/language/java/unserialize.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/java/unserialize.rst:6
 msgid ""
@@ -33,42 +33,51 @@ msgid ""
 "``ObjectInputStream`` 类的 ``readObject()`` 方法用于反序列化。如果要实现类的反序列化，则是对其实现 "
 "``Serializable`` 接口。"
 msgstr ""
+"Serialization converts objects into byte streams so they can be stored in "
+"memory, files, or databases. Deserialization is the reverse process, "
+"restoring objects from byte streams. It is commonly used in scenarios such "
+"as remote calls, transmitting objects to remote servers over the network, "
+"and storing objects in a database or locally for later reuse. In Java, the "
+"``writeObject()`` method of the ``ObjectOutputStream`` class implements "
+"serialization, and the ``readObject()`` method of the ``ObjectInputStream`` "
+"class is used for deserialization. To make a class deserializable, implement "
+"the ``Serializable`` interface."
 
 #: ../../source/language/java/unserialize.rst:8
 msgid "当远程服务接受不可信的数据并进行反序列化且当前环境中存在可利用的类时，就认为存在反序列化漏洞。"
-msgstr ""
+msgstr "A deserialization vulnerability is considered present when a remote service accepts untrusted data, deserializes it, and the current environment contains exploitable classes."
 
 #: ../../source/language/java/unserialize.rst:11
 msgid "序列数据结构"
-msgstr ""
+msgstr "Serialized Data Structure"
 
 #: ../../source/language/java/unserialize.rst:12
 msgid "``0xaced`` 魔术头 / STREAM_MAGIC"
-msgstr ""
+msgstr "``0xaced`` magic header / STREAM_MAGIC"
 
 #: ../../source/language/java/unserialize.rst:13
 msgid "``0x0005`` 版本号 / STREAM_VERSION / 参考 java.io.ObjectStreamConstants"
-msgstr ""
+msgstr "``0x0005`` version number / STREAM_VERSION / see java.io.ObjectStreamConstants"
 
 #: ../../source/language/java/unserialize.rst:14
 msgid "``0x73`` 对象类型标识"
-msgstr ""
+msgstr "``0x73`` object type identifier"
 
 #: ../../source/language/java/unserialize.rst:15
 msgid "``0x72`` 类描述符标识"
-msgstr ""
+msgstr "``0x72`` class descriptor identifier"
 
 #: ../../source/language/java/unserialize.rst:18
 msgid "序列化流程"
-msgstr ""
+msgstr "Serialization Flow"
 
 #: ../../source/language/java/unserialize.rst:19
 msgid "ObjectOutputStream实例初始化时，将魔术头和版本号写入bout (BlockDataOutputStream类型) 中"
-msgstr ""
+msgstr "When an ObjectOutputStream instance is initialized, it writes the magic header and version number into bout, which is of type BlockDataOutputStream"
 
 #: ../../source/language/java/unserialize.rst:20
 msgid "调用ObjectOutputStream.writeObject()开始写对象数据"
-msgstr ""
+msgstr "Call ObjectOutputStream.writeObject() to start writing object data"
 
 #: ../../source/language/java/unserialize.rst:21
 msgid ""
@@ -76,252 +85,269 @@ msgid ""
 "，获取包括类名、自定义serialVersionUID、可序列化字段 (返回ObjectStreamField类型) "
 "和构造方法，以及writeObject、readObject方法等"
 msgstr ""
+"ObjectStreamClass.lookup() wraps the class description to be serialized, "
+"returning an ObjectStreamClass. It obtains the class name, custom "
+"serialVersionUID, serializable fields returned as ObjectStreamField, "
+"constructors, and methods such as writeObject and readObject"
 
 #: ../../source/language/java/unserialize.rst:22
 msgid "writeOrdinaryObject()写入对象数据"
-msgstr ""
+msgstr "writeOrdinaryObject() writes object data"
 
 #: ../../source/language/java/unserialize.rst:23
 msgid "写入对象类型标识"
-msgstr ""
+msgstr "Write the object type identifier"
 
 #: ../../source/language/java/unserialize.rst:24
 msgid "writeClassDesc()进入分支writeNonProxyDesc()写入类描述数据"
-msgstr ""
+msgstr "writeClassDesc() enters the writeNonProxyDesc() branch to write class description data"
 
 #: ../../source/language/java/unserialize.rst:25
 msgid "写入类描述符标识"
-msgstr ""
+msgstr "Write the class descriptor identifier"
 
 #: ../../source/language/java/unserialize.rst:26
 msgid "写入类名"
-msgstr ""
+msgstr "Write the class name"
 
 #: ../../source/language/java/unserialize.rst:27
 msgid "写入SUID (当SUID为空时，会进行计算并赋值)"
-msgstr ""
+msgstr "Write the SUID; when the SUID is empty, it is calculated and assigned"
 
 #: ../../source/language/java/unserialize.rst:28
 msgid "计算并写入序列化属性标志位"
-msgstr ""
+msgstr "Calculate and write the serialized property flags"
 
 #: ../../source/language/java/unserialize.rst:29
 msgid "写入字段信息数据"
-msgstr ""
+msgstr "Write field information data"
 
 #: ../../source/language/java/unserialize.rst:30
 msgid "写入Block Data结束标识"
-msgstr ""
+msgstr "Write the Block Data end marker"
 
 #: ../../source/language/java/unserialize.rst:31
 msgid "写入父类描述数据"
-msgstr ""
+msgstr "Write parent class description data"
 
 #: ../../source/language/java/unserialize.rst:32
 msgid "writeSerialData()写入对象的序列化数据"
-msgstr ""
+msgstr "writeSerialData() writes the object's serialized data"
 
 #: ../../source/language/java/unserialize.rst:33
 msgid ""
 "若类自定义了writeObject()，则调用该方法写对象，否则调用defaultWriteFields()写入对象的字段数据 "
 "(若是非原始类型，则递归处理子对象)"
 msgstr ""
+"If the class defines writeObject(), call that method to write the object; "
+"otherwise call defaultWriteFields() to write the object's field data. For "
+"non-primitive types, child objects are processed recursively"
 
 #: ../../source/language/java/unserialize.rst:36
 msgid "反序列化流程"
-msgstr ""
+msgstr "Deserialization Flow"
 
 #: ../../source/language/java/unserialize.rst:37
 msgid "ObjectInputStream实例初始化时，读取魔术头和版本号进行校验"
-msgstr ""
+msgstr "When an ObjectInputStream instance is initialized, it reads the magic header and version number for validation"
 
 #: ../../source/language/java/unserialize.rst:38
 msgid "调用ObjectInputStream.readObject()开始读对象数据"
-msgstr ""
+msgstr "Call ObjectInputStream.readObject() to start reading object data"
 
 #: ../../source/language/java/unserialize.rst:39
 msgid "读取对象类型标识"
-msgstr ""
+msgstr "Read the object type identifier"
 
 #: ../../source/language/java/unserialize.rst:40
 msgid "readOrdinaryObject()读取数据对象"
-msgstr ""
+msgstr "readOrdinaryObject() reads the data object"
 
 #: ../../source/language/java/unserialize.rst:41
 msgid "readClassDesc()读取类描述数据"
-msgstr ""
+msgstr "readClassDesc() reads class description data"
 
 #: ../../source/language/java/unserialize.rst:42
 msgid "读取类描述符标识，进入分支readNonProxyDesc()"
-msgstr ""
+msgstr "Read the class descriptor identifier and enter the readNonProxyDesc() branch"
 
 #: ../../source/language/java/unserialize.rst:43
 msgid "读取类名"
-msgstr ""
+msgstr "Read the class name"
 
 #: ../../source/language/java/unserialize.rst:44
 msgid "读取SUID"
-msgstr ""
+msgstr "Read the SUID"
 
 #: ../../source/language/java/unserialize.rst:45
 msgid "读取并分解序列化属性标志位"
-msgstr ""
+msgstr "Read and parse the serialized property flags"
 
 #: ../../source/language/java/unserialize.rst:46
 msgid "读取字段信息数据"
-msgstr ""
+msgstr "Read field information data"
 
 #: ../../source/language/java/unserialize.rst:47
 msgid "resolveClass()根据类名获取待反序列化的类的Class对象，如果获取失败，则抛出ClassNotFoundException"
-msgstr ""
+msgstr "resolveClass() obtains the Class object for the class to be deserialized by class name; if retrieval fails, it throws ClassNotFoundException"
 
 #: ../../source/language/java/unserialize.rst:48
 msgid "skipCustomData()循环读取字节直到Block Data结束标识为止"
-msgstr ""
+msgstr "skipCustomData() loops through bytes until the Block Data end marker is reached"
 
 #: ../../source/language/java/unserialize.rst:49
 msgid "读取父类描述数据"
-msgstr ""
+msgstr "Read parent class description data"
 
 #: ../../source/language/java/unserialize.rst:50
 msgid "initNonProxy()中判断对象与本地对象的SUID和类名 (不含包名) 是否相同，若不同，则抛出InvalidClassException"
-msgstr ""
+msgstr "In initNonProxy(), determine whether the object's SUID and class name, excluding the package name, are the same as those of the local object; if they differ, throw InvalidClassException"
 
 #: ../../source/language/java/unserialize.rst:51
 msgid ""
 "ObjectStreamClass.newInstance()获取并调用离对象最近的非Serializable的父类的无参构造方法 "
 "(若不存在，则返回null) 创建对象实例"
 msgstr ""
+"ObjectStreamClass.newInstance() obtains and calls the no-argument "
+"constructor of the nearest non-Serializable parent class of the object, or "
+"returns null if it does not exist, to create an object instance"
 
 #: ../../source/language/java/unserialize.rst:52
 msgid "readSerialData()读取对象的序列化数据"
-msgstr ""
+msgstr "readSerialData() reads the object's serialized data"
 
 #: ../../source/language/java/unserialize.rst:53
 msgid "若类自定义了readObject()，则调用该方法读对象，否则调用defaultReadFields()读取并填充对象的字段数据"
-msgstr ""
+msgstr "If the class defines readObject(), call that method to read the object; otherwise call defaultReadFields() to read and populate the object's field data"
 
 #: ../../source/language/java/unserialize.rst:56
 msgid "漏洞利用"
-msgstr ""
+msgstr "Exploitation"
 
 #: ../../source/language/java/unserialize.rst:59
 msgid "常见触发点"
-msgstr ""
+msgstr "Common Trigger Points"
 
 #: ../../source/language/java/unserialize.rst:60
 msgid "JDBC 反序列化"
-msgstr ""
+msgstr "JDBC deserialization"
 
 #: ../../source/language/java/unserialize.rst:61
 msgid "JSON 反序列化"
-msgstr ""
+msgstr "JSON deserialization"
 
 #: ../../source/language/java/unserialize.rst:64
 msgid "存在危险的基础库"
-msgstr ""
+msgstr "Dangerous Base Libraries"
 
 #: ../../source/language/java/unserialize.rst:65
 msgid "``com.mchange:c3p0 0.9.5.2``"
-msgstr ""
+msgstr "``com.mchange:c3p0 0.9.5.2``"
 
 #: ../../source/language/java/unserialize.rst:66
 msgid "``com.mchange:mchange-commons-java 0.2.11``"
-msgstr ""
+msgstr "``com.mchange:mchange-commons-java 0.2.11``"
 
 #: ../../source/language/java/unserialize.rst:67
 msgid "``commons-beanutils 1.9.2``"
-msgstr ""
+msgstr "``commons-beanutils 1.9.2``"
 
 #: ../../source/language/java/unserialize.rst:68
 msgid "``commons-collections 3.1``"
-msgstr ""
+msgstr "``commons-collections 3.1``"
 
 #: ../../source/language/java/unserialize.rst:69
 msgid "``commons-fileupload 1.3.1``"
-msgstr ""
+msgstr "``commons-fileupload 1.3.1``"
 
 #: ../../source/language/java/unserialize.rst:70
 msgid "``commons-io 2.4``"
-msgstr ""
+msgstr "``commons-io 2.4``"
 
 #: ../../source/language/java/unserialize.rst:71
 msgid "``commons-logging 1.2``"
-msgstr ""
+msgstr "``commons-logging 1.2``"
 
 #: ../../source/language/java/unserialize.rst:72
 msgid "``org.apache.commons:commons-collections 4.0``"
-msgstr ""
+msgstr "``org.apache.commons:commons-collections 4.0``"
 
 #: ../../source/language/java/unserialize.rst:73
 msgid "``org.beanshell:bsh 2.0b5``"
-msgstr ""
+msgstr "``org.beanshell:bsh 2.0b5``"
 
 #: ../../source/language/java/unserialize.rst:74
 msgid "``org.codehaus.groovy:groovy 2.3.9``"
-msgstr ""
+msgstr "``org.codehaus.groovy:groovy 2.3.9``"
 
 #: ../../source/language/java/unserialize.rst:75
 msgid "``org.slf4j:slf4j-api 1.7.21``"
-msgstr ""
+msgstr "``org.slf4j:slf4j-api 1.7.21``"
 
 #: ../../source/language/java/unserialize.rst:76
 msgid "``org.springframework:spring-aop 4.1.4.RELEASE``"
-msgstr ""
+msgstr "``org.springframework:spring-aop 4.1.4.RELEASE``"
 
 #: ../../source/language/java/unserialize.rst:79
 msgid "回显方式"
-msgstr ""
+msgstr "Echo Methods"
 
 #: ../../source/language/java/unserialize.rst:80
 msgid "通过中间件特性回显"
-msgstr ""
+msgstr "Echo through middleware features"
 
 #: ../../source/language/java/unserialize.rst:81
 msgid "通过抛出异常回显"
-msgstr ""
+msgstr "Echo by throwing exceptions"
 
 #: ../../source/language/java/unserialize.rst:82
 msgid "通过OOB回显"
-msgstr ""
+msgstr "Echo through OOB"
 
 #: ../../source/language/java/unserialize.rst:83
 msgid "通过写静态文件回显"
-msgstr ""
+msgstr "Echo by writing static files"
 
 #: ../../source/language/java/unserialize.rst:86
 msgid "漏洞修复和防护"
-msgstr ""
+msgstr "Remediation and Protection"
 
 #: ../../source/language/java/unserialize.rst:89
 msgid "Hook resolveClass"
-msgstr ""
+msgstr "Hook resolveClass"
 
 #: ../../source/language/java/unserialize.rst:90
 msgid ""
 "在使用 ``readObject()`` 反序列化时会调用 ``resolveClass`` "
 "方法读取反序列化的类名，可以通过hook该方法来校验反序列化的类，一个Demo如下"
 msgstr ""
+"When ``readObject()`` is used for deserialization, the ``resolveClass`` "
+"method is called to read the deserialized class name. This method can be "
+"hooked to validate the deserialized class. A Demo is shown below"
 
 #: ../../source/language/java/unserialize.rst:104
 msgid ""
 "以上的Demo就只允许序列化 ``SerialObject`` "
 "，通过这种方式，就可以设置允许序列化的白名单，来防止反序列化漏洞被利用。SerialKiller/Jackson/Weblogic等都使用了这种方式来防御。"
-msgstr ""
+msgstr "The Demo above allows only ``SerialObject`` to be serialized. In this way, a whitelist of classes allowed for serialization can be configured to prevent exploitation of deserialization vulnerabilities. SerialKiller, Jackson, WebLogic, and others use this approach for defense."
 
 #: ../../source/language/java/unserialize.rst:107
 msgid "ValidatingObjectInputStream"
-msgstr ""
+msgstr "ValidatingObjectInputStream"
 
 #: ../../source/language/java/unserialize.rst:108
 msgid ""
 "Apache Commons IO Serialization包中的 ``ValidatingObjectInputStream`` 类提供了 "
 "``accept`` 方法，可以通过该方法来实现反序列化类白/黑名单控制，一个demo如下"
 msgstr ""
+"The ``ValidatingObjectInputStream`` class in the Apache Commons IO "
+"Serialization package provides the ``accept`` method, which can be used to "
+"implement whitelist or blacklist control for deserialized classes. A demo is "
+"shown below"
 
 #: ../../source/language/java/unserialize.rst:122
 msgid "ObjectInputFilter(JEP290)"
-msgstr ""
+msgstr "ObjectInputFilter(JEP290)"
 
 #: ../../source/language/java/unserialize.rst:123
 msgid ""
@@ -330,19 +356,27 @@ msgid ""
 "``setObjectInputFilter`` 设置过滤器来实现反序列化类白/黑名单控制。这个机制本身是针对Java "
 "9的一个新特性，但是随后官方突然决定向下引进该增强机制，分别对JDK 6,7,8进行了支持。这个机制主要描述了如下的机制："
 msgstr ""
+"Java 9 provides a new feature that supports filtering of serialized data. "
+"You can extend the ``java.io.ObjectInputFilter`` class, override the "
+"``checkInput`` method to implement a custom filter, and use "
+"``setObjectInputFilter`` on an ``ObjectInputStream`` object to implement "
+"whitelist or blacklist control for deserialized classes. This mechanism was "
+"originally a Java 9 feature, but Oracle later decided to backport the "
+"enhancement and added support for JDK 6, 7, and 8. The mechanism mainly "
+"covers the following:"
 
 #: ../../source/language/java/unserialize.rst:125
 msgid "提供一个限制反序列化类的机制，白名单或者黑名单"
-msgstr ""
+msgstr "Provide a mechanism to restrict deserialized classes, either with a whitelist or a blacklist"
 
 #: ../../source/language/java/unserialize.rst:126
 msgid "限制反序列化的深度和复杂度"
-msgstr ""
+msgstr "Limit deserialization depth and complexity"
 
 #: ../../source/language/java/unserialize.rst:127
 msgid "为RMI远程调用对象提供了一个验证类的机制"
-msgstr ""
+msgstr "Provide a class validation mechanism for RMI remote call objects"
 
 #: ../../source/language/java/unserialize.rst:128
 msgid "定义一个可配置的过滤机制，比如可以通过配置properties文件的形式来定义过滤器"
-msgstr ""
+msgstr "Define a configurable filtering mechanism, such as defining filters through a properties file"

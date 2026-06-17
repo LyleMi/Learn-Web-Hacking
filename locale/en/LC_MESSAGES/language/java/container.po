@@ -20,133 +20,135 @@ msgstr ""
 
 #: ../../source/language/java/container.rst:2
 msgid "容器"
-msgstr ""
+msgstr "Containers"
 
 #: ../../source/language/java/container.rst:4
 msgid ""
 "常见的Java服务器有Tomcat、Weblogic、JBoss、GlassFish、Jetty、Resin、IBM "
 "Websphere等，这里对部分框架做一个简单的说明。"
 msgstr ""
+"Common Java servers include Tomcat, WebLogic, JBoss, GlassFish, Jetty, "
+"Resin, and IBM WebSphere. This section briefly describes some of them."
 
 #: ../../source/language/java/container.rst:7
 msgid "Tomcat"
-msgstr ""
+msgstr "Tomcat"
 
 #: ../../source/language/java/container.rst:8
 msgid "Tomcat是一个轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，用于开发和调试JSP程序。"
-msgstr ""
+msgstr "Tomcat is a lightweight application server. It is widely used in small and medium-sized systems and scenarios with modest concurrent user counts, and is commonly used to develop and debug JSP programs."
 
 #: ../../source/language/java/container.rst:10
 msgid "在收到请求后，Tomcat的处理流程如下："
-msgstr ""
+msgstr "After receiving a request, Tomcat processes it as follows:"
 
 #: ../../source/language/java/container.rst:12
 msgid "客户端访问Web服务器，发送HTTP请求"
-msgstr ""
+msgstr "The client accesses the Web server and sends an HTTP request"
 
 #: ../../source/language/java/container.rst:13
 msgid "Web服务器接收到请求后，传递给Servlet容器"
-msgstr ""
+msgstr "After receiving the request, the Web server passes it to the Servlet container"
 
 #: ../../source/language/java/container.rst:14
 msgid "Servlet容器加载Servlet，产生Servlet实例后，向其传递表示请求和响应的对象"
-msgstr ""
+msgstr "The Servlet container loads the Servlet, creates a Servlet instance, and passes it objects representing the request and response"
 
 #: ../../source/language/java/container.rst:15
 msgid "Servlet实例使用请求对象得到客户端的请求信息，然后进行相应的处理"
-msgstr ""
+msgstr "The Servlet instance uses the request object to obtain the client's request information and then performs the corresponding processing"
 
 #: ../../source/language/java/container.rst:16
 msgid "Servlet实例将处理结果通过响应对象发送回客户端，容器负责确保响应正确送出，同时将控制返回给Web服务器"
-msgstr ""
+msgstr "The Servlet instance sends the processing result back to the client through the response object. The container ensures that the response is sent correctly and returns control to the Web server"
 
 #: ../../source/language/java/container.rst:18
 msgid "Tomcat服务器是由一系列可配置的组件构成的，其中核心组件是Catalina Servlet容器，它是所有其他Tomcat组件的顶层容器。"
-msgstr ""
+msgstr "A Tomcat server consists of a series of configurable components. The core component is the Catalina Servlet container, which is the top-level container for all other Tomcat components."
 
 #: ../../source/language/java/container.rst:21
 #: ../../source/language/java/container.rst:50
 #: ../../source/language/java/container.rst:97
 msgid "相关CVE"
-msgstr ""
+msgstr "Related CVEs"
 
 #: ../../source/language/java/container.rst:22
 msgid "CVE-2020-1938"
-msgstr ""
+msgstr "CVE-2020-1938"
 
 #: ../../source/language/java/container.rst:23
 msgid "https://www.freebuf.com/vuls/228108.html"
-msgstr ""
+msgstr "https://www.freebuf.com/vuls/228108.html"
 
 #: ../../source/language/java/container.rst:24
 msgid "CVE-2019-0232"
-msgstr ""
+msgstr "CVE-2019-0232"
 
 #: ../../source/language/java/container.rst:25
 msgid "远程代码执行"
-msgstr ""
+msgstr "Remote code execution"
 
 #: ../../source/language/java/container.rst:26
 msgid "https://github.com/pyn3rd/CVE-2019-0232/"
-msgstr ""
+msgstr "https://github.com/pyn3rd/CVE-2019-0232/"
 
 #: ../../source/language/java/container.rst:27
 msgid "CVE-2017-12615"
-msgstr ""
+msgstr "CVE-2017-12615"
 
 #: ../../source/language/java/container.rst:28
 msgid "任意文件写入"
-msgstr ""
+msgstr "Arbitrary file write"
 
 #: ../../source/language/java/container.rst:29
 msgid "https://mp.weixin.qq.com/s?__biz=MzI1NDg4MTIxMw==&mid=2247483659&idx=1&sn=c23b3a3b3b43d70999bdbe644e79f7e5"
-msgstr ""
+msgstr "https://mp.weixin.qq.com/s?__biz=MzI1NDg4MTIxMw==&mid=2247483659&idx=1&sn=c23b3a3b3b43d70999bdbe644e79f7e5"
 
 #: ../../source/language/java/container.rst:30
 msgid "CVE-2013-2067"
-msgstr ""
+msgstr "CVE-2013-2067"
 
 #: ../../source/language/java/container.rst:31
 msgid "CVE-2012-4534"
-msgstr ""
+msgstr "CVE-2012-4534"
 
 #: ../../source/language/java/container.rst:32
 msgid "CVE-2012-4431"
-msgstr ""
+msgstr "CVE-2012-4431"
 
 #: ../../source/language/java/container.rst:33
 msgid "CVE-2012-3546"
-msgstr ""
+msgstr "CVE-2012-3546"
 
 #: ../../source/language/java/container.rst:34
 msgid "CVE-2012-3544"
-msgstr ""
+msgstr "CVE-2012-3544"
 
 #: ../../source/language/java/container.rst:35
 msgid "CVE-2012-2733"
-msgstr ""
+msgstr "CVE-2012-2733"
 
 #: ../../source/language/java/container.rst:36
 msgid "CVE-2011-3375"
-msgstr ""
+msgstr "CVE-2011-3375"
 
 #: ../../source/language/java/container.rst:37
 msgid "CVE-2011-3190"
-msgstr ""
+msgstr "CVE-2011-3190"
 
 #: ../../source/language/java/container.rst:38
 msgid "CVE-2008-2938"
-msgstr ""
+msgstr "CVE-2008-2938"
 
 #: ../../source/language/java/container.rst:41
 msgid "Weblogic"
-msgstr ""
+msgstr "WebLogic"
 
 #: ../../source/language/java/container.rst:44
 #: ../../source/language/java/container.rst:93
 #: ../../source/language/java/container.rst:106
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/java/container.rst:45
 msgid ""
@@ -154,184 +156,190 @@ msgid ""
 "EE架构的中间件，WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。其将Java的动态功能和Java"
 " Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。"
 msgstr ""
+"WebLogic is an Application Server produced by Oracle. It is middleware based "
+"on the Java EE architecture. WebLogic is a Java application server used to "
+"develop, integrate, deploy, and manage large distributed Web applications, "
+"network applications, and database applications. It brings Java's dynamic "
+"capabilities and Java Enterprise standard security into the development, "
+"integration, deployment, and management of large network applications."
 
 #: ../../source/language/java/container.rst:47
 msgid "WebLogic对业内多种标准的全面支持，包括EJB、JSP、Servlet、JMS、JDBC等。"
-msgstr ""
+msgstr "WebLogic provides comprehensive support for many industry standards, including EJB, JSP, Servlet, JMS, and JDBC."
 
 #: ../../source/language/java/container.rst:51
 msgid "CVE-2019-2725"
-msgstr ""
+msgstr "CVE-2019-2725"
 
 #: ../../source/language/java/container.rst:52
 msgid "wls-wsat 反序列化远程代码执行"
-msgstr ""
+msgstr "wls-wsat deserialization remote code execution"
 
 #: ../../source/language/java/container.rst:53
 msgid "CVE-2019-2658"
-msgstr ""
+msgstr "CVE-2019-2658"
 
 #: ../../source/language/java/container.rst:54
 msgid "CVE-2019-2650"
-msgstr ""
+msgstr "CVE-2019-2650"
 
 #: ../../source/language/java/container.rst:55
 msgid "CVE-2019-2649"
-msgstr ""
+msgstr "CVE-2019-2649"
 
 #: ../../source/language/java/container.rst:56
 msgid "CVE-2019-2648"
-msgstr ""
+msgstr "CVE-2019-2648"
 
 #: ../../source/language/java/container.rst:57
 msgid "CVE-2019-2647"
-msgstr ""
+msgstr "CVE-2019-2647"
 
 #: ../../source/language/java/container.rst:58
 msgid "CVE-2019-2646"
-msgstr ""
+msgstr "CVE-2019-2646"
 
 #: ../../source/language/java/container.rst:59
 msgid "CVE-2019-2645"
-msgstr ""
+msgstr "CVE-2019-2645"
 
 #: ../../source/language/java/container.rst:60
 msgid "CVE-2019-2618"
-msgstr ""
+msgstr "CVE-2019-2618"
 
 #: ../../source/language/java/container.rst:61
 msgid "https://github.com/jas502n/cve-2019-2618/"
-msgstr ""
+msgstr "https://github.com/jas502n/cve-2019-2618/"
 
 #: ../../source/language/java/container.rst:62
 msgid "CVE-2019-2615"
-msgstr ""
+msgstr "CVE-2019-2615"
 
 #: ../../source/language/java/container.rst:63
 msgid "CVE-2019-2568"
-msgstr ""
+msgstr "CVE-2019-2568"
 
 #: ../../source/language/java/container.rst:64
 msgid "CVE-2018-3252"
-msgstr ""
+msgstr "CVE-2018-3252"
 
 #: ../../source/language/java/container.rst:65
 msgid "CVE-2018-3248"
-msgstr ""
+msgstr "CVE-2018-3248"
 
 #: ../../source/language/java/container.rst:66
 msgid "CVE-2018-3245"
-msgstr ""
+msgstr "CVE-2018-3245"
 
 #: ../../source/language/java/container.rst:67
 msgid "CVE-2018-3201"
-msgstr ""
+msgstr "CVE-2018-3201"
 
 #: ../../source/language/java/container.rst:68
 msgid "CVE-2018-3197"
-msgstr ""
+msgstr "CVE-2018-3197"
 
 #: ../../source/language/java/container.rst:69
 msgid "CVE-2018-3191"
-msgstr ""
+msgstr "CVE-2018-3191"
 
 #: ../../source/language/java/container.rst:70
 msgid "https://github.com/voidfyoo/CVE-2018-3191"
-msgstr ""
+msgstr "https://github.com/voidfyoo/CVE-2018-3191"
 
 #: ../../source/language/java/container.rst:71
 msgid "https://github.com/Libraggbond/CVE-2018-3191"
-msgstr ""
+msgstr "https://github.com/Libraggbond/CVE-2018-3191"
 
 #: ../../source/language/java/container.rst:72
 msgid "CVE-2018-2894"
-msgstr ""
+msgstr "CVE-2018-2894"
 
 #: ../../source/language/java/container.rst:73
 msgid "任意文件上传"
-msgstr ""
+msgstr "Arbitrary file upload"
 
 #: ../../source/language/java/container.rst:74
 msgid "https://xz.aliyun.com/t/2458"
-msgstr ""
+msgstr "https://xz.aliyun.com/t/2458"
 
 #: ../../source/language/java/container.rst:75
 msgid "CVE-2018-2893"
-msgstr ""
+msgstr "CVE-2018-2893"
 
 #: ../../source/language/java/container.rst:76
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/language/java/container.rst:77
 msgid "https://www.freebuf.com/vuls/178105.html"
-msgstr ""
+msgstr "https://www.freebuf.com/vuls/178105.html"
 
 #: ../../source/language/java/container.rst:78
 msgid "CVE-2018-2628"
-msgstr ""
+msgstr "CVE-2018-2628"
 
 #: ../../source/language/java/container.rst:79
 msgid "https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA"
-msgstr ""
+msgstr "https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA"
 
 #: ../../source/language/java/container.rst:80
 msgid "CVE-2018-1258"
-msgstr ""
+msgstr "CVE-2018-1258"
 
 #: ../../source/language/java/container.rst:81
 msgid "CVE-2017-10271"
-msgstr ""
+msgstr "CVE-2017-10271"
 
 #: ../../source/language/java/container.rst:82
 msgid "XMLDecoder 反序列化漏洞"
-msgstr ""
+msgstr "XMLDecoder deserialization vulnerability"
 
 #: ../../source/language/java/container.rst:83
 #, python-format
 msgid "http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html"
-msgstr ""
+msgstr "http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html"
 
 #: ../../source/language/java/container.rst:84
 msgid "CVE-2017-3248"
-msgstr ""
+msgstr "CVE-2017-3248"
 
 #: ../../source/language/java/container.rst:85
 msgid "CVE-2016-3510"
-msgstr ""
+msgstr "CVE-2016-3510"
 
 #: ../../source/language/java/container.rst:86
 msgid "CVE-2015-4852"
-msgstr ""
+msgstr "CVE-2015-4852"
 
 #: ../../source/language/java/container.rst:87
 msgid "https://github.com/roo7break/serialator"
-msgstr ""
+msgstr "https://github.com/roo7break/serialator"
 
 #: ../../source/language/java/container.rst:90
 msgid "JBoss"
-msgstr ""
+msgstr "JBoss"
 
 #: ../../source/language/java/container.rst:94
 msgid "JBoss是一个基于J2EE的管理EJB的容器和服务器，但JBoss核心服务不包括支持servlet/JSP的WEB容器，一般与Tomcat或Jetty绑定使用。"
-msgstr ""
+msgstr "JBoss is a J2EE-based container and server for managing EJB. However, the JBoss core services do not include a Web container that supports servlet/JSP, so it is usually used together with Tomcat or Jetty."
 
 #: ../../source/language/java/container.rst:98
 msgid "CVE-2017-12149"
-msgstr ""
+msgstr "CVE-2017-12149"
 
 #: ../../source/language/java/container.rst:99
 msgid "反序列化漏洞"
-msgstr ""
+msgstr "Deserialization vulnerability"
 
 #: ../../source/language/java/container.rst:100
 msgid "访问 ``/invoker/readonly`` ，页面存在即有反序列化漏洞"
-msgstr ""
+msgstr "Access ``/invoker/readonly``; if the page exists, a deserialization vulnerability is present"
 
 #: ../../source/language/java/container.rst:103
 msgid "Jetty"
-msgstr ""
+msgstr "Jetty"
 
 #: ../../source/language/java/container.rst:107
 msgid "Jetty是一个开源的servlet容器。"
-msgstr ""
+msgstr "Jetty is an open source servlet container."

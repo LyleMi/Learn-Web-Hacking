@@ -20,8 +20,8 @@ msgstr ""
 
 #: ../../source/language/java/opt.rst:2
 msgid "部分运行选项与说明"
-msgstr ""
+msgstr "Selected Runtime Options and Notes"
 
 #: ../../source/language/java/opt.rst:4
 msgid "``-Xverify:none`` 关闭类加载时的验证措施"
-msgstr ""
+msgstr "``-Xverify:none`` disables verification during class loading"

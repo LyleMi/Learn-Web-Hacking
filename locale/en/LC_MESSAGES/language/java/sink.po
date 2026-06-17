@@ -20,235 +20,238 @@ msgstr ""
 
 #: ../../source/language/java/sink.rst:2
 msgid "常见Sink"
-msgstr ""
+msgstr "Common Sinks"
 
 #: ../../source/language/java/sink.rst:5
 msgid "命令执行/注入"
-msgstr ""
+msgstr "Command Execution/Injection"
 
 #: ../../source/language/java/sink.rst:6
 msgid "java.lang.Runtime.getRuntime().exec()"
-msgstr ""
+msgstr "java.lang.Runtime.getRuntime().exec()"
 
 #: ../../source/language/java/sink.rst:7
 msgid "java.lang.ProcessBuilder"
-msgstr ""
+msgstr "java.lang.ProcessBuilder"
 
 #: ../../source/language/java/sink.rst:10
 msgid "XXE"
-msgstr ""
+msgstr "XXE"
 
 #: ../../source/language/java/sink.rst:11
 msgid "java.net.bull.javamelody.PayloadNameRequestWrapper"
-msgstr ""
+msgstr "java.net.bull.javamelody.PayloadNameRequestWrapper"
 
 #: ../../source/language/java/sink.rst:12
 msgid "javax.xml.bind.Unmarshaller"
-msgstr ""
+msgstr "javax.xml.bind.Unmarshaller"
 
 #: ../../source/language/java/sink.rst:13
 msgid "javax.xml.parsers.DocumentBuilderFactory"
-msgstr ""
+msgstr "javax.xml.parsers.DocumentBuilderFactory"
 
 #: ../../source/language/java/sink.rst:14
 msgid "javax.xml.parsers.SAXParser"
-msgstr ""
+msgstr "javax.xml.parsers.SAXParser"
 
 #: ../../source/language/java/sink.rst:15
 msgid "javax.xml.stream.XMLStreamReader"
-msgstr ""
+msgstr "javax.xml.stream.XMLStreamReader"
 
 #: ../../source/language/java/sink.rst:16
 msgid "javax.xml.transform.sax.SAXSource"
-msgstr ""
+msgstr "javax.xml.transform.sax.SAXSource"
 
 #: ../../source/language/java/sink.rst:17
 msgid "javax.xml.transform.sax.SAXTransformerFactory"
-msgstr ""
+msgstr "javax.xml.transform.sax.SAXTransformerFactory"
 
 #: ../../source/language/java/sink.rst:18
 msgid "javax.xml.transform.TransformerFactory"
-msgstr ""
+msgstr "javax.xml.transform.TransformerFactory"
 
 #: ../../source/language/java/sink.rst:19
 msgid "javax.xml.validation.SchemaFactory"
-msgstr ""
+msgstr "javax.xml.validation.SchemaFactory"
 
 #: ../../source/language/java/sink.rst:20
 msgid "javax.xml.validation.Validator"
-msgstr ""
+msgstr "javax.xml.validation.Validator"
 
 #: ../../source/language/java/sink.rst:21
 msgid "javax.xml.xpath.XpathExpression"
-msgstr ""
+msgstr "javax.xml.xpath.XpathExpression"
 
 #: ../../source/language/java/sink.rst:22
 msgid "org.apache.commons.digester3.Digester"
-msgstr ""
+msgstr "org.apache.commons.digester3.Digester"
 
 #: ../../source/language/java/sink.rst:23
 msgid "org.apache.ofbiz.base.util.UtilXml"
-msgstr ""
+msgstr "org.apache.ofbiz.base.util.UtilXml"
 
 #: ../../source/language/java/sink.rst:24
 msgid "org.dom4j.io.SAXReader"
-msgstr ""
+msgstr "org.dom4j.io.SAXReader"
 
 #: ../../source/language/java/sink.rst:25
 msgid "org.jdom.input.SAXBuilder"
-msgstr ""
+msgstr "org.jdom.input.SAXBuilder"
 
 #: ../../source/language/java/sink.rst:26
 msgid "org.jdom2.input.SAXBuilder"
-msgstr ""
+msgstr "org.jdom2.input.SAXBuilder"
 
 #: ../../source/language/java/sink.rst:27
 msgid "org.xml.sax.helpers.XMLReaderFactory"
-msgstr ""
+msgstr "org.xml.sax.helpers.XMLReaderFactory"
 
 #: ../../source/language/java/sink.rst:28
 msgid "org.xml.sax.XMLReader"
-msgstr ""
+msgstr "org.xml.sax.XMLReader"
 
 #: ../../source/language/java/sink.rst:31
 msgid "SSRF"
-msgstr ""
+msgstr "SSRF"
 
 #: ../../source/language/java/sink.rst:32
 msgid "HttpClient.execute"
-msgstr ""
+msgstr "HttpClient.execute"
 
 #: ../../source/language/java/sink.rst:33
 msgid "HttpClients.execute"
-msgstr ""
+msgstr "HttpClients.execute"
 
 #: ../../source/language/java/sink.rst:34
 msgid "HttpURLConnection.getInputStream"
-msgstr ""
+msgstr "HttpURLConnection.getInputStream"
 
 #: ../../source/language/java/sink.rst:35
 msgid "ImageIO.read"
-msgstr ""
+msgstr "ImageIO.read"
 
 #: ../../source/language/java/sink.rst:36
 msgid "OkHttpClient.newCall.execute"
-msgstr ""
+msgstr "OkHttpClient.newCall.execute"
 
 #: ../../source/language/java/sink.rst:37
 msgid "Request.Get.execute"
-msgstr ""
+msgstr "Request.Get.execute"
 
 #: ../../source/language/java/sink.rst:38
 msgid "Request.Post.execute"
-msgstr ""
+msgstr "Request.Post.execute"
 
 #: ../../source/language/java/sink.rst:39
 msgid "URL.openStream"
-msgstr ""
+msgstr "URL.openStream"
 
 #: ../../source/language/java/sink.rst:40
 msgid "URLConnection.getInputStream"
-msgstr ""
+msgstr "URLConnection.getInputStream"
 
 #: ../../source/language/java/sink.rst:43
 msgid "反序列化"
-msgstr ""
+msgstr "Deserialization"
 
 #: ../../source/language/java/sink.rst:46
 msgid "相关Sink函数"
-msgstr ""
+msgstr "Related Sink Functions"
 
 #: ../../source/language/java/sink.rst:47
 #: ../../source/language/java/sink.rst:79
 msgid "``JSON.parseObject``"
-msgstr ""
+msgstr "``JSON.parseObject``"
 
 #: ../../source/language/java/sink.rst:48
 msgid "``ObjectInputStream.readObject``"
-msgstr ""
+msgstr "``ObjectInputStream.readObject``"
 
 #: ../../source/language/java/sink.rst:49
 msgid "``ObjectInputStream.readUnshared``"
-msgstr ""
+msgstr "``ObjectInputStream.readUnshared``"
 
 #: ../../source/language/java/sink.rst:50
 msgid "``ObjectMapper.readValue``"
-msgstr ""
+msgstr "``ObjectMapper.readValue``"
 
 #: ../../source/language/java/sink.rst:51
 msgid "``XMLDecoder.readObject``"
-msgstr ""
+msgstr "``XMLDecoder.readObject``"
 
 #: ../../source/language/java/sink.rst:52
 msgid "``XStream.fromXML``"
-msgstr ""
+msgstr "``XStream.fromXML``"
 
 #: ../../source/language/java/sink.rst:53
 msgid "``Yaml.load``"
-msgstr ""
+msgstr "``Yaml.load``"
 
 #: ../../source/language/java/sink.rst:56
 msgid "Magic Call"
-msgstr ""
+msgstr "Magic Call"
 
 #: ../../source/language/java/sink.rst:57
 msgid "以下的魔术方法都会在反序列化过程中被自动的调用。"
-msgstr ""
+msgstr "The following magic methods are automatically called during deserialization."
 
 #: ../../source/language/java/sink.rst:59
 msgid "``readObject``"
-msgstr ""
+msgstr "``readObject``"
 
 #: ../../source/language/java/sink.rst:60
 msgid "``readExternal``"
-msgstr ""
+msgstr "``readExternal``"
 
 #: ../../source/language/java/sink.rst:61
 msgid "``readResolve``"
-msgstr ""
+msgstr "``readResolve``"
 
 #: ../../source/language/java/sink.rst:62
 msgid "``readObjectNoData``"
-msgstr ""
+msgstr "``readObjectNoData``"
 
 #: ../../source/language/java/sink.rst:63
 msgid "``validateObject``"
-msgstr ""
+msgstr "``validateObject``"
 
 #: ../../source/language/java/sink.rst:64
 msgid "``finalize``"
-msgstr ""
+msgstr "``finalize``"
 
 #: ../../source/language/java/sink.rst:67
 msgid "主流JSON库"
-msgstr ""
+msgstr "Mainstream JSON Libraries"
 
 #: ../../source/language/java/sink.rst:68
 msgid "主流的JSON库有Gson、Jackson、Fastjson等，因为JSON常在反序列化中使用，所以相关库都有较大的影响。"
-msgstr ""
+msgstr "Mainstream JSON libraries include Gson, Jackson, and Fastjson. Because JSON is often used in deserialization, related libraries can have a broad impact."
 
 #: ../../source/language/java/sink.rst:70
 msgid "其中Gson默认只能反序列化基本类型，如果是复杂类型，需要程序员实现反序列化机制，相对比较安全。"
-msgstr ""
+msgstr "By default, Gson can only deserialize primitive types. For complex types, developers need to implement the deserialization mechanism themselves, which makes it relatively safer."
 
 #: ../../source/language/java/sink.rst:72
 msgid "Jackson除非指明@jsonAutoDetect，Jackson不会反序列化非public属性。在防御时，可以不使用enableDefaultTyping方法。相关CVE有CVE-2017-7525、CVE-2017-15095。"
-msgstr ""
+msgstr "Unless @jsonAutoDetect is specified, Jackson does not deserialize non-public properties. For defense, avoid using the enableDefaultTyping method. Related CVEs include CVE-2017-7525 and CVE-2017-15095."
 
 #: ../../source/language/java/sink.rst:74
 msgid ""
 "FastJson是阿里巴巴的开源JSON解析库，支持将Java Bean序列化为JSON字符串，也支持从JSON字符串反序列化到Java "
 "Bean，相关CVE有CVE-2017-18349等。"
 msgstr ""
+"FastJson is Alibaba's open source JSON parsing library. It supports "
+"serializing Java Bean objects into JSON strings and deserializing JSON "
+"strings into Java Bean objects. Related CVEs include CVE-2017-18349."
 
 #: ../../source/language/java/sink.rst:76
 msgid "FastJson常见的Sink点有："
-msgstr ""
+msgstr "Common FastJson sink points include:"
 
 #: ../../source/language/java/sink.rst:78
 msgid "``JSON.toJSONString``"
-msgstr ""
+msgstr "``JSON.toJSONString``"
 
 #: ../../source/language/java/sink.rst:80
 msgid "``JSON.parse``"
-msgstr ""
+msgstr "``JSON.parse``"

@@ -20,32 +20,32 @@ msgstr ""
 
 #: ../../source/language/java/sandbox.rst:2
 msgid "沙箱"
-msgstr ""
+msgstr "Sandbox"
 
 #: ../../source/language/java/sandbox.rst:5
 msgid "简介"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/language/java/sandbox.rst:6
 msgid "Java实现了一套沙箱环境，使远程的非可信代码只能在受限的环境下执行。"
-msgstr ""
+msgstr "Java implements a sandbox environment so that remote untrusted code can execute only under restricted conditions."
 
 #: ../../source/language/java/sandbox.rst:9
 msgid "相关CVE"
-msgstr ""
+msgstr "Related CVEs"
 
 #: ../../source/language/java/sandbox.rst:10
 msgid "CVE-2012-0507"
-msgstr ""
+msgstr "CVE-2012-0507"
 
 #: ../../source/language/java/sandbox.rst:11
 msgid "CVE-2012-4681"
-msgstr ""
+msgstr "CVE-2012-4681"
 
 #: ../../source/language/java/sandbox.rst:12
 msgid "CVE-2017-3272"
-msgstr ""
+msgstr "CVE-2017-3272"
 
 #: ../../source/language/java/sandbox.rst:13
 msgid "CVE-2017-3289"
-msgstr ""
+msgstr "CVE-2017-3289"

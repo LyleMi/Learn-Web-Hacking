@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/language/java/class.rst:2
 msgid "类"
-msgstr ""
+msgstr "Classes"
 
 #: ../../source/language/java/class.rst:5
 msgid "生命周期"
-msgstr ""
+msgstr "Lifecycle"
 
 #: ../../source/language/java/class.rst:6
 msgid ""
@@ -32,39 +32,42 @@ msgid ""
 "准备 (Perparation) -> 解析 (Resolutin) ] -> 初始化 (Initialization) -> 使用 "
 "(Using) -> 卸载 (Unloading) 。"
 msgstr ""
+"Overall, the lifecycle of a Java class is as follows: Loading -> [ Linking: "
+"Verification -> Preparation -> Resolution ] -> Initialization -> Using -> "
+"Unloading."
 
 #: ../../source/language/java/class.rst:8
 msgid "加载过程分为三步："
-msgstr ""
+msgstr "The loading process is divided into three steps:"
 
 #: ../../source/language/java/class.rst:10
 msgid "通过全限定类名来获取定义此类的二进制字节流"
-msgstr ""
+msgstr "Obtain the binary byte stream that defines the class by its fully qualified class name"
 
 #: ../../source/language/java/class.rst:11
 msgid "将字节流所代表的静态存储结构转化为方法区的运行时数据结构"
-msgstr ""
+msgstr "Convert the static storage structure represented by the byte stream into a runtime data structure in the method area"
 
 #: ../../source/language/java/class.rst:12
 msgid "在内存中生成代表这个类的 ``java.lang.Class`` 对象，作为方法区这个类的各种数据的访问入口"
-msgstr ""
+msgstr "Generate a ``java.lang.Class`` object in memory to represent this class, serving as the access entry for the class's data in the method area"
 
 #: ../../source/language/java/class.rst:14
 msgid "验证阶段主要用于确保 Class 文件的字节流符合当前虚拟机的要求，分为几步："
-msgstr ""
+msgstr "The verification phase mainly ensures that the byte stream of the Class file meets the requirements of the current virtual machine. It is divided into several steps:"
 
 #: ../../source/language/java/class.rst:16
 msgid "判断文件格式：是否以 ``0xCAFEBABE`` 开始，主次版本号是否在处理范围内"
-msgstr ""
+msgstr "Check the file format: whether it starts with ``0xCAFEBABE`` and whether the major and minor version numbers are within the supported range"
 
 #: ../../source/language/java/class.rst:17
 msgid "元数据验证"
-msgstr ""
+msgstr "Metadata verification"
 
 #: ../../source/language/java/class.rst:18
 msgid "字节码验证"
-msgstr ""
+msgstr "Bytecode verification"
 
 #: ../../source/language/java/class.rst:19
 msgid "符号引用验证"
-msgstr ""
+msgstr "Symbolic reference verification"

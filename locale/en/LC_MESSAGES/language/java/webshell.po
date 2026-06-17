@@ -20,96 +20,96 @@ msgstr ""
 
 #: ../../source/language/java/webshell.rst:2
 msgid "WebShell"
-msgstr ""
+msgstr "WebShell"
 
 #: ../../source/language/java/webshell.rst:5
 msgid "BCEL字节码"
-msgstr ""
+msgstr "BCEL Bytecode"
 
 #: ../../source/language/java/webshell.rst:12
 msgid "自定义类加载器"
-msgstr ""
+msgstr "Custom Class Loader"
 
 #: ../../source/language/java/webshell.rst:41
 msgid "执行命令变式"
-msgstr ""
+msgstr "Command Execution Variants"
 
 #: ../../source/language/java/webshell.rst:42
 msgid "java.lang.ProcessBuilder#start"
-msgstr ""
+msgstr "java.lang.ProcessBuilder#start"
 
 #: ../../source/language/java/webshell.rst:43
 msgid "java.lang.Runtime#exec"
-msgstr ""
+msgstr "java.lang.Runtime#exec"
 
 #: ../../source/language/java/webshell.rst:44
 msgid "TemplatesImpl"
-msgstr ""
+msgstr "TemplatesImpl"
 
 #: ../../source/language/java/webshell.rst:47
 msgid "基于反射"
-msgstr ""
+msgstr "Reflection-Based"
 
 #: ../../source/language/java/webshell.rst:48
 msgid "class.forName"
-msgstr ""
+msgstr "class.forName"
 
 #: ../../source/language/java/webshell.rst:49
 msgid "MethodAccessor.invoke"
-msgstr ""
+msgstr "MethodAccessor.invoke"
 
 #: ../../source/language/java/webshell.rst:50
 msgid "Method.invoke"
-msgstr ""
+msgstr "Method.invoke"
 
 #: ../../source/language/java/webshell.rst:53
 msgid "其他Shell变式"
-msgstr ""
+msgstr "Other Shell Variants"
 
 #: ../../source/language/java/webshell.rst:54
 msgid "java.beans.Expression"
-msgstr ""
+msgstr "java.beans.Expression"
 
 #: ../../source/language/java/webshell.rst:55
 msgid "java.lang.ClassLoader"
-msgstr ""
+msgstr "java.lang.ClassLoader"
 
 #: ../../source/language/java/webshell.rst:56
 msgid "java.net.URLClassLoader"
-msgstr ""
+msgstr "java.net.URLClassLoader"
 
 #: ../../source/language/java/webshell.rst:57
 msgid "jdk.nashorn.internal.runtime.ScriptLoader"
-msgstr ""
+msgstr "jdk.nashorn.internal.runtime.ScriptLoader"
 
 #: ../../source/language/java/webshell.rst:58
 msgid "ObjectInputStream.resolveClass"
-msgstr ""
+msgstr "ObjectInputStream.resolveClass"
 
 #: ../../source/language/java/webshell.rst:59
 msgid "ScriptEngine.eval"
-msgstr ""
+msgstr "ScriptEngine.eval"
 
 #: ../../source/language/java/webshell.rst:60
 msgid "ScriptEngineManager"
-msgstr ""
+msgstr "ScriptEngineManager"
 
 #: ../../source/language/java/webshell.rst:61
 msgid "ToolProvider.getSystemJavaCompiler"
-msgstr ""
+msgstr "ToolProvider.getSystemJavaCompiler"
 
 #: ../../source/language/java/webshell.rst:64
 msgid "Tomcat 容器"
-msgstr ""
+msgstr "Tomcat Container"
 
 #: ../../source/language/java/webshell.rst:65
 msgid "Servlet"
-msgstr ""
+msgstr "Servlet"
 
 #: ../../source/language/java/webshell.rst:66
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: ../../source/language/java/webshell.rst:67
 msgid "Listener"
-msgstr ""
+msgstr "Listener"
