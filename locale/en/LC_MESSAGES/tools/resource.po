@@ -20,305 +20,307 @@ msgstr ""
 
 #: ../../source/tools/resource.rst:2
 msgid "推荐资源"
-msgstr ""
+msgstr "Recommended Resources"
 
 #: ../../source/tools/resource.rst:5
 msgid "书单"
-msgstr ""
+msgstr "Reading List"
 
 #: ../../source/tools/resource.rst:8
 msgid "前端"
-msgstr ""
+msgstr "Frontend"
 
 #: ../../source/tools/resource.rst:9
 msgid "Web之困"
-msgstr ""
+msgstr "The Tangled Web"
 
 #: ../../source/tools/resource.rst:10
 msgid "白帽子讲Web安全"
-msgstr ""
+msgstr "White Hat Talks Web Security"
 
 #: ../../source/tools/resource.rst:11
 msgid "白帽子讲浏览器安全（钱文祥）"
-msgstr ""
+msgstr "White Hat Talks Browser Security (Qian Wenxiang)"
 
 #: ../../source/tools/resource.rst:12
 msgid "Web前端黑客技术揭秘"
-msgstr ""
+msgstr "Web Frontend Hacking Techniques Revealed"
 
 #: ../../source/tools/resource.rst:13
 msgid "XSS跨站脚本攻击剖析与防御"
-msgstr ""
+msgstr "XSS Cross-Site Scripting Attack Analysis and Defense"
 
 #: ../../source/tools/resource.rst:14
 msgid "SQL注入攻击与防御"
-msgstr ""
+msgstr "SQL Injection Attacks and Defense"
 
 #: ../../source/tools/resource.rst:17
 msgid "网络"
-msgstr ""
+msgstr "Networking"
 
 #: ../../source/tools/resource.rst:18
 msgid "Understanding linux network internals"
-msgstr ""
+msgstr "Understanding Linux Network Internals"
 
 #: ../../source/tools/resource.rst:19
 msgid "TCP/IP Architecture, Design, and Implementation in Linux"
-msgstr ""
+msgstr "TCP/IP Architecture, Design, and Implementation in Linux"
 
 #: ../../source/tools/resource.rst:20
 msgid "Linux Kernel Networking: Implementation and Theory"
-msgstr ""
+msgstr "Linux Kernel Networking: Implementation and Theory"
 
 #: ../../source/tools/resource.rst:21
 msgid "Bulletproof SSL and TLS"
-msgstr ""
+msgstr "Bulletproof SSL and TLS"
 
 #: ../../source/tools/resource.rst:22
 msgid "UNIX Network Programming"
-msgstr ""
+msgstr "UNIX Network Programming"
 
 #: ../../source/tools/resource.rst:23
 msgid "TCP / IP 协议详解"
-msgstr ""
+msgstr "TCP/IP Illustrated"
 
 #: ../../source/tools/resource.rst:26
 msgid "SEO"
-msgstr ""
+msgstr "SEO"
 
 #: ../../source/tools/resource.rst:27
 msgid "SEO艺术"
-msgstr ""
+msgstr "The Art of SEO"
 
 #: ../../source/tools/resource.rst:30
 msgid "无线攻防"
-msgstr ""
+msgstr "Wireless Attack and Defense"
 
 #: ../../source/tools/resource.rst:31
 msgid "无线网络安全攻防实战"
-msgstr ""
+msgstr "Practical Wireless Network Security Attack and Defense"
 
 #: ../../source/tools/resource.rst:32
 msgid "无线网络安全攻防实战进阶"
-msgstr ""
+msgstr "Advanced Practical Wireless Network Security Attack and Defense"
 
 #: ../../source/tools/resource.rst:33
 msgid "黑客大揭秘——近源渗透测试（柴坤哲等）"
-msgstr ""
+msgstr "Hacker Revealed: Near-Source Penetration Testing (Chai Kunzhe et al.)"
 
 #: ../../source/tools/resource.rst:36
 msgid "Hacking Programming"
-msgstr ""
+msgstr "Hacking Programming"
 
 #: ../../source/tools/resource.rst:37
 msgid "Gray Hat Python"
-msgstr ""
+msgstr "Gray Hat Python"
 
 #: ../../source/tools/resource.rst:40
 msgid "社会工程学"
-msgstr ""
+msgstr "Social Engineering"
 
 #: ../../source/tools/resource.rst:41
 msgid "社会工程：安全体系中的人性漏洞"
-msgstr ""
+msgstr "Social Engineering: Human Vulnerabilities in Security Systems"
 
 #: ../../source/tools/resource.rst:42
 msgid "反欺骗的艺术"
-msgstr ""
+msgstr "The Art of Deception"
 
 #: ../../source/tools/resource.rst:43
 msgid "反入侵的艺术"
-msgstr ""
+msgstr "The Art of Intrusion"
 
 #: ../../source/tools/resource.rst:46
 msgid "数据安全"
-msgstr ""
+msgstr "Data Security"
 
 #: ../../source/tools/resource.rst:47
 msgid "大数据治理与安全 从理论到开源实践（刘驰等）"
-msgstr ""
+msgstr "Big Data Governance and Security: From Theory to Open Source Practice (Liu Chi et al.)"
 
 #: ../../source/tools/resource.rst:48
 msgid "企业大数据处理 Spark、Druid、Flume与Kafka应用实践（肖冠宇）"
-msgstr ""
+msgstr "Enterprise Big Data Processing: Spark, Druid, Flume, and Kafka in Practice (Xiao Guanyu)"
 
 #: ../../source/tools/resource.rst:49
 msgid "数据安全 架构设计与实战（郑云文）"
-msgstr ""
+msgstr "Data Security: Architecture Design and Practice (Zheng Yunwen)"
 
 #: ../../source/tools/resource.rst:52
 msgid "机器学习与网络安全"
-msgstr ""
+msgstr "Machine Learning and Cybersecurity"
 
 #: ../../source/tools/resource.rst:53
 msgid "Web安全深度学习实战（刘焱）"
-msgstr ""
+msgstr "Practical Deep Learning for Web Security (Liu Yan)"
 
 #: ../../source/tools/resource.rst:54
 msgid "Web安全机器学习入门（刘焱）"
-msgstr ""
+msgstr "Introduction to Machine Learning for Web Security (Liu Yan)"
 
 #: ../../source/tools/resource.rst:55
 msgid "Web安全之强化学习与GAN（刘焱）"
-msgstr ""
+msgstr "Reinforcement Learning and GANs for Web Security (Liu Yan)"
 
 #: ../../source/tools/resource.rst:56
 msgid "AI安全之对抗样本入门（兜哥）"
-msgstr ""
+msgstr "Introduction to Adversarial Examples in AI Security (Dou Ge)"
 
 #: ../../source/tools/resource.rst:59
 msgid "安全建设"
-msgstr ""
+msgstr "Security Program Development"
 
 #: ../../source/tools/resource.rst:60
 msgid "企业安全建设入门——基于开源软件打造企业网络安全 （刘焱）"
-msgstr ""
+msgstr "Introduction to Enterprise Security Program Development: Building Enterprise Cybersecurity with Open Source Software (Liu Yan)"
 
 #: ../../source/tools/resource.rst:61
 msgid "企业安全建设指南——金融行业安全架构与技术实践 （聂君等）"
-msgstr ""
+msgstr "Enterprise Security Program Guide: Financial Industry Security Architecture and Technical Practice (Nie Jun et al.)"
 
 #: ../../source/tools/resource.rst:62
 msgid "大型互联网企业安全架构（石祖文）"
-msgstr ""
+msgstr "Security Architecture for Large Internet Enterprises (Shi Zuwen)"
 
 #: ../../source/tools/resource.rst:63
 msgid "CISSP官方学习指南"
-msgstr ""
+msgstr "CISSP Official Study Guide"
 
 #: ../../source/tools/resource.rst:64
 msgid "CISSP认证考试指南"
-msgstr ""
+msgstr "CISSP Certification Exam Guide"
 
 #: ../../source/tools/resource.rst:65
 msgid "Linux系统安全 纵深防御、安全扫描与入侵检测（胥峰）"
-msgstr ""
+msgstr "Linux System Security: Defense in Depth, Security Scanning, and Intrusion Detection (Xu Feng)"
 
 #: ../../source/tools/resource.rst:68
 msgid "综合"
-msgstr ""
+msgstr "General"
 
 #: ../../source/tools/resource.rst:69
 msgid "Web安全深度剖析"
-msgstr ""
+msgstr "In-Depth Web Security Analysis"
 
 #: ../../source/tools/resource.rst:70
 msgid "黑客秘笈——渗透测试实用指南"
-msgstr ""
+msgstr "Hacker Playbook: A Practical Guide to Penetration Testing"
 
 #: ../../source/tools/resource.rst:71
 msgid "黑客攻防技术宝典——web实战篇"
-msgstr ""
+msgstr "The Web Application Hacker's Handbook"
 
 #: ../../source/tools/resource.rst:74
 msgid "法律"
-msgstr ""
+msgstr "Legal"
 
 #: ../../source/tools/resource.rst:75
 msgid "信息安全标准和法律法规（第二版）（注：武汉大学出版社）"
-msgstr ""
+msgstr "Information Security Standards, Laws, and Regulations, 2nd Edition (Wuhan University Press)"
 
 #: ../../source/tools/resource.rst:78
 msgid "WebSite"
-msgstr ""
+msgstr "Website"
 
 #: ../../source/tools/resource.rst:79
 msgid "https://adsecurity.org/"
-msgstr ""
+msgstr "https://adsecurity.org/"
 
 #: ../../source/tools/resource.rst:82
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: ../../source/tools/resource.rst:83
 msgid "https://www.leavesongs.com/"
-msgstr ""
+msgstr "https://www.leavesongs.com/"
 
 #: ../../source/tools/resource.rst:84
 msgid "https://paper.seebug.org/"
-msgstr ""
+msgstr "https://paper.seebug.org/"
 
 #: ../../source/tools/resource.rst:85
 msgid "https://xz.aliyun.com/"
-msgstr ""
+msgstr "https://xz.aliyun.com/"
 
 #: ../../source/tools/resource.rst:86
 msgid "https://portswigger.net/blog"
-msgstr ""
+msgstr "https://portswigger.net/blog"
 
 #: ../../source/tools/resource.rst:87
 msgid "https://www.hackerone.com/blog"
-msgstr ""
+msgstr "https://www.hackerone.com/blog"
 
 #: ../../source/tools/resource.rst:90
 msgid "Bug Bounty"
-msgstr ""
+msgstr "Bug Bounty"
 
 #: ../../source/tools/resource.rst:91
 msgid "https://www.hackerone.com/"
-msgstr ""
+msgstr "https://www.hackerone.com/"
 
 #: ../../source/tools/resource.rst:92
 msgid "https://bugcrowd.com"
-msgstr ""
+msgstr "https://bugcrowd.com"
 
 #: ../../source/tools/resource.rst:93
 msgid "https://www.synack.com/"
-msgstr ""
+msgstr "https://www.synack.com/"
 
 #: ../../source/tools/resource.rst:94
 msgid "https://cobalt.io/"
-msgstr ""
+msgstr "https://cobalt.io/"
 
 #: ../../source/tools/resource.rst:97
 msgid "实验环境"
-msgstr ""
+msgstr "Lab Environments"
 
 #: ../../source/tools/resource.rst:100
 msgid "Web安全相关CTF题目"
-msgstr ""
+msgstr "Web Security CTF Challenges"
 
 #: ../../source/tools/resource.rst:101
 msgid "https://github.com/orangetw/My-CTF-Web-Challenges"
-msgstr ""
+msgstr "https://github.com/orangetw/My-CTF-Web-Challenges"
 
 #: ../../source/tools/resource.rst:102
 msgid "https://www.ripstech.com/php-security-calendar-2017/"
-msgstr ""
+msgstr "https://www.ripstech.com/php-security-calendar-2017/"
 
 #: ../../source/tools/resource.rst:103
 msgid "https://github.com/wonderkun/CTF_web"
-msgstr ""
+msgstr "https://github.com/wonderkun/CTF_web"
 
 #: ../../source/tools/resource.rst:104
 msgid "https://github.com/CHYbeta/Code-Audit-Challenges"
-msgstr ""
+msgstr "https://github.com/CHYbeta/Code-Audit-Challenges"
 
 #: ../../source/tools/resource.rst:105
 msgid "https://github.com/l4wio/CTF-challenges-by-me"
-msgstr ""
+msgstr "https://github.com/l4wio/CTF-challenges-by-me"
 
 #: ../../source/tools/resource.rst:106
 msgid "https://github.com/tsug0d/MyAwesomeWebChallenge"
-msgstr ""
+msgstr "https://github.com/tsug0d/MyAwesomeWebChallenge"
 
 #: ../../source/tools/resource.rst:107
 msgid "https://github.com/a0xnirudh/kurukshetra"
-msgstr ""
+msgstr "https://github.com/a0xnirudh/kurukshetra"
 
 #: ../../source/tools/resource.rst:108
 msgid "http://www.xssed.com/"
-msgstr ""
+msgstr "http://www.xssed.com/"
 
 #: ../../source/tools/resource.rst:111
 msgid "域实验环境"
-msgstr ""
+msgstr "Domain Lab Environments"
 
 #: ../../source/tools/resource.rst:112
 msgid ""
 "`Adaz <https://github.com/christophetd/Adaz>`_: Active Directory Hunting "
 "Lab in Azure"
 msgstr ""
+"`Adaz <https://github.com/christophetd/Adaz>`_: Active Directory Hunting "
+"Lab in Azure"
 
 #: ../../source/tools/resource.rst:113
 msgid ""
@@ -326,91 +328,110 @@ msgid ""
 "scripts to build a lab environment complete with security tooling and "
 "logging best practices"
 msgstr ""
+"`Detection <https://github.com/clong/DetectionLab>`_ Vagrant & Packer "
+"scripts to build a lab environment complete with security tooling and "
+"logging best practices"
 
 #: ../../source/tools/resource.rst:116
 msgid "知识库"
-msgstr ""
+msgstr "Knowledge Base"
 
 #: ../../source/tools/resource.rst:119
 msgid "Awesome 系列"
-msgstr ""
+msgstr "Awesome Series"
 
 #: ../../source/tools/resource.rst:120
 msgid "`Awesome CobaltStrike <https://github.com/zer0yu/Awesome-CobaltStrike>`_"
-msgstr ""
+msgstr "`Awesome CobaltStrike <https://github.com/zer0yu/Awesome-CobaltStrike>`_"
 
 #: ../../source/tools/resource.rst:121
 msgid ""
 "`Awesome Cybersecurity Blue Team <https://github.com/fabacab/awesome-"
 "cybersecurity-blueteam>`_"
 msgstr ""
+"`Awesome Cybersecurity Blue Team <https://github.com/fabacab/awesome-"
+"cybersecurity-blueteam>`_"
 
 #: ../../source/tools/resource.rst:122
 msgid "`Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_"
-msgstr ""
+msgstr "`Awesome Hacking <https://github.com/Hack-with-Github/Awesome-Hacking>`_"
 
 #: ../../source/tools/resource.rst:123
 msgid "`awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_"
-msgstr ""
+msgstr "`awesome sec talks <https://github.com/PaulSec/awesome-sec-talks>`_"
 
 #: ../../source/tools/resource.rst:124
 msgid "`Awesome Security <https://github.com/sbilly/awesome-security>`_"
-msgstr ""
+msgstr "`Awesome Security <https://github.com/sbilly/awesome-security>`_"
 
 #: ../../source/tools/resource.rst:125
 msgid ""
 "`awesome web security <https://github.com/qazbnm456/awesome-web-"
 "security>`_"
 msgstr ""
+"`awesome web security <https://github.com/qazbnm456/awesome-web-"
+"security>`_"
 
 #: ../../source/tools/resource.rst:126
 msgid ""
 "`Awesome-Android-Security <https://github.com/saeidshirazi/awesome-"
 "android-security>`_"
 msgstr ""
+"`Awesome-Android-Security <https://github.com/saeidshirazi/awesome-"
+"android-security>`_"
 
 #: ../../source/tools/resource.rst:129
 msgid "Bug Hunting"
-msgstr ""
+msgstr "Bug Hunting"
 
 #: ../../source/tools/resource.rst:130
 msgid ""
 "`HowToHunt <https://github.com/KathanP19/HowToHunt>`_ Tutorials and "
 "Things to Do while Hunting Vulnerability"
 msgstr ""
+"`HowToHunt <https://github.com/KathanP19/HowToHunt>`_ Tutorials and "
+"tasks for vulnerability hunting"
 
 #: ../../source/tools/resource.rst:133
 msgid "Java"
-msgstr ""
+msgstr "Java"
 
 #: ../../source/tools/resource.rst:134
 msgid ""
 "`learnjavabug <https://github.com/threedr3am/learnjavabug>`_ "
 "Java安全相关的漏洞和技术demo"
 msgstr ""
+"`learnjavabug <https://github.com/threedr3am/learnjavabug>`_ demos of "
+"Java security vulnerabilities and techniques"
 
 #: ../../source/tools/resource.rst:137
 msgid "红蓝对抗"
-msgstr ""
+msgstr "Red/Blue Teaming"
 
 #: ../../source/tools/resource.rst:138
 msgid ""
 "`atomic red team <https://github.com/redcanaryco/atomic-red-team>`_ Small"
 " and highly portable detection tests based on MITRE's ATT&CK"
 msgstr ""
+"`atomic red team <https://github.com/redcanaryco/atomic-red-team>`_ Small"
+" and highly portable detection tests based on MITRE's ATT&CK"
 
 #: ../../source/tools/resource.rst:141
 msgid "后渗透"
-msgstr ""
+msgstr "Post-Exploitation"
 
 #: ../../source/tools/resource.rst:142
 msgid ""
 "`Powershell攻击指南 黑客后渗透之道  <https://github.com/rootclay/Powershell-Attack-"
 "Guide.git>`_"
 msgstr ""
+"`Powershell Attack Guide: Hacker Post-Exploitation Methods  <https://github.com/rootclay/Powershell-Attack-"
+"Guide.git>`_"
 
 #: ../../source/tools/resource.rst:143
 msgid ""
 "`Active Directory Exploitation Cheat Sheet <https://github.com"
 "/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet>`_"
 msgstr ""
+"`Active Directory Exploitation Cheat Sheet <https://github.com"
+"/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet>`_"
