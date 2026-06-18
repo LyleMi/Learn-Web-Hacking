@@ -20,38 +20,38 @@ msgstr ""
 
 #: ../../source/intranet/windows/msrpc.rst:2
 msgid "MSPRC"
-msgstr ""
+msgstr "MSRPC"
 
 #: ../../source/intranet/windows/msrpc.rst:3
 msgid ""
 "MSRPC (Microsoft Remote Procedure Call) 是微软对 DCE/RPC "
 "协议的修改实现，用于支持Windows系统中应用程序的远程网络调用。"
-msgstr ""
+msgstr "MSRPC (Microsoft Remote Procedure Call) is Microsoft's modified implementation of the DCE/RPC protocol, used to support remote network calls by applications on Windows systems."
 
 #: ../../source/intranet/windows/msrpc.rst:5
 msgid "MSRPC所使用的端口有 UDP 135 和 TCP 139 / 445 。"
-msgstr ""
+msgstr "The ports used by MSRPC include UDP 135 and TCP 139 / 445."
 
 #: ../../source/intranet/windows/msrpc.rst:7
 msgid "MSRPC 可以用于"
-msgstr ""
+msgstr "MSRPC can be used for"
 
 #: ../../source/intranet/windows/msrpc.rst:9
 msgid "用户遍历"
-msgstr ""
+msgstr "User enumeration"
 
 #: ../../source/intranet/windows/msrpc.rst:10
 msgid "服务遍历"
-msgstr ""
+msgstr "Service enumeration"
 
 #: ../../source/intranet/windows/msrpc.rst:11
 msgid "凭证导出"
-msgstr ""
+msgstr "Credential export"
 
 #: ../../source/intranet/windows/msrpc.rst:12
 msgid "横向移动"
-msgstr ""
+msgstr "Lateral movement"
 
 #: ../../source/intranet/windows/msrpc.rst:13
 msgid "权限提升"
-msgstr ""
+msgstr "Privilege escalation"

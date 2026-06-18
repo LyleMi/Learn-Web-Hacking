@@ -20,184 +20,184 @@ msgstr ""
 
 #: ../../source/intranet/windows/trace.rst:2
 msgid "痕迹清理"
-msgstr ""
+msgstr "Trace Cleanup"
 
 #: ../../source/intranet/windows/trace.rst:5
 msgid "日志"
-msgstr ""
+msgstr "Logs"
 
 #: ../../source/intranet/windows/trace.rst:6
 msgid "查看日志 ``eventvwr``"
-msgstr ""
+msgstr "View logs ``eventvwr``"
 
 #: ../../source/intranet/windows/trace.rst:7
 msgid "伪造日志 ``eventcreate``"
-msgstr ""
+msgstr "Forge logs ``eventcreate``"
 
 #: ../../source/intranet/windows/trace.rst:8
 msgid "操作日志"
-msgstr ""
+msgstr "Operation logs"
 
 #: ../../source/intranet/windows/trace.rst:9
 msgid "3389登录列表"
-msgstr ""
+msgstr "3389 login list"
 
 #: ../../source/intranet/windows/trace.rst:10
 msgid "文件打开日志"
-msgstr ""
+msgstr "File open logs"
 
 #: ../../source/intranet/windows/trace.rst:11
 msgid "文件修改日志"
-msgstr ""
+msgstr "File modification logs"
 
 #: ../../source/intranet/windows/trace.rst:12
 msgid "浏览器日志"
-msgstr ""
+msgstr "Browser logs"
 
 #: ../../source/intranet/windows/trace.rst:13
 msgid "系统事件"
-msgstr ""
+msgstr "System events"
 
 #: ../../source/intranet/windows/trace.rst:14
 msgid "程序安装记录"
-msgstr ""
+msgstr "Program installation records"
 
 #: ../../source/intranet/windows/trace.rst:15
 msgid "程序删除记录"
-msgstr ""
+msgstr "Program removal records"
 
 #: ../../source/intranet/windows/trace.rst:16
 msgid "程序更新记录"
-msgstr ""
+msgstr "Program update records"
 
 #: ../../source/intranet/windows/trace.rst:17
 msgid "登录日志"
-msgstr ""
+msgstr "Logon logs"
 
 #: ../../source/intranet/windows/trace.rst:18
 msgid "系统安全日志"
-msgstr ""
+msgstr "System security logs"
 
 #: ../../source/intranet/windows/trace.rst:19
 msgid "日志路径"
-msgstr ""
+msgstr "Log Paths"
 
 #: ../../source/intranet/windows/trace.rst:20
 msgid "系统日志 ``%SystemRoot%\\System32\\Winevt\\Logs\\System.evtx``"
-msgstr ""
+msgstr "System log ``%SystemRoot%\\System32\\Winevt\\Logs\\System.evtx``"
 
 #: ../../source/intranet/windows/trace.rst:21
 msgid "安全日志 ``%SystemRoot%\\System32\\Winevt\\Logs\\Security.evtx``"
-msgstr ""
+msgstr "Security log ``%SystemRoot%\\System32\\Winevt\\Logs\\Security.evtx``"
 
 #: ../../source/intranet/windows/trace.rst:22
 msgid "应用程序日志 ``%SystemRoot%\\System32\\Winevt\\Logs\\Application.evtx``"
-msgstr ""
+msgstr "Application log ``%SystemRoot%\\System32\\Winevt\\Logs\\Application.evtx``"
 
 #: ../../source/intranet/windows/trace.rst:23
 msgid "服务日志"
-msgstr ""
+msgstr "Service logs"
 
 #: ../../source/intranet/windows/trace.rst:24
 msgid "IIS ``%SystemDrive%\\inetpub\\logs\\LogFiles\\W3SVC1\\``"
-msgstr ""
+msgstr "IIS ``%SystemDrive%\\inetpub\\logs\\LogFiles\\W3SVC1\\``"
 
 #: ../../source/intranet/windows/trace.rst:27
 msgid "注册表"
-msgstr ""
+msgstr "Registry"
 
 #: ../../source/intranet/windows/trace.rst:28
 msgid "AppCompatFlags"
-msgstr ""
+msgstr "AppCompatFlags"
 
 #: ../../source/intranet/windows/trace.rst:29
 msgid "Background Activity Moderator (BAM)"
-msgstr ""
+msgstr "Background Activity Moderator (BAM)"
 
 #: ../../source/intranet/windows/trace.rst:30
 msgid "MuiCache"
-msgstr ""
+msgstr "MuiCache"
 
 #: ../../source/intranet/windows/trace.rst:31
 msgid "RecentApps"
-msgstr ""
+msgstr "RecentApps"
 
 #: ../../source/intranet/windows/trace.rst:32
 msgid "RunMRU"
-msgstr ""
+msgstr "RunMRU"
 
 #: ../../source/intranet/windows/trace.rst:33
 msgid "ShimCache (AppCompatCache)"
-msgstr ""
+msgstr "ShimCache (AppCompatCache)"
 
 #: ../../source/intranet/windows/trace.rst:36
 msgid "注册表键"
-msgstr ""
+msgstr "Registry Key"
 
 #: ../../source/intranet/windows/trace.rst:37
 msgid "HKEY_LOCAL_MACHINE\\system\\CurrentControlSet\\Services\\Eventlog"
-msgstr ""
+msgstr "HKEY_LOCAL_MACHINE\\system\\CurrentControlSet\\Services\\Eventlog"
 
 #: ../../source/intranet/windows/trace.rst:40
 msgid "文件"
-msgstr ""
+msgstr "Files"
 
 #: ../../source/intranet/windows/trace.rst:43
 msgid "Prefetch"
-msgstr ""
+msgstr "Prefetch"
 
 #: ../../source/intranet/windows/trace.rst:44
 msgid "预读取文件夹，用来存放系统已访问过的文件的预读信息，扩展名为PF。位置在 ``C:\\Windows\\Prefetch`` 。"
-msgstr ""
+msgstr "The Prefetch folder stores prefetch information for files the system has accessed. Files use the PF extension. The location is ``C:\\Windows\\Prefetch``."
 
 #: ../../source/intranet/windows/trace.rst:47
 msgid "JumpLists"
-msgstr ""
+msgstr "JumpLists"
 
 #: ../../source/intranet/windows/trace.rst:48
 msgid ""
 "记录用户最近使用的文档和应用程序，方便用户快速跳转到指定文件，位置在 "
 "``%APPDATA%\\Microsoft\\Windows\\Recent`` 。"
-msgstr ""
+msgstr "Records recently used documents and applications so users can quickly jump to specified files. The location is ``%APPDATA%\\Microsoft\\Windows\\Recent``."
 
 #: ../../source/intranet/windows/trace.rst:51
 msgid "Amcache / RecentFileCache.bcf"
-msgstr ""
+msgstr "Amcache / RecentFileCache.bcf"
 
 #: ../../source/intranet/windows/trace.rst:52
 msgid "Windows中的使用这两个文件来跟踪具有不同可执行文件的应用程序兼容性问题，它可用于确定可执行文件首次运行的时间和最后修改时间。"
-msgstr ""
+msgstr "Windows uses these two files to track application compatibility issues for applications with different executables. They can be used to determine when an executable first ran and when it was last modified."
 
 #: ../../source/intranet/windows/trace.rst:54
 msgid ""
 "在Windows 7、Windows Server 2008 R2等系统中，文件保存在 "
 "``C:\\Windows\\AppCompat\\Programs\\RecentFileCache.bcf`` "
 "，包含程序的创建时间、上次修改时间、上次访问时间和文件名。"
-msgstr ""
+msgstr "On Windows 7, Windows Server 2008 R2, and similar systems, the file is saved at ``C:\\Windows\\AppCompat\\Programs\\RecentFileCache.bcf`` and contains the program creation time, last modification time, last access time, and file name."
 
 #: ../../source/intranet/windows/trace.rst:56
 msgid ""
 "在Windows 8、Windows 10、Windows Server 2012等系统中，文件保存在 "
 "``C:\\Windows\\AppCompat\\Programs\\Amcache.hve`` "
 "，包含文件大小、版本、sha1、二进制文件类型等信息。"
-msgstr ""
+msgstr "On Windows 8, Windows 10, Windows Server 2012, and similar systems, the file is saved at ``C:\\Windows\\AppCompat\\Programs\\Amcache.hve`` and contains information such as file size, version, SHA1, and binary file type."
 
 #: ../../source/intranet/windows/trace.rst:59
 msgid "时间轴"
-msgstr ""
+msgstr "Timeline"
 
 #: ../../source/intranet/windows/trace.rst:60
 msgid "Windows时间轴是Windows 10在1803版中引入的一个新特性，会记录访问过的网站、编辑过的文档、运行的程序等，"
-msgstr ""
+msgstr "Windows Timeline is a new feature introduced in Windows 10 version 1803. It records visited websites, edited documents, executed programs, and so on,"
 
 #: ../../source/intranet/windows/trace.rst:63
 msgid "彻底删除"
-msgstr ""
+msgstr "Secure Deletion"
 
 #: ../../source/intranet/windows/trace.rst:64
 msgid "多次覆写文件 ``cipher /w:<path>``"
-msgstr ""
+msgstr "Overwrite files multiple times ``cipher /w:<path>``"
 
 #: ../../source/intranet/windows/trace.rst:65
 msgid "格式化某磁盘count次 ``format D: /P:<count>``"
-msgstr ""
+msgstr "Format a disk `<count>` times ``format D: /P:<count>``"
