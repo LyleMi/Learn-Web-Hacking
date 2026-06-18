@@ -20,197 +20,197 @@ msgstr ""
 
 #: ../../source/tools/info.rst:2
 msgid "信息收集"
-msgstr ""
+msgstr "Information Gathering"
 
 #: ../../source/tools/info.rst:5
 msgid "Whois"
-msgstr ""
+msgstr "Whois"
 
 #: ../../source/tools/info.rst:6
 msgid "`who.is <https://who.is/>`_"
-msgstr ""
+msgstr "`who.is <https://who.is/>`_"
 
 #: ../../source/tools/info.rst:7
 msgid "`万网WHOIS <https://whois.aliyun.com/>`_"
-msgstr ""
+msgstr "`Alibaba Cloud WHOIS <https://whois.aliyun.com/>`_"
 
 #: ../../source/tools/info.rst:8
 msgid "`腾讯云WHOIS <https://whois.cloud.tencent.com/>`_"
-msgstr ""
+msgstr "`Tencent Cloud WHOIS <https://whois.cloud.tencent.com/>`_"
 
 #: ../../source/tools/info.rst:9
 msgid "`站长之家WHOIS <https://whois.chinaz.com/>`_"
-msgstr ""
+msgstr "`Chinaz WHOIS <https://whois.chinaz.com/>`_"
 
 #: ../../source/tools/info.rst:12
 msgid "网站备案"
-msgstr ""
+msgstr "Website ICP Filing"
 
 #: ../../source/tools/info.rst:13
 msgid "`天眼查 <https://www.tianyancha.com/>`_"
-msgstr ""
+msgstr "`Tianyancha <https://www.tianyancha.com/>`_"
 
 #: ../../source/tools/info.rst:14
 msgid "`ICP备案查询 <http://www.beianbeian.com/>`_"
-msgstr ""
+msgstr "`ICP filing lookup <http://www.beianbeian.com/>`_"
 
 #: ../../source/tools/info.rst:15
 msgid "`爱站备案查询 <https://icp.aizhan.com>`_"
-msgstr ""
+msgstr "`Aizhan ICP filing lookup <https://icp.aizhan.com>`_"
 
 #: ../../source/tools/info.rst:18
 msgid "CDN查询"
-msgstr ""
+msgstr "CDN Lookup"
 
 #: ../../source/tools/info.rst:19
 msgid "`多地Ping <https://ping.chinaz.com/>`_"
-msgstr ""
+msgstr "`Multi-region Ping <https://ping.chinaz.com/>`_"
 
 #: ../../source/tools/info.rst:20
 msgid "`CDN服务商查询 <https://tools.ipip.net/cdn.php>`_"
-msgstr ""
+msgstr "`CDN provider lookup <https://tools.ipip.net/cdn.php>`_"
 
 #: ../../source/tools/info.rst:23
 msgid "子域爆破"
-msgstr ""
+msgstr "Subdomain Brute Forcing"
 
 #: ../../source/tools/info.rst:24
 msgid ""
 "`Amass <https://github.com/OWASP/Amass>`_ In-depth Attack Surface Mapping"
 " and Asset Discovery"
-msgstr ""
+msgstr "`Amass <https://github.com/OWASP/Amass>`_ In-depth Attack Surface Mapping and Asset Discovery"
 
 #: ../../source/tools/info.rst:25
 msgid "`subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_"
-msgstr ""
+msgstr "`subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_"
 
 #: ../../source/tools/info.rst:26
 msgid "`wydomain <https://github.com/ring04h/wydomain>`_"
-msgstr ""
+msgstr "`wydomain <https://github.com/ring04h/wydomain>`_"
 
 #: ../../source/tools/info.rst:27
 msgid "`broDomain <https://github.com/code-scan/BroDomain>`_"
-msgstr ""
+msgstr "`broDomain <https://github.com/code-scan/BroDomain>`_"
 
 #: ../../source/tools/info.rst:28
 msgid "`ESD <https://github.com/FeeiCN/ESD>`_"
-msgstr ""
+msgstr "`ESD <https://github.com/FeeiCN/ESD>`_"
 
 #: ../../source/tools/info.rst:29
 msgid "`aiodnsbrute <https://github.com/blark/aiodnsbrute>`_"
-msgstr ""
+msgstr "`aiodnsbrute <https://github.com/blark/aiodnsbrute>`_"
 
 #: ../../source/tools/info.rst:30
 msgid "`OneForAll <https://github.com/shmilylty/OneForAll>`_"
-msgstr ""
+msgstr "`OneForAll <https://github.com/shmilylty/OneForAll>`_"
 
 #: ../../source/tools/info.rst:31
 msgid "`subfinder <https://github.com/subfinder/subfinder>`_"
-msgstr ""
+msgstr "`subfinder <https://github.com/subfinder/subfinder>`_"
 
 #: ../../source/tools/info.rst:32
 msgid ""
 "`altdns <https://github.com/infosec-au/altdns>`_ Generates permutations, "
 "alterations and mutations of subdomains and then resolves them"
-msgstr ""
+msgstr "`altdns <https://github.com/infosec-au/altdns>`_ Generates permutations, alterations and mutations of subdomains and then resolves them"
 
 #: ../../source/tools/info.rst:35
 msgid "域名获取"
-msgstr ""
+msgstr "Domain Discovery"
 
 #: ../../source/tools/info.rst:36
 msgid ""
 "`the art of subdomain enumeration <https://github.com/appsecco/the-art-"
 "of-subdomain-enumeration>`_"
-msgstr ""
+msgstr "`the art of subdomain enumeration <https://github.com/appsecco/the-art-of-subdomain-enumeration>`_"
 
 #: ../../source/tools/info.rst:37
 msgid ""
 "`sslScrape "
 "<https://github.com/cheetz/sslScrape/blob/master/sslScrape.py>`_"
-msgstr ""
+msgstr "`sslScrape <https://github.com/cheetz/sslScrape/blob/master/sslScrape.py>`_"
 
 #: ../../source/tools/info.rst:38
 msgid ""
 "`aquatone <https://github.com/michenriksen/aquatone>`_ A Tool for Domain "
 "Flyovers"
-msgstr ""
+msgstr "`aquatone <https://github.com/michenriksen/aquatone>`_ A Tool for Domain Flyovers"
 
 #: ../../source/tools/info.rst:39
 msgid ""
 "`teemo <https://github.com/bit4woo/teemo>`_ A Domain Name & Email Address"
 " Collection Tool"
-msgstr ""
+msgstr "`teemo <https://github.com/bit4woo/teemo>`_ A Domain Name & Email Address Collection Tool"
 
 #: ../../source/tools/info.rst:40
 msgid "`DNS DB 历史记录 <https://dnsdb.io/zh-cn/>`_"
-msgstr ""
+msgstr "`DNS DB historical records <https://dnsdb.io/zh-cn/>`_"
 
 #: ../../source/tools/info.rst:43
 msgid "弱密码爆破"
-msgstr ""
+msgstr "Weak Password Brute Forcing"
 
 #: ../../source/tools/info.rst:44
 msgid "`hydra <https://github.com/vanhauser-thc/thc-hydra>`_"
-msgstr ""
+msgstr "`hydra <https://github.com/vanhauser-thc/thc-hydra>`_"
 
 #: ../../source/tools/info.rst:45
 msgid ""
 "`medusa <https://github.com/jmk-foofus/medusa>`_ is a high-speed network "
 "authentication cracking tool"
-msgstr ""
+msgstr "`medusa <https://github.com/jmk-foofus/medusa>`_ is a high-speed network authentication cracking tool"
 
 #: ../../source/tools/info.rst:46
 msgid "`Ncrack <https://github.com/nmap/ncrack>`_"
-msgstr ""
+msgstr "`Ncrack <https://github.com/nmap/ncrack>`_"
 
 #: ../../source/tools/info.rst:47
 msgid "`htpwdScan <https://github.com/lijiejie/htpwdScan>`_"
-msgstr ""
+msgstr "`htpwdScan <https://github.com/lijiejie/htpwdScan>`_"
 
 #: ../../source/tools/info.rst:48
 msgid "`patator <https://github.com/lanjelot/patator>`_"
-msgstr ""
+msgstr "`patator <https://github.com/lanjelot/patator>`_"
 
 #: ../../source/tools/info.rst:51
 msgid "Git信息泄漏"
-msgstr ""
+msgstr "Git Information Leakage"
 
 #: ../../source/tools/info.rst:52
 msgid "`GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_"
-msgstr ""
+msgstr "`GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_"
 
 #: ../../source/tools/info.rst:53
 msgid "`GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_"
-msgstr ""
+msgstr "`GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_"
 
 #: ../../source/tools/info.rst:54
 msgid "`GitTools <https://github.com/internetwache/GitTools>`_"
-msgstr ""
+msgstr "`GitTools <https://github.com/internetwache/GitTools>`_"
 
 #: ../../source/tools/info.rst:55
 msgid "`Zen <https://github.com/s0md3v/Zen>`_"
-msgstr ""
+msgstr "`Zen <https://github.com/s0md3v/Zen>`_"
 
 #: ../../source/tools/info.rst:56
 msgid "`dig github history <https://github.com/dxa4481/truffleHog>`_"
-msgstr ""
+msgstr "`dig github history <https://github.com/dxa4481/truffleHog>`_"
 
 #: ../../source/tools/info.rst:57
 msgid ""
 "`gitrob Reconnaissance tool for GitHub organizations "
 "<https://github.com/michenriksen/gitrob>`_"
-msgstr ""
+msgstr "`gitrob Reconnaissance tool for GitHub organizations <https://github.com/michenriksen/gitrob>`_"
 
 #: ../../source/tools/info.rst:58
 msgid "`git secrets <https://github.com/awslabs/git-secrets>`_"
-msgstr ""
+msgstr "`git secrets <https://github.com/awslabs/git-secrets>`_"
 
 #: ../../source/tools/info.rst:59
 msgid ""
 "`shhgit <https://github.com/eth0izzle/shhgit>`_ Find GitHub secrets in "
 "real time"
-msgstr ""
+msgstr "`shhgit <https://github.com/eth0izzle/shhgit>`_ Find GitHub secrets in real time"
 
 #: ../../source/tools/info.rst:60
 msgid ""
@@ -218,362 +218,362 @@ msgid ""
 "exposed API keys on GitHub using pattern matching, commit history "
 "searching, and a unique result scoring system. A batch-catching, pattern-"
 "matching, patch-attacking secret snatcher"
-msgstr ""
+msgstr "`GitHound <https://github.com/tillson/git-hound>`_ GitHound pinpoints exposed API keys on GitHub using pattern matching, commit history searching, and a unique result scoring system. A batch-catching, pattern-matching, patch-attacking secret snatcher"
 
 #: ../../source/tools/info.rst:61
 msgid "`x patrol <https://github.com/MiSecurity/x-patrol>`_ Github leaked patrol"
-msgstr ""
+msgstr "`x patrol <https://github.com/MiSecurity/x-patrol>`_ Github leaked patrol"
 
 #: ../../source/tools/info.rst:62
 msgid ""
 "`GitDorker <https://github.com/obheda12/GitDorker>`_ scrape secrets from "
 "GitHub through usage of a large repository of dorks"
-msgstr ""
+msgstr "`GitDorker <https://github.com/obheda12/GitDorker>`_ scrape secrets from GitHub through usage of a large repository of dorks"
 
 #: ../../source/tools/info.rst:65
 msgid "Github监控"
-msgstr ""
+msgstr "GitHub Monitoring"
 
 #: ../../source/tools/info.rst:66
 msgid ""
 "`Github Monitor <https://github.com/VKSRC/Github-Monitor>`_ Github "
 "Sensitive Information Leakage Monitor"
-msgstr ""
+msgstr "`Github Monitor <https://github.com/VKSRC/Github-Monitor>`_ Github Sensitive Information Leakage Monitor"
 
 #: ../../source/tools/info.rst:67
 msgid "`Github Dorks <https://github.com/techgaun/github-dorks>`_"
-msgstr ""
+msgstr "`Github Dorks <https://github.com/techgaun/github-dorks>`_"
 
 #: ../../source/tools/info.rst:68
 msgid "`GSIL <https://github.com/FeeiCN/GSIL>`_"
-msgstr ""
+msgstr "`GSIL <https://github.com/FeeiCN/GSIL>`_"
 
 #: ../../source/tools/info.rst:69
 msgid "`Hawkeye <https://github.com/0xbug/Hawkeye>`_"
-msgstr ""
+msgstr "`Hawkeye <https://github.com/0xbug/Hawkeye>`_"
 
 #: ../../source/tools/info.rst:70
 msgid "`gshark <https://github.com/neal1991/gshark>`_"
-msgstr ""
+msgstr "`gshark <https://github.com/neal1991/gshark>`_"
 
 #: ../../source/tools/info.rst:71
 msgid "`GitGot <https://github.com/BishopFox/GitGot>`_"
-msgstr ""
+msgstr "`GitGot <https://github.com/BishopFox/GitGot>`_"
 
 #: ../../source/tools/info.rst:72
 msgid ""
 "`gitGraber <https://github.com/hisxo/gitGraber>`_ monitor GitHub to "
 "search and find sensitive data in real time for different online services"
-msgstr ""
+msgstr "`gitGraber <https://github.com/hisxo/gitGraber>`_ monitor GitHub to search and find sensitive data in real time for different online services"
 
 #: ../../source/tools/info.rst:75
 msgid "路径及文件扫描"
-msgstr ""
+msgstr "Path and File Scanning"
 
 #: ../../source/tools/info.rst:76
 msgid "`weakfilescan <https://github.com/ring04h/weakfilescan>`_"
-msgstr ""
+msgstr "`weakfilescan <https://github.com/ring04h/weakfilescan>`_"
 
 #: ../../source/tools/info.rst:77
 msgid "`DirBrute <https://github.com/Xyntax/DirBrute>`_"
-msgstr ""
+msgstr "`DirBrute <https://github.com/Xyntax/DirBrute>`_"
 
 #: ../../source/tools/info.rst:78
 msgid "`dirsearch <https://github.com/maurosoria/dirsearch>`_"
-msgstr ""
+msgstr "`dirsearch <https://github.com/maurosoria/dirsearch>`_"
 
 #: ../../source/tools/info.rst:79
 msgid "`bfac <https://github.com/mazen160/bfac>`_"
-msgstr ""
+msgstr "`bfac <https://github.com/mazen160/bfac>`_"
 
 #: ../../source/tools/info.rst:80
 msgid "`ds_store_exp <https://github.com/lijiejie/ds_store_exp>`_"
-msgstr ""
+msgstr "`ds_store_exp <https://github.com/lijiejie/ds_store_exp>`_"
 
 #: ../../source/tools/info.rst:83
 msgid "路径爬虫"
-msgstr ""
+msgstr "Path Crawling"
 
 #: ../../source/tools/info.rst:84
 msgid ""
 "`crawlergo <https://github.com/0Kee-Team/crawlergo>`_ A powerful dynamic "
 "crawler for web vulnerability scanners"
-msgstr ""
+msgstr "`crawlergo <https://github.com/0Kee-Team/crawlergo>`_ A powerful dynamic crawler for web vulnerability scanners"
 
 #: ../../source/tools/info.rst:87
 msgid "指纹识别"
-msgstr ""
+msgstr "Fingerprinting"
 
 #: ../../source/tools/info.rst:88
 msgid "`Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_"
-msgstr ""
+msgstr "`Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_"
 
 #: ../../source/tools/info.rst:89
 msgid "`whatweb <https://github.com/urbanadventurer/whatweb>`_"
-msgstr ""
+msgstr "`whatweb <https://github.com/urbanadventurer/whatweb>`_"
 
 #: ../../source/tools/info.rst:90
 msgid "`Wordpress Finger Print <https://github.com/iniqua/plecost>`_"
-msgstr ""
+msgstr "`Wordpress Finger Print <https://github.com/iniqua/plecost>`_"
 
 #: ../../source/tools/info.rst:91
 msgid "`CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_"
-msgstr ""
+msgstr "`CMS fingerprinting <https://github.com/n4xh4ck5/CMSsc4n>`_"
 
 #: ../../source/tools/info.rst:92
 msgid ""
 "`JA3 <https://github.com/salesforce/ja3>`_ is a standard for creating SSL"
 " client fingerprints in an easy to produce and shareable way"
-msgstr ""
+msgstr "`JA3 <https://github.com/salesforce/ja3>`_ is a standard for creating SSL client fingerprints in an easy to produce and shareable way"
 
 #: ../../source/tools/info.rst:93
 msgid "`TideFinger <https://github.com/TideSec/TideFinger>`_"
-msgstr ""
+msgstr "`TideFinger <https://github.com/TideSec/TideFinger>`_"
 
 #: ../../source/tools/info.rst:94
 msgid ""
 "`JARM <https://github.com/salesforce/jarm>`_ active Transport Layer "
 "Security (TLS) server fingerprinting tool"
-msgstr ""
+msgstr "`JARM <https://github.com/salesforce/jarm>`_ active Transport Layer Security (TLS) server fingerprinting tool"
 
 #: ../../source/tools/info.rst:95
 msgid ""
 "`fingerprintjs <https://github.com/fingerprintjs/fingerprintjs>`_ Browser"
 " fingerprinting library with the highest accuracy and stability"
-msgstr ""
+msgstr "`fingerprintjs <https://github.com/fingerprintjs/fingerprintjs>`_ Browser fingerprinting library with the highest accuracy and stability"
 
 #: ../../source/tools/info.rst:98
 msgid "Waf指纹"
-msgstr ""
+msgstr "WAF Fingerprinting"
 
 #: ../../source/tools/info.rst:99
 msgid "`identywaf <https://github.com/enablesecurity/identywaf>`_"
-msgstr ""
+msgstr "`identywaf <https://github.com/enablesecurity/identywaf>`_"
 
 #: ../../source/tools/info.rst:100
 msgid "`wafw00f <https://github.com/enablesecurity/wafw00f>`_"
-msgstr ""
+msgstr "`wafw00f <https://github.com/enablesecurity/wafw00f>`_"
 
 #: ../../source/tools/info.rst:101
 msgid "`WhatWaf <https://github.com/Ekultek/WhatWaf>`_"
-msgstr ""
+msgstr "`WhatWaf <https://github.com/Ekultek/WhatWaf>`_"
 
 #: ../../source/tools/info.rst:104
 msgid "端口扫描"
-msgstr ""
+msgstr "Port Scanning"
 
 #: ../../source/tools/info.rst:105
 msgid "`nmap <https://github.com/nmap/nmap>`_"
-msgstr ""
+msgstr "`nmap <https://github.com/nmap/nmap>`_"
 
 #: ../../source/tools/info.rst:106
 msgid "`zmap <https://github.com/zmap/zmap>`_"
-msgstr ""
+msgstr "`zmap <https://github.com/zmap/zmap>`_"
 
 #: ../../source/tools/info.rst:107
 msgid "`masscan <https://github.com/robertdavidgraham/masscan>`_"
-msgstr ""
+msgstr "`masscan <https://github.com/robertdavidgraham/masscan>`_"
 
 #: ../../source/tools/info.rst:108
 msgid "`ShodanHat <https://github.com/HatBashBR/ShodanHat>`_"
-msgstr ""
+msgstr "`ShodanHat <https://github.com/HatBashBR/ShodanHat>`_"
 
 #: ../../source/tools/info.rst:109
 msgid ""
 "`lzr <https://github.com/stanford-esrg/lzr>`_ LZR quickly detects and "
 "fingerprints unexpected services running on unexpected ports"
-msgstr ""
+msgstr "`lzr <https://github.com/stanford-esrg/lzr>`_ LZR quickly detects and fingerprints unexpected services running on unexpected ports"
 
 #: ../../source/tools/info.rst:110
 msgid "`ZGrab2 <https://github.com/zmap/zgrab2>`_ Fast Go Application Scanner"
-msgstr ""
+msgstr "`ZGrab2 <https://github.com/zmap/zgrab2>`_ Fast Go Application Scanner"
 
 #: ../../source/tools/info.rst:111
 msgid "`RustScan <https://github.com/RustScan/RustScan>`_ The Modern Port Scanner"
-msgstr ""
+msgstr "`RustScan <https://github.com/RustScan/RustScan>`_ The Modern Port Scanner"
 
 #: ../../source/tools/info.rst:112
 msgid "DNS ``dnsenum nslookup dig fierce``"
-msgstr ""
+msgstr "DNS ``dnsenum nslookup dig fierce``"
 
 #: ../../source/tools/info.rst:113
 msgid "SNMP ``snmpwalk``"
-msgstr ""
+msgstr "SNMP ``snmpwalk``"
 
 #: ../../source/tools/info.rst:116
 msgid "DNS数据查询"
-msgstr ""
+msgstr "DNS Data Lookup"
 
 #: ../../source/tools/info.rst:117
 msgid "`VirusTotal <https://www.virustotal.com/>`_"
-msgstr ""
+msgstr "`VirusTotal <https://www.virustotal.com/>`_"
 
 #: ../../source/tools/info.rst:118
 msgid "`PassiveTotal <https://passivetotal.org>`_"
-msgstr ""
+msgstr "`PassiveTotal <https://passivetotal.org>`_"
 
 #: ../../source/tools/info.rst:119
 msgid "`DNSDB <https://www.dnsdb.info/>`_"
-msgstr ""
+msgstr "`DNSDB <https://www.dnsdb.info/>`_"
 
 #: ../../source/tools/info.rst:120
 msgid "`sitedossier <http://www.sitedossier.com/>`_"
-msgstr ""
+msgstr "`sitedossier <http://www.sitedossier.com/>`_"
 
 #: ../../source/tools/info.rst:123
 msgid "DNS关联"
-msgstr ""
+msgstr "DNS Correlation"
 
 #: ../../source/tools/info.rst:124
 msgid ""
 "`Cloudflare Enumeration Tool "
 "<https://github.com/mandatoryprogrammer/cloudflare_enum>`_"
-msgstr ""
+msgstr "`Cloudflare Enumeration Tool <https://github.com/mandatoryprogrammer/cloudflare_enum>`_"
 
 #: ../../source/tools/info.rst:125
 msgid "`Certificate Search <https://crt.sh/>`_"
-msgstr ""
+msgstr "`Certificate Search <https://crt.sh/>`_"
 
 #: ../../source/tools/info.rst:128
 msgid "云服务"
-msgstr ""
+msgstr "Cloud Services"
 
 #: ../../source/tools/info.rst:129
 msgid "`Find aws s3 buckets <https://github.com/gwen001/s3-buckets-finder>`_"
-msgstr ""
+msgstr "`Find aws s3 buckets <https://github.com/gwen001/s3-buckets-finder>`_"
 
 #: ../../source/tools/info.rst:130
 msgid "`CloudScraper <https://github.com/jordanpotti/CloudScraper>`_"
-msgstr ""
+msgstr "`CloudScraper <https://github.com/jordanpotti/CloudScraper>`_"
 
 #: ../../source/tools/info.rst:131
 msgid "`AWS Bucket Dump <https://github.com/jordanpotti/AWSBucketDump>`_"
-msgstr ""
+msgstr "`AWS Bucket Dump <https://github.com/jordanpotti/AWSBucketDump>`_"
 
 #: ../../source/tools/info.rst:134
 msgid "数据查询"
-msgstr ""
+msgstr "Data Lookup"
 
 #: ../../source/tools/info.rst:135
 msgid "`Censys <https://censys.io>`_"
-msgstr ""
+msgstr "`Censys <https://censys.io>`_"
 
 #: ../../source/tools/info.rst:136
 msgid "`Shodan <https://www.shodan.io/>`_"
-msgstr ""
+msgstr "`Shodan <https://www.shodan.io/>`_"
 
 #: ../../source/tools/info.rst:137
 msgid "`Zoomeye <https://www.zoomeye.org/>`_"
-msgstr ""
+msgstr "`Zoomeye <https://www.zoomeye.org/>`_"
 
 #: ../../source/tools/info.rst:138
 msgid "`fofa <https://fofa.so/>`_"
-msgstr ""
+msgstr "`fofa <https://fofa.so/>`_"
 
 #: ../../source/tools/info.rst:139
 msgid "`scans <https://scans.io/>`_"
-msgstr ""
+msgstr "`scans <https://scans.io/>`_"
 
 #: ../../source/tools/info.rst:140
 msgid "`Just Metadata <https://github.com/FortyNorthSecurity/Just-Metadata>`_"
-msgstr ""
+msgstr "`Just Metadata <https://github.com/FortyNorthSecurity/Just-Metadata>`_"
 
 #: ../../source/tools/info.rst:141
 msgid "`publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_"
-msgstr ""
+msgstr "`publicwww - Find Web Pages via Snippet <https://publicwww.com/>`_"
 
 #: ../../source/tools/info.rst:142
 msgid ""
 "`Tiny Scan <https://www.tiny-scan.com>`_ A URL scan tool that provides "
 "comprehensive information about any given URL"
-msgstr ""
+msgstr "`Tiny Scan <https://www.tiny-scan.com>`_ A URL scan tool that provides comprehensive information about any given URL"
 
 #: ../../source/tools/info.rst:145
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: ../../source/tools/info.rst:146
 msgid ""
 "`Probable Wordlists <https://github.com/berzerk0/Probable-Wordlists>`_ "
 "Wordlists sorted by probability originally created for password "
 "generation and testing"
-msgstr ""
+msgstr "`Probable Wordlists <https://github.com/berzerk0/Probable-Wordlists>`_ Wordlists sorted by probability originally created for password generation and testing"
 
 #: ../../source/tools/info.rst:147
 msgid "`Common User Passwords Profiler <https://github.com/Mebus/cupp>`_"
-msgstr ""
+msgstr "`Common User Passwords Profiler <https://github.com/Mebus/cupp>`_"
 
 #: ../../source/tools/info.rst:148
 msgid ""
 "`chrome password grabber "
 "<https://github.com/x899/chrome_password_grabber>`_"
-msgstr ""
+msgstr "`chrome password grabber <https://github.com/x899/chrome_password_grabber>`_"
 
 #: ../../source/tools/info.rst:149
 msgid ""
 "`DefaultCreds cheat sheet <https://github.com/ihebski/DefaultCreds-cheat-"
 "sheet>`_ One place for all the default credentials to assist the "
 "pentesters during an engagement"
-msgstr ""
+msgstr "`DefaultCreds cheat sheet <https://github.com/ihebski/DefaultCreds-cheat-sheet>`_ One place for all the default credentials to assist the pentesters during an engagement"
 
 #: ../../source/tools/info.rst:150
 msgid "`SuperWordlist <https://github.com/fuzz-security/SuperWordlist>`_"
-msgstr ""
+msgstr "`SuperWordlist <https://github.com/fuzz-security/SuperWordlist>`_"
 
 #: ../../source/tools/info.rst:153
 msgid "CI信息泄露"
-msgstr ""
+msgstr "CI Information Leakage"
 
 #: ../../source/tools/info.rst:154
 msgid ""
 "`secretz <https://github.com/lc/secretz>`_ minimizing the large attack "
 "surface of Travis CI"
-msgstr ""
+msgstr "`secretz <https://github.com/lc/secretz>`_ minimizing the large attack surface of Travis CI"
 
 #: ../../source/tools/info.rst:157
 msgid "个人数据画像"
-msgstr ""
+msgstr "Personal Data Profiling"
 
 #: ../../source/tools/info.rst:158
 msgid ""
 "`GHunt <https://github.com/mxrch/GHunt>`_ Investigate Google Accounts "
 "with emails"
-msgstr ""
+msgstr "`GHunt <https://github.com/mxrch/GHunt>`_ Investigate Google Accounts with emails"
 
 #: ../../source/tools/info.rst:161
 msgid "邮箱收集"
-msgstr ""
+msgstr "Email Collection"
 
 #: ../../source/tools/info.rst:162
 msgid "`EmailHarvester <https://github.com/maldevel/EmailHarvester>`_"
-msgstr ""
+msgstr "`EmailHarvester <https://github.com/maldevel/EmailHarvester>`_"
 
 #: ../../source/tools/info.rst:165
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: ../../source/tools/info.rst:166
 msgid "`datasploit <https://github.com/DataSploit/datasploit>`_"
-msgstr ""
+msgstr "`datasploit <https://github.com/DataSploit/datasploit>`_"
 
 #: ../../source/tools/info.rst:167
 msgid "`watchdog <https://github.com/flipkart-incubator/watchdog>`_"
-msgstr ""
+msgstr "`watchdog <https://github.com/flipkart-incubator/watchdog>`_"
 
 #: ../../source/tools/info.rst:168
 msgid "`archive <https://archive.org/web/>`_"
-msgstr ""
+msgstr "`archive <https://archive.org/web/>`_"
 
 #: ../../source/tools/info.rst:169
 msgid "`HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_"
-msgstr ""
+msgstr "`HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_"
 
 #: ../../source/tools/info.rst:170
 msgid "`htrace <https://github.com/trimstray/htrace.sh>`_"
-msgstr ""
+msgstr "`htrace <https://github.com/trimstray/htrace.sh>`_"
 
 #: ../../source/tools/info.rst:171
 msgid ""
 "`Quake Command-Line Application <https://github.com/360quake/quake_rs>`_ "
 "360网络空间测绘系统"
-msgstr ""
+msgstr "`Quake Command-Line Application <https://github.com/360quake/quake_rs>`_ 360 cyberspace mapping system"
