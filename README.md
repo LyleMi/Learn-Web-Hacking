@@ -125,6 +125,7 @@
     7. Windows
     8. Kerberos
     9. NTLM 身份验证
+- [Dark-Moon](https://github.com/ASCIT31/Dark-Moon)：开源（GPL-3.0）自托管自主式 AI 渗透测试平台，MCP 编排侦察/利用/报告智能体，覆盖 Web/API/AD/Kubernetes，本地隐私令牌化。
 10. 工具与资源
     1. 推荐资源
     2. 相关论文
