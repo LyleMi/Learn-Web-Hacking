@@ -1,37 +1,37 @@
-邮件协议族
+Email protocol suite
 ========================================
 
-简介
+Introduction
 ----------------------------------------
 
 SMTP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SMTP (Simple Mail Transfer Protocol) 是一种电子邮件传输的协议，是一组用于从源地址到目的地址传输邮件的规范。不启用SSL时端口号为25，启用SSL时端口号多为465或994。
+SMTP (Simple Mail Transfer Protocol) is an email transfer protocol and a set of specifications for transferring emails from a source address to a destination address. When SSL is not enabled, the port number is 25. When SSL is enabled, the port number is mostly 465 or 994.
 
 POP3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-POP3 (Post Office Protocol 3) 用于支持使用客户端远程管理在服务器上的电子邮件。不启用SSL时端口号为110，启用SSL时端口号多为995。
+POP3 (Post Office Protocol 3) is used to support remote management of email on the server using a client. The port number is 110 when SSL is not enabled, and the port number is 995 when SSL is enabled.
 
 IMAP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-IMAP (Internet Mail Access Protocol)，即交互式邮件存取协议，它是跟POP3类似邮件访问标准协议之一。不同的是，开启了IMAP后，您在电子邮件客户端收取的邮件仍然保留在服务器上，同时在客户端上的操作都会反馈到服务器上，如：删除邮件，标记已读等，服务器上的邮件也会做相应的动作。不启用SSL时端口号为143，启用SSL时端口号多为993。
+IMAP (Internet Mail Access Protocol), the Interactive Mail Access Protocol, is one of the standard protocols for mail access similar to POP3. The difference is that after IMAP is turned on, the emails you receive on the email client will still be retained on the server. At the same time, operations on the client will be fed back to the server, such as deleting emails, marking them as read, etc., and the emails on the server will also take corresponding actions. The port number is 143 when SSL is not enabled, and the port number is 993 when SSL is enabled.
 
-防护策略
+Protection strategy
 ----------------------------------------
 
 SPF
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-发件人策略框架 (Sender Policy Framework, SPF) 是一套电子邮件认证机制，用于确认电子邮件是否由网域授权的邮件服务器寄出，防止有人伪冒身份网络钓鱼或寄出垃圾邮件。SPF允许管理员设定一个DNS TXT记录或SPF记录设定发送邮件服务器的IP范围，如有任何邮件并非从上述指明授权的IP地址寄出，则很可能该邮件并非确实由真正的寄件者寄出。
+Sender Policy Framework (SPF) is an email authentication mechanism that is used to confirm whether an email is sent by a domain-authorized mail server to prevent someone from pretending to be a phishing or spam email. SPF allows administrators to set a DNS TXT record or SPF record to set the IP range of the outgoing email server. If any email is not sent from the authorized IP address specified above, it is likely that the email was not actually sent by the real sender.
 
 DKIM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-域名密钥识别邮件 (DomainKeys Identified Mail, DKIM) 是一种检测电子邮件发件人地址伪造的方法。发送方会在邮件的头中插入DKIM-Signature，收件方通过查询DNS记录中的公钥来验证发件人的信息。
+DomainKeys Identified Mail (DKIM) is a method of detecting forged email sender addresses. The sender will insert DKIM-Signature into the header of the email, and the recipient will verify the sender's information by querying the public key in the DNS record.
 
 DMARC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-基于网域的消息认证、报告和一致性 (Domain-based Message Authentication, Reporting and Conformance, DMARC) 是电子邮件身份验证协议，用于解决在邮件栏中显示的域名和验证的域名不一致的问题。要通过 DMARC 检查，必须通过 SPF 或/和 DKIM 的身份验证，且需要标头地址中的域名必须与经过身份验证的域名一致。
+Domain-based Message Authentication, Reporting and Conformance (DMARC) is an email authentication protocol that solves the problem of inconsistencies between the domain name displayed in the mail bar and the domain name verified. To pass the DMARC check, authentication with SPF or/and DKIM is required, and the domain name in the header address must match the authenticated domain name.
 
-参考链接
+Reference link
 ----------------------------------------
 
 RFC
@@ -45,12 +45,12 @@ RFC
 - `RFC 8616 Email Authentication for Internationalized Mail <https://tools.ietf.org/html/rfc8616>`_
 - `RFC 8611 Mail <https://tools.ietf.org/html/rfc8611>`_
 
-相关文档
+Related documents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Sender Policy Framework wikipedia <https://en.wikipedia.org/wiki/Sender_Policy_Framework>`_
 - `DomainKeys Identified Mail wikipedia <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`_
 - `DMARC wikipedia <https://en.wikipedia.org/wiki/DMARC>`_
 
-研究文章
+research article
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Composition Kills:A Case Study of Email Sender Authentication <http://i.blackhat.com/USA-20/Thursday/us-20-Chen-You-Have-No-Idea-Who-Sent-That-Email-18-Attacks-On-Email-Sender-Authentication-wp.pdf>`_

@@ -1,7 +1,7 @@
-审计工具
+Audit tools
 ========================================
 
-通用
+Universal
 ----------------------------------------
 - `Cobra <https://github.com/FeeiCN/cobra>`_
 - `Semmle QL <https://github.com/Semmle/ql>`_
@@ -31,10 +31,10 @@ JavaScript
 ----------------------------------------
 - `NodeJsScan <https://github.com/ajinabraham/NodeJsScan>`_
 
-供应链
+supply chain
 ----------------------------------------
 - `Dependency-Track <https://github.com/DependencyTrack/dependency-track>`_ is an intelligent Supply Chain Component Analysis platform that allows organizations to identify and reduce risk from the use of third-party and open source components
 
-小程序
+Mini program
 ----------------------------------------
 - `unveilr <https://github.com/r3x5ur/unveilr>`_

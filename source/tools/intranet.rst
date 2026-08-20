@@ -1,7 +1,7 @@
-横向移动
+Lateral movement
 ========================================
 
-域
+domain
 ----------------------------------------
 - `impacket <https://github.com/SecureAuthCorp/impacket>`_ is a collection of Python classes for working with network protocols
 - `adidnsdump <https://github.com/dirkjanm/adidnsdump>`_ Active Directory Integrated DNS dump tool
@@ -19,7 +19,7 @@ LDAP
 ----------------------------------------
 - `SharpHound3 <https://github.com/BloodHoundAD/SharpHound3>`_ Data Collector for the BloodHound Project
 
-微软系产品利用
+Microsoft product use
 ----------------------------------------
 - `LyncSniper <https://github.com/mdsecresearch/LyncSniper>`_ A tool for penetration testing Skype for Business and Lync deployments
 - `MSOLSpray <https://github.com/dafthack/MSOLSpray>`_ A password spraying tool for Microsoft Online accounts (Azure/O365)
@@ -40,12 +40,12 @@ PowerShell
 ----------------------------------------
 - `PowerShellMafia <https://github.com/PowerShellMafia>`_
 
-内网信息收集
+Intranet information collection
 ----------------------------------------
 - `nbtscan <https://github.com/scallywag/nbtscan>`_ NetBIOS scanning tool
 - `SharpShares <https://github.com/djhohnstein/SharpShares>`_ Quick and dirty binary to list network share information from all machines in the current domain and if they're readable
 - `WinShareEnum <https://github.com/nccgroup/WinShareEnum>`_ Windows Share Enumerator
-- `HackBrowserData <https://github.com/moonD4rk/HackBrowserData>`_ 全平台的浏览器数据导出工具
+- `HackBrowserData <https://github.com/moonD4rk/HackBrowserData>`_ Full platform browser data export tool
 
 Kerberos
 ----------------------------------------
@@ -53,17 +53,17 @@ Kerberos
 - `kerbrute <https://github.com/ropnop/kerbrute>`_ A tool to perform Kerberos pre-auth bruteforcing
 - `kerberoast <https://github.com/nidem/kerberoast>`_ A series of tools for attacking MS Kerberos implementations
 
-自动化审计
+Automated auditing
 ----------------------------------------
 - `Infection Monkey <https://github.com/guardicore/monkey>`_ Data center Security Testing Tool
 
-绕过
+bypass
 ----------------------------------------
 - `SysWhispers <https://github.com/jthuraisamy/SysWhispers>`_ AV/EDR evasion via direct system calls
 - `SysWhispers2 <https://github.com/jthuraisamy/SysWhispers2>`_ AV/EDR evasion via direct system calls
 - `Dumpert <https://github.com/outflanknl/Dumpert>`_ LSASS memory dumper using direct system calls and API unhooking
 
-内网扫描
+Intranet scan
 ----------------------------------------
-- `InScan <https://github.com/inbug-team/InScan>`_ 边界打点后的自动化渗透工具
-- `fscan <https://github.com/shadow1ng/fscan>`_ 一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。
+- `InScan <https://github.com/inbug-team/InScan>`_ Automated penetration tool after boundary management
+- `fscan <https://github.com/shadow1ng/fscan>`_ is a comprehensive intranet scanning tool that facilitates one-click automated, all-round missed scanning.

@@ -1,7 +1,7 @@
 Sink
 ================================
 
-命令执行
+command execution
 --------------------------------
 - asyncio.new_event_loop().subprocess_exec
 - asyncio.subprocess
@@ -33,22 +33,22 @@ Sink
 - typing.get_type_hints() + ``__annotations__``
 - ...
 
-文件读取
+file reading
 --------------------------------
 - open
 - os.open
 - urllib.request.urlopen('file:///')
 - codecs.open
 - fileinput
-- 仅Python2
+- Python2 only
     - types.FileType
 
-危险第三方库
+Dangerous third-party libraries
 --------------------------------
 - Template
 - subprocess32 
 
-反序列化
+Deserialization
 --------------------------------
 - marshal
 - PyYAML

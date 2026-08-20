@@ -1,62 +1,62 @@
-威胁情报
+Threat intelligence
 ========================================
 
-简介
+Introduction
 ----------------------------------------
 
-产生原因
+Cause
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-新一代的攻击者常常向企业和组织发起针对性的网络攻击，这种针对性强的攻击，一般经过了精心的策划，攻击方法、途径复杂，后果严重。在面对这种攻击时，攻防存在着严重的不对等，为了尽可能消除这种不对等，威胁情报 (Threat Intelligence) 应运而生。
+The new generation of attackers often launch targeted network attacks against businesses and organizations. Such highly targeted attacks are generally carefully planned, with complex attack methods and pathways, and serious consequences. In the face of this kind of attack, there is a serious asymmetry between offense and defense. In order to eliminate this asymmetry as much as possible, threat intelligence (Threat Intelligence) came into being.
 
-定义
+definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-威胁情报(Threat Intelligence)，也被称作安全情报(Security Intelligence)、安全威胁情报(Security Threat Intelligence)。
+Threat Intelligence is also known as Security Intelligence and Security Threat Intelligence.
 
-关于威胁情报的定义有很多，一般是指从安全数据中提炼的，与网络空间威胁相关的信息，包括威胁来源、攻击意图、攻击手法、攻击目标信息，以及可用于解决威胁或应对危害的知识。广义的威胁情报也包括情报的加工生产、分析应用及协同共享机制。相关的概念有资产、威胁、脆弱性等，具体定义如下。
+There are many definitions of threat intelligence, which generally refers to information related to cyberspace threats extracted from security data, including threat sources, attack intentions, attack methods, attack target information, and knowledge that can be used to solve threats or deal with harm. Broadly defined threat intelligence also includes intelligence processing and production, analysis and application, and collaborative sharing mechanisms. Related concepts include assets, threats, vulnerabilities, etc. The specific definitions are as follows.
 
-一般威胁情报需要包含威胁源、攻击目的、攻击对象、攻击手法、漏洞、攻击特征、防御措施等。威胁情报在事前可以起到预警的作用，在威胁发生时可以协助进行检测和响应，在事后可以用于分析和溯源。
+General threat intelligence needs to include threat sources, attack purposes, attack objects, attack methods, vulnerabilities, attack characteristics, defense measures, etc. Threat intelligence can serve as an early warning beforehand, assist in detection and response when a threat occurs, and can be used for analysis and traceability afterward.
 
-常见的网络威胁情报服务有黑客或欺诈团体分析、社会媒体和开源信息监控、定向漏洞研究、定制的人工分析、实时事件通知、凭据恢复、事故调查、伪造域名检测等。
+Common cyber threat intelligence services include hacker or fraud group analysis, social media and open source information monitoring, targeted vulnerability research, customized manual analysis, real-time event notification, credential recovery, incident investigation, fake domain name detection, etc.
 
-在威胁情报方面，比较有代表性的厂商有BAE Systems Applied Intelligence、Booz Allen、RSA、IBM、McAfee、赛门铁克、FireEye等。
+In terms of threat intelligence, the more representative vendors include BAE Systems Applied Intelligence, Booz Allen, RSA, IBM, McAfee, Symantec, FireEye, etc.
 
-相关概念
+Related concepts
 ----------------------------------------
 
-资产(Asset)
+Asset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-对组织具有价值的信息或资源，属于内部情报，通过资产测绘等方式发现。
+Information or resources that are valuable to the organization are internal intelligence and are discovered through asset mapping and other methods.
 
-威胁(Threat)
+Threat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-能够通过未授权访问、毁坏、揭露、数据修改和或拒绝服务对系统造成潜在危害的起因，威胁可由威胁的主体(威胁源)、能力、资源、动机、途径、可能性和后果等多种属性来刻画
+The cause of potential harm to the system through unauthorized access, destruction, disclosure, data modification, and denial of service. Threats can be characterized by multiple attributes such as the subject of the threat (threat source), capabilities, resources, motives, pathways, possibilities, and consequences.
 
-脆弱性 / 漏洞(Vulnerability)
+Vulnerability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-可能被威胁如攻击者利用的资产或若干资产薄弱环节。
+A vulnerability in an asset or assets that could be exploited by threats such as attackers.
 
-漏洞存在多个周期，最开始由安全研究员或者攻击者发现，而后出现在社区公告/官方邮件/博客中。随着信息的不断地传递，漏洞情报出现在开源社区等地方，并带有PoC和漏洞细节分析。再之后出现自动化工具开始大规模传播，部分漏洞会造成社会影响并被媒体报道，最后漏洞基本修复。
+Vulnerabilities exist in multiple cycles. They are first discovered by security researchers or attackers, and then appear in community announcements/official emails/blogs. As information continues to be passed on, vulnerability intelligence appears in places such as open source communities, with PoC and analysis of vulnerability details. Later, automated tools began to spread on a large scale, and some vulnerabilities would cause social impact and be reported by the media. Finally, the vulnerabilities were basically repaired.
 
-风险(Risk)
+Risk
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-威胁利用资产或一组资产的脆弱性对组织机构造成伤害的潜在可能。
+The potential for a threat to cause harm to an organization by exploiting the vulnerability of an asset or group of assets.
 
-安全事件(Event)
+Security incident(Event)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-威胁利用资产的脆弱性后实际产生危害的情景。
+A scenario in which a threat actually causes harm by exploiting an asset's vulnerability.
 
-情报来源
+intelligence source
 ----------------------------------------
-为了实现情报的同步和交换，各组织都制定了相应的标准和规范。主要有国标，美国联邦政府标准等。
+In order to achieve the synchronization and exchange of intelligence, each organization has developed corresponding standards and specifications. There are mainly national standards, U.S. federal government standards, etc.
 
-除了国家外，企业也有各自的情报来源，例如厂商、CERT、开发者社区、安全媒体、漏洞作者或团队、公众号、个人博客、代码仓库等。
+In addition to countries, companies also have their own intelligence sources, such as manufacturers, CERT, developer communities, security media, vulnerability authors or teams, public accounts, personal blogs, code warehouses, etc.
 
-威胁框架
+Threat framework
 ----------------------------------------
-比较有影响力的威胁框架主要有洛克希德-马丁的杀伤链框架(Cyber Kill Chain Framework)、MITRE的ATT&CK框架(Common Knowledge base of Adversary Tactics and Techniques)、ODNI的CCTF框架(Common Cyber Threat Framework，公共网空威胁框架)，以及NSA的TCTF框架(Technical Cyber Threat Framework，技术性网空威胁框架)。
+The more influential threat frameworks mainly include Lockheed Martin's Cyber ​​Kill Chain Framework, MITER's ATT&CK Framework (Common Knowledge base of Adversary Tactics and Techniques), ODNI's CCTF Framework (Common Cyber ​​Threat Framework, Public Cyber ​​Threat Framework), and NSA's TCTF Framework (Technical Cyber ​​Threat Framework, Technical Cyber ​​Threat Framework).
 
-参考链接
+Reference link
 ----------------------------------------
 - `Executive Perspectives on Cyber Threat Intelligence <https://scadahacker.com/library/Documents/Threat_Intelligence/iSight%20Partners%20-%20Executive%20Perspectives%20on%20Cyber%20Threat%20Intelligence.pdf>`_
 - `Cyber Threats: Information vs. Intelligence <https://www.darkreading.com/analytics/threat-intelligence/cyber-threats-information-vs-intelligence/a/d-id/1316851>`_
-- `威胁情报简介及市场浅析 <https://www.freebuf.com/column/136763.html>`_
+- `Introduction to threat intelligence and market analysis <https://www.freebuf.com/column/136763.html>`_

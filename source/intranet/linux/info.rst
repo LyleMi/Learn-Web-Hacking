@@ -1,107 +1,107 @@
-信息收集
+Information collection
 ========================================
 
-获取内核，操作系统和设备信息
+Get kernel, operating system and device information
 ----------------------------------------
-- 版本信息
-    - ``uname -a`` 所有版本
-    - ``uname -r`` 内核版本信息
-    - ``uname -n`` 系统主机名字
-    - ``uname -m`` Linux内核架构
-- 内核信息 ``cat /proc/version``
-- CPU信息 ``cat /proc/cpuinfo``
-- 发布信息
+- version information
+    - ``uname -a`` all versions
+    - ``uname -r`` Kernel version information
+    - ``uname -n`` system host name
+    - ``uname -m`` Linux kernel architecture
+- Kernel information ``cat /proc/version``
+- CPU information ``cat /proc/cpuinfo``
+- Publish information
     - ``cat /etc/*-release``
     - ``cat /etc/issue``
-- 主机名 ``hostname``
-- 文件系统 ``df -a``
-- 内核日志 ``dmesg`` / ``/var/log/dmesg``
+- Hostname ``hostname``
+- file system ``df -a``
+- Kernel log ``dmesg`` / ``/var/log/dmesg``
 
-用户和组
+Users and groups
 ----------------------------------------
-- 列出系统所有用户 ``cat /etc/passwd``
-- 列出系统所有组 ``cat /etc/group``
-- 列出所有用户hash（root）``cat /etc/shadow``
-- 用户
-    - 查询用户的基本信息 ``finger``
-    - 当前登录的用户 ``users`` ``who -a`` ``/var/log/utmp``
-    - 查询无密码用户 ``grep 'x:0:' /etc/passwd``
-- 目前登录的用户 ``w``
-- 登入过的用户信息 ``last`` / ``/var/log/wtmp``
-- 显示系统中所有用户最近一次登录信息 ``lastlog`` / ``/var/log/lastlog``
-- 登录成功日志 ``/var/log/secure``
-- 登录失败日志 ``/var/log/faillog``
-- 查看特权用户 ``grep :0 /etc/passwd``
-- 查看passwd最后修改时间 ``ls -l /etc/passwd``
-- 查看是否存在空口令用户 ``awk -F: 'length($2)==0 {print $1}' /etc/shadow``
-- 查看远程登录的账号 ``awk '/\$1|\$6/{print $1}' /etc/shadow``
-- 查看具有sudo权限的用户
+- List all users on the system ``cat /etc/passwd``
+- List all groups in the system ``cat /etc/group``
+- List all user hashes (root) ``cat /etc/shadow``
+- User
+    - Query the user's basic information ``finger``
+    - Currently logged in users ``users`` ``who -a`` ``/var/log/utmp``
+    - Query passwordless users ``grep 'x:0:' /etc/passwd``
+- Currently logged in user ``w``
+- Logged-in user information ``last`` / ``/var/log/wtmp``
+- Display the latest login information of all users in the system ``lastlog`` / ``/var/log/lastlog``
+- Login success log ``/var/log/secure``
+- Login failure log ``/var/log/faillog``
+- View privileged users ``grep :0 /etc/passwd``
+- Check the last modification time of passwd ``ls -l /etc/passwd``
+- Check if there is a user with an empty password ``awk -F: 'length($2)==0 {print $1}' /etc/shadow``
+- Check the remote login account ``awk '/\$1|\$6/{print $1}' /etc/shadow``
+- View users with sudo privileges
     - ``cat /etc/sudoers | grep -v "^#\|^$" | grep "ALL=(ALL)"``
 
-用户和权限信息
+User and permission information
 ----------------------------------------
-- 当前用户 ``whoami``
-- 当前用户信息 ``id``
-- 可以使用sudo提升到root的用户（root） ``cat /etc/sudoers``
-- 列出目前用户可执行与无法执行的指令 ``sudo -l``
+- Current user ``whoami``
+- Current user information ``id``
+- Users who can be elevated to root using sudo (root) ``cat /etc/sudoers``
+- List the commands that the current user can and cannot execute ``sudo -l``
 
-环境信息
+environmental information
 ----------------------------------------
-- 打印系统环境信息 ``env``
-- 打印系统环境信息 ``set``
-- 环境变量中的路径信息 ``echo  $PATH``
-- 打印历史命令 ``history`` / ``~/.bash_history``
-- 显示当前路径 ``pwd``
-- 显示默认系统遍历 ``cat /etc/profile``
-- 显示可用的shell ``cat /etc/shells``
+- Print system environment information ``env``
+- Print system environment information ``set``
+- Path information in environment variables ``echo $PATH``
+- Print history command ``history`` / ``~/.bash_history``
+- Display current path ``pwd``
+- Show default system traversal ``cat /etc/profile``
+- Show available shells ``cat /etc/shells``
 
-进程信息
+process information
 ----------------------------------------
-- 查看进程信息 ``ps aux``
-- 资源占有情况 ``top -c``
-- 查看进程关联文件 ``lsof -c $PID``
-- 完整命令行信息 ``/proc/$PID/cmdline``
-- 进程的命令名 ``/proc/$PID/comm``
-- 进程当前工作目录的符号链接 ``/proc/$PID/cwd``
-- 运行程序的符号链接 ``/proc/$PID/exe``
-- 进程的环境变量 ``/proc/$PID/environ``
-- 进程打开文件的情况 ``/proc/$PID/fd``
+- View process information ``ps aux``
+- Resource occupancy ``top -c``
+- View process associated files ``lsof -c $PID``
+- Complete command line information ``/proc/$PID/cmdline``
+- The command name of the process ``/proc/$PID/comm``
+- Symbolic link to the current working directory of the process ``/proc/$PID/cwd``
+- Symbolic link to run the program ``/proc/$PID/exe``
+- Process environment variables ``/proc/$PID/environ``
+- When a process opens a file ``/proc/$PID/fd``
 
-服务信息
+Service information
 ----------------------------------------
-- 由inetd管理的服务列表 ``cat /etc/inetd.conf``
-- 由xinetd管理的服务列表 ``cat /etc/xinetd.conf``
-- nfs服务器的配置 ``cat /etc/exports``
-- 邮件信息 ``/var/log/mailog``
-- ssh配置 ``sshd_config``
+- List of services managed by inetd ``cat /etc/inetd.conf``
+- List of services managed by xinetd ``cat /etc/xinetd.conf``
+- nfs server configuration ``cat /etc/exports``
+- Mail information ``/var/log/mailog``
+- ssh configuration ``sshd_config``
 
-计划任务
+Scheduled tasks
 ----------------------------------------
-- 显示指定用户的计划作业（root） ``crontab -l -u %user%``
-- 计划任务
+- Display scheduled jobs for the specified user (root) ``crontab -l -u %user%``
+- Schedule tasks
     - ``/var/spool/cron/*``
     - ``/var/spool/anacron/*``
     - ``/etc/crontab``
     - ``/etc/anacrontab``
     - ``/etc/cron.*``
     - ``/etc/anacrontab``
-- 开机启动项
+- Startup items
     - ``/etc/rc.d/init.d/``
 
-网络、路由和通信
+Networking, routing and communications
 ----------------------------------------
-- 列出网络接口信息 ``/sbin/ifconfig -a`` / ``ip addr show``
-- 列出网络接口信息 ``cat /etc/network/interfaces``
-- 查看系统arp表 ``arp -a``
-- 打印路由信息 ``route`` / ``ip ro show``
-- 查看dns配置信息 ``cat /etc/resolv.conf``
-- 打印本地端口开放信息 ``netstat -an``
-- 列出iptable的配置规则 ``iptables -L``
-- 查看端口服务映射 ``cat /etc/services``
+- List network interface information ``/sbin/ifconfig -a`` / ``ip addr show``
+- List network interface information ``cat /etc/network/interfaces``
+- View the system arp table ``arp -a``
+- Print routing information ``route`` / ``ip ro show``
+- View dns configuration information ``cat /etc/resolv.conf``
+- Print local port open information ``netstat -an``
+- List iptable configuration rules ``iptables -L``
+- View port service mapping ``cat /etc/services``
 - Hostname ``hostname -f``
-- 查看进程端口情况 ``netstat -anltp | grep $PID``
+- Check the process port status ``netstat -anltp | grep $PID``
 
-已安装程序
+Installed program
 ----------------------------------------
 - ``rpm -qa --last`` Redhat
 - ``yum list | grep installed`` CentOS
@@ -113,17 +113,17 @@
 - ``pacman -Q`` Arch Linux
 - ``emerge`` Gentoo
 
-文件
+document
 ----------------------------------------
-- 最近五天的文件 ``find / -ctime +1 -ctime -5``
-- 文件系统细节 ``debugfs``
+- Files in the last five days ``find / -ctime +1 -ctime -5``
+- File system details ``debugfs``
 
-公私钥信息
+Public and private key information
 ----------------------------------------
 - ``~/.ssh``
 - ``/etc/ssh``
 
-日志
+log
 ----------------------------------------
 - ``/var/log/boot.log``
 - ``/var/log/cron``
@@ -137,7 +137,7 @@
 - ``/var/log/wtmp``
 - ``/var/run/utmp``
 
-虚拟环境检测
+Virtual environment detection
 ----------------------------------------
 - ``lsmod | grep -i "vboxsf\|vboxguest"``
 - ``lsmod | grep -i "vmw_baloon\|vmxnet"``
@@ -145,7 +145,7 @@
 - ``lsmod | grep -i "virtio_pci\|virtio_net"``
 - ``lsmod | grep -i "hv_vmbus\|hv_blkvsc\|hv_netvsc\|hv_utils\|hv_storvsc"``
 
-容器内信息收集
+Collection of information within the container
 ----------------------------------------
 - ``capsh --print``
 - ``cat /proc/1/cgroup``

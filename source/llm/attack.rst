@@ -1,38 +1,38 @@
-常见攻击方式
+Common attack methods
 ========================================
 
-直接提示词注入
+Direct prompt word injection
 ----------------------------------------
-攻击者在用户输入中加入额外指令，使模型忽略原有规则、改变输出格式、泄露上下文或调用不该调用的工具。
+Attackers add additional instructions to user input to cause the model to ignore original rules, change the output format, leak context, or call tools that it should not call.
 
-间接提示词注入
+Indirect prompt word injection
 ----------------------------------------
-攻击者把恶意指令隐藏在网页、文档、邮件、图片 OCR 结果、代码注释、知识库内容等外部数据中。当模型读取这些内容时，可能将其误认为需要执行的指令。
+Attackers hide malicious instructions in external data such as web pages, documents, emails, image OCR results, code comments, knowledge base content, etc. When the model reads these, it may mistake them for instructions that need to be executed.
 
-上下文覆盖
+context override
 ----------------------------------------
-通过大量文本、重复指令、格式伪装等方式，使模型更关注攻击者提供的内容而忽略原始系统约束。
+Through a large amount of text, repeated instructions, format camouflage, etc., the model pays more attention to the content provided by the attacker and ignores the original system constraints.
 
-规则冲突
+Rule conflict
 ----------------------------------------
-构造和系统规则冲突的任务描述，例如要求模型在安全规则和业务任务之间做选择，诱导模型优先完成用户任务而违反安全策略。
+Task descriptions that conflict with system rules, such as requiring the model to choose between security rules and business tasks, inducing the model to prioritize completing user tasks and violating security policies.
 
-输出格式劫持
+Output format hijacking
 ----------------------------------------
-通过控制模型输出格式，使下游解析器误判字段、执行错误分支或调用错误工具。
+By controlling the model output format, downstream parsers can misjudge fields, execute wrong branches, or call wrong tools.
 
-工具参数污染
+Tool parameter contamination
 ----------------------------------------
-诱导模型生成带有危险参数的工具调用，例如删除文件、扩大查询范围、访问内部地址、修改权限、向外部地址发送数据等。
+The induced model generates tool calls with dangerous parameters, such as deleting files, expanding query scope, accessing internal addresses, modifying permissions, sending data to external addresses, etc.
 
-RAG 污染
+RAG contamination
 ----------------------------------------
-攻击者污染知识库或可被检索的外部内容，使模型在回答时引用被污染的数据，输出错误结论、敏感信息或隐藏指令。
+The attacker contaminates the knowledge base or retrievable external content, causing the model to reference the contaminated data when answering, output wrong conclusions, sensitive information or hidden instructions.
 
-多轮诱导
+Multiple rounds of induction
 ----------------------------------------
-攻击者在多轮对话中逐步建立上下文，通过逐步放宽约束、拆分任务、角色扮演等方式绕过单轮检测。
+The attacker gradually establishes context in multiple rounds of dialogue and bypasses single-round detection by gradually relaxing constraints, splitting tasks, and role-playing.
 
-资源消耗
+Resource consumption
 ----------------------------------------
-通过超长文本、复杂格式、递归任务、自动重试、批量并发等方式消耗模型上下文、推理资源、工具调用额度和费用预算。
+Model context, inference resources, tool call quotas, and expense budgets are consumed through methods such as ultra-long text, complex formats, recursive tasks, automatic retries, and batch concurrency.

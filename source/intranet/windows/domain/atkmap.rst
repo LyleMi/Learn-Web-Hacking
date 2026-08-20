@@ -1,12 +1,12 @@
-域内攻击思路
+In-domain attack ideas
 ========================================
-- 获取域控权限
-    - 通过域控相关漏洞
-    - 抓hash，尤其是域管理员、运维等高权限账号的哈希
-- 控制入域机器
-    - 下发恶意策略控制
-    - 获取域内用户凭证
-    - 利用错误的域管理配置
-    - 域内relay
-- 获取服务票据
-    - 攻击Exchange等服务器
+- Obtain domain control permissions
+    - Via domain control related vulnerabilities
+    - Capture hashes, especially hashes of domain administrators, operation and maintenance and other high-privilege accounts
+- Control inbound machines
+    - Issue malicious policy controls
+    - Obtain domain user credentials
+    - Exploiting incorrect domain management configuration
+    - intra-domain relay
+- Get service tickets
+    - Attack servers such as Exchange

@@ -1,32 +1,32 @@
 XXE
 ======================================
 
-XML基础
+XML basics
 --------------------------------------
-XML 指可扩展标记语言（eXtensible Markup Language），是一种用于标记电子文件使其具有结构性的标记语言，被设计用来传输和存储数据。XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。目前，XML文件作为配置文件（Spring、Struts2等）、文档结构说明文件（PDF、RSS等）、图片格式文件（SVG header）应用比较广泛。 XML 的语法规范由 DTD （Document Type Definition）来进行控制。
+XML refers to eXtensible Markup Language, which is a markup language used to mark electronic documents to make them structural. It is designed to transmit and store data. The XML document structure includes XML declaration, DTD document type definition (optional), and document elements. Currently, XML files are widely used as configuration files (Spring, Struts2, etc.), document structure description files (PDF, RSS, etc.), and image format files (SVG header). The syntax specification of XML is controlled by DTD (Document Type Definition).
 
-基本语法
+basic grammar
 --------------------------------------
-XML 文档在开头有 ``<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`` 的结构，这种结构被称为 XML prolog ，用于声明XML文档的版本和编码，是可选的，但是必须放在文档开头。
+The XML document has a structure of ``<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`` at the beginning. This structure is called XML prolog. It is used to declare the version and encoding of the XML document. It is optional, but must be placed at the beginning of the document.
 
-除了可选的开头外，XML 语法主要有以下的特性：
+In addition to the optional prefix, XML syntax mainly has the following features:
 
-- 所有 XML 元素都须有关闭标签
-- XML 标签对大小写敏感
-- XML 必须正确地嵌套
-- XML 文档必须有根元素
-- XML 的属性值需要加引号
+- All XML elements must have a closing tag
+- XML ​​tags are case sensitive
+- XML ​​must be nested correctly
+- The XML document must have a root element
+- XML ​​attribute values ​​need to be quoted
 
-另外，XML也有CDATA语法，用于处理有多个字符需要转义的情况。
+In addition, XML also has CDATA syntax, which is used to handle situations where multiple characters need to be escaped.
 
 XXE
 --------------------------------------
-当允许引用外部实体时，可通过构造恶意的XML内容，导致读取任意文件、执行系统命令、探测内网端口、攻击内网网站等后果。一般的XXE攻击，只有在服务器有回显或者报错的基础上才能使用XXE漏洞来读取服务器端文件，但是也可以通过Blind XXE的方式实现攻击。
+When external entities are allowed to be referenced, malicious XML content can be constructed to lead to reading arbitrary files, executing system commands, detecting intranet ports, and attacking intranet websites. General XXE attacks can only use XXE vulnerabilities to read server-side files when the server has an echo or error report, but the attack can also be implemented through Blind XXE.
 
-攻击方式
+Attack method
 --------------------------------------
 
-拒绝服务攻击
+denial of service attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
@@ -38,11 +38,11 @@ XXE
     ]>
     <data>&a2;</data>
 
-若解析过程非常缓慢，则表示测试成功，目标站点可能有拒绝服务漏洞。
-具体攻击可使用更多层的迭代或递归，也可引用巨大的外部实体，以实现攻击的效果。
+If the parsing process is very slow, the test is successful and the target site may have a denial of service vulnerability.
+Specific attacks can use more layers of iteration or recursion, and can also reference huge external entities to achieve the effect of the attack.
 
 
-文件读取
+file reading
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
@@ -83,9 +83,9 @@ XInclude
     <?xml version='1.0'?>
     <data xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="http://publicServer.com/file.xml"></xi:include></data>
 
-参考链接
+Reference link
 --------------------------------------
-- `XML教程 <http://www.w3school.com.cn/xml/>`_
-- `未知攻焉知防 XXE漏洞攻防 <https://security.tencent.com/index.php/blog/msg/69>`_
-- `XXE 攻击笔记分享 <http://www.freebuf.com/articles/web/97833.html>`_
-- `从XML相关一步一步到XXE漏洞 <https://xz.aliyun.com/t/6887>`_
+- `XML Tutorial <http://www.w3school.com.cn/xml/>`_
+- `How to defend against unknown attacks? XXE vulnerability attack and defense <https://security.tencent.com/index.php/blog/msg/69>`_
+- `XXE attack note sharing <http://www.freebuf.com/articles/web/97833.html>`_
+- `From XML related step by step to XXE vulnerability <https://xz.aliyun.com/t/6887>`_

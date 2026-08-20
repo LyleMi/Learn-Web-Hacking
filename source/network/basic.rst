@@ -1,80 +1,80 @@
-网络基础
+Network basics
 ========================================
 
-计算机通信网的组成
+Composition of computer communication network
 ----------------------------------------
-计算机网络由通信子网和资源子网组成。其中通信子网负责数据的无差错和有序传递，其处理功能包括差错控制、流量控制、路由选择、网络互连等。
+A computer network consists of a communication subnet and a resource subnet. The communication subnet is responsible for error-free and orderly transmission of data, and its processing functions include error control, flow control, routing, network interconnection, etc.
 
-其中资源子网是计算机通信的本地系统环境，包括主机、终端和应用程序等， 资源子网的主要功能是用户资源配置、数据的处理和管理、软件和硬件共享以及负载 均衡等。
+The resource subnet is the local system environment for computer communication, including hosts, terminals, and applications. The main functions of the resource subnet are user resource configuration, data processing and management, software and hardware sharing, and load balancing.
 
-总的来说，计算机通信网就是一个由通信子网承载的、传输和共享资源子网的各类信息的系统。
+In general, a computer communication network is a system that is carried by a communication subnet and transmits and shares various types of information in resource subnets.
 
-通信协议
+Communication protocol
 ----------------------------------------
-为了完成计算机之间有序的信息交换，提出了通信协议的概念，其定义是相互通信的双方（或多方）对如何进行信息交换所必须遵守的一整套规则。
+In order to complete the orderly exchange of information between computers, the concept of communication protocol is proposed, which is defined as a set of rules that two parties (or multiple parties) communicating with each other must abide by on how to exchange information.
 
-协议涉及到三个要素，分别为：
+The agreement involves three elements, namely:
 
-- 语法：语法是用户数据与控制信息的结构与格式，以及数据出现顺序的意义
-- 语义：用于解释比特流的每一部分的意义
-- 时序：事件实现顺序的详细说明
+- Grammar: Grammar is the structure and format of user data and control information, as well as the meaning of the order in which the data appears.
+- Semantics: used to explain the meaning of each part of the bitstream
+- Timing: Detailed description of the sequence of event implementation
 
-OSI七层模型
+OSI seven-layer model
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-OSI（Open System Interconnection）共分为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层七层，其具体的功能如下。
+OSI (Open System Interconnection) is divided into seven layers: physical layer, data link layer, network layer, transport layer, session layer, presentation layer and application layer. Its specific functions are as follows.
 
-物理层
+physical layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 提供建立、维护和释放物理链路所需的机械、电气功能和规程等特性
-- 通过传输介质进行数据流(比特流)的物理传输、故障监测和物理层管理
-- 从数据链路层接收帧，将比特流转换成底层物理介质上的信号
+- Provides the mechanical, electrical functions and procedures required to establish, maintain and release physical links.
+- Physical transmission, fault monitoring and physical layer management of data streams (bit streams) through transmission media
+- Receive frames from the data link layer and convert the bit stream into signals on the underlying physical medium
 
-数据链路层
+data link layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 在物理链路的两端之间传输数据
-- 在网络层实体间提供数据传输功能和控制
-- 提供数据的流量控制
-- 检测和纠正物理链路产生的差错
-- 格式化的消息称为帧
+-Transfer data between two ends of a physical link
+- Provide data transmission functions and control between network layer entities
+- Provide data flow control
+- Detect and correct errors caused by physical links
+-Formatted messages are called frames
 
-网络层
+network layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 负责端到端的数据的路由或交换，为透明地传输数据建立连接
-- 寻址并解决与数据在异构网络间传输相关的所有问题
-- 使用上面的传输层和下面的数据链路层的功能
-- 格式化的消息称为分组
+- Responsible for end-to-end data routing or switching, establishing connections for transparent transmission of data
+- Address and resolve all issues related to data transfer across heterogeneous networks
+- Use the functionality of the transport layer above and the data link layer below
+-Formatted messages are called packets
 
-传输层
+transport layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 提供无差错的数据传输
-- 接收来自会话层的数据，如果需要，将数据分割成更小的分组，向网络层传送分组并确保分组完整和正确到达它们的目的地
-- 在系统之间提供可靠的透明的数据传输,提供端到端的错误恢复和流量控制
+- Provides error-free data transfer
+- Receive data from the session layer, split the data into smaller packets if necessary, deliver the packets to the network layer and ensure that the packets arrive complete and correctly at their destination
+- Provide reliable and transparent data transmission between systems, providing end-to-end error recovery and flow control
 
-会话层
+session layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 提供节点之间通信过程的协调
-- 负责执行会话规则（如：连接是否允许半双工或全双工通信）、同步数据流以及当故障发生时重新建立连接
-- 使用上面的表示层和下面的传输层的功能
+- Provide coordination of the communication process between nodes
+- Responsible for enforcing session rules (such as whether the connection allows half-duplex or full-duplex communication), synchronizing data flows, and re-establishing connections when failures occur
+- Use the functionality of the presentation layer above and the transport layer below
 
-表示层
+presentation layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 提供数据格式、变换和编码转换
-- 涉及正在传输数据的语法和语义
-- 将消息以合适电子传输的格式编码
-- 执行该层的数据压缩和加密
-- 从应用层接收消息，转换格式，并传送到会话层，该层常合并在应用层中
+- Provide data formats, transformations and encoding conversions
+- Involves the syntax and semantics of the data being transferred
+- Encode the message in a format suitable for electronic transmission
+- Perform data compression and encryption for this layer
+- Receive messages from the application layer, convert the format, and transmit them to the session layer, which is often merged with the application layer
 
-应用层
+Application layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 包括各种协议，它们定义了具体的面向用户的应用：如电子邮件、文件传输等
+- Includes various protocols that define specific user-facing applications: e-mail, file transfer, etc.
 
-总结
+Summarize
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-低三层模型属于通信子网，涉及为用户间提供透明连接，操作主要以每条链路（ hop-by-hop）为基础，在节点间的各条数据链路上进行通信。由网络层来控制各条链路上的通信，但要依赖于其他节点的协调操作。
+The lower three-layer model belongs to the communication subnet and involves providing transparent connections between users. The operation is mainly based on each link (hop-by-hop) and communicates on each data link between nodes. The network layer controls communication on each link, but relies on the coordinated operations of other nodes.
 
-高三层属于资源子网，主要涉及保证信息以正确可理解形式传送。
+The upper three layers belong to the resource subnet and are mainly concerned with ensuring that information is transmitted in a correct and understandable form.
 
-传输层是高三层和低三层之间的接口，它是第一个端到端的层次，保证透明的端到端连接，满足用户的服务质量（QoS）要求，并向高三层提供合适的信息形式。
+The transport layer is the interface between the upper three layers and the lower three layers. It is the first end-to-end layer, ensuring transparent end-to-end connections, meeting the user's quality of service (QoS) requirements, and providing appropriate information forms to the upper three layers.

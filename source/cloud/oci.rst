@@ -1,9 +1,9 @@
-容器标准
+container standards
 ========================================
 
 OCI
 ----------------------------------------
-开放容器标准 (Open Container Initiative, OCI) 是用于规范容器格式和运行时行业标准。目前OCI提出的规范有：
+The Open Container Initiative (OCI) is an industry standard for standardizing container formats and runtimes. The current specifications proposed by OCI are:
 
 - `OCI Runtime Specification <https://github.com/opencontainers/runtime-spec>`_
 - `OCI Image Format <https://github.com/opencontainers/image-spec>`_
@@ -11,19 +11,19 @@ OCI
 
 CRI
 ----------------------------------------
-容器运行时 (Container Runtime Interface, CRI) 定义了容器和镜像的接口，目前官方支持的容器运行时包括Docker、Containerd、CRI-O和frakti。
+Container Runtime Interface (CRI) defines the interface between containers and images. Currently officially supported container runtimes include Docker, Containerd, CRI-O and frakti.
 
-参考链接
+Reference link
 ----------------------------------------
 
-文档
+document
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Introducing Container Runtime Interface (CRI) in Kubernetes <https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/>`_
 - `cri-o <https://cri-o.io/>`_
 
-实现
+accomplish
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `runc <https://github.com/opencontainers/runc>`_ OCI Runtime 的参考实现
-- `Kata Containers <https://github.com/kata-containers/kata-containers>`_ 提供高性能的硬件虚拟化容器运行时
-- `gvisor <https://github.com/google/gvisor>`_ Go 实现的基于用户态内核的容器运行时
-- `buildkit <https://github.com/moby/buildkit>`_ docker build 拆分出来的build项目
+- `runc <https://github.com/opencontainers/runc>`_ Reference implementation of OCI Runtime
+- `Kata Containers <https://github.com/kata-containers/kata-containers>`_ provides a high-performance hardware virtualization container runtime
+- `gvisor <https://github.com/google/gvisor>`_ Container runtime based on user mode kernel implemented by Go
+- `buildkit <https://github.com/moby/buildkit>`_ docker build split build project

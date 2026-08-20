@@ -1,32 +1,32 @@
-绕过技巧
+Bypass tricks
 ================================
 
-- 编码绕过
-    - 大小写
-    - url编码
-    - html编码
-    - 十六进制编码
-    - unicode编码
-- 注释
+- encoding bypass
+    - uppercase and lowercase
+    - url encoding
+    - html encoding
+    - Hexadecimal encoding
+    - unicode encoding
+- Comments
     - ``//`` ``--`` ``-- +`` ``-- -`` ``#`` ``/**/`` ``;%00``
-    - 内联注释用的更多，它有一个特性 ``/!**/`` 只有MySQL能识别
+    - Inline comments are more commonly used. They have a feature ``/!**/`` that is only recognized by MySQL.
     - e.g. ``index.php?id=-1 /*!UNION*/ /*!SELECT*/ 1,2,3``
-- 只过滤了一次时
+- When filtered only once
     - ``union`` => ``ununionion``
-- 相同功能替换
-    - 函数替换
+- Replacement with the same function
+    - Function replacement
         - ``substring`` / ``mid`` / ``sub``
         - ``ascii`` / ``hex`` / ``bin``
         - ``benchmark`` / ``sleep``
-    - 变量替换
+    - Variable substitution
         - ``user()`` / ``@@user``
-    - 符号和关键字
+    - symbols and keywords
         - ``and`` / ``&``
         - ``or`` / ``|``
-- HTTP参数
-    - HTTP参数污染
-        - ``id=1&id=2&id=3`` 根据容器不同会有不同的结果
-    - HTTP分割注入
-- 缓冲区溢出
-    - 一些C语言的WAF处理的字符串长度有限，超出某个长度后的payload可能不会被处理
-- 二次注入有长度限制时，通过多句执行的方法改掉数据库该字段的长度绕过
+- HTTP parameters
+    - HTTP parameter pollution
+        - ``id=1&id=2&id=3`` will have different results depending on the container
+    - HTTP split injection
+- buffer overflow
+    - The string length processed by some WAFs in C language is limited, and payloads exceeding a certain length may not be processed.
+- When the secondary injection has a length limit, change the length of the field in the database through multi-sentence execution to bypass it.

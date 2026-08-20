@@ -1,24 +1,24 @@
-作用域与闭包
+Scope and closure
 ========================================
 
-作用域与作用域链
+Scope and scope chain
 ----------------------------------------
 
-作用域
+Scope
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-简单来说，作用域就是变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期。JavaScript的作用域是靠函数来形成的，也就是说一个函数的变量在函数外不可以访问。
+Simply put, scope is the accessible range of variables and functions, that is, scope controls the visibility and life cycle of variables and functions. The scope of JavaScript is formed by functions, which means that the variables of a function cannot be accessed outside the function.
 
-作用域可以分为全局作用域、局部作用域和块级作用域，其中全局作用域主要有以下三种情况：
+Scope can be divided into global scope, local scope and block-level scope. Among them, global scope mainly has the following three situations:
 
-- 函数外面定义的变量拥有全局作用域
-- 未定义直接赋值的变量自动声明为拥有全局作用域
-- window对象的属性拥有全局作用
+- Variables defined outside the function have global scope
+- Variables that are not defined for direct assignment are automatically declared to have global scope
+- The properties of the window object have global effects
 
-局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，所以也会把这种作用域称为函数作用域。
+Local scope is generally only accessible within a fixed fragment of code, most commonly within a function, so this scope is also called function scope.
 
-作用域泄漏
+scope leak
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在ES5标准时，只有全局作用域和局部作用域，没有块级作用域，这样可能会造成变量泄漏的问题。例如：
+In the ES5 standard, there are only global scopes and local scopes, and there is no block-level scope, which may cause variable leakage problems. For example:
 
 .. code-block:: javascript
 
@@ -31,9 +31,9 @@
     }
     f(); // undefined
 
-作用域提升（var Hoisting）
+Scope hoisting (var Hoisting)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在JavaScript中，使用var在函数或全局内任何地方声明变量相当于在其内部最顶上声明它，这种行为称为Hoisting。例如下面这段代码等效于第二段代码
+In JavaScript, using var to declare a variable anywhere within a function or global is equivalent to declaring it at the top within it. This behavior is called Hoisting. For example, the following code is equivalent to the second code
 
 .. code-block:: javascript
 
@@ -54,15 +54,15 @@
     }
     foo();
 
-作用域链
+scope chain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-当函数被执行时，总是先从函数内部找寻局部变量，如果找不到相应的变量，则会向创建函数的上级作用域寻找，直到找到全局作用域为止，这个过程被称为作用域链。
+When a function is executed, local variables are always searched from inside the function first. If the corresponding variable cannot be found, it will be searched in the superior scope where the function was created until the global scope is found. This process is called a scope chain.
 
-闭包
+closure
 ----------------------------------------
-函数与对其状态即词法环境（lexical environment）的引用共同构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在JavaScript，函数在每次创建时生成闭包。
+A function together with a reference to its state, the lexical environment, forms a closure. That is, closures allow you to access the outer function scope from the inner function. In JavaScript, functions generate closures every time they are created.
 
-在JavaScript中，并没有原生的对private方法的支持，即一个元素/方法只能被同一个类中的其它方法所调用。而闭包则是一种可以被用于模拟私有方法的方案。另外闭包也提供了管理全局命名空间的能力，避免非核心的方法或属性污染了代码的公共接口部分。下面是一个简单的例子：
+In JavaScript, there is no native support for private methods, that is, an element/method can only be called by other methods in the same class. Closures are a scheme that can be used to simulate private methods. In addition, closures also provide the ability to manage the global namespace to prevent non-core methods or attributes from polluting the public interface part of the code. Here's a simple example:
 
 .. code-block:: javascript
 
@@ -91,8 +91,8 @@
     Counter.decrement();
     console.log(Counter.value()); /* logs 1 */
 
-全局对象
+global object
 ----------------------------------------
-全局对象是一个特殊的对象，它的作用域是全局的。
+A global object is a special object whose scope is global.
 
-全平台可用的全局对象是 ``globalThis`` ，它跟全局作用域里的this值相同。另外在浏览器中存在 ``self`` 和 ``window`` 全局对象，Web Workers中存在 ``self`` 全局对象，Node.js 中存在 ``global`` 全局对象。
+The global object available on all platforms is ``globalThis``, which has the same value as this in the global scope. In addition, there are ``self`` and ``window`` global objects in browsers, ``self`` global objects in Web Workers, and ``global`` global objects in Node.js.

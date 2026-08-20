@@ -1,13 +1,13 @@
 Sink
 =================================
 
-任意代码执行
+arbitrary code execution
 ---------------------------------
 - eval
 - assert
 - call_user_func
 
-执行系统命令
+Execute system commands
 ---------------------------------
 - pcntl_exec
 - exec
@@ -17,25 +17,25 @@ Sink
 - system
 - proc_open
 
-Magic函数
+Magic function
 ---------------------------------
-- ``__construct()`` 构建对象的时被调用
-- ``__destruct()`` 销毁对象或脚本结束时被调用
-- ``__call()`` 调用不可访问或不存在的方法时被调用
-- ``__callStatic()`` 调用不可访问或不存在的静态方法时被调用
-- ``__get()`` 读取不可访问或不存在属性时被调用
-- ``__set()`` 给不可访问或不存在属性赋值时被调用
-- ``__isset()`` 对不可访问或不存在的属性调用 ``isset`` 或 ``empty()`` 时被调用
-- ``__unset()`` 对不可访问或不存在的属性进行 ``unset`` 时被调用
-- ``__sleep()`` 对象序列化时被调用
-- ``__wakeup()`` 对象反序列化时被调用，其中序列化字符串中表示对象属性个数的值大于真实的属性个数时会跳过wakeup的执行
-- ``__toString()`` 当一个类被转换成字符串时被调用
-- ``__invoke()`` 对象被以函数方式调用时被调用
-- ``__set_state()`` 调用 ``var_export()`` 导出类时被调用
-- ``__clone()`` 进行对象clone时被调用
-- ``__debugInfo()`` 调用 ``var_dump()`` 打印对象时被调用
+- ``__construct()`` is called when constructing an object
+- ``__destruct()`` is called when the object is destroyed or the script ends
+- ``__call()`` is called when calling a method that is inaccessible or does not exist
+- ``__callStatic()`` is called when calling an inaccessible or non-existent static method
+- ``__get()`` is called when reading an inaccessible or non-existent attribute
+- ``__set()`` is called when assigning a value to an inaccessible or non-existent property
+- ``__isset()`` is called when ``isset`` or ``empty()`` is called on an inaccessible or non-existent property
+- ``__unset()`` is called when ``unset`` an inaccessible or non-existent property
+- ``__sleep()`` is called when the object is serialized
+- ``__wakeup()`` is called when the object is deserialized. If the value representing the number of object attributes in the serialized string is greater than the actual number of attributes, the execution of wakeup will be skipped.
+- ``__toString()`` is called when a class is converted to a string
+- ``__invoke()`` is called when the object is called as a function
+- ``__set_state()`` is called when ``var_export()`` is exported
+- ``__clone()`` is called when cloning an object
+- ``__debugInfo()`` calls ``var_dump()`` which is called when printing an object
 
-文件相关敏感函数
+File related sensitive functions
 ---------------------------------
 - ``move_uploaded_file``
 - ``file_put_contents`` / ``file_get_contents``
@@ -50,7 +50,7 @@ SSRF
 - ``fopen()``
 - ``readfile()``
 
-phar 触发点
+phar trigger point
 ----------------------------------------
 - fileatime / filectime / filemtime
 - stat / fileinode / fileowner / filegroup / fileperms
@@ -78,14 +78,14 @@ phar 触发点
     - getimagesize
     - getimagesizefromstring
 
-原生类利用
+Native class utilization
 ---------------------------------
 - XSS
     - Error
     - Exception
 - SSRF
     - SoapClient
-- open_basedir 绕过
-    - DirectoryIterator 结合 ``glob://``
+- open_basedir bypass
+    - DirectoryIterator combined with ``glob://``
 - XXE
     - SimpleXMLElement

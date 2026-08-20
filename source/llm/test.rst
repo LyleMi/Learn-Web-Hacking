@@ -1,41 +1,41 @@
-检测方法
+Detection method
 ========================================
 
-提示词注入测试
+Prompt word injection test
 ----------------------------------------
-- 测试模型是否会忽略系统约束
-- 测试模型是否会泄露系统提示词
-- 测试外部文档中的指令是否会被执行
-- 测试多轮对话是否能逐步绕过限制
-- 测试不同语言、编码、格式转换下的绕过能力
+- Test whether the model ignores system constraints
+- Test whether the model will leak system prompt words
+- Test whether instructions in external documents will be executed
+- Test whether multiple rounds of dialogue can gradually bypass restrictions
+- Test bypass capabilities under different languages, encodings, and format conversions
 
-工具调用测试
+Tool call test
 ----------------------------------------
-- 测试模型是否会调用未授权工具
-- 测试工具参数是否可以被污染
-- 测试越权访问其他用户或租户数据
-- 测试高危操作是否需要确认
-- 测试工具返回值中的注入指令是否会影响后续步骤
+- Test whether the model calls unauthorized tools
+- Test whether tool parameters can be contaminated
+- Test unauthorized access to other user or tenant data
+- Test whether high-risk operations require confirmation
+- Test whether the injected instructions in the tool return value will affect subsequent steps
 
-RAG 测试
+RAG test
 ----------------------------------------
-- 测试知识库污染后的回答变化
-- 测试相似度检索是否会召回恶意文档
-- 测试文档中的隐藏文本、注释、元数据是否会进入上下文
-- 测试模型是否会区分检索内容和用户指令
-- 测试引用来源是否真实可追溯
+- Test answer changes after knowledge base contamination
+- Test whether similarity retrieval will recall malicious documents
+- Test whether hidden text, comments, and metadata in the document will enter the context
+- Test whether the model distinguishes between retrieved content and user instructions
+- Test whether the source of the citation is authentic and traceable
 
-拒绝服务测试
+Denial of service testing
 ----------------------------------------
-- 测试超长输入处理
-- 测试并发请求处理
-- 测试递归任务和自动重试
-- 测试工具调用次数限制
-- 测试费用和 Token 预算控制
+- Test overlong input handling
+- Test concurrent request handling
+- Test recursive tasks and automatic retries
+- Limit on the number of test tool calls
+- Testing fees and Token budget control
 
-敏感信息测试
+Sensitive information testing
 ----------------------------------------
-- 测试日志中是否记录敏感信息
-- 测试模型是否输出训练样本、密钥、令牌、个人信息
-- 测试不同租户之间是否存在数据串扰
-- 测试导出、缓存、调试接口是否泄露上下文
+- Test whether sensitive information is recorded in the log
+- Test whether the model outputs training samples, keys, tokens, and personal information
+- Test whether there is data crosstalk between different tenants
+- Test whether the export, cache, and debugging interfaces leak context

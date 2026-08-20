@@ -1,17 +1,17 @@
-域名信息
+Domain name information
 ========================================
 
 Whois
 ----------------------------------------
-`Whois <https://www.whois.com/>`_ 可以查询域名是否被注册，以及注册域名的详细信息的数据库，其中可能会存在一些有用的信息，例如域名所有人、域名注册商、邮箱等。
+`Whois <https://www.whois.com/>`_ is a database that can query whether a domain name has been registered and the details of the registered domain name. There may be some useful information in it, such as the domain name owner, domain name registrar, email address, etc.
 
-搜索引擎搜索
+search engine search
 ----------------------------------------
-搜索引擎通常会记录域名信息，可以通过 ``site: domain`` 的语法来查询。
+Search engines usually record domain name information, which can be queried through the ``site: domain`` syntax.
 
-第三方查询
+Third party inquiry
 ----------------------------------------
-网络中有相当多的第三方应用提供了子域的查询功能，下面有一些例子，更多的网站可以在 8.1 工具列表 中查找。
+There are quite a few third-party applications on the Internet that provide subdomain query functions. Here are some examples. More websites can be found in the 8.1 Tool List.
 
 - `DNSDumpster <https://dnsdumpster.com/>`_
 - `Virustotal <https://www.virustotal.com/>`_
@@ -19,108 +19,108 @@ Whois
 - threatminer
 - Censys
 
-ASN信息关联
+ASN information association
 ----------------------------------------
-在网络中一个自治系统 (Autonomous System, AS) 是一个有权自主地决定在本系统中应采用何种路由协议的小型单位。这个网络单位可以是一个简单的网络也可以是一个由一个或多个普通的网络管理员来控制的网络群体，它是一个单独的可管理的网络单元 (例如一所大学，一个企业或者一个公司个体) 。
+In a network, an Autonomous System (AS) is a small unit that has the authority to independently decide which routing protocol should be used in the system. This network unit can be a simple network or a network group controlled by one or more ordinary network administrators. It is an individually manageable network unit (such as a university, an enterprise or an individual company).
 
-一个自治系统有时也被称为是一个路由选择域 (routing domain) 。一个自治系统将会分配一个全局的唯一的16位号码，这个号码被称为自治系统号 (ASN) 。因此可以通过ASN号来查找可能相关的IP，例如：
+An autonomous system is sometimes called a routing domain. An autonomous system will be assigned a globally unique 16-digit number called an Autonomous System Number (ASN). Therefore, you can use the ASN number to find potentially relevant IPs, for example:
 
 ::
 
     whois -h whois.radb.net -- '-i origin AS111111' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
     nmap --script targets-asn --script-args targets-asn.asn=15169
 
-域名相关性
+Domain name relevance
 ----------------------------------------
-同一个企业/个人注册的多个域名通常具有一定的相关性，例如使用了同一个邮箱来注册、使用了同一个备案、同一个负责人来注册等，可以使用这种方式来查找关联的域名。一种操作步骤如下：
+Multiple domain names registered by the same enterprise/individual usually have certain correlations. For example, the same email address is used to register, the same registration is used, the same person in charge is used to register, etc. You can use this method to find related domain names. One operation step is as follows:
 
-- 查询域名注册邮箱
-- 通过域名查询备案号
-- 通过备案号查询域名
-- 反查注册邮箱
-- 反查注册人
-- 通过注册人查询到的域名在查询邮箱
-- 通过上一步邮箱去查询域名
-- 查询以上获取出的域名的子域名
+- Check domain name registration email
+- Query the registration number through domain name
+- Query domain name by registration number
+- Check registered email address
+- Check the registrant
+- The domain name queried through the registrant is in the query email
+- Query the domain name through the email address in the previous step
+- Query the subdomain name of the domain name obtained above
 
-此外，部分公司在注册域名时，会注册不同 tld 的域名，例如 example.com / example.cn 。但是不同 tld 的域名也可能是由其它人注册的，需要另外辨别。
+In addition, when registering domain names, some companies will register domain names with different TLDs, such as example.com / example.cn. However, domain names with different TLDs may also be registered by other people and need to be identified separately.
 
 
-网站信息利用
+Utilization of website information
 ----------------------------------------
-网站中有相当多的信息，网站本身、各项安全策略、设置等都可能暴露出一些信息。
+There is quite a lot of information in the website, and the website itself, various security policies, settings, etc. may expose some information.
 
-网站本身的交互通常不囿于单个域名，会和其他子域交互。对于这种情况，可以通过爬取网站，收集站点中的其他子域信息。这些信息通常出现在JavaScript文件、资源文件链接等位置。
+The interaction of the website itself is usually not limited to a single domain name, but also interacts with other subdomains. In this case, you can crawl the website to collect information about other subdomains in the site. This information usually appears in JavaScript files, resource file links, etc.
 
-网站的安全策略如跨域策略、CSP规则等通常也包含相关域名的信息。有时候多个域名为了方便会使用同一个SSL/TLS证书，因此有时可通过证书来获取相关域名信息。
+Website security policies such as cross-domain policies, CSP rules, etc. usually also include information about related domain names. Sometimes multiple domain names use the same SSL/TLS certificate for convenience, so sometimes the relevant domain name information can be obtained through the certificate.
 
-HTTPS证书
+HTTPS certificate
 ----------------------------------------
 
-证书透明度
+certificate transparency
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-为了保证HTTPS证书不会被误发或伪造，CA会将证书记录到可公开验证、不可篡改且只能附加内容的日志中，任何感兴趣的相关方都可以查看由授权中心签发的所有证书。因此可以通过查询已授权证书的方式来获得相关域名。
+In order to ensure that the HTTPS certificate will not be mistakenly issued or forged, the CA will record the certificate in a log that is publicly verifiable, cannot be tampered with, and can only append content. Any interested party can view all certificates issued by the authorized center. Therefore, the relevant domain name can be obtained by querying the authorized certificate.
 
 SAN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-主题备用名称 (Subject Alternate Name, SAN)，简单来说，在需要多个域名，并将其用于各项服务时，多使用SAN证书。SAN允许在安全证书中使用subjectAltName字段将多种值与证书关联，这些值被称为主题备用名称。
+Subject Alternate Name (SAN), simply put, when multiple domain names are needed and used for various services, SAN certificates are often used. SAN allows a variety of values ​​to be associated with the certificate using the subjectAltName field in the security certificate. These values ​​are called subject alternative names.
 
-域传送漏洞
+Domain transfer vulnerability
 ----------------------------------------
-DNS域传送 (zone transfer) 指的是冗余备份服务器使用来自主服务器的数据刷新自己的域 (zone) 数据库。这是为了防止主服务器因意外不可用时影响到整个域名的解析。
+DNS zone transfer refers to a redundant backup server using data from the primary server to refresh its own zone database. This is to prevent the main server from being unexpectedly unavailable from affecting the resolution of the entire domain name.
 
-一般来说，域传送操作应该只允许可信的备用DNS服务器发起，但是如果错误配置了授权，那么任意用户都可以获得整个DNS服务器的域名信息。这种错误授权被称作是DNS域传送漏洞。
+Generally speaking, domain transfer operations should only be initiated by trusted backup DNS servers, but if authorization is misconfigured, any user can obtain the domain name information of the entire DNS server. This misauthorization is called a DNS domain transfer vulnerability.
 
 Passive DNS
 ----------------------------------------
-Passive DNS被动的从递归域名服务器记录来自不同域名服务器的响应，形成数据库。利用Passive DNS数据库可以知道域名曾绑定过哪些IP，IP曾关联到哪些域名，域名最早/最近出现的时间，为测试提供较大的帮助。Virustotal、passivetotal、CIRCL等网站都提供了Passive DNS数据库的查询。
+Passive DNS passively records responses from different domain name servers from recursive domain name servers to form a database. Using the Passive DNS database, you can know which IPs the domain name has been bound to, which domain names the IP has been associated with, and the earliest/latest appearance time of the domain name, which provides great help for testing. Websites such as Virustotal, passivetotal, and CIRCL all provide Passive DNS database queries.
 
-泛解析
+Pan-analysis
 ----------------------------------------
-泛解析是把 `*.example.com` 的所有A记录都解析到某个IP 地址上，在子域名枚举时需要处理这种情况以防生成大量无效的记录。
+Pan-resolution is to resolve all A records of `*.example.com` to a certain IP address. This situation needs to be handled during subdomain enumeration to prevent a large number of invalid records from being generated.
 
-重要记录
+important records
 ----------------------------------------
 
 CNAME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CNAME即Canonical name，又称alias，将域名指向另一个域名。其中可能包含其他关联业务的信息。很多网站使用的CDN加速功能利用了该记录。
+CNAME is Canonical name, also known as alias, which points a domain name to another domain name. It may contain information about other related businesses. The CDN acceleration function used by many websites takes advantage of this record.
 
-MX记录
+MX records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MX记录即Mail Exchanger，记录了发送电子邮件时域名对应的服务器地址。可以用来寻找SMTP服务器信息。
+The MX record is the Mail Exchanger, which records the server address corresponding to the domain name when sending emails. Can be used to find SMTP server information.
 
-NS记录
+NS records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-NS (Name Server) 记录是域名服务器的记录，用来指定域名由哪个DNS服务器来进行解析。
+NS (Name Server) records are domain name server records, used to specify which DNS server to resolve domain names.
 
-SPF记录
+SPF record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SPF (Sender Policy Framework) 是为了防止垃圾邮件而提出来的一种DNS记录类型，是一种TXT类型的记录，用于登记某个域名拥有的用来外发邮件的所有IP地址。通过SPF记录可以获取相关的IP信息，常用命令为 ``dig example.com txt`` 。
+SPF (Sender Policy Framework) is a DNS record type proposed to prevent spam. It is a TXT type record that is used to register all IP addresses owned by a domain name used to send outgoing emails. Relevant IP information can be obtained through SPF records. The commonly used command is ``dig example.com txt``.
 
 CDN
 ----------------------------------------
 
-CDN验证
+CDN verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-可通过多地ping的方式确定目标是否使用了CDN，常用的网站有 ``http://ping.chinaz.com/`` ``https://asm.ca.com/en/ping.php`` 等。
+You can determine whether the target uses CDN by pinging from multiple places. Commonly used websites include ``http://ping.chinaz.com/`` ``https://asm.ca.com/en/ping.php``, etc.
 
-域名查找
+Domain name search
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-使用了CDN的域名的父域或者子域名不一定使用了CDN，可以通过这种方式去查找对应的IP。
+The parent domain or subdomain name of a domain name that uses CDN does not necessarily use CDN. You can find the corresponding IP in this way.
 
-历史记录查找
+History search
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CDN可能是在网站上线一段时间后才上线的，可以通过查找域名解析记录的方式去查找真实IP。
+The CDN may have been launched after a period of time after the website was launched. You can find the real IP by searching domain name resolution records.
 
-邮件信息
+Email message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通过社会工程学的方式进行邮件沟通，从邮件头中获取IP地址，IP地址可能是网站的真实IP或者是目标的出口IP。
+Communicate via email through social engineering and obtain the IP address from the email header. The IP address may be the real IP of the website or the target's exit IP.
 
-子域爆破
+subdomain blasting
 ----------------------------------------
-在内网等不易用到以上技巧的环境，或者想监测新域名上线时，可以通过批量尝试的方式，找到有效的域名。
+In environments such as intranets where the above techniques are not easy to use, or when you want to monitor the launch of new domain names, you can find valid domain names by trying them in batches.
 
-缓存探测技术
+Cache detection technology
 ----------------------------------------
-在企业网络中通常都会配置DNS服务器为网络内的主机提供域名解析服务。域名缓存侦测（DNS Cache Snooping）技术就是向这些服务器发送域名解析请求，但并不要求使用递归模式，用于探测是否请求过某个域名。这种方式可以用来探测是否使用了某些软件，尤其是安全软件。
+In enterprise networks, DNS servers are usually configured to provide domain name resolution services for hosts in the network. Domain name cache snooping (DNS Cache Snooping) technology is to send domain name resolution requests to these servers, but does not require the use of recursive mode, to detect whether a certain domain name has been requested. This method can be used to detect whether certain software, especially security software, is used.

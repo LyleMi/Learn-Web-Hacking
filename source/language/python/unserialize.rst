@@ -1,9 +1,9 @@
-反序列化
+Deserialization
 ========================================
 
 pickle demo
 ----------------------------------------
-Python Pickle在反序列化时会调用 ``__reduce__`` ，可用自定义的 ``__reduce__`` 函数来实现攻击。
+Python Pickle will call ``__reduce__`` when deserializing, and a custom ``__reduce__`` function can be used to implement the attack.
 
 .. code-block:: python
 
@@ -20,7 +20,7 @@ Python Pickle在反序列化时会调用 ``__reduce__`` ，可用自定义的 ``
     data = pickle.dumps(A())
     pickletools.dis(data)
 
-对于这种攻击，可以用重载 find_class 来限定范围，`参考 <https://docs.python.org/3/library/pickle.html#restricting-globals>`_
+For this kind of attack, you can use overloaded find_class to limit the scope, `refer to <https://docs.python.org/3/library/pickle.html#restricting-globals>`_
 
 .. code-block:: python
 
@@ -50,7 +50,7 @@ Python Pickle在反序列化时会调用 ``__reduce__`` ，可用自定义的 ``
         """Helper function analogous to pickle.loads()."""
         return RestrictedUnpickler(io.BytesIO(s)).load()
 
-其他序列化库
+Other serialization libraries
 ----------------------------------------
 - PyYAML
 - marshal

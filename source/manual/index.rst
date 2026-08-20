@@ -1,4 +1,4 @@
-手册速查
+Manual quick reference
 ================================
 
 .. toctree::

@@ -1,25 +1,25 @@
-信息收集
+Information collection
 ========================================
 
 Whois
 ----------------------------------------
 - `who.is <https://who.is/>`_
-- `万网WHOIS <https://whois.aliyun.com/>`_
-- `腾讯云WHOIS <https://whois.cloud.tencent.com/>`_
-- `站长之家WHOIS <https://whois.chinaz.com/>`_
+- `WANWHOIS <https://whois.aliyun.com/>`_
+- `Tencent Cloud WHOIS <https://whois.cloud.tencent.com/>`_
+- `Webmaster’s Home WHOIS <https://whois.chinaz.com/>`_
 
-网站备案
+Website registration
 ----------------------------------------
-- `天眼查 <https://www.tianyancha.com/>`_
-- `ICP备案查询 <http://www.beianbeian.com/>`_
-- `爱站备案查询 <https://icp.aizhan.com>`_
+- `Tianyancha <https://www.tianyancha.com/>`_
+- `ICP registration inquiry <http://www.beianbeian.com/>`_
+- `Aizhan registration inquiry <https://icp.aizhan.com>`_
 
-CDN查询
+CDN query
 ----------------------------------------
-- `多地Ping <https://ping.chinaz.com/>`_
-- `CDN服务商查询 <https://tools.ipip.net/cdn.php>`_
+- `Ping from multiple places <https://ping.chinaz.com/>`_
+- `CDN service provider query <https://tools.ipip.net/cdn.php>`_
 
-子域爆破
+subdomain blasting
 ----------------------------------------
 - `Amass <https://github.com/OWASP/Amass>`_ In-depth Attack Surface Mapping and Asset Discovery
 - `subDomainsBrute <https://github.com/lijiejie/subDomainsBrute>`_
@@ -31,15 +31,15 @@ CDN查询
 - `subfinder <https://github.com/subfinder/subfinder>`_
 - `altdns <https://github.com/infosec-au/altdns>`_ Generates permutations, alterations and mutations of subdomains and then resolves them
 
-域名获取
+Domain name acquisition
 ----------------------------------------
 - `the art of subdomain enumeration <https://github.com/appsecco/the-art-of-subdomain-enumeration>`_
 - `sslScrape <https://github.com/cheetz/sslScrape/blob/master/sslScrape.py>`_
 - `aquatone <https://github.com/michenriksen/aquatone>`_ A Tool for Domain Flyovers
 - `teemo <https://github.com/bit4woo/teemo>`_ A Domain Name & Email Address Collection Tool
-- `DNS DB 历史记录 <https://dnsdb.io/zh-cn/>`_
+- `DNS DB History <https://dnsdb.io/zh-cn/>`_
 
-弱密码爆破
+Weak password blasting
 ----------------------------------------
 - `hydra <https://github.com/vanhauser-thc/thc-hydra>`_
 - `medusa <https://github.com/jmk-foofus/medusa>`_ is a high-speed network authentication cracking tool
@@ -47,7 +47,7 @@ CDN查询
 - `htpwdScan <https://github.com/lijiejie/htpwdScan>`_
 - `patator <https://github.com/lanjelot/patator>`_
 
-Git信息泄漏
+Git information leak
 ----------------------------------------
 - `GitHack By lijiejie <https://github.com/lijiejie/GitHack>`_
 - `GitHack By BugScan <https://github.com/BugScanTeam/GitHack>`_
@@ -61,7 +61,7 @@ Git信息泄漏
 - `x patrol <https://github.com/MiSecurity/x-patrol>`_ Github leaked patrol
 - `GitDorker <https://github.com/obheda12/GitDorker>`_ scrape secrets from GitHub through usage of a large repository of dorks
 
-Github监控
+Github monitoring
 ----------------------------------------
 - `Github Monitor <https://github.com/VKSRC/Github-Monitor>`_ Github Sensitive Information Leakage Monitor
 - `Github Dorks <https://github.com/techgaun/github-dorks>`_
@@ -71,7 +71,7 @@ Github监控
 - `GitGot <https://github.com/BishopFox/GitGot>`_
 - `gitGraber <https://github.com/hisxo/gitGraber>`_ monitor GitHub to search and find sensitive data in real time for different online services
 
-路径及文件扫描
+Path and file scanning
 ----------------------------------------
 - `weakfilescan <https://github.com/ring04h/weakfilescan>`_
 - `DirBrute <https://github.com/Xyntax/DirBrute>`_
@@ -79,28 +79,28 @@ Github监控
 - `bfac <https://github.com/mazen160/bfac>`_
 - `ds_store_exp <https://github.com/lijiejie/ds_store_exp>`_
 
-路径爬虫
+path crawler
 ----------------------------------------
 - `crawlergo <https://github.com/0Kee-Team/crawlergo>`_ A powerful dynamic crawler for web vulnerability scanners
 
-指纹识别
+Fingerprint recognition
 ----------------------------------------
 - `Wappalyzer <https://github.com/AliasIO/Wappalyzer>`_
 - `whatweb <https://github.com/urbanadventurer/whatweb>`_
 - `Wordpress Finger Print <https://github.com/iniqua/plecost>`_
-- `CMS指纹识别 <https://github.com/n4xh4ck5/CMSsc4n>`_
+- `CMS Fingerprinting <https://github.com/n4xh4ck5/CMSsc4n>`_
 - `JA3 <https://github.com/salesforce/ja3>`_ is a standard for creating SSL client fingerprints in an easy to produce and shareable way
 - `TideFinger <https://github.com/TideSec/TideFinger>`_
 - `JARM <https://github.com/salesforce/jarm>`_ active Transport Layer Security (TLS) server fingerprinting tool
 - `fingerprintjs <https://github.com/fingerprintjs/fingerprintjs>`_ Browser fingerprinting library with the highest accuracy and stability
 
-Waf指纹
+Waf fingerprint
 ----------------------------------------
 - `identywaf <https://github.com/enablesecurity/identywaf>`_
 - `wafw00f <https://github.com/enablesecurity/wafw00f>`_
 - `WhatWaf <https://github.com/Ekultek/WhatWaf>`_
 
-端口扫描
+port scan
 ----------------------------------------
 - `nmap <https://github.com/nmap/nmap>`_
 - `zmap <https://github.com/zmap/zmap>`_
@@ -112,25 +112,25 @@ Waf指纹
 - DNS ``dnsenum nslookup dig fierce``
 - SNMP ``snmpwalk``
 
-DNS数据查询
+DNS data query
 ----------------------------------------
 - `VirusTotal <https://www.virustotal.com/>`_
 - `PassiveTotal <https://passivetotal.org>`_
 - `DNSDB <https://www.dnsdb.info/>`_
 - `sitedossier <http://www.sitedossier.com/>`_
 
-DNS关联
+DNS association
 ----------------------------------------
 - `Cloudflare Enumeration Tool <https://github.com/mandatoryprogrammer/cloudflare_enum>`_
 - `Certificate Search <https://crt.sh/>`_
 
-云服务
+cloud services
 ----------------------------------------
 - `Find aws s3 buckets <https://github.com/gwen001/s3-buckets-finder>`_
 - `CloudScraper <https://github.com/jordanpotti/CloudScraper>`_
 - `AWS Bucket Dump <https://github.com/jordanpotti/AWSBucketDump>`_
 
-数据查询
+Data query
 ----------------------------------------
 - `Censys <https://censys.io>`_
 - `Shodan <https://www.shodan.io/>`_
@@ -149,23 +149,23 @@ Password
 - `DefaultCreds cheat sheet <https://github.com/ihebski/DefaultCreds-cheat-sheet>`_ One place for all the default credentials to assist the pentesters during an engagement
 - `SuperWordlist <https://github.com/fuzz-security/SuperWordlist>`_
 
-CI信息泄露
+CI information leakage
 ----------------------------------------
 - `secretz <https://github.com/lc/secretz>`_ minimizing the large attack surface of Travis CI
 
-个人数据画像
+Personal data portrait
 ----------------------------------------
 - `GHunt <https://github.com/mxrch/GHunt>`_ Investigate Google Accounts with emails
 
-邮箱收集
+Mailbox collection
 ----------------------------------------
 - `EmailHarvester <https://github.com/maldevel/EmailHarvester>`_
 
-其他
+other
 ----------------------------------------
 - `datasploit <https://github.com/DataSploit/datasploit>`_
 - `watchdog <https://github.com/flipkart-incubator/watchdog>`_
 - `archive <https://archive.org/web/>`_
 - `HTTPLeaks <https://github.com/cure53/HTTPLeaks>`_
 - `htrace <https://github.com/trimstray/htrace.sh>`_
-- `Quake Command-Line Application <https://github.com/360quake/quake_rs>`_ 360网络空间测绘系统
+- `Quake Command-Line Application <https://github.com/360quake/quake_rs>`_ 360 Cyberspace Surveying and Mapping System

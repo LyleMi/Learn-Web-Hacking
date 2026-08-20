@@ -1,130 +1,130 @@
 WAF
 ========================================
 
-简介
+Introduction
 ----------------------------------------
 
-概念
+concept
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-WAF（Web Application Firewall，Web应用防火墙）是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供加固的产品。
+WAF (Web Application Firewall, Web Application Firewall) is a product that specifically provides reinforcement for Web applications by executing a series of security policies for HTTP/HTTPS.
 
-在市场上，有各种价格各种功能和选项的WAF。在一定程度上，WAF能为Web应用提供安全性，但是不能保证完全的安全。
+In the market, there are WAFs with various features and options at various prices. To a certain extent, WAF can provide security for web applications, but it cannot guarantee complete security.
 
-常见功能
+Common functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 检测异常协议，拒绝不符合HTTP标准的请求
-- 对状态管理进行会话保护
-- Cookies保护
-- 信息泄露保护
-- DDoS防护
-- 禁止某些IP访问
-- 可疑IP检查
-- 安全HTTP头管理
+- Detect abnormal protocols and reject requests that do not comply with HTTP standards
+- Session protection for state management
+- Cookie protection
+- Information leakage protection
+- DDoS protection
+-Ban access to certain IPs
+- Suspicious IP check
+- Secure HTTP header management
     - X-XSS-Protection
     - X-Frame-Options
-- 机制检测
+- Mechanism detection
     - CSRF token
     - HSTS
 
-布置位置
+layout location
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-按布置位置，WAF可以分为云WAF、主机防护软件和硬件防护。云WAF布置在云上，请求先经过云服务器而后流向主机。主机防护软件需要主机预先安装对应软件，如mod_security、ngx-lua-waf等，对主机进行防护。硬件防护指流量流向主机时，先经过设备的清洗和拦截。
+According to the deployment location, WAF can be divided into cloud WAF, host protection software and hardware protection. Cloud WAF is deployed on the cloud, and requests first pass through the cloud server and then flow to the host. Host protection software requires the host to pre-install corresponding software, such as mod_security, ngx-lua-waf, etc., to protect the host. Hardware protection means that when traffic flows to the host, it is first cleaned and intercepted by the device.
 
-防护方式
+Protection method
 ----------------------------------------
-WAF常用的方法有关键字检测、正则表达式检测、语法分析、行为分析、声誉分析、机器学习等。
+Commonly used methods for WAF include keyword detection, regular expression detection, syntax analysis, behavior analysis, reputation analysis, machine learning, etc.
 
-基于正则的保护是最常见的保护方式。开发者用一些设定好的正则规则来检测载荷是否存在攻击性。基于正则的防护较为简单，因此存在一些缺点。例如只能应用于单次请求，而且正则很难应用到一些复杂的协议上。
+Regularity-based protection is the most common protection method. Developers use some set regular rules to detect whether the payload is offensive. Regularity-based protection is simpler and therefore has some disadvantages. For example, it can only be applied to a single request, and regularity is difficult to apply to some complex protocols.
 
-基于语法的分析相对正则来说更快而且更准确，这种分析会把载荷按照语法解析成的符号组，然后在符号组中寻找危险的关键字。这种方式对一些载荷的变式有较好的效果，但是同样的，对解析器要求较高。
+Syntax-based analysis is faster and more accurate than regular expressions. This analysis parses the payload into symbol groups according to the grammar, and then looks for dangerous keywords in the symbol groups. This method has better effects on some payload variations, but also has higher requirements on the parser.
 
-基于行为的分析着眼的范围更广一些，例如攻击者的端口扫描行为、目录爆破、参数测试或者一些其他自动化或者攻击的模式都会被纳入考虑之中。
+Behavior-based analysis looks at a wider scope, such as the attacker's port scanning behavior, directory blasting, parameter testing or some other automation or attack patterns will be taken into consideration.
 
-基于声誉的分析可以比较好的过滤掉一些可疑的来源，例如常用的VPN、匿名代理、Tor节点、僵尸网络节点的IP等。
+Reputation-based analysis can better filter out some suspicious sources, such as commonly used VPNs, anonymous proxies, Tor nodes, botnet node IPs, etc.
 
-基于机器学习的WAF涉及到的范围非常广，效果也因具体实现和场景而较为多样化。
+WAF based on machine learning covers a very wide range, and the effects are more diverse depending on the specific implementation and scenarios.
 
-除了按具体的方法分，也可以根据白名单和黑名单的使用来分类。基于白名单的WAF适用于稳定的Web应用，而基于黑名单则适合处理已知问题。
+In addition to dividing by specific methods, they can also be classified according to the use of whitelists and blacklists. Whitelist-based WAF is suitable for stable web applications, while blacklist-based WAF is suitable for dealing with known issues.
 
-扫描器防御
+Scanner Defense
 ----------------------------------------
-- 基于User-Agent识别
-- 基于攻击载荷识别
-- 验证码
+- Based on User-Agent identification
+- Identification based on attack payload
+- Verification code
 
-WAF指纹
+WAF fingerprint
 ----------------------------------------
-- 额外的Cookie
-- 额外的Header
-- 被拒绝请求时的返回内容
-- 被拒绝请求时的返回响应码
+- Additional cookies
+- Additional Header
+-Return content when the request is rejected
+-Response code when the request is rejected
 - IP
 
-绕过方式
+Bypass
 ----------------------------------------
 
-基于架构的绕过
+Architecture-based bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 站点在WAF后，但是站点可直连
-- 站点在云服务器中，对同网段服务器无WAF
+- The site is behind the WAF, but the site can be directly connected
+- The site is in a cloud server, and there is no WAF for servers in the same network segment.
 
-基于资源的绕过
+Resource-based bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 使用消耗大的载荷，耗尽WAF的计算资源
-- 提供大量的无效参数
+- Use expensive loads to exhaust WAF’s computing resources
+- Provide a large number of invalid parameters
 
-基于解析的绕过
+Parsing-based bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 字符集解析不同
-- 协议覆盖不全
-    - POST的JSON传参 / ``form-data`` / ``multipart/form-data``
-- 协议解析不正确
-- 站点和WAF对https有部分不一致
-- WAF解析与Web服务解析不一致
-    - 部分ASP+IIS会转换 ``%u0065`` 格式的字符
-    - Apache会解析畸形Method
-    - 同一个参数多次出现，取的位置不一样
+-Character set parsing is different
+-Incomplete agreement coverage
+    - POST JSON parameters / ``form-data`` / ``multipart/form-data``
+- Incorrect protocol parsing
+- There are some inconsistencies between the site and WAF regarding https
+- WAF parsing is inconsistent with Web service parsing
+    - Some ASP+IIS will convert characters in ``%u0065`` format
+    - Apache will parse malformed Method
+    - The same parameter appears multiple times in different positions.
     - HTTP Parameter Pollution (HPP)
     - HTTP Parameter Fragmentation (HPF)
 
-基于规则的绕过
+Rule-based bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 等价替换
-    - 大小写变换
+- Equivalent replacement
+    - Case conversion
         - ``select`` => ``sEleCt``
         - ``<sCrIpt>alert(1)</script>``
-    - 字符编码
-        - URL编码
-        - 十六进制编码
-        - Unicode解析
+    - character encoding
+        - URL encoding
+        - Hexadecimal encoding
+        -Unicode parsing
         - Base64
         - HTML
         - JSFuck
-        - 其他编码格式
-    - 等价函数
-    - 等价变量
-    - 关键字拆分
-    - 字符串操作
-- 字符干扰
-    - 空字符
+        - Other encoding formats
+    - Equivalent function
+    - Equivalent variables
+    - Keyword splitting
+    - String operations
+- character interference
+    - null character
         - NULL (\x00)
-        - 空格
-        - 回车 (\x0d)
-        - 换行 (\x0a)
-        - 垂直制表 (\x0b)
-        - 水平制表 (\x09)
-        - 换页 (\x0c)
-    - 注释
-- 特殊符号
-    - 注释符
-    - 引号（反引号、单引号、双引号）
-- 利用服务本身特点
-    - 替换可疑关键字为空
+        - space
+        - Enter (\x0d)
+        - newline (\x0a)
+        - Vertical tab (\x0b)
+        - Horizontal tab (\x09)
+        - Page feed (\x0c)
+    - Comments
+- special symbols
+    - comment character
+    - Quotes (backticks, single quotes, double quotes)
+- Take advantage of the features of the service itself
+    - Replace suspicious keywords with empty
         - ``selselectect`` => ``select``
-- 少见特性未在规则列表中
+- Rare features are not in the rule list
 
-参考链接
+Reference link
 ----------------------------------------
-- `WAF攻防研究之四个层次Bypass WAF <https://www.weibo.com/ttarticle/p/show?id=2309404007261092631700&sudaref=www.google.com.hk&display=0&retcode=6102>`_
-- `我的WafBypass之道 SQL注入篇 <https://xz.aliyun.com/t/368>`_
+- `Four levels of WAF attack and defense research Bypass WAF <https://www.weibo.com/ttarticle/p/show?id=2309404007261092631700&sudaref=www.google.com.hk&display=0&retcode=6102>`_
+- `My WafBypass Way SQL Injection <https://xz.aliyun.com/t/368>`_
 - `WAF through the eyes of hackers <https://habr.com/en/company/dsec/blog/454592/>`_

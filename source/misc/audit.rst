@@ -1,130 +1,130 @@
-代码审计
+Code audit
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-代码审计是找到应用缺陷的过程。其通常有白盒审计、黑盒审计、灰盒审计等方式。白盒审计指通过对源代码的分析找到应用缺陷，黑盒审计通常不涉及到源代码，多使用模糊测试的方式，而灰盒审计则是黑白结合的方式。三种不同的测试方法有不同的优缺点。
+Code auditing is the process of finding application flaws. It usually includes white box audit, black box audit, gray box audit and other methods. White-box auditing refers to finding application defects through source code analysis. Black-box auditing usually does not involve source code and mostly uses fuzz testing, while gray-box auditing is a combination of black and white. The three different testing methods have different advantages and disadvantages.
 
-常用概念
+Common concepts
 ----------------------------------------
 
-输入
+enter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-输入通常也称Source，Web应用的输入可以是请求的参数（GET、POST等）、上传的文件、Cookie、数据库数据等用户可控或者间接可控的地方。
+Input is usually also called Source. The input of a web application can be request parameters (GET, POST, etc.), uploaded files, cookies, database data and other places that are controllable or indirectly controllable by the user.
 
-例如PHP中的 ``$_GET`` / ``$_POST`` / ``$_REQUEST`` / ``$_COOKIE`` / ``$_FILES``  / ``$_SERVER`` 等，都可以作为应用的输入。
+For example, ``$_GET`` / ``$_POST`` / ``$_REQUEST`` / ``$_COOKIE`` / ``$_FILES`` / ``$_SERVER`` in PHP can all be used as input to the application.
 
-处理函数
+Handling function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-处理函数是对数据进行过滤或者编解码的函数，通常被称为Clean/Filter/Sanitizer。这些函数会对输入进行安全操作或过滤，为漏洞利用带来不确定性。
+The processing function is a function that filters or encodes and decodes data, usually called Clean/Filter/Sanitizer. These functions perform security operations or filtering on the input, creating uncertainty for vulnerability exploitation.
 
-同样以PHP为例，这样的函数可能是 ``mysqli_real_escape_string`` / ``htmlspecialchars`` / ``base64_encode`` / ``str_rot13`` 等，也可能是应用自定义的过滤函数。
+Taking PHP as an example, such functions may be ``mysqli_real_escape_string`` / ``htmlspecialchars`` / ``base64_encode`` / ``str_rot13``, etc., or they may apply a custom filter function.
 
-危险函数
+hazard function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-危险函数又常叫做Sink Call、漏洞点，是可能触发危险行为如文件操作、命令执行、数据库操作等行为的函数。
+Dangerous functions are often called sink calls and vulnerability points. They are functions that may trigger dangerous behaviors such as file operations, command execution, database operations, etc.
 
-在PHP中，可能是 ``include`` / ``system`` / ``echo`` 等。
+In PHP, it may be ``include`` / ``system`` / ``echo`` etc.
 
-自动化审计
+Automated auditing
 ----------------------------------------
-一般认为一个漏洞的触发过程是从输入经过过滤到危险函数的过程(Source To Sink)，而审计就是寻找这个链条的过程。常见的自动化审计方案有危险函数匹配、控制流分析等。
+It is generally believed that the triggering process of a vulnerability is the process from input filtering to dangerous functions (Source To Sink), and auditing is the process of finding this chain. Common automated audit solutions include dangerous function matching, control flow analysis, etc.
 
-危险函数匹配
+Dangerous function matching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-白盒审计最常见的方式是通过搜寻危险函数与危险参数定位漏洞，比较有代表性的工具是Seay开发的审计工具。这种方法误报率相当高，这是因为这种方法没有对程序的流程进行深入分析，另一方面，这种方式通常是孤立地分析每一个文件，忽略了文件之间复杂的调用关系。
+The most common way of white-box auditing is to locate vulnerabilities by searching for dangerous functions and dangerous parameters. A more representative tool is the audit tool developed by Seay. The false positive rate of this method is quite high. This is because this method does not conduct an in-depth analysis of the program flow. On the other hand, this method usually analyzes each file in isolation, ignoring the complex calling relationships between files.
 
-具体的说，这种方式在一些环境下能做到几乎无漏报，只要审计者有耐心，可以发现大部分的漏洞，但是在高度框架化的代码中，能找到的漏洞相对有限。
+Specifically, this method can achieve almost no omissions in some environments. As long as the auditor is patient, most vulnerabilities can be found. However, in highly framed code, the number of vulnerabilities that can be found is relatively limited.
 
-控制流分析
+control flow analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在后来的系统中，考虑到一定程度引入AST作为分析的依据，在一定程度上减少了误报，但是仍存在很多缺陷。
+In later systems, considering the introduction of AST as the basis for analysis to a certain extent, false alarms were reduced to a certain extent, but there are still many flaws.
 
-而后，Dahse  J等人设计了RIPS，该工具进行数据流与控制流分析，结合过程内与过程间的分析得到审计结果，相对危险函数匹配的方式来说误报率少了很多，但是同样的也增加了开销。
+Then, Dahse J and others designed RIPS. This tool performs data flow and control flow analysis, and combines intra-process and inter-process analysis to obtain audit results. Compared with the dangerous function matching method, the false positive rate is much lower, but it also increases the overhead.
 
-基于图的分析
+Graph-based analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-基于图的分析是对控制流分析的一个改进，其利用CFG的特性和图计算的算法，一定程度上简化了计算，比较有代表性的是微软的Semmle QL和NDSS 2017年发表的文章Efficient and Flexible Discovery of PHP Application Vulnerabilities。
+Graph-based analysis is an improvement on control flow analysis. It uses the characteristics of CFG and graph calculation algorithms to simplify calculations to a certain extent. The more representative ones are the article Efficient and Flexible Discovery of PHP Application Vulnerabilities published by Microsoft's Semmle QL and NDSS in 2017.
 
-代码相似性比对
+Code similarity comparison
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-一些开发者会复制其他框架的代码，或者使用各种框架。如果事先有建立对应的漏洞图谱，则可使用相似性方法来找到漏洞。
+Some developers copy code from other frameworks, or use various frameworks. If a corresponding vulnerability map has been established in advance, the similarity method can be used to find the vulnerability.
 
-灰盒分析
+Gray box analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-基于控制流的分析开销较大，于是有人提出了基于运行时的分析方式，对代码进行Hook，当执行到危险函数时自动回溯输入，找到输入并判断是否可用。
+Analysis based on control flow is relatively expensive, so some people have proposed a runtime-based analysis method, hooking the code, automatically tracing back the input when executing the dangerous function, finding the input and determining whether it is available.
 
-这种方式解决了控制流分析实现复杂、计算路径开销大的问题，在判断过滤函数上也有一定的突破，但是灰盒的方式并不一定会触发所有的漏洞。fate0开发的prvd就是基于这种设计思路。
+This method solves the problems of complex implementation of control flow analysis and high computational path overhead. It also makes certain breakthroughs in judging filter functions, but the gray box method does not necessarily trigger all vulnerabilities. prvd developed by fate0 is based on this design idea.
 
-手工审计流程
+Manual audit process
 ----------------------------------------
-- 获取代码，确定版本，尝试初步分析
-    - 找历史漏洞信息
-    - 找应用该系统的实例
-    - 确定依赖库是否存在漏洞
-- 基于审计工具进行初步分析
-- 了解程序运行流程
-    - 文件加载方式
-        - 类库依赖
-        - 是否加载waf
-    - 数据库连接方式
+- Get the code, determine the version, and try preliminary analysis
+    - Find historical vulnerability information
+    - Find examples of applications of the system
+    - Determine whether there are vulnerabilities in dependent libraries
+- Preliminary analysis based on audit tools
+- Understand the program running process
+    - File loading method
+        - Class library dependencies
+        - Whether to load waf
+    - Database connection method
         - mysql/mysqli/pdo
-        - 是否开启预编译
-    - 视图渲染
+        - Whether to enable precompilation
+    - View rendering
         - XSS
-        - 模版注入
-    - SESSION处理机制
-        - 文件
-        - 数据库
-        - 内存
-    - Cache处理机制
-        - 文件cache可能写shell
-        - 数据库cache可能注入
+        - Template injection
+    - SESSION processing mechanism
+        - document
+        - database
+        - Memory
+    - Cache processing mechanism
+        - File cache may write shell
+        - Database cache may be injected
         - memcache
-- 账户体系
-    - Auth方式
-    - Pre-Auth的情况下可以访问的页面
-    - 普通用户的帐号
-        - 能否可获取普通用户权限
-    - 管理员账户默认密码
-    - 账号体系
-        - 加密方式
-        - 爆破密码
-        - 重置漏洞
-        - 修改密码漏洞
-            - 修改其他账号密码
-- 根据漏洞类型查找Sink
+- Account system
+    - Auth method
+    - Pages that can be accessed under Pre-Auth
+    - Ordinary user account
+        - Is it possible to obtain ordinary user rights?
+    - Default password for administrator account
+    - Account system
+        - Encryption method
+        - Blast passwords
+        - Reset vulnerability
+        - Change password vulnerability
+            - Change other account passwords
+- Find sinks based on vulnerability type
     - SQLi
-        - 全局过滤能否bypass
-        - 是否有直接执行SQL的地方
-        - SQL使用驱动，mysql/mysqli/pdo
-            - 如果使用PDO，搜索是否存在直接执行的部分
+        - Can global filtering be bypassed?
+        - Is there a place to directly execute SQL?
+        -SQL driver, mysql/mysqli/pdo
+            - If using PDO, search if there is a direct execution part
     - XSS
-        - 全局bypass
-        - 视图渲染
+        - Global bypass
+        - View rendering
     - FILE
-        - 查找上传功能点
-        - 上传下载覆盖删除
-        - 包含
+        - Find upload function points
+        - Upload and download overwrite and delete
+        - Include
             - LFI
             - RFI
-            - 全局找include, require
+            - Find include and require globally
     - RCE
     - XXE
     - CSRF
     - SSRF
-    - 反序列化
-    - 变量覆盖
+    - Deserialization
+    - Variable override
     - LDAP
     - XPath
-    - Cookie伪造
-- 过滤
-    - 找WAF过滤方式，判断是否可以绕过
+    - Cookie forgery
+- filter
+    - Find the WAF filtering method to determine whether it can be bypassed
 
-参考链接
+Reference link
 ----------------------------------------
 - `rips <https://github.com/ripsscanner/rips>`_
 - `prvd <https://github.com/fate0/prvd>`_
-- `PHP运行时漏洞检测 <http://blog.fatezero.org/2018/11/11/prvd/>`_
+- `PHP runtime vulnerability detection <http://blog.fatezero.org/2018/11/11/prvd/>`_
 - Backes M , Rieck K , Skoruppa M , et al. Efficient and Flexible Discovery of PHP Application Vulnerabilities[C]// IEEE European Symposium on Security & Privacy. IEEE, 2017.
 - Dahse J. RIPS-A static source code analyser for vulnerabilities in PHP scripts[J]. Retrieved: February, 2010, 28: 2012.

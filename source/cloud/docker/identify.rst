@@ -1,26 +1,26 @@
-Docker 环境识别
+Docker environment identification
 ----------------------------------------
 
-Docker内
+Within Docker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- MAC地址为 ``02:42:ac:11:00:00`` - ``02:42:ac:11:ff:ff``
-- ``ps aux`` 大部分运行的程序 pid 都很小
-- ``cat /proc/1/cgroup`` docker的进程
-- docker 环境下存在 ``.dockerenv``
-- 部分容器中缺少许多常用的命令如 ``ping`` 等
+- The MAC address is ``02:42:ac:11:00:00`` - ``02:42:ac:11:ff:ff``
+- ``ps aux`` The pid of most running programs is very small
+- ``cat /proc/1/cgroup`` docker process
+- ``.dockerenv`` exists in the docker environment
+- Some containers are missing many commonly used commands such as ``ping``, etc.
 
-Docker外
+Outside Docker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``/var/run/docker.sock`` 文件存在
-- ``2375`` / ``2376`` 端口开启
+- ``/var/run/docker.sock`` file exists
+- ``2375`` / ``2376`` port open
 
-容器内信息收集
+Collection of information within the container
 ----------------------------------------
-- 用户信息 (当前用户、用户列表)
-- 操作系统与内核版本
-- 运行进程信息 (进程名、权限等)
-- 容器是否为特权容器
-- 环境变量
-- 判断容器挂载信息，尝试挂载Docker Socket
-- 网络环境，判断可以到达的网段
-- 在云环境中，尝试获取元数据信息
+- User information (current user, user list)
+- Operating system and kernel version
+- Running process information (process name, permissions, etc.)
+- Whether the container is a privileged container
+- environment variables
+- Determine the container mounting information and try to mount Docker Socket
+- Network environment, determine the reachable network segments
+- In a cloud environment, try to obtain metadata information

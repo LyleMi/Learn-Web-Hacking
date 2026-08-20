@@ -1,15 +1,15 @@
-沙箱逃逸
+sandbox escape
 ========================================
 
-前端沙箱
+Front-end sandbox
 ----------------------------------------
-在前端中，可能会使用删除 ``eval`` ，重写 ``Function.prototype.constructor`` / ``GeneratorFunction`` / ``AsyncFunction`` 等方式来完成前端的沙箱。在这种情况下，可以使用创建一个新iframe的方式来获取新的执行环境。
+In the front end, you may use methods such as deleting ``eval`` and rewriting ``Function.prototype.constructor`` / ``GeneratorFunction`` / ``AsyncFunction`` to complete the front-end sandbox. In this case, you can use the method of creating a new iframe to obtain a new execution environment.
 
-服务端沙箱
+Server sandbox
 ----------------------------------------
-JavaScript提供了原生的vm模块，用于隔离了代码上下文环境。但是在该环境中依然可以访问标准的JavaScript API和全局的NodeJS环境。
+JavaScript provides a native vm module to isolate the code context. However, the standard JavaScript API and the global NodeJS environment can still be accessed in this environment.
 
-在原生的沙箱模块中，常用的逃逸方式为：
+In native sandbox modules, commonly used escape methods are:
 
 .. code-block:: javascript
 
@@ -24,7 +24,7 @@ JavaScript提供了原生的vm模块，用于隔离了代码上下文环境。�
     `, sandbox);
 
 
-考虑到JavaScript原生vm模块的缺陷，有开发者设计了vm2来提供一个更安全的隔离环境，但是在旧版本中同样存在一些逃逸方式，例如：
+Considering the shortcomings of JavaScript's native vm module, some developers designed vm2 to provide a safer isolation environment, but there are also some escape methods in older versions, such as:
 
 .. code-block:: javascript
 

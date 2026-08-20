@@ -1,7 +1,7 @@
-取证
+evidence collection
 ========================================
 
-内存取证
+Memory forensics
 ----------------------------------------
 - `SfAntiBotPro <http://edr.sangfor.com.cn/tool/SfabAntiBot_X64.7z>`_
 - `volatility <https://github.com/volatilityfoundation/volatility>`_

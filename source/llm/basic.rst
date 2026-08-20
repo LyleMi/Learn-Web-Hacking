@@ -1,45 +1,45 @@
-基本概念
+Basic concepts
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-大模型安全是指围绕大语言模型（Large Language Model，LLM）及其应用系统，在训练、部署、调用、编排、运维等环节中对模型、数据、工具和业务流程进行保护，避免模型被诱导执行非预期行为、泄露敏感信息、产生错误决策或者被用于攻击。
+Large model security refers to the protection of models, data, tools and business processes around large language models (LLM) and their application systems during training, deployment, calling, orchestration, operation and maintenance, etc., to prevent models from being induced to perform unexpected behaviors, leak sensitive information, make wrong decisions, or be used for attacks.
 
-和传统 Web 应用不同，大模型应用的输入往往同时包含指令、数据和上下文。模型本身并不能天然地区分哪些内容来自系统、哪些来自用户、哪些来自不可信外部数据，因此会产生提示词注入、越狱、工具滥用、RAG 污染等新的攻击面。
+Unlike traditional web applications, the input of large model applications often includes instructions, data, and context at the same time. The model itself cannot naturally distinguish which content comes from the system, which comes from the user, and which comes from untrusted external data. Therefore, new attack surfaces such as prompt word injection, jailbreaking, tool abuse, and RAG pollution will be generated.
 
-在实际系统中，大模型通常并不是单独存在，而是和向量数据库、知识库、插件、Agent、工作流、外部 API、文件解析器、浏览器、代码执行器等组件组成一个应用。因此，大模型安全既包括模型自身的安全，也包括模型应用链路中的传统应用安全、数据安全、供应链安全和业务安全。
+In actual systems, large models usually do not exist alone, but form an application with components such as vector databases, knowledge bases, plug-ins, agents, workflows, external APIs, file parsers, browsers, and code executors. Therefore, large model security includes not only the security of the model itself, but also traditional application security, data security, supply chain security and business security in the model application link.
 
-相关概念
+Related concepts
 ----------------------------------------
 
-大语言模型
+large language model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-大语言模型是基于大规模语料训练的自然语言处理模型，常用于对话、摘要、翻译、代码生成、信息抽取、检索增强问答等场景。
+The big language model is a natural language processing model based on large-scale corpus training. It is often used in scenarios such as dialogue, summarization, translation, code generation, information extraction, and retrieval-enhanced question and answer.
 
-提示词
+prompt word
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-提示词（Prompt）是提交给模型的输入内容。提示词可以包含任务说明、上下文、示例、约束条件和用户问题。
+Prompt is the input content submitted to the model. Prompt words can include task descriptions, context, examples, constraints, and user questions.
 
-系统提示词
+System prompt word
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-系统提示词（System Prompt）通常由应用开发者设置，用于约束模型的角色、能力边界、输出格式和安全策略。系统提示词泄露后，攻击者可以据此构造更有针对性的绕过方式。
+System prompts (System Prompt) are usually set by application developers and are used to constrain the role, capability boundaries, output formats and security policies of the model. After the system prompt word is leaked, the attacker can construct a more targeted bypass method accordingly.
 
-上下文窗口
+context window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-上下文窗口是模型一次推理可以处理的 Token 范围。上下文窗口越大，模型能处理的信息越多，同时也可能扩大注入、泄露和资源消耗风险。
+The context window is the range of Tokens that the model can process in one inference. The larger the context window, the more information the model can process, while also potentially expanding the risk of injection, leakage, and resource consumption.
 
-检索增强生成
+Retrieval enhancement generation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-检索增强生成（Retrieval-Augmented Generation，RAG）是指先从知识库、搜索引擎、数据库等外部来源检索相关内容，再将这些内容和用户问题一起交给模型生成答案。
+Retrieval-Augmented Generation (RAG) refers to retrieving relevant content from external sources such as knowledge bases, search engines, databases, etc., and then handing these content and user questions to the model to generate answers.
 
-向量数据库
+vector database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-向量数据库用于存储文本、图片、代码等数据的向量表示，常用于相似度检索、知识库问答和推荐场景。
+Vector databases are used to store vector representations of text, images, codes and other data, and are often used in similarity retrieval, knowledge base Q&A and recommendation scenarios.
 
 Agent
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Agent 是具备任务规划、工具调用、状态记忆和多步执行能力的大模型应用形态。Agent 可以调用浏览器、邮件、数据库、命令执行、工单系统等工具，因此通常具有更高风险。
+Agent is a large model application form with task planning, tool calling, state memory and multi-step execution capabilities. Agents can call tools such as browsers, emails, databases, command execution, work order systems, etc., so they usually have higher risks.
 
-工具调用
+Tool call
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-工具调用（Tool Calling / Function Calling）是模型按照约定格式调用外部函数或 API 的能力。工具调用扩大了模型的影响范围，需要进行权限控制和参数校验。
+Tool Calling/Function Calling is the ability of the model to call external functions or APIs according to an agreed format. Tool calling expands the scope of influence of the model and requires permission control and parameter verification.

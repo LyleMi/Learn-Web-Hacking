@@ -1,56 +1,56 @@
-风险控制
+Risk control
 ========================================
 
-常见风险
+Common risks
 ----------------------------------------
-- 会员
-    - 撞库盗号
-    - 账号分享
-    - 批量注册
-- 视频
-    - 盗播盗看
-    - 广告屏蔽
-    - 刷量作弊
-- 活动
-    - 恶意刷
-    - 薅羊毛
-- 直播
-    - 挂站人气
-    - 恶意图文
-- 电商
-    - 恶意下单
-    - 订单欺诈
-- 支付
-    - 盗号盗卡
-    - 洗钱
-    - 恶意下单
-    - 恶意提现
-- 其他
-    - 钓鱼邮件
-    - 恶意爆破
-    - 短信轰炸
+- Member
+    - Credential stuffing and account theft
+    - Account sharing
+    - Batch registration
+- video
+    - Piracy and watching
+    - Ad blocking
+    - cheating
+- Activity
+    - Malicious brushing
+    - Gathering wool
+- live streaming
+    - Site popularity
+    -Malicious graphics and text
+- E-commerce
+    - Malicious orders
+    - Order fraud
+- payment
+    - Number theft and card theft
+    - money laundering
+    - Malicious orders
+    - Malicious withdrawals
+- other
+    - Phishing emails
+    - Malicious explosions
+    - SMS bombing
 
-防御策略
+defense strategy
 ----------------------------------------
-- 核身策略
-    - 同一收货手机号
-    - 同一收货地址
-    - 同一历史行为
-    - 同一IP
-    - 同一设备
-    - 同一支付ID
+- Core strategy
+    - Same receiving phone number
+    - Same shipping address
+    - Same historical behavior
+    - same IP
+    - same device
+    - Same payment ID
     - LBS
 
-异常特征
+abnormal characteristics
 ----------------------------------------
-- APP用户异常特征
+- Abnormal characteristics of APP users
     - IP
-    - 设备为特定型号
-    - 本地APP列表中有沙盒APP
-    - Root用户
-    - 同设备登录过多个账号
+    - The device is a specific model
+    - There is a sandbox APP in the local APP list
+    - Root user
+    - Logged into multiple accounts on the same device
 
-参考链接
+Reference link
 ----------------------------------------
-- `支付风控模型和流程分析 <http://doc.cocolian.cn/essay/risk/2016/12/18/risk-2-database/>`_
-- `爱奇艺业务安全风控体系的建设实践 <https://mp.weixin.qq.com/s?__biz=MzI0MjczMjM2NA==&mid=2247483836&idx=1&sn=d46875c957289d8e035345992ad7053e>`_
+- `Payment risk control model and process analysis <http://doc.cocolian.cn/essay/risk/2016/12/18/risk-2-database/>`_
+- `The construction practice of iQiyi’s business security risk control system <https://mp.weixin.qq.com/s?__biz=MzI0MjczMjM2NA==&mid=2247483836&idx=1&sn=d46875c957289d8e035345992ad7053e>`_

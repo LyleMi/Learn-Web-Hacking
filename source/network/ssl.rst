@@ -1,129 +1,129 @@
 SSL/TLS
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-SSL全称是Secure Sockets Layer，安全套接字层，它是由网景公司(Netscape)在1994年时设计，主要用于Web的安全传输协议，目的是为网络通信提供机密性、认证性及数据完整性保障。如今，SSL已经成为互联网保密通信的工业标准。
+The full name of SSL is Secure Sockets Layer. It was designed by Netscape in 1994 and is mainly used as a secure transmission protocol for the Web. It aims to provide confidentiality, authentication and data integrity guarantees for network communications. Today, SSL has become the industry standard for secure communications on the Internet.
 
-SSL最初的几个版本(SSL 1.0、SSL2.0、SSL 3.0)由网景公司设计和维护，从3.1版本开始，SSL协议由因特网工程任务小组(IETF)正式接管，并更名为TLS(Transport Layer Security)，发展至今已有TLS 1.0、TLS1.1、TLS1.2、TLS1.3这几个版本。
+The first few versions of SSL (SSL 1.0, SSL2.0, SSL 3.0) were designed and maintained by Netscape. Starting from version 3.1, the SSL protocol was officially taken over by the Internet Engineering Task Force (IETF) and renamed TLS (Transport Layer Security). So far, there are several versions of TLS 1.0, TLS1.1, TLS1.2, and TLS1.3.
 
-如TLS名字所说，SSL/TLS协议仅保障传输层安全。同时，由于协议自身特性(数字证书机制)，SSL/TLS不能被用于保护多跳(multi-hop)端到端通信，而只能保护点到点通信。
+As the name TLS says, the SSL/TLS protocol only ensures transport layer security. At the same time, due to the characteristics of the protocol itself (digital certificate mechanism), SSL/TLS cannot be used to protect multi-hop end-to-end communications, but can only protect point-to-point communications.
 
-SSL/TLS协议能够提供的安全目标主要包括如下几个：
+The security goals that the SSL/TLS protocol can provide mainly include the following:
 
-- 认证性
-    - 借助数字证书认证服务端端和客户端身份，防止身份伪造
-- 机密性
-    - 借助加密防止第三方窃听
-- 完整性
-    - 借助消息认证码(MAC)保障数据完整性，防止消息篡改
-- 重放保护
-    - 通过使用隐式序列号防止重放攻击
+- Authentication
+- Use digital certificates to authenticate server and client identities to prevent identity forgery
+- Confidentiality
+- Protect against third-party eavesdropping with encryption
+- Completeness
+- Ensure data integrity and prevent message tampering with the help of Message Authentication Code (MAC)
+- Replay protection
+- Prevent replay attacks by using implicit sequence numbers
 
-为了实现这些安全目标，SSL/TLS协议被设计为一个两阶段协议，分为握手阶段和应用阶段：
+In order to achieve these security goals, the SSL/TLS protocol is designed as a two-phase protocol, divided into a handshake phase and an application phase:
 
-握手阶段也称协商阶段，在这一阶段，客户端和服务端端会认证对方身份(依赖于PKI体系，利用数字证书进行身份认证)，并协商通信中使用的安全参数、密码套件以及MasterSecret。后续通信使用的所有密钥都是通过MasterSecret生成。
-在握手阶段完成后，进入应用阶段。在应用阶段通信双方使用握手阶段协商好的密钥进行安全通信。
+The handshake phase is also called the negotiation phase. In this phase, the client and the server authenticate each other's identity (relying on the PKI system and using digital certificates for identity authentication), and negotiate the security parameters, cipher suites, and MasterSecret used in communication. All keys used for subsequent communications are generated through MasterSecret.
+After the handshake phase is completed, the application phase is entered. In the application phase, the communicating parties use the keys negotiated in the handshake phase for secure communication.
 
-协议
+protocol
 ----------------------------------------
-TLS 包含几个子协议，比较常用的有记录协议、警报协议、握手协议、变更密码规范协议等。
+TLS contains several sub-protocols, the more commonly used ones are the recording protocol, the alarm protocol, the handshake protocol, the change password specification protocol, etc.
 
-记录协议
+record agreement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-记录协议(Record Protocol)规定了 TLS 收发数据的基本单位记录(record)。
+The Record Protocol specifies the basic unit record for TLS data transmission and reception.
 
-警报协议
+alarm protocol
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-警报协议(Alert Protocol)用于提示协议交互过程出现错误。
+The Alert Protocol is used to prompt errors in the protocol interaction process.
 
-握手协议
+handshake agreement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-握手协议(Handshake Protocol)是 TLS 里最复杂的子协议，在握手过程中协商 TLS 版本号、随机数、密码套件等信息，然后交换证书和密钥参数，最终双方协商得到会话密钥，用于后续的混合加密系统。
+The Handshake Protocol is the most complex sub-protocol in TLS. During the handshake process, the TLS version number, random number, cipher suite and other information are negotiated, and then certificate and key parameters are exchanged. Finally, the two parties negotiate to obtain the session key, which is used in the subsequent hybrid encryption system.
 
-变更密码规范协议
+Change Password Specification Agreement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-变更密码规范协议(Change Cipher Spec Protocol)是一个“通知”，告诉对方，后续的数据都将使用加密保护。
+The Change Cipher Spec Protocol is a "notification" that tells the other party that all subsequent data will be protected by encryption.
 
-交互过程
+interactive process
 ----------------------------------------
 
 Client Hello
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Client Hello 由客户端发送，内容包括客户端的一个Unix时间戳(GMT Unix Time)、一些随机的字节(Random Bytes)，还包括了客户端接受的算法类型(Cipher Suites)。
+Client Hello is sent by the client and includes a Unix timestamp (GMT Unix Time) of the client, some random bytes (Random Bytes), and the type of algorithm accepted by the client (Cipher Suites).
 
 Server Hello
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Server Hello 由服务端发送，内容包括服务端支持的算法类型、GMT Unix Time以及Random Bytes。
+Server Hello is sent by the server and includes the algorithm type, GMT Unix Time and Random Bytes supported by the server.
 
 Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-由服务端或者客户端发送，发送方会会将自己的数字证书发送给接收方，由接收方进行证书验证，如果不通过的话，接收方会中断握手的过程。一般跟在Client / Server Hello报文之后。
+Sent by the server or client, the sender will send its digital certificate to the receiver, and the receiver will verify the certificate. If it fails, the receiver will interrupt the handshake process. Generally follows the Client/Server Hello message.
 
 Server Key Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-由服务端发送，将自己的公钥参数传输给了客户端，一般也和Server Hello与Certificate在一个TCP报文中。
+Sent by the server, it transmits its public key parameters to the client, usually in the same TCP message as Server Hello and Certificate.
 
 Server Hello Done
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-服务端发送，一般也和Server Hello、Certificate和Server Key Exchange在一个TCP报文中。
+Sent by the server, usually in a TCP message with Server Hello, Certificate and Server Key Exchange.
 
 Client Key Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-客户端发送，向服务端发送自己的公钥参数，与服务端协商密钥。
+The client sends, sends its own public key parameters to the server, and negotiates the key with the server.
 
 Change Cipher Spec
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-客户端或者服务端发送，紧跟着Key Exchange发送，代表自己生成了新的密钥，通知对方以后将更换密钥，使用新的密钥进行通信。
+Sent by the client or server, followed by Key Exchange, it means that it has generated a new key and notified the other party that it will change the key in the future and use the new key for communication.
 
 Encrypted Handshake Message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-客户端或者服务端发送，紧跟着Key Exchange发送。进行测试，一方用自己的刚刚生成的密钥加密一段固定的消息发送给对方，如果密钥协商正确无误的话，对方可以正确解密。
+Sent by the client or server, followed by Key Exchange. For testing, one party uses its newly generated key to encrypt a fixed message and sends it to the other party. If the key negotiation is correct, the other party can decrypt it correctly.
 
 New Session Ticket
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-服务端发送，表示发起会话，在一段时间之内(超时时间到来之前)，双方都以刚刚交换的密钥进行通信。从这以后，加密通信正式开始。
+Sent by the server, indicating the initiation of a session. Within a period of time (before the timeout arrives), both parties communicate with the key just exchanged. From then on, encrypted communication officially began.
 
 Application Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-使用密钥交换协议协商出来的密钥加密的应用层的数据。
+Application layer data encrypted using keys negotiated by the key exchange protocol.
 
 Encrypted Alert
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-客户端或服务端发送，意味着加密通信因为某些原因需要中断，警告对方不要再发送敏感的数据。
+Sending by the client or server means that encrypted communication needs to be interrupted for some reason, and the other party is warned not to send sensitive data again.
 
-版本更新内容
+Version update content
 ----------------------------------------
 
 TLS 1.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 引入了PSK作为新的密钥协商机制
-- 支持 0-RTT 模式，以安全性降低为代价，在建立连接时节省了往返时间
-- ServerHello 之后的所有握手消息采取了加密操作，可见明文减少
-- 不再允许对加密报文进行压缩、不再允许双方发起重协商
-- DSA 证书不再允许在 TLS 1.3 中使用
-- 删除不安全的密码算法
-    - RSA 密钥传输 - 不支持前向安全性
-    - CBC 模式密码 - 易受 BEAST 和 Lucky 13 攻击
-    - RC4 流密码 - 在 HTTPS 中使用并不安全
-    - SHA-1 哈希函数 - 建议以 SHA-2 取而代之
-    - 任意 Diffie-Hellman 组- CVE-2016-0701 漏洞
-    - 输出密码 - 易受 FREAK 和 LogJam 攻击
+- Introduced PSK as a new key agreement mechanism
+- Supports 0-RTT mode, which saves round-trip time when establishing a connection at the expense of reduced security
+- All handshake messages after ServerHello are encrypted, and the visible plain text is reduced.
+- Compression of encrypted messages is no longer allowed, and both parties are no longer allowed to initiate renegotiation.
+- DSA certificates are no longer allowed in TLS 1.3
+- Removed insecure cryptographic algorithms
+- RSA key transport - forward security not supported
+- CBC mode cipher - vulnerable to BEAST and Lucky 13 attacks
+- RC4 stream cipher - not secure for use in HTTPS
+- SHA-1 hash function - it is recommended to replace it with SHA-2
+- Arbitrary Diffie-Hellman Group - CVE-2016-0701 vulnerability
+- Output password - Vulnerable to FREAK and LogJam attacks
 
-子协议
+sub-protocol
 ----------------------------------------
-SSL/TLS协议有一个高度模块化的架构，分为很多子协议，主要是：
+The SSL/TLS protocol has a highly modular architecture and is divided into many sub-protocols, mainly:
 
-- Handshake 协议
-    - 包括协商安全参数和密码套件、服务端身份认证(客户端身份认证可选)、密钥交换
-- ChangeCipherSpec 协议
-    - 一条消息表明握手协议已经完成
-- Alert 协议
-    - 对握手协议中一些异常的错误提醒，分为fatal和warning两个级别，fatal类型的错误会直接中断SSL链接，而warning级别的错误SSL链接仍可继续，只是会给出错误警告
-- Record 协议
-    - 包括对消息的分段、压缩、消息认证和完整性保护、加密等
+- Handshake protocol
+- Including negotiation of security parameters and cipher suites, server identity authentication (client identity authentication is optional), and key exchange
+- ChangeCipherSpec protocol
+- A message indicating that the handshake protocol has been completed
+- Alert protocol
+- Error reminders for some exceptions in the handshake protocol are divided into two levels: fatal and warning. Fatal type errors will directly interrupt the SSL link, while warning level errors can still continue the SSL link, but will give an error warning.
+- Record protocol
+- Including message segmentation, compression, message authentication and integrity protection, encryption, etc.
 
-参考链接
+Reference link
 ----------------------------------------
 
 RFC

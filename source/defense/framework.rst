@@ -1,76 +1,76 @@
-防御框架
+defensive framework
 ========================================
 
-防御纵深
+defense depth
 ----------------------------------------
-根据纵深，防御可以分为物理层、数据层、终端层、系统层、网络层、应用层几层。这几层纵深存在层层递进相互依赖的关系。
+According to the depth, defense can be divided into physical layer, data layer, terminal layer, system layer, network layer and application layer. There is a progressive interdependence between these layers.
 
-物理层
+physical layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-物理层实际应用中接触较少，但仍是非常重要的位置。如果物理层设计不当，很容易被攻击者通过物理手段绕过上层防御。
+The physical layer has less contact in actual applications, but it is still a very important position. If the physical layer is not designed properly, it is easy for attackers to bypass the upper layer of defense through physical means.
 
-数据层
+data layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-数据处于防御纵深较底层的位置，攻击的目标往往也是为了拿到数据，很多防御也是围绕数据不被破坏、窃取等展开的。
+Data is at the lower level of the defense depth, and the target of attacks is often to obtain data. Many defenses also focus on preventing data from being destroyed or stolen.
 
-终端层
+terminal layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-终端包括PC、手机、IoT以及其他的智能设备，连入网络的终端是否可信是需要解决的问题。
+Terminals include PCs, mobile phones, IoT and other smart devices. Whether the terminals connected to the network are trustworthy is a problem that needs to be solved.
 
-系统层
+System layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-操作系统运行在终端上，可能会存在提权、非授权访问等问题。
+The operating system runs on the terminal, and there may be problems such as privilege escalation and unauthorized access.
 
-网络层
+network layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-网络层使用通信线路将多台计算机相互连接起来，依照商定的协议进行通信。网络层存在MITM、DDoS等攻击。
+The network layer uses communication lines to connect multiple computers to each other and communicate according to agreed-upon protocols. There are attacks such as MITM and DDoS at the network layer.
 
-应用层
+Application layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-应用层是最上层，主要涉及到Web应用程序的各种攻击。
+The application layer is the top layer and mainly involves various attacks on Web applications.
 
-访问控制
+access control
 ----------------------------------------
-Web应用需要限制用户对应用程序的数据和功能的访问，以防止用户未经授权访问。访问控制的过程可以分为验证、会话管理和访问控制三个地方。
+Web applications need to restrict user access to the application's data and functionality to prevent unauthorized access by users. The access control process can be divided into three parts: authentication, session management and access control.
 
-验证机制
+Verification mechanism
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-验证机制在一个应用程序的用户访问处理中是一个最基本的部分，验证就是确定该用户的有效性。大多数的web应用都采用使用的验证模型，即用户提交一个用户名和密码，应用检查它的有效性。在银行等安全性很重要的应用程序中，基本的验证模型通常需要增加额外的证书和多级登录过程，比如客户端证书、硬件等。
+Authentication mechanism is the most basic part in user access processing of an application. Authentication is to determine the validity of the user. Most web applications use an authentication model where the user submits a username and password and the application checks their validity. In security-critical applications such as banking, the basic authentication model often requires the addition of additional certificates and multi-level login processes, such as client certificates, hardware, etc.
 
-会话管理
+Session management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-为了实施有效的访问控制，应用程序需要一个方法来识别和处理这一系列来自每个不同用户的请求。大部分程序会为每个会话创建一个唯一性的token来识别。
+In order to implement effective access control, the application needs a way to identify and handle this series of requests from each different user. Most programs create a unique token for each session to identify it.
 
-对攻击者来说，会话管理机制高度地依赖于token的安全性。在部分情况下，一个攻击者可以伪装成受害的授权用户来使用Web应用程序。这种情况可能有几种原因，其一是token生成的算法的缺陷，使得攻击者能够猜测到其他用户的token；其二是token后续处理的方法的缺陷，使得攻击者能够获得其他用户的token。
+For attackers, the session management mechanism is highly dependent on the security of the token. In some cases, an attacker can pretend to be a victim's authorized user and use the web application. There may be several reasons for this situation. One is a flaw in the token generation algorithm, which allows the attacker to guess the tokens of other users; the other is a flaw in the subsequent token processing method, which allows the attacker to obtain the tokens of other users.
 
-访问控制
+access control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-处理用户访问的最后一步是正确决定对于每个独立的请求是允许还是拒绝。如果前面的机制都工作正常，那么应用程序就知道每个被接受到的请求所来自的用户的id，并据此决定用户对所请求要执行的动作或要访问的数据是否得到了授权。
+The final step in handling user access is to correctly decide whether to allow or deny each individual request. If the previous mechanisms are working properly, then the application will know the user ID of each received request and decide based on this whether the user is authorized to perform the requested action or access the data.
 
-由于访问控制本身的复杂性，这使得它成为攻击者的常用目标。开发者经常对用户会如何与应用程序交互作出有缺陷的假设，也经常省略了对某些应用程序功能的访问控制检查。
+Due to the complexity of access control itself, this makes it a common target for attackers. Developers often make flawed assumptions about how users will interact with applications and often omit access control checks for certain application features.
 
-输入处理
+Input processing
 ----------------------------------------
-很多对Web应用的攻击都涉及到提交未预期的输入，它导致了该应用程序设计者没有料到的行为。因此，对于应用程序安全性防护的一个关键的要求是它必须以一个安全的方式处理用户的输入。
+Many attacks on web applications involve submitting unexpected input, which results in behavior that was not intended by the application designers. Therefore, a key requirement for application security is that it handles user input in a secure manner.
 
-基于输入的漏洞可能出现在一个应用程序的功能的任何地方，并与其使用的技术类型相关。对于这种攻击，输入验证是常用的必要防护。常用的防护机制有如下几种：黑名单、白名单、过滤、处理。
+Input-based vulnerabilities can appear anywhere in an application's functionality and are related to the type of technology it uses. Input validation is a common and necessary defense against this attack. Commonly used protection mechanisms include the following: blacklist, whitelist, filtering, and processing.
 
-黑名单
+blacklist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-黑名单包含已知的被用在攻击方面的一套字面上的字符串或模式，验证机制阻挡任何匹配黑名单的数据。
+A blacklist contains a literal set of strings or patterns known to be used in attacks, and validation mechanisms block any data that matches the blacklist.
 
-一般来说，这种方式是被认为是输入效果较差的一种方式。主要有两个原因，其一Web应用中的一个典型的漏洞可以使用很多种不同的输入来被利用，输入可以是被加密的或以各种不同的方法表示。
+Generally speaking, this method is considered to have poor input effect. There are two main reasons. First, a typical vulnerability in a web application can be exploited using many different inputs. The input can be encrypted or represented in various different ways.
 
-其二，漏洞利用的技术是在不断地改进的，有关利用已存在的漏洞类型的新的方法不可能被当前黑名单阻挡。
+Second, vulnerability exploitation technology is constantly improving, and new methods of exploiting existing vulnerability types cannot be blocked by the current blacklist.
 
-白名单
+whitelist
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-白名单包含一系列的字符串、模式或一套标准来匹配符合要求的输入。这种检查机制允许匹配白名单的数据，阻止之外的任何数据。这种方式相对比较有效，但需要比较好的设计。
+A whitelist consists of a series of strings, patterns, or a set of criteria that match input that meets the requirements. This checking mechanism allows data that matches a whitelist and blocks any data outside of it. This method is relatively effective, but requires better design.
 
-过滤
+filter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-过滤会删除潜在的恶意字符并留下安全的字符，基于数据过滤的方式通常是有效的，并且在许多情形中，可作为处理恶意输入的通用解决方案。
+Filtering removes potentially malicious characters and leaves behind safe characters. Data-based filtering is often effective and, in many cases, serves as a general solution for handling malicious input.
 
-安全地处理数据
+Process data securely
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-非常多的web应用程序漏洞的出现是因为用户提供的数据是以不安全的方法被处理的。在一些情况下，存在安全的编程方法能够避免通常的问题。例如，SQL注入攻击能够通过预编译的方式组织，XSS在大部分情况下能够被转义所防御。
+Many web application vulnerabilities occur because user-supplied data is processed in insecure ways. In some cases, safe programming methods exist that avoid common problems. For example, SQL injection attacks can be organized through precompilation, and XSS can be defended by escaping in most cases.

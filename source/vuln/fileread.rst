@@ -1,9 +1,9 @@
-文件读取
+file reading
 ================================
 
-考虑读取可能有敏感信息的文件
+Consider reading files that may contain sensitive information
 
-- 用户目录下的敏感文件
+- Sensitive files in user directory
     - .bash_history
     - .zsh_history
     - .profile
@@ -12,26 +12,26 @@
     - .viminfo
     - passwd
 
-- 应用的配置文件
+- Application configuration files
     - /etc/apache2/apache2.conf
     - /etc/nginx/nginx.conf
 
-- 应用的日志文件
+- Application log files
     - /var/log/apache2/access.log
     - /var/log/nginx/access.log
 
-- 站点目录下的敏感文件
+- Sensitive files in the site directory
     - .svn/entries
     - .git/HEAD
     - WEB-INF/web.xml
     - .htaccess
 
-- 特殊的备份文件
+- Special backup files
     - .swp
     - .swo
     - .bak
     - index.php~
     - ...
 
-- Python的Cache
+- Python Cache
     - ``__pycache__\__init__.cpython-35.pyc``

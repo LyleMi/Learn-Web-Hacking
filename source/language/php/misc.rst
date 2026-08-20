@@ -1,37 +1,37 @@
-其它
+other
 =================================
 
-低精度
+low precision
 ---------------------------------
-php中并不是用高精度来存储浮点数，而是用使用 IEEE 754 双精度格式，造成在涉及到浮点数比较的时候可能会出现预期之外的错误。
-比如 ``php -r "var_dump(0.2+0.7==0.9);"`` 这行代码的输出是 ``bool(false)`` 而不是 ``bool(true)``。这在一些情况下可能出现问题。
+PHP does not use high precision to store floating point numbers, but uses the IEEE 754 double precision format, which may cause unexpected errors when comparing floating point numbers.
+For example, ``php -r "var_dump(0.2+0.7==0.9);"`` The output of this line of code is ``bool(false)`` instead of ``bool(true)``. This may cause problems in some situations.
 
-弱类型
+weak type
 ---------------------------------
-如果使用 ``==`` 来判断相等，则会因为类型推断出现一些预料之外的行为，比如magic hash，指当两个md5值都是 ``0e[0-9]{30}`` 的时候，就会认为两个hash值相等。
-另外在判断字符串和数字的时候，PHP会自动做类型转换，那么 ``1=="1a.php"`` 的结果会是true
+If you use ``==`` to determine equality, some unexpected behavior will occur due to type inference, such as magic hash, which means that when two md5 values ​​​​are both ``0e[0-9]{30}``, the two hash values ​​will be considered equal.
+In addition, when judging strings and numbers, PHP will automatically perform type conversion, so the result of ``1=="1a.php"`` will be true
 
-另外在判断一些hash时，如果传入的是数组，返回值会为 ``NULL``, 因此在判断来自网络请求的数据的哈希值时需要先判断数据类型。
+In addition, when judging some hashes, if an array is passed in, the return value will be ``NULL``, so when judging the hash value of data from network requests, you need to first judge the data type.
 
-同样的， ``strcmp()`` ``ereg()`` ``strpos()`` 这些函数在处理数组的时候也会异常，返回NULL。
+Similarly, ``strcmp()`` ``ereg()`` ``strpos()`` these functions will also throw exceptions when processing arrays and return NULL.
 
-命令执行
+command execution
 ---------------------------------
-preg_replace 第一个参数是//e的时候，第二个参数会被当作命令执行
+When the first parameter of preg_replace is //e, the second parameter will be executed as a command.
 
-截断
+Truncate
 ---------------------------------
-PHP字符存在截断行为，可以使用 ``ereg`` / ``%00`` / ``iconv`` 等实现php字符截断的操作，从而触发漏洞。
+PHP characters have truncation behavior. You can use ``ereg`` / ``%00`` / ``iconv`` to implement PHP character truncation operations, thereby triggering the vulnerability.
 
-变量覆盖
+variable override
 ---------------------------------
-当使用 ``extract`` / ``parse_str`` 等函数时，或者使用php的 ``$$`` 特性时，如果没有正确的调用，则可能使得用户可以任意修改变量。
+When using functions such as ``extract`` / ``parse_str``, or when using PHP's ``$$`` feature, if it is not called correctly, the user may be able to modify the variable arbitrarily.
 
-php特性
+php features
 ---------------------------------
-- php自身在解析请求的时候，如果参数名字中包含" "、"."、"["这几个字符，会将他们转换成下划线
-- 由于历史原因， ``urlencode`` 和RFC3896存在一定的不同，PHP另外提供了 ``rawurlencode`` 对RFC3896完成标准的实现
+- When php itself parses the request, if the parameter name contains the characters " ", ".", "[", it will convert them into underscores
+- Due to historical reasons, ``urlencode`` is somewhat different from RFC3896. PHP also provides ``rawurlencode`` to implement the RFC3896 completion standard.
 
-/tmp临时文件竞争
+/tmp temporary file competition
 ---------------------------------
-phpinfo可访问时，可以看到上传的临时文件的路径，从而实现LFI。
+When phpinfo is accessible, the path to the uploaded temporary file can be seen, thus enabling LFI.

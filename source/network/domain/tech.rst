@@ -1,14 +1,14 @@
-DNS利用
+DNS utilization
 ----------------------------------------
 
 DGA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DGA（Domain Generate Algorithm，域名生成算法）是一种利用随机字符来生成C&C域名，从而逃避域名黑名单检测的技术手段，常见于botnet中。一般来说，一个DGA域名的存活时间约在1-7天左右。
+DGA (Domain Generate Algorithm) is a technical means that uses random characters to generate C&C domain names to evade domain name blacklist detection. It is common in botnets. Generally speaking, the survival time of a DGA domain name is about 1-7 days.
 
-通信时，客户端和服务端都运行同一套DGA算法，生成相同的备选域名列表，当需要发动攻击的时候，选择其中少量进行注册，便可以建立通信，并且可以对注册的域名应用速变IP技术，快速变换IP，从而域名和IP都可以进行快速变化。
+During communication, both the client and the server run the same set of DGA algorithms to generate the same list of alternative domain names. When it is necessary to launch an attack, a small number of them are selected for registration, and communication can be established. Rapid-changing IP technology can be applied to the registered domain names to quickly change IPs, so that both domain names and IPs can change quickly.
 
-DGA域名有多种生成方式，根据种子类型可以分为确定性和不确定性的生成。不确定性的种子可能会选用当天的一些即时数据，如汇率信息等。
+There are many ways to generate DGA domain names, which can be divided into deterministic and uncertain generation according to the seed type. The seeds of uncertainty may use some real-time data of the day, such as exchange rate information.
 
-DNS隧道
+DNS tunnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-DNS隧道工具将进入隧道的其他协议流量封装到DNS协议内，在隧道上传输。这些数据包出隧道时进行解封装，还原数据。
+The DNS tunnel tool encapsulates other protocol traffic entering the tunnel into the DNS protocol and transmits it over the tunnel. These data packets are decapsulated when they exit the tunnel and the data is restored.

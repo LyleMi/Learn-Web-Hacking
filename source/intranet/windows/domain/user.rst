@@ -1,34 +1,34 @@
-用户
+user
 ========================================
 
-用户组与工作组
+User groups and work groups
 ----------------------------------------
 
-用户
+user
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Windows系统存在一些为了特定用途而设置的用户，分别是：SYSTEM(系统)、Trustedinstaller(信任程序模块)、Everyone(所有人)、Creator Owner(创建者)等，这些特殊用户不属于任何用户组，是完全独立的账户。其中SYSTEM拥有整台计算机管理权限的账户，一般操作无法获取与它等价的权限。
+There are some users set up for specific purposes in the Windows system, namely: SYSTEM (system), Trustedinstaller (trusted program module), Everyone (owner), Creator Owner (creator), etc. These special users do not belong to any user group and are completely independent accounts. Among them, SYSTEM has the account with management permissions for the entire computer, and ordinary operations cannot obtain equivalent permissions.
 
-用户组
+User group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Windows系统内置了许多本地用户组，用于管理用户权限。只要用户账户加入到对应的用户组内，则用户账户也将具备对应用户组所拥有的权限。
+Windows systems have many built-in local user groups for managing user permissions. As long as the user account is added to the corresponding user group, the user account will also have the permissions of the corresponding user group.
 
-默认情况下，系统为用户分了7个组，并给每个组赋予不同的操作权限。这些组为：管理员组(Administrators)、高权限用户组(Power Users)、普通用户组(Users)、备份操作组(Backup Operators)、文件复制组(Replicator)、来宾用户组(Guests)、身份验证用户组(Authenticated Users)。
+By default, the system divides users into 7 groups and gives each group different operating permissions. These groups are: Administrators, Power Users, Users, Backup Operators, Replicator, Guests, and Authenticated Users.
 
-工作组
+working group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-工作组（Workgroup）是最常用最简单最普遍的资源管理模式，默认情况下计算机都在名为workgroup的工作组中。工作组模式比较松散，适合网络中计算机数量较少，不需要严格管理的情况。
+Workgroup (Workgroup) is the most commonly used, simplest and most common resource management mode. By default, computers are in a workgroup named workgroup. The workgroup mode is relatively loose and suitable for situations where the number of computers in the network is small and strict management is not required.
 
-域中用户
+Users in the domain
 ----------------------------------------
 
-域用户
+domain user
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-域环境中的用户和本地用户的帐户不同，域用户帐户保存在活动目录中。在域环境中，一个域用户可以在域中的任何一台计算机上登录。在域中用户可以使用SID (Security Identifier) 来表明身份，用NTLM哈希或者Kerberos来验证身份。
+Users in a domain environment have different accounts than local users. Domain user accounts are stored in Active Directory. In a domain environment, a domain user can log in on any computer in the domain. Users in the domain can use SID (Security Identifier) ​​to identify themselves, and use NTLM hash or Kerberos to verify their identity.
 
-机器用户
+machine user
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-机器用户也被称作机器账号或计算机账号，所有加入域的主机都会有一个机器用户，机器用户的用户名以 ``$`` 结尾。
+Machine users are also called machine accounts or computer accounts. All hosts that join the domain will have a machine user. The machine user's username ends with ``$``.
 
-组策略
+group policy
 ----------------------------------------
-组策略(Group Policy)用于控制用户帐户和计算机帐户的工作环境。组策略提供了操作系统、应用程序和活动目录中用户设置的集中化管理和配置。其中本地的组策略(LGPO或LocalGPO)，可以在独立且非域的计算机上管理组策略对象。在域环境中的组策略通常被称作GPO(Group Policy Object)。
+Group Policy is used to control the working environment of user accounts and computer accounts. Group Policy provides centralized management and configuration of user settings across operating systems, applications, and Active Directory. Among them, local Group Policy (LGPO or LocalGPO) can manage Group Policy objects on independent and non-domain computers. Group Policy in a domain environment is usually called GPO (Group Policy Object).

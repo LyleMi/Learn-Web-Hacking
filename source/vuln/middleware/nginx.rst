@@ -1,30 +1,30 @@
 Nginx
 ========================================
 
-Fast-CGI关闭
+Fast-CGI off
 ----------------------------------------
-在Fast-CGI关闭的情况下， Nginx 仍然存在解析漏洞：
-在文件路径(xx.jpg)后面加上 ``%00.php`` ， 即 ``xx.jpg%00.php`` 会被当做 php 文件来解析
+With Fast-CGI turned off, Nginx still has a parsing vulnerability:
+Add ``%00.php`` after the file path (xx.jpg), that is, ``xx.jpg%00.php`` will be parsed as a php file
 
-Fast-CGI开启
+Fast-CGI on
 ----------------------------------------
-在Fast-CGI开启状态下，在文件路径后加上 ``/xx.php`` ，则 ``xx.jpg/xx.php`` 会被解析为php文件
+When Fast-CGI is turned on, add ``/xx.php`` after the file path, then ``xx.jpg/xx.php`` will be parsed as a php file
 
 CVE-2013-4547
 ----------------------------------------
 ``a.jpg\x20\x00.php``
 
-配置错误
+Configuration error
 ----------------------------------------
 
-目录穿越
+directory traversal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-如果配置中存在类似 ``location /foo { alias /bar/; }`` 的配置时，``/foo../`` 会被解析为 ``/bar/../`` 从而导致目录穿越的发生。
+If there is a configuration similar to ``location /foo { alias /bar/; }`` in the configuration, ``/foo../`` will be parsed into ``/bar/../``, causing directory traversal to occur.
 
-目录遍历
+directory traversal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-配置中 ``autoindex on`` 开启时，Nginx中存在目录遍历漏洞。
+There is a directory traversal vulnerability in Nginx when ``autoindex on`` is turned on in the configuration.
 
-参考链接
+Reference link
 ----------------------------------------
-- `CVE-2013-4547 Nginx解析漏洞深入利用及分析 <http://www.91ri.org/9064.html>`_
+- `CVE-2013-4547 In-depth utilization and analysis of Nginx parsing vulnerability <http://www.91ri.org/9064.html>`_

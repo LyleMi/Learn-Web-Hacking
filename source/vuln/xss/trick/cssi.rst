@@ -1,9 +1,9 @@
-CSS 注入
+CSS injection
 ================================
 
-基本介绍
+Basic introduction
 --------------------------------
-CSS注入最早开始于利用CSS中的 ``expression()`` ``url()`` ``regex()`` 等函数或特性来引入外部的恶意代码，但是随着浏览器的发展，这种方式被逐渐禁用，与此同时，出现了一些新的攻击方式。
+CSS injection first began by using functions or features such as ``expression()`` ``url()`` ``regex()`` in CSS to introduce external malicious code. However, with the development of browsers, this method has been gradually disabled. At the same time, some new attack methods have emerged.
 
 CSS selectors
 --------------------------------
@@ -19,11 +19,11 @@ CSS selectors
         <input type="text" id="secret" name="secret" value="abc">
     </form>
 
-上图是利用CSS selectors完成攻击的一个示例
+The picture above is an example of using CSS selectors to complete the attack.
 
 Abusing Unicode Range
 --------------------------------
-当可以插入CSS的时候，可以使用 ``font-face`` 配合 ``unicode-range`` 获取目标网页对应字符集。PoC如下
+When CSS can be inserted, you can use ``font-face`` with ``unicode-range`` to obtain the character set corresponding to the target web page. PoC is as follows
 
 ::
 
@@ -50,4 +50,4 @@ Abusing Unicode Range
     <p id="sensitive-information">AB</p>
 
 
-当字符较多时，则可以结合 ``::first-line``  等CSS属性缩小范围，以获取更精确的内容
+When there are many characters, you can combine it with CSS properties such as ``::first-line`` to narrow the range to obtain more precise content.

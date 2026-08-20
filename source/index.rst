@@ -1,10 +1,10 @@
-Web安全学习笔记
+Web security study notes
 ========================================
 
 .. toctree::
    :numbered:
    :maxdepth: 2
-   :caption: 内容索引:
+:caption: Content index:
 
    basic/index
    network/index

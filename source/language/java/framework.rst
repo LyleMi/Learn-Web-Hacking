@@ -1,52 +1,52 @@
-框架
+frame
 ========================================
 
 Servlet
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Servlet(Server Applet)是Java Servlet的简称，称为小服务程序或服务连接器，是用Java编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态Web内容。
+Servlet (Server Applet) is the abbreviation of Java Servlet, called a small service program or service connector. It is a server-side program written in Java. Its main function is to browse and modify data interactively and generate dynamic Web content.
 
-狭义的Servlet是指Java语言实现的一个接口，广义的Servlet是指任何实现了这个Servlet接口的类，一般情况下，人们将Servlet理解为后者。Servlet运行于支持Java的应用服务器中。从原理上讲，Servlet可以响应任何类型的请求，但绝大多数情况下Servlet只用来扩展基于HTTP协议的Web服务器。
+Servlet in the narrow sense refers to an interface implemented by the Java language, and Servlet in the broad sense refers to any class that implements this Servlet interface. Generally, people understand Servlet as the latter. Servlets run in Java-enabled application servers. In principle, Servlets can respond to any type of request, but in most cases Servlets are only used to extend Web servers based on the HTTP protocol.
 
-生命周期为
+The life cycle is
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 客户端请求该 Servlet
-- 加载 Servlet 类到内存
-- 实例化并调用init()方法初始化该 Servlet
-- service()(根据请求方法不同调用 ``doGet()`` / ``doPost()`` / ... / ``destroy()``
+- The client requests the Servlet
+- Load Servlet class into memory
+- Instantiate and call the init() method to initialize the Servlet
+- service()(called ``doGet()`` / ``doPost()`` / ... / ``destroy()`` depending on the request method
 
-接口
+interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``init()`` 
 
-在 Servlet 的生命期中，仅执行一次 init() 方法，在服务器装入 Servlet 时执行。
+During the life of the Servlet, the init() method is executed only once, when the server loads the Servlet.
 
 ``service()``
 
-service() 方法是 Servlet 的核心。每当一个客户请求一个HttpServlet对象，该对象的 ``service()`` 方法就要被调用，而且传递给这个方法一个"请求"(ServletRequest)对象和一个"响应"(ServletResponse)对象作为参数。
+The service() method is the core of Servlet. Whenever a client requests an HttpServlet object, the object's service() method is called, and a "Request" (ServletRequest) object and a "Response" (ServletResponse) object are passed to this method as parameters.
 
 Struts 2
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。
+Struts2 is a Web application framework based on the MVC design pattern. It is essentially equivalent to a servlet. In the MVC design pattern, Struts2 acts as a controller to establish data interaction between the model and the view.
 
-请求流程
+Request process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 客户端发送请求的tomcat服务器
-- 请求经过一系列过滤器
-- FilterDispatcher调用ActionMapper来决定这个请求是否要调用某个Action
-- ActionMppaer决定调用某个ActionFilterDispatcher把请求给ActionProxy
-- ActionProxy通过Configuration Manager查看structs.xml，找到对应的Action类
-- ActionProxy创建一个ActionInvocation对象
-- ActionInvocation对象回调Action的execute方法
-- Action执行完毕后，ActionInvocation根据返回的字符串，找到相应的result，通过HttpServletResponse返回给服务器
+- The client sends the request to the tomcat server
+- The request goes through a series of filters
+- FilterDispatcher calls ActionMapper to determine whether this request should call an Action
+- ActionMppaer decides to call an ActionFilterDispatcher to send the request to ActionProxy
+- ActionProxy checks structs.xml through Configuration Manager and finds the corresponding Action class
+- ActionProxy creates an ActionInvocation object
+- ActionInvocation object callback Action's execute method
+- After the Action is executed, ActionInvocation finds the corresponding result based on the returned string and returns it to the server through HttpServletResponse.
 
-相关CVE
+Related CVEs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2016-3081 (S2-032)
 - CVE-2016-3687 (S2-033) 
@@ -65,93 +65,93 @@ Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于�
 Spring
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Spring一般指的是Spring Framework，一个轻量级Java应用程序开源框架，提供了简易的开发方式。
+Spring generally refers to Spring Framework, a lightweight Java application open source framework that provides an easy development method.
 
 Spring MVC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Spring MVC根据Spring的模式设计的MVC框架，主要用于开发Web应用，简化开发。
+Spring MVC is an MVC framework designed based on Spring's pattern. It is mainly used to develop Web applications and simplify development.
 
 Spring Boot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Spring在推出之初方案较为繁琐，因此提供了Spring Boot作为自动化配置工具，降低项目搭建的复杂度。
+When Spring was launched, the solution was relatively cumbersome, so Spring Boot was provided as an automated configuration tool to reduce the complexity of project construction.
 
-请求流程
+Request process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 用户发送请求给服务器
-- 服务器收到请求，使用DispatchServlet处理
-- Dispatch使用HandleMapping检查url是否有对应的Controller，如果有，执行
-- 如果Controller返回字符串，ViewResolver将字符串转换成相应的视图对象
-- DispatchServlet将视图对象中的数据，输出给服务器
-- 服务器将数据输出给客户端
+- The user sends a request to the server
+- The server receives the request and uses DispatchServlet to process it
+- Dispatch uses HandleMapping to check whether the url has a corresponding Controller. If so, execute it.
+- If the Controller returns a string, ViewResolver converts the string into the corresponding view object
+- DispatchServlet outputs the data in the view object to the server
+- The server outputs data to the client
 
-CVE概览
+CVE overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2018-1270
-    - Spring Websocket 远程代码执行漏洞
+    - Spring Websocket remote code execution vulnerability
     - Spring Framework 5.0 - 5.0.5
     - Spring Framework 4.3 - 4.3.15
 - CVE-2018-1273
-    - Spring Data 远程代码执行漏洞
+    - Spring Data remote code execution vulnerability
     - Spring Data Commons 1.13 - 1.13.10
     - Spring Data Commons 2.0 - 2.0.5
     - Spring Data REST 2.6 - 2.6.10
     - Spring Data REST 3.0 - 3.0.5
 - CVE-2017-8046
-    - Spring Data REST 远程代码执行漏洞
+    - Spring Data REST remote code execution vulnerability
 - CVE-2017-4971
-    - Spring Web Flow 远程代码执行漏洞
+    - Spring Web Flow remote code execution vulnerability
 
 Shiro
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache Shiro是一个功能强大且易于使用的Java安全框架，功能包括身份验证，授权，加密和会话管理。
+Apache Shiro is a powerful and easy-to-use Java security framework with features including authentication, authorization, encryption, and session management.
 
-CVE概览
+CVE overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2020-13933  
     - Apache Shiro < 1.6.0
-    - 身份验证绕过漏洞
+    - Authentication bypass vulnerability
 - CVE-2020-11989
     - SHIRO-782 
     - Apache Shiro < 1.5.3
-    - 身份验证绕过漏洞
+    - Authentication bypass vulnerability
 - CVE-2020-1957
     - SHIRO-682
     - Apache Shiro < 1.5.2
-    - 身份验证绕过漏洞
+    - Authentication bypass vulnerability
 - CVE-2019-12422
     - SHIRO-721
     - Apache Shiro < 1.4.2
-    - Padding Oracle Attack 远程代码执行漏洞
+    - Padding Oracle Attack remote code execution vulnerability
 - CVE-2016-4437
     - SHIRO-550
     - Apache Shiro <= 1.2.4
-    - 反序列化远程代码执行漏洞
+    - Deserialization remote code execution vulnerability
 - CVE-2014-0074
     - SHIRO-460 
     - Apache Shiro < 1.2.3
-    - 身份验证绕过漏洞
+    - Authentication bypass vulnerability
 
 CVE-2020-13933
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache Shiro 1.6.0之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。
+In versions before Apache Shiro 1.6.0, because the matching process between Shiro interceptor and requestURI is different from that of the web framework's interceptor, an attacker can construct a special http request that can bypass Shiro's authentication and access sensitive paths without authorization.
 
 CVE-2020-11989
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache Shiro 1.5.3之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。此漏洞存在两种攻击方式。
+In versions before Apache Shiro 1.5.3, due to the difference between the matching process between Shiro interceptor and requestURI and the matching process of web framework's interceptor, an attacker can construct a special http request to bypass Shiro's authentication and gain unauthorized access to sensitive paths. There are two attack methods for this vulnerability.
 
 CVE-2020-1957
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache Shiro 1.5.2之前的版本，由于Shiro拦截器与requestURI的匹配流程与Web框架的拦截器的匹配流程有差异，攻击者构造一个特殊的http请求，可以绕过Shiro的认证，未授权访问敏感路径。
+In versions prior to Apache Shiro 1.5.2, due to the difference between the matching process between the Shiro interceptor and the requestURI and the matching process of the web framework's interceptor, an attacker can construct a special http request that can bypass Shiro's authentication and access sensitive paths without authorization.
 
 CVE-2019-12422
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache Shiro 1.4.2之前的版本默认使用 ``AES/CBC/PKCS5Padding`` 模式加密,开启RememberMe功能的Shiro组件将允许远程攻击者构造序列化数据，通过Padding Oracle Attack进行爆破，即使在秘钥未知的条件下，也可以在目标服务器上执行任意命令。
+Versions before Apache Shiro 1.4.2 use ``AES/CBC/PKCS5Padding`` mode encryption by default. The Shiro component with the RememberMe function enabled will allow remote attackers to construct serialized data and blast it through Padding Oracle Attack. Even if the secret key is unknown, arbitrary commands can be executed on the target server.
 
 CVE-2016-4437
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache Shiro 1.2.5之前的版本在 ``org.apache.shiro.mgt.AbstractRememberMeManager`` 中存在AES默认秘钥 ``kPH+bIxk5D2deZiIxcaaaA==`` ，开启RememberMe功能的Shiro组件将允许远程攻击者构造序列化数据，在目标服务器上执行任意命令。
+Versions before Apache Shiro 1.2.5 have the AES default key ``kPH+bIxk5D2deZiIxcaaaA==`` in ``org.apache.shiro.mgt.AbstractRememberMeManager``. Shiro components that enable the RememberMe function will allow remote attackers to construct serialized data and execute arbitrary commands on the target server.

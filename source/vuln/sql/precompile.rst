@@ -1,25 +1,25 @@
-预编译
+precompiled
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-SQL注入是因为解释器将传入的数据当成命令执行而导致的，预编译是用于解决这个问题的一种方法。和普通的执行流程不同，预编译将一次查询通过两次交互完成，第一次交互发送查询语句的模板，由后端的SQL引擎进行解析为AST或Opcode，第二次交互发送数据，代入AST或Opcode中执行。因为此时语法解析已经完成，所以不会再出现混淆数据和代码的过程。
+SQL injection is caused by the interpreter executing the incoming data as a command. Precompilation is a method used to solve this problem. Different from the ordinary execution process, pre-compilation completes a query through two interactions. The first interaction sends the template of the query statement, which is parsed into AST or Opcode by the back-end SQL engine. The second interaction sends the data and substitutes it into the AST or Opcode for execution. Because the syntax parsing has been completed at this time, there will no longer be a process of confusing data and code.
 
-模拟预编译
+Simulate precompilation
 ----------------------------------------
-为了防止低版本数据库不支持预编译的情况，模拟预编译会在客户端内部模拟参数绑定的过程，进行自定义的转义。
+In order to prevent low-version databases from not supporting precompilation, simulated precompilation will simulate the parameter binding process within the client and perform customized escaping.
 
-绕过
+bypass
 ----------------------------------------
 
-预编译使用错误
+Precompilation usage error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-预编译只是使用占位符替代的字段值的部分，如果第一次交互传入的命令使用了字符串拼接，使得命令是攻击者可控的，那么预编译不会生效。
+Precompilation only uses placeholders to replace the field values. If the command passed in for the first interaction uses string concatenation, making the command controllable by the attacker, then precompilation will not take effect.
 
-部分参数不可预编译
+Some parameters cannot be precompiled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在有的情况下，数据库处理引擎会检查数据表和数据列是否存在，因此数据表名和列名不能被占位符所替代。这种情况下如果表名和列名可控，则可能引入漏洞。
+In some cases, the database processing engine will check whether the data table and data column exist, so the data table name and column name cannot be replaced by placeholders. In this case, if the table name and column name are controllable, vulnerabilities may be introduced.
 
-预编译实现错误
+Precompilation implementation error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-部分语言引擎在实现上存在一定问题，可能会存在绕过漏洞。
+Some language engines have certain implementation problems and may have bypass vulnerabilities.

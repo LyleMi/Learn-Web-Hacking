@@ -1,106 +1,106 @@
-常见风险
+Common risks
 ========================================
 
-提示词注入
+Prompt word injection
 ----------------------------------------
-提示词注入（Prompt Injection）是指攻击者通过构造输入内容，影响模型对原始指令的理解和执行，使模型忽略系统约束、泄露上下文、调用工具或输出攻击者期望的内容。
+Prompt Injection means that the attacker affects the model's understanding and execution of original instructions by constructing input content, causing the model to ignore system constraints, leak context, call tools, or output content expected by the attacker.
 
-提示词注入可以分为直接注入和间接注入。直接注入来自用户输入，间接注入来自网页、邮件、文档、知识库、代码仓库等外部数据。当模型会读取不可信内容并继续执行任务时，间接注入的风险更高。
+Prompt word injection can be divided into direct injection and indirect injection. Direct injection comes from user input, and indirect injection comes from external data such as web pages, emails, documents, knowledge bases, and code warehouses. The risk of indirect injection is higher when the model reads untrusted content and continues the task.
 
-越狱
+prison Break
 ----------------------------------------
-越狱（Jailbreak）是指绕过模型或应用的安全策略，使模型输出原本不应输出的内容。越狱通常利用角色扮演、编码转换、多轮诱导、规则冲突、上下文覆盖等方式。
+Jailbreak refers to bypassing the security policy of a model or application, causing the model to output content that should not be output. Jailbreaking usually uses role-playing, code conversion, multiple rounds of induction, rule conflicts, context overwriting, etc.
 
-提示词泄露
+Prompt word leaked
 ----------------------------------------
-提示词泄露是指系统提示词、开发者提示词、Few-shot 示例、内部规则、工具描述、链路配置等信息被模型输出给非授权用户。提示词泄露不一定直接造成入侵，但会降低攻击门槛。
+Prompt word leakage means that system prompt words, developer prompt words, few-shot examples, internal rules, tool descriptions, link configurations and other information are output by the model to unauthorized users. The leakage of prompt words may not directly cause intrusion, but it will lower the threshold of attack.
 
-敏感信息泄露
+Sensitive information leaked
 ----------------------------------------
-敏感信息泄露包括训练数据、日志、用户输入、知识库内容、API Key、访问令牌、个人信息、商业秘密等被模型输出或者被下游组件记录、转发、暴露。
+Sensitive information leakage includes training data, logs, user input, knowledge base content, API keys, access tokens, personal information, business secrets, etc. being output by the model or recorded, forwarded, and exposed by downstream components.
 
-不安全输出处理
+Unsafe output handling
 ----------------------------------------
-当模型输出被直接交给浏览器、SQL、Shell、模板引擎、代码执行器、CI/CD、工单系统等下游组件处理时，如果缺少校验和转义，可能造成 XSS、SQL 注入、命令执行、模版注入等传统漏洞。
+When the model output is directly handed over to downstream components such as browsers, SQL, Shell, template engines, code executors, CI/CD, and work order systems for processing, if there is a lack of verification and escaping, traditional vulnerabilities such as XSS, SQL injection, command execution, and template injection may occur.
 
-过度代理
+over-agency
 ----------------------------------------
-过度代理（Excessive Agency）是指模型被赋予了过大的自主决策和执行权限。例如模型可以自动发送邮件、删除数据、创建订单、执行代码、修改权限，而这些操作没有二次确认、权限隔离和审计。
+Excessive Agency means that the model is given too much autonomous decision-making and execution authority. For example, the model can automatically send emails, delete data, create orders, execute code, and modify permissions, but these operations do not require secondary confirmation, permission isolation, and auditing.
 
-模型拒绝服务
+Model Denial of Service
 ----------------------------------------
-模型拒绝服务是指通过超长输入、复杂推理、多轮循环、递归工具调用、大量并发请求等方式消耗 Token、算力、存储、外部 API 配额或费用预算，造成服务不可用或成本异常。
+Model denial of service refers to consuming tokens, computing power, storage, external API quotas or expense budgets through excessively long input, complex reasoning, multiple rounds of loops, recursive tool calls, and a large number of concurrent requests, resulting in service unavailability or abnormal costs.
 
-数据投毒
+Data poisoning
 ----------------------------------------
-数据投毒是指攻击者污染训练数据、微调数据、RAG 知识库、向量索引、反馈数据或评测集，使模型在特定条件下输出错误、偏置、恶意或者攻击者预设的内容。
+Data poisoning refers to an attacker contaminating training data, fine-tuning data, RAG knowledge base, vector index, feedback data or evaluation set, causing the model to output errors, biases, malicious content or content preset by the attacker under certain conditions.
 
-模型窃取
+model stealing
 ----------------------------------------
-模型窃取是指通过接口滥用、批量查询、权重泄露、镜像泄露、调试接口泄露等方式获取模型能力、参数、训练数据特征或商业逻辑。
+Model theft refers to obtaining model capabilities, parameters, training data characteristics or business logic through interface abuse, batch query, weight leakage, image leakage, debugging interface leakage, etc.
 
-模型供应链风险
+Model Supply Chain Risk
 ----------------------------------------
-大模型应用依赖模型权重、数据集、推理框架、插件、提示词模板、评测集、嵌入模型、向量数据库和第三方服务。这些环节一旦被污染或失陷，可能影响最终系统行为。
+Large model applications rely on model weights, data sets, inference frameworks, plug-ins, prompt word templates, evaluation sets, embedding models, vector databases and third-party services. Once these links are contaminated or compromised, they may affect the final system behavior.
 
-攻击面分析
+Attack surface analysis
 ----------------------------------------
 
-输入侧
+Input side
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 用户问题
-- 多轮对话历史
-- 上传文件
-- 网页内容
-- 邮件内容
-- 知识库文档
-- 代码仓库内容
-- OCR / ASR 识别结果
-- 外部 API 返回内容
+- User issues
+- Multiple rounds of conversation history
+- Upload files
+- Web content
+- Email content
+- Knowledge base documentation
+- Code repository content
+- OCR/ASR recognition results
+-External API return content
 
-模型侧
+model side
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 基座模型
-- 微调模型
-- 嵌入模型
-- 重排序模型
-- 内容安全模型
-- 模型推理参数
-- 上下文拼接逻辑
-- 系统提示词
+- base model
+- Fine-tune the model
+- Embed model
+- Reorder model
+- Content security model
+- Model inference parameters
+-Context splicing logic
+- System prompt words
 
-数据侧
+data side
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 训练数据
-- 微调数据
-- 评测数据
-- RAG 知识库
-- 向量索引
-- 用户会话
-- 运行日志
-- 反馈数据
-- 缓存数据
+- training data
+- Fine-tune data
+- Evaluation data
+- RAG Knowledge Base
+- vector index
+- User session
+- Operation log
+- Feedback data
+- cache data
 
-工具侧
+tool side
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Function Calling
-- 插件
-- 浏览器
-- 代码解释器
+- Plugins
+- Browser
+- Code interpreter
 - Shell
-- 数据库
-- 文件系统
-- 邮件系统
-- 工单系统
-- 云 API
+- database
+- file system
+- Mail system
+- Work order system
+- Cloud API
 
-编排侧
+Arrangement side
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Agent 规划器
-- 多 Agent 协作
-- 工作流引擎
-- 任务队列
-- 记忆模块
-- 权限代理
-- 输出解析器
-- 异常重试逻辑
+- Agent Planner
+-Multi-Agent collaboration
+- Workflow engine
+- Task queue
+- Memory module
+- Authorization agent
+- output parser
+- Exception retry logic

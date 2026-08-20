@@ -1,109 +1,109 @@
-红蓝对抗
+Red and blue confrontation
 ========================================
 
-概念
+concept
 ----------------------------------------
-红蓝对抗的概念最早来源于20世纪60年代的美国演习，演习是专指军队进行大规模的实兵演习，演习中通常分为红军、蓝军，其中蓝军通常是指在部队模拟对抗演习专门扮演假想敌的部队，与红军(代表我方正面部队)进行针对性的训练，这种方式也被称作Red Teaming。
+The concept of red-blue confrontation first originated from American exercises in the 1960s. Exercises refer specifically to large-scale real-force exercises conducted by the military. Exercises are usually divided into Red Army and Blue Army. The Blue Army usually refers to the troops that play the role of imaginary enemies in simulated confrontation exercises and conduct targeted training with the Red Army (representing our frontal forces). This method is also called Red Teaming.
 
-网络安全红蓝对抗的概念就源自于此。红军作为企业防守方，通过安全加固、攻击监测、应急处置等手段来保障企业安全。而蓝军作为攻击方，以发现安全漏洞，获取业务权限或数据为目标，利用各种攻击手段，试图绕过红军层层防护，达成既定目标。可能会造成混淆的是，在欧美一般采用红队代表攻击方，蓝队代表防守方，颜色代表正好相反。
+The concept of red-blue confrontation in network security originated from this. As the corporate defender, the Red Army ensures corporate security through security reinforcement, attack monitoring, emergency response and other means. As the attacker, the blue army aims to discover security vulnerabilities and obtain business permissions or data. It uses various attack methods to try to bypass the layers of protection of the red army and achieve the set goals. What may cause confusion is that in Europe and the United States, the red team represents the attacking side and the blue team represents the defending side. The colors represent the opposite.
 
-网络攻防演习
+Network attack and defense drills
 ----------------------------------------
-比较有影响力的演习有“锁盾”(Locked Shields)、“网络风暴”等。其中“锁盾”由北约卓越网络防御合作中心(CCDCOE，Cooperative Cyber Defence Centre of Excellence)每年举办一次。“网络风暴”由美国国土安全部(DHS)主导，2006年开始，每两年举行一次。
+Some of the more influential exercises include "Locked Shields" and "Cyber ​​Storm". Among them, "Lock Shield" is held annually by the NATO Cooperative Cyber ​​Defense Center of Excellence (CCDCOE). "Cyberstorm" is led by the U.S. Department of Homeland Security (DHS). It began in 2006 and is held every two years.
 
-和APT攻击相比，攻防演习相对时长较短，只有1~4周，有个防守目标。而APT攻击目标唯一，时长可达数月至数年，更有隐蔽性。
+Compared with APT attacks, offensive and defensive exercises are relatively short, only 1 to 4 weeks, and have a defensive goal. APT attacks have a unique target, can last from months to years, and are more covert.
 
-侧重
+Focus on
 ----------------------------------------
-企业网络蓝军工作内容主要包括渗透测试和红蓝对抗，这两种方式所使用的技术基本相同，但是侧重点不同。
+The work content of the enterprise network blue team mainly includes penetration testing and red-blue confrontation. The technologies used in these two methods are basically the same, but the focus is different.
 
-渗透测试侧重用较短的时间去挖掘更多的安全漏洞，一般不太关注攻击行为是否被监测发现，目的是帮助业务系统暴露和收敛更多风险。
+Penetration testing focuses on discovering more security vulnerabilities in a shorter period of time, and generally does not pay much attention to whether attack behaviors are detected and discovered. The purpose is to help business systems expose and contain more risks.
 
-红蓝对抗更接近真实场景，偏向于实战，面对的场景复杂、技术繁多。侧重绕过防御体系，毫无声息达成获取业务权限或数据的目标。不求发现全部风险点，因为攻击动作越多被发现的概率越大，一旦被发现，红军就会把蓝军踢出战场。红蓝对抗的目的是检验在真实攻击中纵深防御能力、告警运营质量、应急处置能力。
+Red-blue confrontation is closer to real scenes and is biased towards actual combat. It faces complex scenes and various technologies. Focus on bypassing the defense system and achieving the goal of obtaining business permissions or data without any noise. It is not necessary to discover all risk points, because the more attacks there are, the greater the probability of being discovered. Once discovered, the Red Army will kick the Blue Army off the battlefield. The purpose of the red-blue confrontation is to test the defense-in-depth capabilities, alarm operation quality, and emergency response capabilities in real attacks.
 
-目标
+Target
 ----------------------------------------
-- 评估现有防御能力的有效性、识别防御体系的弱点并提出具体的应对方案
-- 利用真实有效的模拟攻击来评估因为安全问题所造成的潜在的业务影响，为安全管理提供有效的数据来量化安全投入的ROI
-- 提高公司安全成熟度及其检测和响应攻击的能力
+- Assess the effectiveness of existing defense capabilities, identify weaknesses in the defense system and propose specific countermeasures
+- Use real and effective simulated attacks to evaluate the potential business impact caused by security issues, and provide effective data for security management to quantify the ROI of security investment.
+- Improve a company's security maturity and its ability to detect and respond to attacks
 
-前期准备
+Preliminary preparation
 ----------------------------------------
-- 组织结构图
-- 全网拓扑图
-- 各系统逻辑结构图
-- 各系统之间的调用关系
-- 数据流关系
-- 资产梳理
-    - 核心资产清单
-    - 业务系统资产
-    - 设备资产
-    - 外包/第三方服务资产
-    - 历史遗留资产
-- 业务资产信息
-    - 业务系统名称
-    - 业务系统类型
-    - 服务器类型
-    - 域名/IP地址
-    - 服务端口
-    - 版本
-    - 系统部署位置
-    - 开发框架
-    - 中间件
-    - 数据库
-    - 责任人
-    - 维护人员
-- 设备资产信息
-    - 设备名称
-    - 设备版本号
-    - 固件版本号
-    - IP地址
-    - 部署位置
-    - 责任人
-    - 维护人员
-- 外包/第三方服务资产信息
-    - 厂商联系方式
-    - 系统名称
-    - 系统类型
-    - IP/URL地址
-    - 部署位置
-    - 责任人
-    - 维护人员
-    - 厂商联系方式
-    - 第三方值班人员
-- 风险梳理
-    - 基础设施风险
-    - 帐号权限梳理
-    - 互联网风险排查
-    - 收敛攻击面
-- 应急响应计划
-- 业务连续性计划
-- 灾难恢复计划
+-Organizational chart
+- Whole network topology map
+- Logical structure diagram of each system
+- Calling relationships between systems
+- Data flow relationships
+- Asset sorting
+    - Core asset list
+    - Business system assets
+    - Equipment assets
+    - Outsourcing/third-party service assets
+    - Historical legacy assets
+- Business asset information
+    - Business system name
+    - Business system type
+    - Server type
+    - Domain name/IP address
+    - Service port
+    - Version
+    - System deployment location
+    - Development framework
+    - middleware
+    - database
+    - Responsible person
+    - Maintenance staff
+- Equipment asset information
+    -Device name
+    - Device version number
+    - Firmware version number
+    - IP address
+    - Deployment location
+    - Responsible person
+    - Maintenance staff
+- Outsourcing/third-party service asset information
+    - Manufacturer contact information
+    - System name
+    - System type
+    - IP/URL address
+    - Deployment location
+    - Responsible person
+    - Maintenance staff
+    - Manufacturer contact information
+    - Third party duty personnel
+- Risk sorting
+    - Infrastructure risks
+    - Account permission sorting
+    - Internet risk investigation
+    - Convergence of attack surface
+- Emergency response plan
+- Business continuity plan
+- Disaster recovery plan
 
-行动流程
+Action process
 ----------------------------------------
-- 攻击准备
-    - 明确授权范围、测试目标、限制条件等
-    - 报备与授权流程
-    - 行动成本与预算
-- 攻击执行
-    - 备案的时间区间内
-    - 备案的目标范围内
-    - 备案的攻击IP与网络环境
-- 攻击完成
-    - 恢复所有修改
-    - 移除所有持久化控制
-    - 提交攻击报告与改进建议
+- Preparation for attack
+    - Clarify the scope of authorization, test objectives, restrictions, etc.
+    -Reporting and authorization process
+    - Action costs and budgets
+- Attack execution
+    - Within the filing time range
+    - Within the target range of registration
+    - The registered attack IP and network environment
+- attack completed
+    - Revert all changes
+    - Remove all persistence controls
+    - Submit attack reports and improvement suggestions
 
-注意事项
+Things to note
 ----------------------------------------
-- 测试前进行报备
-- 有可能会影响到业务的操作时候提前沟通
-- 漏洞和业务沟通确认后再发工单修复
-- 漏洞闭环
+- Report before testing
+- Communicate in advance if it may affect business operations
+- Vulnerabilities and business communication will be confirmed before issuing work orders for repair.
+- Vulnerability closed loop
 
-参考链接
+Reference link
 ----------------------------------------
-- `以攻促防 企业蓝军建设思考 <https://mp.weixin.qq.com/s/8iJs2ON66NY1Jdbt7c-BTA>`_
-- `云上攻防：Red Teaming for Cloud <http://avfisher.win/archives/1175>`_
-- `网络攻防演练之企业蓝队建设指南 <https://www.freebuf.com/articles/neopoints/252229.html>`_
+- `Use offense to promote defense, thoughts on building a blue army in enterprises <https://mp.weixin.qq.com/s/8iJs2ON66NY1Jdbt7c-BTA>`_
+- `Offense and defense on the cloud: Red Teaming for Cloud <http://avfisher.win/archives/1175>`_
+- `Guidelines for building an enterprise blue team for network attack and defense drills <https://www.freebuf.com/articles/neopoints/252229.html>`_

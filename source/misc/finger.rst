@@ -1,38 +1,38 @@
-指纹
+fingerprint
 ========================================
 
-浏览器指纹
+browser fingerprint
 ----------------------------------------
-- 软件细节
+- Software details
     - navigator
-    - 安装插件
-    - 浏览器支持的特性
-    - CSS支持
-    - JavaScript特性
-    - 已安装字体
+    - Install plugins
+    - Features supported by the browser
+    - CSS support
+    - JavaScript features
+    - Installed fonts
     - ...
-- WebGL信息
-    - GL版本
-    - 纹理大小
-    - 渲染缓冲区
-    - WebGL扩展
+- WebGL information
+    - GL version
+    - Texture size
+    - Render buffer
+    - WebGL extension
     - ...
-- 硬件信息
-    - 电池API
-    - 传感器API
-    - WebRTC获取流媒体设备
-    - 系统性能
+- Hardware information
+    - Battery API
+    - Sensor API
+    - WebRTC gets streaming device
+    - System performance
     - ...
-- 持久化存储
+- Persistent storage
     - cookie
     - localStorage
     - indexedDB
     - sessionStorage
-- 系统设置
-    - 时钟偏移
-- 主动探测
-    - 构造特定DNS请求并发送
+- System settings
+    - Clock offset
+- Active detection
+    - Construct a specific DNS request and send it
 
-参考链接
+Reference link
 ----------------------------------------
-- `设备指纹指南 <https://mp.weixin.qq.com/s/ClG5cgv9Cu7zoyPcWOoU4A>`_
+- `Device Fingerprint Guide <https://mp.weixin.qq.com/s/ClG5cgv9Cu7zoyPcWOoU4A>`_

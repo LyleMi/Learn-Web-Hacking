@@ -1,4 +1,4 @@
-参考链接
+Reference link
 ========================================
 
 - `OWASP Top 10 for LLM Applications <https://owasp.org/www-project-top-10-for-large-language-model-applications/>`_

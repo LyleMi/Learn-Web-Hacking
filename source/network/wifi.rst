@@ -1,30 +1,30 @@
 Wi-Fi
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-Wi-Fi又称“无线热点”或“无线网络”，是Wi-Fi联盟的商标，一个基于IEEE 802.11标准的无线局域网技术。
+Wi-Fi, also known as "wireless hotspot" or "wireless network", is a trademark of the Wi-Fi Alliance, a wireless LAN technology based on the IEEE 802.11 standard.
 
-攻击
+attack
 ----------------------------------------
 
-暴力破解
+Brute force cracking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-WiFi密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。
+WiFi passwords are based on preset secret keys, and password blasting attempts can be quickly performed locally and in batches by capturing messages.
 
-伪造热点
+fake hotspot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-AP可以动态的广播自己，客户也可以主动发送探针请求。可以伪造AP发送对探针请求的响应包，来让客户端错误的识别。
+APs can dynamically broadcast themselves, and clients can also proactively send probe requests. The AP can be forged to send a response packet to the probe request to allow the client to misidentify it.
 
-秘钥重装攻击
+Key reinstallation attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-该漏洞由Vanhoef发现。Wi-Fi在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。
+The vulnerability was discovered by Vanhoef. Wi-Fi will update the secret key during the handshake. This attack replays the handshake information to cause the client to reinstall the same secret key.
 
 Dragonblood
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-最新版的WPA3标准在实现上存在一些问题，同样由Vanhoef发现。包含拒绝服务攻击、降级攻击、侧信道泄露等。
+The latest version of the WPA3 standard has some implementation problems, which were also discovered by Vanhoef. Including denial of service attacks, downgrade attacks, side channel leaks, etc.
 
-参考链接
+Reference link
 ----------------------------------------
 - `Wi-Fi Alliance <https://www.wi-fi.org/>`_
 - `Dragonblood <https://papers.mathyvanhoef.com/dragonblood.pdf>`_ : Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd

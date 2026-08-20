@@ -1,4 +1,4 @@
-社会工程学
+social engineering
 ========================================
 
 OSINT
@@ -10,12 +10,12 @@ OSINT
 - `Photon <https://github.com/s0md3v/Photon>`_
 - `pockint <https://github.com/netevert/pockint>`_
 
-社交工具
+social tools
 ----------------------------------------
 - `SlackPirate <https://github.com/emtunc/SlackPirate>`_ Slack Enumeration and Extraction Tool - extract sensitive information from a Slack Workspace
 - `twint <https://github.com/twintproject/twint>`_ An advanced Twitter scraping & OSINT tool
 
-个人搜索
+personal search
 ----------------------------------------
 - `pipl <https://pipl.com/>`_
 - `hunter <https://hunter.io>`_
@@ -32,7 +32,7 @@ Hacking database
 - `GHDB <https://www.exploit-db.com/google-hacking-database/>`_
 - `have i been pwned <https://github.com/kernelmachine/haveibeenpwned>`_
 
-钓鱼
+fishing
 ----------------------------------------
 - `spoofcheck <https://github.com/BishopFox/spoofcheck>`_
 - `gophish <https://github.com/gophish/gophish>`_
@@ -43,28 +43,28 @@ Hacking database
 - `espoofer <https://github.com/chenjj/espoofer>`_ An email spoofing testing tool that aims to bypass SPF/DKIM/DMARC and forge DKIM signatures
 - `ditto <https://github.com/evilsocket/ditto>`_ A tool for IDN homograph attacks and detection
 - `SiteCopy <https://github.com/Threezh1/SiteCopy>`_ sitecopy is a tool that facilitates personal website backup and network data collection 
-- `goblin <https://github.com/xiecat/goblin>`_ 一款适用于红蓝对抗中的仿真钓鱼系统
+- `goblin <https://github.com/xiecat/goblin>`_ A simulated fishing system suitable for red and blue confrontations
 
 squatting
 ----------------------------------------
 - `dnstwist <https://github.com/elceef/dnstwist>`_ Domain name permutation engine for detecting homograph phishing attacks, typo squatting, and brand impersonation
 
-网盘搜索
+Netdisk search
 ----------------------------------------
-- `虫部落 <http://magnet.chongbuluo.com/>`_
-- `盘多多 <http://www.panduoduo.net/>`_
+- `Insect Tribe <http://magnet.chongbuluo.com/>`_
+- `Panduoduo <http://www.panduoduo.net/>`_
 - `Infinite Panc <https://www.panc.cc>`_
 
-密码猜测
+Password guessing
 ----------------------------------------
 - `OMEN <https://github.com/RUB-SysSec/OMEN>`_ Ordered Markov ENumerator - Password Guesser
 - `genpAss <https://github.com/RicterZ/genpAss>`_
 
-伪造
+forgery
 ----------------------------------------
-- `email_hack <https://github.com/Macr0phag3/email_hack>`_ 基于 Python 伪造电子邮件发件人
+- `email_hack <https://github.com/Macr0phag3/email_hack>`_ fake email sender based on Python
 
-综合框架
+comprehensive framework
 ----------------------------------------
 - `theHarvester <https://github.com/laramies/theHarvester>`_
 - `Th3inspector <https://github.com/Moham3dRiahi/Th3inspector>`_

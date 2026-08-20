@@ -1,11 +1,11 @@
-哈希
+Hash
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-Hash 一般译作散列，又称杂凑，或音译为哈希，是一种把数据映射为特定长度输出值的方法。
+Hash is generally translated as hash, also known as hash, or transliterated as hash. It is a method of mapping data into an output value of a specific length.
 
-常见的哈希函数有：
+Common hash functions are:
 
 - CRC32
 - MD4 / MD5
@@ -15,41 +15,41 @@ Hash 一般译作散列，又称杂凑，或音译为哈希，是一种把数据
 - CityHash
 - xxHash
 
-特点
+Features
 ----------------------------------------
-- 一致性，同一个数据通过同种哈希算法计算出的值是一样的
-- 雪崩效应，原始数据小的修改也会导致哈希结果的巨大变化
-- 单向，只能从原始数据计算哈希，而不可以反向计算
-- 避免冲突，很难找到两个不同的数据可以计算出相同的哈希
+- Consistency, the same data has the same value calculated by the same hash algorithm
+- Avalanche effect, small modifications to the original data can lead to huge changes in the hash results
+- One-way, the hash can only be calculated from the original data, not in reverse
+- Avoid collisions, it is difficult to find two different data that can calculate the same hash
 
-完美哈希
+perfect hash
 ----------------------------------------
-完美哈希 (Perfect Hashing) 是指在哈希计算过程中，不会出现冲突，也就是说哈希函数是一个完全单射函数。
+Perfect Hashing means that there will be no conflicts during the hash calculation process, which means that the hash function is a completely injective function.
 
-完美哈希实际是静态的，要求实现知道需要哈希哪些数据，并使用较长时间来建立索引，也无法实时更新。
+Perfect hashing is actually static, requires the implementation to know what data needs to be hashed, takes a long time to build the index, and cannot be updated in real time.
 
-目前已有的完美哈希函数有 FCH、CHD、PTHash 等。
+The existing perfect hash functions include FCH, CHD, PTHash, etc.
 
-安全风险
+security risk
 ----------------------------------------
 
 Hash-Flooding Attack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Hash-Flooding Attack 是面向Web后端处理语言的一种攻击方式，通过构造特定的表单值频繁触发哈希碰撞，使得原本的Hash Map 获得指数级的性能下降。
-这是因为哈希表在不产生碰撞时的查询/插入的时间复杂度近似为 O(1) ，但是大量碰撞时，时间复杂度则为 O(n) ，而插入n个哈希相同的元素，时间复杂度则对应为 O(n^2) 。
+Hash-Flooding Attack is an attack method for Web back-end processing languages. It frequently triggers hash collisions by constructing specific form values, causing exponential performance degradation of the original Hash Map.
+This is because the time complexity of query/insertion in the hash table when no collisions occur is approximately O(1), but when there are a large number of collisions, the time complexity is O(n). When inserting n elements with the same hash, the time complexity corresponds to O(n^2).
 
-早在2003年usenix的一篇名为 Denial of Service via Algorithmic Complexity Attacks 的论文中提出了这种攻击的方式，但是仍有大量的编程语言并没有对这种攻击方式进行防护，或较晚的版本才加入了对应的防护机制。
+This attack method was proposed as early as 2003 in a usenix paper called Denial of Service via Algorithmic Complexity Attacks. However, there are still a large number of programming languages ​​that do not protect against this attack method, or only later versions have added corresponding protection mechanisms.
 
-围绕着这种攻击方式，研究员设计了SipHash、MurmurHash、CityHash等新的哈希函数，核心思路是为哈希算法加入了一个密钥，使得攻击者无法构造哈希冲突的函数。
-Python、Rust、Ruby等等语言在后期实现中也将SipHash做为默认的哈希算法。
+Around this attack method, researchers have designed new hash functions such as SipHash, MurmurHash, and CityHash. The core idea is to add a key to the hash algorithm so that the attacker cannot construct a hash conflict function.
+Python, Rust, Ruby and other languages ​​also use SipHash as the default hash algorithm in later implementations.
 
-参考链接
+Reference link
 ----------------------------------------
 - `Denial of Service via Algorithmic Complexity Attacks <https://www.usenix.org/conference/12th-usenix-security-symposium/denial-service-algorithmic-complexity-attacks>`_
 - `Application vulnerability due to Non Random Hash Functions <https://stackoverflow.com/questions/8669946/application-vulnerability-due-to-non-random-hash-functions>`_
 - `SipHash <https://github.com/veorq/SipHash>`_ High-speed secure pseudorandom function for short messages
 
-完美哈希函数
+perfect hash function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - FCH `A Faster Algorithm for Constructing Minimal Perfect Hash Functions <http://cmph.sourceforge.net/papers/fch92.pdf>`_
 - CHD `Hash, displace, and compress <http://cmph.sourceforge.net/papers/esa09.pdf>`_

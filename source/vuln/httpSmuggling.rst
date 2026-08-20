@@ -1,26 +1,26 @@
-HTTP 请求走私
+HTTP request smuggling
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-HTTP请求走私是一种干扰网站处理HTTP请求序列方式的技术，最早在 2005 年的一篇 `文章 <https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf>`_ 中被提出。
+HTTP request smuggling is a technique that interferes with the way a website handles the sequence of HTTP requests. It was first proposed in a 2005 article <https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf>`_.
 
-成因
+Cause
 ----------------------------------------
-请求走私大多发生于前端服务器和后端服务器对客户端传入的数据理解不一致的情况。这是因为HTTP规范提供了两种不同的方法来指定请求的结束位置，即 ``Content-Length`` 和 ``Transfer-Encoding`` 标头。
+Request smuggling mostly occurs when the front-end server and the back-end server have inconsistent understanding of the data passed in by the client. This is because the HTTP specification provides two different ways to specify where a request ends, the ``Content-Length`` and ``Transfer-Encoding`` headers.
 
-分类
+Classification
 ----------------------------------------
-- CLTE：前端服务器使用 ``Content-Length`` 头，后端服务器使用 ``Transfer-Encoding`` 头
-- TECL：前端服务器使用 ``Transfer-Encoding`` 标头，后端服务器使用 ``Content-Length`` 标头。
-- TETE：前端和后端服务器都支持 ``Transfer-Encoding`` 标头，但是可以通过以某种方式来诱导其中一个服务器不处理它。
+- CLTE: The front-end server uses the ``Content-Length`` header, and the back-end server uses the ``Transfer-Encoding`` header
+- TECL: Front-end servers use the ``Transfer-Encoding`` header, and back-end servers use the ``Content-Length`` header.
+- TETE: Both front-end and back-end servers support the ``Transfer-Encoding`` header, but one of the servers can be induced not to handle it in some way.
 
-攻击
+attack
 ----------------------------------------
 
-CL不为0的GET请求
+GET request with CL not equal to 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-当前端服务器允许GET请求携带请求体，而后端服务器不允许GET请求携带请求体，它会直接忽略掉GET请求中的 ``Content-Length`` 头，不进行处理。例如下面这个例子：
+The current-end server allows GET requests to carry the request body, but the back-end server does not allow GET requests to carry the request body. It will directly ignore the ``Content-Length`` header in the GET request without processing it. For example, the following example:
 
 ::
 
@@ -32,11 +32,11 @@ CL不为0的GET请求
     Host: example.com\r\n
     \r\n
 
-前端服务器处理了 ``Content-Length`` ，而后端服务器没有处理 ``Content-Length`` ，基于pipeline机制认为这是两个独立的请求，就造成了漏洞的发生。
+The front-end server processed ``Content-Length``, but the back-end server did not process ``Content-Length``. Based on the pipeline mechanism, it believed that these were two independent requests, which caused the vulnerability.
 
 CL-CL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-根据RFC 7230，当服务器收到的请求中包含两个 ``Content-Length`` ，而且两者的值不同时，需要返回400错误，但是有的服务器并没有严格实现这个规范。这种情况下，当前后端各取不同的 ``Content-Length`` 值时，就会出现漏洞。例如：
+According to RFC 7230, when the request received by the server contains two ``Content-Length`` and the two values ​​​​are different, a 400 error needs to be returned, but some servers do not strictly implement this specification. In this case, the vulnerability will occur when the front-end and backend each take different ``Content-Length`` values. For example:
 
 ::
 
@@ -48,11 +48,11 @@ CL-CL
     12345\r\n
     a
 
-这个例子中a就会被带入下一个请求，变为 ``aGET / HTTP/1.1\r\n`` 。
+In this example, a will be carried into the next request and become ``aGET / HTTP/1.1\r\n``.
 
 CL-TE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CL-TE指前端服务器处理 ``Content-Length`` 这一请求头，而后端服务器遵守RFC2616的规定，忽略掉 ``Content-Length`` ，处理 ``Transfer-Encoding`` 。例如：
+CL-TE means that the front-end server processes the request header ``Content-Length``, while the back-end server complies with the provisions of RFC2616, ignores ``Content-Length``, and processes ``Transfer-Encoding``. For example:
 
 ::
 
@@ -67,11 +67,11 @@ CL-TE指前端服务器处理 ``Content-Length`` 这一请求头，而后端服�
     \r\n
     a
 
-这个例子中a同样会被带入下一个请求，变为 ``aGET / HTTP/1.1\r\n`` 。
+In this example, a will also be carried into the next request and become ``aGET / HTTP/1.1\r\n``.
 
 TE-CL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TE-CL指前端服务器处理 ``Transfer-Encoding`` 请求头，而后端服务器处理 ``Content-Length`` 请求头。例如：
+TE-CL means that the front-end server processes the ``Transfer-Encoding`` request header, and the back-end server processes the ``Content-Length`` request header. For example:
 
 ::
 
@@ -89,7 +89,7 @@ TE-CL指前端服务器处理 ``Transfer-Encoding`` 请求头，而后端服务�
 
 TE-TE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TE-TE指前后端服务器都处理 ``Transfer-Encoding`` 请求头，但是在容错性上表现不同，例如有的服务器可能会处理 ``Transfer-encoding`` ，测试例如：
+TE-TE means that both front-end and back-end servers process the ``Transfer-Encoding`` request header, but their fault tolerance performance is different. For example, some servers may process ``Transfer-encoding``. For example, the test:
 
 ::
 
@@ -109,13 +109,13 @@ TE-TE指前后端服务器都处理 ``Transfer-Encoding`` 请求头，但是在�
     0\r\n
     \r\n
 
-防御
+defense
 ----------------------------------------
-- 禁用后端连接重用
-- 确保连接中的所有服务器具有相同的配置
-- 拒绝有二义性的请求
+- Disable backend connection reuse
+- Make sure all servers in the connection have the same configuration
+- Reject ambiguous requests
 
-参考链接
+Reference link
 ----------------------------------------
 
 RFC
@@ -127,6 +127,6 @@ Blog / Whitepaper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `HTTP Request Smuggling by chaiml <https://www.cgisecurity.com/lib/HTTP-Request-Smuggling.pdf>`_
 - `HTTP request smuggling by portswigger <https://portswigger.net/web-security/request-smuggling>`_
-- `从一道题到协议层攻击之HTTP请求走私  <https://xz.aliyun.com/t/6654>`_
+- `HTTP request smuggling from a question to protocol layer attack <https://xz.aliyun.com/t/6654>`_
 - `HTTP Request Smuggling in 2020 <http://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges.pdf>`_
 - `h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext (h2c) <https://labs.bishopfox.com/tech-blog/h2c-smuggling-request-smuggling-via-http/2-cleartext-h2c>`_

@@ -1,11 +1,11 @@
 Disable Functions
 ================================
 
-机制实现
+Mechanism implementation
 ---------------------------------
-PHP中Disable Function的实现是在php-src/Zend/Zend-API.c中。PHP在启动时，读取配置文件中禁止的函数，逐一根据禁止的函数名调用 ``zend_disable_function`` 来实现禁止的效果。
+The implementation of Disable Function in PHP is in php-src/Zend/Zend-API.c. When PHP starts, it reads the prohibited functions in the configuration file and calls ``zend_disable_function`` according to the prohibited function names one by one to achieve the effect of prohibition.
 
-这个函数根据函数名在内置函数列表中找到对应的位置并修改掉，当前版本的代码如下：
+This function finds the corresponding position in the built-in function list based on the function name and modifies it. The current version of the code is as follows:
 
 .. code-block:: cpp
 
@@ -23,7 +23,7 @@ PHP中Disable Function的实现是在php-src/Zend/Zend-API.c中。PHP在启动�
         return FAILURE;
     }
 
-和函数的实现方式类似，disable classes也是这样实现的
+Similar to how functions are implemented, disable classes are also implemented in this way
 
 .. code-block:: cpp
 
@@ -45,14 +45,14 @@ PHP中Disable Function的实现是在php-src/Zend/Zend-API.c中。PHP在启动�
         return SUCCESS;
     }
 
-因为这个实现机制的原因，在PHP启动后通过 ``ini_set`` 来修改 ``disable_functions`` 或 ``disable_classes`` 是无效的。
+Because of this implementation mechanism, it is invalid to modify ``disable_functions`` or ``disable_classes`` through ``ini_set`` after PHP is started.
 
 Bypass
 ---------------------------------
-- LD_PRELOAD绕过
+- LD_PRELOAD bypass
     - https://github.com/yangyangwithgnu/bypass_disablefunc_via_LD_PRELOAD
     - ``mail()`` + ``putenv``
 - PHP OPcache
-- Mail函数
+-Mail function
 - imap_open
     - https://www.cvedetails.com/cve/cve-2018-19518

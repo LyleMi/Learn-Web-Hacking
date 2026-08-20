@@ -1,119 +1,119 @@
-安全防御
+Security defense
 ========================================
 
-安全设计
+Safe design
 ----------------------------------------
 
-边界划分
+border demarcation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-大模型应用需要明确系统指令、用户输入、外部数据、模型输出和工具结果的边界。不可信内容只能作为数据处理，不能被当作指令直接执行。
+Large model applications require clear boundaries between system instructions, user input, external data, model output, and tool results. Untrusted content can only be processed as data and cannot be directly executed as instructions.
 
-最小权限
+least privilege
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-模型和 Agent 调用工具时应遵循最小权限原则。不同业务场景应使用不同凭证、不同权限范围和不同网络访问策略，避免一个模型会话拥有过大的操作能力。
+Models and agents should follow the principle of least privilege when calling tools. Different business scenarios should use different credentials, different authority scopes, and different network access policies to prevent one model session from having excessive operating capabilities.
 
-显式授权
+Explicit authorization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-对高风险操作应增加人工确认或二次授权，例如转账、删除、发送邮件、修改权限、执行代码、访问敏感数据等。确认内容应包含操作对象、影响范围和关键参数。
+Manual confirmation or secondary authorization should be added for high-risk operations, such as transfers, deletions, sending emails, modifying permissions, executing code, accessing sensitive data, etc. The confirmation content should include the operation object, scope of influence and key parameters.
 
-输入分级
+Enter rating
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-将输入来源按可信度分级处理。用户直接输入、企业内部文档、互联网网页、邮件附件、第三方 API 返回值等应采用不同的清洗、隔离和审计策略。
+Classify input sources according to their credibility. Different cleaning, isolation and auditing strategies should be adopted for direct user input, internal corporate documents, Internet web pages, email attachments, third-party API return values, etc.
 
-输出隔离
+Output isolation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-模型输出不应直接进入危险解释器。对 HTML、Markdown、SQL、Shell、Python、模板、JSON、YAML 等输出，应按下游语义进行校验、转义或沙箱执行。
+Model output should not go directly into the hazard interpreter. Output such as HTML, Markdown, SQL, Shell, Python, templates, JSON, YAML, etc. should be verified, escaped or sandboxed according to downstream semantics.
 
-记忆控制
+memory control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-长期记忆和会话记忆需要限制写入来源、写入内容和读取范围。来自不可信内容的指令不应进入长期记忆，敏感信息不应被长期保存。
+Long-term memory and session memory require restrictions on where writes come from, what is written, and what is read. Instructions from untrusted content should not enter long-term memory, and sensitive information should not be retained for long periods of time.
 
-可观测性
+Observability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-应记录模型请求、检索结果、工具调用、权限决策、拦截原因和用户确认结果。日志中需要脱敏，避免把 Token、密钥、个人信息和业务敏感数据写入日志。
+Model requests, retrieval results, tool calls, permission decisions, blocking reasons, and user confirmation results should be logged. Logs need to be desensitized to avoid writing tokens, keys, personal information and business sensitive data into logs.
 
-防御策略
+defense strategy
 ----------------------------------------
 
-提示词防护
+Prompt word protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 系统提示词中明确区分指令和数据
-- 对外部内容使用引用块、标签或结构化字段包裹
-- 降低提示词中敏感规则和密钥的暴露
-- 避免把安全策略只放在提示词中实现
-- 对高风险任务使用独立的安全判定逻辑
+- Clear distinction between instructions and data in the system prompt words
+- Use quote blocks, tags or structured field wrapping for external content
+- Reduce the exposure of sensitive rules and keys in prompt words
+- Avoid implementing security policies only in prompt words
+- Use independent safety decision logic for high-risk tasks
 
-输入校验
+Input validation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 限制输入长度、文件类型和文件大小
-- 对上传文件进行解析沙箱隔离
-- 对 URL、邮箱、域名、IP 等字段进行格式校验
-- 对来自互联网的内容增加来源标识
-- 对可疑内容进行安全分类和降权处理
+- Limit input length, file type and file size
+- Parse sandbox isolation of uploaded files
+- Perform format verification on URL, email, domain name, IP and other fields
+- Add source identification to content from the Internet
+- Security classification and de-righting of suspicious content
 
-输出校验
+Output verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 使用结构化输出 Schema
-- 对工具参数进行白名单校验
-- 对 HTML / Markdown 进行安全渲染
-- 对代码和命令输出进行人工确认或沙箱执行
-- 对敏感信息进行检测和脱敏
+- Use structured output Schema
+- Whitelist verification of tool parameters
+- Safe rendering of HTML/Markdown
+- Manual validation or sandbox execution of code and command output
+- Detect and desensitize sensitive information
 
-工具安全
+Tool safety
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 为工具定义明确的权限边界
-- 将只读工具和写操作工具分离
-- 对高危工具启用人工确认
-- 限制工具可访问的网络、文件和账号范围
-- 对工具调用进行审计和限速
-- 对工具返回值标记为不可信数据
+- Define clear permission boundaries for tools
+- Separate read-only tools and write operation tools
+- Enable manual confirmation for high-risk tools
+- Limit the networks, files and accounts the tool can access
+- Audit and rate limit tool calls
+- Mark tool return values ​​as untrusted data
 
-RAG 安全
+RAG security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 控制知识库写入权限
-- 对文档来源进行校验和签名
-- 对入库内容进行安全扫描
-- 检索结果附带来源和时间信息
-- 限制单个文档对最终答案的影响
-- 对隐藏指令、不可见字符、混淆内容进行处理
-- 定期重建索引并清理过期数据
+- Control knowledge base writing permissions
+- Checksum signature of document source
+- Conduct security scans on incoming content
+- Search results come with source and time information
+- Limit the influence of a single document on the final answer
+- Process hidden instructions, invisible characters, and obfuscated content
+- Regularly rebuild indexes and clean up expired data
 
-Agent 安全
+Agent security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 限制最大执行步数
-- 限制最大工具调用次数
-- 限制单次任务预算
-- 对外部动作进行人工确认
-- 使用任务级临时凭证
-- 禁止模型自行扩大权限
-- 对计划和执行结果进行审计
+- Limit the maximum number of execution steps
+- Limit the maximum number of tool calls
+- Limit the budget of a single task
+- Manual confirmation of external actions
+- Use task-level temporary credentials
+- Prohibit models from expanding their permissions on their own
+- Audit plans and execution results
 
-模型接口安全
+Model interface security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 对接口进行认证和鉴权
-- 对用户、租户、模型和场景进行限速
-- 设置 Token、并发、费用和时间上限
-- 对异常请求进行熔断
-- 对模型版本和参数进行变更管理
-- 避免在客户端暴露模型密钥
+- Authentication and authentication for interfaces
+- Rate limit for users, tenants, models and scenarios
+- Set token, concurrency, fee and time limits
+- Circuit breaker for abnormal requests
+- Change management of model versions and parameters
+- Avoid exposing model keys on the client side
 
-数据安全
+Data security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 训练和微调数据应进行分级分类
-- 敏感数据进入模型前应脱敏或最小化
-- 日志、缓存、向量索引应设置访问控制
-- 用户数据应按租户隔离
-- 数据删除和模型记忆删除应有明确流程
-- 第三方模型调用应评估数据出境和合规要求
+- Training and fine-tuning data should be hierarchically classified
+- Sensitive data should be desensitized or minimized before entering the model
+- Access control should be set for logs, caches, and vector indexes
+- User data should be segregated by tenant
+- There should be clear procedures for data deletion and model memory deletion
+- Third-party model calls should evaluate data export and compliance requirements
 
-安全基线
+security baseline
 ----------------------------------------
-- 大模型接口必须有认证、鉴权和限速
-- 不可信内容必须标记来源，不能作为系统指令执行
-- 模型输出进入下游组件前必须校验
-- 高危工具调用必须有权限控制和人工确认
-- RAG 知识库必须控制写入权限和文档来源
-- Agent 必须限制执行步数、预算和权限范围
-- 日志、缓存、向量库必须脱敏和访问控制
-- 模型、提示词、工具、知识库变更必须可审计
-- 应定期进行红队测试和回归测试
+- Large model interfaces must have authentication, authorization and rate limiting
+- Untrustworthy content must be marked with source and cannot be executed as system instructions
+- Model output must be verified before entering downstream components
+- High-risk tool calls must have access control and manual confirmation
+- RAG knowledge base must control write permissions and document origin
+- Agent must limit the number of execution steps, budget and permission scope
+- Logs, caches, and vector libraries must be desensitized and access controlled
+- Changes to models, prompts, tools, and knowledge bases must be auditable
+- Red team testing and regression testing should be performed regularly

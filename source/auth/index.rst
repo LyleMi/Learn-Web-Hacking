@@ -1,4 +1,4 @@
-认证机制
+Authentication mechanism
 ========================================
 
 .. toctree::

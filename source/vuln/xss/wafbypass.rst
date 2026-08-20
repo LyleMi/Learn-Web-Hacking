@@ -1,8 +1,8 @@
 WAF Bypass
 ================================
 
-- 利用<>标记
-- 利用html属性
+- Use <> tag
+- Utilize html attributes
     - href
     - lowsrc
     - bgsound
@@ -10,11 +10,11 @@ WAF Bypass
     - value
     - action
     - dynsrc
-- 关键字
-    - 利用回车拆分
-    - 字符串拼接
+- Keywords
+    - Split using carriage return
+    - String concatenation
         - ``window["al" + "ert"]``
-- 利用编码绕过
+- Exploit encoding bypass
     - base64
     - jsfuck
     - String.fromCharCode
@@ -26,17 +26,17 @@ WAF Bypass
     - utf7
         - ``+ADw-script+AD4-alert('XSS')+ADsAPA-/script+AD4-``
     - utf16
-- 大小写混淆
-- 对标签属性值转码
-- 产生事件
-- css跨站解析
-- 长度限制bypass
+- Case confusion
+- Convert tag attribute values
+- generate events
+-css cross-site parsing
+- Length limit bypass
     - ``eval(name)``
     - ``eval(hash)``
     - ``import``
     - ``$.getScript``
     - ``$.get``
 - ``.``
-    - 使用 ``。`` 绕过IP/域名
-    - ``document['cookie']`` 绕过属性取值
-- 过滤引号用 `` ` `` 绕过
+    - Use ``. `` Bypass IP/domain name
+    - ``document['cookie']`` bypasses attribute values
+- Use `` ` `` to bypass filtering quotes

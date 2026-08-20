@@ -1,7 +1,7 @@
 Trick
 ========================================
 
-通过正则表达式构造特定字符
+Construct specific characters through regular expressions
 ----------------------------------------
 .. code-block:: javascript
 

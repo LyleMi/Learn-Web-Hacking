@@ -1,24 +1,24 @@
-原型链
+prototype chain
 ========================================
 
-显式原型和隐式原型
+Explicit prototypes and implicit prototypes
 ----------------------------------------
-JavaScript的原型分为显式原型（explicit prototype property）和隐式原型（implicit prototype link）。
+JavaScript prototypes are divided into explicit prototypes (explicit prototype property) and implicit prototypes (implicit prototype link).
 
-其中显式原型指prototype，是函数的一个属性，这个属性是一个指针，指向一个对象，显示修改对象的原型的属性，只有函数才有该属性
+The explicit prototype refers to prototype, which is an attribute of the function. This attribute is a pointer, pointing to an object, and displays the attribute of modifying the prototype of the object. Only functions have this attribute.
 
-隐式原型指JavaScript中任意对象都有的内置属性prototype。在ES5之前没有标准的方法访问这个内置属性，但是大多数浏览器都支持通过 ``__proto__`` 来访问。ES5中有了对于这个内置属性标准的Get方法 ``Object.getPrototypeOf()`` 。
+Implicit prototype refers to the built-in property prototype of any object in JavaScript. There was no standard way to access this built-in property prior to ES5, but most browsers support access via __proto__. ES5 has a standard Get method for this built-in property ``Object.getPrototypeOf()``.
 
-隐式原型指向创建这个对象的函数(constructor)的prototype， ``__proto__`` 指向的是当前对象的原型对象，而prototype指向的，是以当前函数作为构造函数构造出来的对象的原型对象。
+The implicit prototype points to the prototype of the function (constructor) that created the object, ``__proto__`` points to the prototype object of the current object, and prototype points to the prototype object of the object constructed with the current function as the constructor.
 
-显式原型的作用用来实现基于原型的继承与属性的共享。
-隐式原型的用于构成原型链，同样用于实现基于原型的继承。举个例子，当我们访问obj这个对象中的x属性时，如果在obj中找不到，那么就会沿着 ``__proto__`` 依次查找。
+The role of explicit prototypes is to implement prototype-based inheritance and attribute sharing.
+Implicit prototypes are used to form prototype chains and are also used to implement prototype-based inheritance. For example, when we access the x attribute in the object obj, if it is not found in obj, it will be searched along ``__proto__``.
 
 ::
 
   Note: Object.prototype 这个对象是个例外，它的__proto__值为null
 
-new 的过程
+new process
 ----------------------------------------
 
 .. code-block:: javascript
@@ -26,12 +26,12 @@ new 的过程
   var Person = function(){};
   var p = new Person();
 
-new的过程拆分成以下三步：
-- ``var p={};`` 初始化一个对象p
+The new process is divided into the following three steps:
+- ``var p={};`` Initialize an object p
 - ``p.__proto__ = Person.prototype;``
-- ``Person.call(p);`` 构造p，也可以称之为初始化p
+- ``Person.call(p);`` Construct p, which can also be called initializing p
 
-关键在于第二步，我们来证明一下：
+The key lies in the second step, let's prove it:
 
 .. code-block:: javascript
 
@@ -39,9 +39,9 @@ new的过程拆分成以下三步：
   var p = new Person();
   alert(p.__proto__ === Person.prototype);
 
-这段代码会返回true。说明我们步骤2是正确的。
+This code will return true. This shows that our step 2 is correct.
 
-示例
+Example
 ----------------------------------------
 
 .. code-block:: javascript
@@ -55,10 +55,10 @@ new的过程拆分成以下三步：
   var p = new Person();
   p.sayName();
 
-p是一个引用指向Person的对象。我们在Person的原型上定义了一个sayName方法和age属性，当我们执行p.age时，会先在this的内部查找（也就是构造函数内部），如果没有找到然后再沿着原型链向上追溯。
+p is an object that references Person. We defined a sayName method and age attribute on the prototype of Person. When we execute p.age, we will first search inside this (that is, inside the constructor). If it is not found, we will trace it back along the prototype chain.
 
-这里的向上追溯是怎么向上的呢？这里就要使用 ``__proto__`` 属性来链接到原型（也就是Person.prototype）进行查找。最终在原型上找到了age属性。
+How does the upward tracing here work upward? Here we need to use the ``__proto__`` attribute to link to the prototype (that is, Person.prototype) for search. Finally found the age attribute on the prototype.
 
-原型链污染
+Prototype chain pollution
 ----------------------------------------
-如前文提到的，JavaScript是动态继承，通过 ``__proto__`` 修改自身对象时会影响到有相同原型的对象。因此当键值对是用户可控的情况下，就可能出现原型链污染。
+As mentioned before, JavaScript is a dynamic inheritance. When modifying its own object through ``__proto__``, it will affect objects with the same prototype. Therefore, when the key-value pair is controllable by the user, prototype chain pollution may occur.

@@ -1,4 +1,4 @@
-部分运行选项与说明
+Some running options and instructions
 ========================================
 
-- ``-Xverify:none`` 关闭类加载时的验证措施
+- ``-Xverify:none`` turns off verification measures when loading classes

@@ -1,13 +1,13 @@
-DHCP协议
+DHCP protocol
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP) 是一个用于局域网的网络协议，位于OSI模型的应用层，使用UDP协议工作，主要用于自动分配IP地址给用户，方便管理员进行统一管理。
+Dynamic Host Configuration Protocol (DHCP) is a network protocol used for local area networks. It is located at the application layer of the OSI model and works using the UDP protocol. It is mainly used to automatically assign IP addresses to users to facilitate unified management by administrators.
 
-DHCP服务器端使用67/udp，客户端使用68/udp。DHCP运行分为四个基本过程，分别为请求IP租约、提供IP租约、选择IP租约和确认IP租约。客户端在获得了一个IP地址以后，就可以发送一个ARP请求来避免由于DHCP服务器地址池重叠而引发的IP冲突。
+The DHCP server uses 67/udp and the client uses 68/udp. DHCP operation is divided into four basic processes, namely requesting IP lease, providing IP lease, selecting IP lease and confirming IP lease. After the client obtains an IP address, it can send an ARP request to avoid IP conflicts caused by overlapping DHCP server address pools.
 
-DCHP 报文格式
+DCHP message format
 ----------------------------------------
 ::
 
@@ -36,7 +36,7 @@ DCHP 报文格式
    |                          options (variable)                   |
    +---------------------------------------------------------------+
 
-参考链接
+Reference link
 ----------------------------------------
 - `DHCP Wiki <https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol>`_
 

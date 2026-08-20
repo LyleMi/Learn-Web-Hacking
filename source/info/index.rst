@@ -1,4 +1,4 @@
-信息收集
+Information collection
 ========================================
 
 .. toctree::

@@ -1,78 +1,78 @@
-推荐资源
+Recommended resources
 ================================
 
-书单
+book list
 --------------------------------
 
-前端
+front end
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Web之困
-- 白帽子讲Web安全
-- 白帽子讲浏览器安全（钱文祥）
-- Web前端黑客技术揭秘
-- XSS跨站脚本攻击剖析与防御
-- SQL注入攻击与防御
+- Web Trouble
+- White hat talks about Web security
+- White hat talks about browser security (Qian Wenxiang)
+- Web front-end hacking technology revealed
+- XSS cross-site scripting attack analysis and defense
+-SQL injection attack and defense
 
-网络
+network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Understanding linux network internals
 - TCP/IP Architecture, Design, and Implementation in Linux
 - Linux Kernel Networking: Implementation and Theory
 - Bulletproof SSL and TLS
 - UNIX Network Programming
-- TCP / IP 协议详解
+- Detailed explanation of TCP/IP protocol
 
 SEO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- SEO艺术
+- The Art of SEO
 
-无线攻防
+Wireless attack and defense
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 无线网络安全攻防实战
-- 无线网络安全攻防实战进阶
-- 黑客大揭秘——近源渗透测试（柴坤哲等）
+- Practical combat of wireless network security attack and defense
+- Advanced wireless network security attack and defense practices
+- Hacker Revealed - Near Source Penetration Testing (Chai Kunzhe, etc.)
 
 Hacking Programming
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Gray Hat Python
 
-社会工程学
+social engineering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 社会工程：安全体系中的人性漏洞
-- 反欺骗的艺术
-- 反入侵的艺术
+- Social engineering: human vulnerabilities in security systems
+- The art of anti-deception
+- The art of anti-invasion
 
-数据安全
+Data security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 大数据治理与安全 从理论到开源实践（刘驰等）
-- 企业大数据处理 Spark、Druid、Flume与Kafka应用实践（肖冠宇） 
-- 数据安全 架构设计与实战（郑云文）
+- Big data governance and security from theory to open source practice (Liu Chi, etc.)
+- Enterprise big data processing Spark, Druid, Flume and Kafka application practice (Xiao Guanyu)
+- Data security architecture design and practice (Zheng Yunwen)
 
-机器学习与网络安全
+Machine Learning and Cybersecurity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Web安全深度学习实战（刘焱）
-- Web安全机器学习入门（刘焱）
-- Web安全之强化学习与GAN（刘焱）
-- AI安全之对抗样本入门（兜哥）
+- Web security deep learning practice (Liu Yan)
+- Introduction to Machine Learning for Web Security (Liu Yan)
+- Reinforcement learning and GAN for Web security (Liu Yan)
+- Introduction to Adversarial Samples for AI Security (Brother Dou)
 
-安全建设
+safe construction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 企业安全建设入门——基于开源软件打造企业网络安全 （刘焱）
-- 企业安全建设指南——金融行业安全架构与技术实践 （聂君等）
-- 大型互联网企业安全架构（石祖文）
-- CISSP官方学习指南
-- CISSP认证考试指南
-- Linux系统安全 纵深防御、安全扫描与入侵检测（胥峰）
+- Introduction to enterprise security construction - building enterprise network security based on open source software (Liu Yan)
+- Enterprise Security Construction Guide - Security Architecture and Technical Practice in the Financial Industry (Nie Jun, etc.)
+- Security architecture of large-scale Internet enterprises (Shi Zuwen)
+- CISSP official study guide
+- CISSP Certification Exam Guide
+- Linux system security, defense in depth, security scanning and intrusion detection (Xu Feng)
 
-综合
+comprehensive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Web安全深度剖析
-- 黑客秘笈——渗透测试实用指南
-- 黑客攻防技术宝典——web实战篇
+- In-depth analysis of Web security
+- Hacker Tips - A Practical Guide to Penetration Testing
+- Hacker's Attack and Defense Technology Guide - Web Practical Combat Chapter
 
-法律
+law
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 信息安全标准和法律法规（第二版）（注：武汉大学出版社）
+- Information Security Standards, Laws and Regulations (Second Edition) (Note: Wuhan University Press)
 
 WebSite
 --------------------------------
@@ -93,10 +93,10 @@ Bug Bounty
 - https://www.synack.com/
 - https://cobalt.io/
 
-实验环境
+Experimental environment
 --------------------------------
 
-Web安全相关CTF题目
+Web security related CTF questions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - https://github.com/orangetw/My-CTF-Web-Challenges
 - https://www.ripstech.com/php-security-calendar-2017/
@@ -107,15 +107,15 @@ Web安全相关CTF题目
 - https://github.com/a0xnirudh/kurukshetra
 - http://www.xssed.com/
 
-域实验环境
+Domain experimental environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Adaz <https://github.com/christophetd/Adaz>`_: Active Directory Hunting Lab in Azure
 - `Detection <https://github.com/clong/DetectionLab>`_ Vagrant & Packer scripts to build a lab environment complete with security tooling and logging best practices
 
-知识库
+knowledge base
 --------------------------------
 
-Awesome 系列
+Awesome series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `Awesome CobaltStrike <https://github.com/zer0yu/Awesome-CobaltStrike>`_
 - `Awesome Cybersecurity Blue Team <https://github.com/fabacab/awesome-cybersecurity-blueteam>`_
@@ -131,13 +131,13 @@ Bug Hunting
 
 Java
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `learnjavabug <https://github.com/threedr3am/learnjavabug>`_ Java安全相关的漏洞和技术demo
+- `learnjavabug <https://github.com/threedr3am/learnjavabug>`_ Java security-related vulnerabilities and technology demos
 
-红蓝对抗
+Red and blue confrontation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `atomic red team <https://github.com/redcanaryco/atomic-red-team>`_ Small and highly portable detection tests based on MITRE's ATT&CK
 
-后渗透
+post penetration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Powershell攻击指南 黑客后渗透之道  <https://github.com/rootclay/Powershell-Attack-Guide.git>`_
+- `Powershell Attack Guide How to penetrate after hacking <https://github.com/rootclay/Powershell-Attack-Guide.git>`_
 - `Active Directory Exploitation Cheat Sheet <https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet>`_

@@ -1,61 +1,61 @@
-供应链安全
+supply chain security
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-供应链安全是指确保软件开发和交付过程中的所有环节都是安全的，以防止恶意攻击者在软件开发和交付过程中植入恶意代码或漏洞，从而保护最终用户的安全和隐私。
+Supply chain security refers to ensuring that all links in the software development and delivery process are secure to prevent malicious attackers from implanting malicious code or vulnerabilities in the software development and delivery process, thereby protecting the security and privacy of end users.
 
-供应链安全包括从软件开发、测试、部署、维护到更新等整个生命周期的安全性保障，以确保软件的完整性、可靠性和安全性。在当前数字化时代，供应链安全已经成为一个非常重要的话题，因为恶意攻击者可以通过供应链攻击来入侵企业和个人的计算机系统，窃取敏感信息或者破坏系统。因此，供应链安全已经成为企业和组织必须重视的安全问题之一。
+Supply chain security includes security assurance throughout the entire life cycle from software development, testing, deployment, maintenance to updates, etc., to ensure the integrity, reliability and security of the software. In the current digital age, supply chain security has become a very important topic, because malicious attackers can invade corporate and personal computer systems through supply chain attacks, steal sensitive information, or damage the system. Therefore, supply chain security has become one of the security issues that enterprises and organizations must pay attention to.
 
-可以绕过传统的安全防御措施，例如防火墙、入侵检测系统等。此外，由于供应链中的环节非常复杂，攻击者可以选择攻击其中的任何一个环节，从而使得防御变得更加困难。
+Can bypass traditional security defenses such as firewalls, intrusion detection systems, etc. In addition, because the links in the supply chain are so complex, attackers can choose to attack any one of them, making defense more difficult.
 
-供应链安全问题
+Supply chain security issues
 ----------------------------------------
 
-供应链失陷
+supply chain failure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-供应链失陷是指恶意攻击者通过攻击供应商，通过供应商的链路从而进入用户的计算机系统或网络。
+Supply chain compromise refers to malicious attackers attacking suppliers and entering users' computer systems or networks through the supplier's links.
 
-供应链后门
+Supply chain back door
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-供应链后门是指供应商提供的系统存在预置的后门、默认口令或者预留的调试接口。
+Supply chain backdoors refer to systems provided by suppliers that have preset backdoors, default passwords or reserved debugging interfaces.
 
-供应链漏洞
+supply chain vulnerabilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-供应链漏洞是指供应链软件中存在的安全漏洞，可被攻击者利用这些漏洞来入侵最终用户的计算机系统。
+Supply chain vulnerabilities refer to security holes in supply chain software that can be exploited by attackers to compromise end-user computer systems.
 
-供应链漏洞通常是由于软件开发、测试、部署、维护等环节中的缺陷或错误而导致的。
+Supply chain vulnerabilities are usually caused by defects or errors in software development, testing, deployment, maintenance, etc.
 
-供应链污染
+supply chain contamination
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-供应链污染是指恶意攻击者通过攻击软件供应链中的一个或多个环节，将恶意代码或漏洞植入到软件中，从而使得最终用户的计算机系统或网络受到攻击。
+Supply chain contamination means that malicious attackers implant malicious code or vulnerabilities into the software by attacking one or more links in the software supply chain, thereby exposing the end user's computer system or network to attack.
 
-与供应链后门不同的是，供应链污染通常是指攻击者在软件供应链中植入的恶意代码或漏洞，并不一定是一个特殊的后门。
+Unlike supply chain backdoors, supply chain contamination usually refers to malicious code or vulnerabilities implanted by attackers in the software supply chain, and is not necessarily a special backdoor.
 
-供应链数据安全
+Supply chain data security
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-供应链数据安全是指隐私、敏感数据在供应链中泄露的情况。
+Supply chain data security refers to the leakage of private and sensitive data in the supply chain.
 
-常见攻击方式
+Common attack methods
 ----------------------------------------
-- 创建名称类似的软件包
+- Create packages with similar names
     - Combosquatting
     - Typosquatting
-    - 修改词序
-    - 修改分割符
-- 注入依赖
-    - 命名为内部包
-- 影响构建
-    - 利用 CI/CD 漏洞
-- 提交后门代码
-    - 劫持开发者账号
-    - 提交逻辑隐蔽的后门
-    - 利用渲染问题隐藏提交逻辑
+    - Modify word order
+    - Modify separator
+- Inject dependencies
+    - named internal package
+- Impact build
+    - Exploiting CI/CD vulnerabilities
+- Submit backdoor code
+    - Hijack developer account
+    - Submit logically hidden backdoors
+    - Use rendering issues to hide submission logic
         - Homoglyph
         - Unicode Bidirectional
-        - 其它控制字符
-        - 混淆 / minified
+        - Other control characters
+        - obfuscated / minified
 
-参考链接
+Reference link
 ----------------------------------------
 - `Introducing SLSA, an End-to-End Framework for Supply Chain Integrity <https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-framework.html>`_

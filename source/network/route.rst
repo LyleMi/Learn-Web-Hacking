@@ -1,43 +1,43 @@
-路由算法
+routing algorithm
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-路由算法是用于找到一条从源路由器到目的路由器的最佳路径的算法。存在着多种路由算法，每种算法对网络和路由器资源的影响都不同；由于路由算法使用多种度量标准 (metric)，所以不同路由算法的最佳路径选择也有所不同。
+A routing algorithm is an algorithm used to find the best path from a source router to a destination router. There are multiple routing algorithms, each of which has a different impact on network and router resources; because routing algorithms use multiple metrics, the best path selections for different routing algorithms are also different.
 
-路由选择算法的功能
+Routing Algorithm Functions
 ----------------------------------------
-源/宿对之间的路径选择，以及选定路由之后将报文传送到它们的目的地。
+Path selection between source/destination pairs, and routing of messages to their destinations.
 
-路由选择算法的要求：
+Routing algorithm requirements:
 
-- 正确性：确保分组从源节点传送到目的节点
-- 简单性：实现方便，软硬件开销小
-- 自适应性：也称健壮性，算法能够适应业务量和网络拓扑的变化
-- 稳定性：能长时间无故障运行
-- 公平性：每个节点都有机会传送信息
-- 最优性：尽量选取好的路由
+- Correctness: Ensure that the packet is transmitted from the source node to the destination node
+- Simplicity: easy to implement, low software and hardware overhead
+- Adaptability: also called robustness, the algorithm can adapt to changes in business volume and network topology
+- Stability: able to operate without failure for a long time
+- Fairness: every node has a chance to transmit information
+- Optimality: try to choose good routes
 
-自治系统 AS (Autonomous System)
+Autonomous System AS (Autonomous System)
 ----------------------------------------
-经典定义：
+Classic definition:
 
-- 由一个组织管理的一整套路由器和网络。
-- 使用一种AS 内部的路由选择协议和共同的度量以确定分组在该 AS 内的路由。
-- 使用一种 AS 之间的路由选择协议用以确定分组在AS之间的路由。
+- A complete set of routers and networks managed by one organization.
+- Use an intra-AS routing protocol and common metrics to determine the route of packets within the AS.
+- Use an inter-AS routing protocol to determine the routing of packets between ASs.
 
-尽管一个 AS 使用了多种内部路由选择协议和度量，但对其他 AS 表现出的是一个单一的和一致的路由选择策略。
+Although an AS uses multiple internal routing protocols and metrics, it exhibits a single and consistent routing strategy to other ASs.
 
-两大类路由选择协议
+Two major categories of routing protocols
 ----------------------------------------
-因特网的中，路由协议可以分为内部网关协议 IGP (Interior Gateway Protocol)和外部网关协议 EGP (External Gateway Protocol)。
+In the Internet, routing protocols can be divided into interior gateway protocol IGP (Interior Gateway Protocol) and exterior gateway protocol EGP (External Gateway Protocol).
 
-IGP是在一个AS内部使用的路由选择协议，如RIP和OSPF协议，是域内路由选择 (interdomain routing)。当源主机和目的主机处在不同的AS中，在数据报到达AS的边界时，使用外部网关协议 EGP 将路由选择信息传递到另一个自治系统中，如BGP-4，是域间路由选择 (intradomain routing)。
+IGP is a routing protocol used within an AS, such as RIP and OSPF protocols, and is intradomain routing. When the source host and destination host are in different ASs, when the datagram reaches the boundary of the AS, the external gateway protocol EGP is used to transfer the routing information to another autonomous system, such as BGP-4, which is intradomain routing.
 
 RIP
 ----------------------------------------
-路由信息协议 (Routing Information Protocol, RIP) 是一种基于距离 向量的路由选择协议。RIP 协议要求网络中的每一个路由器都要维护从它自己到自治系统内其他每一个目的网络的距离和下一跳路由器地址。
+Routing Information Protocol (RIP) is a distance vector-based routing protocol. The RIP protocol requires each router in the network to maintain the distance and next-hop router address from itself to every other destination network in the autonomous system.
 
 OSPF
 ----------------------------------------
-开放最短路径优先(Open Shortest Path First，OSPF)，这个算法名为“最短路径优先”是因为使用了 Dijkstra 提出的最短路径算法SPF，只是一个协议的名字，它并不表示其他的路由选择协议不是“最短路径优先”。
+Open Shortest Path First (OSPF), this algorithm is called "Shortest Path First" because it uses the shortest path algorithm SPF proposed by Dijkstra. It is just the name of a protocol. It does not mean that other routing protocols are not "Shortest Path First".

@@ -1,31 +1,31 @@
-容器
+container
 ========================================
 
-常见的Java服务器有Tomcat、Weblogic、JBoss、GlassFish、Jetty、Resin、IBM Websphere等，这里对部分框架做一个简单的说明。
+Common Java servers include Tomcat, Weblogic, JBoss, GlassFish, Jetty, Resin, IBM Websphere, etc. Here is a brief explanation of some frameworks.
 
 Tomcat
 ----------------------------------------
-Tomcat是一个轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，用于开发和调试JSP程序。
+Tomcat is a lightweight application server that is commonly used in small and medium-sized systems and situations where there are not many concurrent access users for developing and debugging JSP programs.
 
-在收到请求后，Tomcat的处理流程如下：
+After receiving the request, Tomcat's processing flow is as follows:
 
-- 客户端访问Web服务器，发送HTTP请求
-- Web服务器接收到请求后，传递给Servlet容器
-- Servlet容器加载Servlet，产生Servlet实例后，向其传递表示请求和响应的对象
-- Servlet实例使用请求对象得到客户端的请求信息，然后进行相应的处理
-- Servlet实例将处理结果通过响应对象发送回客户端，容器负责确保响应正确送出，同时将控制返回给Web服务器
+- The client accesses the web server and sends an HTTP request
+- After the web server receives the request, it passes it to the Servlet container
+- The Servlet container loads the Servlet, generates a Servlet instance, and passes it an object representing the request and response.
+- The Servlet instance uses the request object to obtain the client's request information, and then processes it accordingly.
+- The Servlet instance sends the processing results back to the client through the response object. The container is responsible for ensuring that the response is sent correctly and returning control to the Web server.
 
-Tomcat服务器是由一系列可配置的组件构成的，其中核心组件是Catalina Servlet容器，它是所有其他Tomcat组件的顶层容器。
+The Tomcat server is composed of a series of configurable components, the core component of which is the Catalina Servlet container, which is the top-level container for all other Tomcat components.
 
-相关CVE
+Related CVEs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2020-1938
     - https://www.freebuf.com/vuls/228108.html
 - CVE-2019-0232
-    - 远程代码执行
+    - Remote code execution
     - https://github.com/pyn3rd/CVE-2019-0232/
 - CVE-2017-12615
-    - 任意文件写入
+    - Write to any file
     - https://mp.weixin.qq.com/s?__biz=MzI1NDg4MTIxMw==&mid=2247483659&idx=1&sn=c23b3a3b3b43d70999bdbe644e79f7e5
 - CVE-2013-2067
 - CVE-2012-4534
@@ -40,16 +40,16 @@ Tomcat服务器是由一系列可配置的组件构成的，其中核心组件�
 Weblogic
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-WebLogic是美国Oracle公司出品的一个Application Server，是一个基于Java EE架构的中间件，WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。其将Java的动态功能和Java Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。
+WebLogic is an Application Server produced by Oracle Corporation in the United States. It is a middleware based on the Java EE architecture. WebLogic is a Java application server used to develop, integrate, deploy and manage large-scale distributed Web applications, network applications and database applications. It introduces the dynamic capabilities of Java and the security of Java Enterprise standards into the development, integration, deployment and management of large-scale network applications.
 
-WebLogic对业内多种标准的全面支持，包括EJB、JSP、Servlet、JMS、JDBC等。
+WebLogic fully supports multiple industry standards, including EJB, JSP, Servlet, JMS, JDBC, etc.
 
-相关CVE
+Related CVEs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2019-2725
-    - wls-wsat 反序列化远程代码执行
+    - wls-wsat deserialization for remote code execution
 - CVE-2019-2658
 - CVE-2019-2650
 - CVE-2019-2649
@@ -70,16 +70,16 @@ WebLogic对业内多种标准的全面支持，包括EJB、JSP、Servlet、JMS�
     - https://github.com/voidfyoo/CVE-2018-3191
     - https://github.com/Libraggbond/CVE-2018-3191
 - CVE-2018-2894
-    - 任意文件上传
+    - Upload any file
     - https://xz.aliyun.com/t/2458
 - CVE-2018-2893
-    - 反序列化
+    - Deserialization
     - https://www.freebuf.com/vuls/178105.html
 - CVE-2018-2628
     - https://mp.weixin.qq.com/s/nYY4zg2m2xsqT0GXa9pMGA
 - CVE-2018-1258
 - CVE-2017-10271
-    - XMLDecoder 反序列化漏洞
+    - XMLDecoder deserialization vulnerability
     - http://webcache.googleusercontent.com/search?q=cache%3AsH7j8TF8uOIJ%3Awww.freebuf.com%2Fvuls%2F160367.html
 - CVE-2017-3248
 - CVE-2016-3510
@@ -89,19 +89,19 @@ WebLogic对业内多种标准的全面支持，包括EJB、JSP、Servlet、JMS�
 JBoss
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-JBoss是一个基于J2EE的管理EJB的容器和服务器，但JBoss核心服务不包括支持servlet/JSP的WEB容器，一般与Tomcat或Jetty绑定使用。
+JBoss is a container and server that manages EJBs based on J2EE. However, JBoss core services do not include WEB containers that support servlet/JSP and are generally used in conjunction with Tomcat or Jetty.
 
-相关CVE
+Related CVEs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2017-12149
-    - 反序列化漏洞
-    - 访问 ``/invoker/readonly`` ，页面存在即有反序列化漏洞
+    - Deserialization vulnerability
+    - Accessing ``/invoker/readonly``, the page already has a deserialization vulnerability
 
 Jetty
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Jetty是一个开源的servlet容器。
+Jetty is an open source servlet container.

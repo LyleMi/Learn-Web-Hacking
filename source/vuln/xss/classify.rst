@@ -1,25 +1,25 @@
-分类
+Classification
 ================================
 
-简介
+Introduction
 --------------------------------
-XSS全称为Cross Site Scripting，为了和CSS分开简写为XSS，中文名为跨站脚本。该漏洞发生在用户端，是指在渲染过程中发生了不在预期过程中的JavaScript代码执行。XSS通常被用于获取Cookie、以受攻击者的身份进行操作等行为。
+The full name of XSS is Cross Site Scripting. In order to separate it from CSS, it is abbreviated as XSS. The Chinese name is cross-site scripting. This vulnerability occurs on the user side and refers to unexpected JavaScript code execution during the rendering process. XSS is usually used to obtain cookies, perform operations as the victim, etc.
 
-反射型XSS
+Reflected XSS
 --------------------------------
-反射型XSS是比较常见和广泛的一类，举例来说，当一个网站的代码中包含类似下面的语句：``<?php echo "<p>hello, $_GET['user']</p>";?>`` ，那么在访问时设置 ``/?user=</p><script>alert("hack")</script><p>`` ，则可执行预设好的JavaScript代码。
+Reflected XSS is a relatively common and widespread category. For example, when the code of a website contains statements similar to the following: ``<?php echo "<p>hello, $_GET['user']</p>";?>`` , then set ``/?user=</p><script>alert("hack")</script><p>`` when accessing, and the preset JavaScript code can be executed.
 
-反射型XSS通常出现在搜索等功能中，需要被攻击者点击对应的链接才能触发，且受到XSS Auditor、NoScript等防御手段的影响较大。
+Reflected XSS usually appears in functions such as search, and requires an attacker to click on the corresponding link to trigger it, and is greatly affected by defense methods such as XSS Auditor and NoScript.
 
-储存型XSS
+Stored XSS
 --------------------------------
-储存型XSS相比反射型来说危害较大，在这种漏洞中，攻击者能够把攻击载荷存入服务器的数据库中，造成持久化的攻击。
+Stored XSS is more harmful than reflective XSS. In this vulnerability, the attacker can store the attack payload in the server's database, causing a persistent attack.
 
 DOM XSS
 --------------------------------
-DOM型XSS不同之处在于DOM型XSS一般和服务器的解析响应没有直接关系，而是在JavaScript脚本动态执行的过程中产生的。
+The difference between DOM-type XSS is that DOM-type XSS is generally not directly related to the parsing response of the server, but is generated during the dynamic execution of JavaScript scripts.
 
-例如
+For example
 
 ::
 
@@ -41,8 +41,8 @@ DOM型XSS不同之处在于DOM型XSS一般和服务器的解析响应没有直�
     </body>
     </html>
 
-输入 ``x' onerror='javascript:alert(/xss/)`` 即可触发。
+Enter ``x' onerror='javascript:alert(/xss/)`` to trigger.
 
 Blind XSS
 --------------------------------
-Blind XSS是储存型XSS的一种，它保存在某些存储中，当一个“受害者”访问这个页面时执行，并且在文档对象模型(DOM)中呈现payload。 它被称为Blind的原因是因为它通常发生在通常不暴露给用户的功能上。
+Blind XSS is a type of stored XSS that is stored in some storage, executed when a "victim" accesses the page, and renders the payload in the Document Object Model (DOM). The reason it's called Blind is because it usually happens with functionality that isn't normally exposed to the user.

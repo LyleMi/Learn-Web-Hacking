@@ -1,43 +1,43 @@
-团队建设
+team building
 ========================================
 
-人员分工
+Division of labor
 ----------------------------------------
-- 部门负责人
-    - 负责组织整体的信息安全规划
-    - 负责向高层沟通申请资源
-    - 负责与组织其他部门的协调沟通
-    - 共同推进信息安全工作
-    - 负责信息安全团队建设
-    - 负责安全事件应急工作处置
-    - 负责推动组织安全规划的落实
-- 合规管理员
-    - 负责安全相关管理制度、管理流程的制定，监督实施情况，修改和改进相关的制度和流程
-    - 负责合规性迎检准备工作，包括联络、迎检工作推动，迎检结果汇报等所有相关工作
-    - 负责与外部安全相关单位联络
-    - 负责安全意识培训、宣传和推广
-- 安全技术负责人
-    - 业务安全防护整体技术规划和计划
-    - 了解组织安全技术缺陷，并能找到方法进行防御
-    - 安全设备运维
-    - 服务器与网络基础设备的安全加固推进工作
-    - 安全事件排查与分析，配合定期编写安全分析报告
-    - 关注注业内安全事件， 跟踪最新漏洞信息，进行业务产品的安全检查
-    - 负责漏洞修复工作推进，跟踪解决情况，问题收集
-    - 了解最新安全技术趋势
-- 渗透/代码审计人员
-    - 对组织业务网站、业务系统进行安全评估测试
-    - 对漏洞结果提供解决方案和修复建议
-- 安全设备运维人员
-    - 负责设备配置和策略的修改
-    - 负责协助其他部门的变更导致的安全策略修改的实现
-- 安全开发
-    - 根据组织安全的需要开发安全辅助工具或平台
-    - 参与安全系统的需求分析、设计、编码等开发工作
-    - 维护公司现有的安全程序与系统
+- Department head
+    - Responsible for the overall information security planning of the organization
+    - Responsible for communicating with senior management to apply for resources
+    - Responsible for coordination and communication with other departments of the organization
+    - Jointly promote information security work
+    - Responsible for information security team building
+    - Responsible for emergency response to security incidents
+    - Responsible for promoting the implementation of organizational security planning
+- Compliance Administrator
+    - Responsible for the formulation of safety-related management systems and management processes, supervising the implementation, modifying and improving related systems and processes
+    - Responsible for compliance preparations for inspections, including liaison, promotion of inspections, reporting of inspection results and other related work
+    - Responsible for liaising with external security-related units
+    - Responsible for security awareness training, publicity and promotion
+- Security technical leader
+    - Overall technical planning and planning for business security protection
+    - Understand organizational security technical flaws and be able to find ways to defend against them
+    - Safety equipment operation and maintenance
+    - Promote the security reinforcement of servers and network infrastructure equipment
+    - Security incident investigation and analysis, and cooperate with regular preparation of security analysis reports
+    - Pay attention to security events in the industry, track the latest vulnerability information, and conduct security inspections of business products
+    - Responsible for promoting vulnerability repair work, tracking solutions, and problem collection
+    - Understand the latest security technology trends
+- Penetration/Code Auditor
+    - Conduct security assessment and testing on the organization’s business website and business systems
+    - Provide solutions and remediation suggestions for vulnerability results
+- Safety equipment operation and maintenance personnel
+    - Responsible for device configuration and policy modifications
+    - Responsible for assisting in the implementation of security policy modifications resulting from changes in other departments
+- Safe development
+    - Develop security assistance tools or platforms based on organizational security needs
+    - Participate in demand analysis, design, coding and other development work of security systems
+    - Maintain the company's existing security procedures and systems
 
-参考链接
+Reference link
 ----------------------------------------
-- `初入甲方的企业安全建设规划 <https://mp.weixin.qq.com/s/BqOFP217kiN55IWb_oQP-w>`_
-- `企业安全项目架构实践分享 <https://mp.weixin.qq.com/s/RlBTH9-xrY7Nd1ZJK3KjDQ>`_
-- `企业信息安全团队建设 <https://xz.aliyun.com/t/1965>`_
+- `Enterprise security construction planning for new Party A <https://mp.weixin.qq.com/s/BqOFP217kiN55IWb_oQP-w>`_
+- `Sharing of enterprise security project architecture practices <https://mp.weixin.qq.com/s/RlBTH9-xrY7Nd1ZJK3KjDQ>`_
+- `Enterprise information security team building <https://xz.aliyun.com/t/1965>`_

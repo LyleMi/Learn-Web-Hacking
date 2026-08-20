@@ -1,47 +1,47 @@
 JWT
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（(RFC 7519).该token被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该token也可直接被用于认证，也可被加密。
+Json web token (JWT) is a JSON-based open standard (RFC 7519). This token is designed to be compact and secure, especially suitable for single sign-on (SSO) scenarios on distributed sites. JWT claims are generally used to transfer authenticated user identity information between identity providers and service providers to facilitate obtaining resources from the resource server. Some additional claim information necessary for other business logic can also be added. The token can also be used directly for authentication and can also be encrypted.
 
-构成
+constitute
 ----------------------------------------
-分为三个部分，分别为header/payload/signature。其中header是声明的类型和加密使用的算法。payload是载荷，最后是加上 ``HMAC(base64(header)+base64(payload), secret)``
+It is divided into three parts, namely header/payload/signature. The header is the declared type and the algorithm used for encryption. payload is the load, and finally ``HMAC(base64(header)+base64(payload), secret)`` is added
 
-安全问题
+Security Question
 ----------------------------------------
 
-Header部分
+Header part
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 是否支持修改算法为none/对称加密算法
-- 删除签名
-- 插入错误信息
-- 直接在 header 中加入新的公钥
-- kid字段是否有SQL注入/命令注入/目录遍历
-- 结合业务功能通过kid直接下载对应公私钥
-- 是否强制使用白名单上的加密算法
-- JWKS 劫持
-- JKU (JWK Set URL) / X5U (X.509 URL) 注入
+- Whether to support changing the algorithm to none/symmetric encryption algorithm
+- Delete signature
+- Insert error message
+- Add the new public key directly to the header
+- Whether there is SQL injection/command injection/directory traversal in the kid field
+- Combined with business functions, directly download the corresponding public and private keys through kid
+- Whether to force the use of encryption algorithms on the whitelist
+- JWKS hijack
+- JKU (JWK Set URL) / X5U (X.509 URL) injection
 
-Payload部分
+Payload part
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 其中是否存在敏感信息
-- 检查过期策略，比如 ``exp`` , ``iat``
+- Whether there is sensitive information in it
+- Check expiration policies, such as ``exp``, ``iat``
 
-Signature部分
+Signature part
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 检查是否强制检查签名
-- 密钥是否可以爆破
-- 是否可以通过其他方式拿到密钥
+- Check if signature checking is mandatory
+- Whether the key can be exploded
+- Is there any other way to get the key?
 
-其他
+other
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 重放
-- 通过匹配校验的时间做时间攻击
-- 修改算法RS256为HS256
-- 弱密钥破解
+- Replay
+- Time attack by matching the verified time
+- Modify the algorithm RS256 to HS256
+- Weak key cracking
 
-参考链接
+Reference link
 ----------------------------------------
 - `Critical vulnerabilities in JSON Web Token libraries <https://auth0.com/blog/>`_

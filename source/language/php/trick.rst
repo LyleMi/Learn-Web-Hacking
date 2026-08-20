@@ -1,6 +1,6 @@
 Tricks
 ========================================
-- is_numeric 前后有空格时，不会判断为true
-- 松散比较时，两个0e开头的不同哈希会判断为相等
-- 松散比较时，非数字的字符串序列和数字比较会自动转换
-- strcmp/ereg 等函数在传入参数类型为数组时会有非预期行为
+- is_numeric will not be judged as true when there are spaces before and after it
+- During loose comparison, two different hashes starting with 0e will be judged as equal.
+- Non-numeric string sequences and numeric comparisons are automatically converted when comparing loosely
+- Functions such as strcmp/ereg will have unexpected behavior when the input parameter type is an array.

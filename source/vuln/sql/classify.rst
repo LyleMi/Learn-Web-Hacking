@@ -1,35 +1,35 @@
-注入分类
+Inject classification
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-SQL注入是一种代码注入技术，用于攻击数据驱动的应用程序。
-在应用程序中，如果没有做恰当的过滤，则可能使得恶意的SQL语句被插入输入字段中执行（例如将数据库内容转储给攻击者）。
+SQL injection is a code injection technique used to attack data-driven applications.
+In the application, if proper filtering is not done, malicious SQL statements may be inserted into the input fields and executed (such as dumping the database contents to the attacker).
 
-按技巧分类
+Classification by skills
 ----------------------------------------
-根据使用的技巧，SQL注入类型可分为
+Based on the techniques used, SQL injection types can be divided into
 
-- 盲注
-    - 布尔盲注：只能从应用返回中推断语句执行后的布尔值
-    - 时间盲注：应用没有明确的回显，只能使用特定的时间函数来判断
-- 报错注入：应用会显示全部或者部分的报错信息
-- 堆叠注入：有的应用可以加入 ``;`` 后一次执行多条语句
-- 其他
+- Blind bet
+    - Boolean blind injection: the Boolean value after statement execution can only be inferred from the application return
+    - Time blind injection: The application does not have a clear echo and can only use a specific time function to judge.
+- Error injection: the application will display all or part of the error message
+- Stack injection: Some applications can add ``;`` to execute multiple statements at once
+- other
 
-按获取数据的方式分类
+Categorize by how data is obtained
 ----------------------------------------
-另外也可以根据获取数据的方式分为3类
+In addition, it can also be divided into three categories according to the way of obtaining data.
 
 inband
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-利用Web应用来直接获取数据，如报错注入，这类注入都是通过站点的响应或者错误反馈来提取数据。
+Use Web applications to directly obtain data, such as error injection. This type of injection extracts data through the site's response or error feedback.
 
 inference
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通过Web的一些反映来推断数据，如布尔盲注，也就是我们通俗的盲注，
-通过web应用的其他改变来推断数据。
+Infer data through some reflections on the Web, such as Boolean blind injection, which is our popular blind injection.
+Infer data through other changes to the web application.
 
 out of band (OOB)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通过其他传输方式来获得数据，比如DNS解析协议和电子邮件。
+Data is obtained through other transmission methods, such as DNS resolution protocol and email.

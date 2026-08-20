@@ -1,66 +1,66 @@
-反序列化
+Deserialization
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-序列化就是把对象转换成字节流，便于保存在内存、文件、数据库中；反序列化即逆过程，由字节流还原成对象。一般用于远程调用、通过网络将对象传输至远程服务器、存储对象到数据库或本地等待重用等场景中。Java中的 ``ObjectOutputStream`` 类的 ``writeObject()`` 方法可以实现序列化，类 ``ObjectInputStream`` 类的 ``readObject()`` 方法用于反序列化。如果要实现类的反序列化，则是对其实现 ``Serializable`` 接口。
+Serialization is to convert objects into byte streams to facilitate storage in memory, files, and databases; deserialization is the reverse process, restoring byte streams into objects. It is generally used in scenarios such as remote calls, transferring objects to remote servers through the network, storing objects in databases or waiting for reuse locally. The ``writeObject()`` method of the ``ObjectOutputStream`` class in Java can implement serialization, and the ``readObject()`` method of the ``ObjectInputStream`` class is used for deserialization. If you want to implement deserialization of a class, you must implement the ``Serializable`` interface.
 
-当远程服务接受不可信的数据并进行反序列化且当前环境中存在可利用的类时，就认为存在反序列化漏洞。
+A deserialization vulnerability is considered to exist when a remote service accepts untrusted data for deserialization and an exploitable class exists in the current environment.
 
-序列数据结构
+sequence data structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``0xaced`` 魔术头 / STREAM_MAGIC
-- ``0x0005`` 版本号 / STREAM_VERSION / 参考 java.io.ObjectStreamConstants
-- ``0x73`` 对象类型标识
-- ``0x72`` 类描述符标识
+- ``0xaced`` Magic Head / STREAM_MAGIC
+- ``0x0005`` Version number / STREAM_VERSION / Reference java.io.ObjectStreamConstants
+- ``0x73`` object type identifier
+- ``0x72`` class descriptor identifier
 
-序列化流程
+Serialization process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ ObjectOutputStream实例初始化时，将魔术头和版本号写入bout (BlockDataOutputStream类型) 中
-+ 调用ObjectOutputStream.writeObject()开始写对象数据
-    + ObjectStreamClass.lookup()封装待序列化的类描述 (返回ObjectStreamClass类型) ，获取包括类名、自定义serialVersionUID、可序列化字段 (返回ObjectStreamField类型) 和构造方法，以及writeObject、readObject方法等
-    + writeOrdinaryObject()写入对象数据
-        + 写入对象类型标识
-        + writeClassDesc()进入分支writeNonProxyDesc()写入类描述数据
-            + 写入类描述符标识
-            + 写入类名
-            + 写入SUID (当SUID为空时，会进行计算并赋值)
-            + 计算并写入序列化属性标志位
-            + 写入字段信息数据
-            + 写入Block Data结束标识
-            + 写入父类描述数据
-        + writeSerialData()写入对象的序列化数据
-            + 若类自定义了writeObject()，则调用该方法写对象，否则调用defaultWriteFields()写入对象的字段数据 (若是非原始类型，则递归处理子对象)
++ When the ObjectOutputStream instance is initialized, write the magic header and version number into bout (BlockDataOutputStream type)
++ Call ObjectOutputStream.writeObject() to start writing object data
+    + ObjectStreamClass.lookup() encapsulates the class description to be serialized (returns the ObjectStreamClass type), and obtains the class name, custom serialVersionUID, serializable fields (returns the ObjectStreamField type) and constructor methods, as well as writeObject and readObject methods, etc.
+    + writeOrdinaryObject() writes object data
+        + Write object type identifier
+        + writeClassDesc() enters the branch writeNonProxyDesc() to write class description data
+            + Write class descriptor identifier
+            + write class name
+            + Write SUID (when SUID is empty, it will be calculated and assigned)
+            + Calculate and write serialized attribute flags
+            + Write field information data
+            + Write Block Data end identifier
+            + Write parent class description data
+        + writeSerialData() writes the serialized data of the object
+            + If the class customizes writeObject(), call this method to write the object, otherwise call defaultWriteFields() to write the field data of the object (if it is a non-primitive type, recursively process the sub-object)
 
-反序列化流程
+Deserialization process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ ObjectInputStream实例初始化时，读取魔术头和版本号进行校验
-+ 调用ObjectInputStream.readObject()开始读对象数据
-    + 读取对象类型标识
-    + readOrdinaryObject()读取数据对象
-        + readClassDesc()读取类描述数据
-            + 读取类描述符标识，进入分支readNonProxyDesc()
-            + 读取类名
-            + 读取SUID
-            + 读取并分解序列化属性标志位
-            + 读取字段信息数据
-            + resolveClass()根据类名获取待反序列化的类的Class对象，如果获取失败，则抛出ClassNotFoundException
-            + skipCustomData()循环读取字节直到Block Data结束标识为止
-            + 读取父类描述数据
-            + initNonProxy()中判断对象与本地对象的SUID和类名 (不含包名) 是否相同，若不同，则抛出InvalidClassException
-        + ObjectStreamClass.newInstance()获取并调用离对象最近的非Serializable的父类的无参构造方法 (若不存在，则返回null) 创建对象实例
-        + readSerialData()读取对象的序列化数据
-            + 若类自定义了readObject()，则调用该方法读对象，否则调用defaultReadFields()读取并填充对象的字段数据
++ When the ObjectInputStream instance is initialized, read the magic header and version number for verification
++ Call ObjectInputStream.readObject() to start reading object data
+    + Read object type identifier
+    + readOrdinaryObject() reads the data object
+        + readClassDesc() reads class description data
+            + Read the class descriptor identifier and enter the branch readNonProxyDesc()
+            + Read class name
+            + Read SUID
+            + Read and decompose serialization attribute flags
+            + Read field information data
+            + resolveClass() obtains the Class object of the class to be deserialized based on the class name. If the acquisition fails, ClassNotFoundException is thrown.
+            + skipCustomData() loops to read bytes until the Block Data end flag
+            + Read parent class description data
+            + In initNonProxy(), determine whether the SUID and class name (excluding package name) of the object and the local object are the same. If they are different, an InvalidClassException will be thrown.
+        + ObjectStreamClass.newInstance() obtains and calls the parameterless constructor of the non-Serializable parent class closest to the object (if it does not exist, returns null) to create an object instance
+        + readSerialData() reads the serialized data of the object
+            + If the class customizes readObject(), call this method to read the object, otherwise call defaultReadFields() to read and fill the field data of the object
 
-漏洞利用
+exploit
 ----------------------------------------
 
-常见触发点
+Common trigger points
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- JDBC 反序列化
-- JSON 反序列化
+- JDBC deserialization
+- JSON deserialization
 
-存在危险的基础库
+Dangerous base libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - ``com.mchange:c3p0 0.9.5.2``
 - ``com.mchange:mchange-commons-java 0.2.11``
@@ -75,19 +75,19 @@
 - ``org.slf4j:slf4j-api 1.7.21``
 - ``org.springframework:spring-aop 4.1.4.RELEASE``
 
-回显方式
+Echo mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 通过中间件特性回显
-- 通过抛出异常回显
-- 通过OOB回显
-- 通过写静态文件回显
+- echo through middleware features
+- echo by throwing an exception
+- Echo via OOB
+- Echo by writing static files
 
-漏洞修复和防护
+Vulnerability fixes and protection
 ----------------------------------------
 
 Hook resolveClass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在使用 ``readObject()`` 反序列化时会调用 ``resolveClass`` 方法读取反序列化的类名，可以通过hook该方法来校验反序列化的类，一个Demo如下
+When using ``readObject()`` to deserialize, the ``resolveClass`` method will be called to read the deserialized class name. You can hook this method to verify the deserialized class. A Demo is as follows
 
 .. code:: java
 
@@ -101,11 +101,11 @@ Hook resolveClass
         return super.resolveClass(desc);
     }
 
-以上的Demo就只允许序列化 ``SerialObject`` ，通过这种方式，就可以设置允许序列化的白名单，来防止反序列化漏洞被利用。SerialKiller/Jackson/Weblogic等都使用了这种方式来防御。
+The above Demo only allows serialization of ``SerialObject``. In this way, you can set a whitelist that allows serialization to prevent deserialization vulnerabilities from being exploited. SerialKiller/Jackson/Weblogic, etc. all use this method for defense.
 
 ValidatingObjectInputStream
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Apache Commons IO Serialization包中的 ``ValidatingObjectInputStream`` 类提供了 ``accept`` 方法，可以通过该方法来实现反序列化类白/黑名单控制，一个demo如下
+The ``ValidatingObjectInputStream`` class in the Apache Commons IO Serialization package provides the ``accept`` method, which can be used to implement deserialization class white/blacklist control. A demo is as follows
 
 .. code:: java
 
@@ -120,9 +120,9 @@ Apache Commons IO Serialization包中的 ``ValidatingObjectInputStream`` 类提�
 
 ObjectInputFilter(JEP290)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Java 9提供了支持序列化数据过滤的新特性，可以继承 ``java.io.ObjectInputFilter`` 类重写 ``checkInput`` 方法来实现自定义的过滤器，并使用 ``ObjectInputStream`` 对象的 ``setObjectInputFilter`` 设置过滤器来实现反序列化类白/黑名单控制。这个机制本身是针对Java 9的一个新特性，但是随后官方突然决定向下引进该增强机制，分别对JDK 6,7,8进行了支持。这个机制主要描述了如下的机制：
+Java 9 provides new features that support serialized data filtering. You can inherit the java.io.ObjectInputFilter class and override the checkInput method to implement a custom filter, and use the ObjectInputStream object's setObjectInputFilter to set the filter to implement deserialization white/blacklist control. This mechanism itself is a new feature for Java 9, but then the official suddenly decided to introduce this enhancement mechanism to support JDK 6, 7, and 8 respectively. This mechanism mainly describes the following mechanisms:
 
-- 提供一个限制反序列化类的机制，白名单或者黑名单
-- 限制反序列化的深度和复杂度
-- 为RMI远程调用对象提供了一个验证类的机制
-- 定义一个可配置的过滤机制，比如可以通过配置properties文件的形式来定义过滤器
+- Provide a mechanism to limit deserialization classes, whitelist or blacklist
+- Limit the depth and complexity of deserialization
+- Provides a mechanism for verifying classes for RMI remote calling objects
+- Define a configurable filtering mechanism, for example, you can define filters by configuring properties files

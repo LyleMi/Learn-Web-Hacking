@@ -1,65 +1,65 @@
-搜索引擎利用
+Search engine utilization
 ========================================
-恰当地使用搜索引擎（Google/Bing/Yahoo/Baidu等）可以获取目标站点的较多信息。
+Appropriate use of search engines (Google/Bing/Yahoo/Baidu, etc.) can obtain more information about the target site.
 
-搜索引擎处理流程
+Search engine processing flow
 ----------------------------------------
-- 数据预处理
-    - 长度截断
-    - 大小写转化
-    - 去标点符号
-    - 简繁转换
-    - 数字归一化，中文数字、阿拉伯数字、罗马字
-    - 同义词改写
-    - 拼音改写
-- 处理
-    - 分词
-    - 关键词抽取
-    - 非法信息过滤
+- Data preprocessing
+    - Length truncation
+    - Case conversion
+    - Remove punctuation marks
+    - Conversion between Simplified and Traditional Chinese
+    - Number normalization, Chinese numerals, Arabic numerals, Roman characters
+    - Synonym rewriting
+    - Pinyin rewritten
+- deal with
+    - participle
+    - Keyword extraction
+    - Illegal information filtering
 
-搜索技巧
+Search skills
 ----------------------------------------
 - site:www.hao123.com
-    - 返回此目标站点被搜索引擎抓取收录的所有内容
+    - Return all the content of this target site that is crawled and included by search engines
 - site:www.hao123.com keyword
-    - 返回此目标站点被搜索引擎抓取收录的包含此关键词的所有页面
-    - 此处可以将关键词设定为网站后台，管理后台，密码修改，密码找回等
+    - Return all pages containing this keyword that are crawled and included by search engines on this target site
+    - Here you can set keywords as website backend, management backend, password modification, password retrieval, etc.
 - site:www.hao123.com inurl:admin.php
-    - 返回目标站点的地址中包含admin.php的所有页面，可以使用admin.php/manage.php或者其他关键词来寻找关键功能页面
+    - Return all pages containing admin.php in the address of the target site. You can use admin.php/manage.php or other keywords to find key function pages.
 - link:www.hao123.com
-    - 返回所有包含目标站点链接的页面，其中包括其开发人员的个人博客，开发日志，或者开放这个站点的第三方公司，合作伙伴等
+    - Returns all pages containing links to the target site, including its developer's personal blog, development log, or third-party companies, partners, etc. that open this site
 - related:www.hao123.com
-    - 返回所有与目标站点”相似”的页面，可能会包含一些通用程序的信息等
+    - Returns all pages "similar" to the target site, which may contain information about some common programs, etc.
 - intitle:"500 Internal Server Error" "server at"
-    - 搜索出错的页面
+    - Search for error pages
 - inurl:"nph-proxy.cgi" "Start browsing"
-    - 查找代理服务器
+    - Find proxy servers
 
-除了以上的关键字，还有allintile / allinurl / allintext / inanchor / intext  / filetype / info / numberange / cache等。
+In addition to the above keywords, there are also allintile/allinurl/allintext/inanchor/intext/filetype/info/numberange/cache, etc.
 
-通配符
+wildcard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- ``*`` 代表某一个单词
-- OR 或者 | 代表逻辑或
-- 单词前跟 ``+`` 表强制查询
-- 单词前跟 ``-`` 表排除对应关键字
-- ``"`` 强调关键字
+- ``*`` represents a certain word
+- OR or | stands for logical OR
+- Words preceded by ``+`` table forced query
+- Words preceded by ``-`` exclude corresponding keywords
+- ``"`` emphasize keywords
 
 tips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 查询不区分大小写
-- 括号会被忽略
-- 默认用 and 逻辑进行搜索
+-Query is not case sensitive
+- brackets are ignored
+- Search using and logic by default
 
-快照
+Snapshot
 ----------------------------------------
-搜索引擎的快照中也常包含一些关键信息，如程序报错信息可以会泄漏网站具体路径，或者一些快照中会保存一些测试用的测试信息，比如说某个网站在开发了后台功能模块的时候，还没给所有页面增加权限鉴别，此时被搜索引擎抓取了快照，即使后来网站增加了权限鉴别，但搜索引擎的快照中仍会保留这些信息。
+Search engine snapshots also often contain some key information. For example, program error information may reveal the specific path of the website, or some snapshots may save some test information for testing. For example, when a website develops a backend function module, permission authentication has not been added to all pages. At this time, the snapshot is captured by the search engine. Even if the website later adds permission authentication, the search engine snapshot will still retain this information.
 
-另外也有专门的站点快照提供快照功能，如 Wayback Machine 和 `Archive.org <https://archive.org/>`_ 等。
+There are also specialized site snapshots that provide snapshot functions, such as Wayback Machine and `Archive.org <https://archive.org/>`_, etc.
 
 Github
 ----------------------------------------
-在Github中，可能会存在源码泄露、AccessKey泄露、密码、服务器配置泄露等情况，常见的搜索技巧有：
+In Github, there may be source code leaks, AccessKey leaks, passwords, server configuration leaks, etc. Common search techniques include:
 
 - ``@example.com password/pass/pwd/secret/credentials/token``
 - ``@example.com username/user/key/login/ftp/``

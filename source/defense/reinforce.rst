@@ -1,27 +1,27 @@
-加固检查
+Reinforcement check
 ========================================
 
-网络设备
+Network equipment
 ----------------------------------------
-- 及时检查系统版本号
-- 敏感服务设置访问IP/MAC白名单
-- 开启权限分级控制
-- 关闭不必要的服务
-- 打开操作日志
-- 配置异常告警
-- 关闭ICMP回应
+- Check the system version number in time
+- Set access IP/MAC whitelist for sensitive services
+- Turn on permission hierarchical control
+- Turn off unnecessary services
+- Open operation log
+- Configure abnormal alarms
+- Turn off ICMP responses
 
-操作系统
+operating system
 ----------------------------------------
 
 Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 无用用户/用户组检查
-- 空口令帐号检查
-- 用户密码策略
+- Unused user/group check
+- Empty password account check
+- User password policy
     - /etc/login.defs
     - /etc/pam.d/system-auth
-- 敏感文件权限配置
+- Sensitive file permission configuration
     - /etc/passwd
     - /etc/shadow
     - ~/.ssh/
@@ -31,110 +31,110 @@ Linux
     - /var/log/cron
     - /var/log/spooler
     - /var/log/boot.log
-- 日志是否打开
-- 及时安装补丁
-- 开机自启
+- Whether the log is turned on
+- Install patches promptly
+- Start automatically at boot
     - /etc/init.d
-- 检查系统时钟
+- Check system clock
 
 Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 异常进程监控
-- 异常启动项监控
-- 异常服务监控
-- 配置系统日志
-- 用户账户
-    - 设置口令有效期
-    - 设置口令强度限制
-    - 设置口令重试次数
-- 安装EMET
-- 启用PowerShell日志
-- 限制以下敏感文件的下载和执行
+- Abnormal process monitoring
+- Abnormal startup item monitoring
+- Abnormal service monitoring
+- Configure system logs
+- User account
+    - Set password validity period
+    - Set password strength limits
+    -Set the number of password retries
+- Install EMET
+- Enable PowerShell logging
+- Restrict the download and execution of the following sensitive files
     - ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins, isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, pif, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif
-- 限制会调起wscript的后缀
+- The restriction will call up the suffix of wscript
     - bat, js, jse, vbe, vbs, wsf, wsh
-- 域
-    - 限制将计算机加入域的权限
-    - 域账户使用最小权限原则
-    - 减少非必要高权限账户的数量
+- domain
+    - Restrict permissions to join computers to a domain
+    - Domain accounts use the principle of least privilege
+    - Reduce the number of unnecessary high-privilege accounts
 
-应用
+application
 ----------------------------------------
 
 FTP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 禁止匿名登录
-- 修改Banner
+- Disable anonymous login
+- Modify Banner
 
 SSH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 是否禁用ROOT登录
-- 是否禁用密码连接
+- Whether to disable ROOT login
+- Whether to disable password connections
 
 MySQL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 文件写权限设置
-- 用户授权表管理
-- 日志是否启用
-- 版本是否最新
+- File write permission settings
+- User authorization table management
+- Whether logging is enabled
+- Is the version latest?
 
-Web中间件
+Web middleware
 ----------------------------------------
 
 Apache
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 版本号隐藏
-- 版本是否最新
-- 禁用部分HTTP动词
-- 关闭Trace
-- 禁止 ``server-status``
-- 上传文件大小限制
-- 目录权限设置
-- 是否允许路由重写
-- 是否允许列目录
-- 日志配置
-- 配置超时时间防DoS
-- 非属主用户文件读写限制
+- Version number hidden
+- Is the version latest?
+- Disable some HTTP verbs
+- Turn off Trace
+- Disable ``server-status``
+- Upload file size limit
+- Directory permission settings
+- Whether to allow route rewriting
+- Whether to allow listing of directories
+- Log configuration
+- Configure timeout to prevent DoS
+- Non-owner user file read and write restrictions
     - httpd.conf
     - access.log
     - error.log
 
 Nginx
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 禁用部分HTTP动词
-- 禁用目录遍历
-- 检查重定向配置
-- 配置超时时间防DoS
+- Disable some HTTP verbs
+- Disable directory traversal
+- Check redirect configuration
+- Configure timeout to prevent DoS
 
 IIS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 版本是否最新
-- 日志配置
-- 用户口令配置
-- ASP.NET功能配置
-- 配置超时时间防DoS
+- Is the version latest?
+- Log configuration
+- User password configuration
+- ASP.NET function configuration
+- Configure timeout to prevent DoS
 
 JBoss
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- jmx console配置
-- web console配置
+- jmx console configuration
+- web console configuration
 
 Tomcat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 禁用部分HTTP动词
-- 禁止列目录
-- 禁止manager功能
-- 用户密码配置
-- 用户权限配置
-- 配置超时时间防DoS
+- Disable some HTTP verbs
+- Disable listing of directories
+- Disable manager function
+- User password configuration
+- User permission configuration
+- Configure timeout to prevent DoS
 
-密码管理策略
+Password management strategy
 ----------------------------------------
-- 长度不少于8个字符
-- 不存在于已有字典之中
-- 不使用基于知识的认证方式
+- Length no less than 8 characters
+- Does not exist in existing dictionary
+- Does not use knowledge-based authentication
 
-参考链接
+Reference link
 ----------------------------------------
 - `awesome windows domain hardening <https://github.com/PaulSec/awesome-windows-domain-hardening>`_
 - `customize attack surface reduction <https://docs.microsoft.com/zh-cn/windows/security/threat-protection/microsoft-defender-atp/customize-attack-surface-reduction>`_

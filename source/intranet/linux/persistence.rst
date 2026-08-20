@@ -1,37 +1,37 @@
-持久化
+persistence
 ========================================
 
-权限提升
+Privilege escalation
 ----------------------------------------
-- 内核漏洞利用
-- 攻击有root权限的服务
-- 利用第三方服务提权
-- 通过有SUID属性的可执行文件
-    - 查找可能提权的可执行文件
+- Kernel exploits
+- Attack services with root privileges
+- Use third-party services to escalate privileges
+- Via executable file with SUID attribute
+    - Find executable files that may escalate privileges
     - ``find / -perm +4000 -ls``
     - ``find / -perm -u=s -type f 2>/dev/null``
     - ``find / -user root -perm -4000 -print 2>/dev/null``
     - ``find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null``
-- 利用可用的root权限
+- Take advantage of available root privileges
     - ``sudo -l``
-- 利用误配置的 crontab 任务
+- Exploiting misconfigured crontab tasks
 
-自启动
+self start
 ----------------------------------------
 - /etc/init.d
 - /etc/rc.d/rc.local
 - ~/.bashrc
 - ~/.zshrc
 
-后门
+back door
 ----------------------------------------
-- ssh 后门
+- ssh backdoor
     - ``alias ssh='strace -o /tmp/.ssh.log -e read,write,connect -s 2048 ssh'``
-    - 后门账户
-- 常见应用
+    - Backdoor accounts
+- Common applications
     - ICMP
     - DNS
-- icmp后门
-- 后门端口复用
-- ``.`` 开头隐藏文件
+- icmp backdoor
+- Backdoor port reuse
+- Hidden files starting with ``.``
 - rootkit

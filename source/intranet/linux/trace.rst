@@ -1,14 +1,14 @@
-痕迹清理
+trace cleaning
 ========================================
 
-历史命令
+historical command
 ----------------------------------------
 - ``unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export HISTFILE=/dev/null;``
 - ``kill -9 $$`` kill history
 - ``history -c``
-- 在 ``HISTSIZE=0`` 中设置 ``HISTSIZE=0``
+- Set ``HISTSIZE=0`` in ``HISTSIZE=0``
 
-清除/修改日志文件
+Clear/modify log files
 ----------------------------------------
 - ``/var/log/btmp``
 - ``/var/log/lastlog``
@@ -17,38 +17,38 @@
 - ``/var/log/secure``
 - ``/var/log/message``
 
-登录痕迹
+Login traces
 ----------------------------------------
-- 删除 ``~/.ssh/known_hosts`` 中记录
-- 修改文件时间戳
+- Delete records in ``~/.ssh/known_hosts``
+- Modify file timestamp
     - ``touch –r``
-- 删除tmp目录临时文件
+- Delete temporary files in tmp directory
 
-操作痕迹
+Operation traces
 ----------------------------------------
-- vim 不记录历史命令 ``:set history=0``
-- ssh 登录痕迹
-    - 无痕登录 ``ssh -T user@host /bin/bash -i``
+- vim does not record historical commands ``:set history=0``
+- ssh login traces
+    - Incognito login ``ssh -T user@host /bin/bash -i``
 
-覆写文件
+overwrite file
 ----------------------------------------
 - shred
 - dd
 - wipe
 
-难点
+difficulty
 ----------------------------------------
-- 攻击和入侵很难完全删除痕迹，没有日志记录也是一种特征
-- 即使删除本地日志，在网络设备、安全设备、集中化日志系统中仍有记录
-- 留存的后门包含攻击者的信息
-- 使用的代理或跳板可能会被反向入侵
+- It is difficult to completely remove traces of attacks and intrusions, and the lack of logging is also a characteristic
+- Even if local logs are deleted, there are still records in network devices, security devices, and centralized log systems
+- The retained backdoor contains the attacker’s information
+- The proxy or springboard used may be reverse invaded
 
-注意
+Notice
 ----------------------------------------
-- 在操作前检查是否有用户在线
-- 删除文件使用磁盘覆写的功能删除
-- 尽量和攻击前状态保持一致
+- Check if there is a user online before operating
+- Delete files using disk overwrite function
+- Try to remain as consistent as you were before the attack
 
-参考链接
+Reference link
 ----------------------------------------
-- `Linux 入侵痕迹清理技巧 <https://mp.weixin.qq.com/s/i2WvFmF1qQjbx-BaStXb1Q>`_
+- `Linux intrusion trace cleaning techniques <https://mp.weixin.qq.com/s/i2WvFmF1qQjbx-BaStXb1Q>`_

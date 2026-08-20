@@ -1,86 +1,86 @@
 APT
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-APT (Advanced Persistent Threat)，翻译为高级持续威胁。2006年，APT攻击的概念被正式提出，用来描述从20世纪90年代末到21世纪初在美国军事和政府网络中发现的隐蔽且持续的网络攻击。
+APT (Advanced Persistent Threat), translated as Advanced Persistent Threat. In 2006, the concept of APT attacks was formally proposed to describe covert and persistent cyber attacks discovered in U.S. military and government networks from the late 1990s to the early 2000s.
 
-APT攻击多用于指利用互联网进行网络间谍活动，其目标大多是获取高价值的敏感情报或者控制目标系统，对目标系统有着非常严重的威胁。
+APT attacks are mostly used to use the Internet to carry out cyber espionage activities. Most of their goals are to obtain high-value sensitive intelligence or control the target system, which poses a very serious threat to the target system.
 
-发起APT攻击的通常是一个组织，其团体是一个既有能力也有意向持续而有效地进行攻击的实体。个人或者小团体发起的攻击一般不会被称为APT，因为即使其团体有意图攻击特定目标，也很少拥有先进和持久的资源来完成相应的攻击行为。 
+An APT attack is usually initiated by an organization, and its group is an entity that has the ability and intention to carry out attacks continuously and effectively. Attacks launched by individuals or small groups are generally not called APTs because even if their groups intend to attack specific targets, they rarely have the advanced and persistent resources to complete the corresponding attacks.
 
-APT的攻击手段通常包括供应链攻击、社会工程学攻击、零日攻击和僵尸网络等多种方式。其基于这些攻击手段将将自定义的恶意代码放置在一台或多台计算机上执行特定的任务，并保持在较长的时间内不被发现。
+APT's attack methods usually include supply chain attacks, social engineering attacks, zero-day attacks and botnets. Based on these attack methods, customized malicious code will be placed on one or more computers to perform specific tasks and remain undetected for a long period of time.
 
-和传统的大面积扫描的攻击方式不同，因为APT攻击通常只面向单一特定的目标，且多数攻击会综合一系列手段来完成一次APT攻击，使其有着非常高的隐蔽性和复杂性，让对APT攻击的检测变得相当困难。顾名思义，APT的特征主要体现在下面这三个方面。
+Different from traditional large-area scanning attack methods, APT attacks usually only target a single specific target, and most attacks will combine a series of means to complete an APT attack, making them highly concealed and complex, making the detection of APT attacks very difficult. As the name suggests, the characteristics of APT are mainly reflected in the following three aspects.
 
-高级性（Advanced）
+Advanced
 ----------------------------------------
-APT攻击会结合当前所有可用的攻击手段和技术，使得攻击具有极高的隐蔽性和渗透性。
+APT attacks will combine all currently available attack methods and technologies, making the attack highly concealable and penetrable.
 
-网络钓鱼就是其中的一种攻击方式。攻击者通常会结合社会工程学等手段来伪造可信度非常高的电子邮件，冒充目标信任的公司或者组织来发送难以分辨真假的对目标诱惑度很高恶意电子邮件。通过这些邮件来诱使被受害者访问攻击者控制的网站或者下载恶意代码。
+Phishing is one such attack method. Attackers usually combine social engineering and other means to forge emails with high credibility, pretending to be a company or organization trusted by the target, and send malicious emails that are difficult to distinguish between true and false and are highly tempting to the target. These emails are used to trick victims into visiting attacker-controlled websites or downloading malicious code.
 
-APT攻击通常还会采用其他的方式来伪装自己的攻击行为，从而实现规避安全系统检测的目的。比如有的恶意代码会通过伪造合法签名来逃避杀毒软件检测。以震网病毒为例，其在攻击时就使用了白加黑的模式，利用合法的证书对其代码进行了签名，这种攻击方式会使得大部分恶意代码查杀引擎会直接认为恶意代码是合法的，而不进行任何的检测。
+APT attacks usually use other methods to disguise their attack behaviors to avoid detection by security systems. For example, some malicious code will evade detection by anti-virus software by forging legitimate signatures. Take the Stuxnet virus as an example. It used a white-and-black pattern when attacking, and used legal certificates to sign its code. This attack method will cause most malicious code detection engines to directly consider the malicious code to be legitimate without any detection.
 
-除了利用合法签名绕过检测，APT攻击者在攻击过程中也经常利用第三方的站点作为媒介来攻击目标，而不是使用传统的点到点攻击模式。这种模式通常被称为水坑攻击。
+In addition to using legitimate signatures to bypass detection, APT attackers often use third-party sites as a medium to attack targets during the attack process, instead of using the traditional point-to-point attack mode. This pattern is often called a watering hole attack.
 
-水坑攻击是一种入侵的手法，一般来说，是在攻击者对目标有一定了解后，确定攻击目标经常访问的网站，而后入侵其中的一个或几个网站，并对这些网站植入恶意代码，最后来实现借助该网站感染目标的能力。因为这种攻击借助了目标信任的第三方网站，攻击的成功率相对钓鱼攻击来说要高出很多。
+A watering hole attack is an intrusion technique. Generally speaking, after the attacker has a certain understanding of the target, he determines the websites that the target frequently visits, then invades one or several of these websites, and implants malicious code into these websites, and finally achieves the ability to use the website to infect the target. Because this kind of attack relies on a third-party website trusted by the target, the success rate of the attack is much higher than that of phishing attacks.
 
-另外一个能体现APT攻击高级性的特征是零日漏洞，目前国际上黑市一个零日漏洞的价格在数十万到数百万不等，每一个零日漏洞的稳定利用都需要大量的资源投入。而在APT攻击中，零日漏洞的利用非常广泛。以APT28为例，据统计，仅2015年一年当中APT28在攻击中就至少使用了六个零日漏洞。
+Another feature that reflects the advanced nature of APT attacks is zero-day vulnerabilities. Currently, the price of a zero-day vulnerability on the international black market ranges from hundreds of thousands to millions. The stable utilization of each zero-day vulnerability requires a large amount of resource investment. In APT attacks, zero-day vulnerabilities are widely used. Take APT28 as an example. According to statistics, in 2015 alone, APT28 used at least six zero-day vulnerabilities in attacks.
 
-持续性（Persistent）
+Persistent
 ----------------------------------------
-和传统的基于短期利益的网络攻击有很大的不同。APT攻击的过程通常包括多个实施阶段。攻击者很很多情况下都是使用逐层渗透的方式来突破高级的防御系统，整个攻击过程一般持续时间会达到几个月甚至数年。一般来说，APT攻击可以分为以下几个阶段。
+It is very different from traditional network attacks based on short-term interests. The process of APT attacks usually includes multiple implementation stages. In many cases, attackers use layer-by-layer penetration to break through advanced defense systems. The entire attack process usually lasts for months or even years. Generally speaking, APT attacks can be divided into the following stages.
 
-侦查阶段
+investigative stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-为了能够找到目标的脆弱点，攻击者通常会做大量的准备工作。在这个阶段攻击者多会使用基于大数据分析的隐私收集或者基于社会工程学的攻击来收集目标的信息，为了之后的攻击做出充分的准备。
+In order to be able to find the target's vulnerabilities, attackers usually make a lot of preparations. At this stage, attackers will often use privacy collection based on big data analysis or attacks based on social engineering to collect target information and make full preparations for subsequent attacks.
 
-初次入侵阶段
+initial invasion stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-基于初次侦查的信息，攻击者通常能收集到目标所使用的软件、操作系统系统版本等信息。在获取这些信息后，攻击者可以挖掘软件对应版本的零日漏洞或者使用已知漏洞来对系统做出初期的入侵行为，获取对目标一定的控制权限。
+Based on the initial reconnaissance information, attackers can usually collect information such as the software used by the target and the version of the operating system. After obtaining this information, attackers can mine zero-day vulnerabilities in the corresponding version of the software or use known vulnerabilities to make initial intrusions into the system and gain certain control rights over the target.
 
-权限提升阶段
+Privilege escalation phase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在复杂网络中，攻击者初次入侵所获得的权限通常是较低的权限，而为了进一步的攻击，攻击者需要获取更高的权限来完成其需要的攻击行为。在这个阶段，攻击者通常会使用权限提升漏洞或者爆破密码等行为来实现权限提升的目的，最后获得系统甚至域的管理员权限。
+In a complex network, the attacker usually obtains lower permissions for the initial intrusion. In order to carry out further attacks, the attacker needs to obtain higher permissions to complete the required attack behavior. At this stage, attackers usually use privilege escalation vulnerabilities or password blasting to achieve the purpose of elevating privileges, and finally gain administrator privileges on the system or even the domain.
 
-保持访问阶段
+maintain access phase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在成功入侵目标计算机并且有一定的权限之后，攻击者一般会使用各种方式来保持对系统的访问权限。其中一个比较常用的方式是窃取合法用户的登录凭证。当获取了用户的访问凭证之后，可以使用远程控制工具（RAT，Remote Access Tools）来建立连接，并在连接建立之后，植入特定的后门来达到持续控制的效果。
+After successfully invading the target computer and gaining certain permissions, attackers generally use various methods to maintain access to the system. One of the more common methods is to steal the login credentials of legitimate users. After obtaining the user's access credentials, you can use remote control tools (RAT, Remote Access Tools) to establish a connection, and after the connection is established, a specific backdoor is implanted to achieve continuous control.
 
-横向扩展阶段
+Horizontal expansion stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-当攻击者掌握一定的目标之后，会以较慢且较隐蔽的方式逐渐在内网扩散。主要方式是先在内网进行一定的侦查。基于这些侦查，获得内网计算机的相关信息，并结合这些信息使用软件漏洞或者弱密码爆破等手段来进行横向的进一步渗透，获取更多的权限和信息。
+Once the attacker has a certain target, he will gradually spread it on the intranet in a slower and more covert manner. The main method is to conduct certain investigations on the intranet first. Based on these investigations, relevant information about intranet computers is obtained, and combined with this information, software vulnerabilities or weak password blasting are used to further penetrate horizontally and obtain more permissions and information.
 
-攻击收益阶段
+Attack gain stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-APT攻击的主要目的是窃取目标系统的信息或对其造成一定的破坏。在完成横向扩展控制一定的内网机器后。以收集信息为目标的攻击者会使用加密通道的方式把获取的信息逐渐回传并消除入侵痕迹。而以造成破坏为目标的攻击，则在这个阶段进行相应的攻破坏。
+The main purpose of APT attacks is to steal information from the target system or cause certain damage to it. After completing horizontal expansion and controlling certain intranet machines. Attackers aiming to collect information will use encrypted channels to gradually transmit the obtained information back and eliminate traces of intrusion. Attacks aimed at causing damage will carry out corresponding attacks and damage at this stage.
 
-威胁性（Threat）
+Threat
 ----------------------------------------
-和传统攻击不同，APT攻击的攻击手段和方案大都是针对特定的攻击对象和目的来设计。相对其他攻击，攻击者有着非常明确的目标和目的，很少会使用自动化的攻击方式，而是精确的攻击。
+Different from traditional attacks, most of the attack methods and plans of APT attacks are designed for specific attack objects and purposes. Compared with other attacks, attackers have very clear goals and objectives. They rarely use automated attack methods, but precise attacks.
 
-另外APT的目标多是政府机构、金融、能源等敏感企业、部门，一旦这些目标被成功攻击，其影响往往十分巨大。据目前已知的信息，在美国、俄罗斯等国的大选中，以及欧洲一些政治事件中，都有APT攻击出现。APT攻击已经成为国家之前斗争的一种重要手段。
+In addition, APT targets mostly sensitive enterprises and departments such as government agencies, finance, and energy. Once these targets are successfully attacked, the impact is often huge. According to currently known information, APT attacks have appeared in general elections in the United States, Russia and other countries, as well as in some political events in Europe. APT attacks have become an important means in the country's previous struggle.
 
-相关事件
+Related events
 ----------------------------------------
-- 2010年伊朗震网病毒
-- 2013美国棱镜门事件
+- 2010 Iranian Stuxnet virus
+- 2013 US Prism scandal
 - ...
 
 IoC
 ----------------------------------------
-IoC (Indicators of Compromise) 在取证领域被定义为计算机安全性被破坏的证据。
+IoC (Indicators of Compromise) is defined in the forensic field as evidence that computer security has been breached.
 
-常见的 IoC 有以下几种：
+Common IoCs include the following:
 
 - hash
 - IP
-- 域名
-- 网络
-- 主机特征
-- 工具
+- Domain name
+- network
+- Host features
+- tool
 - TTPs
 
-参考链接
+Reference link
 ----------------------------------------
-- `APT 分析及 TTPs 提取 <https://projectsharp.org/2020/02/23/APT 分析及 TTPs 提取>`_
+- `APT analysis and TTPs extraction <https://projectsharp.org/2020/02/23/APT analysis and TTPs extraction>`_

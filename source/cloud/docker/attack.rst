@@ -1,73 +1,73 @@
-攻击面分析
+Attack surface analysis
 ----------------------------------------
 
-供应链安全
+supply chain security
 ----------------------------------------
-在构建Dockerfile的过程中，即使是使用排名靠前的来源，也可能存在CVE漏洞、后门、镜像被污染、镜像中的依赖库存在漏洞等问题。
+In the process of building a Dockerfile, even if you use a top-ranked source, there may be issues such as CVE vulnerabilities, backdoors, contaminated images, and vulnerabilities in dependency libraries in the images.
 
-容器逃逸
+container escape
 ----------------------------------------
 
-虚拟化风险
+Virtualization risks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-虽然Docker通过命名空间进行了文件系统资源的基本隔离，但仍有 ``/sys`` 、``/proc/sys`` 、 ``/proc/bus`` 、 ``/dev`` 、``time`` 、``syslog`` 等重要系统文件目录和命名空间信息未实现隔离，而是与宿主机共享相关资源。
+Although Docker performs basic isolation of file system resources through namespaces, there are still important system file directories and namespace information such as ``/sys``, ``/proc/sys``, ``/proc/bus``, ``/dev``, ``time``, ``syslog``, etc. that are not isolated, but share related resources with the host.
 
-利用内核漏洞逃逸
+Escape using kernel vulnerabilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2022-0847 Dirty Pipe
 - CVE-2021-4034 Polkit
 - CVE-2018-18955
 - CVE-2016-5195
 
-容器逃逸漏洞
+Container escape vulnerability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - CVE-2021-41091
-- CVE-2020-15257 Containerd 逃逸
-    - 需要网络设置为 host 模式
+- CVE-2020-15257 Containerd escape
+    - The network needs to be set to host mode
 - CVE-2019-14271 Docker cp
 - CVE-2019-13139 Docker build code execution
 - CVE-2019-5736 runC
     - Docker Version < 18.09.2
     - Version <= 1.0-rc6
 
-配置不当
+Improper configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 开启 privileged
-- 挂载宿主机敏感目录
-- 配置 cap 不当
-    - 进程注入：SYS_PTRACE
-    - 加载内核模块：SYS_MODULE
-    - 读宿主机 shadow: DAC_READ_SEARCH
-    - 改宿主机 shadow: DAC_READ_SEARCH + DAC_OVERRIDE
+- Turn on privileged
+- Mount sensitive directories on the host
+- Improper cap configuration
+    - Process injection: SYS_PTRACE
+    - Load kernel module: SYS_MODULE
+    - Read host shadow: DAC_READ_SEARCH
+    - Change host shadow: DAC_READ_SEARCH + DAC_OVERRIDE
     - ``--cap-add=SYS_ADMIN``
-- 绕过namespace
+- Bypass namespace
     - ``--net=host``
     - ``--pid=host``
     - ``--ipc=host``
 
-危险挂载
+Dangerous mount
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 挂载 ``/var/run/docker.sock``
-- 挂载宿主机 ``/dev`` ``/proc`` 等危险目录
+- Mount ``/var/run/docker.sock``
+- Mount dangerous directories such as host ``/dev`` ``/proc``
 
-逃逸技巧
+escape techniques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 通过 ``binfmt_misc`` 逃逸
-- 通过 eBPF 逃逸
-- 可挂载宿主机目录的情况，可以挂载宿主机根目录到容器内目录
+- Escape via ``binfmt_misc``
+- Escape via eBPF
+- If the host directory can be mounted, the host root directory can be mounted to the directory in the container.
 
-拒绝服务
+Denial of service
 ----------------------------------------
-- CPU耗尽
-- 内存耗尽
-- 存储耗尽
-- 网络资源耗尽
+- CPU exhaustion
+- memory exhausted
+- Storage exhausted
+- Network resources exhausted
 
-攻击 Docker 守护进程
+Attacking the Docker daemon
 ----------------------------------------
-虽然 Docker 容器具有很强的安全保护措施，但是 Docker 守护进程本身并没有被完善的保护。Docker 守护进程本身默认由 root 用户运行，并且该进程本身并没有使用 Seccomp 或者 AppArmor 等安全模块进行保护。这使得一旦攻击者成功找到漏洞控制 Docker 守护进程进行任意文件写或者代码执行，就可以顺利获得宿主机的 root 权限而不会受到各种安全机制的阻碍。值得一提的是，默认情况下 Docker 不会开启 User Namespace 隔离，这也意味着 Docker 内部的 root 与宿主机 root 对文件的读写权限相同。这导致一旦容器内部 root 进程获取读写宿主机文件的机会，文件权限将不会成为另一个问题。这一点在 CVE-2019-5636 利用中有所体现。
+Although Docker containers have strong security protection measures, the Docker daemon itself is not fully protected. The Docker daemon process itself is run by the root user by default, and the process itself is not protected by security modules such as Seccomp or AppArmor. This allows an attacker to successfully find a vulnerability and control the Docker daemon to write arbitrary files or execute code, then he can successfully obtain the root permissions of the host without being hindered by various security mechanisms. It is worth mentioning that Docker does not enable User Namespace isolation by default, which also means that the root inside Docker and the host root have the same read and write permissions on files. This results in file permissions not becoming another issue once the root process inside the container gets a chance to read and write host files. This is demonstrated in the CVE-2019-5636 exploit.
 
-相关 CVE
+Related CVEs
 ----------------------------------------
 - CVE-2014-5277
 - CVE-2014-6408

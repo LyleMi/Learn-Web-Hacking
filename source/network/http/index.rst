@@ -1,9 +1,9 @@
-HTTP协议簇
+HTTP protocol suite
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+:caption: Content index:
 
    http
    httpver

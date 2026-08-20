@@ -1,26 +1,26 @@
-组策略
+group policy
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-组策略 (Group Policy, GP) 用于管理网络环境中的用户和设备，定义了系统管理员管理工作所要的各种模板组件。
+Group Policy (GP) is used to manage users and devices in a network environment and defines various template components required by system administrators for management work.
 
-组策略有以下功能：
+Group Policy has the following functions:
 
-- 管理注册表
-- 设置脚本
-- 重定向文件夹
-- 管理应用程序
-- 指定安全选项
+- Manage registry
+- Setup script
+- Redirect folder
+- Management application
+- Specify security options
 
-常用概念
+Common concepts
 ----------------------------------------
-组策略容器 (Group Policy Container，GPC)存储在活动目录中，包含GPO属性、配置信息和版本等。可以通过GPC来查找GPT。
+The Group Policy Container (GPC) is stored in Active Directory and contains GPO attributes, configuration information, versions, etc. GPT can be found through GPC.
 
-组策略模板 (Group Policy Template, GPT) 存储在域控中，包含所有的组策略信息。包括管理模板，安全，脚本，软件安装等。
+Group Policy Template (GPT) is stored in the domain controller and contains all group policy information. Includes administrative templates, security, scripts, software installation, and more.
 
-其中GPC中的信息量少、容量小，GPT中消息量较大、容量大，因此两个部分分开存放。防止活动目录中因存储了过多的数据而被影响性能。
+The amount of information and capacity in GPC is small, while the amount of messages and capacity in GPT is large, so the two parts are stored separately. Prevent performance from being affected by excessive data storage in Active Directory.
 
-组策略对象 (Group Policy Object, GPO) 是包含多种Windows组策略设置的集合，存储在GPC和GPT中。
+A Group Policy Object (GPO) is a collection of various Windows Group Policy settings, stored in GPC and GPT.
 
 

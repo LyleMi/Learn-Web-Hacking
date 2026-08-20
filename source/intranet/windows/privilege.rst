@@ -1,60 +1,60 @@
-权限
+Permissions
 ========================================
 
 UAC
 ----------------------------------------
 
-简介
+Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-UAC (User Account Control) 是Windows Vista 和 Windows Server 2008 引入的一个安全机制，当一些敏感操作发生时，会跳出提示显式要求系统权限。
+UAC (User Account Control) is a security mechanism introduced in Windows Vista and Windows Server 2008. When some sensitive operations occur, a prompt will pop up to explicitly request system permissions.
 
-当用户登陆Windows时，每个用户都会被授予一个access token，这个token中有security identifier (SID) 的信息，决定了用户的权限。
+When a user logs into Windows, each user will be granted an access token. This token contains security identifier (SID) information, which determines the user's permissions.
 
-会触发UAC的操作
+Operations that will trigger UAC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 以管理员权限启动应用
-- 修改系统、UAC设置
-- 修改没有权限的文件或者目录（ %SystemRoot% / %ProgramFiles% 等 ） 
-- 修改ACL (access control list)
-- 安装驱动
-- 增删账户，修改账户类型，激活来宾账户
+- Launch the application with administrator rights
+- Modify system and UAC settings
+- Modify files or directories without permission (%SystemRoot% / %ProgramFiles%, etc.)
+- Modify ACL (access control list)
+- Install driver
+- Add or delete accounts, modify account types, activate guest accounts
 
 ByPass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- DLL相关
-- 进程注入
-- 注册表
+- DLL related
+- Process injection
+- Registry
 
-权限提升
+Privilege escalation
 ----------------------------------------
-权限提升有多重方式，有利用二进制漏洞、逻辑漏洞等技巧。利用二进制漏洞获取权限的方式是利用运行在内核态中的漏洞来执行代码。比如内核、驱动中的UAF或者其他类似的漏洞，以获得较高的权限。
+There are multiple ways to escalate privileges, including exploiting binary vulnerabilities, logic vulnerabilities, and other techniques. The way to gain permissions by exploiting binary vulnerabilities is to exploit the vulnerability running in kernel mode to execute code. For example, UAF or other similar vulnerabilities in the kernel or driver to obtain higher privileges.
 
-逻辑漏洞主要是利用系统的一些逻辑存在问题的机制，比如有些文件夹用户可以写入，但是会以管理员权限启动。
+Logic vulnerabilities mainly exploit mechanisms with problematic logic in the system. For example, some folders can be written by users but will be started with administrator privileges.
 
-任意写文件利用
+Write arbitrary files using
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在Windows中用户可以写的敏感位置主要有以下这些
+In Windows, the sensitive locations that users can write to include the following:
 
-+ 用户自身的文件和目录，包括 ``AppData`` ``Temp``
-+ ``C:\`` ，默认情况下用户可以写入
-+ ``C:\ProgramData`` 的子目录，默认情况下用户可以创建文件夹、写入文件
-+ ``C:\Windows\Temp`` 的子目录，默认情况下用户可以创建文件夹、写入文件
++ User's own files and directories, including ``AppData`` ``Temp``
++ ``C:\`` , user can write by default
++ Subdirectory of ``C:\ProgramData``, by default users can create folders and write files
++ Subdirectory of ``C:\Windows\Temp``, by default users can create folders and write files
 
-具体的ACL信息可用AccessChk, 或者PowerShell的 ``Get-Acl`` 命令查看。
+Specific ACL information can be viewed with AccessChk, or the ``Get-Acl`` command of PowerShell.
 
-可以利用对这些文件夹及其子目录的写权限，写入一些可能会被加载的dll，利用dll的加载执行来获取权限。
+You can use the write permissions on these folders and their subdirectories to write some dlls that may be loaded, and use the loading and execution of the dll to obtain permissions.
 
 MOF
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof`` ）叫做"托管对象格式"，其作用是每隔五秒就会去监控进程创建和死亡。
+MOF is a file in the Windows system (``c:/windows/system32/wbem/mof/nullevt.mof``) called "Managed Object Format". Its function is to monitor process creation and death every five seconds.
 
-当拥有文件上传的权限但是没有Shell时，可以上传定制的mof文件至相应的位置，一定时间后这个mof就会被执行。
+When you have the permission to upload files but do not have a Shell, you can upload a customized mof file to the corresponding location, and the mof will be executed after a certain period of time.
 
-一般会采用在mof中加入一段添加管理员用户的命令的vbs脚本，当执行后就拥有了新的管理员账户。
+Generally, a vbs script that adds a command to add an administrator user is added to the mof. After execution, a new administrator account will be created.
 
-凭证窃取
+Credential theft
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Windows本地密码散列导出工具
+- Windows native password hash export tool
     - mimikatz
     - lsass
     - wce
@@ -63,24 +63,24 @@ MOF是Windows系统的一个文件（ ``c:/windows/system32/wbem/mof/nullevt.mof
     - Pwdump
     - ProcDump
         - https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
-- Windows本地密码破解工具
+- Windows local password cracking tool
     - L0phtCrack
     - SAMInside
     - Ophcrack
-- 彩虹表破解
-- 本机hash+明文抓取
-- win8+win2012明文抓取
-- ntds.dit的导出+QuarkPwDump读取分析
+- Rainbow table crack
+- Native hash + plain text capture
+- win8+win2012 plain text capture
+- Export of ntds.dit + QuarkPwDump reading analysis
 - vssown.vbs + libesedb + NtdsXtract
 - ntdsdump
-- 利用powershell(DSInternals)分析hash
-- 使用 ``net use \\%computername% /u:%username%`` 重置密码尝试次数
-- 限制读取时，可crash操作系统后，在蓝屏的dump文件中读取
+- Use powershell (DSInternals) to analyze hash
+- Use ``net use \\%computername% /u:%username%`` to reset password attempts
+- When reading is restricted, you can read in the dump file of the blue screen after crashing the operating system.
 
-其他
+other
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 组策略首选项漏洞
-- DLL劫持
-- 替换系统工具，实现后门
-- 关闭defender
+- Group Policy Preferences vulnerability
+- DLL hijacking
+- Replace system tools and implement backdoors
+- Turn off defender
     - ``Set-MpPreference -disablerealtimeMonitoring $true``

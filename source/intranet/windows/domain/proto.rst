@@ -1,25 +1,25 @@
-内网常用协议
+Common intranet protocols
 ========================================
 
-Windows查询名称解析的顺序为DNS、mDNS、LLMNR、NBNS。
+The order of Windows query name resolution is DNS, mDNS, LLMNR, NBNS.
 
 NetBIOS
 ----------------------------------------
-NetBIOS（Network Basic Input/Output System）是基于网络的交互协议，通常使用UDP 137、UDP 138、TCP 139等端口。Windows在安装TCP/IP协议时会默认启用该协议，可能导致未设置权限校验的网络资源被访问。
+NetBIOS (Network Basic Input/Output System) is a network-based interaction protocol that usually uses UDP 137, UDP 138, TCP 139 and other ports. When Windows installs the TCP/IP protocol, it will be enabled by default, which may cause network resources without permission verification to be accessed.
 
-基于NetBIOS有NBNS (NetBIOS Name Service)服务，通常监听在UDP 137端口，该服务提供三种功能：将NetBIOS名称解析到IP、查询某一个NetBIOS节点的状态，注册/释放一个NetBIOS名。
+Based on NetBIOS, there is the NBNS (NetBIOS Name Service) service, which usually listens on UDP port 137. This service provides three functions: parsing the NetBIOS name to IP, querying the status of a NetBIOS node, and registering/releasing a NetBIOS name.
 
-可以使用 ``nbtstat`` 工具利用NetBIOS协议管理网络。
+You can use the ``nbtstat`` tool to manage the network using the NetBIOS protocol.
 
 LLMNR
 ----------------------------------------
-链路本地多播名称解析 (Link-Local Multicast Name Resolution, LLMNR)是一个基于DNS数据包格式的协议，IPv4和IPv6的主机可以通过此协议对同一本地链路上的主机执行名称解析。该协议在Windows Vista后被引入。
-LLMNR监听UDP 5355端口，可以通过多播地址 224.0.0.252 (或 ``FF02:0:0:0:0:0:1:3``) 访问。
+Link-Local Multicast Name Resolution (LLMNR) is a protocol based on the DNS packet format. IPv4 and IPv6 hosts can use this protocol to perform name resolution on hosts on the same local link. This protocol was introduced after Windows Vista.
+LLMNR listens on UDP port 5355, accessible via the multicast address 224.0.0.252 (or FF02:0:0:0:0:0:1:3).
 
 mDNS
 ----------------------------------------
-mDNS (multicast DNS) 在Windows 10中被引入，监听UDP 5353端口，对应的多播地址为 224.0.0.251 ( ``FF02::FB`` ) 。mDNS主要实现了在没有传统DNS服务器的情况下使局域网内的主机实现相互发现和通信。
+mDNS (multicast DNS) was introduced in Windows 10, listening on UDP port 5353, and the corresponding multicast address is 224.0.0.251 (``FF02::FB``). mDNS mainly enables hosts in the local area network to discover and communicate with each other without a traditional DNS server.
 
 WPAD
 ----------------------------------------
-网络代理自动发现协议 (Web Proxy Auto-Discovery, WPAD) 是一种客户端使用DHCP和/或DNS发现方法来定位一个配置文件URL的方法。在检测和下载配置文件后，它可以执行配置文件以测定特定URL应使用的代理。
+Web Proxy Auto-Discovery (WPAD) is a method for clients to locate a configuration file URL using DHCP and/or DNS discovery methods. After detecting and downloading the configuration file, it can execute the configuration file to determine which proxy should be used for a specific URL.

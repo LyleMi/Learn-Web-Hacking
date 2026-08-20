@@ -1,26 +1,26 @@
-其他
+other
 ========================================
 
-命令执行
+command execution
 ----------------------------------------
-Node.js中child_process.exec命令调用的是 ``/bin/sh`` ，故可以直接使用该命令执行shell
+The child_process.exec command in Node.js calls ``/bin/sh``, so you can directly use this command to execute the shell
 
-反调试技巧
+Anti-debugging techniques
 ----------------------------------------
-- 函数重定义 ``console.log = function(a){}``
-- 定时断点 ``setInterval(function(){debugger}, 1000);``
+- Function redefinition ``console.log = function(a){}``
+- Scheduled breakpoint ``setInterval(function(){debugger}, 1000);``
 
-对象拷贝
+object copy
 ----------------------------------------
-JavaScript中的对象拷贝分为浅拷贝和深拷贝。
+Object copy in JavaScript is divided into shallow copy and deep copy.
 
-浅拷贝对一个对象进行拷贝时，仅仅拷贝对象的引用进行拷贝，但是拷贝对象和源对象还是引用同一份实体。其中一个对象的改变都会影响到另一个对象。
+When shallow copy copies an object, only the reference of the object is copied, but the copied object and the source object still refer to the same entity. Changes to one object will affect the other object.
 
-深拷贝拷贝一个对象时，不仅仅把对象的引用进行复制，还把该对象引用的值也一起拷贝。源对象与拷贝对象互相独立，其中任何一个对象的改动都不会对另外一个对象造成影响。
+When a deep copy copies an object, it not only copies the reference to the object, but also copies the value referenced by the object. The source object and the copy object are independent of each other, and changes to any one object will not affect the other object.
 
-深拷贝可以基于 ``for-in`` / ``object.assign()`` / 拓展运算符 ``...`` / ``JSON.parse(JSON.stringify())`` 等方式实现。其中前三种方式只对第一层做深拷贝，若对象结构较为复杂，则需要用递归的方式对更深的层次进行拷贝。
+Deep copy can be implemented based on ``for-in`` / ``object.assign()`` / expansion operator ``...`` / ``JSON.parse(JSON.stringify())`` and other methods. The first three methods only make deep copies of the first layer. If the object structure is more complex, you need to use recursion to copy deeper layers.
 
-常见Sink
+Common sinks
 ----------------------------------------
 - child_process
 - eval

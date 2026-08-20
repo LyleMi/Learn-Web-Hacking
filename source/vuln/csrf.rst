@@ -1,43 +1,43 @@
 CSRF
 ========================================
 
-简介
+Introduction
 ----------------------------------------
-跨站请求伪造 (Cross-Site Request Forgery, CSRF)，也被称为 One Click Attack 或者 Session Riding ，通常缩写为CSRF，是一种对网站的恶意利用。尽管听起来像XSS，但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求来利用受信任的网站。
+Cross-Site Request Forgery (CSRF), also known as One Click Attack or Session Riding, often abbreviated as CSRF, is a malicious use of a website. Although it sounds like XSS, it is very different from XSS, which exploits trusted users within a site, while CSRF exploits trusted websites by disguising requests from trusted users.
 
-分类
+Classification
 ----------------------------------------
 
-资源包含
+Resources include
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-资源包含是在大多数介绍CSRF概念的演示或基础课程中可能看到的类型。这种类型归结为控制HTML标签（例如<image>、<audio>、<video>、<object>、<script>等）所包含的资源的攻击者。如果攻击者能够影响URL被加载的话，包含远程资源的任何标签都可以完成攻击。
+Resource inclusion is of the type you might see in most presentations or basic courses that introduce CSRF concepts. This type boils down to an attacker taking control of resources contained in HTML tags such as <image>, <audio>, <video>, <object>, <script>, etc. Any tag containing a remote resource can complete the attack if the attacker can affect the URL being loaded.
 
-由于缺少对Cookie的源点检查，如上所述，此攻击不需要XSS，可以由任何攻击者控制的站点或站点本身执行。此类型仅限于GET请求，因为这些是浏览器对资源URL唯一的请求类型。这种类型的主要限制是它需要错误地使用安全的HTTP请求方式。 
+Due to the lack of point-of-origin checking of cookies, as mentioned above, this attack does not require XSS and can be performed by any attacker-controlled site or the site itself. This type is limited to GET requests, as these are the only request types browsers make for resource URLs. The main limitation of this type is that it requires incorrectly using secure HTTP request methods.
 
-基于表单
+form based
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-通常在正确使用安全的请求方式时看到。攻击者创建一个想要受害者提交的表单; 其包含一个JavaScript片段，强制受害者的浏览器提交。
+Typically seen when secure request methods are used correctly. The attacker creates a form that the victim is expected to submit; it contains a JavaScript snippet that forces the victim's browser to submit.
 
-该表单可以完全由隐藏的元素组成，以致受害者很难发现它。
+The form can be composed entirely of hidden elements, making it difficult for the victim to discover it.
 
-如果处理cookies不当，攻击者可以在任何站点上发动攻击，只要受害者使用有效的cookie登录，攻击就会成功。如果请求是有目的性的，成功的攻击将使受害者回到他们平时正常的页面。该方法对于攻击者可以将受害者指向特定页面的网络钓鱼攻击特别有效。
+If cookies are not handled properly, an attacker can launch an attack on any site, and the attack will be successful as long as the victim logs in with a valid cookie. If the request is targeted, a successful attack will return the victim to their usual page. This method is particularly effective against phishing attacks where the attacker can point the victim to a specific page.
 
 XMLHttpRequest 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-XMLHttpRequest可能是最少看到的方式，由于许多现代Web应用程序依赖XHR，许多应用花费大量的时间来构建和实现这一特定的对策。
+XMLHttpRequest is probably the least seen way, and since many modern web applications rely on XHR, many applications spend a lot of time building and implementing this specific workaround.
 
-基于XHR的CSRF通常由于SOP而以XSS有效载荷的形式出现。没有跨域资源共享策略 (Cross-Origin Resource Sharing, CORS)，XHR仅限于攻击者托管自己的有效载荷的原始请求。
+XHR-based CSRF often comes in the form of XSS payloads due to SOPs. Without Cross-Origin Resource Sharing (CORS), XHR is limited to origin requests where the attacker hosts their own payload.
 
-这种类型的CSRF的攻击有效载荷基本上是一个标准的XHR，攻击者已经找到了一些注入受害者浏览器DOM的方式。 
+The attack payload for this type of CSRF is basically a standard XHR that attackers have found some way to inject into the victim's browser DOM.
 
-防御
+defense
 ----------------------------------------
-- 通过CSRF-token或者验证码来检测用户提交
-- 验证 Referer/Content-Type
-- 对于用户修改删除等操作最好都使用POST操作
-- 避免全站通用的Cookie，严格设置Cookie的域
+- Detect user submissions through CSRF-token or verification code
+- Verify Referer/Content-Type
+- It is best to use POST operations for operations such as user modification and deletion.
+- Avoid cookies that are common to the whole site and strictly set the domain of the cookie
 
-参考链接
+Reference link
 ----------------------------------------
 - `demo <https://www.github.com/jrozner/csrf-demo>`_
 - `Wiping Out CSRF <https://medium.com/@jrozner/wiping-out-csrf-ded97ae7e83f>`_

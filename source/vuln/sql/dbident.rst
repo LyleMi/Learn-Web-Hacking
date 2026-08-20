@@ -1,24 +1,24 @@
-数据库检测
+Database detection
 ================================
 
 MySQL
 --------------------------------
 - sleep ``sleep(1)``
 - benchmark ``BENCHMARK(5000000, MD5('test'))``
-- 字符串连接
+- String concatenation
     - ``SELECT 'a' 'b'``
     - ``SELECT CONCAT('some','string')``
 - version 
     - ``SELECT @@version``
     - ``SELECT version()``
-- 识别用函数
+- Function for identification
     - ``connection_id()``
     - ``last_insert_id()``
     - ``row_count()``
 
 Oracle
 --------------------------------
-- 字符串连接 
+- String concatenation
     - ``'a'||'oracle' --``
     - ``SELECT CONCAT('some','string')``
 - version 
@@ -30,9 +30,9 @@ SQLServer
 - WAITFOR ``WAITFOR DELAY '00:00:10';``
 - SERVERNAME ``SELECT @@SERVERNAME``
 - version ``SELECT @@version``
-- 字符串连接
+- String concatenation
     - ``SELECT 'some'+'string'``
-- 常量
+- constant
     - ``@@pack_received``
     - ``@@rowcount``
 

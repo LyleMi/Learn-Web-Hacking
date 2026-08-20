@@ -1,9 +1,9 @@
 Open Basedir
 ================================
 
-机制实现
+Mechanism implementation
 ---------------------------------
-PHP中Disable Function的实现是在php-src/main/fopen-wrappers.c中，实现方式是在调用文件等相关操作时调用函数根据路径来检查是否在basedir内，其中一部分实现代码如下：
+The implementation of Disable Function in PHP is in php-src/main/fopen-wrappers.c. The implementation method is to call the function to check whether it is within the basedir based on the path when calling files and other related operations. Part of the implementation code is as follows:
 
 .. code:: c
 

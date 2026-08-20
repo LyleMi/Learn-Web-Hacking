@@ -1,23 +1,23 @@
 PowerShell
 ========================================
 
-执行策略
+execution strategy
 ----------------------------------------
-PowerShell 提供了 Restricted、AllSigned、RemoteSigned、Unrestricted、Bypass、Undefined 六种类型的执行策略。
+PowerShell provides six types of execution policies: Restricted, AllSigned, RemoteSigned, Unrestricted, Bypass, and Undefined.
 
-Restricted 策略可以执行单个的命令，但是不能执行脚本，Windows 8、 Windows Server 2012中默认使用该策略。
+The Restricted policy can execute a single command, but cannot execute scripts. This policy is used by default in Windows 8 and Windows Server 2012.
 
-AllSigned 策略允许执行所有具有数字签名的脚本。
+The AllSigned policy allows execution of all digitally signed scripts.
 
-RemoteSigned 当执行从网络上下载的脚本时，需要脚本具有数字签名，否则不会运行这个脚本。如果是在本地创建的脚本则可以直接执行，不要求脚本具有数字签名。
+RemoteSigned When executing a script downloaded from the Internet, the script needs to be digitally signed, otherwise the script will not run. If the script is created locally, it can be executed directly, and the script is not required to have a digital signature.
 
-Unrestricted 这是一种比较宽容的策略，允许运行未签名的脚本。对于从网络上下载的脚本，在运行前会进行安全性提示。
+Unrestricted This is a more permissive policy that allows unsigned scripts to run. For scripts downloaded from the Internet, a security prompt will appear before running.
 
-BypassBypass 执行策略对脚本的执行不设任何的限制，任何脚本都可以执行，并且不会有安全性提示。
+The BypassBypass execution policy does not place any restrictions on the execution of scripts. Any script can be executed without security prompts.
 
-UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的脚本策略。
+UndefinedUndefined means that no script policy is set, and the default script policy will be inherited or used.
 
-混淆
+Confuse
 ----------------------------------------
 - ``-EC``
 - ``-EncodedCommand``
@@ -25,10 +25,10 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
 - ``-EncodedComma``
 - ``-EncodedComm``
 
-常见功能
+Common functions
 ----------------------------------------
 
-计划任务
+Scheduled tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code:: powershell
 
@@ -40,7 +40,7 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
     Register-ScheduledTask AtomicTask -InputObject $object
     Unregister-ScheduledTask -TaskName "AtomicTask" -confirm:$false
 
-创建链接
+Create link
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code:: powershell
 
@@ -52,7 +52,7 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
     $ShortCut.Description = "test.";
     $ShortCut.Save()
 
-编码
+coding
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code:: powershell
 
@@ -60,31 +60,31 @@ UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的�
     $Bytes = [System.Text.Encoding]::Unicode.GetBytes($OriginalCommand)
     $EncodedCommand =[Convert]::ToBase64String($Bytes)
 
-其他
+other
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 别名
+- Alias
     - ``alias``
-- 下载文件
+- Download files
     - ``Invoke-WebRequest "https://example.com/test.zip" -OutFile "$env:TEMP\test.zip"``
-- 解压缩
+- Unzip
     - ``Expand-Archive $env:TEMP\test.zip $env:TEMP\test -Force``
-- 进程
-    - 启动进程 ``Start-Process calc``
-    - 停止进程 ``Stop-Process -ID $pid``
-- 文件
-    - 新建文件 ``New-Item #{file_path} -Force | Out-Null``
-    - 设置文件内容 ``Set-Content -Path #{file_path} -Value "#{Content}"``
-    - 追加文件内容 ``Add-Content -Path #{file_path} -Value "#{Content}"``
-    - 复制文件 ``Copy-Item src dst``
-    - 删除文件 ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``
-    - 子目录 ``Get-ChildItem #{file_path}``
-- 服务
-    - 获取服务 ``Get-Service -Name "#{service_name}"``
-    - 启动服务 ``Start-Service -Name "#{service_name}"``
-    - 停止服务 ``Stop-Service -Name "#{service_name}"``
-    - 删除服务 ``Remove-Service -Name "#{service_name}"``
-- 获取WMI支持 ``Get-WmiObject -list``
+- process
+    - Start the process ``Start-Process calc``
+    - Stop the process ``Stop-Process -ID $pid``
+- document
+    - New file ``New-Item #{file_path} -Force | Out-Null``
+    - Set file content ``Set-Content -Path #{file_path} -Value "#{Content}"``
+    -Append file content ``Add-Content -Path #{file_path} -Value "#{Content}"``
+    - Copy file ``Copy-Item src dst``
+    - Delete files ``Remove-Item #{outputfile} -Force -ErrorAction Ignore``
+    - Subdirectory ``Get-ChildItem #{file_path}``
+- Serve
+    - Get the service ``Get-Service -Name "#{service_name}"``
+    - Start the service ``Start-Service -Name "#{service_name}"``
+    - Stop the service ``Stop-Service -Name "#{service_name}"``
+    - Remove service ``Remove-Service -Name "#{service_name}"``
+- Get WMI support ``Get-WmiObject -list``
 
-参考链接
+Reference link
 ----------------------------------------
-- `PowerShell 官方文档 <https://docs.microsoft.com/zh-cn/powershell/>`_
+- `PowerShell official documentation <https://docs.microsoft.com/zh-cn/powershell/>`_

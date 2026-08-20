@@ -1,33 +1,33 @@
-k8s概念
+k8s concept
 ========================================
-Kubernetes 在希腊语意为“舵手”或“驾驶员”，和 Docker 对应，常简称为K8s。Kubernetes 由 Google 的 Borg 演化而来，是用于自动部署、扩展和管理容器的开源系统。
+Kubernetes means "helmsman" or "driver" in Greek, which corresponds to Docker and is often referred to as K8s. Evolved from Google's Borg, Kubernetes is an open source system for automatically deploying, scaling, and managing containers.
 
-组成
+composition
 ----------------------------------------
-Kubernetes 由控制面 (Master) 与数据面 (Worker Node) 组成。
-Master 的核心组件：
+Kubernetes consists of a control plane (Master) and a data plane (Worker Node).
+Core components of Master:
 
 - API Server
 - Controller-Mananger
 - Scheduler
 - etcd
 
-Worker Node 则由以下节点组成：
+Worker Node consists of the following nodes:
 
 - Kubelet
 - Kube-Proxy
-- 容器运行时
+- Container runtime
 
-核心设计
+core design
 ----------------------------------------
 
 Pod
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Pod 是 Kubernetes 的基本调度单元，一个 Pod 一般包含一个或多个容器。
-Kubernetes 中的每个 Pod 都被分配一个集群内唯一的IP地址，使得应用程序可以使用同一端口。
-Pod 可以定义一个卷，例如本地磁盘目录或网络磁盘，并将其暴露在pod中的一个容器之中。
-Pod 可以通过 Kubernetes API 手动管理，也可以委托给控制器来实现自动管理。
+Pod is the basic scheduling unit of Kubernetes. A Pod generally contains one or more containers.
+Each Pod in Kubernetes is assigned a unique IP address within the cluster, allowing applications to use the same port.
+A Pod can define a volume, such as a local disk directory or a network disk, and expose it to a container in the pod.
+Pods can be managed manually through the Kubernetes API or delegated to a controller for automatic management.
 
 Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Service是为一组具有相同功能的容器应用提供一个统一的入口地址，本质是一组协同工作的Pod。
+Service provides a unified entry address for a group of container applications with the same functions. It is essentially a group of Pods that work together.

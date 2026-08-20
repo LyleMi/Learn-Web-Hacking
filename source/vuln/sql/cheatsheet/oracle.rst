@@ -1,7 +1,7 @@
 Oracle Payload
 ========================================
 
-常见Payload
+Common Payload
 ----------------------------------------
 - dump
     - ``select * from v$tablespace;``
@@ -14,7 +14,7 @@ Oracle Payload
     - ``/**/``
 - Space
     - ``0x00`` ``0x09`` ``0xa-0xd`` ``0x20``
-- 报错
+- Report an error
     - ``utl_inaddr.get_host_name``
     - ``ctxsys.drithsx.sn``
     - ``ctxsys.CTX_REPORT.TOKEN_TYPE``
@@ -32,10 +32,10 @@ Oracle Payload
     - ``SYS.DBMS_LDAP.INIT``
     - ``HTTPURITYPE``
     - ``HTTP_URITYPE.GETCLOB``
-- 绕过
+- Bypass
     - ``rawtohex``
 
-写文件
+write file
 ----------------------------------------
 .. code-block:: sql
 

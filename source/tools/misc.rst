@@ -1,7 +1,7 @@
-其他
+other
 ========================================
 
-综合框架
+comprehensive framework
 ----------------------------------------
 - `metasploit <https://www.metasploit.com/>`_
 - `w3af <http://w3af.org/>`_
@@ -19,7 +19,7 @@
 - `fsociety <https://github.com/Manisso/fsociety>`_ Hacking Tools Pack
 - `axiom <https://github.com/pry0cc/axiom>`_ A dynamic infrastructure toolkit for red teamers and bug bounty hunters
 
-验证码
+Verification code
 ----------------------------------------
 - `CAPTCHA22 <https://github.com/FSecureLABS/captcha22>`_ is a toolset for building, and training, CAPTCHA cracking models using neural networks.
 
@@ -29,11 +29,11 @@ WebAssembly
 - `binaryen <https://github.com/WebAssembly/binaryen>`_
 - `wasmdec <https://github.com/wwwg/wasmdec>`_
 
-混淆
+Confuse
 ----------------------------------------
 - `JStillery <https://github.com/mindedsecurity/JStillery>`_
 - `javascript obfuscator <https://github.com/javascript-obfuscator/javascript-obfuscator>`_
-- `基于hook的php混淆解密 <https://github.com/CaledoniaProject/php-decoder>`_
+- `Hook-based php obfuscation and decryption <https://github.com/CaledoniaProject/php-decoder>`_
 - `Invoke Obfuscation <https://github.com/danielbohannon/Invoke-Obfuscation>`_
 
 Proxy Pool
@@ -46,7 +46,7 @@ Android
 ----------------------------------------
 - `DroidSSLUnpinning <https://github.com/WooyunDota/DroidSSLUnpinning>`_ Android certificate pinning disable tools
 
-其他
+other
 ----------------------------------------
 - `Serverless Toolkit <https://github.com/ropnop/serverless_toolkit>`_
 - `Rendering Engine Probe <https://github.com/PortSwigger/hackability>`_

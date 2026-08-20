@@ -1,7 +1,7 @@
-云安全
+Cloud security
 ========================================
 
-云环境自动测试
+Cloud environment automatic testing
 ----------------------------------------
 
 k8s
@@ -16,21 +16,21 @@ k8s
 - `peirates <https://github.com/inguardians/peirates>`_ Kubernetes Penetration Testing tool
 - `datree <https://github.com/datreeio/datree>`_ Prevent Kubernetes misconfigurations from reaching production
 
-容器
+container
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `botb <https://github.com/brompwnie/botb>`_ A container analysis and exploitation tool for pentesters and engineers
 - `deepce <https://github.com/stealthcopter/deepce>`_ Docker Enumeration, Escalation of Privileges and Container Escapes (DEEPCE)
 
-安全加固
+Security hardening
 ----------------------------------------
 - `falco <https://github.com/falcosecurity/falco>`_ Cloud Native Runtime Security
 
-云上扫描
+Scan on the cloud
 ----------------------------------------
 - `Cloud Custodian <https://github.com/cloud-custodian/cloud-custodian>`_ Rules engine for cloud security, cost optimization, and governance, DSL in yaml for policies to query, filter, and take actions on resources
 - `cloudquery <https://github.com/cloudquery/cloudquery>`_ cloudquery transforms your cloud infrastructure into SQL database for easy monitoring, governance and security
 
-靶场环境
+shooting range environment
 ----------------------------------------
 - `metarget <https://github.com/Metarget/metarget>`_ a framework providing automatic constructions of vulnerable infrastructures.
 - `CloudGoat <https://github.com/RhinoSecurityLabs/cloudgoat>`_ Rhino Security Labs' "Vulnerable by Design" AWS deployment tool

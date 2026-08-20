@@ -1,139 +1,139 @@
-Web技术演化
+Web technology evolution
 ========================================
 
-简单网站
+simple website
 ----------------------------------------
 
-静态页面
+static page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Web技术在最初阶段，网站的主要内容是静态的，大多站点托管在ISP上，由文字和图片组成，制作和表现形式也是以表格为主。当时的用户行为也非常简单，基本只是浏览网页。
+In the initial stage of Web technology, the main content of the website was static. Most sites were hosted on ISPs and consisted of text and pictures. The production and presentation forms were mainly tables. User behavior at that time was also very simple, basically just browsing the web.
 
-多媒体阶段
+multimedia stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-随着技术的不断发展，音频、视频、Flash等多媒体技术诞生了。多媒体的加入使得网页变得更加生动形象，网页上的交互也给用户带来了更好的体验。
+With the continuous development of technology, multimedia technologies such as audio, video, and Flash were born. The addition of multimedia makes web pages more vivid, and the interactions on web pages also bring a better experience to users.
 
-CGI阶段
+CGI stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-渐渐的，多媒体已经不能满足人们的请求，于是CGI (Common Gateway Interface) 应运而生。CGI定义了Web服务器与外部应用程序之间的通信接口标准，因此Web服务器可以通过CGI执行外部程序，让外部程序根据Web请求内容生成动态的内容。
+Gradually, multimedia can no longer meet people's requests, so CGI (Common Gateway Interface) came into being. CGI defines the communication interface standard between the Web server and external applications, so the Web server can execute external programs through CGI, allowing the external programs to generate dynamic content based on the Web request content.
 
-在这个时候，各种编程语言如PHP/ASP/JSP也逐渐加入市场，基于这些语言可以实现更加模块化的、功能更强大的应用程序。
+At this time, various programming languages ​​such as PHP/ASP/JSP are gradually joining the market. Based on these languages, more modular and powerful applications can be implemented.
 
 MVC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-随着Web应用开发越来越标准化，出现了MVC等思想。MVC是Model/View/Control的缩写，Model用于封装数据和数据处理方法，视图View是数据的HTML展现，控制器Controller负责响应请求，协调Model和View。
+As Web application development becomes more and more standardized, ideas such as MVC have emerged. MVC is the abbreviation of Model/View/Control. Model is used to encapsulate data and data processing methods. View is the HTML display of data. Controller is responsible for responding to requests and coordinating Model and View.
 
-Model，View和Controller的分开，是一种典型的关注点分离的思想，使得代码复用性和组织性更好，Web应用的配置性和灵活性也越来越好。而数据访问也逐渐通过面向对象的方式来替代直接的SQL访问，出现了ORM (Object-Relational Mapping) 的概念。
+The separation of Model, View and Controller is a typical idea of ​​separation of concerns, which makes code reusability and organization better, and the configurability and flexibility of Web applications are getting better and better. Data access has gradually replaced direct SQL access through object-oriented methods, and the concept of ORM (Object-Relational Mapping) has emerged.
 
-除了MVC，类似的设计思想还有MVP、MVVM等。
+In addition to MVC, similar design ideas include MVP, MVVM, etc.
 
-数据交互
+Data interaction
 ----------------------------------------
 
-简单数据交互
+Simple data interaction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在Web技术发展最初，前后端交互大部分都使用Web表单、XML、SOAP等较为简单的方式。
+At the beginning of the development of Web technology, most front-end and back-end interactions used simpler methods such as Web forms, XML, and SOAP.
 
 Ajax
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在开始的时候，用户提交整个表单后才能获取结果，用户体验极差。于是Ajax (Asynchronous Javascript And XML) 技术逐渐流行起来，它使得应用在不更新整个页面的前提下也可以获得或更新数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变的信息。
+At the beginning, users could only get the results after submitting the entire form, which resulted in a very poor user experience. As a result, Ajax (Asynchronous Javascript And XML) technology gradually became popular, which allows applications to obtain or update data without updating the entire page. This allows web applications to respond more quickly to user actions and avoids sending unchanged information over the network.
 
 RESTful
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在CGI时期，前后端通常是没有做严格区分的，随着解耦和的需求不断增加，前后端的概念开始变得清晰。前端主要指网站前台部分，运行在PC端、移动端等浏览器上展现给用户浏览的网页，由HTML5、CSS3、JavaScript组成。后端主要指网站的逻辑部分，涉及数据的增删改查等。
+In the CGI era, there was usually no strict distinction between front-end and back-end. As the demand for decoupling and integration continues to increase, the concepts of front-end and back-end begin to become clear. The front-end mainly refers to the front-end part of the website, which runs on PC, mobile and other browsers and displays web pages for users to browse. It is composed of HTML5, CSS3, and JavaScript. The backend mainly refers to the logical part of the website, involving the addition, deletion, modification and query of data.
 
-此时，REST (Representation State Transformation) 逐渐成为一种流行的Web架构风格。
+At this time, REST (Representation State Transformation) gradually became a popular Web architecture style.
 
-REST鼓励基于URL来组织系统功能，充分利用HTTP本身的语义，而不是仅仅将HTTP作为一种远程数据传输协议。一般RESTful有以下的特征：
+REST encourages organizing system functions based on URLs and making full use of the semantics of HTTP itself, rather than just using HTTP as a remote data transmission protocol. Generally RESTful has the following characteristics:
 
-- 域名和主域名分开
+- Separate domain name and main domain name
     - api.example.com
     - example.com/api/
-- 带有版本控制
+- Comes with version control
     - api.example.com/v1
     - api.example.com/v2
-- 使用URL定位资源
-    - GET /users 获取所有用户
-    - GET /team/:team/users 获取某团队所有用户
-    - POST /users 创建用户
-    - PATCH/PUT /users 修改某个用户数据
-    - DELETE /users 删除某个用户数据
-- 用 HTTP 动词描述操作
-    - GET   获取资源，单个或多个
-    - POST  创建资源
-    - PUT/PATCH 更新资源，客户端提供完整的资源数据
-    - DELETE    删除资源
-- 正确使用状态码
-    - 使用状态码提高返回数据的可读性
-- 默认使用 JSON 作为数据响应格式
-- 有清晰的文档
+- Locate resources using URLs
+    - GET /users gets all users
+    - GET /team/:team/users Get all users of a team
+    - POST /users to create users
+    - PATCH/PUT /users Modify a user's data
+    - DELETE /users deletes user data
+- Use HTTP verbs to describe operations
+    - GET gets resources, single or multiple
+    - POST creates resources
+    - PUT/PATCH updates resources, and the client provides complete resource data
+    - DELETE deletes resources
+- Use status codes correctly
+    - Use status codes to improve the readability of returned data
+- Use JSON as data response format by default
+- Have clear documentation
 
 GraphQL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-部分网络服务场景的数据有复杂的依赖关系，为了应对这些场景，Facebook 推出了 GraphQL ，以图状数据结构对数据进行查询存储。部分网站也应用了 GraphQL 作为 API 交互的方式。
+The data in some network service scenarios has complex dependencies. In order to deal with these scenarios, Facebook launched GraphQL to query and store data in a graph-like data structure. Some websites also use GraphQL as a way to interact with APIs.
 
-二进制
+binary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-随着业务对性能的要求提高，前后端开始使用HTTP/2、自定义Protocol Buffer等方式来加快数据交互。
+As business requirements for performance increase, the front and back ends begin to use HTTP/2, custom Protocol Buffer and other methods to speed up data interaction.
 
-架构演进
+Architecture evolution
 ----------------------------------------
-随着业务的不断发展，业务架构也越来越复杂。传统的功能被拆分成不同的模块，出现了中间件、中台等概念。代理服务、负载均衡、数据库分表、异地容灾、缓存、CDN、消息队列、安全防护等技术应用越来越广泛，增加了Web开发和运维的复杂度。
+As business continues to develop, business architecture becomes more and more complex. Traditional functions were split into different modules, and concepts such as middleware and middle platform emerged. Technologies such as proxy services, load balancing, database sharding, remote disaster recovery, caching, CDN, message queues, and security protection are increasingly widely used, increasing the complexity of Web development and operation and maintenance.
 
-客户端的形态越来越多，除了Web之外iOS、Android等其他场景也出现在Web服务的客户端场景。
+There are more and more forms of clients. In addition to the Web, other scenarios such as iOS and Android also appear in client scenarios of Web services.
 
-较早的关系型数据库MySQL、PostgreSQL等已经不能满足需求，出现了Redis/Memcached缓存数据库等一类满足特定需求的数据库。
+The earlier relational databases MySQL, PostgreSQL, etc. can no longer meet the needs, and a class of databases such as Redis/Memcached cache database have emerged to meet specific needs.
 
-为了满足特定的业务需求，出现了Lucene/Solr/Elasticsearch搜索应用服务器，Kafka/RabbitMQ/ZeroMQ消息系统，Spark计算引擎，Hive数据仓库平台等不同的基础架构。
+In order to meet specific business needs, different infrastructures such as Lucene/Solr/Elasticsearch search application server, Kafka/RabbitMQ/ZeroMQ messaging system, Spark computing engine, and Hive data warehouse platform have emerged.
 
-中间件
+middleware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-中间件是独立的软件程序，用于管理计算资源和网络通信。常用的功能有过滤IP、合并接口、合并端口、路由、权限校验、负载均衡、反向代理等。
+Middleware is an independent software program that manages computing resources and network communications. Commonly used functions include IP filtering, interface merging, port merging, routing, permission verification, load balancing, reverse proxy, etc.
 
-分布式
+distributed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-随着数据量的不断提高，单台设备难以承载这样的访问量，同时不同功能也被拆分到不同的应用中，于是出现了提高业务复用及整合的分布式服务框架(RPC)。
+As the amount of data continues to increase, it is difficult for a single device to carry such access, and different functions are split into different applications. Therefore, a distributed service framework (RPC) has emerged to improve business reuse and integration.
 
-云服务
+cloud services
 ----------------------------------------
-云计算诞生之前，大部分计算资源是处于“裸金属”状态的物理机，运维人员选择对应规格的硬件，建设机房的 IDC 网络，完成服务的提供，投入硬件基础建设和维护的成本很高。云服务出现之后，使用者可以直接购买云主机，基础设施由供应商管理，这种方式也被称作 IaaS (Infrastructure-as-a-Service) 。
+Before the birth of cloud computing, most computing resources were physical machines in a "bare metal" state. Operation and maintenance personnel selected hardware with corresponding specifications, built an IDC network in the computer room, and completed service provision. The cost of investing in hardware infrastructure construction and maintenance was very high. After the emergence of cloud services, users can directly purchase cloud hosts, and the infrastructure is managed by the provider. This approach is also called IaaS (Infrastructure-as-a-Service).
 
-随着架构的继续发展，应用的运行更加细粒度，部署环境容器化，各个功能拆成微服务或是Serverless的架构。
+As the architecture continues to develop, application operation becomes more fine-grained, the deployment environment is containerized, and each function is split into microservices or serverless architecture.
 
 Serverless
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Serverless 架构由两部分组成，即 Faas (Function-as-a-Service)  和 BaaS (Backend-as-a-Service) 。
+Serverless architecture consists of two parts, namely Faas (Function-as-a-Service) and BaaS (Backend-as-a-Service).
 
-FaaS是运行平台，用户上传需要执行的逻辑函数如一些定时任务、数据处理任务等到云函数平台，配置执行条件触发器、路由等等，就可以通过云平台完成函数的执行。
+FaaS is an operating platform. Users upload logical functions that need to be executed, such as some scheduled tasks, data processing tasks, etc. to the cloud function platform, configure execution condition triggers, routing, etc., and then the function execution can be completed through the cloud platform.
 
-BaaS包含了后端服务组件，它基于 API 完成第三方服务，主要是数据库、对象存储、消息队列、日志服务等等。
+BaaS includes back-end service components, which implement third-party services based on APIs, mainly databases, object storage, message queues, log services, etc.
 
-微服务
+microservices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-微服务起源于2005年Peter Rodgers博士在云端运算博览会提出的微Web服务 (Micro-Web-Service)，根本思想类似于Unix的管道设计理念。2014年，由Martin Fowler与 James Lewis共同提出了微服务的概念，定义了微服务架构风格是一种通过一套小型服务来开发单个应用的方法，每个服务运行在自己的进程中，并通过轻量级的机制进行通讯 (HTTP API) 。
+Microservices originated from the Micro-Web-Service proposed by Dr. Peter Rodgers at the Cloud Computing Expo in 2005. The basic idea is similar to the Unix pipeline design concept. In 2014, Martin Fowler and James Lewis jointly proposed the concept of microservices, defining the microservices architectural style as a method of developing a single application through a set of small services. Each service runs in its own process and communicates through a lightweight mechanism (HTTP API).
 
-微服务是一种应用于组件设计和部署架构的软件架构风格。它利用模块化的方式组合出复杂的大型应用程序：
+Microservices is a software architectural style applied to component design and deployment architecture. It uses a modular approach to compose complex large-scale applications:
 
-- 各个服务功能内聚，实现与接口分离。
-- 各个服务高度自治、相互解耦，可以独立进行部署、版本控制和容量伸缩。
-- 各个服务之间通过 API 的方式进行通信。
-- 各个服务拥有独立的状态，并且只能通过服务本身来对其进行访问。
+- Each service function is cohesive and implementation is separated from the interface.
+- Each service is highly autonomous and decoupled from each other, allowing independent deployment, version control, and capacity scaling.
+- Communicate between various services through API.
+- Each service has independent state and can only be accessed through the service itself.
 
-随着微服务技术的不断发展，这种思想也被应用到了前端。2018年，第一个微前端工具single-spa出现在github。而后出现了基于single-spa的框架qiankun。
+With the continuous development of microservice technology, this idea has also been applied to the front end. In 2018, the first micro front-end tool single-spa appeared on github. Then the framework qiankun based on single-spa appeared.
 
-API网关
+API gateway
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-API网关是一个服务器，客户端只需要使用简单的访问方式，统一访问API网关，由API网关来代理对后端服务的访问，同时由于服务治理特性统一放到API网关上面，服务治理特性的变更可以做到对客户端透明，一定程度上实现了服务治理等基础特性和业务服务的解耦，服务治理特性的升级也比较容易实现。
+The API gateway is a server. The client only needs to use a simple access method to access the API gateway in a unified manner. The API gateway will proxy access to the back-end services. At the same time, because the service governance features are unified on the API gateway, changes in the service governance features can be transparent to the client. To a certain extent, the decoupling of basic features such as service governance and business services is achieved, and the upgrade of service governance features is also relatively easy to implement.
 
-软件开发
+software development
 ----------------------------------------
 
 CI/CD
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-持续集成 (Continuous Integration, CI) 是让开发人员将工作集成到共享分支中的过程。频繁的集成有助于解决隔离，减少每次提交的大小，以降低合并冲突的可能性。
+Continuous Integration (CI) is the process of letting developers integrate work into shared branches. Frequent integrations help resolve isolation and reduce the size of each commit to reduce the likelihood of merge conflicts.
 
-持续交付 (Continuous Deployment, CD) 是持续集成的扩展，它将构建从集成测试套件部署到预生产环境。这使得它可以直接在类生产环境中评估每个构建，因此开发人员可以在无需增加任何工作量的情况下，验证bug修复或者测试新特性。
+Continuous Deployment (CD) is an extension of continuous integration that deploys builds from an integration test suite to a pre-production environment. This allows it to evaluate each build directly in a production-like environment, so developers can verify bug fixes or test new features without any added effort.
 
-参考链接
+Reference link
 ----------------------------------------
 - `Scaling webapps for newbs <https://arcentry.com/blog/scaling-webapps-for-newbs-and-non-techies/>`_
-- `GitHub 的 Restful HTTP API 设计分解  <https://learnku.com/articles/24050>`_
+- `GitHub’s Restful HTTP API design breakdown <https://learnku.com/articles/24050>`_

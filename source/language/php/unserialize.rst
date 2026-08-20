@@ -1,24 +1,24 @@
-反序列化
+Deserialization
 ========================================
 
-PHP序列化实现
+PHP serialization implementation
 ----------------------------------------
 
-常见处理器
+Common processors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PHP序列化处理共有几种，分别为php、php_serialize、php_binary和WDDX(需要编译时开启支持)，默认为php，可通过配置中的 ``session.serialize_handler`` 修改。
+There are several types of PHP serialization processing, namely php, php_serialize, php_binary and WDDX (support needs to be enabled during compilation). The default is php, which can be modified through ``session.serialize_handler`` in the configuration.
 
-如果 PHP 编译时加入了 WDDX 支持，则只能用 WDDX，WDDX从PHP 7.4版本后开始弃用。从 PHP 5.5.4 起可以使用 php_serialize。 php_serialize 在内部简单地直接使用 serialize/unserialize 函数，并且不会有 php 和 php_binary 所具有的限制。
+If PHP is compiled with WDDX support, you can only use WDDX. WDDX has been deprecated since PHP 7.4. php_serialize is available starting with PHP 5.5.4. php_serialize internally simply uses the serialize/unserialize functions directly and does not have the limitations that php and php_binary have.
 
-其中PHP处理器的格式为：键名 + 竖线 + 经过serialize()函数序列化处理的值。
+The format of the PHP processor is: key name + vertical bar + value serialized by the serialize() function.
 
-其中php_binary处理器的格式为：键名的长度对应的 ASCII 字符 + 键名 + 经过serialize()函数序列化处理的值。
+The format of the php_binary processor is: ASCII characters corresponding to the length of the key name + key name + value serialized by the serialize() function.
 
-其中php_serialize处理器的格式为：经过serialize()函数序列化处理的数组。
+The format of the php_serialize processor is: an array serialized by the serialize() function.
 
-序列化格式
+serialization format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-其中php_serialize的实现在 ``php-src/ext/standard/var.c`` 中，主要函数为 ``php_var_serialize_intern`` ，序列化后的格式如下：
+The implementation of php_serialize is in ``php-src/ext/standard/var.c``. The main function is ``php_var_serialize_intern``. The serialized format is as follows:
 
 - boolean
     - ``b:<value>;``
@@ -39,29 +39,29 @@ PHP序列化处理共有几种，分别为php、php_serialize、php_binary和WDD
 - object
     - ``O:<class_name_length>:"<class_name>":<number_of_properties>:{<properties>};``
 - reference
-    - 指针类型
+    - pointer type
     - ``R:reference;``
     - ``O:1:"A":2:{s:1:"a";i:1;s:1:"b";R:2;}``
     - ``$a = new A();$a->a=1;$a->b=&$a->a;``
 
-private与protect
+private and protect
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-private与protect变量和public变量不同，不能直接设置。
+Unlike protect variables and public variables, private variables cannot be set directly.
 
-private属性只能在其被定义的类内部访问，且不会被继承，在属性前加上类名，即 ``%00className%00`` 用于标定其是私有的。
+The private attribute can only be accessed within the class in which it is defined and will not be inherited. Add the class name before the attribute, that is, ``%00className%00`` to mark it as private.
 
-protected属性可以在父类和子类中访问，变量前添加 ``%00*%00`` 用于标定其是受保护的。
+The protected attribute can be accessed in parent and subclasses. Add ``%00*%00`` before the variable to indicate that it is protected.
 
-PHP反序列化漏洞
+PHP Deserialization Vulnerability
 ----------------------------------------
-php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可能会造成代码执行等问题。若没有相关函数，在析构时也会调用相关的析构函数，同样会造成代码执行。
+PHP will call functions such as ``__wakeup`` / ``__sleep`` during deserialization, which may cause problems such as code execution. If there is no related function, the related destructor will also be called during destruction, which will also cause code execution.
 
-另外 ``__toString`` / ``__call`` 两个函数也有利用的可能。
+In addition, the two functions ``__toString`` / ``__call`` are also possible to use.
 
-其中 ``__wakeup`` 在反序列化时被触发，``__destruct`` 在GC时被触发， ``__toString`` 在echo时被触发, ``__call`` 在一个未被定义的函数调用时被触发。
+Among them, ``__wakeup`` is triggered during deserialization, ``__destruct`` is triggered during GC, ``__toString`` is triggered during echo, and ``__call`` is triggered when an undefined function is called.
 
 
-下面提供一个简单的demo.
+A simple demo is provided below.
 
 .. code:: php
 
@@ -92,7 +92,7 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
 
 
 
-输出
+output
 
 ::
 
@@ -101,11 +101,11 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
     destruct
     string(44) "O:4:"Demo":1:{s:4:"data";s:9:"raw value";}" 
 
-把序列化的字符串修改一下后，执行
+After modifying the serialized string, execute
 
 ``unserialize('O:4:"Demo":1:{s:4:"data";s:15:"malicious value";}');``
 
-输出
+output
 
 ::
 
@@ -113,12 +113,12 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
     Data's value is malicious value.
     destruct
 
-这里看到，值被修改了.
+As you can see here, the value has been modified.
 
-上面是一个 ``unserialize()`` 的简单应用，不难看出，如果 ``__wakeup()`` 或者  ``__desturct()`` 有敏感操作，比如读写文件、操作数据库，就可以通过函数实现文件读写或者数据读取的行为。
+The above is a simple application of ``unserialize()``. It is not difficult to see that if ``__wakeup()`` or ``__desturct()`` has sensitive operations, such as reading and writing files or operating databases, the behavior of file reading and writing or data reading can be realized through functions.
 
-那么，在 ``__wakeup()`` 中加入判断是否可以阻止这个漏洞呢？
-在 ``__wakeup()`` 中我们加入一行代码
+So, can adding judgment in ``__wakeup()`` prevent this vulnerability?
+In ``__wakeup()`` we add a line of code
 
 .. code:: php
 
@@ -128,39 +128,39 @@ php在反序列化的时候会调用 ``__wakeup`` / ``__sleep`` 等函数，可�
         echo "wake up<br />";
     }
 
-但其实还是可以绕过的，在 PHP5 < 5.6.25， PHP7 < 7.0.10 的版本都存在wakeup的漏洞。当反序列化中object的个数和之前的个数不等时，wakeup就会被绕过，于是使用下面的payload
+But it can still be bypassed. Wakeup vulnerabilities exist in versions of PHP5 < 5.6.25 and PHP7 < 7.0.10. When the number of objects in deserialization is different from the previous number, wakeup will be bypassed, so the following payload is used
 
 ::
 
     unserialize('O:7:"HITCON":1:{s:4:"data";s:15:"malicious value";}');
 
-输出
+output
 
 ::
 
     Data's value is malicious value.
     destruct
 
-这里wakeup被绕过，值依旧被修改了。
+Here wakeup is bypassed and the value is still modified.
 
-利用点
+Utilization point
 ----------------------------------------
 
-SoapClient 原生利用
+SoapClient native utilization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-php中的SoapClient类可以创建soap数据报文，在非wsdl模式下，SoapClient的实例反序列化的时候会对第二个参数指明的url进行soap请求，该特性可用于SSRF。
+The SoapClient class in PHP can create soap data messages. In non-wsdl mode, when the SoapClient instance is deserialized, it will make a soap request for the URL specified by the second parameter. This feature can be used for SSRF.
 
-ZipArchive 原生利用
+ZipArchive native utilization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-php原生类 ``ZipArchive::open()`` 中的flag参数如果设置为  ``ZipArchive::OVERWRITE`` 时，会删除指定文件，该特性在一定条件下可以用于删除文件。
+If the flag parameter in the PHP native class ``ZipArchive::open()`` is set to ``ZipArchive::OVERWRITE``, the specified file will be deleted. This feature can be used to delete files under certain conditions.
 
 Session
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PHP中session默认是以文件形式存储的，文件以sess_sessionid命名，在session一定程度可控的情况下，可通过session触发反序列化。
+In PHP, sessions are stored in the form of files by default. The files are named after sess_sessionid. When the session is controllable to a certain extent, deserialization can be triggered through the session.
 
-相关CVE
+Related CVEs
 ----------------------------------------
 
 CVE-2016-7124
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-在PHP 5.6.25 之前版本和 7.0.10 之前的版本，当对象的属性(变量)数大于实际的个数时， ``__wakeup()`` 不会被执行。
+In versions before PHP 5.6.25 and versions before 7.0.10, when the number of attributes (variables) of an object is greater than the actual number, __wakeup()`` will not be executed.

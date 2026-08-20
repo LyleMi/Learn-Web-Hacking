@@ -1,9 +1,9 @@
-域名系统
+domain name system
 ========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容索引:
+:caption: Content index:
 
    basic
    sec
